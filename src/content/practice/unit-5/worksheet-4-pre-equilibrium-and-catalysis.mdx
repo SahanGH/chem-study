@@ -1,0 +1,472 @@
+---
+title: "Worksheet 4: Pre-equilibrium and catalysis"
+kind: worksheet
+order: 5
+topics: ["5.9", "5.10", "5.11"]
+summary: Five questions on the pre-equilibrium approximation, multistep energy profiles and catalysis, then a 10-point free-response question with its scoring rubric.
+---
+
+Work each question on paper before you open its answer. One idea runs through the mechanism questions: a final rate law never contains an intermediate. The free-response question comes with its scoring rubric, so you can score yourself.
+
+You will need these two ideas.
+
+When the first step is fast: write the slow step's rate law, then use the equilibrium of step 1 to eliminate the intermediate.
+
+A catalyst lowers $E_a$ for *both* directions and changes neither $\Delta H$ nor $K$.
+
+## Questions
+
+<Question number={1} topic="5.9">
+
+The overall reaction is
+
+$$
+\ce{2NO + O2 -> 2NO2}
+$$
+
+and the rate law found by experiment is
+
+$$
+\text{rate} = k[\ce{NO}]^2[\ce{O2}]
+$$
+
+This mechanism is proposed.
+
+| Step | Equation |
+|---|---|
+| Step 1 (fast equilibrium) | $\ce{2NO <=> N2O2}$ |
+| Step 2 (slow) | $\ce{N2O2 + O2 -> 2NO2}$ |
+
+<Part label="a">
+
+Write the rate law for the slow step as it stands.
+
+<Answer>
+
+$$
+\text{rate} = k_2[\ce{N2O2}][\ce{O2}]
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Why is that not yet an acceptable rate law?
+
+<Answer>
+
+$\ce{N2O2}$ is an intermediate. Its concentration is not something you can measure or control, so it cannot appear in a final rate law.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Use step 1's equilibrium to express $[\ce{N2O2}]$.
+
+<Answer>
+
+$$
+[\ce{N2O2}] = K_1[\ce{NO}]^2
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Substitute and give the predicted rate law.
+
+<Answer>
+
+$$
+\begin{aligned}
+\text{rate} &= k_2K_1[\ce{NO}]^2[\ce{O2}] \\
+&= \mathbf{k[\ce{NO}]^2[\ce{O2}]}
+\end{aligned}
+$$
+
+This matches experiment, with the observed $k = k_2K_1$.
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+What does it mean that the observed $k$ equals $k_2K_1$?
+
+<Answer>
+
+The measured rate constant is a composite of an elementary rate constant and an equilibrium constant, not a property of any single step. That is one reason the same rate law can arise from more than one mechanism.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={2} topic="5.9">
+
+Derive the rate law for this mechanism.
+
+| Step | Equation |
+|---|---|
+| Step 1 (fast equilibrium) | $\ce{A + B <=> C}$ |
+| Step 2 (slow) | $\ce{C + B -> D}$ |
+
+<Answer>
+
+Slow step:
+
+$$
+\text{rate} = k_2[\ce{C}][\ce{B}]
+$$
+
+From step 1,
+
+$$
+K_1 = \frac{[\ce{C}]}{[\ce{A}][\ce{B}]}
+$$
+
+so
+
+$$
+[\ce{C}] = K_1[\ce{A}][\ce{B}]
+$$
+
+Substituting gives
+
+$$
+\begin{aligned}
+\text{rate} &= k_2K_1[\ce{A}][\ce{B}]^2 \\
+&= \mathbf{k[\ce{A}][\ce{B}]^2}
+\end{aligned}
+$$
+
+Note that B ends up *second* order.
+
+</Answer>
+
+</Question>
+
+<Question number={3} topic="5.10">
+
+Multistep energy profiles.
+
+<Part label="a">
+
+The number of humps equals the number of: <Blank />
+
+<Answer>
+
+elementary steps
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+A valley between two humps is: <Blank />
+
+<Answer>
+
+an intermediate
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The rate-limiting step is the one with: <Blank />
+
+<Answer>
+
+the highest activation barrier
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+A profile shows a first barrier of 95 kJ and a second barrier of 60 kJ, measured from the intermediate. Which step is rate-limiting?
+
+<Answer>
+
+the first
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+If instead the second barrier were the larger, what would change about the rate law?
+
+<Answer>
+
+The rate law would come from the second step. Since that step consumes an intermediate, the intermediate would have to be eliminated using the equilibrium of the first step, and the resulting rate law would generally look different.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={4} topic="5.11">
+
+Catalysis.
+
+<Part label="a">
+
+A catalyst increases the rate by providing: <Blank />
+
+<Answer>
+
+an alternative pathway with lower $E_a$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+List three quantities a catalyst does *not* change.
+
+<Answer>
+
+$\Delta H$, $K$, $\Delta G^\circ$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Explain why a catalyst cannot shift an equilibrium.
+
+<Answer>
+
+It lowers the activation energy of the forward and reverse reactions by the same amount, so both rates increase by the same factor. The ratio that defines the equilibrium position is unchanged. The system simply arrives there sooner.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Distinguish homogeneous from heterogeneous catalysis.
+
+<Answer>
+
+Homogeneous: the same phase as the reactants. Heterogeneous: a different phase.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={5} topic="5.11">
+
+A reaction has this mechanism.
+
+| Step | Equation |
+|---|---|
+| Step 1 | $\ce{H2O2 + I- -> H2O + IO-}$ |
+| Step 2 | $\ce{H2O2 + IO- -> H2O + O2 + I-}$ |
+
+<Part label="a">
+
+The overall equation: <Blank />
+
+<Answer>
+
+$$
+\ce{2H2O2 -> 2H2O + O2}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The catalyst: <Blank />
+
+<Answer>
+
+$\ce{I-}$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The intermediate: <Blank />
+
+<Answer>
+
+$\ce{IO-}$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+State the test that distinguishes them.
+
+<Answer>
+
+A catalyst is consumed in an early step and regenerated later, so it is present at the end. An intermediate is produced first and consumed later, so it is absent at the end and from the overall equation.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={6} title="Free response" topic="5.2, 5.3, 5.8" points={10}>
+
+The gas-phase reaction
+
+$$
+\ce{2NO(g) + O2(g) -> 2NO2(g)}
+$$
+
+was studied at constant temperature.
+
+| Experiment | $[\ce{NO}]_0$ (M) | $[\ce{O2}]_0$ (M) | Initial rate (M/s) |
+|---|---|---|---|
+| 1 | 0.010 | 0.010 | $2.5 \times 10^{-5}$ |
+| 2 | 0.020 | 0.010 | $1.0 \times 10^{-4}$ |
+| 3 | 0.010 | 0.020 | $5.0 \times 10^{-5}$ |
+
+<Part label="a">
+
+Determine the order in $\ce{NO}$ and in $\ce{O2}$, showing the comparison used for each.
+
+<Answer>
+
+Comparing experiments 1 and 2, only $[\ce{NO}]$ changed: doubling it multiplied the rate by 4, so the order in $\ce{NO}$ is 2. Comparing experiments 1 and 3, doubling $[\ce{O2}]$ doubled the rate, so the order in $\ce{O2}$ is 1.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Write the rate law and calculate $k$, with units.
+
+<Answer>
+
+$$
+\text{rate} = k[\ce{NO}]^2[\ce{O2}]
+$$
+
+$$
+\begin{aligned}
+k &= \frac{2.5 \times 10^{-5}}{(0.010)^2(0.010)} \\
+&= \mathbf{25}\ \text{M}^{-2}\,\text{s}^{-1}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Predict the initial rate when $[\ce{NO}] = 0.030$ and $[\ce{O2}] = 0.015$.
+
+<Answer>
+
+$$
+\begin{aligned}
+&(25)(0.030)^2(0.015) \\
+&= (25)(9.0 \times 10^{-4})(0.015) \\
+&= \mathbf{3.4 \times 10^{-4}}\ \text{M/s}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+A student proposes that the reaction occurs in a single termolecular step. State whether this is consistent with the rate law, and whether it is likely.
+
+<Answer>
+
+It is consistent. A single step
+
+$$
+\ce{2NO + O2 -> 2NO2}
+$$
+
+would predict exactly
+
+$$
+\text{rate} = k[\ce{NO}]^2[\ce{O2}]
+$$
+
+But it is unlikely, because it requires three particles to collide simultaneously with correct orientation, which is improbable.
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+Show that this mechanism predicts the same rate law.
+
+| Step | Equation |
+|---|---|
+| Step 1 (fast equilibrium) | $\ce{2NO <=> N2O2}$ |
+| Step 2 (slow) | $\ce{N2O2 + O2 -> 2NO2}$ |
+
+<Answer>
+
+Slow step:
+
+$$
+\text{rate} = k_2[\ce{N2O2}][\ce{O2}]
+$$
+
+From the equilibrium,
+
+$$
+[\ce{N2O2}] = K_1[\ce{NO}]^2
+$$
+
+Substituting:
+
+$$
+\text{rate} = k_2K_1[\ce{NO}]^2[\ce{O2}]
+$$
+
+This has the observed form.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for finding the order in $\ce{NO}$ to be 2; 1 point for finding the order in $\ce{O2}$ to be 1; 1 point for citing the specific experiments compared. Stating the orders with no comparison earns 1 of 3.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the rate law; 1 point for the value of $k$ *with units*.</RubricLine>
+<RubricLine part="c" points={2}>1 point for a correct substitution; 1 point for the answer, $3.4 \times 10^{-4}$.</RubricLine>
+<RubricLine part="d" points={1}>Consistent but improbable, with the termolecular reason.</RubricLine>
+<RubricLine part="e" points={2}>1 point for writing the slow step's rate law; 1 point for eliminating the intermediate using $K_1$. A final answer still containing $\ce{N2O2}$ earns 0 for the second point.</RubricLine>
+</Rubric>
+
+</Question>
