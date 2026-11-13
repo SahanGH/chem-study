@@ -7,19 +7,26 @@
   // bare number and reports only the rate, which is always in M/s.
   const K = 0.1;
   const ORDERS: Order[] = [0, 1, 2];
-  // Every concentration tops out at 1.0 M, where the rate is k whatever the orders.
-  const LARGEST_RATE = K;
-  const TRACK = { x: 0, y: 4, width: 300, height: 22 };
+  const LOWEST_CONCENTRATION = 0.1;
+  const HIGHEST_CONCENTRATION = 1;
+  // The rate when both sliders are at the top, whatever the orders are set to.
+  const LARGEST_RATE = rateLawRate(K, HIGHEST_CONCENTRATION, 2, HIGHEST_CONCENTRATION, 2);
+  // Inset by a pixel so the track's outline is not cut off at the edges.
+  const TRACK = { x: 1, y: 4, width: 298, height: 22 };
 
-  let a = $state(0.4);
-  let b = $state(0.2);
+  // The starting values put the bar at a tenth of the track, so both a rise
+  // and a fall are easy to see.
+  let a = $state(0.5);
+  let b = $state(0.4);
   let orderA = $state<Order>(2);
   let orderB = $state<Order>(1);
   let hydrated = $state(false);
 
   const rate = $derived(rateLawRate(K, a, orderA, b, orderB));
   const law = $derived(`rate = k${term('A', orderA)}${term('B', orderB)}`);
-  const barWidth = $derived(Math.max(1, (rate / LARGEST_RATE) * TRACK.width));
+  // Strictly proportional, with no minimum length: doubling the rate must
+  // double the bar, and a rate a thousand times smaller must look it.
+  const barWidth = $derived((rate / LARGEST_RATE) * TRACK.width);
 
   function term(name: string, order: Order): string {
     if (order === 0) return '';
@@ -52,11 +59,11 @@
   <div class="diagram-controls">
     <label class="diagram-slider">
       <span>[A] = {a.toFixed(2)} M</span>
-      <input type="range" min="0.1" max="1" step="0.1" bind:value={a} />
+      <input type="range" min={LOWEST_CONCENTRATION} max={HIGHEST_CONCENTRATION} step="0.1" bind:value={a} />
     </label>
     <label class="diagram-slider">
       <span>[B] = {b.toFixed(2)} M</span>
-      <input type="range" min="0.1" max="1" step="0.1" bind:value={b} />
+      <input type="range" min={LOWEST_CONCENTRATION} max={HIGHEST_CONCENTRATION} step="0.1" bind:value={b} />
     </label>
     <fieldset class="diagram-choice">
       <legend>Order in A</legend>

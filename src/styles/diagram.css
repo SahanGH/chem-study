@@ -41,8 +41,12 @@
   stroke: var(--muted);
   stroke-width: 1;
 }
+/* The tint alone is nearly the card's color, so the outline is what shows
+   how long a full bar would be. */
 .diagram-track {
   fill: var(--u-tint);
+  stroke: var(--u);
+  stroke-width: 1;
 }
 .diagram-bar {
   fill: var(--u-ink);
@@ -93,6 +97,13 @@
    taken over, the controls would do nothing, so they are not shown. */
 .diagram-body:not([data-hydrated]) .diagram-controls {
   display: none;
+}
+/* When scripts are on (the theme script has set data-theme on <html>), the
+   controls are about to appear. Keep their space, unseen and out of reach,
+   so the lesson below does not jump when they do. */
+html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
+  display: grid;
+  visibility: hidden;
 }
 .diagram-slider {
   display: grid;
