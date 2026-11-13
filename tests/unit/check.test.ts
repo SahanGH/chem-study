@@ -19,11 +19,39 @@ describe('parseNumber', () => {
     ['2.5 x 10^-3', 0.0025],
     ['2.5*10^3', 2500],
     ['1,200', 1200],
+    ['1,234,567.5', 1234567.5],
+    ['-1,200', -1200],
+    ['.05', 0.05],
+    ['5.', 5],
+    ['-.5', -0.5],
+    ['−3', -3],
+    ['–3', -3],
+    ['2.5×10^−3', 0.0025],
+    ['2.5e−3', 0.0025],
+    ['2.5e–3', 0.0025],
   ])('reads %s', (text, value) => {
     expect(parseNumber(text)).toBeCloseTo(value, 12);
   });
 
-  it.each(['', 'abc', '2..5', '1e', '10^3'])('rejects %s', (text) => {
+  it.each([
+    '',
+    'abc',
+    '2..5',
+    '1e',
+    '10^3',
+    '0,5',
+    '1,2',
+    '1,,2',
+    '12,34',
+    '1,2000',
+    ',5',
+    '1.2,345',
+    '0,500',
+    '.',
+    '-',
+    '.e3',
+    '1e999',
+  ])('rejects %s', (text) => {
     expect(parseNumber(text)).toBeNull();
   });
 });
@@ -42,6 +70,21 @@ describe('gradeNumeric', () => {
 
   it('rejects the right size with the wrong sign', () => {
     expect(gradeNumeric('-0.02', 0.02)).toBe('incorrect');
+  });
+
+  it('accepts the edge of the tolerance and rejects just beyond it', () => {
+    expect(gradeNumeric('0.0196', 0.02)).toBe('correct');
+    expect(gradeNumeric('0.0195', 0.02)).toBe('incorrect');
+    expect(gradeNumeric('0.0205', 0.02)).toBe('incorrect');
+  });
+
+  it('applies the tolerance to a negative answer', () => {
+    expect(gradeNumeric('-0.0204', -0.02)).toBe('correct');
+    expect(gradeNumeric('0.02', -0.02)).toBe('incorrect');
+  });
+
+  it('applies the tolerance to a very large answer', () => {
+    expect(gradeNumeric('6.02e23', 6.022e23)).toBe('correct');
   });
 
   it('reports text that is not a number', () => {
