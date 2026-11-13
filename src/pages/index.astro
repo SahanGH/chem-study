@@ -1,10 +1,65 @@
 ---
 import Base from '../layouts/Base.astro';
+import { units } from '../data/units';
+import { lessonsByTopic } from '../lib/lessons';
+
+const lessons = await lessonsByTopic();
+const rows = units.map((unit) => ({
+  unit,
+  ready: unit.topics.filter((t) => lessons.has(t.code)).map((t) => t.code),
+}));
+const first = rows.find((row) => row.ready.length > 0);
+
+function status(ready: number, total: number): string {
+  if (ready === 0) return 'Coming soon';
+  return ready === total ? `${total} lessons` : `${ready} of ${total} lessons`;
+}
 ---
 
 <Base
   title="ChemStudy: AP® Chemistry, explained"
-  description="Clear lessons, worked examples and practice for every AP Chemistry topic. Free."
+  description="Clear lessons, worked examples and practice for every AP Chemistry topic. Free, and written by a chemistry teacher."
 >
-  <h1>AP® Chemistry, explained so it <em>finally clicks</em>.</h1>
+  <section class="hero">
+    <h1>AP® Chemistry, explained so it <em>finally clicks</em>.</h1>
+    <p class="lede">
+      Every topic as a clear, careful lesson, with worked examples and practice to make it stick.
+      Free, and written by a chemistry teacher.
+    </p>
+    <p class="hero-actions">
+      {
+        first && (
+          <a class="button" href={`/${first.unit.slug}/`}>
+            Start with Unit {first.unit.number}
+          </a>
+        )
+      }
+      <a href="#units">See all nine units</a>
+    </p>
+    <p class="continue" data-continue hidden>Continue where you left off: <a href="/">your last lesson</a></p>
+  </section>
+
+  <section id="units" aria-labelledby="units-heading">
+    <h2 id="units-heading" class="eyebrow">The nine units</h2>
+    <ul class="unit-list">
+      {
+        rows.map(({ unit, ready }) => (
+          <li class="unit-row" data-unit={unit.number} data-unit-topics={ready.join(',')}>
+            <span class="dot" aria-hidden="true" />
+            <span class="unit-num">Unit {unit.number}</span>
+            {ready.length > 0 ? (
+              <a class="unit-title" href={`/${unit.slug}/`}>
+                {unit.title}
+              </a>
+            ) : (
+              <span class="unit-title">{unit.title}</span>
+            )}
+            <span class="unit-meta" data-unit-progress>
+              {status(ready.length, unit.topics.length)}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
 </Base>

@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import { units, type Unit } from '../../data/units';
+import { lessonPath, lessonsByTopic } from '../../lib/lessons';
+
+export async function getStaticPaths() {
+  const lessons = await lessonsByTopic();
+  // A unit gets a page once it has at least one lesson.
+  return units
+    .filter((unit) => unit.topics.some((t) => lessons.has(t.code)))
+    .map((unit) => ({ params: { unit: unit.slug }, props: { unit } }));
+}
+
+interface Props {
+  unit: Unit;
+}
+const { unit } = Astro.props;
+const lessons = await lessonsByTopic();
+---
+
+<Base
+  title={`Unit ${unit.number}: ${unit.title} | ChemStudy`}
+  description={unit.blurb}
+  unit={unit.number}
+>
+  <article class="unit-page">
+    <p class="kicker">Unit {unit.number}</p>
+    <h1>{unit.title}</h1>
+    <p class="lede">{unit.blurb}</p>
+    <ol class="topic-list">
+      {
+        unit.topics.map((topic) => {
+          const lesson = lessons.get(topic.code);
+          return (
+            <li data-topic-link={topic.code}>
+              <span class="topic-code">{topic.code}</span>
+              {lesson ? (
+                <a href={lessonPath(unit.slug, lesson)}>{topic.title}</a>
+              ) : (
+                <span>{topic.title}</span>
+              )}
+              <span class="topic-meta">
+                {lesson ? `${lesson.data.minutes} min` : 'Coming soon'}
+                <span class="done-mark"> · Done</span>
+              </span>
+            </li>
+          );
+        })
+      }
+    </ol>
+  </article>
+</Base>
