@@ -6,6 +6,8 @@
  * removes it again when a wider window or a smaller font stops the overflow.
  * Equations that fit stay out of the tab order.
  */
+export {};
+
 const SCROLL_LABEL = 'Equation, scrolls sideways';
 
 function update(equation: HTMLElement): void {
@@ -22,18 +24,22 @@ function update(equation: HTMLElement): void {
 
 const equations = Array.from(document.querySelectorAll<HTMLElement>('.katex-display'));
 
-// The equation's own box only changes with the window; the .katex inside it
-// also changes when the math fonts arrive, which is when its width settles.
+function updateAll(): void {
+  for (const equation of equations) update(equation);
+}
+
+updateAll();
+
+// An equation's own box only changes with the window, so this catches resizing.
+// The math inside is display: block and as wide as its box, so a ResizeObserver
+// on it would never fire when the math fonts arrive, even though that is when
+// the content's true width (scrollWidth) settles. The font events cover that.
 const observer = new ResizeObserver((entries) => {
   for (const entry of entries) {
-    const equation = entry.target.closest<HTMLElement>('.katex-display');
-    if (equation) update(equation);
+    if (entry.target instanceof HTMLElement) update(entry.target);
   }
 });
+for (const equation of equations) observer.observe(equation);
 
-for (const equation of equations) {
-  update(equation);
-  observer.observe(equation);
-  const math = equation.querySelector('.katex');
-  if (math) observer.observe(math);
-}
+void document.fonts.ready.then(updateAll);
+document.fonts.addEventListener('loadingdone', updateAll);

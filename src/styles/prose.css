@@ -50,14 +50,12 @@
   color: var(--muted);
 }
 
-/* Wide equations wrap at their relations and operators. KaTeX sets
-   white-space: nowrap here, so they would scroll inside a box that a keyboard
-   cannot reach (and generated math cannot take tabindex). The overflow rule
-   stays as a last resort for one unbreakable piece wider than the screen, so
-   the page itself never scrolls sideways. */
-.katex-display > .katex {
-  white-space: normal;
-}
+/* A wide equation stays on one line and scrolls sideways inside its own box,
+   so the page itself never scrolls sideways. Letting it wrap breaks it in
+   misleading places (an equals sign stranded away from its fraction, a number
+   split from its power of ten). KaTeX generates the markup, so the box cannot
+   carry a tabindex in the source; scrolling-equations.ts adds it to the ones
+   that overflow, which keeps them reachable from the keyboard. */
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
