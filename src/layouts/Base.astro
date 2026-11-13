@@ -22,12 +22,33 @@ interface Props {
 }
 const { title, description, unit, topic } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+
+// Pages may load only this site's own files. Inline scripts and styles stay
+// allowed: Astro inlines its small scripts, and KaTeX sizes math with style
+// attributes. 'wasm-unsafe-eval' lets the search index (WebAssembly) run.
+// "data:" is for the small fonts the build inlines into the stylesheet and
+// the icons in the search box. Because inline scripts are allowed, this
+// limits where files load from; it would not stop a script injected into a
+// page. A <meta> tag rather than a response header, because SiteGround can
+// serve files without consulting public/.htaccess.
+const contentSecurityPolicy = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'",
+  "style-src 'self' 'unsafe-inline'",
+  "font-src 'self' data:",
+  "img-src 'self' data:",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+].join('; ');
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content={contentSecurityPolicy} />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
