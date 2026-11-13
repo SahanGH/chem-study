@@ -1,0 +1,193 @@
+name: Test and deploy
+
+# Every pull request into main is built and tested. Every push to main is
+# built and tested again and, if that passes, deployed to chem-study.com.
+# Setup, secrets and recovery steps: docs/DEPLOY.md.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  test:
+    name: Build and test
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          cache: npm
+
+      # Reference textbooks and slides live beside this repository on the
+      # author's machine. They are copyrighted and must never be committed.
+      - name: Refuse reference books and slides
+        run: |
+          bad=$(git ls-files | grep -iE '\.(pdf|pptx?|key)$|(^|/)Tro_Reference/|(^|/)ChemistrySlides/' || true)
+          if [ -n "$bad" ]; then
+            echo "::error::These files must not be in the repository:"
+            echo "$bad"
+            exit 1
+          fi
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Two copies of katex make every \ce{} render as literal text.
+      - name: Require a single copy of katex
+        run: |
+          copies=$(find node_modules -type d -name katex | grep -E 'node_modules/katex$' || true)
+          echo "$copies"
+          if [ "$(echo "$copies" | grep -c .)" -ne 1 ]; then
+            echo "::error::Expected exactly one node_modules/katex, found the folders above. See astro.config.mjs."
+            exit 1
+          fi
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Install the test browser
+        run: npx playwright install --with-deps chromium
+
+      # Builds the site (including search index and check-dist), then runs
+      # the browser tests against the built pages.
+      - name: Build and browser tests
+        run: npm run test:e2e
+
+  deploy:
+    name: Deploy to SiteGround
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    # The deploy secrets live in this environment, which only main may use,
+    # so a pull request -- including one from a fork of this public
+    # repository -- can never read the SSH key.
+    environment: production
+    concurrency:
+      group: deploy-production
+      cancel-in-progress: false
+    env:
+      SG_HOST: ${{ secrets.SG_HOST }}
+      SG_USER: ${{ secrets.SG_USER }}
+      SG_PATH: ${{ secrets.SG_PATH }}
+      SG_SITE_ID: ${{ vars.SG_SITE_ID }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Check the deploy settings
+        env:
+          SG_SSH_KEY: ${{ secrets.SG_SSH_KEY }}
+          SG_KNOWN_HOSTS: ${{ secrets.SG_KNOWN_HOSTS }}
+        run: |
+          missing=""
+          for name in SG_HOST SG_USER SG_PATH SG_SSH_KEY SG_KNOWN_HOSTS; do
+            [ -n "${!name}" ] || missing="$missing $name"
+          done
+          if [ -n "$missing" ]; then
+            echo "::error::Missing secrets in the production environment:$missing. See docs/DEPLOY.md."
+            exit 1
+          fi
+          # Plain names and paths only: they go into ssh and rsync unquoted.
+          [[ "$SG_HOST" =~ ^[A-Za-z0-9.-]+$ ]] || { echo "::error::SG_HOST must be a bare hostname."; exit 1; }
+          [[ "$SG_USER" =~ ^[A-Za-z0-9._-]+$ ]] || { echo "::error::SG_USER must be the SSH username alone."; exit 1; }
+          if [[ ! "$SG_PATH" =~ ^/[A-Za-z0-9._/-]+$ || "$SG_PATH" =~ (^|/)\.\.(/|$) ]]; then
+            echo "::error::SG_PATH must be an absolute path without '..'."
+            exit 1
+          fi
+          if [[ -n "$SG_SITE_ID" && ! "$SG_SITE_ID" =~ ^[0-9]+$ ]]; then
+            echo "::error::The SG_SITE_ID variable must be a number."
+            exit 1
+          fi
+
+      - name: Build the site
+        run: |
+          npm ci
+          npm run build
+
+      - name: Set up SSH
+        env:
+          SG_SSH_KEY: ${{ secrets.SG_SSH_KEY }}
+          SG_KNOWN_HOSTS: ${{ secrets.SG_KNOWN_HOSTS }}
+        run: |
+          # The key file must never exist with wider permissions, even briefly.
+          umask 077
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SG_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          # The server's host key, pinned: a host answering with a different
+          # key fails the connection instead of being trusted.
+          printf '%s\n' "$SG_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          cat > ~/.ssh/config <<EOF
+          Host siteground
+            HostName $SG_HOST
+            User $SG_USER
+            Port 18765
+            IdentityFile ~/.ssh/deploy_key
+            IdentitiesOnly yes
+            StrictHostKeyChecking yes
+            BatchMode yes
+          EOF
+
+      # rsync --delete removes whatever else is in the target, so refuse a
+      # folder that has not been marked as this site's root (a wrong SG_PATH,
+      # or the one-time setup in docs/DEPLOY.md not done yet).
+      - name: Confirm the target is the ChemStudy site root
+        run: |
+          ssh siteground "test -f '$SG_PATH/.chemstudy-site'" || {
+            echo "::error::$SG_PATH has no .chemstudy-site marker. See docs/DEPLOY.md, 'One-time server setup'."
+            exit 1
+          }
+
+      # An incomplete build must never reach rsync --delete: it would empty
+      # the site and remove the marker the next deploy depends on.
+      # .well-known holds the certificate challenge files SiteGround manages.
+      - name: Upload the site
+        run: |
+          for f in index.html 404.html .chemstudy-site; do
+            if [ ! -s "dist/$f" ]; then
+              echo "::error::dist/$f is missing or empty. Refusing to deploy an incomplete build."
+              exit 1
+            fi
+          done
+          rsync -az --delete --exclude '.well-known/' dist/ "siteground:$SG_PATH/"
+
+      # Checksums over SSH, never HTTP: repeated automated HTTP requests trip
+      # SiteGround's bot protection for the whole address.
+      - name: Verify the upload
+        run: |
+          for f in index.html 404.html .chemstudy-site; do
+            here=$(md5sum "dist/$f" | cut -d' ' -f1)
+            there=$(ssh siteground "md5sum '$SG_PATH/$f'" | cut -d' ' -f1)
+            # Without pipefail a failed md5sum leaves an empty string, and two
+            # empty strings would compare as equal.
+            if [ -z "$here" ] || [ "$here" != "$there" ]; then
+              echo "::error::$f on the server does not match the build ($here vs $there)."
+              exit 1
+            fi
+            echo "$f ok ($here)"
+          done
+
+      - name: Flush the SiteGround cache
+        if: env.SG_SITE_ID != ''
+        run: ssh siteground "site-tools-client domain-all update id=$SG_SITE_ID flush_cache=1"
