@@ -85,6 +85,9 @@ cs-check {
 .check-body > * + * {
   margin-top: 0.8em;
 }
+cs-check > .check-body {
+  margin-top: 0.4em;
+}
 .trap {
   border-left: 4px solid var(--no);
 }
@@ -163,6 +166,13 @@ cs-check {
   gap: 0.75rem;
   font-family: var(--font-ui);
   font-size: var(--step--1);
+}
+/* The label holds its text, the input and the unit. Without a gap the
+   input's focus ring covers the last letter of "Your answer". */
+.check-numeric label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 .check-numeric input {
   font: inherit;

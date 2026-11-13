@@ -239,6 +239,32 @@ test.describe('lesson spacing', () => {
   test('the check feedback line has space above it', async ({ page }) => {
     expect(await marginTopOf(page, '.check-feedback')).toBeGreaterThan(0);
   });
+
+  test('the question sits clear of its "Check yourself" label', async ({ page }) => {
+    expect(await marginTopOf(page, 'cs-check > .check-body')).toBeGreaterThan(0);
+  });
+
+  test('the numeric input does not touch its label text or its unit', async ({ page }) => {
+    const gaps = await page
+      .locator('.check-numeric label')
+      .first()
+      .evaluate((label) => {
+        const input = label.querySelector('input');
+        const before = label.firstChild;
+        const after = label.lastChild;
+        if (!input || !before || !after) throw new Error('The numeric check is missing its input, label text or unit.');
+        const range = document.createRange();
+        const boxOf = (node: ChildNode) => {
+          range.selectNodeContents(node);
+          return range.getBoundingClientRect();
+        };
+        const box = input.getBoundingClientRect();
+        return { before: box.left - boxOf(before).right, after: boxOf(after).left - box.right };
+      });
+
+    expect(gaps.before).toBeGreaterThanOrEqual(6);
+    expect(gaps.after).toBeGreaterThanOrEqual(6);
+  });
 });
 
 test('the lesson fits a phone screen without sideways scrolling', async ({ page }) => {
