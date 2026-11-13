@@ -154,6 +154,24 @@ main,
   color: var(--ink);
 }
 
+/* Below 408px (iPhones are 375-393px) the brand and the nav are about 36px too
+   wide for one row at 360px. Tighten the gaps and the wordmark rather than the
+   44px icon buttons. At 320px the nav still wraps; pushing it to the right
+   makes that look deliberate. 412px and wider are untouched. */
+@media (max-width: 25.5rem) {
+  .site-header {
+    gap: 0.5rem;
+  }
+  .brand {
+    gap: 0.4rem;
+    font-size: 1.1rem;
+  }
+  .site-header nav {
+    gap: 0.3rem;
+    margin-inline-start: auto;
+  }
+}
+
 .icon-btn {
   display: inline-grid;
   place-items: center;

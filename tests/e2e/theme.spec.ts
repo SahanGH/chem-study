@@ -170,6 +170,47 @@ test.describe('printing from the dark theme', () => {
   });
 });
 
+test.describe('the header on a phone', () => {
+  async function openHome(page: Page, width: number) {
+    await page.setViewportSize({ width, height: 700 });
+    await page.goto('/');
+    await page.evaluate(() => document.fonts.ready);
+  }
+
+  for (const width of [360, 375, 390, 412]) {
+    test(`keeps the brand and the theme button on one row at ${width}px`, async ({ page }) => {
+      await openHome(page, width);
+      const brand = await page.getByRole('link', { name: 'ChemStudy home' }).boundingBox();
+      const toggle = await page.getByRole('button', { name: TOGGLE_NAME }).boundingBox();
+      if (!brand || !toggle) throw new Error('The header has no brand link or no theme button.');
+
+      const brandCenter = brand.y + brand.height / 2;
+      const toggleCenter = toggle.y + toggle.height / 2;
+      expect(Math.abs(brandCenter - toggleCenter)).toBeLessThanOrEqual(3);
+    });
+  }
+
+  test('keeps the icon buttons at least 44px square at 360px', async ({ page }) => {
+    await openHome(page, 360);
+    for (const name of ['Search', TOGGLE_NAME]) {
+      const box = await page.getByRole('button', { name }).boundingBox();
+      expect(box?.width, `${name} width`).toBeGreaterThanOrEqual(44);
+      expect(box?.height, `${name} height`).toBeGreaterThanOrEqual(44);
+    }
+  });
+
+  test('right-aligns the navigation with the header edge at 320px, even when it wraps', async ({ page }) => {
+    await openHome(page, 320);
+    const edges = await page.evaluate(() => {
+      const header = document.querySelector('.site-header')?.getBoundingClientRect();
+      const nav = document.querySelector('.site-header nav')?.getBoundingClientRect();
+      if (!header || !nav) throw new Error('The page has no header or no navigation.');
+      return { header: header.right, nav: nav.right };
+    });
+    expect(Math.abs(edges.header - edges.nav)).toBeLessThanOrEqual(1);
+  });
+});
+
 test('the page does not scroll sideways at 320px wide', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 640 });
   await page.goto('/');
