@@ -98,6 +98,10 @@ describe('topicsLabel', () => {
     expect(topicsLabel(['5.1', '5.2', '5.4'])).toBe('Topics 5.1–5.2, 5.4');
   });
 
+  it('keeps topics in the order they are listed, and joins only a rising run', () => {
+    expect(topicsLabel(['5.2', '5.1'])).toBe('Topics 5.2, 5.1');
+  });
+
   it('does not write topics from two units as a range', () => {
     expect(topicsLabel(['4.9', '5.10'])).toBe('Topics 4.9, 5.10');
   });

@@ -101,22 +101,17 @@ function follows(previous: string, code: string): boolean {
 /**
  * How a document's topics read in a list: "Topic 5.3"; "Topics 5.1–5.2" for a
  * run of neighbors; "Topics 5.1–5.8, 5.10–5.11" when a topic is skipped;
- * "Topics 5.1, 5.3" when none are neighbors.
+ * "Topics 5.1, 5.3" when none are neighbors. Topics stay in the order the
+ * document lists them; only a rising run is joined.
  */
 export function topicsLabel(codes: readonly string[]): string {
   if (codes.length === 0) throw new Error('A practice document must cover at least one topic.');
-  const runs: string[][] = [];
+  const runs: { start: string; end: string }[] = [];
   for (const code of codes) {
     const run = runs.at(-1);
-    const previous = run?.at(-1);
-    if (run && previous !== undefined && follows(previous, code)) run.push(code);
-    else runs.push([code]);
+    if (run && follows(run.end, code)) run.end = code;
+    else runs.push({ start: code, end: code });
   }
-  const written = runs.map((run) => {
-    const [start] = run;
-    const end = run.at(-1);
-    if (start === undefined || end === undefined) throw new Error('A run of topics cannot be empty.');
-    return run.length > 1 ? `${start}–${end}` : start;
-  });
+  const written = runs.map((run) => (run.start === run.end ? run.start : `${run.start}–${run.end}`));
   return `${codes.length === 1 ? 'Topic' : 'Topics'} ${written.join(', ')}`;
 }
