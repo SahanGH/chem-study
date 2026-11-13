@@ -201,6 +201,8 @@ The teacher keeps these, always under the label. `beyond` on a `<Question>` labe
 
 The fact-checker confirms each against the framework and looks for others. The list, as it ends up, goes in the pull request for the teacher to see.
 
+> **As it ended up (2026-11-13).** Two labels: Worksheet 3, question 6 (Arrhenius calculations), and Worksheet 4, question 4, part d (homogeneous and heterogeneous catalysis, terms the framework does not use). **The three half-life labels on Worksheet 2 were taken off.** The fact-check showed that each of those parts can be solved with the integrated rate laws, which are on the equation sheet, so "the AP exam does not ask for this" said too much. The worksheet's introduction now says the two formulas are not on the sheet and how to do without them. The fourth row went with the Quick review.
+
 ---
 
 ## How every conversion task ends (Tasks 5, 6 and 7)
@@ -2868,6 +2870,8 @@ The body follows "How every conversion task ends", and adds: the three departure
 Branch `topic/practice-worksheets`, from an up-to-date `main`.
 
 ### Task 6: Convert Worksheets 2, 3 and 4
+
+> **As carried out (2026-11-13).** The three writers wrote their drafts into the scratch folder while pull request 12 waited, and the drafts were copied in without their Quick reviews once the teacher had decided to leave those out. The branch was started from the first group's branch plus the commit that takes the Quick review out of Worksheet 1; the teacher merged pull request 12 one commit before that removal reached it. Fact-checks ran on Opus. They found every number correct and nothing lost, one wrong example in the original (Worksheet 3, question 7d: diamond to graphite is not strongly exothermic) and one question that could not be answered as posed (Worksheet 4, question 3d). Both are corrected on the site; pull request 13 lists every change of wording. Mechanism tables label their rows "Step 1" and "Step 2" everywhere, also where the source does not number the steps. Totals after this group: 325 unit tests and 360 browser tests.
 
 **Files:**
 - Create: `src/content/practice/unit-5/worksheet-2-concentration-over-time.mdx`

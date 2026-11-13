@@ -57,7 +57,7 @@ Why is that not yet an acceptable rate law?
 
 <Answer>
 
-$\ce{N2O2}$ is an intermediate. Its concentration is not something you can measure or control, so it cannot appear in a final rate law.
+$\ce{N2O2}$ is an intermediate. It is made and used up while the reaction runs, so you cannot choose its concentration the way you choose $[\ce{NO}]$ and $[\ce{O2}]$. A final rate law may contain only reactants, products and catalysts.
 
 </Answer>
 
@@ -71,6 +71,12 @@ Use step 1's equilibrium to express $[\ce{N2O2}]$.
 
 $$
 [\ce{N2O2}] = K_1[\ce{NO}]^2
+$$
+
+Here $K_1 = k_1/k_{-1}$, the ratio of step 1's forward and reverse rate constants. It comes from setting the two rates of step 1 equal:
+
+$$
+k_1[\ce{NO}]^2 = k_{-1}[\ce{N2O2}]
 $$
 
 </Answer>
@@ -188,7 +194,7 @@ The rate-limiting step is the one with: <Blank />
 
 <Answer>
 
-the highest activation barrier
+the largest activation energy, measured from where that step starts
 
 </Answer>
 
@@ -196,11 +202,17 @@ the highest activation barrier
 
 <Part label="d">
 
-A profile shows a first barrier of 95 kJ and a second barrier of 60 kJ, measured from the intermediate. Which step is rate-limiting?
+A two-step profile has the reactants at 0 kJ/mol, the first peak at 95 kJ/mol, the intermediate at 15 kJ/mol and the second peak at 75 kJ/mol. Which step is rate-limiting?
 
 <Answer>
 
-the first
+The first. Step 1 starts at the reactants and climbs 95 kJ/mol.
+
+$$
+75 - 15 = 60\ \text{kJ/mol}
+$$
+
+That is the climb for step 2, which starts at the intermediate. The larger climb is the slower step.
 
 </Answer>
 
@@ -242,7 +254,7 @@ List three quantities a catalyst does *not* change.
 
 <Answer>
 
-$\Delta H$, $K$, $\Delta G^\circ$
+Any three of these: the overall energy change ($\Delta H$), the energies of the reactants and of the products, the amounts present at equilibrium (the equilibrium constant $K$), and $\Delta G^\circ$ (Unit 9).
 
 </Answer>
 
@@ -260,13 +272,15 @@ It lowers the activation energy of the forward and reverse reactions by the same
 
 </Part>
 
-<Part label="d">
+<Part label="d" beyond>
 
 Distinguish homogeneous from heterogeneous catalysis.
 
 <Answer>
 
 Homogeneous: the same phase as the reactants. Heterogeneous: a different phase.
+
+Surface catalysis on a solid, with gas or liquid reactants, is heterogeneous.
 
 </Answer>
 
@@ -327,7 +341,7 @@ State the test that distinguishes them.
 
 <Answer>
 
-A catalyst is consumed in an early step and regenerated later, so it is present at the end. An intermediate is produced first and consumed later, so it is absent at the end and from the overall equation.
+Both cancel out of the overall equation, so the order tells them apart. A catalyst is used in an early step and made again, in full, in a later one, so it is present at the start and at the end. An intermediate is made first and used up later, so it is present only while the reaction runs.
 
 </Answer>
 
@@ -335,7 +349,7 @@ A catalyst is consumed in an early step and regenerated later, so it is present 
 
 </Question>
 
-<Question number={6} title="Free response" topic="5.2, 5.3, 5.8" points={10}>
+<Question number={6} title="Free response" topic="5.2, 5.4, 5.8, 5.9" points={10}>
 
 The gas-phase reaction
 
@@ -386,7 +400,7 @@ $$
 
 <Part label="c">
 
-Predict the initial rate when $[\ce{NO}] = 0.030$ and $[\ce{O2}] = 0.015$.
+Predict the initial rate when $[\ce{NO}] = 0.030\ \text{M}$ and $[\ce{O2}] = 0.015\ \text{M}$.
 
 <Answer>
 
@@ -462,11 +476,11 @@ This has the observed form.
 </Part>
 
 <Rubric>
-<RubricLine part="a" points={3}>1 point for finding the order in $\ce{NO}$ to be 2; 1 point for finding the order in $\ce{O2}$ to be 1; 1 point for citing the specific experiments compared. Stating the orders with no comparison earns 1 of 3.</RubricLine>
+<RubricLine part="a" points={3}>1 point for finding the order in $\ce{NO}$ to be 2; 1 point for finding the order in $\ce{O2}$ to be 1; 1 point for citing the specific experiments compared. Stating both orders with no comparison earns only 1 of the 3 points.</RubricLine>
 <RubricLine part="b" points={2}>1 point for the rate law; 1 point for the value of $k$ *with units*.</RubricLine>
-<RubricLine part="c" points={2}>1 point for a correct substitution; 1 point for the answer, $3.4 \times 10^{-4}$.</RubricLine>
+<RubricLine part="c" points={2}>1 point for a correct substitution; 1 point for the answer, $3.4 \times 10^{-4}\ \text{M/s}$.</RubricLine>
 <RubricLine part="d" points={1}>Consistent but improbable, with the termolecular reason.</RubricLine>
-<RubricLine part="e" points={2}>1 point for writing the slow step's rate law; 1 point for eliminating the intermediate using $K_1$. A final answer still containing $\ce{N2O2}$ earns 0 for the second point.</RubricLine>
+<RubricLine part="e" points={2}>1 point for writing the slow step's rate law; 1 point for eliminating the intermediate using step 1's equilibrium ($K_1$, or the equal forward and reverse rates of step 1). A final answer still containing $\ce{N2O2}$ earns 0 for the second point.</RubricLine>
 </Rubric>
 
 </Question>
