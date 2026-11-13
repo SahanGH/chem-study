@@ -6,7 +6,7 @@
 </button>
 
 <dialog class="search-dialog" data-search-dialog aria-label="Search ChemStudy">
-  <form method="dialog">
+  <form class="search-close-form" method="dialog">
     <button class="search-close" type="submit">Close</button>
   </form>
   <div id="search-ui"></div>
@@ -61,6 +61,14 @@
   for (const button of document.querySelectorAll('[data-search-open]')) {
     button.addEventListener('click', open);
   }
+
+  // A result on the page you are already on only changes the fragment, so the
+  // page never reloads and a modal left open would cover what was just chosen.
+  // The click is not prevented, so the browser still follows the link. Enter on
+  // a focused link fires this same click event.
+  dialog?.addEventListener('click', (event) => {
+    if (event.target instanceof Element && event.target.closest('#search-ui a')) dialog.close();
+  });
 
   document.addEventListener('keydown', (event) => {
     const target = event.target;

@@ -443,7 +443,9 @@ a.unit-title:hover {
 .search-dialog::backdrop {
   background: rgb(38 35 31 / 0.45);
 }
-.search-dialog form {
+/* A class, not ".search-dialog form": Pagefind's own search form lives in this
+   dialog too, and a flex row squeezes its input and puts results beside it. */
+.search-close-form {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 0.75rem;
