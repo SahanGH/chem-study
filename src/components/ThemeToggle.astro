@@ -1,0 +1,28 @@
+<button
+  class="icon-btn"
+  type="button"
+  data-theme-toggle
+  aria-label="Switch between light and dark theme"
+>
+  <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+    <circle cx="9" cy="9" r="7.2" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+    <path d="M9 1.8a7.2 7.2 0 0 1 0 14.4z" fill="currentColor"></path>
+  </svg>
+</button>
+
+<script>
+  const KEY = 'chemstudy:theme';
+  for (const button of document.querySelectorAll('[data-theme-toggle]')) {
+    button.addEventListener('click', () => {
+      const root = document.documentElement;
+      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = next;
+      try {
+        localStorage.setItem(KEY, next);
+      } catch {
+        // Storage blocked (private mode): the theme still switches for
+        // this page, it just is not remembered.
+      }
+    });
+  }
+</script>

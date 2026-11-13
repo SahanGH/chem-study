@@ -1,0 +1,184 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: var(--step-0);
+  line-height: 1.65;
+}
+
+/* A soft cross-fade between pages, in browsers that support it. */
+@view-transition {
+  navigation: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--u);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--u-ink);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-head);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+h1 { font-size: var(--step-3); }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); }
+
+.eyebrow,
+.kicker,
+.label {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+.kicker {
+  color: var(--u-ink);
+}
+
+.lede {
+  font-size: var(--step-1);
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 36rem;
+  margin: 1rem 0 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999rem;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 10;
+  background: var(--card);
+  padding: 0.5rem 1rem;
+}
+
+.site-header,
+main,
+.site-footer {
+  width: min(100% - 2 * var(--space), 72rem);
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.1rem;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-head);
+  font-size: var(--step-1);
+  font-weight: 500;
+  text-decoration: none;
+}
+.logo-tile text {
+  fill: currentColor;
+  font-family: var(--font-head);
+}
+.logo-tile .logo-z {
+  font-family: var(--font-ui);
+}
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.6rem, 2vw, 1.5rem);
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+}
+.site-header nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding-block: 0.6rem;
+}
+.site-header nav a:hover {
+  color: var(--ink);
+}
+
+.icon-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+.icon-btn:hover {
+  background: var(--card);
+}
+
+.button {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: 500;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+}
+
+main {
+  padding-block: var(--space) calc(var(--space) * 2);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding-block: 1.5rem 2.5rem;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+.site-footer p {
+  margin: 0.3rem 0;
+  max-width: 44rem;
+}
