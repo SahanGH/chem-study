@@ -20,10 +20,12 @@ import { fileURLToPath } from 'node:url';
 /** Below this share of the source's words, a question is reported. */
 export const WORDING_FLOOR = 0.7;
 
-const NUMBER = /[+-]?\d+(?:\.\d+)?(?:e-?\d+)?/g;
+const NUMBER = /[+-]?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?/g;
 const POWER_OF_TEN = /\s*\\times\s*10\^\{?([+-]?)(\d+)\}?/g;
-// A sign belongs to the number unless something it could be subtracted from
-// or added to comes just before it.
+// A sign is a subtraction or an addition only when the character right before
+// it, with no space skipped, could end a value: a digit, a letter or a closing
+// bracket. After a space, "=", "(", "{", "$" or the start of the text it
+// belongs to the number, so "is -92 kJ" keeps its minus and "170-50" does not.
 const ENDS_A_VALUE = /[0-9A-Za-z)\]}]/;
 
 /**
@@ -36,9 +38,10 @@ export function numberTokens(text) {
     .replace(POWER_OF_TEN, (_match, sign, digits) => `e${sign === '-' ? '-' : ''}${digits}`);
   const tokens = [];
   for (const match of plain.matchAll(NUMBER)) {
-    let token = match[0];
+    // One way to write an exponent: a lowercase e and no plus sign.
+    let token = match[0].replace(/[eE]\+?/, 'e');
     if (token.startsWith('+') || token.startsWith('-')) {
-      const before = plain.slice(0, match.index).trimEnd().at(-1);
+      const before = plain[match.index - 1];
       if (before !== undefined && ENDS_A_VALUE.test(before)) token = token.slice(1);
     }
     tokens.push(token);
@@ -122,7 +125,7 @@ const STARTS = {
  */
 export function pieceOf(mdx) {
   const frontmatter = /^---\r?\n([\s\S]*?)\r?\n---\r?\n/.exec(mdx)?.[1] ?? '';
-  return /^kind:\s*ladders\s*$/m.test(frontmatter) ? 'section' : 'question';
+  return /^kind:\s*(["']?)ladders\1\s*$/m.test(frontmatter) ? 'section' : 'question';
 }
 
 /**

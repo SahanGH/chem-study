@@ -57,12 +57,13 @@
   /* A practice page prints as it stands: an answer the student has opened is
      on the paper and a closed one is left off, so the same page prints as a
      blank worksheet or as a key. */
-  .answer:not([open]),
-  .answer[open] > summary,
-  .print-note {
+  .practice .answer:not([open]),
+  .practice .answer[open] > summary,
+  .practice .print-note {
     display: none;
   }
-  [data-part] {
+  /* A whole question with its answers open can be longer than a page. */
+  [data-part]:not([data-part='question']) {
     break-inside: avoid;
   }
 }

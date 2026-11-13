@@ -159,6 +159,30 @@ test('search finds every practice document by its title', async ({ page }) => {
   }
 });
 
+test('search does not show what is inside an answer', async ({ page }) => {
+  test.slow();
+  await page.goto(UNIT);
+  await page.getByRole('button', { name: 'Search' }).click();
+
+  // On Worksheet 1 these words appear only inside an answer.
+  await page.locator('.pagefind-ui__search-input').fill('hydrogen bonding');
+
+  await expect(page.locator('.pagefind-ui__message')).toContainText('for hydrogen bonding');
+  await expect(page.locator('.pagefind-ui__result-link[href*="worksheet-1-rates-and-rate-laws"]')).toHaveCount(0);
+});
+
+test("the unit page puts each practice document's topics under its title", async ({ page }) => {
+  await page.goto(UNIT);
+  const item = page.locator('.practice-list > li').first();
+
+  const title = await item.locator('a').boundingBox();
+  const topics = await item.locator('.topic-meta').boundingBox();
+
+  if (!title || !topics) throw new Error('The first practice item has no visible title or topics note to measure.');
+  expect(topics.y).toBeGreaterThanOrEqual(title.y + title.height - 1);
+  expect(Math.abs(topics.x - title.x)).toBeLessThanOrEqual(1);
+});
+
 test.describe('without JavaScript', () => {
   test.use({ javaScriptEnabled: false });
 

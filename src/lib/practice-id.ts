@@ -3,7 +3,7 @@
 
 const PRACTICE_ID = /^unit-(\d+)\/([a-z0-9]+(?:-[a-z0-9]+)*)$/;
 const LESSON_PATH = /^\/unit-\d+-[a-z0-9-]+\/(\d+)-(\d+)-[a-z0-9-]+\/$/;
-const TOPIC_CODE = /^[1-9]\.[1-9]\d?$/;
+export const TOPIC_CODE = /^[1-9]\.[1-9]\d?$/;
 
 export const PRACTICE_KINDS = ['worksheet', 'ladders', 'free-response'] as const;
 export type PracticeKind = (typeof PRACTICE_KINDS)[number];
@@ -53,6 +53,39 @@ export function parseTopics(text: string): string[] {
   }
   if (new Set(codes).size !== codes.length) throw new Error(`"${text}" names a topic twice.`);
   return codes;
+}
+
+/** The least a practice document must carry to be put in order. */
+export interface PracticeEntry {
+  id: string;
+  data: { order: number; topics: string[] };
+}
+
+/**
+ * A unit's practice documents in the order they are listed. A document that
+ * names a topic outside its unit, or shares its place in the list with
+ * another, is an error: both would otherwise show up as a quietly wrong page.
+ */
+export function orderedPractice<T extends PracticeEntry>(
+  docs: readonly T[],
+  unitNumber: number,
+  topicCodes: ReadonlySet<string>,
+): T[] {
+  const byOrder = new Map<number, T>();
+  for (const doc of docs) {
+    const stray = doc.data.topics.find((code) => !topicCodes.has(code));
+    if (stray) {
+      throw new Error(`Practice file ${doc.id} lists topic ${stray}, which is not a topic of Unit ${unitNumber}.`);
+    }
+    const clash = byOrder.get(doc.data.order);
+    if (clash) {
+      throw new Error(
+        `Two practice files in Unit ${unitNumber} have order ${doc.data.order}: ${clash.id} and ${doc.id}. Give each its own number.`,
+      );
+    }
+    byOrder.set(doc.data.order, doc);
+  }
+  return [...docs].sort((a, b) => a.data.order - b.data.order);
 }
 
 /**

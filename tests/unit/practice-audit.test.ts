@@ -89,6 +89,15 @@ describe('numberTokens', () => {
   it('reads a range of topics as two numbers', () => {
     expect(numberTokens('5.1-5.11')).toEqual(['5.1', '5.11']);
   });
+
+  it('keeps a sign that follows a word, after a space', () => {
+    expect(numberTokens('The enthalpy change is -92 kJ')).toEqual(['-92']);
+    expect(numberTokens('a charge of +2')).toEqual(['+2']);
+  });
+
+  it('writes an exponent typed with a capital E or a plus sign the same way', () => {
+    expect(numberTokens('1.2E-3 and 3.0e+2')).toEqual(['1.2e-3', '3.0e2']);
+  });
 });
 
 describe('takeFormulas', () => {
@@ -229,6 +238,11 @@ describe('pieceOf', () => {
     expect(pieceOf('---\ntitle: "Skill ladders"\nkind: ladders\norder: 1\n---\n\nText.\n')).toBe('section');
   });
 
+  it('reads a kind written in quotes', () => {
+    expect(pieceOf('---\ntitle: "Skill ladders"\nkind: "ladders"\n---\n\nText.\n')).toBe('section');
+    expect(pieceOf("---\ntitle: 'Skill ladders'\nkind: 'ladders'\n---\n\nText.\n")).toBe('section');
+  });
+
   it('cuts every other document by question', () => {
     expect(pieceOf('---\ntitle: "Worksheet 1"\nkind: worksheet\norder: 2\n---\n\nText.\n')).toBe('question');
     expect(pieceOf('No frontmatter at all, and the word kind: ladders in the text.\n')).toBe('question');
@@ -259,6 +273,16 @@ describe('differences', () => {
     const changed = SITE_QUESTION.replace(String.raw`2.0 \times 10^{-3}`, String.raw`2.0 \times 10^{3}`);
 
     expect(differences(tex(SOURCE_QUESTION), mdx(changed))).toContain('question 1: number only in the source: 2.0e-3');
+  });
+
+  it('reports a minus sign lost in a sentence', () => {
+    const source = String.raw`\problem[]{The enthalpy change is \SI{-92}{\kilo\joule}. \answerlines[2]{It is exothermic.}}`;
+    const site = '<Question number={1}>\n\nThe enthalpy change is 92 kJ.\n\n<Answer>\n\nIt is exothermic.\n\n</Answer>\n\n</Question>';
+
+    expect(differences(tex(source), mdx(site))).toEqual([
+      'question 1: number only in the source: -92',
+      'question 1: number only on the site: 92',
+    ]);
   });
 
   it('reports a formula that changed', () => {

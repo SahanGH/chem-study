@@ -8,9 +8,11 @@ const answer = (text = 'first order') =>
 const part = (inner: string) => `<div data-part="part"><p>(a)</p><div>${inner}</div></div>`;
 const rubric = (...points: number[]) =>
   `<details data-part="rubric"><ul>${points.map((p) => `<li data-rubric-points="${p}">credit</li>`).join('')}</ul></details>`;
-const question = (inner: string, attributes = '') =>
-  `<section data-part="question"${attributes}><h3>Question 1</h3>${inner}</section>`;
-const practice = (inner: string) => `<main><article data-practice="worksheet">${inner}</article></main>`;
+// An empty heading leaves the <h3> out, so the check has to name the question by its place.
+const question = (inner: string, attributes = '', heading = 'Question 1') =>
+  `<section data-part="question"${attributes}>${heading ? `<h3>${heading}</h3>` : ''}${inner}</section>`;
+const practice = (inner: string, attributes = '') =>
+  `<main><article data-practice="worksheet"${attributes}>${inner}</article></main>`;
 
 describe('checkPage, practice', () => {
   it('passes a question answered as a whole', () => {
@@ -45,6 +47,52 @@ describe('checkPage, practice', () => {
 
   it('reports an answer with nothing in it', () => {
     expect(checkPage(practice(question(answer('  '))), everythingExists)).toEqual(['Question 1 has an empty answer']);
+  });
+
+  it('reports an empty answer in a part', () => {
+    const html = practice(question(part(answer('  '))));
+
+    expect(checkPage(html, everythingExists)).toEqual(['Question 1, part 1, has an empty answer']);
+  });
+
+  it('reports an empty answer to the whole question that follows its parts', () => {
+    const html = practice(question(part(answer()) + answer('  ')));
+
+    expect(checkPage(html, everythingExists)).toEqual(['Question 1 has an empty answer']);
+  });
+
+  it('names a question that has no heading by its place on the page', () => {
+    const html = practice(question('<p>Why?</p>', '', ''));
+
+    expect(checkPage(html, everythingExists)).toEqual(['question 1 has no answer']);
+  });
+
+  it('names the question that lacks an answer when another has one', () => {
+    const html = practice(question(answer()) + question('<p>Why?</p>', '', 'Question 2'));
+
+    expect(checkPage(html, everythingExists)).toEqual(['Question 2 has no answer']);
+  });
+
+  it('passes a page whose stated points are the sum of its questions', () => {
+    const html = practice(
+      question(answer() + rubric(6, 4), ' data-points="10"') +
+        question(answer() + rubric(2, 2), ' data-points="4"', 'Question 2'),
+      ' data-points="14"',
+    );
+
+    expect(checkPage(html, everythingExists)).toEqual([]);
+  });
+
+  it('reports a page whose stated points are not the sum of its questions', () => {
+    const html = practice(
+      question(answer() + rubric(6, 4), ' data-points="10"') +
+        question(answer() + rubric(2, 2), ' data-points="4"', 'Question 2'),
+      ' data-points="15"',
+    );
+
+    expect(checkPage(html, everythingExists)).toEqual([
+      'the page says it is worth 15 points but its questions add up to 14',
+    ]);
   });
 
   it('reports a scored question with no rubric', () => {

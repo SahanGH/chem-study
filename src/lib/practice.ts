@@ -1,6 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { topicByCode, type Unit } from '../data/units';
-import { practiceIdParts } from './practice-id';
+import { orderedPractice, practiceIdParts } from './practice-id';
 
 export type Practice = CollectionEntry<'practice'>;
 
@@ -29,29 +29,10 @@ export function practicePath(unitSlug: string, doc: Practice): string {
   return `/${unitSlug}/practice/${practiceSlug(doc)}/`;
 }
 
-/**
- * A unit's practice documents in the order they are listed. A document that
- * names a topic outside its unit, or shares its place in the list with
- * another, is an error: both would otherwise show up as a quietly wrong page.
- */
+/** A unit's practice documents in listed order; see orderedPractice for what it rejects. */
 export async function practiceForUnit(unit: Unit): Promise<Practice[]> {
   const docs = (await getCollection('practice')).filter((doc) => practiceUnitNumber(doc) === unit.number);
-  const codes = new Set(unit.topics.map((topic) => topic.code));
-  const byOrder = new Map<number, Practice>();
-  for (const doc of docs) {
-    const stray = doc.data.topics.find((code) => !codes.has(code));
-    if (stray) {
-      throw new Error(`Practice file ${doc.id} lists topic ${stray}, which is not a topic of Unit ${unit.number}.`);
-    }
-    const clash = byOrder.get(doc.data.order);
-    if (clash) {
-      throw new Error(
-        `Two practice files in Unit ${unit.number} have order ${doc.data.order}: ${clash.id} and ${doc.id}. Give each its own number.`,
-      );
-    }
-    byOrder.set(doc.data.order, doc);
-  }
-  return [...docs].sort((a, b) => a.data.order - b.data.order);
+  return orderedPractice(docs, unit.number, new Set(unit.topics.map((topic) => topic.code)));
 }
 
 /** The practice that covers one topic, as links for the end of its lesson. */

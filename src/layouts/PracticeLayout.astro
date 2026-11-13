@@ -31,7 +31,12 @@ const facts = [
   unit={unit.number}
 >
   <div class="lesson-grid">
-    <article class="lesson prose practice" data-practice={doc.data.kind} data-pagefind-body>
+    <article
+      class="lesson prose practice"
+      data-practice={doc.data.kind}
+      data-points={doc.data.points}
+      data-pagefind-body
+    >
       <p class="kicker">Unit {unit.number} practice · {kindLabel(doc.data.kind)}</p>
       <h1>{doc.data.title}</h1>
       <p class="practice-facts">{facts.join(' · ')}</p>

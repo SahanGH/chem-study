@@ -1,5 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { kindLabel, parseTopics, practiceIdParts, topicFromLessonPath, topicsLabel } from '../../src/lib/practice-id';
+import {
+  kindLabel,
+  orderedPractice,
+  parseTopics,
+  practiceIdParts,
+  topicFromLessonPath,
+  topicsLabel,
+} from '../../src/lib/practice-id';
 
 describe('practiceIdParts', () => {
   it('reads the unit and the slug from a file in a unit folder', () => {
@@ -87,6 +94,36 @@ describe('topicsLabel', () => {
 
   it('throws when there is no topic', () => {
     expect(() => topicsLabel([])).toThrow(/at least one topic/);
+  });
+});
+
+describe('orderedPractice', () => {
+  const unit5 = new Set(['5.1', '5.2', '5.3']);
+  const doc = (id: string, order: number, topics: string[] = ['5.1']) => ({ id, data: { order, topics } });
+
+  it('returns an empty list for no documents', () => {
+    expect(orderedPractice([], 5, unit5)).toEqual([]);
+  });
+
+  it('sorts by order and leaves the list it was given as it was', () => {
+    const docs = [doc('unit-5/c', 3), doc('unit-5/a', 1), doc('unit-5/b', 2)];
+
+    const ordered = orderedPractice(docs, 5, unit5);
+
+    expect(ordered.map((d) => d.id)).toEqual(['unit-5/a', 'unit-5/b', 'unit-5/c']);
+    expect(docs.map((d) => d.id)).toEqual(['unit-5/c', 'unit-5/a', 'unit-5/b']);
+  });
+
+  it('throws when a document names a topic outside the unit', () => {
+    const docs = [doc('unit-5/stray', 1, ['5.1', '4.9'])];
+
+    expect(() => orderedPractice(docs, 5, unit5)).toThrow(/unit-5\/stray.*4\.9.*not a topic of Unit 5/);
+  });
+
+  it('throws when two documents share a place in the list', () => {
+    const docs = [doc('unit-5/first', 1), doc('unit-5/second', 1)];
+
+    expect(() => orderedPractice(docs, 5, unit5)).toThrow(/order 1: unit-5\/first and unit-5\/second/);
   });
 });
 

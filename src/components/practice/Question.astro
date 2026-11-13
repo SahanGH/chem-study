@@ -19,7 +19,6 @@ interface Props {
 }
 const { number, label = 'Question', title, topic, points, beyond = false } = Astro.props;
 const name = `${label} ${number}`;
-const id = name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
 if (!(Number.isInteger(number) && number >= 1)) {
   throw new Error(`A question's number must be a whole number from 1 up. Got ${JSON.stringify(number)}.`);
@@ -28,8 +27,19 @@ if (points !== undefined && !(Number.isInteger(points) && points >= 1)) {
   throw new Error(`${name}: points must be a whole number from 1 up. Got ${JSON.stringify(points)}.`);
 }
 
+// A malformed topic must say which question it is in: the build error would
+// otherwise name only the page.
+function parseTopicsOf(text: string): string[] {
+  try {
+    return parseTopics(text);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`${name}: ${message}`, { cause: error });
+  }
+}
+
 const lessons = await lessonsByTopic();
-const topics = (topic === undefined ? [] : parseTopics(topic)).map((code) => {
+const topics = (topic === undefined ? [] : parseTopicsOf(topic)).map((code) => {
   const found = topicByCode(code);
   if (!found) throw new Error(`${name} names topic ${code}, which is not one of the AP topics in src/data/units.ts.`);
   const lesson = lessons.get(code);
@@ -43,7 +53,7 @@ const topics = (topic === undefined ? [] : parseTopics(topic)).map((code) => {
 ---
 
 <section class="question" data-part="question" data-points={points}>
-  <h3 id={id}>{title ? `${name}: ${title}` : name}</h3>
+  <h3>{title ? `${name}: ${title}` : name}</h3>
   {
     (topics.length > 0 || points !== undefined) && (
       <p class="question-meta">
