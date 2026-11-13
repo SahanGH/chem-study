@@ -164,10 +164,10 @@ test('search does not show what is inside an answer', async ({ page }) => {
   await page.goto(UNIT);
   await page.getByRole('button', { name: 'Search' }).click();
 
-  // On Worksheet 1 these words appear only inside an answer.
-  await page.locator('.pagefind-ui__search-input').fill('hydrogen bonding');
+  // On Worksheet 1 this word appears only inside an answer.
+  await page.locator('.pagefind-ui__search-input').fill('stoichiometry');
 
-  await expect(page.locator('.pagefind-ui__message')).toContainText('for hydrogen bonding');
+  await expect(page.locator('.pagefind-ui__message')).toContainText('for stoichiometry');
   await expect(page.locator('.pagefind-ui__result-link[href*="worksheet-1-rates-and-rate-laws"]')).toHaveCount(0);
 });
 

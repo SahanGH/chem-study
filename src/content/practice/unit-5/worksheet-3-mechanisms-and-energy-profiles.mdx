@@ -1,0 +1,433 @@
+---
+title: "Worksheet 3: Mechanisms and energy profiles"
+kind: worksheet
+order: 4
+topics: ["5.4", "5.5", "5.6", "5.7", "5.8"]
+summary: Seven questions on elementary steps, testing a mechanism against a measured rate law, the collision model and energy profiles.
+---
+
+Work each question on paper before you open its answer. One idea runs through the mechanism questions: molecularity gives the order only for an elementary step.
+
+You will need these relationships. The first is a rule: for an elementary step, the coefficients *are* the orders.
+
+The next three, the Arrhenius equation, its two-temperature form and the value of $R$, are for question 6 only.
+
+$$
+k = Ae^{-E_a/RT}
+$$
+
+$$
+\ln(k_2/k_1) = -\tfrac{E_a}{R}\left(\tfrac{1}{T_2}-\tfrac{1}{T_1}\right)
+$$
+
+$$
+R = 8.314\ \text{J}\,\text{mol}^{-1}\,\text{K}^{-1}
+$$
+
+The last one is for energy profiles.
+
+$$
+E_a(\text{fwd}) - E_a(\text{rev}) = \Delta H
+$$
+
+## Questions
+
+<Question number={1} topic="5.4">
+
+Write the rate law for each *elementary* step.
+
+<Part label="a">
+
+$\ce{A -> products}$ <Blank />
+
+<Answer>
+
+$\text{rate} = k[\ce{A}]$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$\ce{A + B -> products}$ <Blank />
+
+<Answer>
+
+$\text{rate} = k[\ce{A}][\ce{B}]$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+$\ce{2A -> products}$ <Blank />
+
+<Answer>
+
+$\text{rate} = k[\ce{A}]^2$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+$\ce{2NO + O2 -> 2NO2}$ as a single step <Blank />
+
+<Answer>
+
+$$
+\text{rate} = k[\ce{NO}]^2[\ce{O2}]
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+Why is (d) an unlikely elementary step?
+
+<Answer>
+
+It would be termolecular: three particles colliding simultaneously with the correct orientation. That is so improbable that such steps are rarely proposed.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={2} topic="5.4">
+
+Explain precisely why coefficients give orders for an elementary step but not for an overall equation.
+
+<Answer>
+
+An elementary step *is* the molecular event: its coefficients state how many particles must actually collide, and the probability of that collision scales with each concentration to that power. An overall equation only summarizes the net stoichiometry of a sequence of steps, and the observed rate is set by the slowest of them, which may involve entirely different species in different numbers.
+
+</Answer>
+
+</Question>
+
+<Question number={3} topic="5.7, 5.8">
+
+The overall reaction is:
+
+$$
+\ce{2NO2 + F2 -> 2NO2F}
+$$
+
+The experimental rate law is:
+
+$$
+\text{rate} = k[\ce{NO2}][\ce{F2}]
+$$
+
+Here is a proposed mechanism.
+
+| Step | Equation |
+|---|---|
+| Step 1 (slow) | $\ce{NO2 + F2 -> NO2F + F}$ |
+| Step 2 (fast) | $\ce{NO2 + F -> NO2F}$ |
+
+<Part label="a">
+
+Show that the steps sum to the overall equation.
+
+<Answer>
+
+Adding the steps gives:
+
+$$
+\ce{2NO2 + F2 + F -> 2NO2F + F}
+$$
+
+The F atom appears on both sides and cancels, leaving:
+
+$$
+\ce{2NO2 + F2 -> 2NO2F}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Give the predicted rate law and say why.
+
+<Answer>
+
+Step 1 is rate-limiting and elementary, so the rate law is that of step 1:
+
+$$
+\text{rate} = k[\ce{NO2}][\ce{F2}]
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Does the mechanism pass both tests: do the steps add up to the overall equation, and does the predicted rate law match the measured one?
+
+<Answer>
+
+Yes. The steps add up to the overall equation (part a), and the predicted rate law matches the measured one (part b).
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Identify the intermediate.
+
+<Answer>
+
+$\ce{F}$
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+Does passing both tests prove the mechanism is correct? Explain.
+
+<Answer>
+
+No. It shows the mechanism is *consistent* with the evidence. Other mechanisms can predict the same rate law and sum to the same equation, so kinetics can rule mechanisms out but never single one in.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={4} topic="5.8">
+
+A reaction has this mechanism.
+
+| Step | Equation |
+|---|---|
+| Step 1 (slow) | $\ce{A2 -> 2A}$ |
+| Step 2 (fast) | $\ce{A + B -> AB}$ |
+
+<Part label="a">
+
+The overall equation: <Blank />
+
+<Answer>
+
+$\ce{A2 + 2B -> 2AB}$
+
+Step 1 makes two A, so step 2 runs twice for each time step 1 runs.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The predicted rate law: <Blank />
+
+<Answer>
+
+$\text{rate} = k[\ce{A2}]$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+B is a reactant but absent from the rate law. Is that a problem?
+
+<Answer>
+
+No. B enters only in step 2, after the slow step, so changing $[\ce{B}]$ does not change the rate. The reaction still needs B. Adding more of it just does not speed up the slow step. Zero order in a reactant is a perfectly normal result.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={5} topic="5.5">
+
+The collision model.
+
+<Part label="a">
+
+List the three requirements for a reactive collision.
+
+<Answer>
+
+The particles must collide; the collision must carry at least the activation energy; and the particles must be correctly oriented.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Why is the fraction of successful collisions so small?
+
+<Answer>
+
+Most collisions are either too low in energy to cross the barrier or occur at an unproductive orientation, so only a small fraction of collisions has both enough energy and the right orientation.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Raising the temperature increases the rate far more than it increases collision frequency. Explain.
+
+<Answer>
+
+Higher temperature raises the average kinetic energy: the distribution of energies gets lower and stretches toward higher energies. Because the reactive fraction lies in the high-energy tail beyond $E_a$, a modest stretch puts a disproportionately large number of particles past $E_a$. That far outweighs the small increase in how often particles meet.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={6} topic="5.6" beyond>
+
+Arrhenius calculations.
+
+<Part label="a">
+
+A reaction with $E_a = 50.0\ \text{kJ/mol}$ is warmed from 300 K to 310 K. By what factor does $k$ change?
+
+<Answer>
+
+$$
+\begin{aligned}
+&\ln(k_2/k_1) \\
+&= -\frac{50000}{8.314}\left(\frac{1}{310} - \frac{1}{300}\right) \\
+&= 0.647
+\end{aligned}
+$$
+
+$$
+k_2/k_1 = e^{0.647} = \mathbf{1.9}
+$$
+
+That is roughly double.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Repeat for $E_a = 100.0\ \text{kJ/mol}$.
+
+<Answer>
+
+$\times 3.6$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+What general conclusion follows?
+
+<Answer>
+
+The larger the activation energy, the more sensitive the rate is to temperature, because a bigger barrier means a smaller and more sharply changing reactive fraction.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+A reaction has $k = 2.0 \times 10^{-3}\ \text{s}^{-1}$ at 300 K and $8.0 \times 10^{-3}\ \text{s}^{-1}$ at 320 K. Find $E_a$.
+
+<Answer>
+
+$$
+\begin{aligned}
+&\ln(8.0/2.0) = 1.386 \\
+&= -\frac{E_a}{8.314}\left(\frac{1}{320} - \frac{1}{300}\right)
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+E_a &= \mathbf{5.5 \times 10^{4}}\ \text{J/mol} \\
+&= 55\ \text{kJ/mol}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={7} topic="5.6">
+
+Energy profiles.
+
+<Part label="a">
+
+$E_a(\text{fwd}) = 80\ \text{kJ}$, $E_a(\text{rev}) = 120\ \text{kJ}$. Find $\Delta H$ and classify.
+
+<Answer>
+
+$-40\ \text{kJ}$; exothermic
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$E_a(\text{fwd}) = 150\ \text{kJ}$, $\Delta H = +60\ \text{kJ}$. Find $E_a(\text{rev})$.
+
+<Answer>
+
+90 kJ
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+On a profile, $E_a$ is measured from what to what?
+
+<Answer>
+
+reactants up to the transition state
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Can a strongly exothermic reaction be very slow? Explain.
+
+<Answer>
+
+Yes. $\Delta H$ and $E_a$ answer different questions, and neither one tells you the other: the products may lie far below the reactants while the barrier between them is still very high. Paper is an everyday case. Burning it releases a lot of energy, yet a sheet of paper can sit in air for years without catching fire.
+
+</Answer>
+
+</Part>
+
+</Question>

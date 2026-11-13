@@ -1,0 +1,357 @@
+---
+title: "Worksheet 2: Concentration over time"
+kind: worksheet
+order: 3
+topics: ["5.3"]
+summary: Eight questions on the three integrated rate laws, which plot is a straight line for each order, and half-life.
+---
+
+Work each question on paper before you open its answer. One habit runs through this set: say *which* plot is a straight line, not just "the graph".
+
+You will need these relationships. Each order has an integrated rate law and a half-life.
+
+Zero order:
+
+$$
+[\ce{A}] = -kt + [\ce{A}]_0
+$$
+
+$$
+t_{1/2} = \frac{[\ce{A}]_0}{2k}
+$$
+
+First order:
+
+$$
+\ln[\ce{A}] = -kt + \ln[\ce{A}]_0
+$$
+
+$$
+t_{1/2} = \frac{0.693}{k}
+$$
+
+Second order:
+
+$$
+\frac{1}{[\ce{A}]} = kt + \frac{1}{[\ce{A}]_0}
+$$
+
+$$
+t_{1/2} = \frac{1}{k[\ce{A}]_0}
+$$
+
+The half-life formulas for zero order and second order are not on the AP equation sheet, and you do not need to memorize them. You can reach the same answers with the integrated rate laws, which are on the sheet: set $[\ce{A}]$ equal to half of $[\ce{A}]_0$ and solve for $t$.
+
+## Questions
+
+<Question number={1} topic="5.3">
+
+For each order, name the plot that is a straight line and give its slope.
+
+<Part label="a">
+
+Zero order. The linear plot: <Blank /> Its slope: <Blank />
+
+<Answer>
+
+The plot: $[\ce{A}]$ against $t$. The slope: $-k$.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+First order. The linear plot: <Blank /> Its slope: <Blank />
+
+<Answer>
+
+The plot: $\ln[\ce{A}]$ against $t$. The slope: $-k$.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Second order. The linear plot: <Blank /> Its slope: <Blank />
+
+<Answer>
+
+The plot: $1/[\ce{A}]$ against $t$. The slope: $+k$.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={2} topic="5.3">
+
+A first-order reaction has $k = 0.0250\ \text{s}^{-1}$ and $[\ce{A}]_0 = 0.500\ \text{M}$.
+
+<Part label="a">
+
+Find $[\ce{A}]$ after 60.0 s.
+
+<Answer>
+
+$$
+\begin{aligned}
+\ln[\ce{A}] &= -(0.0250)(60.0) \\
+&\quad + \ln(0.500) \\
+&= -1.50 - 0.693 \\
+&= -2.193
+\end{aligned}
+$$
+
+$$
+[\ce{A}] = e^{-2.193} = \mathbf{0.112}\ \text{M}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Find the half-life.
+
+<Answer>
+
+27.7 s
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+After two half-lives, what fraction remains, and does your answer to part a look consistent?
+
+<Answer>
+
+One quarter, so 0.125 M at 55.4 s. The value at 60.0 s is slightly lower, 0.112 M, as it should be, since that is a little more than two half-lives.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={3} topic="5.3">
+
+A second-order reaction has $k = 0.15\ \text{M}^{-1}\,\text{s}^{-1}$ and $[\ce{A}]_0 = 0.20\ \text{M}$.
+
+<Part label="a">
+
+Find $[\ce{A}]$ after 100 s.
+
+<Answer>
+
+$$
+\begin{aligned}
+\frac{1}{[\ce{A}]} &= (0.15)(100) + \frac{1}{0.20} \\
+&= 15 + 5.0 = 20
+\end{aligned}
+$$
+
+$$
+[\ce{A}] = \mathbf{0.050}\ \text{M}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Find the half-life.
+
+<Answer>
+
+33 s
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+After the first half-life, will the second take the same time, less, or more? Justify your answer.
+
+<Answer>
+
+More. For second order $t_{1/2} = 1/(k[\ce{A}]_0)$ depends on the starting concentration, and once half has reacted the remaining concentration is lower, so the next half-life is twice as long.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={4} topic="5.3">
+
+A zero-order reaction has $k = 0.020\ \text{M/s}$ and $[\ce{A}]_0 = 1.00\ \text{M}$.
+
+<Part label="a">
+
+Find $t_{1/2}$.
+
+<Answer>
+
+25 s
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Find $[\ce{A}]$ after 30 s.
+
+<Answer>
+
+0.40 M
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+At what time does the reactant run out completely? What does that tell you about zero-order behavior?
+
+<Answer>
+
+At 50 s, since the concentration falls linearly. Zero-order kinetics cannot continue past that point. A real reaction is zero order only while something is saturated, such as a catalyst surface that stays fully covered. Once the reactant becomes scarce, the surface can no longer stay full, and the rate starts to depend on $[\ce{A}]$.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={5} topic="5.3">
+
+Identify the order from each observation.
+
+<Part label="a">
+
+The half-life is 25.0 min at the start and 25.0 min again later: <Blank />
+
+<Answer>
+
+first order
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The value of $k$ for that reaction: <Blank />
+
+<Answer>
+
+$0.0277\ \text{min}^{-1}$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A plot of $1/[\ce{A}]$ against $t$ is a straight line with slope $+0.42\ \text{M}^{-1}\,\text{s}^{-1}$: <Blank />
+
+<Answer>
+
+second order, $k = 0.42\ \text{M}^{-1}\,\text{s}^{-1}$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+A plot of $[\ce{A}]$ against $t$ is a straight line: <Blank />
+
+<Answer>
+
+zero order
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={6} topic="5.3">
+
+A student writes "the graph was linear, so the reaction is first order." Explain why this earns no credit, and write the sentence that would.
+
+<Answer>
+
+All three orders produce *some* linear plot, so the statement does not distinguish them. The answer must name the quantity plotted: "the plot of $\ln[\ce{A}]$ against time is linear, therefore the reaction is first order in A."
+
+</Answer>
+
+</Question>
+
+<Question number={7} topic="5.3">
+
+Why is a constant half-life such strong evidence of first-order kinetics?
+
+<Answer>
+
+Of the three expressions, only $t_{1/2} = 0.693/k$ contains no $[\ce{A}]_0$. For zero order the half-life shortens as the reaction proceeds and for second order it lengthens, so a half-life that does not change with concentration is a signature of first order.
+
+</Answer>
+
+</Question>
+
+<Question number={8} topic="5.3">
+
+A radioactive isotope has a half-life of 8.0 days. A sample starts at 40.0 mg.
+
+<Part label="a">
+
+The mass remaining after 24 days: <Blank />
+
+<Answer>
+
+5.0 mg
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+How did you get it without using the integrated rate law?
+
+<Answer>
+
+24 days is exactly three half-lives, so the mass halves three times:
+
+$$
+40.0 \to 20.0 \to 10.0 \to 5.0\ \text{mg}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Radioactive decay is always first order. What does that imply about the time to go from 40.0 to 20.0 mg versus 20.0 to 10.0 mg?
+
+<Answer>
+
+the same: 8.0 days each
+
+</Answer>
+
+</Part>
+
+</Question>
