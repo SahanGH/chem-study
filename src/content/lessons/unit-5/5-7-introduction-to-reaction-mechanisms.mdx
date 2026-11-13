@@ -1,0 +1,201 @@
+---
+topic: "5.7"
+minutes: 10
+summary: "How a reaction is broken into elementary steps, and how to tell the reactants, products, intermediates and catalysts of a mechanism apart."
+---
+
+Take two photos of the same street corner a year apart: an empty lot, then a finished house. You can see what was there at the start and what is there at the end, and nothing of what the builders did in between. A balanced equation is that pair of photos. It tells you what you start with and what you end with. It says nothing about the route. Most reactions do not get from one to the other in a single collision. They take a short series of simple events, one after another, and that series is the **reaction mechanism**.
+
+## A reaction in steps
+
+A mechanism is a list of elementary steps, the single events of topic 5.4, that happen one after another. Each step gets its own equation. Because a step is elementary, its equation means exactly what it says: these particles meet, and those come out.
+
+Here is a reaction you have seen before:
+
+$$
+\ce{NO2(g) + CO(g) -> NO(g) + CO2(g)}
+$$
+
+It looks like one $\ce{NO2}$ bumping into one CO. But topic 5.2 showed that at low temperature its rate does not depend on $[\ce{CO}]$ at all, which would be strange for a simple collision between the two. The mechanism proposed for it has two steps:
+
+| Step | Equation |
+|---|---|
+| Step 1 | $\ce{NO2 + NO2 -> NO3 + NO}$ |
+| Step 2 | $\ce{NO3 + CO -> NO2 + CO2}$ |
+
+The steps leave off the (g) labels to keep them short. Every substance here is a gas.
+
+Read each line as an event. In step 1, two $\ce{NO2}$ molecules collide, and $\ce{NO3}$ and NO come out. In step 2, that $\ce{NO3}$ collides with a CO molecule, and $\ce{NO2}$ and $\ce{CO2}$ come out. Notice that CO does not show up until step 2. Topic 5.8 uses that to explain the odd rate law.
+
+Every substance in a mechanism has a role. Some are reactants and some are products, as in any equation. A mechanism can also contain substances that are neither, and most of this lesson is about spotting them.
+
+## The steps must add up
+
+The steps happen one after another, so together they have to do what the whole reaction does: use up the reactants and make the products, in the right amounts. You can check that on paper. Add the steps the way you would add equations in algebra. Everything to the left of an arrow goes on the left of the total, and everything to the right goes on the right. Then cancel whatever appears on both sides. What is left should be the overall balanced equation.
+
+<KeyIdea>
+
+A proposed mechanism has to add up to the overall balanced equation. If it does not, it is wrong.
+
+</KeyIdea>
+
+<Worked title="Adding up a mechanism">
+
+Show that the two-step mechanism for $\ce{NO2}$ and CO adds up to the overall equation. Then decide what $\ce{NO3}$ is doing in it, and what $\ce{NO2}$ is.
+
+1. **Write both steps.**
+
+   | Step | Equation |
+   |---|---|
+   | Step 1 | $\ce{NO2 + NO2 -> NO3 + NO}$ |
+   | Step 2 | $\ce{NO3 + CO -> NO2 + CO2}$ |
+
+2. **Add them.** Collect the left sides on the left and the right sides on the right. The total is long, so it is written on two lines:
+
+   $$
+   \begin{aligned}
+   &\ce{NO2 + NO2 + NO3 + CO} \\
+   &\qquad \ce{-> NO3 + NO + NO2 + CO2}
+   \end{aligned}
+   $$
+
+3. **Cancel what is on both sides.** $\ce{NO3}$ appears once on each side, so it goes. $\ce{NO2}$ appears twice on the left and once on the right, so one $\ce{NO2}$ goes from each side and one stays on the left.
+
+   $$
+   \ce{NO2 + CO -> NO + CO2}
+   $$
+
+   That is the overall equation. The mechanism adds up.
+
+4. **Look at what vanished.** $\ce{NO3}$ was made in step 1 and used up in step 2, and it is gone from the total. A substance that is made in one step of a mechanism and used up in a later one is an **intermediate**.
+
+5. **Look hard at $\ce{NO2}$.** It is used in step 1, and one $\ce{NO2}$ comes back in step 2. That does not make it a catalyst, which is a substance that is used and then handed back in full. Count the molecules: two went in at step 1 and only one came back at step 2. So one $\ce{NO2}$ is consumed overall, and $\ce{NO2}$ is a reactant.
+
+</Worked>
+
+<Check answer={2}>
+A reaction has this mechanism.
+
+| Step | Equation |
+|---|---|
+| Step 1 | $\ce{A + B -> C}$ |
+| Step 2 | $\ce{C + A -> D}$ |
+
+What is the overall equation?
+
+- $\ce{A + B -> D}$
+- $\ce{2A + B -> D}$
+- $\ce{A + B + C -> D}$
+- $\ce{2A + B -> C + D}$
+
+<div slot="why">Adding the steps gives $\ce{2A + B + C -> C + D}$, and C cancels. An A is used in each step, so the overall equation needs two of them.</div>
+</Check>
+
+## Intermediates
+
+$\ce{NO3}$ is the pattern to remember. An intermediate is made in one step and used up in a later one. So it never appears in the overall equation: it always cancels. It exists only while the reaction is running. There is none in the container before the reaction starts, and none is left at the end.
+
+An intermediate is still a real substance. Its particles are in the mixture while the reaction runs, though they are usually short-lived and present in tiny amounts. That is what separates an intermediate from the transition state of topic 5.6. A transition state is not a substance. It is an arrangement of atoms at the top of an energy hill, and it lasts only an instant.
+
+<Check answer={3}>
+A reaction has this mechanism.
+
+| Step | Equation |
+|---|---|
+| Step 1 | $\ce{Cl2 -> 2Cl}$ |
+| Step 2 | $\ce{Cl + CHCl3 -> HCl + CCl3}$ |
+| Step 3 | $\ce{CCl3 + Cl -> CCl4}$ |
+
+Which of these is an intermediate?
+
+- $\ce{Cl2}$
+- $\ce{CHCl3}$
+- $\ce{CCl3}$
+- $\ce{HCl}$
+
+<div slot="why">$\ce{CCl3}$ is made in step 2 and used up in step 3, so it cancels out of the overall equation, $\ce{Cl2 + CHCl3 -> HCl + CCl4}$. Cl atoms are an intermediate too: step 1 makes two of them, and steps 2 and 3 use one each.</div>
+</Check>
+
+## Catalysts in a mechanism
+
+A substance can cancel out of the overall equation for the opposite reason. A **catalyst** is a substance that is used in one step of a mechanism and made again, in full, in a later step, so none of it is consumed overall. Topic 5.11 covers how a catalyst speeds a reaction up. Here the job is to recognize one in a mechanism.
+
+Hydrogen peroxide breaks down into water and oxygen, and it does so much faster when a little iodide ion, $\ce{I-}$, is dissolved in the solution. With iodide present, the breakdown can go in two steps:
+
+| Step | Equation |
+|---|---|
+| Step 1 | $\ce{H2O2 + I- -> H2O + IO-}$ |
+| Step 2 | $\ce{H2O2 + IO- -> H2O + O2 + I-}$ |
+
+Add the steps and cancel. $\ce{I-}$ appears once on each side, and so does $\ce{IO-}$. What is left is the overall equation:
+
+$$
+\ce{2H2O2 -> 2H2O + O2}
+$$
+
+Two ions canceled. Look at the order in which things happened to each one.
+
+- $\ce{I-}$ goes into step 1 and comes back out of step 2. It is used and then made again, one for one, so it is the catalyst.
+- $\ce{IO-}$ comes out of step 1 and goes into step 2. It is made and then used up, so it is an intermediate.
+
+That order is the whole rule:
+
+| Role | In the mechanism | Overall |
+|---|---|---|
+| Intermediate | made, then used up | none is left at the end |
+| Catalyst | used, then made again in full | none is consumed overall |
+
+Both cancel out of the overall equation, so the order is what tells them apart. Of the substances that cancel completely, an intermediate first shows up on the right of an arrow and a catalyst first shows up on the left. And remember $\ce{NO2}$ in the worked example: count before you call something a catalyst. It has to come back in full.
+
+<Check answer={3}>
+A reaction has this mechanism.
+
+| Step | Equation |
+|---|---|
+| Step 1 | $\ce{O3 + Cl -> ClO + O2}$ |
+| Step 2 | $\ce{ClO + O -> Cl + O2}$ |
+
+What is the role of Cl in the overall reaction?
+
+- Reactant
+- Intermediate
+- Catalyst
+- Product
+
+<div slot="why">Cl is used in step 1 and made again, in full, in step 2, so none is consumed and it cancels out of the overall equation, $\ce{O3 + O -> 2O2}$. That makes it a catalyst, not a reactant. ClO is made in step 1 and then used up in step 2, so it is the intermediate.</div>
+</Check>
+
+## Evidence for a mechanism
+
+A mechanism is a proposal. It is somebody's best account of what the particles do, and like any proposal it has to be tested. Two things can be checked.
+
+1. **It must add up to the overall equation.** You can now check this yourself.
+2. **It must predict the rate law that is measured.** Topic 5.8 shows how.
+
+There is a third kind of evidence. Suppose two mechanisms are proposed for one reaction, and only one of them goes through $\ce{NO3}$. If $\ce{NO3}$ is then found in the mixture while the reaction is running, that is evidence for the mechanism that contains it over the one that does not.
+
+Even then, be careful with your words. A mechanism that passes every test is supported by the evidence. It is not proven, because a different mechanism might fit the same facts. The strongest thing you can say about a mechanism is that it is consistent with the evidence.
+
+<Trap>
+
+Four common mistakes on this topic:
+
+- **Mixing up an intermediate and a catalyst.** Both cancel out of the overall equation. Look at the order. Made and then used up is an intermediate. Used and then made again in full is a catalyst.
+- **Leaving an intermediate in the overall equation.** An intermediate must cancel when you add the steps. If one is still there, a step is missing or the adding went wrong.
+- **Treating a mechanism as proven.** A mechanism can only be consistent with the evidence. Another mechanism might fit the same evidence.
+- **Confusing an intermediate with a transition state.** An intermediate is a substance that can in principle be detected. On the energy profile of a reaction with several steps, which topic 5.10 draws, it sits in a valley between two hills. A transition state is the top of a hill. It is an arrangement of atoms that lasts only an instant.
+
+</Trap>
+
+<KeyPoints>
+
+- A reaction mechanism is a sequence of elementary steps that happen one after another.
+- The steps of a mechanism must add up to the overall balanced equation: add them, then cancel whatever appears on both sides.
+- An intermediate is made in one step and used up in a later one, so none is left at the end. It is a real substance, present only while the reaction runs.
+- A catalyst is used in one step and made again in full in a later one, so none is consumed overall.
+- Neither an intermediate nor a catalyst appears in the overall equation.
+- A mechanism can be supported by evidence, such as finding one of its intermediates in the reacting mixture, but it cannot be proven.
+
+</KeyPoints>
+
+<PracticeNext />
