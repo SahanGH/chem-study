@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="system-ui, sans-serif" font-size="14">
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#4F706C"/>
+    </marker>
+  </defs>
+  <rect width="480" height="300" fill="#FDFCF9"/>
+  <path d="M60 16V250H460" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <text x="260" y="284" text-anchor="middle" fill="#26231F">reaction progress</text>
+  <text x="26" y="133" text-anchor="middle" fill="#26231F" transform="rotate(-90 26 133)">energy</text>
+
+  <path d="M156 50H228" fill="none" stroke="#6B655D" stroke-width="1" stroke-dasharray="4 4"/>
+  <path d="M286 125H386" fill="none" stroke="#6B655D" stroke-width="1" stroke-dasharray="4 4"/>
+  <path d="M340 87.5H386" fill="none" stroke="#6B655D" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <path d="M70 170H176C204 170 208 50 228 50C250 50 262 125 286 125C308 125 318 87.5 340 87.5C366 87.5 366 230 396 230H450" fill="none" stroke="#26231F" stroke-width="3"/>
+
+  <path d="M166 110V51" fill="none" stroke="#4F706C" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <path d="M166 110V167.5" fill="none" stroke="#4F706C" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="158" y="115" text-anchor="end" fill="#26231F">E<tspan dy="4" font-size="10">a</tspan><tspan dy="-4" dx="4">of step 1</tspan></text>
+
+  <path d="M374 106V88.5" fill="none" stroke="#4F706C" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <path d="M374 106V124" fill="none" stroke="#4F706C" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="382" y="111" fill="#26231F">E<tspan dy="4" font-size="10">a</tspan><tspan dy="-4" dx="4">of step 2</tspan></text>
+
+  <text x="228" y="36" text-anchor="middle" fill="#26231F">transition state 1</text>
+  <text x="340" y="74" text-anchor="middle" fill="#26231F">transition state 2</text>
+  <text x="286" y="147" text-anchor="middle" fill="#26231F">intermediate</text>
+  <text x="72" y="160" fill="#26231F">reactants</text>
+  <text x="398" y="220" fill="#26231F">products</text>
+</svg>
