@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && pagefind --site dist && node scripts/check-dist.mjs",
+    "build": "astro build && pagefind --site dist --exclude-selectors \".katex-html\" --exclude-selectors \"annotation\" && node scripts/check-dist.mjs",
     "preview": "astro preview",
     "test": "vitest run",
     "test:e2e": "playwright test"

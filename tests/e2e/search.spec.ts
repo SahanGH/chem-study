@@ -69,6 +69,34 @@ test('choosing a result on the same page with the keyboard closes the dialog too
   expect(page.url().endsWith(fragment)).toBe(true);
 });
 
+test.describe('the search index holds words, not TeX source', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/');
+    await page.getByRole('button', { name: 'Search' }).click();
+  });
+
+  test('a TeX command matches nothing', async ({ page }) => {
+    await page.locator('.pagefind-ui__search-input').fill('qquad');
+    await expect(page.locator('.pagefind-ui__message')).toHaveText('No results for qquad');
+  });
+
+  test('ordinary words around an equation still find the lesson', async ({ page }) => {
+    await page.locator('.pagefind-ui__search-input').fill('rate law');
+    await expect(page.locator('.pagefind-ui__result-link').first()).toHaveText('Introduction to Rate Law');
+  });
+
+  test('no excerpt shows a backslash', async ({ page }) => {
+    const input = page.locator('.pagefind-ui__search-input');
+    for (const query of ['rate law', 'initial rates', 'rate constant']) {
+      await input.fill(query);
+      await expect(page.locator('.pagefind-ui__message')).toHaveText(`1 result for ${query}`);
+      const excerpts = await page.locator('.pagefind-ui__result-excerpt').allInnerTexts();
+      expect(excerpts.length, `excerpts for "${query}"`).toBeGreaterThan(0);
+      expect(excerpts.filter((text) => text.includes('\\')), `excerpts for "${query}"`).toEqual([]);
+    }
+  });
+});
+
 test('the slash key opens search and Escape closes it', async ({ page }) => {
   await page.goto('/about/');
   await page.keyboard.press('/');
