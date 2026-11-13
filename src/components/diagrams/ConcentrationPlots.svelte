@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { formatQuantity } from '../../lib/format';
   import { LINEAR_PLOT, concentrationAt, plotValue, type Order, type PlotKind } from '../../lib/kinetics';
 
   const INITIAL = 1;
@@ -9,10 +10,11 @@
   // end of the plot: [A] finishes at 0.20 M, 0.14 M and 0.20 M.
   const RATE_CONSTANT: Record<Order, number> = { 0: 0.008, 1: 0.02, 2: 0.04 };
   const ORDERS: Order[] = [0, 1, 2];
-  const ORDER_INFO: Record<Order, { name: string; slope: string }> = {
-    0: { name: 'zero', slope: '−k = −0.0080 M/s' },
-    1: { name: 'first', slope: '−k = −0.020 s⁻¹' },
-    2: { name: 'second', slope: '+k = +0.040 M⁻¹ s⁻¹' },
+  // The sign of the straight plot's slope, and the units of k, for each order.
+  const ORDER_INFO: Record<Order, { name: string; sign: string; units: string }> = {
+    0: { name: 'zero', sign: '−', units: 'M/s' },
+    1: { name: 'first', sign: '−', units: 's⁻¹' },
+    2: { name: 'second', sign: '+', units: 'M⁻¹ s⁻¹' },
   };
   const PLOTS: PlotKind[] = ['concentration', 'ln', 'reciprocal'];
   const PLOT_INFO: Record<PlotKind, { axis: string; spoken: string }> = {
@@ -28,6 +30,11 @@
   let hydrated = $state(false);
 
   const chosen = $derived(ORDER_INFO[order]);
+  // Written from the rate constant the plots are drawn with, so the sentence
+  // and the picture cannot disagree.
+  const slope = $derived(
+    `${chosen.sign}k = ${chosen.sign}${formatQuantity(RATE_CONSTANT[order])} ${chosen.units}`,
+  );
   const linear = $derived(PLOT_INFO[LINEAR_PLOT[order]]);
 
   /** The curve for one plot, scaled to fill its box. */
@@ -44,6 +51,9 @@
     // little below its lowest value instead.
     const floor = kind === 'ln' ? lowest - LN_MARGIN * (highest - lowest) : 0;
     const span = highest - floor;
+    // Cannot happen with the constants above: every curve changes over the
+    // run. A rate constant of zero would make it flat and the scale undefined.
+    if (!(span > 0)) throw new Error(`The ${kind} plot for order ${forOrder} is flat, so it has no scale.`);
     return values
       .map((value, index) => {
         const x = BOX.left + (index / SAMPLES) * (BOX.right - BOX.left);
@@ -78,7 +88,7 @@
     {/each}
   </div>
   <p class="diagram-readout" role="status">
-    For a {chosen.name}-order reaction, {linear.axis} against time is the straight line. Its slope is {chosen.slope}.
+    For a {chosen.name}-order reaction, {linear.axis} against time is the straight line. Its slope is {slope}.
   </p>
   <p class="diagram-detail">Every plot starts at [A] = {INITIAL.toFixed(1)} M and runs for {END_TIME} s.</p>
   <div class="diagram-controls">

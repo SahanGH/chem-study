@@ -5,20 +5,29 @@ const PAGE = '/unit-5-kinetics/5-3-concentration-changes-over-time/';
 const NAME = 'concentration-plots';
 const START = 'For a first-order reaction, ln[A] against time is the straight line. Its slope is −k = −0.020 s⁻¹.';
 
+const POINT = /^(\d+(?:\.\d+)?),(\d+(?:\.\d+)?)$/;
+
+/** The points of a plotted curve, in drawing units. Throws on anything that is not a list of "x,y" pairs. */
+async function pointsOf(plot: Locator): Promise<{ x: number; y: number }[]> {
+  const attribute = await plot.locator('polyline').getAttribute('points');
+  if (attribute === null) throw new Error('The curve has no points attribute.');
+  const points = attribute.split(' ').map((pair) => {
+    const match = POINT.exec(pair);
+    if (!match) throw new Error(`The curve has a point that is not "x,y": "${pair}"`);
+    return { x: Number(match[1]), y: Number(match[2]) };
+  });
+  if (points.length < 3) throw new Error(`The curve has too few points: "${attribute}"`);
+  return points;
+}
+
 /** How far the middle of a plotted curve sits from the straight line joining its two ends, in drawing units. */
 async function bend(plot: Locator): Promise<number> {
-  const points = (await plot.locator('polyline').getAttribute('points')) ?? '';
-  const coordinates = points.split(' ').map((pair) => {
-    const [x, y] = pair.split(',').map(Number);
-    if (x === undefined || y === undefined || Number.isNaN(x) || Number.isNaN(y)) {
-      throw new Error(`The plot has a point that is not "x,y": "${pair}"`);
-    }
-    return { x, y };
-  });
-  const first = coordinates[0];
-  const middle = coordinates[Math.floor(coordinates.length / 2)];
-  const last = coordinates[coordinates.length - 1];
-  if (!first || !middle || !last) throw new Error(`The plot has too few points: "${points}"`);
+  const points = await pointsOf(plot);
+  const first = points[0];
+  const middle = points[Math.floor(points.length / 2)];
+  const last = points[points.length - 1];
+  if (!first || !middle || !last) throw new Error('The curve lost its first, middle or last point.');
+  if (last.x === first.x) throw new Error('The curve starts and ends at the same x, so it has no slope to compare with.');
   const onTheLine = first.y + ((last.y - first.y) * (middle.x - first.x)) / (last.x - first.x);
   return Math.abs(middle.y - onTheLine);
 }
@@ -50,7 +59,7 @@ test('choosing zero order makes [A] the straight line', async ({ page }) => {
   await diagram.getByRole('radio', { name: 'zero' }).check();
 
   await expect(diagram.getByRole('status')).toHaveText(
-    'For a zero-order reaction, [A] against time is the straight line. Its slope is −k = −0.0080 M/s.',
+    'For a zero-order reaction, [A] against time is the straight line. Its slope is −k = −8.0 × 10⁻³ M/s.',
   );
   await expect(diagram.locator('[data-plot="concentration"]')).toHaveClass(/is-linear/);
 });
@@ -75,12 +84,11 @@ for (const [order, straight] of [
 
 /** The height of a plotted curve's last point above the time axis, in drawing units. */
 async function endHeight(plot: Locator): Promise<number> {
-  const points = (await plot.locator('polyline').getAttribute('points')) ?? '';
-  const lastY = Number(points.split(' ').at(-1)?.split(',')[1]);
+  const last = (await pointsOf(plot)).at(-1);
   const axis = await plot.locator('.diagram-axis').getAttribute('d');
-  const axisY = Number(/V([\d.]+)H/.exec(axis ?? '')?.[1]);
-  if (Number.isNaN(lastY) || Number.isNaN(axisY)) throw new Error(`Could not read the plot: "${points}" / "${axis}"`);
-  return axisY - lastY;
+  const axisY = /V(\d+(?:\.\d+)?)H/.exec(axis ?? '')?.[1];
+  if (!last || axisY === undefined) throw new Error(`Could not find where the time axis is drawn: "${axis}"`);
+  return Number(axisY) - last.y;
 }
 
 for (const order of ['zero', 'first', 'second'] as const) {
@@ -90,6 +98,14 @@ for (const order of ['zero', 'first', 'second'] as const) {
     await diagram.getByRole('radio', { name: order }).check();
 
     expect(await endHeight(diagram.locator('[data-plot="concentration"]'))).toBeGreaterThan(10);
+  });
+
+  test(`for ${order} order the ln[A] curve ends clear of the time axis`, async ({ page }) => {
+    const diagram = await openDiagram(page, PAGE, NAME);
+
+    await diagram.getByRole('radio', { name: order }).check();
+
+    expect(await endHeight(diagram.locator('[data-plot="ln"]'))).toBeGreaterThan(10);
   });
 }
 
