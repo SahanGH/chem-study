@@ -51,8 +51,16 @@ function isAnswered(value: unknown): value is Record<string, number[]> {
   return isPlainObject(value) && Object.values(value).every(isIndexArray);
 }
 
+// The path becomes a link's href, and localStorage can be written by anything
+// on the origin, so only a path on this site is accepted: it must start with
+// "/" and not be protocol-relative. "/\" is refused with "//" because
+// browsers read a backslash as a slash and would leave the site.
+function isSitePath(value: unknown): value is string {
+  return typeof value === 'string' && value.startsWith('/') && !value.startsWith('//') && !value.startsWith('/\\');
+}
+
 function isLastVisited(value: unknown): value is LastVisited | null {
-  return value === null || (isPlainObject(value) && typeof value.path === 'string' && typeof value.title === 'string');
+  return value === null || (isPlainObject(value) && isSitePath(value.path) && typeof value.title === 'string');
 }
 
 /** Returns the stored state, or null when it is not a well-formed State. */

@@ -115,6 +115,11 @@ describe('progress', () => {
     '{"answered":{"5.2":[1.5]}}',
     '{"last":5}',
     '{"last":{"path":"/x/"}}',
+    '{"last":{"path":"javascript:alert(1)","title":"X"}}',
+    '{"last":{"path":"//evil.example/x","title":"X"}}',
+    '{"last":{"path":"https://evil.example/","title":"X"}}',
+    '{"last":{"path":"/\\\\evil.example/x","title":"X"}}',
+    '{"last":{"path":"","title":"X"}}',
     'null',
     '[]',
     '5',
@@ -135,6 +140,19 @@ describe('progress', () => {
       answered: { '5.2': [0] },
       done: ['5.1'],
       last: { path: '/x/', title: 'X' },
+    });
+  });
+
+  it('honors a stored last-visited path that is a site path', () => {
+    const progress = createProgress(
+      memoryStore({
+        [STORAGE_KEY]: '{"last":{"path":"/unit-5-kinetics/5-2-rate-law/","title":"Introduction to Rate Law"}}',
+      }),
+    );
+
+    expect(progress.lastVisited()).toEqual({
+      path: '/unit-5-kinetics/5-2-rate-law/',
+      title: 'Introduction to Rate Law',
     });
   });
 
