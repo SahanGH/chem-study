@@ -101,11 +101,21 @@ test.describe('display equations at phone and desktop widths', () => {
 test('an answered check still passes in both of its states', async ({ page }) => {
   await page.goto('/unit-5-kinetics/5-2-rate-law/');
   const first = page.locator('cs-check').first();
+  const violationsInChecks = async () => {
+    const results = await new AxeBuilder({ page })
+      .include('cs-check')
+      .withTags(['wcag2a', 'wcag2aa'])
+      .analyze();
+    return results.violations.map((v) => `${v.id}: ${v.help}`);
+  };
+
   await first.locator('.check-option').nth(0).click();
+  await expect(first.locator('.check-feedback')).toHaveText('Not quite. Try another.');
+  await expect(first.locator('.check-option.is-wrong')).toHaveCount(1);
+  expect(await violationsInChecks(), 'after a wrong answer').toEqual([]);
+
   await first.locator('.check-option').nth(2).click();
-  const results = await new AxeBuilder({ page })
-    .include('cs-check')
-    .withTags(['wcag2a', 'wcag2aa'])
-    .analyze();
-  expect(results.violations.map((v) => `${v.id}: ${v.help}`)).toEqual([]);
+  await expect(first.locator('.check-feedback')).toHaveText('Correct.');
+  await expect(first.locator('.check-option.is-correct')).toHaveCount(1);
+  expect(await violationsInChecks(), 'after the right answer').toEqual([]);
 });
