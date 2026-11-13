@@ -1,0 +1,166 @@
+---
+topic: "5.1"
+minutes: 10
+summary: What a reaction rate measures, how the rates of the reactants and products are tied together, and what makes a reaction faster or slower.
+---
+
+Drop an antacid tablet into a glass of cold water and it fizzes for about a minute. Drop one into hot water and it is gone in a fraction of the time. Crush the tablet first and it goes faster still. It is the same reaction and the same amount of tablet every time. Only the speed is different. **Kinetics** is the study of that speed.
+
+## What a rate measures
+
+The speed of a car is a distance divided by a time. The speed of a reaction works the same way, except that the thing you track is a concentration. The **rate** at which a substance forms or is used up is the change in its concentration divided by the time that change took.
+
+Square brackets mean "the concentration of", in mol/L (M). The symbol $\Delta$ means "the change in": the final value minus the starting value. With time in seconds, a rate comes out in M/s.
+
+For a product, which builds up as the reaction runs, the rate of formation is
+
+$$
+\text{rate of formation} = \frac{\Delta[\text{product}]}{\Delta t}
+$$
+
+A reactant is different. Its concentration falls, so its change is a negative number. A rate is reported as a positive number, and that is why a reactant's rate of disappearance carries a minus sign:
+
+$$
+\text{rate of disappearance} = -\frac{\Delta[\text{reactant}]}{\Delta t}
+$$
+
+The minus sign cancels the negative change and leaves a positive rate.
+
+A rate measured like this, from a starting reading and a final reading, is an **average rate**: the total change divided by the whole stretch of time, whatever happened in between.
+
+## One reaction, several rates
+
+Here is the catch. A reaction involves more than one substance, and they do not all change at the same speed. Look at dinitrogen pentoxide breaking apart:
+
+$$
+\ce{2N2O5(g) -> 4NO2(g) + O2(g)}
+$$
+
+Four $\ce{NO2}$ appear for every two $\ce{N2O5}$ used up, so $\ce{NO2}$ forms twice as fast as $\ce{N2O5}$ disappears. Only one $\ce{O2}$ appears for every two $\ce{N2O5}$, so $\ce{O2}$ forms half as fast as $\ce{N2O5}$ disappears.
+
+Three different numbers for one reaction is awkward. The fix is to divide each substance's rate by its coefficient. Then all three agree, and that shared value is the rate of the reaction as a whole:
+
+$$
+\begin{aligned}
+\text{rate of the reaction} &= -\frac{1}{2}\frac{\Delta[\ce{N2O5}]}{\Delta t} \\
+&= \frac{1}{4}\frac{\Delta[\ce{NO2}]}{\Delta t} = \frac{\Delta[\ce{O2}]}{\Delta t}
+\end{aligned}
+$$
+
+<KeyIdea>
+
+The coefficients in the balanced equation tell you how the rates of the different substances compare. Measure one rate and you can work out all the others.
+
+</KeyIdea>
+
+<Worked title="Three rates from one measurement">
+
+Dinitrogen pentoxide decomposes:
+
+$$
+\ce{2N2O5(g) -> 4NO2(g) + O2(g)}
+$$
+
+In one experiment, $[\ce{N2O5}]$ falls from 0.0200 M to 0.0160 M in 100 s. Find the average rate at which each of the three substances changes.
+
+1. **How fast $\ce{N2O5}$ disappears.** Divide the drop in its concentration by the time the drop took.
+
+   $$
+   \frac{(0.0200 - 0.0160)\ \text{M}}{100\ \text{s}} = 4.0 \times 10^{-5}\ \text{M/s}
+   $$
+
+2. **How fast $\ce{NO2}$ forms.** Four $\ce{NO2}$ form for every two $\ce{N2O5}$ used, so multiply by $\frac{4}{2}$.
+
+   $$
+   \frac{4}{2} \times 4.0 \times 10^{-5}\ \text{M/s} = 8.0 \times 10^{-5}\ \text{M/s}
+   $$
+
+3. **How fast $\ce{O2}$ forms.** One $\ce{O2}$ forms for every two $\ce{N2O5}$ used, so multiply by $\frac{1}{2}$.
+
+   $$
+   \frac{1}{2} \times 4.0 \times 10^{-5}\ \text{M/s} = 2.0 \times 10^{-5}\ \text{M/s}
+   $$
+
+The three numbers are different, but they all describe the same reaction. Divide each one by its coefficient and you get $2.0 \times 10^{-5}\ \text{M/s}$ every time. That is the rate of the reaction.
+
+</Worked>
+
+<Check answer={2}>
+In $\ce{N2(g) + 3H2(g) -> 2NH3(g)}$, $\ce{H2}$ is used up at 0.090 M/s. How fast does $\ce{NH3}$ form?
+
+- 0.030 M/s
+- 0.060 M/s
+- 0.090 M/s
+- 0.135 M/s
+
+<div slot="why">Two $\ce{NH3}$ form for every three $\ce{H2}$ used, so $\frac{2}{3} \times 0.090 = 0.060\ \text{M/s}$.</div>
+</Check>
+
+## The rate changes as the reaction runs
+
+A reaction does not hold one speed from start to finish. As the reactant is used up, there is less of it left to react, and the reaction usually slows down. So a graph of concentration against time is usually not a straight line. Most often it is a curve that starts steep and then flattens.
+
+<Figure
+  src="/figures/5-1-concentration-time.svg"
+  alt="Graph of concentration against time. The reactant's curve starts high and falls, steeply at first and then more gently. The product's curve starts at zero and rises, steeply at first and then more gently. A straight line touching the reactant's curve at the start shows the initial rate, where the curve is steepest."
+  caption="Both curves are steepest at the start. The reaction is fastest when it has the most reactant. Drawn for a reaction in which one reactant particle makes one product particle."
+/>
+
+The steepness of a substance's curve is the rate at which that substance is changing. Where the curve is changing quickly, the reaction is fast. Where it has nearly leveled off, the reaction is slow.
+
+That gives you a rate for a single moment and not just for a stretch of time. The **instantaneous rate** is the rate at one moment, and it is the steepness of the curve at that moment. The straight line that just touches the curve at that point is the **tangent**, and its slope (with the sign dropped for a reactant) is the rate at that moment. The **initial rate** is the steepness at the very start, before anything has been used up. It is the one that topic 5.2 uses.
+
+Two readings cannot give you the rate at one moment. What they give you is the average rate over the time between them.
+
+<Check numeric="0.0050" unit="M/s">
+The concentration of a reactant falls from 0.50 M to 0.35 M in 30 s. What is the average rate at which it is used up?
+
+<div slot="why">$(0.50 - 0.35)\ \text{M} / 30\ \text{s} = 0.0050\ \text{M/s}$.</div>
+</Check>
+
+## What changes the rate
+
+Go back to the antacid tablet. Hot water and crushing changed the speed without changing the reaction. Four changes usually make a reaction faster: a higher reactant concentration, a higher temperature, more surface area and a catalyst.
+
+**Concentration.** A wooden splint that only glows in air bursts into flame when you lower it into pure oxygen. Air is only about one-fifth oxygen, so pure oxygen crowds about five times as many oxygen molecules around the wood. More particles in the same space meet more often, so they react more often.
+
+**Temperature.** A glow stick shines brightly in warm water and dimly in ice water. The reaction that makes the light is the same, but in the warm stick the particles move faster and hit each other harder, so more of the collisions have enough energy to react. The warm stick is brighter, but it also dies sooner. Warmth makes the reaction faster. It does not make more of it.
+
+**Surface area.** This one is the crushed tablet. Only the particles on the outside of a solid can be reached by whatever it is reacting with. Crushing the solid exposes particles that were buried inside, so more of them can react at once.
+
+**Catalysts.** A catalyst is a substance that speeds a reaction up and is not used up by it. The catalytic converter in a car's exhaust is one: the metals inside it help turn harmful exhaust gases into less harmful ones, and the same metals keep working for years.
+
+Other conditions can matter too. Light, for example, sets some reactions going. But these four are the ones this course keeps returning to. Topic 5.5 explains the temperature effect properly, and topic 5.11 does the same for catalysts.
+
+<Check answer={4}>
+A piece of zinc reacts with hydrochloric acid. Which change does **not** make the reaction start faster?
+
+- Grinding the zinc into powder
+- Warming the acid
+- Using more concentrated acid
+- Using a larger volume of the same acid
+
+<div slot="why">The first three raise the surface area, the temperature and the concentration. More of the same acid has the same concentration, so the particles meet no more often.</div>
+</Check>
+
+<Trap>
+
+Four common mistakes on this topic:
+
+- **Forgetting the coefficients.** The substances in one reaction do not all change at the same rate. Use the balanced equation to get from one substance's rate to another's.
+- **Reporting a negative rate.** A reactant's concentration falls, but its rate is given as a positive number.
+- **Mixing up average and instantaneous rate.** An average rate is taken over an interval of time. The instantaneous rate is the steepness of the curve at one moment.
+- **Confusing rate with amount.** Rate is how fast, not how much. A reaction can be fast and still make very little product.
+
+</Trap>
+
+<KeyPoints>
+
+- The rate at which a substance forms or is used up is the change in its concentration divided by the time it took, in M/s. It is reported as a positive number, so a reactant's rate is $-\Delta[\text{reactant}]/\Delta t$.
+- The substances in a reaction change at different rates, set by the coefficients in the balanced equation. Dividing each substance's rate by its coefficient gives the same number, the rate of the reaction.
+- The rate usually falls as the reactant is used up, so a graph of concentration against time is steepest at the start. That starting steepness is the initial rate.
+- Higher reactant concentration, higher temperature, more surface area and a catalyst usually make a reaction faster.
+
+</KeyPoints>
+
+<PracticeNext />

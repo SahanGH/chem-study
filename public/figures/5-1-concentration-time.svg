@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="system-ui, sans-serif" font-size="14">
+  <rect width="480" height="300" fill="#FDFCF9"/>
+  <path d="M60 20V250H450" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <text x="255" y="284" text-anchor="middle" fill="#26231F">time</text>
+  <text x="26" y="135" text-anchor="middle" fill="#26231F" transform="rotate(-90 26 135)">concentration</text>
+
+  <path d="M60 250C80 216.7 100 191.5 120 171.3C146.7 144.4 173.3 126.1 200 112.3C233.3 95 266.7 84.6 300 77.1C346.7 66.5 393.3 61.7 440 58.4" fill="none" stroke="#4F706C" stroke-width="3" stroke-dasharray="11 6"/>
+  <path d="M60 50C80 83.3 100 108.5 120 128.7C146.7 155.6 173.3 173.9 200 187.7C233.3 205 266.7 215.4 300 222.9C346.7 233.5 393.3 238.3 440 241.6" fill="none" stroke="#26231F" stroke-width="3"/>
+
+  <path d="M60 50L114 140" fill="none" stroke="#6B655D" stroke-width="2" stroke-dasharray="3 4"/>
+  <circle cx="60" cy="50" r="4" fill="#6B655D"/>
+  <text x="76" y="42" fill="#6B655D">initial rate: steepest</text>
+
+  <text x="350" y="218" fill="#26231F">reactant</text>
+  <text x="350" y="94" fill="#26231F">product</text>
+</svg>
