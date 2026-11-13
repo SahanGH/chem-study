@@ -8,6 +8,23 @@
   dialog {
     display: none !important;
   }
+  /* Paper is always white, so the screen theme must not leak into print.
+     The dark tokens sit on <html> and the unit tokens on <body>, so both
+     need resetting. Doubling :root gives (0,2,0), beating
+     [data-theme='dark'], and the body rule gives (0,3,1), beating
+     [data-theme='dark'] [data-unit='N'] whatever the unit. */
+  :root:root,
+  :root:root body[data-unit] {
+    color-scheme: light;
+    --paper: #fff;
+    --card: #fff;
+    --ink: #000;
+    --muted: #444;
+    --u-ink: #000;
+    --u-tint: #f2f2f2;
+    --line: #999;
+    --no: #7a2f25;
+  }
   body {
     background: #fff;
     color: #000;

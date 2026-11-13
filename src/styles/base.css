@@ -152,6 +152,11 @@ main,
 .icon-btn:hover {
   background: var(--card);
 }
+/* The pre-paint script in Base.astro always sets data-theme on <html>, so a
+   missing data-theme means scripts are off and the toggle could do nothing. */
+html:not([data-theme]) [data-theme-toggle] {
+  display: none;
+}
 
 .button {
   display: inline-block;
