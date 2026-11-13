@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="system-ui, sans-serif" font-size="14">
+  <!-- Both curves are sqrt(E) * exp(-E/kT), scaled to enclose equal areas; the dashed one has kT 1.8 times the solid one. -->
+  <defs>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 0V6" stroke="#26231F" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="300" fill="#FDFCF9"/>
+
+  <path d="M255 195.7L265.2 199.7L275.7 203.6L286.5 207.3L297.5 210.8L308.7 214.1L320.3 217.3L332.1 220.3L344.1 223.1L356.5 225.7L369 228.1L381.9 230.3L395 232.4L408.3 234.3L422 236L435.9 237.6L450 239L450 250L255 250Z" fill="#4F706C" fill-opacity="0.3"/>
+  <path d="M255 222.3L265.2 226.4L275.7 229.9L286.5 233.1L297.5 235.8L308.7 238.1L320.3 240.1L332.1 241.8L344.1 243.3L356.5 244.5L369 245.5L381.9 246.4L395 247.1L408.3 247.6L422 248.1L435.9 248.5L450 248.8L450 250L255 250Z" fill="url(#hatch)"/>
+
+  <path d="M60 20V250H450" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <text x="255" y="284" text-anchor="middle" fill="#26231F">energy of the particles</text>
+  <text x="26" y="135" text-anchor="middle" fill="#26231F" transform="rotate(-90 26 135)">number of particles</text>
+
+  <path d="M255 250V30" fill="none" stroke="#6B655D" stroke-width="2" stroke-dasharray="3 4"/>
+  <text x="263" y="42" fill="#26231F">E<tspan dy="4" font-size="10">a</tspan></text>
+
+  <path d="M60 250L60.1 241.1L60.4 232.2L61 223.4L61.7 214.9L62.7 206.5L63.9 198.4L65.3 190.6L66.9 183.3L68.8 176.3L70.8 169.7L73.1 163.7L75.6 158.2L78.3 153.2L81.2 148.7L84.4 144.8L87.7 141.5L91.3 138.8L95.1 136.6L99.1 135L103.3 133.9L107.8 133.4L112.4 133.4L117.3 133.9L122.4 134.8L127.7 136.2L133.2 138L139 140.2L144.9 142.7L151.1 145.5L157.5 148.5L164.1 151.9L170.9 155.4L178 159L185.2 162.8L192.7 166.7L200.4 170.6L208.3 174.6L216.4 178.6L224.8 182.6L233.3 186.5L242.1 190.4L251.1 194.1L260.3 197.8L269.7 201.4L279.4 204.9L289.2 208.2L299.3 211.4L309.6 214.4L320.1 217.3L330.8 220L341.8 222.5L352.9 225L364.3 227.2L375.9 229.3L387.7 231.3L399.7 233.1L412 234.8L424.4 236.3L437.1 237.7L450 239" fill="none" stroke="#4F706C" stroke-width="3" stroke-dasharray="11 6" stroke-linejoin="round"/>
+  <path d="M60 250L60.1 228.5L60.4 207.2L61 186.3L61.7 166.3L62.7 147.2L63.9 129.2L65.3 112.6L66.9 97.5L68.8 84L70.8 72.2L73.1 62.3L75.6 54.2L78.3 47.9L81.2 43.5L84.4 40.9L87.7 40L91.3 40.7L95.1 43L99.1 46.7L103.3 51.6L107.8 57.7L112.4 64.7L117.3 72.5L122.4 80.9L127.7 89.9L133.2 99.2L139 108.7L144.9 118.4L151.1 128L157.5 137.4L164.1 146.7L170.9 155.7L178 164.3L185.2 172.5L192.7 180.2L200.4 187.5L208.3 194.2L216.4 200.5L224.8 206.3L233.3 211.5L242.1 216.3L251.1 220.6L260.3 224.5L269.7 228L279.4 231.1L289.2 233.8L299.3 236.2L309.6 238.3L320.1 240.1L330.8 241.6L341.8 243L352.9 244.2L364.3 245.1L375.9 246L387.7 246.7L399.7 247.3L412 247.8L424.4 248.2L437.1 248.5L450 248.8" fill="none" stroke="#26231F" stroke-width="3" stroke-linejoin="round"/>
+
+  <text x="104" y="42" fill="#26231F">lower temperature</text>
+  <text x="466" y="196" text-anchor="end" fill="#26231F">higher temperature</text>
+
+  <path d="M322 134L282 219" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <circle cx="282" cy="219" r="3" fill="#6B655D"/>
+  <text x="466" y="126" text-anchor="end" fill="#6B655D">enough energy to react</text>
+</svg>
