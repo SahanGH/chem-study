@@ -27,13 +27,19 @@ Adding the orders gives the **overall order**, $m + n$.
 It is tempting to copy the exponents from the balanced equation. Sometimes that even gives the right answer. For this reaction it happens to:
 
 $$
-\ce{2NO(g) + O2(g) -> 2NO2(g)} \qquad \text{rate} = k[\ce{NO}]^2[\ce{O2}]
+\begin{gathered}
+\ce{2NO(g) + O2(g) -> 2NO2(g)} \\
+\text{rate} = k[\ce{NO}]^2[\ce{O2}]
+\end{gathered}
 $$
 
 But for this one it does not:
 
 $$
-\ce{NO2(g) + CO(g) -> NO(g) + CO2(g)} \qquad \text{rate} = k[\ce{NO2}]^2
+\begin{gathered}
+\ce{NO2(g) + CO(g) -> NO(g) + CO2(g)} \\
+\text{rate} = k[\ce{NO2}]^2
+\end{gathered}
 $$
 
 At low temperature the rate depends on the square of $[\ce{NO2}]$ and not on $[\ce{CO}]$ at all, even though one of each appears in the equation. The balanced equation tells you what is used up and what is made. It does not tell you how fast.
@@ -81,10 +87,10 @@ To find an order, run the reaction several times. Change **one** concentration b
 
 <Worked title="A rate law from three experiments">
 
-Nitrogen monoxide reacts with hydrogen:
+Nitrogen monoxide reacts with hydrogen. Every substance in the reaction is a gas:
 
 $$
-\ce{2NO(g) + 2H2(g) -> N2(g) + 2H2O(g)}
+\ce{2NO + 2H2 -> N2 + 2H2O}
 $$
 
 | Experiment | $[\ce{NO}]$ (M) | $[\ce{H2}]$ (M) | Initial rate (M/s) |
@@ -108,7 +114,11 @@ Find the rate law and the value of $k$.
 4. **Solve for $k$** with the numbers from any one experiment. Using experiment 2:
 
    $$
-   k = \frac{\text{rate}}{[\ce{NO}]^2[\ce{H2}]} = \frac{4.8 \times 10^{-5}\ \text{M/s}}{(0.0080\ \text{M})^2(0.0030\ \text{M})} = 2.5 \times 10^{2}\ \text{M}^{-2}\,\text{s}^{-1}
+   \begin{aligned}
+   k &= \frac{\text{rate}}{[\ce{NO}]^2[\ce{H2}]} \\[0.4em]
+     &= \frac{4.8 \times 10^{-5}\ \text{M/s}}{(0.0080\ \text{M})^2(0.0030\ \text{M})} \\[0.4em]
+     &= 2.5 \times 10^{2}\ \text{M}^{-2}\,\text{s}^{-1}
+   \end{aligned}
    $$
 
 The equation has a 2 in front of $\ce{H2}$, but the order in $\ce{H2}$ is 1. The data decide, not the coefficients.
@@ -152,7 +162,16 @@ Three mistakes cost the most points on this topic:
 <Check numeric="0.020" unit="M/s">
 A reaction has the rate law $\text{rate} = k[\ce{A}]^2$ with $k = 0.50\ \text{M}^{-1}\,\text{s}^{-1}$. What is the rate when $[\ce{A}] = 0.20\ \text{M}$?
 
-<div slot="why">$\text{rate} = (0.50\ \text{M}^{-1}\,\text{s}^{-1})(0.20\ \text{M})^2 = 0.020\ \text{M/s}$.</div>
+<div slot="why">
+
+$$
+\begin{aligned}
+\text{rate} &= (0.50\ \text{M}^{-1}\,\text{s}^{-1})(0.20\ \text{M})^2 \\
+&= 0.020\ \text{M/s}
+\end{aligned}
+$$
+
+</div>
 </Check>
 
 <KeyPoints>
