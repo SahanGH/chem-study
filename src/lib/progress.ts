@@ -60,7 +60,7 @@ const CONTROL_CHARACTER = /[\u0000-\u001f\u007f]/;
 // browsers read a backslash as a slash and would leave the site. Control
 // characters are refused too: browsers drop tab, CR and LF while parsing a
 // URL, so "/<TAB>/evil.example" would become "//evil.example".
-function isSitePath(value: unknown): value is string {
+export function isSitePath(value: unknown): value is string {
   return (
     typeof value === 'string' &&
     value.startsWith('/') &&

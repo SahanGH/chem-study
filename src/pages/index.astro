@@ -1,9 +1,18 @@
 ---
 import Base from '../layouts/Base.astro';
 import { units } from '../data/units';
-import { lessonsByTopic } from '../lib/lessons';
+import type { LessonLink } from '../lib/continue';
+import { lessonPath, lessonsByTopic } from '../lib/lessons';
 
 const lessons = await lessonsByTopic();
+// Every published lesson in course order, for the "continue" offer: the
+// script needs to know which lesson comes after the one a student finished.
+const lessonLinks: LessonLink[] = units.flatMap((unit) =>
+  unit.topics.flatMap((topic) => {
+    const lesson = lessons.get(topic.code);
+    return lesson ? [{ topic: topic.code, path: lessonPath(unit.slug, lesson), title: topic.title }] : [];
+  }),
+);
 const rows = units.map((unit) => ({
   unit,
   ready: unit.topics.filter((t) => lessons.has(t.code)).map((t) => t.code),
@@ -46,7 +55,8 @@ function status(ready: number, total: number): string {
       }
       <a href="#units">See all nine units</a>
     </p>
-    <p class="continue" data-continue hidden>Continue where you left off: <a href="/">your last lesson</a></p>
+    {/* Keep the label, the space and the link on one line: Astro drops the space when an inline element starts a new line. */}
+    <p class="continue" data-continue data-lessons={JSON.stringify(lessonLinks)} hidden><span data-continue-label>Continue where you left off:</span>{' '}<a href="/">your last lesson</a></p>
   </section>
 
   <section id="units" aria-labelledby="units-heading">
