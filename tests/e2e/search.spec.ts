@@ -4,9 +4,9 @@ test('search finds a lesson by words in it', async ({ page }) => {
   await page.goto('/');
   await page.getByRole('button', { name: 'Search' }).click();
   await page.locator('.pagefind-ui__search-input').fill('method of initial rates');
-  const result = page.locator('.pagefind-ui__result-link').first();
+  // Other lessons may match too, so look for this one among the results.
+  const result = page.locator('.pagefind-ui__result-link[href*="/unit-5-kinetics/5-2-rate-law/"]').first();
   await expect(result).toBeVisible();
-  await expect(result).toHaveAttribute('href', /\/unit-5-kinetics\/5-2-rate-law\//);
 });
 
 test('the dialog lays its search box and results out inside itself', async ({ page }) => {
@@ -41,7 +41,7 @@ test('picking a result on the page you are already on closes the dialog', async 
   await page.goto('/unit-5-kinetics/5-2-rate-law/');
   await page.getByRole('button', { name: 'Search' }).click();
   await page.locator('.pagefind-ui__search-input').fill('initial rates');
-  const subResult = page.locator('.pagefind-ui__result-nested .pagefind-ui__result-link').first();
+  const subResult = page.locator('.pagefind-ui__result-nested .pagefind-ui__result-link[href*="/5-2-rate-law/"]').first();
   await expect(subResult).toBeVisible();
   const href = await subResult.getAttribute('href');
   const fragment = new URL(href ?? '', page.url()).hash;
@@ -57,7 +57,7 @@ test('choosing a result on the same page with the keyboard closes the dialog too
   await page.goto('/unit-5-kinetics/5-2-rate-law/');
   await page.getByRole('button', { name: 'Search' }).click();
   await page.locator('.pagefind-ui__search-input').fill('initial rates');
-  const subResult = page.locator('.pagefind-ui__result-nested .pagefind-ui__result-link').first();
+  const subResult = page.locator('.pagefind-ui__result-nested .pagefind-ui__result-link[href*="/5-2-rate-law/"]').first();
   await expect(subResult).toBeVisible();
   const href = await subResult.getAttribute('href');
   const fragment = new URL(href ?? '', page.url()).hash;
@@ -82,14 +82,16 @@ test.describe('the search index holds words, not TeX source', () => {
 
   test('ordinary words around an equation still find the lesson', async ({ page }) => {
     await page.locator('.pagefind-ui__search-input').fill('rate law');
-    await expect(page.locator('.pagefind-ui__result-link').first()).toHaveText('Introduction to Rate Law');
+    await expect(
+      page.locator('.pagefind-ui__result-link', { hasText: 'Introduction to Rate Law' }).first(),
+    ).toBeVisible();
   });
 
   test('no excerpt shows a backslash', async ({ page }) => {
     const input = page.locator('.pagefind-ui__search-input');
     for (const query of ['rate law', 'initial rates', 'rate constant']) {
       await input.fill(query);
-      await expect(page.locator('.pagefind-ui__message')).toHaveText(`1 result for ${query}`);
+      await expect(page.locator('.pagefind-ui__message')).toHaveText(new RegExp(`^[1-9]\\d* results? for ${query}$`));
       const excerpts = await page.locator('.pagefind-ui__result-excerpt').allInnerTexts();
       expect(excerpts.length, `excerpts for "${query}"`).toBeGreaterThan(0);
       expect(excerpts.filter((text) => text.includes('\\')), `excerpts for "${query}"`).toEqual([]);

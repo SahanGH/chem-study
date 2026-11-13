@@ -1,0 +1,152 @@
+/* Interactive diagrams. One stylesheet for all of them, so every diagram
+   draws its axes, curves and controls the same way, and none ships a style
+   block of its own. Colors are the page's tokens, so a diagram follows the
+   theme and the unit accent. */
+.diagram {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.25rem 1.25rem;
+}
+.diagram-body > * + * {
+  margin-top: 0.8rem;
+}
+.diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.diagram-plots {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+}
+.diagram-plot {
+  margin: 0;
+}
+.diagram-plot-note {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--muted);
+  text-align: center;
+  margin: 0.2rem 0 0;
+}
+.diagram-plot.is-linear .diagram-plot-note {
+  color: var(--u-ink);
+  font-weight: 600;
+}
+
+.diagram-axis {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 1;
+}
+/* The tint alone is nearly the card's color, so the outline is what shows
+   how long a full bar would be. */
+.diagram-track {
+  fill: var(--u-tint);
+  stroke: var(--u);
+  stroke-width: 1;
+}
+.diagram-bar {
+  fill: var(--u-ink);
+}
+.diagram-curve {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+.diagram-curve.is-accent {
+  stroke: var(--u-ink);
+  stroke-width: 3;
+}
+/* Dashes as well as color: the second curve must be told apart without color. */
+.diagram-curve.is-dashed {
+  stroke: var(--u-ink);
+  stroke-width: 3;
+  stroke-dasharray: 9 6;
+}
+.diagram-label {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  fill: var(--muted);
+}
+
+.diagram-readout {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.diagram-detail,
+.diagram-note {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+
+.diagram-controls {
+  display: grid;
+  gap: 0.6rem 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+}
+/* The server draws the diagram at its starting values. Until the script has
+   taken over, the controls would do nothing, so they are not shown. */
+.diagram-body:not([data-hydrated]) .diagram-controls {
+  display: none;
+}
+/* When scripts are on (the theme script has set data-theme on <html>), the
+   controls are about to appear. Keep their space, unseen and out of reach,
+   so the lesson below does not jump when they do. */
+html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
+  display: grid;
+  visibility: hidden;
+}
+.diagram-slider {
+  display: grid;
+  gap: 0.2rem;
+}
+.diagram-slider input {
+  width: 100%;
+  min-height: 2.75rem;
+  margin: 0;
+  accent-color: var(--u-ink);
+}
+.diagram-choice {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 1rem;
+}
+.diagram-choice legend {
+  padding: 0;
+  float: left;
+  margin-right: 1rem;
+}
+.diagram-choice label,
+.diagram-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.75rem;
+  cursor: pointer;
+}
+.diagram-choice input,
+.diagram-toggle input {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0;
+  accent-color: var(--u-ink);
+}
+
+@media print {
+  .diagram-controls {
+    display: none;
+  }
+}

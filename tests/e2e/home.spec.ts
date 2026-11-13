@@ -2,8 +2,10 @@ import { expect, test } from '@playwright/test';
 
 // The counts grow as lessons are published, so these match any count rather
 // than today's, and check that the verb agrees with it.
-const UNIT_5_READY = /\d+ of 11 lessons ready/;
-const UNIT_5_READY_ONE_DONE = /\d+ of 11 lessons ready · 1 done/;
+// Once all eleven are published the row reads "11 lessons". The lookbehind
+// keeps "3 of 11 lessons", with "ready" missing, from passing as that.
+const UNIT_5_READY = /\d+ of 11 lessons ready|(?<!of )11 lessons/;
+const UNIT_5_READY_ONE_DONE = /(?:\d+ of 11 lessons ready|(?<!of )11 lessons) · 1 done/;
 const HOME_COUNT = /\b(?:1 of 91 lessons is|(?:[2-9]|\d\d) of 91 lessons are) ready so far/;
 const ABOUT_COUNT = /\b(?:1 of 91 topics has|(?:[2-9]|\d\d) of 91 topics have) a lesson so far/;
 
