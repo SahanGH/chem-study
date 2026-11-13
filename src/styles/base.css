@@ -187,3 +187,100 @@ main {
   margin: 0.3rem 0;
   max-width: 44rem;
 }
+
+/* Lesson page. One column on a phone (lesson, then the unit's topics);
+   topics move to the left at 60rem; "on this page" appears at 78rem. */
+.lesson-grid {
+  display: grid;
+  gap: calc(var(--space) * 1.5);
+  grid-template-columns: minmax(0, 1fr);
+}
+.section-nav {
+  display: none;
+}
+@media (min-width: 60rem) {
+  .lesson-grid {
+    grid-template-columns: 15rem minmax(0, 1fr);
+    align-items: start;
+  }
+  .topic-nav {
+    grid-column: 1;
+    grid-row: 1;
+    position: sticky;
+    top: 1.5rem;
+  }
+  .lesson {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+@media (min-width: 78rem) {
+  .lesson-grid {
+    grid-template-columns: 15rem minmax(0, 1fr) 13rem;
+  }
+  .section-nav {
+    display: block;
+    grid-column: 3;
+    grid-row: 1;
+    position: sticky;
+    top: 1.5rem;
+  }
+}
+
+.topic-nav,
+.section-nav {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+}
+.topic-nav ol,
+.section-nav ul {
+  list-style: none;
+  margin: 0.8rem 0 0;
+  padding: 0;
+}
+.topic-nav li,
+.section-nav li {
+  padding-block: 0.3rem;
+  color: var(--muted);
+}
+.topic-nav a,
+.section-nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.topic-nav a:hover,
+.section-nav a:hover {
+  color: var(--ink);
+}
+.topic-nav .eyebrow a {
+  color: inherit;
+}
+.topic-nav li.current a {
+  color: var(--u-ink);
+  font-weight: 600;
+}
+.topic-nav li.is-done::after {
+  content: ' ✓';
+  color: var(--ok);
+}
+
+.complete {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: var(--ok);
+  background: var(--ok-bg);
+  border-radius: var(--radius);
+  padding: 0.8rem 1.1rem;
+}
+.prev-next {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  border-top: 1px solid var(--line);
+  padding-top: 1.2rem;
+  margin-top: 2.5rem;
+}

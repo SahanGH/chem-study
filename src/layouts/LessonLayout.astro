@@ -1,0 +1,86 @@
+---
+import type { MarkdownHeading } from 'astro';
+import Base from './Base.astro';
+import { topicByCode } from '../data/units';
+import { lessonPath, lessonsByTopic, type Lesson } from '../lib/lessons';
+
+interface Props {
+  lesson: Lesson;
+  headings: MarkdownHeading[];
+}
+const { lesson, headings } = Astro.props;
+
+const found = topicByCode(lesson.data.topic);
+if (!found) {
+  throw new Error(`Lesson ${lesson.id} has topic ${lesson.data.topic}, which is not in src/data/units.ts.`);
+}
+const { unit, topic } = found;
+
+const lessons = await lessonsByTopic();
+const published = unit.topics.filter((t) => lessons.has(t.code));
+const position = published.findIndex((t) => t.code === topic.code);
+const prev = published[position - 1];
+const next = published[position + 1];
+const pathFor = (code: string) => lessonPath(unit.slug, lessons.get(code)!);
+const sections = headings.filter((h) => h.depth === 2);
+---
+
+<Base
+  title={`${topic.code} ${topic.title} | ChemStudy`}
+  description={lesson.data.summary}
+  unit={unit.number}
+  topic={topic.code}
+>
+  <div class="lesson-grid">
+    <article class="lesson prose" data-pagefind-body>
+      <p class="kicker">Topic {topic.code} · {lesson.data.minutes} min</p>
+      <h1>{topic.title}</h1>
+      <slot />
+      <p class="complete" data-complete data-pagefind-ignore hidden>Topic complete. Nice work.</p>
+      <nav class="prev-next" aria-label="Previous and next topic" data-pagefind-ignore>
+        {prev ? <a rel="prev" href={pathFor(prev.code)}>← {prev.code} {prev.title}</a> : <span />}
+        {
+          next ? (
+            <a rel="next" href={pathFor(next.code)}>{next.code} {next.title} →</a>
+          ) : (
+            <a href={`/${unit.slug}/`}>Back to Unit {unit.number} →</a>
+          )
+        }
+      </nav>
+    </article>
+
+    <nav class="topic-nav" aria-label={`Unit ${unit.number} topics`}>
+      <p class="eyebrow"><a href={`/${unit.slug}/`}>Unit {unit.number} · {unit.title}</a></p>
+      <ol>
+        {
+          unit.topics.map((t) => (
+            <li data-topic-link={t.code} class:list={{ current: t.code === topic.code }}>
+              {lessons.has(t.code) ? (
+                <a href={pathFor(t.code)} aria-current={t.code === topic.code ? 'page' : undefined}>
+                  {t.code} {t.title}
+                </a>
+              ) : (
+                <span>{t.code} {t.title}</span>
+              )}
+            </li>
+          ))
+        }
+      </ol>
+    </nav>
+
+    {
+      sections.length > 0 && (
+        <nav class="section-nav" aria-label="On this page">
+          <p class="eyebrow">On this page</p>
+          <ul>
+            {sections.map((h) => (
+              <li>
+                <a href={`#${h.slug}`}>{h.text}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )
+    }
+  </div>
+</Base>

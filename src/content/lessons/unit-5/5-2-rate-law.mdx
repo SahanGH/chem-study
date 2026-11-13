@@ -1,0 +1,162 @@
+---
+topic: "5.2"
+minutes: 12
+summary: How the rate of a reaction depends on the concentration of each reactant, and how to find that dependence from experiments.
+---
+
+Double the amount of a reactant and a reaction usually speeds up. The surprise is *by how much*. Sometimes the rate doubles. Sometimes it quadruples. Sometimes nothing happens at all. A **rate law** is the equation that records which.
+
+## What a rate law says
+
+For a reaction with reactants A and B, the rate law has this form:
+
+$$
+\text{rate} = k[\ce{A}]^m[\ce{B}]^n
+$$
+
+Each piece has a job:
+
+- $[\ce{A}]$ and $[\ce{B}]$ are the concentrations of the reactants, in mol/L (M).
+- $m$ and $n$ are the **orders** of the reaction in A and in B. They say how strongly the rate responds to each concentration.
+- $k$ is the **rate constant**. It is a fixed number for a given reaction at a given temperature.
+
+Adding the orders gives the **overall order**, $m + n$.
+
+## Orders come from experiment
+
+It is tempting to copy the exponents from the balanced equation. Sometimes that even gives the right answer. For this reaction it happens to:
+
+$$
+\ce{2NO(g) + O2(g) -> 2NO2(g)} \qquad \text{rate} = k[\ce{NO}]^2[\ce{O2}]
+$$
+
+But for this one it does not:
+
+$$
+\ce{NO2(g) + CO(g) -> NO(g) + CO2(g)} \qquad \text{rate} = k[\ce{NO2}]^2
+$$
+
+At low temperature the rate depends on the square of $[\ce{NO2}]$ and not on $[\ce{CO}]$ at all, even though one of each appears in the equation. The balanced equation tells you what is used up and what is made. It does not tell you how fast.
+
+<KeyIdea>
+The orders in a rate law are found by measuring rates. You cannot read them off the balanced equation.
+</KeyIdea>
+
+## What each order does to the rate
+
+The order tells you what happens to the rate when you change one concentration and hold everything else fixed.
+
+| Order in A | If you double $[\ce{A}]$, the rate | The rate depends on |
+|---|---|---|
+| 0 | does not change | nothing: $[\ce{A}]^0 = 1$ |
+| 1 | doubles | $[\ce{A}]$ |
+| 2 | quadruples | $[\ce{A}]^2$ |
+
+<Figure
+  src="/figures/5-2-order-and-rate.svg"
+  alt="Graph of rate against concentration of A. For zero order the rate is a flat horizontal line. For first order it is a straight line rising from the origin. For second order it is a curve that starts flat and rises ever more steeply."
+  caption="How rate changes with concentration for a reaction that is zero, first or second order in A."
+/>
+
+<Check answer={3}>
+Doubling $[\ce{A}]$ makes a reaction four times faster. What is the order in A?
+
+- 0
+- 1
+- 2
+- 4
+
+<div slot="why">The rate is proportional to $[\ce{A}]^m$. Doubling the concentration multiplies the rate by $2^m$, and $2^m = 4$ gives $m = 2$.</div>
+</Check>
+
+## Finding the orders: the method of initial rates
+
+To find an order, run the reaction several times. Change **one** concentration between runs and measure the rate right at the start, before the concentrations have had time to change. Comparing two runs that differ in only one reactant isolates that reactant's effect.
+
+<Worked title="A rate law from three experiments">
+
+Nitrogen monoxide reacts with hydrogen:
+
+$$
+\ce{2NO(g) + 2H2(g) -> N2(g) + 2H2O(g)}
+$$
+
+| Experiment | $[\ce{NO}]$ (M) | $[\ce{H2}]$ (M) | Initial rate (M/s) |
+|---|---|---|---|
+| 1 | 0.0050 | 0.0020 | $1.25 \times 10^{-5}$ |
+| 2 | 0.010 | 0.0020 | $5.0 \times 10^{-5}$ |
+| 3 | 0.010 | 0.0040 | $1.0 \times 10^{-4}$ |
+
+Find the rate law and the value of $k$.
+
+1. **Order in NO.** Compare experiments 1 and 2: $[\ce{H2}]$ is the same and $[\ce{NO}]$ doubles. The rate goes from $1.25 \times 10^{-5}$ to $5.0 \times 10^{-5}$, which is 4 times faster. Since $2^m = 4$, the order in NO is 2.
+
+2. **Order in $\ce{H2}$.** Compare experiments 2 and 3: $[\ce{NO}]$ is the same and $[\ce{H2}]$ doubles. The rate goes from $5.0 \times 10^{-5}$ to $1.0 \times 10^{-4}$, which is 2 times faster. Since $2^n = 2$, the order in $\ce{H2}$ is 1.
+
+3. **Write the rate law.**
+
+   $$
+   \text{rate} = k[\ce{NO}]^2[\ce{H2}]
+   $$
+
+4. **Solve for $k$** with the numbers from any one experiment. Using experiment 2:
+
+   $$
+   k = \frac{\text{rate}}{[\ce{NO}]^2[\ce{H2}]} = \frac{5.0 \times 10^{-5}\ \text{M/s}}{(0.010\ \text{M})^2(0.0020\ \text{M})} = 2.5 \times 10^{2}\ \text{M}^{-2}\,\text{s}^{-1}
+   $$
+
+The equation has a 2 in front of $\ce{H2}$, but the order in $\ce{H2}$ is 1. The data decide, not the coefficients.
+
+</Worked>
+
+## The units of k
+
+The rate is always in M/s. For the two sides of the rate law to match, the units of $k$ have to make up the difference, so they depend on the overall order.
+
+| Overall order | Rate law | Units of $k$ |
+|---|---|---|
+| 0 | $\text{rate} = k$ | $\text{M}\,\text{s}^{-1}$ |
+| 1 | $\text{rate} = k[\ce{A}]$ | $\text{s}^{-1}$ |
+| 2 | $\text{rate} = k[\ce{A}]^2$ | $\text{M}^{-1}\,\text{s}^{-1}$ |
+| 3 | $\text{rate} = k[\ce{A}]^2[\ce{B}]$ | $\text{M}^{-2}\,\text{s}^{-1}$ |
+
+This works in reverse too. If you are told that $k$ has units of $\text{s}^{-1}$, the reaction must be first order overall.
+
+<Check answer={2}>
+A rate law is $\text{rate} = k[\ce{A}][\ce{B}]$. What are the units of $k$?
+
+- $\text{s}^{-1}$
+- $\text{M}^{-1}\,\text{s}^{-1}$
+- $\text{M}^{-2}\,\text{s}^{-1}$
+- $\text{M}\,\text{s}^{-1}$
+
+<div slot="why">The overall order is $1 + 1 = 2$. Dividing M/s by $\text{M}^2$ leaves $\text{M}^{-1}\,\text{s}^{-1}$.</div>
+</Check>
+
+<Trap>
+
+Three mistakes cost the most points on this topic:
+
+- **Copying coefficients as orders.** The orders come from rate data, never from the balanced equation.
+- **Thinking $k$ changes with concentration.** Changing a concentration changes the *rate*. The rate constant stays the same unless the temperature changes.
+- **Leaving the units off $k$.** A rate constant without units is incomplete, and the units depend on the overall order.
+
+</Trap>
+
+<Check numeric={0.020} unit="M/s">
+A reaction has the rate law $\text{rate} = k[\ce{A}]^2$ with $k = 0.50\ \text{M}^{-1}\,\text{s}^{-1}$. What is the rate when $[\ce{A}] = 0.20\ \text{M}$?
+
+<div slot="why">$\text{rate} = (0.50\ \text{M}^{-1}\,\text{s}^{-1})(0.20\ \text{M})^2 = 0.020\ \text{M/s}$.</div>
+</Check>
+
+<KeyPoints>
+
+- A rate law has the form $\text{rate} = k[\ce{A}]^m[\ce{B}]^n$.
+- The orders $m$ and $n$ are found from experiment, not from the balanced equation.
+- Zero order: the rate ignores that concentration. First order: the rate doubles when it doubles. Second order: the rate quadruples.
+- The method of initial rates compares two experiments that differ in one concentration.
+- $k$ is constant at a given temperature. Its units depend on the overall order, so that the rate comes out in M/s.
+
+</KeyPoints>
+
+<PracticeNext />
