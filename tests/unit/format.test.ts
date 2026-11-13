@@ -26,6 +26,18 @@ describe('formatQuantity', () => {
     expect(formatQuantity(0)).toBe('0');
   });
 
+  it('chooses the notation after rounding, so a number that rounds up to 0.010 is written plainly', () => {
+    expect(formatQuantity(0.0099)).toBe('9.9 × 10⁻³');
+    expect(formatQuantity(0.00999)).toBe('0.010');
+    expect(formatQuantity(0.01)).toBe('0.010');
+  });
+
+  it('writes a number that rounds up to 10 as a power of ten', () => {
+    expect(formatQuantity(9.94)).toBe('9.9');
+    expect(formatQuantity(9.96)).toBe('1.0 × 10¹');
+    expect(formatQuantity(10)).toBe('1.0 × 10¹');
+  });
+
   it('keeps the sign of a negative number', () => {
     expect(formatQuantity(-0.02)).toBe('−0.020');
     expect(formatQuantity(-0.0032)).toBe('−3.2 × 10⁻³');

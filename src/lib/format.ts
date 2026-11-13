@@ -31,7 +31,18 @@ export function formatQuantity(value: number): string {
   // and "1.0 × 10⁻²" by the other.
   const rounded = Number(size.toPrecision(2));
   if (rounded >= 0.01 && rounded < 10) return sign + rounded.toPrecision(2);
-  const [mantissa = '', exponent = ''] = rounded.toExponential(1).split('e');
-  const power = Array.from(exponent.replace('+', ''), (character) => SUPERSCRIPT[character] ?? character).join('');
+  const exponential = rounded.toExponential(1);
+  const [mantissa, exponent] = exponential.split('e');
+  // toExponential always gives "d.de±n" for a finite number, so neither
+  // throw below can happen today. They are here so that a change to the
+  // lines above fails loudly instead of printing a wrong exponent.
+  if (mantissa === undefined || exponent === undefined) {
+    throw new Error(`Expected a number written like 3.2e-3, not "${exponential}".`);
+  }
+  const power = Array.from(exponent.replace('+', ''), (character) => {
+    const raised = SUPERSCRIPT[character];
+    if (raised === undefined) throw new Error(`No superscript for "${character}" in the exponent of ${exponential}.`);
+    return raised;
+  }).join('');
   return `${sign}${mantissa} × 10${power}`;
 }

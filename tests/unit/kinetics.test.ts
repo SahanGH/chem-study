@@ -47,7 +47,41 @@ describe('concentrationAt', () => {
   });
 });
 
+describe('concentrationAt with values that are not physical', () => {
+  it.each([
+    ['a starting concentration of zero', 0, 0.02, 10],
+    ['a negative starting concentration', -1, 0.02, 10],
+    ['a starting concentration that is not a number', Number.NaN, 0.02, 10],
+  ])('throws for %s', (_name, initial, k, time) => {
+    expect(() => concentrationAt(1, initial, k, time)).toThrow('starting concentration');
+  });
+
+  it.each([
+    ['a negative rate constant', -0.02],
+    ['a rate constant that is not a number', Number.NaN],
+    ['an infinite rate constant', Number.POSITIVE_INFINITY],
+  ])('throws for %s', (_name, k) => {
+    expect(() => concentrationAt(1, 1, k, 10)).toThrow('rate constant');
+  });
+
+  it.each([
+    ['a negative time', -1],
+    ['a time that is not a number', Number.NaN],
+    ['an infinite time', Number.POSITIVE_INFINITY],
+  ])('throws for %s', (_name, time) => {
+    expect(() => concentrationAt(2, 1, 0.04, time)).toThrow('time');
+  });
+});
+
 describe('plotValue', () => {
+  it.each(['concentration', 'ln', 'reciprocal'] as const)(
+    'throws for a concentration that is not a finite number, on the %s plot',
+    (kind) => {
+      expect(() => plotValue(kind, Number.NaN)).toThrow('finite');
+      expect(() => plotValue(kind, Number.POSITIVE_INFINITY)).toThrow('finite');
+    },
+  );
+
   it('gives the concentration, its natural log, or its reciprocal', () => {
     expect(plotValue('concentration', 0.5)).toBe(0.5);
     expect(plotValue('ln', 0.5)).toBeCloseTo(-0.6931, 4);
