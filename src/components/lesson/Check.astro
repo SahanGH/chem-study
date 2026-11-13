@@ -1,0 +1,142 @@
+---
+interface Props {
+  /** 1-based number of the correct option in the list. */
+  answer?: number;
+  /** The correct value, for a question answered with a number. */
+  numeric?: number;
+  /** Unit shown beside the numeric input, for example "M/s". */
+  unit?: string;
+}
+const { answer, numeric, unit } = Astro.props;
+if ((answer === undefined) === (numeric === undefined)) {
+  throw new Error('A Check needs exactly one of `answer` (option number) or `numeric` (a value).');
+}
+const shown = numeric !== undefined ? `${numeric}${unit ? ` ${unit}` : ''}` : `option ${answer}`;
+---
+
+<cs-check data-part="check" data-answer={answer} data-numeric={numeric} data-unit={unit}>
+  <p class="label">Check yourself</p>
+  <div class="check-body"><slot /></div>
+  <p class="check-feedback" role="status"></p>
+  <details class="check-why">
+    <summary>Show answer</summary>
+    <p class="check-answer">Answer: {shown}</p>
+    <slot name="why" />
+  </details>
+</cs-check>
+
+<script>
+  import { gradeChoice, gradeNumeric } from '../../lib/check';
+  import { browserProgress } from '../../lib/progress';
+
+  class CsCheck extends HTMLElement {
+    connectedCallback() {
+      if (this.dataset.ready) return;
+      this.dataset.ready = 'true';
+
+      const body = this.querySelector<HTMLElement>('.check-body');
+      const feedback = this.querySelector<HTMLElement>('.check-feedback');
+      const why = this.querySelector<HTMLDetailsElement>('.check-why');
+      if (!body || !feedback || !why) throw new Error('cs-check is missing part of its markup.');
+
+      const say = (text: string, state: 'ok' | 'no') => {
+        feedback.textContent = text;
+        feedback.dataset.state = state;
+      };
+      const finish = () => {
+        say('Correct.', 'ok');
+        why.open = true;
+        this.record();
+      };
+
+      if (this.dataset.numeric !== undefined) {
+        this.enhanceNumeric(body, Number(this.dataset.numeric), say, finish);
+      } else {
+        this.enhanceChoice(body, Number(this.dataset.answer), say, finish);
+      }
+      // Only now hide the "Show answer" disclosure: if anything above threw,
+      // the student still has the no-JavaScript version.
+      this.classList.add('is-enhanced');
+    }
+
+    enhanceChoice(
+      body: HTMLElement,
+      answer: number,
+      say: (text: string, state: 'ok' | 'no') => void,
+      finish: () => void,
+    ) {
+      const list = body.querySelector('ul, ol');
+      if (!list) throw new Error('A choice Check needs a list of options.');
+      const buttons: HTMLButtonElement[] = [];
+      Array.from(list.children).forEach((item, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'check-option';
+        button.append(...Array.from(item.childNodes));
+        item.append(button);
+        buttons.push(button);
+        button.addEventListener('click', () => {
+          if (gradeChoice(index + 1, answer)) {
+            button.classList.add('is-correct');
+            for (const other of buttons) other.disabled = true;
+            finish();
+          } else {
+            button.classList.add('is-wrong');
+            button.disabled = true;
+            say('Not quite. Try another.', 'no');
+          }
+        });
+      });
+      list.classList.add('check-options');
+    }
+
+    enhanceNumeric(
+      body: HTMLElement,
+      answer: number,
+      say: (text: string, state: 'ok' | 'no') => void,
+      finish: () => void,
+    ) {
+      const form = document.createElement('form');
+      form.className = 'check-numeric';
+      const label = document.createElement('label');
+      label.textContent = 'Your answer ';
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.inputMode = 'decimal';
+      input.autocomplete = 'off';
+      label.append(input);
+      if (this.dataset.unit) label.append(` ${this.dataset.unit}`);
+      const submit = document.createElement('button');
+      submit.type = 'submit';
+      submit.className = 'button';
+      submit.textContent = 'Check';
+      form.append(label, submit);
+      body.append(form);
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const grade = gradeNumeric(input.value, answer);
+        if (grade === 'invalid') {
+          say('Enter a number, for example 0.25 or 2.5e-3.', 'no');
+        } else if (grade === 'incorrect') {
+          say('Not quite. Check your setup and try again.', 'no');
+        } else {
+          input.disabled = true;
+          submit.disabled = true;
+          finish();
+        }
+      });
+    }
+
+    record() {
+      const main = this.closest<HTMLElement>('main[data-topic]');
+      const topic = main?.dataset.topic;
+      if (!main || !topic) return; // A Check outside a lesson has no topic to credit.
+      const checks = Array.from(main.querySelectorAll('cs-check'));
+      browserProgress().recordAnswer(topic, checks.indexOf(this), checks.length);
+      document.dispatchEvent(new CustomEvent('chemstudy:progress'));
+    }
+  }
+
+  customElements.define('cs-check', CsCheck);
+</script>
