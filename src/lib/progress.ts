@@ -51,12 +51,23 @@ function isAnswered(value: unknown): value is Record<string, number[]> {
   return isPlainObject(value) && Object.values(value).every(isIndexArray);
 }
 
+// eslint-disable-next-line no-control-regex -- matching control characters is the point
+const CONTROL_CHARACTER = /[\u0000-\u001f\u007f]/;
+
 // The path becomes a link's href, and localStorage can be written by anything
 // on the origin, so only a path on this site is accepted: it must start with
 // "/" and not be protocol-relative. "/\" is refused with "//" because
-// browsers read a backslash as a slash and would leave the site.
+// browsers read a backslash as a slash and would leave the site. Control
+// characters are refused too: browsers drop tab, CR and LF while parsing a
+// URL, so "/<TAB>/evil.example" would become "//evil.example".
 function isSitePath(value: unknown): value is string {
-  return typeof value === 'string' && value.startsWith('/') && !value.startsWith('//') && !value.startsWith('/\\');
+  return (
+    typeof value === 'string' &&
+    value.startsWith('/') &&
+    !value.startsWith('//') &&
+    !value.startsWith('/\\') &&
+    !CONTROL_CHARACTER.test(value)
+  );
 }
 
 function isLastVisited(value: unknown): value is LastVisited | null {

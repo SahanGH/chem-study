@@ -143,6 +143,21 @@ describe('progress', () => {
     });
   });
 
+  // Browsers strip tab, CR and LF when parsing a URL, so "/<TAB>/evil.example"
+  // would be read as "//evil.example" and leave the site.
+  it.each([
+    ['a tab inside', '/\t/evil.example/x'],
+    ['a line feed inside', '/\n/evil.example'],
+    ['a carriage return inside', '/\r/evil.example'],
+    ['a null at the end', '/ok\u0000'],
+    ['a delete character', '/ok\u007f'],
+  ])('starts fresh when the stored last-visited path has %s', (_name, badPath) => {
+    const stored = JSON.stringify({ last: { path: badPath, title: 'X' } });
+    const progress = createProgress(memoryStore({ [STORAGE_KEY]: stored }));
+
+    expect(progress.lastVisited()).toBeNull();
+  });
+
   it('honors a stored last-visited path that is a site path', () => {
     const progress = createProgress(
       memoryStore({
