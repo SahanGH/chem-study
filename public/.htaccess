@@ -1,0 +1,13 @@
+# Serve the site's own page for addresses that do not exist.
+ErrorDocument 404 /404.html
+
+# Files under /_astro/ carry a content hash in their name, so they can be
+# cached for a year: a changed file always gets a new name.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

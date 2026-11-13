@@ -49,3 +49,18 @@ test('the home and unit pages fit a phone screen without sideways scrolling', as
     expect(overflow, path).toBeLessThanOrEqual(0);
   }
 });
+
+test('the About page says who wrote the site, how it is checked, and the license', async ({ page }) => {
+  await page.goto('/about/');
+  await expect(page.getByRole('heading', { level: 1, name: 'About ChemStudy' })).toBeVisible();
+  await expect(page.locator('main')).toContainText('fact-checked');
+  await expect(page.locator('main')).toContainText('CC BY-NC-SA 4.0');
+  await expect(page.locator('main')).toContainText('College Board');
+});
+
+test('an address that does not exist gets a helpful page and a 404 status', async ({ page }) => {
+  const response = await page.goto('/no-such-page/');
+  expect(response?.status()).toBe(404);
+  await expect(page.getByRole('heading', { level: 1, name: 'Page not found' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'the nine units' })).toHaveAttribute('href', '/#units');
+});
