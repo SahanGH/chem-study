@@ -1,5 +1,8 @@
-import { describe, expect, it } from 'vitest';
-import { checkPage } from '../../scripts/check-dist.mjs';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { checkPage, checkSite } from '../../scripts/check-dist.mjs';
 
 const everythingExists = () => true;
 
@@ -58,6 +61,11 @@ describe('checkPage', () => {
     const html = '<main><a href="/unit-5-kinetics/5-3-missing/">next</a></main>';
     const problems = checkPage(html, (path) => path !== '/unit-5-kinetics/5-3-missing/');
     expect(problems).toEqual(['broken link: /unit-5-kinetics/5-3-missing/']);
+  });
+
+  it('reports an image whose file does not exist', () => {
+    const html = '<main><img src="/figures/x.svg" alt=""></main>';
+    expect(checkPage(html, () => false)).toEqual(['broken link: /figures/x.svg']);
   });
 
   it('checks the path of a link, not its fragment, and skips external links', () => {
@@ -150,5 +158,67 @@ describe('checkPage, words run together', () => {
   it('ignores anything inside KaTeX output', () => {
     const html = inMain('<span class="katex"><span class="base">a<em>b</em>c</span></span>');
     expect(checkPage(html, everythingExists)).toEqual([]);
+  });
+});
+
+describe('checkSite', () => {
+  let root: string;
+  let dist: string;
+
+  beforeEach(() => {
+    root = fs.mkdtempSync(path.join(os.tmpdir(), 'check-dist-'));
+    dist = path.join(root, 'dist');
+    fs.mkdirSync(dist);
+  });
+
+  afterEach(() => {
+    fs.rmSync(root, { recursive: true, force: true });
+  });
+
+  const writePage = (relative: string, html: string) => {
+    const file = path.join(dist, relative);
+    fs.mkdirSync(path.dirname(file), { recursive: true });
+    fs.writeFileSync(file, html);
+  };
+  const goodPage = '<main><h1>About</h1></main>';
+
+  it('reports an existing but empty folder as a site with no pages', () => {
+    const { pages, problems } = checkSite(dist);
+    expect(pages).toBe(0);
+    expect(problems).toContainEqual(expect.objectContaining({ problem: expect.stringContaining('no pages were built') }));
+  });
+
+  it('reports nothing for a folder with one good page', () => {
+    writePage('index.html', goodPage);
+    expect(checkSite(dist)).toEqual({ pages: 1, problems: [] });
+  });
+
+  it('names the file, relative to dist, that links to a missing page', () => {
+    writePage('index.html', '<main><a href="/missing/">x</a></main>');
+    expect(checkSite(dist)).toEqual({
+      pages: 1,
+      problems: [{ file: 'index.html', problem: 'broken link: /missing/' }],
+    });
+  });
+
+  it('accepts links to a page and a file that are inside dist', () => {
+    writePage('index.html', '<main><a href="/about/">a</a><a href="/favicon.svg">b</a></main>');
+    writePage('about/index.html', goodPage);
+    fs.writeFileSync(path.join(dist, 'favicon.svg'), '<svg/>');
+    expect(checkSite(dist)).toEqual({ pages: 2, problems: [] });
+  });
+
+  it.each(['/../outside.txt', '/%2e%2e/outside.txt'])(
+    'reports a link that leaves dist, %s, even when the target exists',
+    (href) => {
+      fs.writeFileSync(path.join(root, 'outside.txt'), 'not part of the site');
+      writePage('index.html', `<main><a href="${href}">x</a></main>`);
+      expect(checkSite(dist).problems).toEqual([{ file: 'index.html', problem: `broken link: ${href}` }]);
+    },
+  );
+
+  it('reports a link with a bad percent escape as broken instead of throwing', () => {
+    writePage('index.html', '<main><a href="/50%/">x</a></main>');
+    expect(checkSite(dist).problems).toEqual([{ file: 'index.html', problem: 'broken link: /50%/' }]);
   });
 });

@@ -30,12 +30,23 @@ const RAW_MATH = /\\ce|\\(?:frac|text|times|Delta|rightarrow)(?![a-zA-Z])|\$\$/;
 const WORD_AT_END = /[\p{L}\p{N}]+$/u;
 const WORD_AT_START = /^[\p{L}\p{N}]+/u;
 
+/**
+ * @param {import('node-html-parser').Node | null | undefined} node
+ * @returns {string} the node's text when it is a text node, otherwise ''
+ */
 const textBeside = (node) => (node?.nodeType === NodeType.TEXT_NODE ? node.text : '');
 
 // Astro's HTML compression drops the space between text and an inline element
 // that follows a line break ("share underCC BY-NC-SA"). Reports each place a
 // link, <em> or <strong> touches a letter or digit on either side, quoting the
 // joined word as a reader would see it. Math output and non-prose are skipped.
+//
+// Known limit: deliberate mid-word emphasis such as 2<em>x</em> is reported
+// too, because it looks the same as the defect. Write such things as math.
+/**
+ * @param {import('node-html-parser').HTMLElement} root
+ * @returns {string[]} one message per place words touch
+ */
 function runTogether(root) {
   const found = [];
   for (const element of root.querySelectorAll('a, em, strong')) {
@@ -83,10 +94,11 @@ export function checkPage(html, exists) {
     }
   }
 
-  for (const link of root.querySelectorAll('a[href]')) {
-    const href = link.getAttribute('href') ?? '';
-    if (!href.startsWith('/') || href.startsWith('//')) continue;
-    const urlPath = href.split('#')[0].split('?')[0];
+  for (const element of root.querySelectorAll('a[href], img[src]')) {
+    const target = element.getAttribute('href') ?? element.getAttribute('src') ?? '';
+    if (!target.startsWith('/') || target.startsWith('//')) continue;
+    // split always yields at least one element; the default only satisfies the checker.
+    const [urlPath = ''] = target.split(/[#?]/);
     if (!exists(urlPath)) problems.push(`broken link: ${urlPath}`);
   }
 
@@ -100,6 +112,10 @@ export function checkPage(html, exists) {
   return problems;
 }
 
+/**
+ * @param {string} dir
+ * @returns {string[]} every built page under dir, skipping the search index
+ */
 function htmlFiles(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
     const full = path.join(dir, entry.name);
@@ -108,13 +124,50 @@ function htmlFiles(dir) {
   });
 }
 
+/**
+ * @param {string} dist the built site
+ * @returns {(urlPath: string) => boolean} whether a site path names a page or
+ *   file inside dist
+ */
 function existsIn(dist) {
+  const root = path.resolve(dist);
   return (urlPath) => {
-    const target = path.join(dist, decodeURIComponent(urlPath));
+    let decoded;
+    try {
+      decoded = decodeURIComponent(urlPath);
+    } catch (error) {
+      // A malformed escape such as "/50%/" names no file, so the link is
+      // broken. Only this error is meant: anything else is a real failure.
+      if (error instanceof URIError) return false;
+      throw error;
+    }
+    const target = path.resolve(path.join(root, decoded));
+    // ".." (written plainly or as %2e%2e) must not reach a file beside dist.
+    if (target !== root && !target.startsWith(root + path.sep)) return false;
     // The site uses trailing slashes: a page link must end in "/".
     if (urlPath.endsWith('/')) return fs.existsSync(path.join(target, 'index.html'));
     return fs.existsSync(target) && fs.statSync(target).isFile();
   };
+}
+
+/**
+ * Checks every built page under a folder.
+ * @param {string} dist the built site
+ * @returns {{ pages: number, problems: { file: string, problem: string }[] }}
+ */
+export function checkSite(dist) {
+  const exists = existsIn(dist);
+  const files = htmlFiles(dist);
+  /** @type {{ file: string, problem: string }[]} */
+  const problems = [];
+  // An empty folder would otherwise pass: nothing to check is not a clean site.
+  if (files.length === 0) problems.push({ file: '.', problem: 'no pages were built' });
+  for (const file of files) {
+    for (const problem of checkPage(fs.readFileSync(file, 'utf8'), exists)) {
+      problems.push({ file: path.relative(dist, file), problem });
+    }
+  }
+  return { pages: files.length, problems };
 }
 
 function main() {
@@ -123,17 +176,14 @@ function main() {
     console.error('check-dist: there is no dist/ folder. Run the Astro build first.');
     process.exit(1);
   }
-  const exists = existsIn(dist);
-  let failures = 0;
-  const files = htmlFiles(dist);
-  for (const file of files) {
-    for (const problem of checkPage(fs.readFileSync(file, 'utf8'), exists)) {
-      failures += 1;
-      console.error(`${path.relative(dist, file)}: ${problem}`);
-    }
-  }
-  console.log(`check-dist: ${files.length} pages, ${failures} problem(s)`);
-  if (failures > 0) process.exit(1);
+  const { pages, problems } = checkSite(dist);
+  for (const { file, problem } of problems) console.error(`${file}: ${problem}`);
+  console.log(`check-dist: ${pages} pages, ${problems.length} problem(s)`);
+  if (problems.length > 0) process.exit(1);
 }
 
-if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main();
+// Real paths on both sides: Node resolves links in import.meta.url but not in
+// argv[1], so a plain comparison fails when the script is reached through a
+// symlink or junction, and the build would then check nothing and succeed.
+const entryPoint = process.argv[1];
+if (entryPoint && fs.realpathSync(entryPoint) === fs.realpathSync(fileURLToPath(import.meta.url))) main();
