@@ -162,6 +162,14 @@ Branch: `topic/diagrams`.
 
 ### Task 1: Svelte, the diagram shell, and the rate-law explorer in lesson 5.2
 
+> **Done 2026-11-13, with changes after review.** The code below is as first written; the repository is the record of what shipped. What differs, and matters to later tasks:
+>
+> - **The explorer** starts at [A] = 0.50 M and [B] = 0.40 M (rate 0.010 M/s), its bar has no minimum length, and its track has an outline.
+> - **`src/styles/diagram.css`** keeps the controls' space while a diagram's script loads, so the lesson below does not jump. Tasks 3 and 11 get this for free.
+> - **`concentrationAt` and `plotValue`** now throw for values that are not physical (a starting concentration of zero or less, a negative rate constant or time, anything not finite). The diagrams of Tasks 3 and 11 pass only valid constants, so their code is unaffected.
+> - **`tests/e2e/all-lessons.spec.ts`** makes one test per lesson file instead of one test that loops, checks that the unit page links to exactly those lessons, and its search test waits for each query's own results and presses "Load more" when the lesson is further down. A new lesson is still covered the day its file is added.
+> - **Counts:** 209 unit tests and 212 browser tests after this task. Each new lesson adds two browser tests (one per project) on top of what its task lists.
+
 **Files:**
 - Modify: `package.json`, `package-lock.json`, `astro.config.mjs`
 - Create: `src/lib/kinetics.ts`, `src/lib/format.ts`
