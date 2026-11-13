@@ -70,7 +70,10 @@
   .katex-display > .katex {
     font-size: 1.1em;
   }
-  .prose li .katex-display {
+  /* Only the numbered steps of a worked example. 1.3em is the list's own
+     indent (":where(.prose) ol" above), so the equation starts at the card's
+     edge and never outside it. */
+  .worked li .katex-display {
     margin-inline-start: -1.3em;
   }
   /* Narrower gutters, so a three-column table with an equation in it fits. */
@@ -80,7 +83,8 @@
   }
 }
 /* An equation in a table cell stays on one line, for the same reason a
-   display equation does. A table that becomes too wide scrolls in its box. */
+   display equation does. A table that becomes too wide scrolls in its box,
+   and scrolling-equations.ts makes that box reachable from the keyboard. */
 .prose td .katex,
 .prose th .katex {
   white-space: nowrap;
