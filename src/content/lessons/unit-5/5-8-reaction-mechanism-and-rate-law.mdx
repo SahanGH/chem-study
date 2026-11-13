@@ -1,0 +1,212 @@
+---
+topic: "5.8"
+minutes: 10
+summary: How the slowest step of a mechanism sets the rate law, and how to test a proposed mechanism against the rate law that was measured.
+---
+
+A class leaves a room through one narrow door. However fast everyone walks down the corridor afterward, the class gets out at the rate the door allows. A mechanism has a door too.
+
+## The slow step sets the pace
+
+A mechanism is a series of elementary steps (topic 5.7), and the steps do not all go at the same speed. Often one step of a mechanism is far slower than all the others. That step is the **rate-limiting step** (also called the rate-determining step): the slowest step of a mechanism, the one that holds the whole reaction up.
+
+It is the door. The other steps are the corridor. They are fast enough that they are never what the reaction is waiting for.
+
+So the overall reaction can go no faster than its slowest step. The rate of the reaction is the rate of the rate-limiting step. To find out how the rate of a reaction depends on concentration, you look at that one step.
+
+## When the first step is the slow one
+
+The slow step is an elementary step. That is good news, because topic 5.4 showed that the rate law of an elementary step can be written straight from its equation: each reactant particle in the step puts its concentration into the rate law once, so the step's molecularity gives its rate law.
+
+Now suppose the slow step is step 1. Step 1 needs nothing that another step makes. It runs on what was put into the container, so its rate law holds only those substances: reactants of the overall reaction, and sometimes a catalyst. No intermediate can be in it. The rate law of step 1 is the rate law of the reaction, just as it stands.
+
+That matters, because the rate law of a reaction may contain only substances you can measure out: reactants, sometimes a catalyst, and sometimes a product (topic 5.9 has an example). The finished rate law never contains an intermediate, which is made and used up while the reaction runs.
+
+What about a reactant that enters only in a later, fast step? It is not in the slow step, so it is not in the rate law. The reaction still needs it. Adding more of it just does not widen the door.
+
+<KeyIdea>
+
+When the first step of a mechanism is the slow one, the rate law of the reaction is the rate law of that step.
+
+</KeyIdea>
+
+Notice the condition. This shortcut is safe when the slow step comes first. In every mechanism in this lesson no step runs backward: each arrow points one way. When a fast step that runs both ways comes before the slow step, the slow step's rate law contains an intermediate, and topic 5.9 shows how to deal with it.
+
+<Worked title="A mechanism that explains a strange rate law">
+
+At low temperature, this reaction has a rate law with no CO in it (topic 5.2):
+
+$$
+\ce{NO2(g) + CO(g) -> NO(g) + CO2(g)}
+$$
+
+$$
+\text{rate} = k[\ce{NO2}]^2
+$$
+
+Find a mechanism that explains it.
+
+1. **Try one step.** The simplest idea is that one $\ce{NO2}$ collides with one CO and the products come out:
+
+   $$
+   \ce{NO2 + CO -> NO + CO2}
+   $$
+
+   If that were an elementary step, its rate law would come from its equation:
+
+   $$
+   \text{rate} = k[\ce{NO2}][\ce{CO}]
+   $$
+
+   That is not what is measured. The reaction does not happen in one step.
+
+2. **Try two steps.** Take the mechanism from topic 5.7 and suppose its first step is the slow one.
+
+   Step 1 (slow):
+
+   $$
+   \ce{NO2 + NO2 -> NO3 + NO}
+   $$
+
+   Step 2 (fast):
+
+   $$
+   \ce{NO3 + CO -> NO2 + CO2}
+   $$
+
+3. **Write the rate law of the slow step.** Two $\ce{NO2}$ molecules collide in step 1, so the step is bimolecular and $[\ce{NO2}]$ counts twice:
+
+   $$
+   \text{rate} = k[\ce{NO2}]^2
+   $$
+
+4. **Compare.** That is the measured rate law. The steps also add up to the overall equation: $\ce{NO3}$ and one $\ce{NO2}$ appear on both sides and cancel. This mechanism is consistent with the evidence.
+
+CO does not enter until step 2, after the slow step. That is why changing $[\ce{CO}]$ does nothing to the rate.
+
+</Worked>
+
+<Check answer={1}>
+A reaction has this two-step mechanism. What rate law does the mechanism predict?
+
+| Step | Equation |
+|---|---|
+| Step 1 (slow) | $\ce{A + B -> C}$ |
+| Step 2 (fast) | $\ce{C + B -> D}$ |
+
+- $\text{rate} = k[\ce{A}][\ce{B}]$
+- $\text{rate} = k[\ce{A}][\ce{B}]^2$
+- $\text{rate} = k[\ce{C}][\ce{B}]$
+- $\text{rate} = k[\ce{A}]$
+
+<div slot="why">The slow step is the first one, and one A and one B collide in it. The second B enters after the slow step, so it does not affect the rate.</div>
+</Check>
+
+## Testing a mechanism
+
+A mechanism is a proposal. You test it against two things known from experiment: the overall equation and the measured rate law. (Finding one of its intermediates, as in topic 5.7, is a third kind of evidence.) There are two tests, and a mechanism has to pass both.
+
+1. **The steps add up.** Add the steps, cancel whatever appears on both sides, and you must get the overall balanced equation (topic 5.7).
+2. **The rate law matches.** The rate law that the mechanism predicts must be the one that was measured.
+
+Failing either test rules a mechanism out. That is what happened to the one-step idea for $\ce{NO2}$ and CO. It adds up, but it predicts the wrong rate law, so it is gone.
+
+Passing both tests does not prove a mechanism. It shows that the mechanism is consistent with the evidence, which means it could be right. A different set of steps might pass the same two tests.
+
+<Worked title="Checking a proposal">
+
+Nitrogen dioxide reacts with fluorine:
+
+$$
+\ce{2NO2(g) + F2(g) -> 2NO2F(g)}
+$$
+
+The measured rate law is $\text{rate} = k[\ce{NO2}][\ce{F2}]$. Someone proposes this mechanism.
+
+Step 1 (slow):
+
+$$
+\ce{NO2 + F2 -> NO2F + F}
+$$
+
+Step 2 (fast):
+
+$$
+\ce{NO2 + F -> NO2F}
+$$
+
+Is the proposal consistent with the evidence?
+
+1. **Do the steps add up?** Add the left sides, and add the right sides:
+
+   $$
+   \ce{2NO2 + F2 + F -> 2NO2F + F}
+   $$
+
+   One F atom appears on each side, so it cancels. What is left is the overall equation:
+
+   $$
+   \ce{2NO2 + F2 -> 2NO2F}
+   $$
+
+   The mechanism passes the first test.
+
+2. **Does the rate law match?** The slow step is the first step, so its rate law is the rate law of the reaction. One $\ce{NO2}$ collides with one $\ce{F2}$ in it:
+
+   $$
+   \text{rate} = k[\ce{NO2}][\ce{F2}]
+   $$
+
+   That is the measured rate law. The mechanism passes the second test.
+
+3. **Give the verdict.** The proposal passes both tests, so it is consistent with the evidence. That is as far as the evidence goes.
+
+Look at what the overall equation alone would have told you. It has a 2 in front of $\ce{NO2}$, which suggests second order in $\ce{NO2}$. That would have been wrong. Only one $\ce{NO2}$ takes part in the slow step. The other one enters afterward, in the fast step.
+
+</Worked>
+
+<Check answer={2}>
+A reaction has the measured rate law $\text{rate} = k[\ce{X}]^2$. Which slow first step is consistent with it?
+
+- $\ce{X + Y -> products}$
+- $\ce{2X -> products}$
+- $\ce{X -> products}$
+- $\ce{X + 2Y -> products}$
+
+<div slot="why">A step in which two X particles collide has the rate law $k[\ce{X}]^2$. The others predict $k[\ce{X}][\ce{Y}]$, $k[\ce{X}]$ and $k[\ce{X}][\ce{Y}]^2$.</div>
+</Check>
+
+<Check answer={3}>
+For the mechanism of $\ce{2NO2 + F2 -> 2NO2F}$ above, both $[\ce{NO2}]$ and $[\ce{F2}]$ are doubled. By what factor is the rate multiplied?
+
+- 2
+- 3
+- 4
+- 8
+
+<div slot="why">The rate law is $k[\ce{NO2}][\ce{F2}]$, first order in each, so the rate is multiplied by $2 \times 2 = 4$. Using the coefficients of the overall equation would have given 8.</div>
+</Check>
+
+<Trap>
+
+Four common mistakes on this topic:
+
+- **Writing the rate law from the overall equation.** The overall equation is a summary of all the steps. Use the slow step.
+- **Putting an intermediate in the rate law.** The finished rate law contains only substances you can measure out: reactants, sometimes a catalyst, and sometimes a product (topic 5.9 has an example). Never an intermediate.
+- **Saying a mechanism is proven.** A mechanism that adds up and predicts the measured rate law is consistent with the evidence. Consistent is the strongest word available.
+- **Assuming the slow step is always first.** Check which step is labeled slow. When it is not the first one, the shortcut in this lesson does not apply. See topic 5.9.
+
+</Trap>
+
+<KeyPoints>
+
+- The rate-limiting step is the slowest step of a mechanism, and the reaction goes at the rate of that step.
+- When the first step of a mechanism is the slow one, the rate law of the reaction is the rate law of that step, written from the step's equation.
+- A reactant that enters only after the slow step does not appear in the rate law.
+- The rate law comes from the slow step, not from the overall equation. The finished rate law never contains an intermediate.
+- A proposed mechanism must add up to the overall equation and must predict the measured rate law. Failing either test rules it out.
+- A mechanism that passes both tests is consistent with the evidence. It is not proven.
+
+</KeyPoints>
+
+<PracticeNext />
