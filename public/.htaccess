@@ -1,13 +1,30 @@
 # Serve the site's own page for addresses that do not exist.
 ErrorDocument 404 /404.html
 
+# HTTPS: SiteGround's "HTTPS Enforce" (Site Tools > Security) redirects at the
+# server, in front of Apache, so this file neither replaces nor repeats it.
+# Do not add a rewrite rule for it here: behind SiteGround's proxy it can loop.
+
 # Files under /_astro/ carry a content hash in their name, so they can be
-# cached for a year: a changed file always gets a new name.
+# cached for a year: a changed file always gets a new name. Everything else
+# (pages, the search scripts and index, figures) keeps its name from build to
+# build, so the browser must ask each time whether its copy is still current.
+#
+# SiteGround can serve stylesheets, scripts, fonts and images straight from
+# NGINX, which does not read this file; its own cache headers then apply.
+<IfModule mod_setenvif.c>
+  SetEnvIf Request_URI "^/_astro/" hashed
+</IfModule>
+
 <IfModule mod_headers.c>
-  <FilesMatch "\.(css|js|woff2)$">
-    Header set Cache-Control "public, max-age=31536000, immutable"
-  </FilesMatch>
-  <FilesMatch "\.html$">
-    Header set Cache-Control "no-cache"
-  </FilesMatch>
+  Header set Cache-Control "no-cache"
+  Header set Cache-Control "public, max-age=31536000, immutable" env=hashed
+
+  # The content security policy and the referrer policy are also <meta> tags
+  # in src/layouts/Base.astro, so they hold however the page is served. The
+  # other three headers cannot be set that way.
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Strict-Transport-Security "max-age=31536000"
 </IfModule>
