@@ -21,9 +21,11 @@ export const REQUIRED_PARTS = {
 
 // TeX that should never reach a reader. If any of these is visible, math was
 // not rendered -- typically two copies of katex, so mhchem is not registered.
-// No \b after the name: the real failure prints "\ce2NO(g)" (the braces are
-// consumed), and "e2" has no word boundary in it.
-const RAW_MATH = /\\(?:ce|frac|text|times|Delta|rightarrow)(?![a-zA-Z])|\$\$/;
+// \ce matches with nothing required after it: the real failure prints
+// "\ceNO2(g)" or "\ce2NO(g)" (the braces are consumed), so a letter or a digit
+// may follow. The other commands must not be followed by a letter, so that
+// prose like "\textbook" is not mistaken for \text.
+const RAW_MATH = /\\ce|\\(?:frac|text|times|Delta|rightarrow)(?![a-zA-Z])|\$\$/;
 
 const WORD_AT_END = /[\p{L}\p{N}]+$/u;
 const WORD_AT_START = /^[\p{L}\p{N}]+/u;

@@ -24,6 +24,26 @@ describe('checkPage', () => {
     expect(checkPage(html, everythingExists)).toContainEqual(expect.stringContaining('unrendered math'));
   });
 
+  it.each([
+    ['a formula starting with a capital letter', '\\ceNO2(g)+CO(g)'],
+    ['a formula starting with H', '\\ceH2O'],
+    ['a formula in brackets', '[\\ceNO]'],
+    ['a fraction', '\\frac12'],
+    ['text', '\\text{mol}'],
+    ['a multiplication sign', '2 \\times 3'],
+    ['a capital delta', '\\Delta H'],
+    ['an arrow', 'A \\rightarrow B'],
+    ['display math delimiters', '$$x$$'],
+  ])('reports unrendered math: %s', (_name, source) => {
+    const html = `<main><span class="katex-html">${source}</span></main>`;
+    expect(checkPage(html, everythingExists)).toContainEqual(expect.stringContaining('unrendered math'));
+  });
+
+  it('does not report the words text, times or fraction written without a backslash', () => {
+    const html = '<main><p>Read the text three times, then write the fraction.</p></main>';
+    expect(checkPage(html, everythingExists)).toEqual([]);
+  });
+
   it('ignores math source inside MathML annotations, where it belongs', () => {
     const html = '<main><annotation encoding="application/x-tex">\\ce{H2O}</annotation></main>';
     expect(checkPage(html, everythingExists)).toEqual([]);
