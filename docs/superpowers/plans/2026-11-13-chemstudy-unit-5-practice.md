@@ -139,7 +139,7 @@ Give this whole section to every conversion writer, with the source file, and wi
 | `\answerlines[n]{answer}` | `<Answer>` holding the whole text |
 | `\workspace[h]` followed by `\keyonly{\begin{apcanswer}...}` | `<Answer>` holding the worked solution |
 | a problem with no parts | One `<Answer>` directly inside the `<Question>` |
-| `spiralstrip` (the review strip that ends a worksheet) | A section `## Quick review`, one sentence with no numbers in it ("Five short questions from earlier in this unit."), then one `<Question>` numbered after the last, with no topic, and a `<Part>` for each item |
+| `spiralstrip` (the review strip that ends a worksheet) | A section `## Quick review`, one sentence with no numbers in it ("Five short items from earlier in this unit."), then one `<Question>` numbered after the last, with no topic, and a `<Part>` for each item |
 | `\frq{long}{10}{\ced{5.1} ... \textbullet\ description}` | `<Question number={n} title="Description" topic="..." points={10}>` |
 | `rubric` with `\rpoint{4}{(a) ...}` | `<Rubric>` as the last thing in the question, with one `<RubricLine part="a" points={4}>...</RubricLine>` per `\rpoint`, **each on one line**. Drop the leading "(a)" from the text and write "pts" as "points" (or "point") |
 | `\section*{Ladder N \textbullet\ Title}`, its `\ced` tags and the paragraph under it | `## Ladder N: Title` and the paragraph. The topics go on the ladder's question |
@@ -702,6 +702,8 @@ git commit -m "feat(build): check practice pages for answers, rubric totals and 
 ```
 
 ### Task 3: The conversion audit
+
+> **As carried out (2026-11-13).** The code printed below is what was first committed. The code review then changed it; read `scripts/practice-audit.mjs` for the current version. What changed: a sign is now dropped only when the character directly before it is a digit, a letter or a closing bracket, so "is -92 kJ" keeps its minus (as printed here, a minus sign lost in a sentence went unreported); exponents typed `E` or `e+` are read; a quoted `kind: "ladders"` is recognized.
 
 **Files:**
 - Create: `scripts/practice-audit.mjs`
@@ -1408,6 +1410,16 @@ git commit -m "feat(tools): add an audit that compares converted practice with i
 ```
 
 ### Task 4: The practice pages, with Worksheet 1 as the first document
+
+> **As carried out (2026-11-13).** The files printed below are what was first committed. Two reviews and two fact-checks then changed them; read the repository for the current versions. What changed:
+> - **Search:** answers and rubrics carry `data-pagefind-ignore`, so a search excerpt cannot show a worked answer.
+> - **Unit page:** a practice document's topics sit under its title (`.practice-list .topic-meta`).
+> - **Build check:** a page's stated total (`points` in the frontmatter) must equal the sum of its questions' points; an empty answer is reported wherever it sits. (Task 2's code changed with this.)
+> - **`orderedPractice`** in `src/lib/practice-id.ts` now holds the ordering and validation of a unit's practice, with unit tests; `practiceForUnit` calls it. One pattern, `TOPIC_CODE`, says what a topic code looks like for lessons and practice alike.
+> - **A practice file in a unit with no lesson** stops the build with a message that says why.
+> - **Smaller:** the question heading has no `id`; `Figure` is not supplied to practice documents (none has a figure); the print rule is scoped to `.practice`; part letters line up by `align-items: baseline`.
+> - **Worksheet 1:** eight wording points from the fact-check (listed in pull request 12), and "Five short items" above the quick review, since it is one question with five parts. Write "items" in Worksheets 2 to 4 as well.
+> - **Totals after this group:** 325 unit tests and 342 browser tests.
 
 The Astro pieces cannot be unit-tested; they are tested in the browser against the built site, and a page needs a document to show. So this task adds the browser test, then everything it needs, ending with Worksheet 1.
 
@@ -2812,6 +2824,8 @@ git commit -m "feat(practice): add practice pages with Worksheet 1"
 ```
 
 ### Task 5: Check Worksheet 1, and open the pull request
+
+> **As carried out (2026-11-13).** The two fact-checks agreed: no wrong number, unit or answer, nothing lost in conversion, and the same eight wording points. The strongest model alone raised one minor point, about a sentence added in conversion. Opus missed nothing that matters, so **the fact-checks in Tasks 6 and 7 run on Opus**. The accepted points were few and exact, so the controller applied them directly instead of dispatching a fixer.
 
 - [ ] **Step 1: Audit it against its source**
 
