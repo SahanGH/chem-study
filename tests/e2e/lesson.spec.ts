@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 
 const LESSON = '/unit-5-kinetics/5-2-rate-law/';
 
@@ -58,6 +58,117 @@ test('a numeric check rejects text that is not a number', async ({ page }) => {
   await numeric.locator('input').fill('lots');
   await numeric.locator('input').press('Enter');
   await expect(numeric.locator('.check-feedback')).toContainText('Enter a number');
+});
+
+// Playwright's print emulation applies the @media print CSS but does not fire
+// beforeprint, so these tests prove the CSS path only. The script path has its
+// own test below.
+test.describe('printing a lesson', () => {
+  async function expectEveryAnswerShown(page: Page) {
+    await page.emulateMedia({ media: 'print' });
+    await page.goto(LESSON);
+    const checks = page.locator('cs-check');
+    expect(await checks.count()).toBe(3);
+    for (let index = 0; index < 3; index += 1) {
+      const check = checks.nth(index);
+      await expect(check.locator('.check-answer')).toBeVisible();
+      await expect(check.locator('.check-why > div')).toBeVisible();
+    }
+  }
+
+  test('shows every answer and explanation on paper before anything is answered', async ({ page }) => {
+    await expectEveryAnswerShown(page);
+  });
+
+  test.describe('with JavaScript off', () => {
+    test.use({ javaScriptEnabled: false });
+
+    test('shows every answer and explanation on paper', async ({ page }) => {
+      await expectEveryAnswerShown(page);
+    });
+  });
+
+  test('leaves the "Topic complete" badge off the page', async ({ page }) => {
+    await page.goto(LESSON);
+    const checks = page.locator('cs-check');
+    await checks.nth(0).locator('.check-option').nth(2).click();
+    await checks.nth(1).locator('.check-option').nth(1).click();
+    await checks.nth(2).locator('input').fill('0.020');
+    await checks.nth(2).locator('input').press('Enter');
+    await expect(page.locator('[data-complete]')).toBeVisible();
+
+    await page.emulateMedia({ media: 'print' });
+
+    await expect(page.locator('[data-complete]')).toBeHidden();
+  });
+});
+
+test('opening the answers for printing is undone afterwards, check by check', async ({ page }) => {
+  await page.goto(LESSON);
+  const checks = page.locator('cs-check');
+  await checks.nth(0).locator('.check-option').nth(2).click();
+  const whys = page.locator('.check-why');
+  const openStates = () => whys.evaluateAll((all) => all.map((el) => (el as HTMLDetailsElement).open));
+  expect(await openStates()).toEqual([true, false, false]);
+
+  await page.evaluate(() => window.dispatchEvent(new Event('beforeprint')));
+  expect(await openStates()).toEqual([true, true, true]);
+
+  await page.evaluate(() => window.dispatchEvent(new Event('afterprint')));
+  expect(await openStates()).toEqual([true, false, false]);
+});
+
+test.describe('option names for assistive technology', () => {
+  test('every option has an accessible name, and the math-only options all differ', async ({ page }) => {
+    await page.goto(LESSON);
+    const options = page.locator('.check-option');
+    const count = await options.count();
+    expect(count).toBe(8);
+    for (let index = 0; index < count; index += 1) {
+      await expect(options.nth(index)).toHaveAccessibleName(/\S/);
+    }
+
+    const snapshot = await page.locator('cs-check').nth(1).locator('.check-options').ariaSnapshot();
+    const names = Array.from(snapshot.matchAll(/- button(?: "([^"]*)")?/g), (match) => match[1] ?? '');
+    expect(names).toHaveLength(4);
+    expect(new Set(names).size).toBe(4);
+  });
+
+  test('plain-text options keep their own text as the name, with no aria-label', async ({ page }) => {
+    await page.goto(LESSON);
+    const options = page.locator('cs-check').first().locator('.check-option');
+    await expect(options).toHaveCount(4);
+    for (let index = 0; index < 4; index += 1) {
+      await expect(options.nth(index)).not.toHaveAttribute('aria-label');
+    }
+    await expect(options.nth(2)).toHaveAccessibleName('2');
+  });
+
+  test('an option whose readable text is empty leaves the no-JavaScript version in place', async ({ page }) => {
+    const errors: string[] = [];
+    page.on('pageerror', (error) => errors.push(error.message));
+    await page.goto(LESSON);
+
+    await page.evaluate(() => {
+      document.body.insertAdjacentHTML(
+        'beforeend',
+        `<cs-check id="probe" data-answer="1">
+           <div class="check-body"><ul>
+             <li>plain</li>
+             <li><span class="katex"><span class="katex-html" aria-hidden="true">x</span></span></li>
+           </ul></div>
+           <p class="check-feedback"></p>
+           <details class="check-why"><summary>Show answer</summary></details>
+         </cs-check>`,
+      );
+    });
+
+    await expect.poll(() => errors.join(' ')).toContain('no readable text');
+    const probe = page.locator('#probe');
+    await expect(probe).not.toHaveClass(/is-enhanced/);
+    await expect(probe.locator('button')).toHaveCount(0);
+    await expect(probe.locator('li').first()).toHaveText('plain');
+  });
 });
 
 test('the lesson fits a phone screen without sideways scrolling', async ({ page }) => {

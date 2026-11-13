@@ -29,6 +29,19 @@ const shown = numeric !== undefined ? `${numeric}${unit ? ` ${unit}` : ''}` : `o
   import { gradeChoice, gradeNumeric } from '../../lib/check';
   import { browserProgress } from '../../lib/progress';
 
+  /**
+   * The text a screen reader should speak for an option. KaTeX's visible HTML
+   * is aria-hidden and a button takes no name from its MathML child, so a
+   * math-only option would be nameless. The MathML text is read instead, minus
+   * the TeX source KaTeX keeps in <annotation>.
+   */
+  function readableText(element: Element): string {
+    const copy = element.cloneNode(true);
+    if (!(copy instanceof Element)) throw new Error('Cloning an element did not give an element.');
+    for (const hidden of copy.querySelectorAll('annotation, [aria-hidden="true"]')) hidden.remove();
+    return (copy.textContent ?? '').replace(/\s+/g, ' ').trim();
+  }
+
   class CsCheck extends HTMLElement {
     connectedCallback() {
       if (this.dataset.ready) return;
@@ -67,11 +80,22 @@ const shown = numeric !== undefined ? `${numeric}${unit ? ` ${unit}` : ''}` : `o
     ) {
       const list = body.querySelector('ul, ol');
       if (!list) throw new Error('A choice Check needs a list of options.');
+      const items = Array.from(list.children);
+      // Work out every label before touching the DOM, so a failure here leaves
+      // the no-JavaScript version intact.
+      const labels = items.map((item, index) => {
+        if (!item.querySelector('.katex')) return null;
+        const label = readableText(item);
+        if (!label) throw new Error(`Option ${index + 1} is math with no readable text, so it would have no name.`);
+        return label;
+      });
       const buttons: HTMLButtonElement[] = [];
-      Array.from(list.children).forEach((item, index) => {
+      items.forEach((item, index) => {
         const button = document.createElement('button');
         button.type = 'button';
         button.className = 'check-option';
+        const label = labels[index];
+        if (label) button.setAttribute('aria-label', label);
         button.append(...Array.from(item.childNodes));
         item.append(button);
         buttons.push(button);
@@ -139,4 +163,20 @@ const shown = numeric !== undefined ? `${numeric}${unit ? ` ${unit}` : ''}` : `o
   }
 
   customElements.define('cs-check', CsCheck);
+
+  // The print stylesheet reveals closed answers with ::details-content, which
+  // older browsers lack, so open them for printing too and put each one back
+  // afterwards. The map keeps the state from before the first beforeprint: a
+  // second one without an afterprint must not record "open" as the original.
+  const stateBeforePrint = new Map<HTMLDetailsElement, boolean>();
+  window.addEventListener('beforeprint', () => {
+    for (const why of document.querySelectorAll<HTMLDetailsElement>('cs-check .check-why')) {
+      if (!stateBeforePrint.has(why)) stateBeforePrint.set(why, why.open);
+      why.open = true;
+    }
+  });
+  window.addEventListener('afterprint', () => {
+    for (const [why, wasOpen] of stateBeforePrint) why.open = wasOpen;
+    stateBeforePrint.clear();
+  });
 </script>

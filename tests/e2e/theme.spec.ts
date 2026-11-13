@@ -101,6 +101,10 @@ test.describe('printing from the dark theme', () => {
     '--u-tint': '#f2f2f2',
     '--line': '#999',
     '--no': '#7a2f25',
+    '--ok': '#1e5a2b',
+    '--ok-bg': '#f4f8f4',
+    '--no-bg': '#fbf4f3',
+    '--u': '#777',
   };
 
   test.beforeEach(async ({ page }) => {

@@ -5,6 +5,7 @@
   .section-nav,
   .prev-next,
   .skip-link,
+  .complete,
   dialog {
     display: none !important;
   }
@@ -24,6 +25,10 @@
     --u-tint: #f2f2f2;
     --line: #999;
     --no: #7a2f25;
+    --ok: #1e5a2b;
+    --ok-bg: #f4f8f4;
+    --no-bg: #fbf4f3;
+    --u: #777;
   }
   body {
     background: #fff;
@@ -37,9 +42,23 @@
   a {
     text-decoration: none;
   }
-  /* On paper there is nothing to click, so every answer is shown. */
+  /* On paper there is nothing to click, so every answer is shown. A closed
+     <details> hides its content through ::details-content, and hiding the
+     summary does not open it, so that content is made visible directly.
+     ::details-content is recent; the cs-check script also opens every
+     <details> on beforeprint for browsers that lack it. The last rule undoes
+     the enhanced-mode "display: none" on .check-answer; its extra
+     .check-why > step makes it more specific, so it wins whatever the
+     stylesheet order. */
   .check-why > summary {
     display: none;
+  }
+  .check-why::details-content {
+    content-visibility: visible;
+    display: block;
+  }
+  cs-check.is-enhanced .check-why > .check-answer {
+    display: block;
   }
   [data-part] {
     break-inside: avoid;
