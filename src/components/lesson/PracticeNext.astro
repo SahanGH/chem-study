@@ -1,0 +1,24 @@
+---
+interface Props {
+  /** Practice for this topic. Empty until the practice layer exists. */
+  items?: { title: string; href: string }[];
+}
+const { items = [] } = Astro.props;
+---
+
+<section class="practice-next" data-part="practice-next">
+  <h2 id="practice-next">Practice next</h2>
+  {
+    items.length > 0 ? (
+      <ul>
+        {items.map((item) => (
+          <li>
+            <a href={item.href}>{item.title}</a>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p>Practice questions for this topic are on their way.</p>
+    )
+  }
+</section>

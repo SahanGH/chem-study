@@ -1,0 +1,15 @@
+---
+interface Props {
+  src: string;
+  /** What the figure shows, for someone who cannot see it. Required. */
+  alt: string;
+  caption: string;
+}
+const { src, alt, caption } = Astro.props;
+if (!alt.trim()) throw new Error(`Figure ${src} needs alt text that describes it.`);
+---
+
+<figure class="figure" data-part="figure">
+  <img src={src} alt={alt} loading="lazy" decoding="async" />
+  <figcaption>{caption}</figcaption>
+</figure>
