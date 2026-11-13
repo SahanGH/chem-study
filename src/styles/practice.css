@@ -1,0 +1,115 @@
+/* Practice pages. A question is a card, like a worked example. Its parts sit
+   in two columns: the letter, then the work. */
+.practice-facts,
+.question-meta,
+.part-label,
+.print-note {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+.prose .practice-facts {
+  margin-top: 0.5rem;
+}
+
+.question {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.25rem 1.25rem;
+}
+.question > * + * {
+  margin-top: 0.8em;
+}
+.prose .question h3 {
+  margin-top: 0;
+}
+.question > .question-meta {
+  margin-top: 0.2rem;
+}
+.question-meta span + span::before {
+  content: ' · ';
+}
+
+.part {
+  display: grid;
+  grid-template-columns: 1.9rem minmax(0, 1fr);
+  align-items: baseline;
+}
+.part + .part {
+  margin-top: 1.1em;
+  padding-top: 1.1em;
+  border-top: 1px solid var(--line);
+}
+.part-body > * + * {
+  margin-top: 0.6em;
+}
+
+.blank {
+  display: inline-block;
+  width: 4.5rem;
+  border-bottom: 1px solid currentColor;
+}
+
+.answer > summary {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--muted);
+  cursor: pointer;
+  padding-block: 0.2rem;
+}
+.answer-body {
+  margin-top: 0.5rem;
+  padding-left: 0.9rem;
+  border-left: 3px solid var(--u);
+}
+.answer-body > * + * {
+  margin-top: 0.6em;
+}
+.rubric > .answer-body {
+  list-style: none;
+}
+
+.beyond {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  background: var(--u-tint);
+  border-radius: var(--radius);
+  padding: 0.5rem 0.8rem;
+}
+
+.prose .print-note {
+  margin-top: 2.5em;
+}
+
+/* The unit page's list of practice. */
+.unit-practice {
+  margin-top: 3rem;
+}
+.practice-list {
+  list-style: none;
+  margin: 0.8rem 0 0;
+  padding: 0;
+}
+.practice-list > li {
+  display: grid;
+  gap: 0.2rem;
+  padding-block: 1rem;
+  border-top: 1px solid var(--line);
+}
+.practice-list > li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+/* base.css puts a topic's note in column 2, beside a lesson's title. Here it
+   belongs under the document's title. */
+.practice-list .topic-meta {
+  grid-column: 1;
+}
+.practice-list a {
+  font-family: var(--font-head);
+  font-size: var(--step-1);
+  text-decoration: none;
+}
+.practice-list a:hover {
+  text-decoration: underline;
+}

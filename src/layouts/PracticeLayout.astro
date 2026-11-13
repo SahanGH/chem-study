@@ -1,0 +1,89 @@
+---
+import type { MarkdownHeading } from 'astro';
+import Base from './Base.astro';
+import type { Unit } from '../data/units';
+import { practiceForUnit, practicePath, type Practice } from '../lib/practice';
+import { kindLabel, topicsLabel } from '../lib/practice-id';
+
+interface Props {
+  unit: Unit;
+  doc: Practice;
+  headings: MarkdownHeading[];
+}
+const { unit, doc, headings } = Astro.props;
+
+const docs = await practiceForUnit(unit);
+const position = docs.findIndex((other) => other.id === doc.id);
+if (position === -1) throw new Error(`Practice file ${doc.id} is not among Unit ${unit.number}'s practice.`);
+const prev = docs[position - 1];
+const next = docs[position + 1];
+const sections = headings.filter((h) => h.depth === 2);
+const facts = [
+  topicsLabel(doc.data.topics),
+  doc.data.points === undefined ? undefined : `${doc.data.points} points`,
+  doc.data.minutes === undefined ? undefined : `about ${doc.data.minutes} min`,
+].filter((fact) => fact !== undefined);
+---
+
+<Base
+  title={`${doc.data.title} | Unit ${unit.number} practice | ChemStudy`}
+  description={doc.data.summary}
+  unit={unit.number}
+>
+  <div class="lesson-grid">
+    <article
+      class="lesson prose practice"
+      data-practice={doc.data.kind}
+      data-points={doc.data.points}
+      data-pagefind-body
+    >
+      <p class="kicker">Unit {unit.number} practice · {kindLabel(doc.data.kind)}</p>
+      <h1>{doc.data.title}</h1>
+      <p class="practice-facts">{facts.join(' · ')}</p>
+      <slot />
+      <p class="print-note" data-pagefind-ignore>
+        Printing this page? Answers you have opened are printed. Closed ones are left out.
+      </p>
+      <nav class="prev-next" aria-label="Previous and next practice" data-pagefind-ignore>
+        {prev ? <a rel="prev" href={practicePath(unit.slug, prev)}>← {prev.data.title}</a> : <span />}
+        {
+          next ? (
+            <a rel="next" href={practicePath(unit.slug, next)}>{next.data.title} →</a>
+          ) : (
+            <a href={`/${unit.slug}/`}>Back to Unit {unit.number} →</a>
+          )
+        }
+      </nav>
+    </article>
+
+    <nav class="topic-nav" aria-label={`Unit ${unit.number} practice`}>
+      <p class="eyebrow"><a href={`/${unit.slug}/`}>Unit {unit.number} · {unit.title}</a></p>
+      <ol>
+        {
+          docs.map((other) => (
+            <li class:list={{ current: other.id === doc.id }}>
+              <a href={practicePath(unit.slug, other)} aria-current={other.id === doc.id ? 'page' : undefined}>
+                {other.data.title}
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+    </nav>
+
+    {
+      sections.length > 0 && (
+        <nav class="section-nav" aria-label="On this page">
+          <p class="eyebrow">On this page</p>
+          <ul>
+            {sections.map((h) => (
+              <li>
+                <a href={`#${h.slug}`}>{h.text}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )
+    }
+  </div>
+</Base>

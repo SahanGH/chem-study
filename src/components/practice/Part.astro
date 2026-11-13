@@ -1,0 +1,22 @@
+---
+import Beyond from './Beyond.astro';
+
+interface Props {
+  /** One lowercase letter: "a" shows as (a). */
+  label: string;
+  /** True when the AP exam does not ask for this part. */
+  beyond?: boolean;
+}
+const { label, beyond = false } = Astro.props;
+if (!/^[a-z]$/.test(label)) {
+  throw new Error(`A part's label must be one lowercase letter, for example "a". Got ${JSON.stringify(label)}.`);
+}
+---
+
+<div class="part" data-part="part">
+  <p class="part-label">({label})</p>
+  <div class="part-body">
+    {beyond && <Beyond />}
+    <slot />
+  </div>
+</div>

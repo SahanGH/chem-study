@@ -1,9 +1,14 @@
 ---
-interface Props {
-  /** Practice for this topic. Empty until the practice layer exists. */
-  items?: { title: string; href: string }[];
+import { practiceForTopic } from '../../lib/practice';
+import { topicFromLessonPath } from '../../lib/practice-id';
+
+// A lesson file writes <PracticeNext /> with nothing else, so the topic comes
+// from the address of the page being built.
+const topic = topicFromLessonPath(Astro.url.pathname);
+if (!topic) {
+  throw new Error(`PracticeNext belongs at the end of a lesson. ${Astro.url.pathname} is not a lesson's address.`);
 }
-const { items = [] } = Astro.props;
+const items = await practiceForTopic(topic);
 ---
 
 <section class="practice-next" data-part="practice-next">

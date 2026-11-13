@@ -3,6 +3,8 @@
 //   - internal links to pages that do not exist
 //   - lessons missing one of their required parts
 //   - words run together where a link, <em> or <strong> touches a letter
+//   - practice questions with no answer, rubrics that do not add up to a
+//     question's points, and LaTeX left in view on a practice page
 //
 //   node scripts/check-dist.mjs        checks ./dist, exits 1 on any problem
 import fs from 'node:fs';
@@ -110,6 +112,81 @@ export function checkPage(html, exists) {
   // are not prose.
   for (const node of root.querySelectorAll('annotation, script, style')) node.remove();
   if (RAW_MATH.test(root.text)) problems.push('unrendered math is visible in the page text');
+
+  const practice = root.querySelector('[data-practice]');
+  if (practice) problems.push(...practiceProblems(practice));
+
+  return problems;
+}
+
+// Practice was converted from LaTeX, so its marks could survive into a page:
+// a command, a math delimiter, a typed dash or quote, a tie. A "~" or a "$"
+// typed on purpose in practice prose is reported too, deliberately; write such
+// a thing in words.
+const LEFTOVER_LATEX = /\\[a-zA-Z]+|\$|---|``|''|~/;
+
+/**
+ * @param {import('node-html-parser').HTMLElement} answer
+ * @returns {boolean} whether the answer's body has no text
+ */
+const isEmptyAnswer = (answer) => !answer.querySelector('.answer-body')?.text.trim();
+
+/**
+ * What must hold for a practice page: it has questions, every question (or,
+ * when it has parts, every part) shows an answer with something in it, a
+ * scored question has a rubric that adds up to its points, the page's stated
+ * total matches its questions, and nothing of the LaTeX it was converted from
+ * is left in view.
+ * @param {import('node-html-parser').HTMLElement} practice the page's article,
+ *   with MathML annotations already removed
+ * @returns {string[]} problems, empty when the page is fine
+ */
+function practiceProblems(practice) {
+  const problems = [];
+  const questions = practice.querySelectorAll('[data-part="question"]');
+  if (questions.length === 0) problems.push('practice page has no questions');
+
+  let questionPoints = 0;
+  questions.forEach((question, index) => {
+    const name = question.querySelector('h3')?.text.trim() || `question ${index + 1}`;
+    const parts = question.querySelectorAll('[data-part="part"]');
+    // A question without parts is answered as a whole.
+    const answered = parts.length > 0 ? parts : [question];
+    answered.forEach((holder, position) => {
+      const where = parts.length > 0 ? `${name}, part ${position + 1},` : name;
+      const answers = holder.querySelectorAll('[data-part="answer"]');
+      if (answers.length === 0) problems.push(`${where} has no answer`);
+      if (answers.some(isEmptyAnswer)) problems.push(`${where} has an empty answer`);
+    });
+    // With parts, an answer to the whole question sits outside every part and
+    // is not reached above. Without parts the loop above has covered it.
+    if (parts.length > 0) {
+      const wholeAnswers = question
+        .querySelectorAll('[data-part="answer"]')
+        .filter((answer) => !answer.closest('[data-part="part"]'));
+      if (wholeAnswers.some(isEmptyAnswer)) problems.push(`${name} has an empty answer`);
+    }
+
+    const lines = question.querySelectorAll('[data-rubric-points]');
+    const total = lines.reduce((sum, line) => sum + Number(line.getAttribute('data-rubric-points')), 0);
+    const points = question.getAttribute('data-points');
+    questionPoints += Number(points ?? 0);
+    if (points === undefined) {
+      if (lines.length > 0) problems.push(`${name} has a rubric but is not given any points`);
+    } else if (lines.length === 0) {
+      problems.push(`${name} is worth ${points} points but has no rubric`);
+    } else if (total !== Number(points)) {
+      problems.push(`${name} is worth ${points} points but its rubric adds up to ${total}`);
+    }
+  });
+
+  const stated = practice.getAttribute('data-points');
+  if (stated !== undefined && Number(stated) !== questionPoints) {
+    problems.push(`the page says it is worth ${stated} points but its questions add up to ${questionPoints}`);
+  }
+
+  const leftover = LEFTOVER_LATEX.exec(practice.text)?.[0];
+  if (leftover) problems.push(`LaTeX left in the page text: "${leftover}"`);
 
   return problems;
 }

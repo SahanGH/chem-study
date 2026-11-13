@@ -2,6 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import { units, type Unit } from '../../data/units';
 import { lessonPath, lessonsByTopic } from '../../lib/lessons';
+import { practiceForUnit, practicePath } from '../../lib/practice';
+import { topicsLabel } from '../../lib/practice-id';
 
 export async function getStaticPaths() {
   const lessons = await lessonsByTopic();
@@ -16,6 +18,7 @@ interface Props {
 }
 const { unit } = Astro.props;
 const lessons = await lessonsByTopic();
+const practice = await practiceForUnit(unit);
 ---
 
 <Base
@@ -48,5 +51,20 @@ const lessons = await lessonsByTopic();
         })
       }
     </ol>
+    {
+      practice.length > 0 && (
+        <section class="unit-practice">
+          <h2>Practice</h2>
+          <ul class="practice-list">
+            {practice.map((doc) => (
+              <li>
+                <a href={practicePath(unit.slug, doc)}>{doc.data.title}</a>
+                <span class="topic-meta">{topicsLabel(doc.data.topics)}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
   </article>
 </Base>
