@@ -89,16 +89,34 @@ export function orderedPractice<T extends PracticeEntry>(
 }
 
 /**
- * How a document's topics read in a list: "Topic 5.3", "Topics 5.1–5.2" for a
- * run of neighbors, "Topics 5.1, 5.3" otherwise.
+ * True when one topic comes straight after another in the same unit: "5.10"
+ * after "5.9", but not "5.3" after "5.1" or "6.1" after "5.11".
+ */
+function follows(previous: string, code: string): boolean {
+  const [previousUnit, previousNumber] = previous.split('.');
+  const [unit, number] = code.split('.');
+  return unit === previousUnit && Number(number) === Number(previousNumber) + 1;
+}
+
+/**
+ * How a document's topics read in a list: "Topic 5.3"; "Topics 5.1–5.2" for a
+ * run of neighbors; "Topics 5.1–5.8, 5.10–5.11" when a topic is skipped;
+ * "Topics 5.1, 5.3" when none are neighbors.
  */
 export function topicsLabel(codes: readonly string[]): string {
-  const [first, ...rest] = codes;
-  if (first === undefined) throw new Error('A practice document must cover at least one topic.');
-  const last = rest.at(-1);
-  if (last === undefined) return `Topic ${first}`;
-  const numbers = codes.map((code) => Number(code.split('.')[1]));
-  const sameUnit = codes.every((code) => code.split('.')[0] === first.split('.')[0]);
-  const isRun = sameUnit && numbers.every((n, i) => i === 0 || n === (numbers[i - 1] ?? NaN) + 1);
-  return isRun ? `Topics ${first}–${last}` : `Topics ${codes.join(', ')}`;
+  if (codes.length === 0) throw new Error('A practice document must cover at least one topic.');
+  const runs: string[][] = [];
+  for (const code of codes) {
+    const run = runs.at(-1);
+    const previous = run?.at(-1);
+    if (run && previous !== undefined && follows(previous, code)) run.push(code);
+    else runs.push([code]);
+  }
+  const written = runs.map((run) => {
+    const [start] = run;
+    const end = run.at(-1);
+    if (start === undefined || end === undefined) throw new Error('A run of topics cannot be empty.');
+    return run.length > 1 ? `${start}–${end}` : start;
+  });
+  return `${codes.length === 1 ? 'Topic' : 'Topics'} ${written.join(', ')}`;
 }

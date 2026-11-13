@@ -88,6 +88,16 @@ describe('topicsLabel', () => {
     expect(topicsLabel(['5.1', '5.3'])).toBe('Topics 5.1, 5.3');
   });
 
+  it('writes each run of neighbors as its own range', () => {
+    const allButOne = ['5.1', '5.2', '5.3', '5.4', '5.5', '5.6', '5.7', '5.8', '5.10', '5.11'];
+
+    expect(topicsLabel(allButOne)).toBe('Topics 5.1–5.8, 5.10–5.11');
+  });
+
+  it('lists a lone topic beside a run', () => {
+    expect(topicsLabel(['5.1', '5.2', '5.4'])).toBe('Topics 5.1–5.2, 5.4');
+  });
+
   it('does not write topics from two units as a range', () => {
     expect(topicsLabel(['4.9', '5.10'])).toBe('Topics 4.9, 5.10');
   });

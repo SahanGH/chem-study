@@ -2,7 +2,7 @@
 title: "Skill ladders"
 kind: ladders
 order: 1
-topics: ["5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.8", "5.9", "5.10", "5.11"]
+topics: ["5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.8", "5.10", "5.11"]
 summary: Twelve skills, one at a time. Each has a worked example, then four questions of the same kind to try on your own. Start here, before the worksheets.
 ---
 
@@ -10,7 +10,7 @@ There are twelve ladders here, one for each skill. Each ladder is a worked examp
 
 **The one idea this whole unit turns on.** Kinetics is about *how fast*. Thermodynamics is about *how far*. They are independent. A reaction can be enormously favorable and still take centuries; diamond turning to graphite is the standard example. Never answer a rate question with an argument about stability.
 
-**The habit that decides this unit.** Reaction orders are **experimental**. They come from data, or from the slow step of a mechanism, never from the coefficients of the overall equation. Reading orders off a balanced equation is the single most common way to lose points here.
+**The habit that decides this unit.** Reaction orders are **experimental**. They come from data. A mechanism's slow step can predict them. The coefficients of the overall equation never can. Reading orders off a balanced equation is the single most common way to lose points here.
 
 **One scope note.** The AP course framework excludes **Arrhenius equation calculations**: you will not be asked to extract an activation energy from two rate constants or from a plot of $\ln k$ against $1/T$. Reading an energy profile and reasoning about temperature and catalysts qualitatively both remain fully examinable.
 
@@ -358,7 +358,7 @@ First.
 
 <Part label="b">
 
-A plot of $1/[\ce{A}]$ against time is straight with slope $+0.25$. Give the order and $k$.
+A plot of $1/[\ce{A}]$ against time is straight with slope $+0.25\ \text{M}^{-1}\,\text{s}^{-1}$. Give the order and $k$.
 
 <Answer>
 
@@ -429,7 +429,7 @@ $$
 
 **Why the half-life does not drift.** As the concentration falls, the rate falls in exact proportion. That is what first order means. Half of a smaller amount takes exactly as long to disappear as half of a larger one did.
 
-**Contrast:** for a *second*-order reaction the half-life *doubles* each time, because the rate falls faster than the concentration does.
+**Contrast:** for a reaction that is second order in A ($\text{rate} = k[\ce{A}]^2$), each half-life is twice as long as the one before, because halving $[\ce{A}]$ cuts the rate to a quarter.
 
 </Worked>
 
@@ -601,17 +601,17 @@ Because a reaction event requires the particles to be in the same place at the s
 
 ## Ladder 7: The collision model
 
-A collision produces reaction only if it carries at least the activation energy *and* the molecules are correctly oriented. Everything that changes a rate changes one of those two.
+A collision produces reaction only if it carries at least the activation energy *and* the molecules are correctly oriented. Everything that changes a rate changes how often particles collide, or what fraction of those collisions meets both requirements.
 
 <Worked title="Why a small warming does so much">
 
-A rise of 10 °C can roughly double a rate, though it raises the average speed only a few percent. Explain.
+A rise of 10 °C can roughly double a rate, though it raises the average speed only about 2 percent. Explain.
 
 **What actually matters** is the *fraction* of collisions carrying at least $E_a$, and that fraction lies far out in the high-energy tail of the distribution of molecular energies.
 
 **Warming shifts and broadens the whole distribution.** Near the average that is a small change. Out in the tail, where the threshold sits, the population rises steeply, easily doubling.
 
-**Collision frequency rises too, but only slightly:** a few percent, in line with the speed. Essentially all of the rate increase comes from the energy distribution, not from more collisions.
+**Collision frequency rises too, but only slightly:** about 2 percent, in line with the speed. Essentially all of the rate increase comes from the energy distribution, not from more collisions.
 
 **The answer that earns half credit:** "molecules move faster and collide more often". True, but it is the smaller effect; the credit is for the fraction above $E_a$.
 
@@ -669,7 +669,7 @@ Which effect of warming matters more: more collisions, or more energetic ones?
 
 More energetic ones, by far.
 
-**More energetic ones, by far.** Collision frequency rises only a few percent with a modest warming, while the fraction of collisions exceeding $E_a$ can double, because that fraction sits in the steep tail of the energy distribution.
+**More energetic ones, by far.** Collision frequency rises only about 2 percent with a modest warming, while the fraction of collisions exceeding $E_a$ can double, because that fraction sits in the steep tail of the energy distribution.
 
 </Answer>
 
@@ -716,7 +716,7 @@ $$
 
 The same value as before. ✓
 
-**A multi-step profile** has one peak per step, with shallow minima between them where intermediates sit. The *highest* peak is the rate-limiting step.
+**A multi-step profile** has one peak per step, with shallow minima between them where intermediates sit. The slowest step, the rate-limiting step, is the one with the largest climb, each measured from where that step starts: the reactants for step 1, the valley just before its peak for a later step.
 
 </Worked>
 
@@ -762,9 +762,9 @@ On a two-step profile, how do you identify the rate-limiting step?
 
 <Answer>
 
-The step with the highest peak.
+The step with the largest climb from where it starts.
 
-It is the step whose peak is **highest above the preceding minimum**: the largest barrier to climb, and therefore the slowest step, which sets the overall rate.
+It is the step with the **largest activation energy**, each measured from where that step starts (the reactants for step 1, the valley before its peak for step 2). That is the largest barrier to climb, and therefore the slowest step, which sets the overall rate.
 
 </Answer>
 
@@ -788,11 +788,11 @@ An **intermediate**: a real species, produced by one step and consumed by a late
 
 ## Ladder 9: Mechanisms and the rate-limiting step
 
-A mechanism is valid only if its steps add to the overall equation *and* its slow step predicts the observed rate law.
+A mechanism can be right only if its steps add to the overall equation *and* the rate law it predicts matches the observed one. When the slow step comes first, that prediction is simply the slow step's rate law.
 
 <Worked title="Testing a mechanism">
 
-This reaction has the observed rate law $k[\ce{NO2}]^2$:
+At low temperature, this reaction has the observed rate law $k[\ce{NO2}]^2$:
 
 $$
 \ce{NO2 + CO -> NO + CO2}
@@ -808,7 +808,10 @@ Test this mechanism for it:
 **Do the steps add?** Summing:
 
 $$
-\ce{2NO2 + NO3 + CO -> NO3 + NO + NO2 + CO2}
+\begin{aligned}
+&\ce{2NO2 + NO3 + CO} \\
+&\qquad \ce{-> NO3 + NO + NO2 + CO2}
+\end{aligned}
 $$
 
 Cancel $\ce{NO3}$ from both sides and one $\ce{NO2}$:
@@ -819,13 +822,13 @@ $$
 
 That is the overall equation. ✓
 
-**Does the slow step give the observed law?** Step 1 is elementary and bimolecular in $\ce{NO2}$, so $\text{rate} = k[\ce{NO2}]^2$. ✓
+**Does the slow step give the observed law?** Step 1 is the slow step and comes first, so its rate law is the reaction's. Two $\ce{NO2}$ molecules collide in it, so $\text{rate} = k[\ce{NO2}]^2$. ✓
 
 **The striking prediction:** $\ce{CO}$ does not appear in the rate law at all, even though it is a reactant. It enters only in the *fast* step, after the bottleneck, so adding more of it does not speed the reaction up. That is exactly what the experiment finds, and it is strong evidence for this mechanism.
 
 </Worked>
 
-<Question number={9} label="Your turn" topic="5.7, 5.8, 5.9">
+<Question number={9} label="Your turn" topic="5.7, 5.8">
 
 <Part label="a">
 
@@ -863,7 +866,7 @@ Why does $\ce{CO}$ not appear in the rate law?
 
 It appears only after the slow step.
 
-Because it is consumed only in the *fast* step, which happens after the bottleneck. Whatever $\ce{NO3}$ step 1 produces is mopped up essentially instantly, so the supply of $\ce{CO}$ never limits anything and its concentration does not affect the overall rate.
+Because it is consumed only in the *fast* step, which happens after the bottleneck. Whatever $\ce{NO3}$ step 1 produces is mopped up essentially instantly, so the supply of $\ce{CO}$ does not limit the rate and its concentration does not affect the overall rate.
 
 </Answer>
 
@@ -875,9 +878,9 @@ What two tests must any proposed mechanism pass?
 
 <Answer>
 
-The steps sum to the overall equation; the slow step gives the observed rate law.
+The steps sum to the overall equation; the predicted rate law matches the observed one.
 
-(1) The steps must **sum to the overall balanced equation**, with intermediates canceling. (2) The **slow step must predict the experimentally observed rate law**. Failing either rules the mechanism out. Passing both does not prove it correct, only that it is consistent.
+(1) The steps must **sum to the overall balanced equation**, with intermediates canceling. (2) The **rate law the mechanism predicts must match the experimentally observed rate law**. When the slow step comes first, that is the slow step's rate law. Failing either rules the mechanism out. Passing both does not prove it correct, only that it is consistent.
 
 </Answer>
 
@@ -1054,7 +1057,7 @@ Two independent questions: *does it want to happen* (thermodynamics) and *will i
 
 Diamond converting to graphite has $\Delta G^\circ = -2.9\ \text{kJ/mol}$, which is thermodynamically favorable at room temperature. Explain why diamonds do not visibly change.
 
-**Thermodynamics says it should happen.** A negative $\Delta G$ means graphite is the more stable form, and the conversion would release energy.
+**Thermodynamics says it should happen.** A negative $\Delta G^\circ$ means graphite is the more stable form: the conversion is thermodynamically favored. ($\Delta G^\circ$, met in Unit 9, says whether a reaction is thermodynamically favored.)
 
 **Kinetics says it will not, on any human timescale.** Rearranging diamond's covalent network requires breaking very strong $\ce{C-C}$ bonds, an enormous activation energy. At room temperature essentially no atom has that much energy, so the rate is indistinguishable from zero.
 
@@ -1128,4 +1131,4 @@ Score yourself honestly. Count a ladder only if all four of its questions were r
 
 - **12 of 12:** move on to the unit worksheets and the free-response set.
 - **9 to 11:** solid. Redo the missed ladders tomorrow from a blank page.
-- **8 or fewer:** the recurring root causes here are exactly three: (1) reading reaction orders off the balanced equation instead of from data or the slow step, (2) quoting a rate constant with no units, and (3) answering a rate question with a stability argument. Fix those three and most of these ladders fall together.
+- **8 or fewer:** the recurring root causes here are exactly three: (1) reading reaction orders off the balanced equation instead of from data or a mechanism's slow step, (2) quoting a rate constant with no units, and (3) answering a rate question with a stability argument. Fix those three and most of these ladders fall together.

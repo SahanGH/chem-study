@@ -193,6 +193,22 @@ answer present, every equation rendering — before it is committed to
 made in ChemStudy, and AP_Chem_Prep is not consulted again. The export
 mode is a migration tool, not part of ChemStudy.
 
+> **As built (Plan 3, 2026-11-13).** The blocks are `Question`, `Part`,
+> `Answer`, `Rubric` with `RubricLine`, and `Blank`; the lessons' `Worked`
+> is reused by the skill ladders. No practice document has a figure. There
+> is no converter: AP_Chem_Prep was frozen before an export mode could be
+> added to `tools/tex2html.py`, so each document was converted by hand
+> from a written guide and then compared with its LaTeX source by
+> `scripts/practice-audit.mjs` (numbers, formulas, parts, rubric lines,
+> wording), fact-checked independently, and compared with its key PDF.
+> Published: four worksheets, the skill ladders and the free-response
+> set. Left out by the teacher's decision: the unit exam (kept closed),
+> the comprehensive test (to be replaced by new, original questions) and
+> the "Quick review" strip that ends each printed worksheet. A printed
+> practice page carries the answers that are open and leaves out the
+> closed ones. Answers and rubrics are kept out of the search index, so a
+> search result cannot show a worked answer.
+
 Printable copies come from the site's own print layout; ChemStudy does
 not link to the LaTeX PDFs.
 

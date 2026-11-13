@@ -2,7 +2,7 @@
 title: "Free-response set"
 kind: free-response
 order: 6
-topics: ["5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.8", "5.9", "5.10", "5.11"]
+topics: ["5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.8", "5.10", "5.11"]
 summary: Five free-response questions on all of Unit 5, two long and three short, each with a worked answer and its scoring rubric.
 points: 32
 minutes: 50
@@ -16,7 +16,7 @@ One limit applies. Topic 5.6 leaves calculations with the Arrhenius equation off
 
 ## Questions
 
-<Question number={1} title="Rate law from initial rates" topic="5.1, 5.2, 5.3" points={10}>
+<Question number={1} title="Rate law from initial rates" topic="5.1, 5.2, 5.4" points={10}>
 
 The following initial rates were measured at constant temperature for this reaction:
 
@@ -77,7 +77,7 @@ From experiment 1:
 $$
 \begin{aligned}
 k &= \frac{2.5 \times 10^{-5}}{(0.020)^2(0.010)} \\
-&= \frac{2.5 \times 10^{-5}}{4.0 \times 10^{-6}} = \mathbf{6.3}
+&= \frac{2.5 \times 10^{-5}}{4.0 \times 10^{-6}} = 6.25 \approx \mathbf{6.3}
 \end{aligned}
 $$
 
@@ -102,7 +102,7 @@ Explain why the order with respect to $\ce{NO}$ cannot be assumed from its coeff
 
 <Answer>
 
-Orders are experimental quantities set by the *mechanism*, in particular by the slowest step, not by the overall stoichiometry. The two agree only when the reaction is genuinely elementary, which cannot be assumed. Here they happen to coincide, but that had to be established from the data.
+Orders are found by experiment. They are set by the mechanism, through the slow step and any steps before it, not by the overall equation. Coefficients give the orders only for an elementary step, and nothing tells us this reaction happens in one step. Here the order in $\ce{NO}$ does equal its coefficient, but only the data could show that: topic 5.9 shows a two-step mechanism that gives the same rate law.
 
 </Answer>
 
@@ -117,7 +117,7 @@ Orders are experimental quantities set by the *mechanism*, in particular by the 
 
 </Question>
 
-<Question number={2} title="Mechanism, profile and catalysis" topic="5.4, 5.5, 5.7, 5.8, 5.9, 5.10, 5.11" points={10}>
+<Question number={2} title="Mechanism, profile and catalysis" topic="5.4, 5.5, 5.6, 5.7, 5.8, 5.10, 5.11" points={10}>
 
 A mechanism is proposed for this reaction:
 
@@ -139,6 +139,8 @@ Identify the intermediates and state how you recognized them.
 
 $\ce{NO3}$ and $\ce{NO}$. Each is *produced* in one step and *consumed* in a later one, so both appear in the mechanism but not in the overall equation.
 
+$\ce{NO2}$ appears on both sides of step 2: it takes part in the collision and leaves unchanged. It is a product of the overall reaction, so it is not an intermediate.
+
 </Answer>
 
 </Part>
@@ -149,7 +151,7 @@ Write the rate law this mechanism predicts, with justification.
 
 <Answer>
 
-The overall rate cannot exceed that of the slowest step, so the rate law comes from step 1. That step is **elementary**, so its order may be read from its own coefficients:
+Step 1 is the slow, rate-limiting step, and it comes first, so its rate law contains no intermediate and is the rate law of the reaction. That step is **elementary**, so its order may be read from its own coefficients:
 
 $$
 \text{rate} = k[\ce{N2O5}]
@@ -163,11 +165,11 @@ First order, even though the overall equation shows a coefficient of 2.
 
 <Part label="c">
 
-Describe how the energy profile for this three-step mechanism differs from that of a single-step reaction, and state which barrier is highest.
+Describe how the energy profile for this three-step mechanism differs from that of a single-step reaction, and state which step has the largest activation energy.
 
 <Answer>
 
-It shows **three** maxima, one per step, separated by shallow minima where the intermediates sit. The **first** barrier is the highest, because step 1 is the slow, rate-limiting step.
+A single-step reaction has one peak. This profile has **three** peaks, one transition state per step, with a valley between each pair where an intermediate sits. **Step 1** has the largest activation energy, the biggest climb measured from where its step starts (for step 1, the reactants), because it is the slow, rate-limiting step.
 
 </Answer>
 
@@ -183,7 +185,7 @@ A catalyst is introduced. State its effect on the rate, on $\Delta H$, and on th
 
 **$\Delta H$: unchanged.** Reactants and products sit at the same energies as before; only the barrier between them is lowered.
 
-**Equilibrium position: unchanged.** The forward and reverse reactions are accelerated equally, so equilibrium is reached sooner but lies in exactly the same place.
+**Equilibrium position: unchanged.** The forward and reverse reactions are sped up by the same factor, so equilibrium is reached sooner but lies in exactly the same place.
 
 </Answer>
 
@@ -192,7 +194,7 @@ A catalyst is introduced. State its effect on the rate, on $\Delta H$, and on th
 <Rubric>
 <RubricLine part="a" points={2}>1 point for both intermediates; 1 point for saying that each is produced, then consumed.</RubricLine>
 <RubricLine part="b" points={3}>1 point for a rate law taken from the slow step; 1 point for $k[\ce{N2O5}]$; 1 point for noting that coefficients are usable only because the step is elementary.</RubricLine>
-<RubricLine part="c" points={3}>1 point for three maxima with intermediates between; 1 point for saying that the first is highest; 1 point for linking that to the slow step.</RubricLine>
+<RubricLine part="c" points={3}>1 point for three peaks with intermediates in the valleys between; 1 point for saying that step 1 has the largest activation energy; 1 point for linking that to the slow step.</RubricLine>
 <RubricLine part="d" points={2}>1 point for a lower activation energy by an alternative path; 1 point for $\Delta H$ and the equilibrium position both unchanged. "It lowers the energy of the reactants" earns 0 points.</RubricLine>
 </Rubric>
 
@@ -307,7 +309,7 @@ Energy at least equal to the activation energy, and correct **orientation** of t
 
 <Part label="b">
 
-A rise of 10 °C can roughly double a reaction rate, although it raises the average molecular speed by only a few percent. Explain.
+A rise of 10 °C near room temperature can roughly double a reaction rate, although it raises the average molecular speed by less than 2 percent. Explain.
 
 <Answer>
 
