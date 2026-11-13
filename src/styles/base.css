@@ -1,0 +1,494 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: var(--step-0);
+  line-height: 1.65;
+}
+
+/* A soft cross-fade between pages, in browsers that support it. */
+@view-transition {
+  navigation: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--u);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--u-ink);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-head);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+h1 { font-size: var(--step-3); }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); }
+
+.eyebrow,
+.kicker,
+.label {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+.kicker {
+  color: var(--u-ink);
+}
+
+.lede {
+  font-size: var(--step-1);
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 36rem;
+  margin: 1rem 0 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999rem;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 10;
+  background: var(--card);
+  padding: 0.5rem 1rem;
+}
+
+.site-header,
+main,
+.site-footer {
+  width: min(100% - 2 * var(--space), 72rem);
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* At 320px the brand and the four nav items are 52px wider than the page;
+     wrapping drops the nav under the brand instead of scrolling sideways. */
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-block: 1.1rem;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-head);
+  font-size: var(--step-1);
+  font-weight: 500;
+  text-decoration: none;
+}
+/* Words for screen readers only. The brand link says "home" this way rather
+   than with an aria-label, because a label must contain all the visible text
+   (WCAG 2.5.3) and the tile's "Cs" counts as visible text. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.logo-tile text {
+  fill: currentColor;
+  font-family: var(--font-head);
+}
+.logo-tile .logo-z {
+  font-family: var(--font-ui);
+}
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.6rem, 2vw, 1.5rem);
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+}
+.site-header nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding-block: 0.6rem;
+}
+.site-header nav a:hover {
+  color: var(--ink);
+}
+
+/* Below 408px (iPhones are 375-393px) the brand and the nav are about 36px too
+   wide for one row at 360px. Tighten the gaps and the wordmark rather than the
+   44px icon buttons. At 320px the nav still wraps; pushing it to the right
+   makes that look deliberate. 412px and wider are untouched. */
+@media (max-width: 25.5rem) {
+  .site-header {
+    gap: 0.5rem;
+  }
+  .brand {
+    gap: 0.4rem;
+    font-size: 1.1rem;
+  }
+  .site-header nav {
+    gap: 0.3rem;
+    margin-inline-start: auto;
+  }
+}
+
+.icon-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+.icon-btn:hover {
+  background: var(--card);
+}
+/* The pre-paint script in Base.astro always sets data-theme on <html>, so a
+   missing data-theme means scripts are off and the theme toggle and the
+   search button could do nothing. */
+html:not([data-theme]) [data-theme-toggle],
+html:not([data-theme]) [data-search-open] {
+  display: none;
+}
+
+.button {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: 500;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+}
+
+main {
+  padding-block: var(--space) calc(var(--space) * 2);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding-block: 1.5rem 2.5rem;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+.site-footer p {
+  margin: 0.3rem 0;
+  max-width: 44rem;
+}
+
+/* Lesson page. One column on a phone (lesson, then the unit's topics);
+   topics move to the left at 60rem; "on this page" appears at 78rem. */
+.lesson-grid {
+  display: grid;
+  gap: calc(var(--space) * 1.5);
+  grid-template-columns: minmax(0, 1fr);
+}
+.section-nav {
+  display: none;
+}
+@media (min-width: 60rem) {
+  .lesson-grid {
+    grid-template-columns: 15rem minmax(0, 1fr);
+    align-items: start;
+  }
+  .topic-nav {
+    grid-column: 1;
+    grid-row: 1;
+    position: sticky;
+    top: 1.5rem;
+  }
+  .lesson {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+@media (min-width: 78rem) {
+  .lesson-grid {
+    grid-template-columns: 15rem minmax(0, 1fr) 13rem;
+  }
+  .section-nav {
+    display: block;
+    grid-column: 3;
+    grid-row: 1;
+    position: sticky;
+    top: 1.5rem;
+  }
+}
+
+.topic-nav,
+.section-nav {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+}
+.topic-nav ol,
+.section-nav ul {
+  list-style: none;
+  margin: 0.8rem 0 0;
+  padding: 0;
+}
+.topic-nav li,
+.section-nav li {
+  padding-block: 0.3rem;
+  color: var(--muted);
+}
+.topic-nav a,
+.section-nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.topic-nav a:hover,
+.section-nav a:hover {
+  color: var(--ink);
+}
+.topic-nav .eyebrow a {
+  color: inherit;
+}
+.topic-nav li.current a {
+  color: var(--u-ink);
+  font-weight: 600;
+}
+.topic-nav li.is-done::after {
+  content: ' ✓';
+  color: var(--ok);
+}
+
+.complete {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: var(--ok);
+  background: var(--ok-bg);
+  border-radius: var(--radius);
+  padding: 0.8rem 1.1rem;
+}
+.prev-next {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  border-top: 1px solid var(--line);
+  padding-top: 1.2rem;
+  margin-top: 2.5rem;
+}
+
+.hero {
+  padding-block: clamp(1.5rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
+  max-width: 46rem;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--muted);
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin: 1.75rem 0 0;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+}
+.continue,
+.hero-note {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--muted);
+  margin: 1.5rem 0 0;
+}
+.hero-note {
+  max-width: 36rem;
+  margin-top: 0.75rem;
+}
+
+.unit-list,
+.topic-list {
+  list-style: none;
+  margin: 0.8rem 0 0;
+  padding: 0;
+}
+.unit-row,
+.topic-list > li {
+  display: grid;
+  align-items: baseline;
+  gap: 0.2rem 1rem;
+  padding-block: 1rem;
+  border-top: 1px solid var(--line);
+}
+.unit-row:last-child,
+.topic-list > li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.unit-row {
+  grid-template-columns: 0.75rem 4.5rem minmax(0, 1fr);
+}
+.dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--u);
+  align-self: center;
+}
+.unit-num,
+.unit-meta,
+.topic-code,
+.topic-meta {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+.unit-num {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.unit-title {
+  font-family: var(--font-head);
+  font-size: var(--step-1);
+  text-decoration: none;
+}
+a.unit-title:hover {
+  text-decoration: underline;
+}
+/* On a phone the status drops under the title; from 40rem it sits at the right. */
+.unit-meta {
+  grid-column: 3;
+}
+/* Keeps "· 1 done" in one piece: a narrow row never breaks after the number. */
+[data-unit-progress] {
+  white-space: nowrap;
+}
+@media (min-width: 40rem) {
+  .unit-row {
+    grid-template-columns: 0.75rem 4.5rem minmax(0, 1fr) auto;
+  }
+  .unit-meta {
+    grid-column: 4;
+  }
+}
+
+.unit-page {
+  max-width: 46rem;
+}
+.unit-page h1 {
+  margin-top: 0.4rem;
+}
+.topic-list {
+  margin-top: 2.5rem;
+}
+.topic-list > li {
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+}
+.topic-list a {
+  font-family: var(--font-head);
+  font-size: var(--step-1);
+  text-decoration: none;
+}
+.topic-list a:hover {
+  text-decoration: underline;
+}
+.topic-list > li > span:nth-child(2) {
+  font-family: var(--font-head);
+  font-size: var(--step-1);
+  color: var(--muted);
+}
+.topic-meta {
+  grid-column: 2;
+}
+.done-mark {
+  display: none;
+  color: var(--ok);
+  font-weight: 500;
+}
+.is-done .done-mark {
+  display: inline;
+}
+.search-dialog {
+  width: min(100% - 2rem, 40rem);
+  max-height: min(100% - 4rem, 44rem);
+  margin-top: 4rem;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  /* Pagefind's UI reads these. */
+  --pagefind-ui-primary: var(--ink);
+  --pagefind-ui-text: var(--ink);
+  --pagefind-ui-background: var(--card);
+  --pagefind-ui-border: var(--line);
+  --pagefind-ui-tag: var(--line);
+  --pagefind-ui-font: var(--font-ui);
+}
+.search-dialog::backdrop {
+  background: rgb(38 35 31 / 0.45);
+}
+/* A class, not ".search-dialog form": Pagefind's own search form lives in this
+   dialog too, and a flex row squeezes its input and puts results beside it. */
+.search-close-form {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.75rem;
+}
+.search-close {
+  font: inherit;
+  font-size: var(--step--1);
+  color: var(--muted);
+  background: none;
+  border: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.search-note {
+  font-size: var(--step--1);
+  color: var(--muted);
+}

@@ -1,0 +1,188 @@
+---
+import { shownAnswer, type CheckAnswer } from '../../lib/check';
+
+type Props = CheckAnswer;
+const { answer, numeric, unit } = Astro.props;
+const shown = shownAnswer({ answer, numeric, unit });
+---
+
+<cs-check data-part="check" data-answer={answer} data-numeric={numeric} data-unit={unit}>
+  <p class="label">Check yourself</p>
+  <div class="check-body"><slot /></div>
+  <p class="check-feedback" role="status"></p>
+  <details class="check-why">
+    <summary>Show answer</summary>
+    <p class="check-answer">Answer: {shown}</p>
+    <slot name="why" />
+  </details>
+</cs-check>
+
+<script>
+  import { gradeChoice, gradeNumeric, parseNumber } from '../../lib/check';
+  import { browserProgress } from '../../lib/progress';
+
+  /**
+   * The text a screen reader should speak for an option. KaTeX's visible HTML
+   * is aria-hidden and a button takes no name from its MathML child, so a
+   * math-only option would be nameless. The MathML text is read instead, minus
+   * the TeX source KaTeX keeps in <annotation>.
+   *
+   * Spacing-only <mtext> elements are dropped too: KaTeX draws a thin space
+   * (\,) as a margin in the visible HTML, so the visible text reads "M−1s−1"
+   * while the MathML says "M−1 s−1". A name that differs from the visible
+   * text by that space fails WCAG 2.5.3 (Label in Name) for voice control.
+   */
+  function readableText(element: Element): string {
+    const copy = element.cloneNode(true);
+    if (!(copy instanceof Element)) throw new Error('Cloning an element did not give an element.');
+    for (const hidden of copy.querySelectorAll('annotation, [aria-hidden="true"]')) hidden.remove();
+    for (const spacing of copy.querySelectorAll('mtext')) {
+      if (!(spacing.textContent ?? '').trim()) spacing.remove();
+    }
+    return (copy.textContent ?? '').replace(/\s+/g, ' ').trim();
+  }
+
+  class CsCheck extends HTMLElement {
+    connectedCallback() {
+      if (this.dataset.ready) return;
+      this.dataset.ready = 'true';
+
+      const body = this.querySelector<HTMLElement>('.check-body');
+      const feedback = this.querySelector<HTMLElement>('.check-feedback');
+      const why = this.querySelector<HTMLDetailsElement>('.check-why');
+      if (!body || !feedback || !why) throw new Error('cs-check is missing part of its markup.');
+
+      const say = (text: string, state: 'ok' | 'no') => {
+        feedback.textContent = text;
+        feedback.dataset.state = state;
+      };
+      const finish = () => {
+        say('Correct.', 'ok');
+        why.open = true;
+        this.record();
+      };
+
+      if (this.dataset.numeric !== undefined) {
+        // Read the same way a typed answer is, so "0.020" and "2.5e-3" both work.
+        const value = parseNumber(this.dataset.numeric);
+        if (value === null) throw new Error(`cs-check has a numeric answer that is not a number: ${this.dataset.numeric}`);
+        this.enhanceNumeric(body, value, say, finish);
+      } else {
+        this.enhanceChoice(body, Number(this.dataset.answer), say, finish);
+      }
+      // Marks a question that can be graded. "Show answer" stays in reach
+      // either way: a student who is stuck must be able to see the answer.
+      this.classList.add('is-enhanced');
+    }
+
+    enhanceChoice(
+      body: HTMLElement,
+      answer: number,
+      say: (text: string, state: 'ok' | 'no') => void,
+      finish: () => void,
+    ) {
+      const list = body.querySelector('ul, ol');
+      if (!list) throw new Error('A choice Check needs a list of options.');
+      const items = Array.from(list.children);
+      // Work out every label before touching the DOM, so a failure here leaves
+      // the no-JavaScript version intact.
+      const labels = items.map((item, index) => {
+        if (!item.querySelector('.katex')) return null;
+        const label = readableText(item);
+        if (!label) throw new Error(`Option ${index + 1} is math with no readable text, so it would have no name.`);
+        return label;
+      });
+      const buttons: HTMLButtonElement[] = [];
+      items.forEach((item, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'check-option';
+        const label = labels[index];
+        if (label) button.setAttribute('aria-label', label);
+        button.append(...Array.from(item.childNodes));
+        item.append(button);
+        buttons.push(button);
+        button.addEventListener('click', () => {
+          if (gradeChoice(index + 1, answer)) {
+            button.classList.add('is-correct');
+            for (const other of buttons) other.disabled = true;
+            finish();
+          } else {
+            button.classList.add('is-wrong');
+            button.disabled = true;
+            say('Not quite. Try another.', 'no');
+          }
+        });
+      });
+      list.classList.add('check-options');
+    }
+
+    enhanceNumeric(
+      body: HTMLElement,
+      answer: number,
+      say: (text: string, state: 'ok' | 'no') => void,
+      finish: () => void,
+    ) {
+      const form = document.createElement('form');
+      form.className = 'check-numeric';
+      const label = document.createElement('label');
+      label.textContent = 'Your answer ';
+      const input = document.createElement('input');
+      // A plain text field, so a phone shows its full keyboard: the decimal
+      // keypad on an iPhone has no minus sign and no "e" for 2.5e-3.
+      input.type = 'text';
+      input.autocomplete = 'off';
+      input.setAttribute('autocapitalize', 'off');
+      input.spellcheck = false;
+      label.append(input);
+      if (this.dataset.unit) label.append(` ${this.dataset.unit}`);
+      const submit = document.createElement('button');
+      submit.type = 'submit';
+      submit.className = 'button';
+      submit.textContent = 'Check';
+      form.append(label, submit);
+      body.append(form);
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const grade = gradeNumeric(input.value, answer);
+        if (grade === 'invalid') {
+          say('Enter a number, for example 0.25 or 2.5e-3.', 'no');
+        } else if (grade === 'incorrect') {
+          say('Not quite. Check your setup and try again.', 'no');
+        } else {
+          input.disabled = true;
+          submit.disabled = true;
+          finish();
+        }
+      });
+    }
+
+    record() {
+      const main = this.closest<HTMLElement>('main[data-topic]');
+      const topic = main?.dataset.topic;
+      if (!main || !topic) return; // A Check outside a lesson has no topic to credit.
+      const checks = Array.from(main.querySelectorAll('cs-check'));
+      browserProgress().recordAnswer(topic, checks.indexOf(this), checks.length);
+      document.dispatchEvent(new CustomEvent('chemstudy:progress'));
+    }
+  }
+
+  customElements.define('cs-check', CsCheck);
+
+  // The print stylesheet reveals closed answers with ::details-content, which
+  // older browsers lack, so open them for printing too and put each one back
+  // afterwards. The map keeps the state from before the first beforeprint: a
+  // second one without an afterprint must not record "open" as the original.
+  const stateBeforePrint = new Map<HTMLDetailsElement, boolean>();
+  window.addEventListener('beforeprint', () => {
+    for (const why of document.querySelectorAll<HTMLDetailsElement>('cs-check .check-why')) {
+      if (!stateBeforePrint.has(why)) stateBeforePrint.set(why, why.open);
+      why.open = true;
+    }
+  });
+  window.addEventListener('afterprint', () => {
+    for (const [why, wasOpen] of stateBeforePrint) why.open = wasOpen;
+    stateBeforePrint.clear();
+  });
+</script>

@@ -1,0 +1,19 @@
+---
+interface Props {
+  /** Width in pixels; height keeps the tile's 46:52 shape. */
+  size?: number;
+}
+const { size = 30 } = Astro.props;
+---
+
+<svg
+  class="logo-tile"
+  width={size}
+  height={Math.round((size * 52) / 46)}
+  viewBox="0 0 46 52"
+  aria-hidden="true"
+>
+  <rect x="1" y="1" width="44" height="50" rx="7" fill="none" stroke="currentColor" stroke-width="2"></rect>
+  <text class="logo-z" x="6" y="14" font-size="9" font-weight="600">55</text>
+  <text x="23" y="39" text-anchor="middle" font-size="25" font-weight="600">Cs</text>
+</svg>

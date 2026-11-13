@@ -1,0 +1,60 @@
+@media print {
+  .site-header,
+  .site-footer,
+  .topic-nav,
+  .section-nav,
+  .prev-next,
+  .skip-link,
+  .complete,
+  dialog {
+    display: none !important;
+  }
+  /* Paper is always white, so the screen theme must not leak into print.
+     The dark tokens sit on <html> and the unit tokens on <body>, so both
+     need resetting. Doubling :root gives (0,2,0), beating
+     [data-theme='dark'], and the body rule gives (0,3,1), beating
+     [data-theme='dark'] [data-unit='N'] whatever the unit. */
+  :root:root,
+  :root:root body[data-unit] {
+    color-scheme: light;
+    --paper: #fff;
+    --card: #fff;
+    --ink: #000;
+    --muted: #444;
+    --u-ink: #000;
+    --u-tint: #f2f2f2;
+    --line: #999;
+    --no: #7a2f25;
+    --ok: #1e5a2b;
+    --ok-bg: #f4f8f4;
+    --no-bg: #fbf4f3;
+    --u: #777;
+  }
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+  main {
+    width: 100%;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  /* On paper there is nothing to click, so every answer is shown. A closed
+     <details> hides its content through ::details-content, and hiding the
+     summary does not open it, so that content is made visible directly.
+     ::details-content is recent; the cs-check script also opens every
+     <details> on beforeprint for browsers that lack it. */
+  .check-why > summary {
+    display: none;
+  }
+  .check-why::details-content {
+    content-visibility: visible;
+    display: block;
+  }
+  [data-part] {
+    break-inside: avoid;
+  }
+}

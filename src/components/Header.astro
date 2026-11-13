@@ -1,0 +1,18 @@
+---
+import Logo from './Logo.astro';
+import Search from './Search.astro';
+import ThemeToggle from './ThemeToggle.astro';
+---
+
+<header class="site-header">
+  <a class="brand" href="/">
+    <Logo />
+    <span>ChemStudy<span class="visually-hidden"> home</span></span>
+  </a>
+  <nav aria-label="Main">
+    <a href="/#units">Units</a>
+    <a href="/about/">About</a>
+    <Search />
+    <ThemeToggle />
+  </nav>
+</header>
