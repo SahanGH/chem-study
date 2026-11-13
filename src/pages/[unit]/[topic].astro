@@ -6,6 +6,7 @@ import Figure from '../../components/lesson/Figure.astro';
 import KeyIdea from '../../components/lesson/KeyIdea.astro';
 import KeyPoints from '../../components/lesson/KeyPoints.astro';
 import PracticeNext from '../../components/lesson/PracticeNext.astro';
+import RateLawExplorer from '../../components/lesson/RateLawExplorer.astro';
 import Trap from '../../components/lesson/Trap.astro';
 import Worked from '../../components/lesson/Worked.astro';
 import { topicByCode } from '../../data/units';
@@ -26,7 +27,7 @@ interface Props {
 const { lesson } = Astro.props;
 const { Content, headings } = await render(lesson);
 // Supplied to every lesson, so lesson files need no imports.
-const blocks = { Check, Figure, KeyIdea, KeyPoints, PracticeNext, Trap, Worked };
+const blocks = { Check, Figure, KeyIdea, KeyPoints, PracticeNext, RateLawExplorer, Trap, Worked };
 ---
 
 <LessonLayout lesson={lesson} headings={headings}>

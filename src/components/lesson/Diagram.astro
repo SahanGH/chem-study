@@ -1,0 +1,17 @@
+---
+interface Props {
+  /** One line under the diagram saying what it shows. Required. */
+  caption: string;
+}
+const { caption } = Astro.props;
+if (!caption.trim()) throw new Error('A diagram needs a caption.');
+---
+
+{/* Kept out of the search index: its labels and numbers are not lesson text. */}
+<figure class="figure diagram" data-part="diagram" data-pagefind-ignore>
+  <slot />
+  <noscript>
+    <p class="diagram-note">This diagram shows its starting values. It can be changed when JavaScript is on.</p>
+  </noscript>
+  <figcaption>{caption}</figcaption>
+</figure>
