@@ -9,4 +9,5 @@ test('without JavaScript a lesson is fully readable and answers can be opened', 
   await expect(first.locator('li').first()).toBeVisible();
   await first.locator('summary').click();
   await expect(first.locator('.check-answer')).toHaveText('Answer: option 3');
+  await expect(first.locator('.check-answer')).toBeVisible();
 });

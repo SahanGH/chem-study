@@ -52,6 +52,44 @@ test('answering every check completes the topic, and the device remembers', asyn
   await expect(page.locator('[data-complete]')).toBeVisible();
 });
 
+test('the topic is not complete while a check is still unanswered', async ({ page }) => {
+  await page.goto(LESSON);
+  const checks = page.locator('cs-check');
+
+  await checks.nth(0).locator('.check-option').nth(2).click();
+  await checks.nth(1).locator('.check-option').nth(1).click();
+
+  await expect(checks.nth(1).locator('.check-feedback')).toHaveText('Correct.');
+  await expect(page.locator('[data-complete]')).toBeHidden();
+});
+
+test('a wrong numeric answer says so and does not complete the topic', async ({ page }) => {
+  await page.goto(LESSON);
+  const checks = page.locator('cs-check');
+  await checks.nth(0).locator('.check-option').nth(2).click();
+  await checks.nth(1).locator('.check-option').nth(1).click();
+
+  await checks.nth(2).locator('input').fill('0.5');
+  await checks.nth(2).locator('input').press('Enter');
+
+  await expect(checks.nth(2).locator('.check-feedback')).toContainText('Not quite');
+  await expect(page.locator('[data-complete]')).toBeHidden();
+});
+
+test('finishing every check marks the topic done in the topic navigation', async ({ page }) => {
+  await page.goto(LESSON);
+  const entry = page.locator('[data-topic-link="5.2"]');
+  await expect(entry).not.toHaveClass(/is-done/);
+
+  const checks = page.locator('cs-check');
+  await checks.nth(0).locator('.check-option').nth(2).click();
+  await checks.nth(1).locator('.check-option').nth(1).click();
+  await checks.nth(2).locator('input').fill('0.020');
+  await checks.nth(2).locator('input').press('Enter');
+
+  await expect(entry).toHaveClass(/is-done/);
+});
+
 test('a numeric check rejects text that is not a number', async ({ page }) => {
   await page.goto(LESSON);
   const numeric = page.locator('cs-check[data-numeric]').first();
