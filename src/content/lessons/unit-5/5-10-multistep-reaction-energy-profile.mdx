@@ -1,0 +1,154 @@
+---
+topic: "5.10"
+minutes: 8
+summary: "How to read the energy profile of a reaction with more than one step: its transition states, its intermediates and its slowest step."
+---
+
+A road through a range of mountains does not climb just once. It goes up over one pass, down into a valley, and up over the next pass before it comes down on the far side. The energy profile of a reaction with several steps looks like that road. Topic 5.6 drew one hill for one elementary step. A mechanism (topic 5.7) has several steps, so its profile has several hills, one after another. Everything you learned about one hill still holds for each of them.
+
+## One hill per step
+
+Each elementary step of a mechanism gets its own hill. The step climbs to its own transition state, which is the peak, and comes down the other side. So when you count the peaks, you are counting the steps.
+
+Where does a step come down to? The last step comes down to the final products. Every step before it comes down into a valley, a dip between two peaks. The valleys between the first reactants and the final products are the intermediates of topic 5.7: what one step makes and a later step uses up. An intermediate is a real substance. It sits in a valley, where the atoms can stay for a while, and not on a peak. It is lower in energy than the peaks on either side of it. A peak is still what it was in topic 5.6: an arrangement of atoms that lasts only an instant.
+
+The counting follows a pattern. A mechanism with $n$ steps has $n$ peaks and $n - 1$ valleys between them, each one an intermediate stage. Two steps give two peaks with one valley between them, and that is the profile in the figure.
+
+<Figure
+  src="/figures/5-10-two-step-profile.svg"
+  alt="Energy profile with two hills. The curve rises from the reactants to a first, taller peak, falls into a valley marked intermediate, rises to a second, lower peak and falls to the products, which are lower than the reactants. Arrows mark the activation energy of step 1, from the reactants to the first peak, and of step 2, from the intermediate to the second peak."
+  caption="Two steps, two transition states, one intermediate. Each activation energy is measured from the level where its step starts."
+/>
+
+Read the curve from left to right, the way you read the single hill in topic 5.6. It starts level, at the energy of the reactants. It climbs to the first transition state and drops into the valley, where the intermediate is. Then it climbs to the second transition state and falls to the energy of the products. The horizontal axis is still reaction progress. It is not time.
+
+## Reading each step
+
+In topic 5.6 the activation energy was the energy of the transition state minus the energy of the reactants: the height of the climb. That is still true for every hill. What you have to watch is where each climb starts.
+
+Step 1 starts at the reactants. Step 2 does not. It starts from the intermediate, down in the valley, because that is where step 1 left off. So the activation energy of each step is measured from where that step starts: the reactants for step 1, and the valley just before its peak for every later step. The two arrows in the figure show this. The arrow for step 1 stands on the reactants' level. The arrow for step 2 stands on a dashed line drawn across from the bottom of the valley.
+
+The overall energy change, $\Delta E$, means what it meant before. It is the energy of the final products minus the energy of the first reactants, whatever happens in between. The peaks and valleys along the way do not enter into it.
+
+<KeyIdea>
+
+On a profile with several steps, the peaks are transition states and the valleys are intermediates. Each activation energy is the climb out of the valley before it. For step 1, that starting level is the reactants.
+
+</KeyIdea>
+
+<Worked title="Reading a two-step profile">
+
+The profile in the figure is drawn to scale from these levels. The reactants are set at zero, so a level below them is negative.
+
+| Level | Energy (kJ/mol) |
+|---|---|
+| Reactants | $0$ |
+| First peak | $80$ |
+| Intermediate | $30$ |
+| Second peak | $55$ |
+| Products | $-40$ |
+
+Find the number of steps, the activation energy of each step and the overall energy change.
+
+1. **Count the steps.** There are two peaks, so the mechanism has two steps. There is one valley between the peaks, so there is one intermediate.
+
+2. **The activation energy of step 1.** Step 1 starts at the reactants and climbs to the first peak.
+
+   $$
+   E_a = 80 - 0 = 80\ \text{kJ/mol}
+   $$
+
+3. **The activation energy of step 2.** Step 2 starts at the intermediate, not at the reactants, and climbs to the second peak.
+
+   $$
+   E_a = 55 - 30 = 25\ \text{kJ/mol}
+   $$
+
+4. **The overall energy change.** Take the final products minus the first reactants.
+
+   $$
+   \Delta E = -40 - 0 = -40\ \text{kJ/mol}
+   $$
+
+   The sign is negative, so the reaction is exothermic overall.
+
+5. **Look at each step on its own.** Step 1 goes from the reactants up to the intermediate, a change of $30 - 0 = +30\ \text{kJ/mol}$. On its own it is endothermic. Step 2 goes from the intermediate down to the products, a change of $-40 - 30 = -70\ \text{kJ/mol}$. On its own it is exothermic. Together they give the overall change:
+
+   $$
+   +30 + (-70) = -40\ \text{kJ/mol}
+   $$
+
+</Worked>
+
+<Check answer={2}>
+An energy profile has three peaks. How many valleys, each an intermediate stage, lie between the reactants and the products?
+
+- One
+- Two
+- Three
+- Four
+
+<div slot="why">Three peaks mean three steps, and there is one valley between each pair of neighboring peaks: two.</div>
+</Check>
+
+You can also work the other way, from the steps to the picture.
+
+<Check numeric="55" unit="kJ/mol">
+The reactants of a two-step reaction are at 0 kJ/mol. Step 1 has an activation energy of 60 kJ/mol and an energy change of +20 kJ/mol. Step 2 has an activation energy of 35 kJ/mol. At what energy is the second peak?
+
+<div slot="why">Step 1 ends at the intermediate, 20 kJ/mol above the reactants. Step 2 climbs 35 kJ/mol from there, so the second peak is at $20 + 35 = 55\ \text{kJ/mol}$.</div>
+</Check>
+
+## Finding the slow step
+
+Topic 5.8 gave the slowest step of a mechanism a name: the rate-limiting step, the one that holds the whole reaction up. A profile lets you pick it out.
+
+Topic 5.6 showed that, at a given temperature, a larger activation energy means a slower step, because a smaller share of the collisions has enough energy for the climb. So compare the climbs. The step with the largest activation energy is the hardest to get over, so it is the slowest. It is the rate-limiting step.
+
+In the worked example, step 1 needs 80 kJ/mol and step 2 needs 25 kJ/mol. Step 1 is the rate-limiting step.
+
+**Beyond the exam:** this rule works for the profiles you will meet in this course. When an intermediate sits far above the reactants, chemists have to look at the whole profile, not one climb at a time.
+
+The profile and the rate law are two views of the same mechanism. In topic 5.8 you met mechanisms whose first step is the slow one. On a profile, a mechanism like that has its biggest climb first, as the figure does.
+
+Try both ideas on a new profile.
+
+<Check numeric="85" unit="kJ/mol">
+On a two-step profile the reactants are at 20 kJ/mol, the first peak at 70, the intermediate at 45, the second peak at 130 and the products at 5. What is the activation energy of step 2?
+
+<div slot="why">Step 2 starts from the intermediate, so $E_a = 130 - 45 = 85\ \text{kJ/mol}$.</div>
+</Check>
+
+<Check answer={2}>
+For the profile in the last question, which step is rate limiting?
+
+- Step 1, because it comes first
+- Step 2, because its activation energy is larger
+- Neither, because the reaction is exothermic
+- Both equally
+
+<div slot="why">Step 1 needs $70 - 20 = 50\ \text{kJ/mol}$ and step 2 needs 85 kJ/mol. The bigger climb is the slower step.</div>
+</Check>
+
+<Trap>
+
+Four common mistakes on this topic:
+
+- **Measuring every $E_a$ from the first reactants.** Measure each one from the valley before its peak. Only step 1 starts at the reactants.
+- **Calling a valley a transition state.** A valley is an intermediate, which is a real substance. The transition states are the peaks.
+- **Assuming the first step is the slow one.** Compare the climbs. The rate-limiting step is the one with the largest activation energy. It need not be the first step.
+- **Thinking more steps change $\Delta E$.** The overall energy change depends only on where you start and where you finish: final products minus first reactants.
+
+</Trap>
+
+<KeyPoints>
+
+- The energy profile of a reaction with several steps has one peak for each elementary step. Each peak is the transition state of its step.
+- The valleys between the first reactants and the final products are intermediates. A mechanism with $n$ steps has $n$ peaks and $n - 1$ valleys between them.
+- The activation energy $E_a$ of a step is the energy of its peak minus the energy of the level where the step starts: the reactants for the first step, and the valley before the peak for each later step.
+- The step with the largest activation energy is the slowest step of the mechanism, the rate-limiting step.
+- The overall energy change $\Delta E$ is the energy of the final products minus the energy of the first reactants, however many steps lie between them.
+
+</KeyPoints>
+
+<PracticeNext />

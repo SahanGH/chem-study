@@ -1,0 +1,172 @@
+---
+topic: "5.11"
+minutes: 12
+summary: "How a catalyst speeds a reaction up by opening a route with a lower activation energy, and the three main ways catalysts do it."
+---
+
+A bottle of hydrogen peroxide can sit in a cupboard for a year, slowly losing its strength. Drop in a pinch of the right substance and it froths at once. Nothing was heated. Nothing was added that ends up in the products. The reaction was given a different route.
+
+## A different route
+
+Topic 5.7 gave that pinch of substance its name. It is a **catalyst**: a substance that is used in one step of a mechanism and made again, in full, in a later step, so none of it is consumed. That lesson showed you how to spot one. This one is about how a catalyst makes a reaction faster.
+
+Go back to the hill of topic 5.6. The reactants have to climb to the transition state before they can become products, and the height of that climb is the activation energy. You might guess that a catalyst gives the reactants a push over the top. It does not. A catalyst supplies no energy at all. What it does is open another path between the same reactants and the same products, one whose highest point is lower. The old path is still there. The reaction simply has an easier way around.
+
+A lower climb changes how many collisions succeed. Topic 5.5 showed that only the collisions with at least the activation energy can lead to products. Lower that energy and, at the same temperature, a far larger fraction of the collisions has enough. So the reaction goes faster. This is what topic 5.6 meant when it said a catalyst changes the rate constant $k$.
+
+Now look at what has not changed. The reactants are the same substances, at the same energy. So are the products. The overall energy change, $\Delta E$, is the gap between those two levels, so it is exactly what it was. And the new path can be walked in either direction, so the reverse reaction is sped up too.
+
+Add a catalyst and compare the two hills.
+
+<CatalystProfile />
+
+The diagram draws the catalyzed route as a single hill to keep the comparison simple. A real catalyzed route has new steps, so its profile usually has more than one peak, each of them lower than the original peak.
+
+Here is the whole comparison in one place.
+
+| Quantity | Does a catalyst change it? |
+|---|---|
+| Activation energy | Yes, lowers it |
+| Rate of the reaction | Yes, raises it |
+| Energy of the reactants and products | No |
+| Overall energy change, $\Delta E$ | No |
+| Amounts present at equilibrium | No |
+
+The last row looks ahead: equilibrium is a topic for Unit 7.
+
+<KeyIdea>
+
+A catalyst lowers the activation energy by providing a different mechanism. It does not change where the reaction starts or where it ends.
+
+</KeyIdea>
+
+<Check answer={2}>
+Which of these does a catalyst change?
+
+- The overall energy change of the reaction
+- The activation energy
+- The energy of the products
+- How much product there is in the end
+
+<div slot="why">The catalyst opens a path with a lower barrier. The reactants and the products are the same substances as before, so the energy difference between them is the same. A catalyst gets the reaction to the same end sooner; it does not change how much product that end holds.</div>
+</Check>
+
+The table says the activation energy falls. Which one, forward or reverse? Both, and by the same amount. The forward climb starts at the reactants and the reverse climb starts at the products, but they end at the same peak. Neither starting level moves. So if the catalyzed path has a peak that is lower by some number of kilojoules per mole, both climbs get shorter by exactly that number.
+
+<Worked title="Both directions get the same help">
+
+Without a catalyst, a reaction has a forward activation energy of 120 kJ/mol and releases 50 kJ/mol. A catalyst lowers the forward activation energy to 80 kJ/mol. Find the reverse activation energy with and without the catalyst. (These are the numbers the diagram starts with.)
+
+1. **The reverse activation energy without the catalyst.** The reaction releases energy, so the products sit 50 kJ/mol below the reactants. The climb back from the products to the peak is that much longer than the forward climb.
+
+   $$
+   E_{a,\text{rev}} = 120 + 50 = 170\ \text{kJ/mol}
+   $$
+
+2. **The overall energy change with the catalyst.** The catalyzed path starts at the same reactants and ends at the same products. So the reaction still releases 50 kJ/mol.
+
+3. **The reverse activation energy with the catalyst.** Do the same sum with the new forward climb.
+
+   $$
+   E_{a,\text{rev}} = 80 + 50 = 130\ \text{kJ/mol}
+   $$
+
+4. **Compare the two directions.** The forward barrier fell by $120 - 80 = 40\ \text{kJ/mol}$. The reverse barrier fell by $170 - 130 = 40\ \text{kJ/mol}$.
+
+Both barriers fell by the same 40 kJ/mol. A catalyst cannot help one direction without helping the other.
+
+</Worked>
+
+<Check numeric="105" unit="kJ/mol">
+A catalyst lowers a reaction's forward activation energy from 95 kJ/mol to 60 kJ/mol. Without the catalyst the reverse activation energy is 140 kJ/mol. What is it with the catalyst?
+
+<div slot="why">The peak of the catalyzed path is $95 - 60 = 35\ \text{kJ/mol}$ lower than the old one, and both directions climb to it. So the reverse barrier is $140 - 35 = 105\ \text{kJ/mol}$.</div>
+</Check>
+
+## Used, then returned
+
+"Not used up" does not mean "not involved". A catalyst takes part in the reaction. It has to, because the new path runs through it.
+
+Look again at the breakdown of hydrogen peroxide from topic 5.7, with iodide ion, $\ce{I-}$, dissolved in the solution. The first step is the slow one, the rate-limiting step.
+
+| Step | Equation |
+|---|---|
+| Step 1 (slow) | $\ce{H2O2 + I- -> H2O + IO-}$ |
+| Step 2 (fast) | $\ce{H2O2 + IO- -> H2O + O2 + I-}$ |
+
+Follow the iodide. Step 1 uses one $\ce{I-}$. Step 2 makes one $\ce{I-}$. Every ion that goes in comes back out, so the amount of iodide at the end is the amount at the start. That is why a pinch is enough: the same ions do the job again and again.
+
+Being returned does not keep the catalyst out of the rate law. Topic 5.8 showed that when the slow step comes first, its rate law is the rate law of the reaction. One $\ce{H2O2}$ and one $\ce{I-}$ collide in step 1, so:
+
+$$
+\text{rate} = k[\ce{H2O2}][\ce{I-}]
+$$
+
+The catalyst is used in the slow step, so its concentration can appear in the rate law, even though it is nowhere in the overall equation. Dissolve more iodide and the peroxide breaks down faster.
+
+## Three ways catalysts work
+
+Every catalyst opens a new path. Catalysts differ in how they get hold of the reactants. You need to know three ways.
+
+### Binding the reactants (enzymes)
+
+An **enzyme** is a protein that works as a catalyst. Your cells are full of them. Each enzyme has a pocket, called its **active site**, shaped to hold its reactant.
+
+A reactant held in that pocket is easier to change, for two reasons. It is turned the right way around, so the orientation test of topic 5.5 is already passed. And the pocket strains its bonds toward the arrangement of the transition state, so less energy is needed to get there. Topic 5.5 called the orientation requirement fixed, and for a given step it is. The enzyme gets around it with a new step and new particles.
+
+The enzyme with its reactant bound is a new intermediate. It forms in one step and is used up in a later one, when the product lets go and the enzyme is free to hold the next reactant.
+
+### Acid–base catalysis
+
+Here the catalyst works by moving a proton, which is a hydrogen ion, $\ce{H+}$. In **acid–base catalysis** an acid gives a proton to a reactant, or a base takes one away.
+
+Take the acid. The proton does not just sit next to the reactant. It forms a covalent bond to it. That makes a new intermediate, the reactant with a proton attached, and this intermediate reacts more easily than the reactant did. In a later step the proton is handed back. The acid ends as it began, which is what makes it a catalyst.
+
+### Surface catalysis
+
+In **surface catalysis** the catalyst is a solid, often a metal, and the reaction happens on its surface. Reactant molecules bind to the surface. Being bound weakens the bonds inside them and holds them close together, so they react there. Then the products leave, and that patch of surface is free again.
+
+Hydrogen and ethene are an example. The two gases react slowly on their own. On platinum they quickly give ethane:
+
+$$
+\ce{H2(g) + C2H4(g) -> C2H6(g)}
+$$
+
+The catalytic converter of a car, which you met in topic 5.1, works the same way. Exhaust gases react on the surface of the metals inside it.
+
+The three ways look different, but each one does the same thing. The catalyst creates new intermediates and new elementary steps. That is to say, it creates a new mechanism.
+
+<Check answer={3}>
+Hydrogen and ethene react quickly on a piece of platinum, where both gases first stick to the metal. What kind of catalysis is this?
+
+- Enzyme catalysis
+- Acid–base catalysis
+- Surface catalysis
+- It is not catalysis, because platinum is a solid
+
+<div slot="why">The reactants bind to the surface of a solid, react there and leave. The platinum is not used up.</div>
+</Check>
+
+<Trap>
+
+Five common mistakes on this topic:
+
+- **Saying a catalyst adds energy.** It supplies nothing. It provides a path with a lower barrier, so the energy the collisions already have is enough more often.
+- **Saying a catalyst is not involved.** It takes part. It is used in one step and made again in full in a later one.
+- **Expecting more product from a catalyst.** A catalyzed reaction gets to the same end faster. It does not get to a different end.
+- **Thinking a catalyst helps the forward reaction and not the reverse.** It lowers the barrier for both directions by the same amount.
+- **Mixing up a catalyst and an intermediate.** Topic 5.7 has the rule. A catalyst is used and then made again. An intermediate is made and then used up.
+
+</Trap>
+
+<KeyPoints>
+
+- A catalyst speeds a reaction up by providing a different mechanism with a lower activation energy. It does not add energy.
+- A catalyst is used in one step and made again in full in a later one, so it is not consumed. Its concentration can still appear in the rate law.
+- A catalyst does not change the energy of the reactants, the energy of the products or the overall energy change. It does not change how much product there is in the end, only how fast the reaction gets there.
+- A catalyst lowers the forward and reverse activation energies by the same amount, so it speeds up both directions.
+- Enzymes, acid–base catalysts and surfaces each work by creating new intermediates: a reactant bound in an enzyme's active site, a reactant that has gained or lost a proton, or a reactant bound to a surface.
+
+</KeyPoints>
+
+<PracticeNext />
