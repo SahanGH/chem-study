@@ -46,18 +46,12 @@
      <details> hides its content through ::details-content, and hiding the
      summary does not open it, so that content is made visible directly.
      ::details-content is recent; the cs-check script also opens every
-     <details> on beforeprint for browsers that lack it. The last rule undoes
-     the enhanced-mode "display: none" on .check-answer; its extra
-     .check-why > step makes it more specific, so it wins whatever the
-     stylesheet order. */
+     <details> on beforeprint for browsers that lack it. */
   .check-why > summary {
     display: none;
   }
   .check-why::details-content {
     content-visibility: visible;
-    display: block;
-  }
-  cs-check.is-enhanced .check-why > .check-answer {
     display: block;
   }
   [data-part] {

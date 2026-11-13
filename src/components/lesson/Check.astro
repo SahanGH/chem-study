@@ -1,17 +1,9 @@
 ---
-interface Props {
-  /** 1-based number of the correct option in the list. */
-  answer?: number;
-  /** The correct value, for a question answered with a number. */
-  numeric?: number;
-  /** Unit shown beside the numeric input, for example "M/s". */
-  unit?: string;
-}
+import { shownAnswer, type CheckAnswer } from '../../lib/check';
+
+type Props = CheckAnswer;
 const { answer, numeric, unit } = Astro.props;
-if ((answer === undefined) === (numeric === undefined)) {
-  throw new Error('A Check needs exactly one of `answer` (option number) or `numeric` (a value).');
-}
-const shown = numeric !== undefined ? `${numeric}${unit ? ` ${unit}` : ''}` : `option ${answer}`;
+const shown = shownAnswer({ answer, numeric, unit });
 ---
 
 <cs-check data-part="check" data-answer={answer} data-numeric={numeric} data-unit={unit}>
@@ -26,7 +18,7 @@ const shown = numeric !== undefined ? `${numeric}${unit ? ` ${unit}` : ''}` : `o
 </cs-check>
 
 <script>
-  import { gradeChoice, gradeNumeric } from '../../lib/check';
+  import { gradeChoice, gradeNumeric, parseNumber } from '../../lib/check';
   import { browserProgress } from '../../lib/progress';
 
   /**
@@ -71,12 +63,15 @@ const shown = numeric !== undefined ? `${numeric}${unit ? ` ${unit}` : ''}` : `o
       };
 
       if (this.dataset.numeric !== undefined) {
-        this.enhanceNumeric(body, Number(this.dataset.numeric), say, finish);
+        // Read the same way a typed answer is, so "0.020" and "2.5e-3" both work.
+        const value = parseNumber(this.dataset.numeric);
+        if (value === null) throw new Error(`cs-check has a numeric answer that is not a number: ${this.dataset.numeric}`);
+        this.enhanceNumeric(body, value, say, finish);
       } else {
         this.enhanceChoice(body, Number(this.dataset.answer), say, finish);
       }
-      // Only now hide the "Show answer" disclosure: if anything above threw,
-      // the student still has the no-JavaScript version.
+      // Marks a question that can be graded. "Show answer" stays in reach
+      // either way: a student who is stuck must be able to see the answer.
       this.classList.add('is-enhanced');
     }
 
@@ -133,9 +128,12 @@ const shown = numeric !== undefined ? `${numeric}${unit ? ` ${unit}` : ''}` : `o
       const label = document.createElement('label');
       label.textContent = 'Your answer ';
       const input = document.createElement('input');
+      // A plain text field, so a phone shows its full keyboard: the decimal
+      // keypad on an iPhone has no minus sign and no "e" for 2.5e-3.
       input.type = 'text';
-      input.inputMode = 'decimal';
       input.autocomplete = 'off';
+      input.setAttribute('autocapitalize', 'off');
+      input.spellcheck = false;
       label.append(input);
       if (this.dataset.unit) label.append(` ${this.dataset.unit}`);
       const submit = document.createElement('button');

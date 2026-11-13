@@ -98,6 +98,72 @@ test('a numeric check rejects text that is not a number', async ({ page }) => {
   await expect(numeric.locator('.check-feedback')).toContainText('Enter a number');
 });
 
+test.describe('giving up on a question', () => {
+  test('a stuck student can show the answer to a numeric question, written as the lesson wrote it', async ({
+    page,
+  }) => {
+    await page.goto(LESSON);
+    const numeric = page.locator('cs-check[data-numeric]').first();
+    await numeric.locator('input').fill('0.5');
+    await numeric.locator('input').press('Enter');
+    await expect(numeric.locator('.check-feedback')).toContainText('Not quite');
+
+    await numeric.getByText('Show answer').click();
+
+    await expect(numeric.locator('.check-answer')).toBeVisible();
+    await expect(numeric.locator('.check-answer')).toHaveText('Answer: 0.020 M/s');
+    await expect(numeric.locator('.check-why > div')).toBeVisible();
+  });
+
+  test('a choice question offers the same way out', async ({ page }) => {
+    await page.goto(LESSON);
+    const first = page.locator('cs-check').first();
+
+    await first.getByText('Show answer').click();
+
+    await expect(first.locator('.check-answer')).toHaveText('Answer: option 3');
+    await expect(first.locator('.check-answer')).toBeVisible();
+  });
+
+  test('showing every answer does not complete the topic', async ({ page }) => {
+    await page.goto(LESSON);
+    const checks = page.locator('cs-check');
+    const count = await checks.count();
+    expect(count).toBeGreaterThanOrEqual(3);
+    for (let index = 0; index < count; index += 1) {
+      await checks.nth(index).getByText('Show answer').click();
+      await expect(checks.nth(index).locator('.check-answer')).toBeVisible();
+    }
+
+    await expect(page.locator('[data-complete]')).toBeHidden();
+    // The badge is hidden until told otherwise, so look at what was stored too.
+    const stored = await page.evaluate(() => localStorage.getItem('chemstudy:progress:v1'));
+    expect(JSON.parse(stored ?? '{}')).toMatchObject({ answered: {}, done: [] });
+  });
+
+  test('a question can still be answered after its answer was shown', async ({ page }) => {
+    await page.goto(LESSON);
+    const numeric = page.locator('cs-check[data-numeric]').first();
+    await numeric.getByText('Show answer').click();
+
+    await numeric.locator('input').fill('0.020');
+    await numeric.locator('input').press('Enter');
+
+    await expect(numeric.locator('.check-feedback')).toHaveText('Correct.');
+  });
+});
+
+test('the numeric input brings up the full keyboard, so a minus sign and an exponent can be typed', async ({
+  page,
+}) => {
+  await page.goto(LESSON);
+  const input = page.locator('cs-check[data-numeric] input').first();
+
+  // The decimal keypad on an iPhone has no minus sign and no letter e.
+  await expect(input).not.toHaveAttribute('inputmode');
+  await expect(input).toHaveAttribute('autocapitalize', 'off');
+});
+
 // Playwright's print emulation applies the @media print CSS but does not fire
 // beforeprint, so these tests prove the CSS path only. The script path has its
 // own test below.

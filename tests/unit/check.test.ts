@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { gradeChoice, gradeNumeric, parseNumber } from '../../src/lib/check';
+import { gradeChoice, gradeNumeric, parseNumber, shownAnswer, type CheckAnswer } from '../../src/lib/check';
 
 describe('gradeChoice', () => {
   it('accepts the option whose 1-based number matches the answer', () => {
@@ -95,5 +95,46 @@ describe('gradeNumeric', () => {
   it('compares against zero with an absolute tolerance', () => {
     expect(gradeNumeric('0', 0)).toBe('correct');
     expect(gradeNumeric('0.5', 0)).toBe('incorrect');
+  });
+});
+
+describe('shownAnswer', () => {
+  it('names the correct option of a choice question', () => {
+    expect(shownAnswer({ answer: 3 })).toBe('option 3');
+  });
+
+  it('keeps the trailing zeros of a numeric answer written as text', () => {
+    expect(shownAnswer({ numeric: '0.020' })).toBe('0.020');
+  });
+
+  it('puts the unit after a numeric answer', () => {
+    expect(shownAnswer({ numeric: '0.020', unit: 'M/s' })).toBe('0.020 M/s');
+  });
+
+  it('throws when the numeric answer arrives as a number, which would lose its trailing zeros', () => {
+    // MDX is not type-checked, so a lesson can pass numeric={0.020}.
+    const fromMdx: unknown = { numeric: 0.02 };
+
+    expect(() => shownAnswer(fromMdx as CheckAnswer)).toThrow('as text');
+  });
+
+  it('throws when a choice question is given a unit', () => {
+    expect(() => shownAnswer({ answer: 3, unit: 'M' })).toThrow('cannot have a `unit`');
+  });
+
+  it('throws when a check has neither an option nor a value', () => {
+    expect(() => shownAnswer({})).toThrow('exactly one');
+  });
+
+  it('throws when a check has both an option and a value', () => {
+    expect(() => shownAnswer({ answer: 1, numeric: '2' })).toThrow('exactly one');
+  });
+
+  it.each(['', 'about two', '0.020 M/s', '1/2'])('throws when the numeric answer is not a number: %j', (text) => {
+    expect(() => shownAnswer({ numeric: text })).toThrow('must be a number');
+  });
+
+  it('throws when the numeric answer is too large to be a finite number', () => {
+    expect(() => shownAnswer({ numeric: '1e999' })).toThrow('must be a number');
   });
 });

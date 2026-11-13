@@ -216,8 +216,3 @@ cs-check > .check-body {
 .check-why > * + * {
   margin-top: 0.5em;
 }
-/* With JavaScript the answer opens by itself once the question is right. */
-cs-check.is-enhanced .check-why > summary,
-cs-check.is-enhanced .check-answer {
-  display: none;
-}
