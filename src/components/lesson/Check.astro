@@ -34,11 +34,19 @@ const shown = numeric !== undefined ? `${numeric}${unit ? ` ${unit}` : ''}` : `o
    * is aria-hidden and a button takes no name from its MathML child, so a
    * math-only option would be nameless. The MathML text is read instead, minus
    * the TeX source KaTeX keeps in <annotation>.
+   *
+   * Spacing-only <mtext> elements are dropped too: KaTeX draws a thin space
+   * (\,) as a margin in the visible HTML, so the visible text reads "M−1s−1"
+   * while the MathML says "M−1 s−1". A name that differs from the visible
+   * text by that space fails WCAG 2.5.3 (Label in Name) for voice control.
    */
   function readableText(element: Element): string {
     const copy = element.cloneNode(true);
     if (!(copy instanceof Element)) throw new Error('Cloning an element did not give an element.');
     for (const hidden of copy.querySelectorAll('annotation, [aria-hidden="true"]')) hidden.remove();
+    for (const spacing of copy.querySelectorAll('mtext')) {
+      if (!(spacing.textContent ?? '').trim()) spacing.remove();
+    }
     return (copy.textContent ?? '').replace(/\s+/g, ' ').trim();
   }
 

@@ -118,6 +118,19 @@ main,
   font-weight: 500;
   text-decoration: none;
 }
+/* Words for screen readers only. The brand link says "home" this way rather
+   than with an aria-label, because a label must contain all the visible text
+   (WCAG 2.5.3) and the tile's "Cs" counts as visible text. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 .logo-tile text {
   fill: currentColor;
   font-family: var(--font-head);
