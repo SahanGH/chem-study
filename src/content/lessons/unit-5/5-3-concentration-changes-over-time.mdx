@@ -1,0 +1,168 @@
+---
+topic: "5.3"
+minutes: 15
+summary: How to read the order of a reaction from the way a concentration falls over time, and what half-life means for a first-order reaction.
+---
+
+Start a reaction, then just watch. Every few seconds, write down how much of one reactant is left. In topic 5.2 you needed several runs to find the order of a reaction. Here one run is enough, because the order shows up in the *shape* of the fall.
+
+## Three orders, three shapes
+
+Call the reactant you are following A. If the reaction has a second reactant, the experiment is set up with that reactant in large excess, so its concentration hardly changes and only the fall of A shows. The $k$ you then get from the plot has that constant concentration folded into it.
+
+How $[\ce{A}]$ falls depends on the order in A. A zero-order reaction does not care how much A is left, so $[\ce{A}]$ drops by the same amount every second. A first-order or second-order reaction slows down as A runs out, so its curve bends and flattens. Even then, something changes by the same amount every second. You just have to know what to look at.
+
+In the equations below, $[\ce{A}]_0$ is the concentration at the start and $[\ce{A}]_t$ is the concentration at time $t$.
+
+| Order in A | What falls steadily | Equation |
+|---|---|---|
+| 0 | $[\ce{A}]$ itself | $[\ce{A}]_t = [\ce{A}]_0 - kt$ |
+| 1 | $\ln[\ce{A}]$ | $\ln[\ce{A}]_t = \ln[\ce{A}]_0 - kt$ |
+| 2 | nothing, but $1/[\ce{A}]$ rises steadily | $\frac{1}{[\ce{A}]_t} = \frac{1}{[\ce{A}]_0} + kt$ |
+
+All three equations are on the AP equation sheet. The sheet writes them with both concentrations on the left side, but they are the same equations.
+
+Each one is the equation of a straight line. Put time on the horizontal axis and the quantity on the left on the vertical axis. The number multiplying $t$ is then the slope.
+
+| Order in A | Straight-line plot | Slope |
+|---|---|---|
+| 0 | $[\ce{A}]$ against $t$ | $-k$ |
+| 1 | $\ln[\ce{A}]$ against $t$ | $-k$ |
+| 2 | $1/[\ce{A}]$ against $t$ | $+k$ |
+
+Choose an order and see which plot straightens out.
+
+<ConcentrationPlots />
+
+<KeyIdea>
+
+Make all three plots from your data. The one that comes out straight tells you the order, and its slope gives you $k$.
+
+</KeyIdea>
+
+<Check answer={3}>
+For a reaction, a plot of $1/[\ce{A}]$ against time is a straight line. What is the order in A?
+
+- 0
+- 1
+- 2
+- it cannot be told from one plot
+
+<div slot="why">Only a second-order reaction gives a straight line when $1/[\ce{A}]$ is plotted against time. For zero order or first order, that plot is a curve.</div>
+</Check>
+
+## Half-life
+
+The **half-life**, written $t_{1/2}$, is the time it takes for the concentration of a reactant to fall to half of what it was.
+
+A first-order reaction has a half-life with a special property: it is the same no matter how much is left. Going from 0.80 M to 0.40 M takes exactly as long as going from 0.10 M to 0.050 M. The half-life depends only on the rate constant:
+
+$$
+t_{1/2} = \frac{0.693}{k}
+$$
+
+The 0.693 is $\ln 2$, rounded.
+
+Each half-life cuts what is left in half again. So after $n$ half-lives, the fraction left is $\left(\tfrac{1}{2}\right)^n$. One half-life leaves 1/2. Two leave 1/4.
+
+For zero-order and second-order reactions, the half-life changes as the reaction runs. That makes a constant half-life a sign of first order all by itself.
+
+<Worked title="Order and k from one run">
+
+The reaction $\ce{A -> products}$ is followed for 300 s.
+
+| Time (s) | $[\ce{A}]$ (M) |
+|---|---|
+| 0 | 0.800 |
+| 100 | 0.400 |
+| 200 | 0.200 |
+| 300 | 0.100 |
+
+Find the order in A and the value of $k$.
+
+1. **Look at how the concentration falls.** It halves every 100 s, whatever it starts from: 0.800 M to 0.400 M, then 0.400 M to 0.200 M, then 0.200 M to 0.100 M. That is a constant half-life of 100 s, so the reaction is first order.
+
+2. **Confirm with the plot.** Take the natural log of each concentration. In order, $\ln[\ce{A}]$ is $-0.223$, $-0.916$, $-1.609$ and $-2.303$. It falls by 0.693 every 100 s. (Subtract the last pair and you get 0.694. That is only rounding.) Equal drops in equal times make a straight line, which is what first order predicts.
+
+3. **Find $k$** from the half-life.
+
+   $$
+   k = \frac{0.693}{t_{1/2}} = \frac{0.693}{100\ \text{s}} = 6.93 \times 10^{-3}\ \text{s}^{-1}
+   $$
+
+The line in step 2 drops 0.693 for every 100 s, so its slope is $-6.93 \times 10^{-3}\ \text{s}^{-1}$. That is $-k$. Both routes give the same rate constant.
+
+</Worked>
+
+<Check numeric="30.0" unit="min">
+A first-order reaction has $k = 0.0231\ \text{min}^{-1}$. What is its half-life?
+
+<div slot="why">$t_{1/2} = \dfrac{0.693}{0.0231\ \text{min}^{-1}} = 30.0\ \text{min}$.</div>
+</Check>
+
+The three equations are not only for drawing plots. If you know $k$ and the starting concentration, you can work out the concentration at any later time.
+
+<Worked title="A concentration at a later time">
+
+A second-order reaction has $k = 0.040\ \text{M}^{-1}\,\text{s}^{-1}$ and starts at $[\ce{A}]_0 = 0.50\ \text{M}$. Find $[\ce{A}]$ after 50 s.
+
+1. **Pick the equation that matches the order.** The reaction is second order, so use the one with $1/[\ce{A}]$.
+
+2. **Put in the numbers.**
+
+   $$
+   \begin{aligned}
+   \frac{1}{[\ce{A}]_t} &= \frac{1}{0.50\ \text{M}} + (0.040\ \text{M}^{-1}\,\text{s}^{-1})(50\ \text{s}) \\
+   &= 2.0\ \text{M}^{-1} + 2.0\ \text{M}^{-1} = 4.0\ \text{M}^{-1}
+   \end{aligned}
+   $$
+
+3. **Turn it over.** The equation gives you $1/[\ce{A}]$, not $[\ce{A}]$. Take the reciprocal: $[\ce{A}]_t = 0.25\ \text{M}$.
+
+Check that the answer makes sense. The concentration started at 0.50 M and A is being used up, so 0.25 M is believable. An answer above 0.50 M would mean you forgot the last step.
+
+</Worked>
+
+<Check numeric="0.40" unit="M">
+A zero-order reaction starts at $[\ce{A}]_0 = 0.60\ \text{M}$ with $k = 0.020\ \text{M/s}$. What is $[\ce{A}]$ after 10 s?
+
+<div slot="why">$[\ce{A}] = 0.60\ \text{M} - (0.020\ \text{M/s})(10\ \text{s}) = 0.40\ \text{M}$.</div>
+</Check>
+
+## Radioactive decay
+
+Every radioactive decay is a first-order process. So each radioactive isotope has one fixed half-life, whether the sample is large or small, and that is why half-life is the number quoted for it.
+
+<Check answer={3}>
+A radioactive isotope has a half-life of 8.0 days. What fraction of the isotope is left after 24 days?
+
+- 1/2
+- 1/3
+- 1/8
+- 1/24
+
+<div slot="why">24 days is three half-lives, and $\left(\tfrac{1}{2}\right)^3 = \tfrac{1}{8}$.</div>
+</Check>
+
+<Trap>
+
+Four common mistakes on this topic:
+
+- **Using $t_{1/2} = 0.693/k$ for any order.** It holds for first order only.
+- **Getting the sign of the slope wrong.** The $[\ce{A}]$ and $\ln[\ce{A}]$ plots slope down, with slope $-k$. The $1/[\ce{A}]$ plot slopes up, with slope $+k$.
+- **Judging the order by eye from the curve of $[\ce{A}]$ against time.** First-order and second-order curves both bend and look alike. Make the $\ln[\ce{A}]$ and $1/[\ce{A}]$ plots and see which one is straight.
+- **Using log base 10.** The first-order equation uses the natural log, ln.
+
+</Trap>
+
+<KeyPoints>
+
+- The plot that is a straight line gives the order: $[\ce{A}]$ against time for zero order (slope $-k$), $\ln[\ce{A}]$ against time for first order (slope $-k$), $1/[\ce{A}]$ against time for second order (slope $+k$).
+- The equations are $[\ce{A}]_t = [\ce{A}]_0 - kt$ for zero order, $\ln[\ce{A}]_t = \ln[\ce{A}]_0 - kt$ for first order and $\frac{1}{[\ce{A}]_t} = \frac{1}{[\ce{A}]_0} + kt$ for second order.
+- The half-life of a first-order reaction is constant and equals $0.693/k$.
+- For a first-order reaction, after $n$ half-lives the fraction of reactant left is $\left(\tfrac{1}{2}\right)^n$.
+- Radioactive decay is first order, so every radioactive isotope has one fixed half-life.
+
+</KeyPoints>
+
+<PracticeNext />

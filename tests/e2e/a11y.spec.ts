@@ -60,6 +60,59 @@ test('an equation is keyboard-focusable exactly while it is wider than the scree
   await expect(focusable).toHaveCount(wideCount);
 });
 
+test.describe('a table in a lesson', () => {
+  const WITH_TABLES = '/unit-5-kinetics/5-3-concentration-changes-over-time/';
+
+  test('stays out of the tab order while it fits', async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 900 });
+    await page.goto(WITH_TABLES);
+    await page.evaluate(() => document.fonts.ready);
+    const table = page.locator('article table').first();
+
+    await expect(table).not.toHaveAttribute('tabindex');
+  });
+
+  test('can be reached and scrolled from the keyboard once it is too wide for its space', async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 900 });
+    await page.goto(WITH_TABLES);
+    await page.evaluate(() => document.fonts.ready);
+    const table = page.locator('article table').first();
+
+    // Squeeze it until it must scroll, whatever the lesson's wording is today.
+    await table.evaluate((element) => {
+      if (!(element instanceof HTMLElement)) throw new Error('The table is not an HTML element.');
+      element.style.maxWidth = '9rem';
+    });
+
+    await expect(table).toHaveAttribute('tabindex', '0');
+    await expect(table).toHaveAttribute('aria-label', 'Table, scrolls sideways');
+    await table.focus();
+    await expect(table).toBeFocused();
+  });
+});
+
+test('on a phone, an equation in a numbered step starts left of the step, and one in a question does not move', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 800 });
+  await page.goto('/unit-5-kinetics/5-1-reaction-rates/');
+  const inStep = page.locator('[data-part="worked"] li .katex-display').first();
+  await expect(inStep).toHaveCSS('margin-left', /^-\d/);
+
+  // The same markup anywhere else in the lesson must be left alone.
+  const elsewhere = await page.evaluate(() => {
+    const item = document.createElement('li');
+    const equation = document.createElement('span');
+    equation.className = 'katex-display';
+    item.append(equation);
+    const list = document.createElement('ul');
+    list.append(item);
+    document.querySelector('article.prose')?.append(list);
+    return getComputedStyle(equation).marginLeft;
+  });
+  expect(elsewhere).toBe('0px');
+});
+
 const LESSON = '/unit-5-kinetics/5-2-rate-law/';
 
 test.describe('display equations at phone and desktop widths', () => {

@@ -1,0 +1,159 @@
+---
+topic: "5.4"
+minutes: 8
+summary: What an elementary reaction is, and why its rate law, unlike most, can be written straight from its equation.
+---
+
+Topic 5.2 drew a hard line: you cannot read a rate law off a balanced equation. You have to measure it. There is one kind of reaction where you can read it off, and the reason is simple. Its equation is not a summary. It is a description of a single event.
+
+## One event
+
+Most balanced equations are summaries. They tell you what was used up and what was made, and they skip everything that happened along the way.
+
+An **elementary reaction** (also called an elementary step) is a reaction that happens in a single step, exactly as written. These particles meet, and those come out. There is nothing in between to skip.
+
+Because a step is one event, you can count the particles that take part in it. The number of reactant particles in an elementary step is its **molecularity**. A particle here can be a molecule, an atom or an ion. Each count has a name:
+
+- One particle is **unimolecular**. A single particle breaks apart or rearranges on its own.
+- Two particles is **bimolecular**. Two particles collide.
+- Three particles is **termolecular**. Three particles collide at the same instant.
+
+<Figure
+  src="/figures/5-4-molecularity.svg"
+  alt="Three drawings. In the unimolecular step a single particle breaks apart. In the bimolecular step two particles collide. In the termolecular step three particles collide at the same instant, which is rare."
+  caption="The molecularity of a step is the number of reactant particles in it."
+/>
+
+## Here the coefficients do count
+
+Picture a step in which one A collides with one B. The step can happen only when the two meet. Put twice as many A particles into the same space and each B meets an A twice as often. Double B instead and the same thing happens. How often the particles meet is proportional to each concentration, so the rate of the step is too:
+
+$$
+\text{rate} = k[\ce{A}][\ce{B}]
+$$
+
+If the step needs two A particles, $[\ce{A}]$ counts once for each of them, which gives $[\ce{A}]^2$. If the step has only one particle, that particle does not have to find a partner. A fixed fraction of the particles reacts each second, so the rate is proportional to $[\ce{A}]$ alone.
+
+Look at what happened each time. Every reactant particle in the step put its concentration into the rate law once. So for an elementary step, the orders equal the coefficients.
+
+| Elementary step | Molecularity | Rate law |
+|---|---|---|
+| $\ce{A -> products}$ | unimolecular | $k[\ce{A}]$ |
+| $\ce{A + B -> products}$ | bimolecular | $k[\ce{A}][\ce{B}]$ |
+| $\ce{2A -> products}$ | bimolecular | $k[\ce{A}]^2$ |
+| $\ce{2A + B -> products}$ | termolecular | $k[\ce{A}]^2[\ce{B}]$ |
+
+<KeyIdea>
+
+For an elementary step, the exponents in the rate law are the coefficients in the equation. For any other equation there is no such guarantee.
+
+</KeyIdea>
+
+This does not take back anything from topic 5.2. An equation for a whole reaction is still a summary, and its orders still come from experiment. Use the shortcut only when you are told that the equation is an elementary step, or it is given as one step of a mechanism.
+
+<Worked title="Rate laws for three elementary steps">
+
+Each equation below is an elementary step. Give its molecularity and write its rate law.
+
+1. **One particle.**
+
+   $$
+   \ce{O3(g) -> O2(g) + O(g)}
+   $$
+
+   A single ozone molecule breaks apart on its own. One reactant particle makes the step unimolecular, and its concentration appears once:
+
+   $$
+   \text{rate} = k[\ce{O3}]
+   $$
+
+2. **Two different particles.**
+
+   $$
+   \ce{NO2(g) + F2(g) -> NO2F(g) + F(g)}
+   $$
+
+   One $\ce{NO2}$ collides with one $\ce{F2}$. Two reactant particles make the step bimolecular, and each concentration appears once:
+
+   $$
+   \text{rate} = k[\ce{NO2}][\ce{F2}]
+   $$
+
+3. **Two particles of the same kind.**
+
+   $$
+   \ce{2NO2(g) -> NO3(g) + NO(g)}
+   $$
+
+   Two $\ce{NO2}$ molecules collide. That is still two reactant particles, so the step is bimolecular. The coefficient 2 becomes the exponent:
+
+   $$
+   \text{rate} = k[\ce{NO2}]^2
+   $$
+
+In all three you looked only at the left side of the arrow. The products never came into it.
+
+</Worked>
+
+<Check answer={3}>
+The elementary step $\ce{Cl(g) + O3(g) -> ClO(g) + O2(g)}$ has which rate law?
+
+- $\text{rate} = k[\ce{Cl}]$
+- $\text{rate} = k[\ce{O3}]$
+- $\text{rate} = k[\ce{Cl}][\ce{O3}]$
+- $\text{rate} = k[\ce{ClO}][\ce{O2}]$
+
+<div slot="why">One Cl atom and one $\ce{O3}$ molecule collide, so each concentration appears once. Products never appear in the rate law of a step.</div>
+</Check>
+
+<Check answer={2}>
+What is the molecularity of the elementary step $\ce{2NO(g) -> N2O2(g)}$?
+
+- Unimolecular
+- Bimolecular
+- Termolecular
+- It depends on the temperature
+
+<div slot="why">Two NO particles collide, so the step is bimolecular. That they are the same substance does not matter.</div>
+</Check>
+
+## Why three at once is rare
+
+Two people bumping into each other in a crowded hallway is common. Three people all reaching the same spot at the same instant is not.
+
+Particles work the same way. Two of them meeting happens all the time. A third arriving at that spot in that instant, with enough energy and facing the right way, is far less likely. So termolecular steps are rare, and steps with four or more particles are not seen.
+
+That has a consequence. A balanced equation with four or more particles on the left cannot be a single event. The reaction must happen in several steps, one after another, and that is where topic 5.7 picks up. The reverse is not safe: $\ce{NO2 + CO}$ from topic 5.2 has only two particles on the left and still is not one step.
+
+<Check answer={2}>
+Which statement is true?
+
+- The rate law of any balanced equation can be written from its coefficients.
+- The rate law of an elementary step can be written from its coefficients.
+- Termolecular steps cannot happen.
+- The molecularity of a step can be a fraction.
+
+<div slot="why">Only an elementary step describes a single event, so only there can you count on the coefficients giving the orders. Termolecular steps are rare, not impossible, and a molecularity counts particles, so it is a whole number.</div>
+</Check>
+
+<Trap>
+
+Four mistakes to watch for on this topic:
+
+- **Using this rule on an overall equation.** Most balanced equations are summaries of several steps. Their orders come from experiment, as in topic 5.2.
+- **Calling a termolecular step impossible.** It is rare. Rare is not the same as never.
+- **Counting products.** Molecularity counts the reactant particles of the step only.
+- **Reading a match as proof.** A rate law that matches the coefficients does not prove the reaction is one step. The reaction of NO with $\ce{O2}$ in topic 5.2 matches and still happens in steps.
+
+</Trap>
+
+<KeyPoints>
+
+- An elementary reaction happens in one step, exactly as its equation is written.
+- The molecularity of an elementary step is the number of reactant particles in it: one is unimolecular, two is bimolecular, three is termolecular.
+- For an elementary step, the orders in the rate law equal the coefficients in the equation. This is not guaranteed for an overall equation.
+- Steps in which three particles collide at once are rare.
+
+</KeyPoints>
+
+<PracticeNext />

@@ -1019,6 +1019,13 @@ Branch: `topic/unit-5-rates`, from an up-to-date `main` after pull request 1 is 
 
 ### Task 3: Lesson 5.3, Concentration Changes over Time, with the three-plot diagram
 
+> **Group B done 2026-11-13, with changes after fact-check and review.** The repository is the record of what shipped. What later tasks should know:
+>
+> - **The three-plot diagram** measures [A] and 1/[A] up from zero (as first written, every [A] curve ended on the time axis, as if A had run out), writes its slopes from the rate constants it draws with, and says where its plots start and how long they run.
+> - **Phone layout** (`src/styles/prose.css`): on screens up to 30rem wide, display math is slightly smaller and, inside a worked example's numbered step, starts at the card's edge. An equation in a table cell stays on one line. A table that has to scroll is made reachable from the keyboard by `src/scripts/scrolling-equations.ts`.
+> - **When looking at a new lesson on a phone,** check that no display equation is cut off. A long one can be split over two lines with `\begin{aligned} ... \\ ... \end{aligned}`, as lesson 5.1 does.
+> - **Lesson wording the fact-checks corrected, worth avoiding in later lessons:** using "rate" for both one substance's rate and the rate of the reaction; saying a rule holds "only" for elementary steps when it is only *guaranteed* there; saying a rate constant depends on temperature "and nothing else"; a Trap box that opens by claiming its mistakes "cost the most points".
+
 **Files:**
 - Create: `src/components/diagrams/ConcentrationPlots.svelte`, `src/components/lesson/ConcentrationPlots.astro`
 - Modify: `src/pages/[unit]/[topic].astro`
