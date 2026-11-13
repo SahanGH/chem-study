@@ -9,23 +9,33 @@ const rows = units.map((unit) => ({
   ready: unit.topics.filter((t) => lessons.has(t.code)).map((t) => t.code),
 }));
 const first = rows.find((row) => row.ready.length > 0);
+const readyCount = lessons.size;
+const topicCount = units.reduce((sum, unit) => sum + unit.topics.length, 0);
 
 function status(ready: number, total: number): string {
   if (ready === 0) return 'Coming soon';
-  return ready === total ? `${total} lessons` : `${ready} of ${total} lessons`;
+  return ready === total ? `${total} lessons` : `${ready} of ${total} lessons ready`;
 }
 ---
 
 <Base
   title="ChemStudy: AP® Chemistry, explained"
-  description="Clear lessons, worked examples and practice for every AP Chemistry topic. Free, and written by a chemistry teacher."
+  description="Clear lessons, worked examples and practice for AP Chemistry, one topic at a time. Free, and written by a chemistry teacher."
 >
   <section class="hero">
     <h1>AP® Chemistry, explained so it <em>finally clicks</em>.</h1>
     <p class="lede">
-      Every topic as a clear, careful lesson, with worked examples and practice to make it stick.
+      A clear, careful lesson for each topic, with worked examples and practice to make it stick.
       Free, and written by a chemistry teacher.
     </p>
+    {
+      readyCount < topicCount && (
+        <p class="hero-note">
+          {readyCount} of {topicCount} lessons {readyCount === 1 ? 'is' : 'are'} ready so far. New ones are added as
+          each is written and checked.
+        </p>
+      )
+    }
     <p class="hero-actions">
       {
         first && (
@@ -54,8 +64,8 @@ function status(ready: number, total: number): string {
             ) : (
               <span class="unit-title">{unit.title}</span>
             )}
-            <span class="unit-meta" data-unit-progress>
-              {status(ready.length, unit.topics.length)}
+            <span class="unit-meta">
+              {status(ready.length, unit.topics.length)}<span data-unit-progress />
             </span>
           </li>
         ))

@@ -3,7 +3,7 @@ import { browserProgress } from '../lib/progress';
 /**
  * Paints stored progress into whatever the current page offers:
  *   [data-topic-link="5.2"]            gets .is-done
- *   [data-unit-topics="5.1,5.2"]       its [data-unit-progress] child gets "1 of 2 done"
+ *   [data-unit-topics="5.1,5.2"]       its [data-unit-progress] child gets " · 1 done"
  *   [data-continue]                    is shown with a link to the last lesson
  *   [data-complete]                    is shown on a finished lesson
  */
@@ -22,9 +22,11 @@ function paint(): void {
 
   for (const el of document.querySelectorAll<HTMLElement>('[data-unit-topics]')) {
     const codes = (el.dataset.unitTopics ?? '').split(',').filter(Boolean);
-    const { done, total } = progress.unitProgress(codes);
+    const { done } = progress.unitProgress(codes);
     const out = el.querySelector('[data-unit-progress]');
-    if (out && done > 0) out.textContent = `${done} of ${total} done`;
+    // Added after the page's own count ("1 of 11 lessons ready"), not in
+    // place of it: replacing it gave the same row two different totals.
+    if (out) out.textContent = done > 0 ? ` · ${done} done` : '';
   }
 
   const last = progress.lastVisited();
