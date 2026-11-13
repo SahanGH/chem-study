@@ -94,6 +94,51 @@ describe('checkPage', () => {
       'lesson 5.2: a check says the answer is option 5 but has only 4 options',
     ]);
   });
+
+  describe('a check whose explanation holds a list of its own', () => {
+    // The page script grades against the first list, the options; the list
+    // inside the closing <details> is part of the explanation.
+    const withExplanationList = (answer: string, options: number) =>
+      `<cs-check data-part="check" data-answer="${answer}"><div class="check-body"><ul>${'<li>x</li>'.repeat(options)}</ul></div>` +
+      `<details class="check-why"><p>Answer: option ${answer}</p><ol><li>a</li><li>b</li><li>c</li></ol></details></cs-check>`;
+
+    it('counts only the options, not the explanation items', () => {
+      const html = lesson(fullLesson + withExplanationList('5', 2));
+      expect(checkPage(html, everythingExists)).toEqual([
+        'lesson 5.2: a check says the answer is option 5 but has only 2 options',
+      ]);
+    });
+
+    it('accepts an answer that is one of the options', () => {
+      const html = lesson(fullLesson + withExplanationList('2', 2));
+      expect(checkPage(html, everythingExists)).toEqual([]);
+    });
+
+    it('reports an answer that is not a whole number', () => {
+      const html = lesson(fullLesson + withExplanationList('1.5', 2));
+      expect(checkPage(html, everythingExists)).toEqual([
+        'lesson 5.2: a check says the answer is option 1.5 but has only 2 options',
+      ]);
+    });
+
+    it('takes the first list in the document whether it is ordered or not', () => {
+      const html = lesson(
+        fullLesson +
+          '<cs-check data-part="check" data-answer="3"><div class="check-body"><ol><li>x</li><li>y</li></ol></div>' +
+          '<details class="check-why"><ul><li>a</li><li>b</li><li>c</li></ul></details></cs-check>',
+      );
+      expect(checkPage(html, everythingExists)).toEqual([
+        'lesson 5.2: a check says the answer is option 3 but has only 2 options',
+      ]);
+    });
+
+    it('reports a check that has no list of options at all', () => {
+      const html = lesson(fullLesson + '<cs-check data-part="check" data-answer="1"></cs-check>');
+      expect(checkPage(html, everythingExists)).toEqual([
+        'lesson 5.2: a check says the answer is option 1 but has only 0 options',
+      ]);
+    });
+  });
 });
 
 describe('checkPage, words run together', () => {

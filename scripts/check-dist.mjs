@@ -85,8 +85,10 @@ export function checkPage(html, exists) {
     }
     for (const check of main.querySelectorAll('cs-check[data-answer]')) {
       const answer = Number(check.getAttribute('data-answer'));
-      const options = check.querySelectorAll('li').length;
-      if (!(answer >= 1 && answer <= options)) {
+      // The page script grades against the first list only; a list inside the
+      // explanation must not add to the count.
+      const options = check.querySelector('ul, ol')?.children.length ?? 0;
+      if (!(Number.isInteger(answer) && answer >= 1 && answer <= options)) {
         problems.push(
           `lesson ${topic}: a check says the answer is option ${answer} but has only ${options} options`,
         );
