@@ -1,0 +1,255 @@
+---
+topic: "5.9"
+minutes: 12
+summary: How to find the rate law when the slow step is not the first one, by treating the fast step before it as an equilibrium.
+---
+
+Topic 5.8 was easy for one reason: the slow step came first. Move the slow step to second place and a problem appears. Its rate law now contains an intermediate, and you cannot measure out an intermediate. This lesson is one trick for getting rid of it.
+
+## The problem
+
+Nitrogen monoxide reacts with oxygen:
+
+$$
+\ce{2NO(g) + O2(g) -> 2NO2(g)}
+$$
+
+The measured rate law, from topic 5.2, is:
+
+$$
+\text{rate} = k[\ce{NO}]^2[\ce{O2}]
+$$
+
+One step in which two NO molecules and one $\ce{O2}$ molecule all collide at once would fit that rate law. But topic 5.4 showed that three-particle collisions are rare, so that route is unlikely. Here is a proposal that needs no three-particle collision:
+
+| Step | Equation |
+|---|---|
+| Step 1 (fast, reversible) | $\ce{NO + NO <=> N2O2}$ |
+| Step 2 (slow) | $\ce{N2O2 + O2 -> 2NO2}$ |
+
+The double arrow says that step 1 is **reversible**, which means it runs in both directions. Two NO molecules join to make $\ce{N2O2}$, and $\ce{N2O2}$ falls apart into two NO molecules again.
+
+Add the two steps and $\ce{N2O2}$ cancels, leaving the overall equation. $\ce{N2O2}$ is made in step 1 and used up in step 2, so it is an intermediate (topic 5.7).
+
+Step 2 is the slow step, the rate-limiting step of topic 5.8, so the reaction goes at the rate of step 2. Step 2 is elementary, so its rate law comes straight from its equation:
+
+$$
+\text{rate} = k_2[\ce{N2O2}][\ce{O2}]
+$$
+
+The small 2 on $k_2$ only says that this is the rate constant of step 2.
+
+That rate law is correct, and it is no use as an answer. $\ce{N2O2}$ is not something you put in the flask, so you cannot choose its concentration the way you choose $[\ce{NO}]$. The measured rate law has $[\ce{NO}]$ in it, not $[\ce{N2O2}]$. You need a way to write $[\ce{N2O2}]$ in terms of the reactants.
+
+## A fast step that goes both ways
+
+Picture two rooms joined by a wide doorway. The second room has one slow turnstile leading out. People wander back and forth through the doorway far faster than the turnstile lets anyone leave. So the crowd in the second room is set by the back-and-forth at the doorway. The turnstile hardly changes it.
+
+Step 1 is the doorway. It is fast in both directions, and step 2 drains $\ce{N2O2}$ only slowly. That gives step 1 time to settle into a balance in which $\ce{N2O2}$ forms and falls apart at the same rate. A reversible step in that state is at **equilibrium**: its forward rate and its reverse rate are equal.
+
+Nothing has stopped. Both directions are still running, fast. They are running at the same rate.
+
+Now write that balance as an equation. Each direction of step 1 is an elementary step, so each rate law comes from the particles that go in (topic 5.4). Going forward, two NO molecules collide:
+
+$$
+\text{forward rate} = k_1[\ce{NO}]^2
+$$
+
+Going backward, one $\ce{N2O2}$ molecule falls apart:
+
+$$
+\text{reverse rate} = k_{-1}[\ce{N2O2}]
+$$
+
+Here $k_1$ is the rate constant of step 1 going forward, and $k_{-1}$ is the rate constant of step 1 going backward. The minus sign is only a label for "backward". It does not make the number negative.
+
+At equilibrium the two rates are equal:
+
+$$
+k_1[\ce{NO}]^2 = k_{-1}[\ce{N2O2}]
+$$
+
+Treating the fast step before the slow step as being at equilibrium is the **pre-equilibrium approximation**. It is called an approximation because step 2 does carry off a little $\ce{N2O2}$. That drain is tiny next to the traffic in step 1, so you treat the two rates as equal.
+
+Look at what the last equation contains: the intermediate, and a reactant you can measure. That is the way out.
+
+<KeyIdea>
+
+A fast reversible step that comes before the slow step is treated as being at equilibrium, so its forward and reverse rates are set equal. Use that equation to replace the intermediate.
+
+</KeyIdea>
+
+<Worked title="Removing the intermediate">
+
+Find the rate law that the two-step mechanism for $\ce{2NO + O2 -> 2NO2}$ predicts.
+
+1. **Write the rate law of the slow step.** Step 2 is slow, and one $\ce{N2O2}$ collides with one $\ce{O2}$ in it.
+
+   $$
+   \text{rate} = k_2[\ce{N2O2}][\ce{O2}]
+   $$
+
+2. **Set the forward and reverse rates of step 1 equal.** Step 1 is fast and reversible and comes before the slow step, so treat it as being at equilibrium.
+
+   $$
+   k_1[\ce{NO}]^2 = k_{-1}[\ce{N2O2}]
+   $$
+
+3. **Solve for the intermediate.** Divide both sides by $k_{-1}$.
+
+   $$
+   [\ce{N2O2}] = \frac{k_1}{k_{-1}}[\ce{NO}]^2
+   $$
+
+4. **Substitute.** Put that in place of $[\ce{N2O2}]$ in the slow step's rate law.
+
+   $$
+   \text{rate} = k_2\frac{k_1}{k_{-1}}[\ce{NO}]^2[\ce{O2}]
+   $$
+
+5. **Combine the constants.** At a given temperature $k_2$, $k_1$ and $k_{-1}$ are three fixed numbers, so together they make one fixed number. Call it $k$.
+
+   $$
+   k = \frac{k_2 k_1}{k_{-1}}
+   $$
+
+   $$
+   \text{rate} = k[\ce{NO}]^2[\ce{O2}]
+   $$
+
+That is the measured rate law, so the mechanism is consistent with the evidence. Consistent is as far as it goes. The single three-particle step predicts this rate law too, so the rate law alone cannot choose between them. More than one mechanism can lead to the same rate law.
+
+</Worked>
+
+<Check answer={2}>
+In the pre-equilibrium approximation, what is assumed about the fast first step?
+
+- It has stopped.
+- Its forward and reverse rates are equal.
+- It is slower than the second step.
+- It has used up all of its reactants.
+
+<div slot="why">The step is fast in both directions, so it is treated as being at equilibrium. That means the two directions go at the same rate. It does not mean that anything has stopped.</div>
+</Check>
+
+## The recipe
+
+The same moves work whenever a fast reversible step comes before the slow step.
+
+1. Write the rate law of the slow step. It will contain an intermediate.
+2. For the fast reversible step before it, set the forward rate equal to the reverse rate.
+3. Solve that equation for the concentration of the intermediate.
+4. Substitute the result into the slow step's rate law, and combine the constants into one $k$.
+
+Then look at what is left. A finished rate law may contain only reactants, products and catalysts. If an intermediate is still in it, you are not done.
+
+One thing carries over from topic 5.8. A step that comes after the slow step adds nothing to the rate law.
+
+<Check answer={2}>
+A reaction has this mechanism.
+
+| Step | Equation |
+|---|---|
+| Step 1 (fast, reversible) | $\ce{A + B <=> C}$ |
+| Step 2 (slow) | $\ce{C + A -> D}$ |
+| Step 3 (fast) | $\ce{D + B -> E}$ |
+
+The overall reaction is $\ce{2A + 2B -> E}$. Which rate law does the mechanism predict, written without any intermediate?
+
+- $\text{rate} = k[\ce{C}][\ce{A}]$
+- $\text{rate} = k[\ce{A}]^2[\ce{B}]$
+- $\text{rate} = k[\ce{A}]^2[\ce{B}]^2$
+- $\text{rate} = k[\ce{A}][\ce{B}]$
+
+<div slot="why">The slow step gives $\text{rate} = k_2[\ce{C}][\ce{A}]$, and C is an intermediate. Step 1, treated as being at equilibrium, gives $k_1[\ce{A}][\ce{B}] = k_{-1}[\ce{C}]$, so $[\ce{C}] = \frac{k_1}{k_{-1}}[\ce{A}][\ce{B}]$. Substituting gives $\text{rate} = k[\ce{A}]^2[\ce{B}]$. The first option still contains the intermediate. The third copies the coefficients of the overall equation, but the second B enters after the slow step, so it does not count.</div>
+</Check>
+
+## When a product slows the reaction down
+
+So far every rate law has contained reactants and nothing else. The same recipe can put a product in the rate law. Ozone decomposes to oxygen:
+
+$$
+\ce{2O3(g) -> 3O2(g)}
+$$
+
+<Worked title="A product in the rate law">
+
+Find the rate law that this mechanism for the decomposition of ozone predicts.
+
+| Step | Equation |
+|---|---|
+| Step 1 (fast, reversible) | $\ce{O3 <=> O2 + O}$ |
+| Step 2 (slow) | $\ce{O + O3 -> 2O2}$ |
+
+Add the steps and the O atom cancels, leaving $\ce{2O3 -> 3O2}$. The O atom is the intermediate.
+
+1. **Write the rate law of the slow step.** One O atom collides with one $\ce{O3}$ in step 2.
+
+   $$
+   \text{rate} = k_2[\ce{O}][\ce{O3}]
+   $$
+
+2. **Set the forward and reverse rates of step 1 equal.** Going forward, one $\ce{O3}$ falls apart. Going backward, one $\ce{O2}$ collides with one O atom.
+
+   $$
+   k_1[\ce{O3}] = k_{-1}[\ce{O2}][\ce{O}]
+   $$
+
+3. **Solve for the intermediate.** Divide both sides by $k_{-1}[\ce{O2}]$.
+
+   $$
+   [\ce{O}] = \frac{k_1[\ce{O3}]}{k_{-1}[\ce{O2}]}
+   $$
+
+4. **Substitute.** Put that in place of $[\ce{O}]$ in the slow step's rate law.
+
+   $$
+   \text{rate} = k_2\,\frac{k_1[\ce{O3}]}{k_{-1}[\ce{O2}]}\,[\ce{O3}]
+   $$
+
+5. **Combine the constants.** The three constants become one $k$, and $[\ce{O3}]$ times $[\ce{O3}]$ is $[\ce{O3}]^2$.
+
+   $$
+   \text{rate} = k\frac{[\ce{O3}]^2}{[\ce{O2}]}
+   $$
+
+This is also the rate law found by experiment for this reaction, so the mechanism is consistent with the evidence.
+
+Oxygen is a product, and it sits in the denominator. The more $\ce{O2}$ there is, the more it pushes step 1 backward, and the fewer O atoms are left for the slow step. So adding a product slows this reaction down.
+
+</Worked>
+
+<Check answer={3}>
+For the ozone mechanism above, what happens to the rate if $[\ce{O2}]$ is doubled while $[\ce{O3}]$ is held the same?
+
+- It doubles.
+- It does not change.
+- It halves.
+- It falls to a quarter.
+
+<div slot="why">The rate is proportional to $1/[\ce{O2}]$, so doubling $[\ce{O2}]$ cuts the rate in half.</div>
+</Check>
+
+<Trap>
+
+Four common mistakes on this topic:
+
+- **Leaving the intermediate in the answer.** A rate law may contain only reactants, products and catalysts. If $[\ce{N2O2}]$ or $[\ce{O}]$ is still there, keep going.
+- **Using this when the first step is slow.** Then topic 5.8 applies. The rate law is the rate law of step 1, and no approximation is needed.
+- **Writing the reverse rate of step 1 with the wrong substances.** The reverse rate uses what is on the right-hand side of step 1. For $\ce{O3 <=> O2 + O}$ it is $k_{-1}[\ce{O2}][\ce{O}]$.
+- **Stopping before the constants are combined.** $k_2 k_1 / k_{-1}$ is not wrong, but it is one fixed number at a given temperature. Write it as a single $k$ so the result can be compared with the measured rate law.
+
+</Trap>
+
+<KeyPoints>
+
+- When the slow step of a mechanism is not the first step, the rate law of the slow step contains an intermediate.
+- A fast reversible step that comes before the slow step is treated as being at equilibrium: its forward rate equals its reverse rate. Nothing has stopped. This is the pre-equilibrium approximation.
+- To remove the intermediate, set the forward rate of the fast step equal to its reverse rate, solve for the concentration of the intermediate, substitute it into the slow step's rate law, and combine the constants into one $k$.
+- The finished rate law contains only substances you can measure: reactants, products and catalysts, and never an intermediate.
+- A product can appear in a rate law. For ozone, $\text{rate} = k[\ce{O3}]^2/[\ce{O2}]$, so more $\ce{O2}$ means a slower reaction.
+- More than one mechanism can lead to the same rate law, so a match supports a mechanism but does not prove it.
+
+</KeyPoints>
+
+<PracticeNext />
