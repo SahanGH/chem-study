@@ -70,16 +70,21 @@ test('the home page says how many lessons exist instead of promising all of them
   await expect(page.locator('meta[name="description"]')).not.toHaveAttribute('content', /every/i);
 });
 
-test('the About page says how many lessons exist and where to report a mistake', async ({ page }) => {
+test('the About page says how many lessons exist instead of promising all of them', async ({ page }) => {
   await page.goto('/about/');
   const main = page.locator('main');
 
   await expect(main).toContainText(ABOUT_COUNT);
   await expect(main).not.toContainText('a lesson for each topic');
-  await expect(page.getByRole('link', { name: 'report it on GitHub' })).toHaveAttribute(
-    'href',
-    'https://github.com/SahanGH/chem-study/issues',
-  );
+});
+
+test('the About page does not ask for error reports while there is no way to send one', async ({ page }) => {
+  await page.goto('/about/');
+  const main = page.locator('main');
+
+  await expect(main).toContainText('fact-checked');
+  await expect(main).not.toContainText(/report/i);
+  await expect(main.locator('a[href*="github.com"]')).toHaveCount(0);
 });
 
 test('the home and unit pages fit a phone screen without sideways scrolling', async ({ page }) => {
