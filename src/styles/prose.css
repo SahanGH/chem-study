@@ -4,7 +4,10 @@
 .prose > * + * {
   margin-top: 1.1em;
 }
-.prose p {
+/* The resets use :where() so they add no specificity: every spacing rule
+   below ("> * + *", .check-feedback, .check-options) must be able to override
+   them, which a plain ".prose p" (0,1,1) would stop. */
+:where(.prose) p {
   margin: 0;
 }
 .prose h1 {
@@ -16,8 +19,8 @@
 .prose h3 {
   margin-top: 0.3rem;
 }
-.prose ul,
-.prose ol {
+:where(.prose) ul,
+:where(.prose) ol {
   margin-block: 0;
   padding-left: 1.3em;
 }

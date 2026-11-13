@@ -171,6 +171,38 @@ test.describe('option names for assistive technology', () => {
   });
 });
 
+test.describe('lesson spacing', () => {
+  async function marginTopOf(page: Page, selector: string) {
+    const target = page.locator(selector).first();
+    await expect(target, `${selector} should exist on the lesson`).toHaveCount(1);
+    return target.evaluate((element) => parseFloat(getComputedStyle(element).marginTop));
+  }
+
+  test.beforeEach(async ({ page }) => {
+    await page.goto(LESSON);
+  });
+
+  test('a paragraph that follows a paragraph has space above it', async ({ page }) => {
+    expect(await marginTopOf(page, 'article > p + p')).toBeGreaterThan(0);
+  });
+
+  test('a list that follows a paragraph has space above it', async ({ page }) => {
+    expect(await marginTopOf(page, 'article > p + ul')).toBeGreaterThan(0);
+  });
+
+  test('a paragraph inside a worked example has space above it', async ({ page }) => {
+    expect(await marginTopOf(page, '.worked > * + p')).toBeGreaterThan(0);
+  });
+
+  test('the option list is not indented', async ({ page }) => {
+    await expect(page.locator('.check-options').first()).toHaveCSS('padding-left', '0px');
+  });
+
+  test('the check feedback line has space above it', async ({ page }) => {
+    expect(await marginTopOf(page, '.check-feedback')).toBeGreaterThan(0);
+  });
+});
+
 test('the lesson fits a phone screen without sideways scrolling', async ({ page }) => {
   await page.goto(LESSON);
   const overflow = await page.evaluate(
