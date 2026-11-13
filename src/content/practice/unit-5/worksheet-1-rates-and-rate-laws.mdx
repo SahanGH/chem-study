@@ -1,0 +1,448 @@
+---
+title: "Worksheet 1: Rates and rate laws"
+kind: worksheet
+order: 2
+topics: ["5.1", "5.2"]
+summary: Eight questions on relating the rates of the substances in a reaction and finding a rate law from initial-rate data, with a short review at the end.
+---
+
+Work each question on paper before you open its answer. One idea runs through all of them: reaction orders come from data, never from the coefficients of the balanced equation.
+
+You will need these two relationships.
+
+$$
+\text{rate} = -\tfrac{1}{a}\frac{\Delta[\ce{A}]}{\Delta t} = +\tfrac{1}{c}\frac{\Delta[\ce{C}]}{\Delta t}
+$$
+
+$$
+\text{rate} = k[\ce{A}]^m[\ce{B}]^n
+$$
+
+## Questions
+
+<Question number={1} topic="5.1">
+
+Dinitrogen pentoxide decomposes:
+
+$$
+\ce{2N2O5(g) -> 4NO2(g) + O2(g)}
+$$
+
+Oxygen forms at $2.0 \times 10^{-3}\ \text{M/s}$.
+
+<Part label="a">
+
+The rate of the reaction: <Blank />
+
+<Answer>
+
+$2.0 \times 10^{-3}\ \text{M/s}$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The rate of disappearance of $\ce{N2O5}$: <Blank />
+
+<Answer>
+
+$4.0 \times 10^{-3}\ \text{M/s}$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The rate of appearance of $\ce{NO2}$: <Blank />
+
+<Answer>
+
+$8.0 \times 10^{-3}\ \text{M/s}$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Why do the three numbers differ?
+
+<Answer>
+
+Each species is consumed or formed at a rate set by its coefficient. Dividing each rate by its coefficient gives one common value, the reaction rate. That is why the convention exists.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={2} topic="5.1">
+
+For $\ce{N2 + 3H2 -> 2NH3}$, $\ce{H2}$ is consumed at 0.030 M/s. Find the reaction rate and the rate of formation of $\ce{NH3}$.
+
+<Answer>
+
+The reaction rate:
+
+$$
+(1/3)(0.030) = \mathbf{0.010}\ \text{M/s}
+$$
+
+The rate at which $\ce{NH3}$ forms:
+
+$$
+2(0.010) = \mathbf{0.020}\ \text{M/s}
+$$
+
+</Answer>
+
+</Question>
+
+<Question number={3} topic="5.1">
+
+A plot of $[\ce{A}]$ against time is steep at first and then flattens.
+
+<Part label="a">
+
+The average rate is the slope of: <Blank />
+
+<Answer>
+
+a straight line between two points
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The instantaneous rate is the slope of: <Blank />
+
+<Answer>
+
+the tangent at that point
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Why does the curve flatten?
+
+<Answer>
+
+Reactant is being consumed, so its concentration decreases with time. The frequency of reactive collisions decreases with it.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Why are rate laws determined from *initial* rates?
+
+<Answer>
+
+At $t=0$ no product has built up, so there is no reverse reaction and no interference from products to complicate the measurement.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={4} topic="5.2">
+
+Use the data to find the rate law and $k$.
+
+| Experiment | $[\ce{A}]_0$ (M) | $[\ce{B}]_0$ (M) | Rate (M/s) |
+|---|---|---|---|
+| 1 | 0.10 | 0.10 | $2.0 \times 10^{-3}$ |
+| 2 | 0.20 | 0.10 | $8.0 \times 10^{-3}$ |
+| 3 | 0.10 | 0.20 | $4.0 \times 10^{-3}$ |
+
+<Part label="a">
+
+The order in A, with the comparison you used.
+
+<Answer>
+
+The order in A is 2. Comparing experiments 1 and 2, only $[\ce{A}]$ changed: doubling it multiplied the rate by 4, and $4 = 2^2$.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The order in B: <Blank />
+
+<Answer>
+
+1
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The overall order: <Blank />
+
+<Answer>
+
+3
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+The rate law: <Blank />
+
+<Answer>
+
+$\text{rate} = k[\ce{A}]^2[\ce{B}]$
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+Calculate $k$, with units.
+
+<Answer>
+
+$$
+\begin{aligned}
+k &= \frac{2.0 \times 10^{-3}}{(0.10)^2(0.10)} = \frac{2.0 \times 10^{-3}}{1.0 \times 10^{-3}} \\
+&= \mathbf{2.0}\ \text{M}^{-2}\,\text{s}^{-1}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={5} topic="5.2">
+
+Here are the data for a second reaction.
+
+| Experiment | $[\ce{X}]_0$ (M) | $[\ce{Y}]_0$ (M) | Rate (M/s) |
+|---|---|---|---|
+| 1 | 0.20 | 0.10 | $1.5 \times 10^{-2}$ |
+| 2 | 0.40 | 0.10 | $3.0 \times 10^{-2}$ |
+| 3 | 0.20 | 0.20 | $1.5 \times 10^{-2}$ |
+
+<Part label="a">
+
+The rate law: <Blank />
+
+<Answer>
+
+$\text{rate} = k[\ce{X}]$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The value of $k$, with units: <Blank />
+
+<Answer>
+
+$0.075\ \text{s}^{-1}$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Y is a reactant, yet it does not appear in the rate law. Explain what that tells you.
+
+<Answer>
+
+Y is zero order: changing its concentration does not change the rate. In terms of the mechanism, Y does not take part in the rate-limiting step, even though it is consumed somewhere in the overall reaction.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={6} topic="5.2">
+
+Units are a check on your work. Give the units of $k$ for each overall order.
+
+<Part label="a">
+
+Zero order: <Blank />
+
+<Answer>
+
+M/s
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+First order: <Blank />
+
+<Answer>
+
+$\text{s}^{-1}$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Second order: <Blank />
+
+<Answer>
+
+$\text{M}^{-1}\,\text{s}^{-1}$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Why are the units a useful check?
+
+<Answer>
+
+Rate always has units of M/s, so the units of $k$ are fixed by the overall order. If your $k$ carries the wrong units, your orders must be wrong.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={7} topic="5.2">
+
+A reaction has $\text{rate} = k[\ce{A}]^2[\ce{B}]$ with $k = 2.0\ \text{M}^{-2}\,\text{s}^{-1}$.
+
+<Part label="a">
+
+Find the rate when $[\ce{A}] = 0.30$ and $[\ce{B}] = 0.20$.
+
+<Answer>
+
+$$
+(2.0)(0.30)^2(0.20) = \mathbf{0.036}\ \text{M/s}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Predict the factor by which the rate changes if $[\ce{A}]$ is tripled and $[\ce{B}]$ is halved.
+
+<Answer>
+
+$\times 4.5$
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={8} topic="5.2">
+
+The decomposition $\ce{2N2O5 -> 4NO2 + O2}$ is found by experiment to be *first* order in $\ce{N2O5}$. Explain why this one fact rules out the idea that coefficients give orders.
+
+<Answer>
+
+If coefficients gave orders, this reaction would be second order in $\ce{N2O5}$. It is measured to be first order. The overall equation only summarizes the stoichiometry, while the rate law reflects the slowest elementary step, so there is no reason for the two to agree. Here they plainly do not.
+
+</Answer>
+
+</Question>
+
+## Quick review
+
+Five short questions from earlier units.
+
+<Question number={9}>
+
+<Part label="a">
+
+The net ionic equation for $\ce{Ag+}$ with $\ce{Cl-}$: <Blank />
+
+<Answer>
+
+$\ce{Ag+ + Cl- -> AgCl(s)}$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The oxidation state of S in $\ce{SO4^2-}$: <Blank />
+
+<Answer>
+
+$+6$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The strongest intermolecular force in $\ce{H2O}$: <Blank />
+
+<Answer>
+
+hydrogen bonding
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+The moles of solute in 25.0 mL of a 0.200 M solution: <Blank />
+
+<Answer>
+
+0.00500 mol
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+The electron configuration of $\ce{Ca}$: <Blank />
+
+<Answer>
+
+[Ar]$4s^2$
+
+</Answer>
+
+</Part>
+
+</Question>

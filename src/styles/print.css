@@ -54,6 +54,14 @@
     content-visibility: visible;
     display: block;
   }
+  /* A practice page prints as it stands: an answer the student has opened is
+     on the paper and a closed one is left off, so the same page prints as a
+     blank worksheet or as a key. */
+  .answer:not([open]),
+  .answer[open] > summary,
+  .print-note {
+    display: none;
+  }
   [data-part] {
     break-inside: avoid;
   }

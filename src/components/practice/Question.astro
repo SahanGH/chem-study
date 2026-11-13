@@ -1,0 +1,71 @@
+---
+import Beyond from './Beyond.astro';
+import { topicByCode } from '../../data/units';
+import { lessonPath, lessonsByTopic } from '../../lib/lessons';
+import { parseTopics } from '../../lib/practice-id';
+
+interface Props {
+  number: number;
+  /** The heading word: "Question" unless the document names its questions differently. */
+  label?: string;
+  /** A few words after the number, for example "Rate law from initial rates". */
+  title?: string;
+  /** AP topic codes: "5.1", or "5.7, 5.8" for more than one. */
+  topic?: string;
+  /** What the question is worth, when it is scored. Its rubric must add up to this. */
+  points?: number;
+  /** True when the AP exam does not ask for this. */
+  beyond?: boolean;
+}
+const { number, label = 'Question', title, topic, points, beyond = false } = Astro.props;
+const name = `${label} ${number}`;
+const id = name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+if (!(Number.isInteger(number) && number >= 1)) {
+  throw new Error(`A question's number must be a whole number from 1 up. Got ${JSON.stringify(number)}.`);
+}
+if (points !== undefined && !(Number.isInteger(points) && points >= 1)) {
+  throw new Error(`${name}: points must be a whole number from 1 up. Got ${JSON.stringify(points)}.`);
+}
+
+const lessons = await lessonsByTopic();
+const topics = (topic === undefined ? [] : parseTopics(topic)).map((code) => {
+  const found = topicByCode(code);
+  if (!found) throw new Error(`${name} names topic ${code}, which is not one of the AP topics in src/data/units.ts.`);
+  const lesson = lessons.get(code);
+  return {
+    code,
+    // The visible text is only the code, so the link's name adds the title.
+    name: `${code} ${found.topic.title}`,
+    href: lesson ? lessonPath(found.unit.slug, lesson) : undefined,
+  };
+});
+---
+
+<section class="question" data-part="question" data-points={points}>
+  <h3 id={id}>{title ? `${name}: ${title}` : name}</h3>
+  {
+    (topics.length > 0 || points !== undefined) && (
+      <p class="question-meta">
+        {topics.length > 0 && (
+          <span>
+            {topics.length === 1 ? 'Topic ' : 'Topics '}
+            {topics.map((t, index) => (
+              <>
+                {index > 0 && ', '}
+                {t.href ? (
+                  <a href={t.href} aria-label={t.name}>{t.code}</a>
+                ) : (
+                  t.code
+                )}
+              </>
+            ))}
+          </span>
+        )}
+        {points !== undefined && <span>{points === 1 ? '1 point' : `${points} points`}</span>}
+      </p>
+    )
+  }
+  {beyond && <Beyond />}
+  <slot />
+</section>

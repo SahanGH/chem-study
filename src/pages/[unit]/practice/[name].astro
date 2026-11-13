@@ -1,0 +1,37 @@
+---
+import { getCollection, render } from 'astro:content';
+import PracticeLayout from '../../../layouts/PracticeLayout.astro';
+import Figure from '../../../components/lesson/Figure.astro';
+import Worked from '../../../components/lesson/Worked.astro';
+import Answer from '../../../components/practice/Answer.astro';
+import Blank from '../../../components/practice/Blank.astro';
+import Part from '../../../components/practice/Part.astro';
+import Question from '../../../components/practice/Question.astro';
+import Rubric from '../../../components/practice/Rubric.astro';
+import RubricLine from '../../../components/practice/RubricLine.astro';
+import { units, type Unit } from '../../../data/units';
+import { practiceSlug, practiceUnitNumber, type Practice } from '../../../lib/practice';
+
+export async function getStaticPaths() {
+  const docs = await getCollection('practice');
+  return docs.map((doc) => {
+    const number = practiceUnitNumber(doc);
+    const unit = units.find((candidate) => candidate.number === number);
+    if (!unit) throw new Error(`Practice file ${doc.id} sits in a folder for Unit ${number}, which is not in src/data/units.ts.`);
+    return { params: { unit: unit.slug, name: practiceSlug(doc) }, props: { unit, doc } };
+  });
+}
+
+interface Props {
+  unit: Unit;
+  doc: Practice;
+}
+const { unit, doc } = Astro.props;
+const { Content, headings } = await render(doc);
+// Supplied to every practice document, so the files need no imports.
+const blocks = { Answer, Blank, Figure, Part, Question, Rubric, RubricLine, Worked };
+---
+
+<PracticeLayout unit={unit} doc={doc} headings={headings}>
+  <Content components={blocks} />
+</PracticeLayout>

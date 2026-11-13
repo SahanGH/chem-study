@@ -1,0 +1,17 @@
+---
+interface Props {
+  /** The part this line scores, as its letter. Left out when a question has no parts. */
+  part?: string;
+  points: number;
+}
+const { part, points } = Astro.props;
+if (!(Number.isInteger(points) && points >= 1)) {
+  throw new Error(`A rubric line's points must be a whole number from 1 up. Got ${JSON.stringify(points)}.`);
+}
+if (part !== undefined && !/^[a-z]$/.test(part)) {
+  throw new Error(`A rubric line's part must be one lowercase letter, for example "a". Got ${JSON.stringify(part)}.`);
+}
+const worth = points === 1 ? '1 point' : `${points} points`;
+---
+
+<li data-rubric-points={points}><strong>{part ? `(${part}) ${worth}.` : `${worth}.`}</strong>{' '}<slot /></li>
