@@ -1,0 +1,329 @@
+---
+title: "Free-response set"
+kind: free-response
+order: 6
+topics: ["5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.8", "5.10", "5.11"]
+summary: Five free-response questions on all of Unit 5, two long and three short, each with a worked answer and its scoring rubric.
+points: 32
+minutes: 50
+---
+
+This set covers all of kinetics, topics 5.1 through 5.11. The unit is 7% to 9% of the exam.
+
+There are 5 questions worth 32 points. Give yourself about 50 minutes. You may use a calculator. Write out each answer in full before you open the worked answer and the scoring rubric.
+
+One limit applies. Topic 5.6 leaves calculations with the Arrhenius equation off the exam, so nothing here asks you to find an activation energy from two rate constants or from a plot of $\ln k$ against $1/T$. Reading an energy profile and reasoning in words about temperature and catalysts are still tested, and both appear below.
+
+## Questions
+
+<Question number={1} title="Rate law from initial rates" topic="5.1, 5.2, 5.4" points={10}>
+
+The following initial rates were measured at constant temperature for this reaction:
+
+$$
+\ce{2NO(g) + O2(g) -> 2NO2(g)}
+$$
+
+| Experiment | $[\ce{NO}]_0$ (M) | $[\ce{O2}]_0$ (M) | Initial rate (M/s) |
+|---|---|---|---|
+| 1 | 0.020 | 0.010 | $2.5 \times 10^{-5}$ |
+| 2 | 0.040 | 0.010 | $1.0 \times 10^{-4}$ |
+| 3 | 0.020 | 0.020 | $5.0 \times 10^{-5}$ |
+
+<Part label="a">
+
+Determine the order with respect to each reactant, showing your reasoning.
+
+<Answer>
+
+**$\ce{NO}$:** compare experiments 1 and 2, where $[\ce{O2}]$ is constant. Doubling $[\ce{NO}]$ multiplies the rate by this factor:
+
+$$
+\frac{1.0 \times 10^{-4}}{2.5 \times 10^{-5}} = 4
+$$
+
+Since $2^n = 4$, $n = \mathbf{2}$.
+
+**$\ce{O2}$:** compare experiments 1 and 3, where $[\ce{NO}]$ is constant. Doubling $[\ce{O2}]$ doubles the rate, so $n = \mathbf{1}$.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Write the rate law and state the overall order.
+
+<Answer>
+
+$$
+\text{rate} = k[\ce{NO}]^2[\ce{O2}]
+$$
+
+Overall order $= \mathbf{3}$.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate $k$, with units.
+
+<Answer>
+
+From experiment 1:
+
+$$
+\begin{aligned}
+k &= \frac{2.5 \times 10^{-5}}{(0.020)^2(0.010)} \\
+&= \frac{2.5 \times 10^{-5}}{4.0 \times 10^{-6}} = 6.25 \approx \mathbf{6.3}
+\end{aligned}
+$$
+
+Units: rate is M/s and $[\ce{NO}]^2[\ce{O2}]$ is $\text{M}^3$, so $k$ is in **$\text{M}^{-2}\,\text{s}^{-1}$**.
+
+Check with experiment 2:
+
+$$
+\begin{aligned}
+&6.25(0.040)^2(0.010) \\
+&= 1.0 \times 10^{-4}\ \checkmark
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Explain why the order with respect to $\ce{NO}$ cannot be assumed from its coefficient of 2 in the balanced equation.
+
+<Answer>
+
+Orders are found by experiment. They are set by the mechanism, through the slow step and any steps before it, not by the overall equation. Coefficients give the orders only for an elementary step, and nothing tells us this reaction happens in one step. Here the order in $\ce{NO}$ does equal its coefficient, but only the data could show that: topic 5.9 shows a two-step mechanism that gives the same rate law.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={4}>2 points for order 2 in $\ce{NO}$ with the comparison shown; 2 points for order 1 in $\ce{O2}$. Holding the other reactant constant must be explicit for full credit.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the rate law; 1 point for overall order 3.</RubricLine>
+<RubricLine part="c" points={2}>1 point for $k = 6.3$; 1 point for correct units. A bare number earns 1 point.</RubricLine>
+<RubricLine part="d" points={2}>1 point for saying that orders are experimental; 1 point for saying that they follow the mechanism, and that coefficients may be used only for an elementary step.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={2} title="Mechanism, profile and catalysis" topic="5.4, 5.5, 5.6, 5.7, 5.8, 5.10, 5.11" points={10}>
+
+A mechanism is proposed for this reaction:
+
+$$
+\ce{2N2O5 -> 4NO2 + O2}
+$$
+
+| Step | Equation |
+|---|---|
+| Step 1 (slow) | $\ce{N2O5 -> NO2 + NO3}$ |
+| Step 2 (fast) | $\ce{NO2 + NO3 -> NO + O2 + NO2}$ |
+| Step 3 (fast) | $\ce{NO + N2O5 -> 3NO2}$ |
+
+<Part label="a">
+
+Identify the intermediates and state how you recognized them.
+
+<Answer>
+
+$\ce{NO3}$ and $\ce{NO}$. Each is *produced* in one step and *consumed* in a later one, so both appear in the mechanism but not in the overall equation.
+
+$\ce{NO2}$ appears on both sides of step 2: it takes part in the collision and leaves unchanged. It is a product of the overall reaction, so it is not an intermediate.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Write the rate law this mechanism predicts, with justification.
+
+<Answer>
+
+Step 1 is the slow, rate-limiting step, and it comes first, so its rate law contains no intermediate and is the rate law of the reaction. That step is **elementary**, so its order may be read from its own coefficients:
+
+$$
+\text{rate} = k[\ce{N2O5}]
+$$
+
+First order, even though the overall equation shows a coefficient of 2.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Describe how the energy profile for this three-step mechanism differs from that of a single-step reaction, and state which step has the largest activation energy.
+
+<Answer>
+
+A single-step reaction has one peak. This profile has **three** peaks, one transition state per step, with a valley between each pair where an intermediate sits. **Step 1** has the largest activation energy, the biggest climb measured from where its step starts (for step 1, the reactants), because it is the slow, rate-limiting step.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+A catalyst is introduced. State its effect on the rate, on $\Delta H$, and on the position of any equilibrium.
+
+<Answer>
+
+**Rate: increases.** The catalyst offers an alternative pathway with a *lower activation energy*, so a larger fraction of collisions has enough energy to react.
+
+**$\Delta H$: unchanged.** Reactants and products sit at the same energies as before; only the barrier between them is lowered.
+
+**Equilibrium position: unchanged.** The forward and reverse reactions are sped up by the same factor, so equilibrium is reached sooner but lies in exactly the same place.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for both intermediates; 1 point for saying that each is produced, then consumed.</RubricLine>
+<RubricLine part="b" points={3}>1 point for a rate law taken from the slow step; 1 point for $k[\ce{N2O5}]$; 1 point for noting that coefficients are usable only because the step is elementary.</RubricLine>
+<RubricLine part="c" points={3}>1 point for three peaks with intermediates in the valleys between; 1 point for saying that step 1 has the largest activation energy; 1 point for linking that to the slow step.</RubricLine>
+<RubricLine part="d" points={2}>1 point for a lower activation energy by an alternative path; 1 point for $\Delta H$ and the equilibrium position both unchanged. "It lowers the energy of the reactants" earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={3} title="First-order half-life" topic="5.3" points={4}>
+
+A first-order decomposition has $k = 1.5 \times 10^{-3}\ \text{s}^{-1}$ and an initial concentration of 0.80 M.
+
+<Part label="a">
+
+Calculate the half-life.
+
+<Answer>
+
+$$
+\begin{aligned}
+t_{1/2} &= \frac{0.693}{1.5 \times 10^{-3}} \\
+&= \mathbf{4.6 \times 10^{2}}\ \text{s}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+State the concentration remaining after three half-lives, and explain why each successive half-life takes the same time.
+
+<Answer>
+
+$$
+0.80 \to 0.40 \to 0.20 \to \mathbf{0.10}\ \text{M}
+$$
+
+For a first-order reaction the half-life depends only on $k$, not on concentration: as the concentration falls the rate falls in exact proportion, so every halving takes the same interval.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the relationship; 1 point for $4.6 \times 10^{2}\ \text{s}$.</RubricLine>
+<RubricLine part="b" points={2}>1 point for 0.10 M; 1 point for a half-life independent of concentration for first order.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={4} title="Relating the rates of different species" topic="5.1" points={4}>
+
+Oxygen is consumed at 0.0075 M/s in this reaction:
+
+$$
+\ce{2NO(g) + O2(g) -> 2NO2(g)}
+$$
+
+<Part label="a">
+
+Determine the rate at which $\ce{NO}$ is consumed and the rate at which $\ce{NO2}$ is formed.
+
+<Answer>
+
+Rates scale with the coefficients. $\ce{NO}$ is consumed at:
+
+$$
+2(0.0075) = \mathbf{0.015}\ \text{M/s}
+$$
+
+$\ce{NO2}$ is formed at:
+
+$$
+2(0.0075) = \mathbf{0.015}\ \text{M/s}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Explain why dividing each concentration change by its coefficient gives the same number for every species.
+
+<Answer>
+
+Because the coefficients set the fixed proportions in which the species are consumed and produced. Dividing out those proportions leaves a single rate describing the reaction as a whole, independent of which species was monitored.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for each rate, with signs or wording showing consumption versus formation.</RubricLine>
+<RubricLine part="b" points={2}>1 point for dividing by coefficients; 1 point for saying that this gives one rate for the reaction.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={5} title="The collision model" topic="5.5, 5.6" points={4}>
+
+<Part label="a">
+
+State the two conditions a collision must meet to produce reaction.
+
+<Answer>
+
+Energy at least equal to the activation energy, and correct **orientation** of the colliding molecules.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+A rise of 10 °C near room temperature can roughly double a reaction rate, although it raises the average molecular speed by less than 2 percent. Explain.
+
+<Answer>
+
+What matters is the *fraction* of collisions carrying at least the activation energy, and that fraction lies far out in the high-energy tail of the distribution of molecular energies.
+
+Warming shifts and broadens the whole distribution. Near the average that is a small change, but in the tail the population rises steeply, so the number of molecules above the threshold can easily double. The increase in collision *frequency* is minor by comparison.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for each condition.</RubricLine>
+<RubricLine part="b" points={2}>1 point for saying that the fraction above the activation energy rises sharply; 1 point for saying that this outweighs the change in collision frequency. "Molecules move faster and collide more" alone earns 1 point.</RubricLine>
+</Rubric>
+
+</Question>

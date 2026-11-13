@@ -2963,6 +2963,8 @@ Branch `topic/practice-ladders-frq`, from an up-to-date `main`.
 
 ### Task 7: Convert the skill ladders and the free-response set
 
+> **As carried out (2026-11-13).** Both drafts were written in the scratch folder while the second group was being checked, then copied in on a branch stacked on the second group's. Fact-checks ran on Opus: every number correct, nothing lost in conversion. Corrections to the originals: ladder 8 gave two different rules for the slow step and now gives lesson 5.10's in all three places; ladder 7's opening sentence contradicted its own parts b and c; ladder 9 and free-response question 2 stated the slow-step rule without lesson 5.8's limit; free-response question 1(d) said orders match coefficients "only when the reaction is genuinely elementary", which that very reaction contradicts. **Left as the teacher wrote them, and put to the teacher in pull request 14:** two scoring decisions in the free-response rubrics (question 5(b), 1 point for "molecules move faster and collide more" alone; question 4(b), a point for dividing by coefficients). No question on either page practices topic 5.9, so both drop it from their topics and lesson 5.9's "Practice next" lists Worksheet 4 only. `topicsLabel` learned to write a list with a gap as ranges ("Topics 5.1–5.8, 5.10–5.11"). The long summed equation in ladder 9 is split at the arrow, as lesson 5.7 splits it. Totals: 327 unit tests and 372 browser tests.
+
 **Files:**
 - Create: `src/content/practice/unit-5/skill-ladders.mdx`
 - Create: `src/content/practice/unit-5/free-response-set.mdx`
