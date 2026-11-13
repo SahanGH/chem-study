@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="system-ui, sans-serif" font-size="14">
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#26231F"/>
+    </marker>
+  </defs>
+  <rect width="480" height="300" fill="#FDFCF9"/>
+  <path d="M160 24V272M320 24V272" fill="none" stroke="#6B655D" stroke-width="1" stroke-opacity="0.35"/>
+
+  <text x="80" y="40" text-anchor="middle" fill="#26231F" font-weight="600">Unimolecular</text>
+  <circle cx="68" cy="92" r="18" fill="#4F706C"/>
+  <path d="M68 116V162" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="82" y="136" fill="#6B655D">breaks</text>
+  <text x="82" y="154" fill="#6B655D">apart</text>
+  <circle cx="46" cy="190" r="12" fill="#4F706C"/>
+  <circle cx="90" cy="190" r="12" fill="#4F706C"/>
+  <text x="80" y="238" text-anchor="middle" fill="#26231F">1 particle</text>
+
+  <text x="240" y="40" text-anchor="middle" fill="#26231F" font-weight="600">Bimolecular</text>
+  <circle cx="188" cy="135" r="16" fill="#4F706C"/>
+  <circle cx="292" cy="135" r="16" fill="#4F706C"/>
+  <path d="M210 135H234" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M270 135H246" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="240" y="238" text-anchor="middle" fill="#26231F">2 particles</text>
+
+  <text x="400" y="40" text-anchor="middle" fill="#26231F" font-weight="600">Termolecular</text>
+  <circle cx="400" cy="85" r="14" fill="#4F706C"/>
+  <circle cx="352" cy="168" r="14" fill="#4F706C"/>
+  <circle cx="448" cy="168" r="14" fill="#4F706C"/>
+  <path d="M400 104V130" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M368.4 158.4L391.4 145" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M431.6 158.4L408.6 145" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="400" y="238" text-anchor="middle" fill="#26231F">3 particles</text>
+  <text x="400" y="260" text-anchor="middle" fill="#4F706C" font-weight="600">rare</text>
+</svg>
