@@ -1,0 +1,159 @@
+---
+topic: "5.6"
+minutes: 10
+summary: "How to read an energy profile: the reactants, the transition state, the products, the activation energy and the overall energy change."
+---
+
+Picture a ball resting high on a hillside. Next to it is a valley much lower than the spot where the ball sits, but a ridge stands in between. The ball will not roll into that valley on its own, however deep the valley is. Somebody has to push it over the ridge first. A reaction is the same. The products may be lower in energy, and the reactants still have to climb before they can get there. An **energy profile** is a picture of that climb.
+
+## The path over the hill
+
+Take one elementary step, the single event from topic 5.4, and slow it down. In most steps some bonds break and new ones form. That does not happen in a snap. As the particles come together, the old bonds stretch and weaken while the new ones begin to form.
+
+Partway through, the atoms are caught in an awkward arrangement that is neither the reactants nor the products. Old bonds are partly broken. New bonds are partly made. This arrangement is called the **transition state**: the highest-energy arrangement of atoms on the path from reactants to products. It lasts only an instant. You cannot collect it or keep it in a bottle.
+
+An energy profile is a graph of that journey. The vertical axis is energy (exam graphs often label it potential energy). The horizontal axis is the **reaction coordinate**, also called the reaction progress, which measures how far along the rearrangement the particles are. It is not time. A point further to the right is further along the change from reactants to products, and the graph says nothing about how many seconds that takes.
+
+<Figure
+  src="/figures/5-6-energy-profile.svg"
+  alt="Energy profile of an exothermic step. The curve starts at the reactants, rises to a peak marked transition state and falls to the products, which are lower than the reactants. Arrows show the forward activation energy from the reactants up to the peak, the reverse activation energy from the products up to the peak, and the overall energy change between reactants and products."
+  caption="The activation energy is the climb from where you start to the top of the hill."
+/>
+
+Read the curve from left to right. It starts level, at the energy of the reactants. It climbs to a peak, which is the transition state. Then it falls to the energy of the products. In this figure the products finish lower than the reactants started.
+
+<Check answer={1}>
+Which describes a transition state?
+
+- The highest-energy arrangement of atoms along the path, which cannot be isolated
+- A substance that forms in one step and is used up in a later one
+- The reactants at the moment they are mixed
+- The products just after they form
+
+<div slot="why">It is the top of the hill, where bonds are partly broken and partly formed. It lasts for an instant and cannot be collected. The second option describes an intermediate, which topic 5.7 covers.</div>
+</Check>
+
+## Reading a profile
+
+Topic 5.5 gave a name to the minimum energy a collision needs: the activation energy. A profile shows you where that number comes from. The **activation energy** of the forward reaction, $E_a$, is the energy of the transition state minus the energy of the reactants. It is the height of the climb.
+
+That is one of three numbers you can read off a profile. Each one is the gap between two levels.
+
+- **Forward activation energy, $E_a$:** transition state minus reactants. This is the climb when the reaction runs from left to right.
+- **Reverse activation energy:** transition state minus products. This is the climb when the reaction runs backward, from the products up to the same peak.
+- **Overall energy change, $\Delta E$:** products minus reactants.
+
+The sign of $\Delta E$ tells you which way the energy goes. A step that releases energy is **exothermic**: its products are lower than its reactants, so $\Delta E$ is negative. A step that absorbs energy is **endothermic**: its products are higher than its reactants, so $\Delta E$ is positive. The figure shows an exothermic step. On the exam the same gap is often labeled $\Delta H$. Read it the same way: products minus reactants.
+
+The three numbers are linked. Going forward, the particles climb by the forward activation energy and then drop by the reverse one. Where they finish, compared with where they started, is the overall change. Write $E_{a,\text{fwd}}$ for the forward activation energy and $E_{a,\text{rev}}$ for the reverse one:
+
+$$
+\Delta E = E_{a,\text{fwd}} - E_{a,\text{rev}}
+$$
+
+Know any two of the three and you can find the third.
+
+The activation energy and the overall energy change answer different questions.
+
+<KeyIdea>
+
+At a given temperature, the activation energy decides how fast a reaction goes. The overall energy change decides how much energy it releases or absorbs. Neither one tells you the other.
+
+</KeyIdea>
+
+Paper shows the difference. Burning it releases a lot of energy, yet a sheet of paper can sit in air for years without catching fire. The drop is large, but so is the hill in front of it.
+
+<Worked title="Three numbers from one profile">
+
+On the energy profile of one step, the reactants are at 40 kJ/mol, the transition state is at 165 kJ/mol and the products are at 15 kJ/mol. Find the forward activation energy, the overall energy change and the reverse activation energy.
+
+1. **The forward activation energy.** Start at the reactants and climb to the transition state.
+
+   $$
+   E_{a,\text{fwd}} = 165 - 40 = 125\ \text{kJ/mol}
+   $$
+
+2. **The overall energy change.** Take the products minus the reactants.
+
+   $$
+   \Delta E = 15 - 40 = -25\ \text{kJ/mol}
+   $$
+
+   The products are lower than the reactants, so the sign is negative and the step is exothermic.
+
+3. **The reverse activation energy.** Start at the products and climb to the same transition state.
+
+   $$
+   E_{a,\text{rev}} = 165 - 15 = 150\ \text{kJ/mol}
+   $$
+
+Check the three numbers against each other: $125 - 150 = -25$, which is the overall energy change. They agree.
+
+</Worked>
+
+<Check numeric="110" unit="kJ/mol">
+A step has a forward activation energy of 80 kJ/mol and releases 30 kJ/mol overall. What is the activation energy of the reverse step?
+
+<div slot="why">The products are 30 kJ/mol below the reactants, so the climb back up to the transition state is $80 + 30 = 110\ \text{kJ/mol}$.</div>
+</Check>
+
+<Check numeric="55" unit="kJ/mol">
+A step has a forward activation energy of 95 kJ/mol and absorbs 40 kJ/mol overall. What is the activation energy of the reverse step?
+
+<div slot="why">The products are 40 kJ/mol above the reactants, so the climb back from the products to the transition state is shorter: $95 - 40 = 55\ \text{kJ/mol}$.</div>
+</Check>
+
+## Why the height of the hill matters
+
+Topic 5.5 set an energy condition: a collision can lead to products only if it has at least the activation energy. On a profile you can see why. A collision with less energy than $E_a$ cannot lift the atoms to the transition state, so they come apart again as reactants. Only a collision with at least $E_a$ can reach the top.
+
+So the height of the hill, which chemists also call the energy barrier, controls how fast the reaction goes. Two things follow.
+
+- **A higher hill means a slower reaction.** At a given temperature, a smaller share of the collisions has enough energy to climb it.
+- **A higher temperature means a faster reaction.** The hill stays the same height, but a larger share of the collisions now has enough energy to climb it.
+
+This is why the rate constant $k$ from topic 5.2 depends on temperature. Warm the reaction and $k$ goes up. It does not depend on the concentrations: adding more reactant changes the concentrations in the rate law, and $k$ stays where it was. A catalyst changes $k$ too, because it gives the reaction a different path with a lower hill. Topic 5.11 covers that.
+
+One equation ties $k$, the activation energy and the temperature together. It is called the **Arrhenius equation**:
+
+$$
+k = Ae^{-E_a/RT}
+$$
+
+Here $T$ is the temperature in kelvins, $R$ is the gas constant and $A$ is a constant for the particular reaction. Read the equation for what it shows. $E_a$ is in the exponent with a minus sign in front of it, so a larger $E_a$ makes $k$ smaller. $T$ is on the bottom of that same fraction, so a higher $T$ makes the exponent less negative and $k$ larger. In short, $k$ falls as $E_a$ rises, and $k$ rises as $T$ rises. Those are the two statements in the list above, written as one equation.
+
+**Beyond the exam:** calculating with the Arrhenius equation is not assessed on the AP Exam, so learn what the equation shows and leave the number work alone.
+
+<Check answer={3}>
+Two reactions run at the same temperature and are alike except for their activation energies: 50 kJ/mol for X and 90 kJ/mol for Y. Which is faster?
+
+- Y, because it has more energy
+- They are equally fast, because the temperature is the same
+- X, because more collisions can get over its lower barrier
+- It depends on which releases more energy
+
+<div slot="why">At one temperature the spread of collision energies is the same for both, so the lower barrier is crossed by a larger fraction of collisions.</div>
+</Check>
+
+<Trap>
+
+Four common mistakes on this topic:
+
+- **Measuring $E_a$ from zero.** The activation energy is measured up from the level of the reactants, not from the bottom of the energy axis. It is a gap between two levels.
+- **Reading speed from $\Delta E$.** A big drop in energy does not make a reaction fast. A very exothermic reaction can be very slow. The speed comes from $E_a$.
+- **Calling the transition state an intermediate.** A peak on the profile is not a substance you can find in the flask. It is an arrangement of atoms that lasts for an instant at the top of the hill.
+- **Reading the horizontal axis as time.** The axis shows progress along the rearrangement, from reactants to products. A wide hill does not mean a slow reaction.
+
+</Trap>
+
+<KeyPoints>
+
+- An energy profile plots energy against reaction progress. The curve runs from the reactants, up over the transition state and down to the products.
+- The activation energy $E_a$ is the energy of the transition state minus the energy of the reactants.
+- The overall energy change $\Delta E$ is the energy of the products minus the energy of the reactants. It is negative for an exothermic step and positive for an endothermic one, and it equals the forward activation energy minus the reverse activation energy.
+- At a given temperature, a larger $E_a$ means a slower reaction, because a smaller share of the collisions has enough energy to reach the transition state.
+- Raising the temperature raises the rate constant $k$. The Arrhenius equation, $k = Ae^{-E_a/RT}$, shows both effects: $k$ falls as $E_a$ rises and rises as $T$ rises.
+
+</KeyPoints>
+
+<PracticeNext />
