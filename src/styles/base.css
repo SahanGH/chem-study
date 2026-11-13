@@ -169,8 +169,10 @@ main,
   background: var(--card);
 }
 /* The pre-paint script in Base.astro always sets data-theme on <html>, so a
-   missing data-theme means scripts are off and the toggle could do nothing. */
-html:not([data-theme]) [data-theme-toggle] {
+   missing data-theme means scripts are off and the theme toggle and the
+   search button could do nothing. */
+html:not([data-theme]) [data-theme-toggle],
+html:not([data-theme]) [data-search-open] {
   display: none;
 }
 

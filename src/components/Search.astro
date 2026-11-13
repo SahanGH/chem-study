@@ -11,15 +11,17 @@
   </form>
   <div id="search-ui"></div>
   <p class="search-note" data-search-note hidden>
-    Search could not load. It is built with the published site, so it is unavailable in local
-    development until you run a build.
-  </p>
+    Search could not load. Check your connection and try again.
+</p>
 </dialog>
 
 <script>
   const dialog = document.querySelector<HTMLDialogElement>('[data-search-dialog]');
   const note = document.querySelector<HTMLElement>('[data-search-note]');
+  const searchUi = document.querySelector<HTMLElement>('#search-ui');
   let started = false;
+  // Everything start() adds to the page, so a failed attempt can be undone.
+  let injected: HTMLElement[] = [];
 
   function loadScript(src: string): Promise<void> {
     return new Promise((resolve, reject) => {
@@ -27,6 +29,7 @@
       script.src = src;
       script.onload = () => resolve();
       script.onerror = () => reject(new Error(`Could not load ${src}`));
+      injected.push(script);
       document.head.append(script);
     });
   }
@@ -36,18 +39,27 @@
   async function start(): Promise<void> {
     if (started) return;
     started = true;
+    if (note) note.hidden = true;
     const css = document.createElement('link');
     css.rel = 'stylesheet';
     css.href = '/pagefind/pagefind-ui.css';
+    injected.push(css);
     document.head.append(css);
     try {
       await loadScript('/pagefind/pagefind-ui.js');
-      const PagefindUI = (window as unknown as { PagefindUI: new (options: object) => unknown })
+      const PagefindUI = (window as unknown as { PagefindUI?: new (options: object) => unknown })
         .PagefindUI;
+      if (!PagefindUI) throw new Error('pagefind-ui.js loaded but did not define PagefindUI');
       new PagefindUI({ element: '#search-ui', showImages: false, showSubResults: true });
       dialog?.querySelector<HTMLInputElement>('.pagefind-ui__search-input')?.focus();
     } catch (error) {
       console.error(error);
+      // A dropped connection is usually temporary, so leave nothing behind that
+      // would make the next open skip the request.
+      for (const element of injected) element.remove();
+      injected = [];
+      searchUi?.replaceChildren();
+      started = false;
       if (note) note.hidden = false;
     }
   }
@@ -75,8 +87,11 @@
     const typing =
       target instanceof HTMLInputElement ||
       target instanceof HTMLTextAreaElement ||
+      target instanceof HTMLSelectElement ||
       (target instanceof HTMLElement && target.isContentEditable);
-    if (event.key === '/' && !typing) {
+    // Ctrl, Cmd and Alt with a slash belong to the browser or the system.
+    const modified = event.ctrlKey || event.metaKey || event.altKey;
+    if (event.key === '/' && !typing && !modified && !event.defaultPrevented) {
       event.preventDefault();
       open();
     }

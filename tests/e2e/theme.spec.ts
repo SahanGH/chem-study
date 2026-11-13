@@ -89,6 +89,14 @@ test.describe('with JavaScript off', () => {
     await expect(page.getByRole('link', { name: 'ChemStudy home' })).toBeVisible();
     await expect(page.locator('footer')).toBeVisible();
   });
+
+  test('the search button is hidden but the navigation links stay', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.getByRole('button', { name: 'Search' })).toBeHidden();
+    const nav = page.getByRole('navigation', { name: 'Main' });
+    await expect(nav.getByRole('link', { name: 'Units' })).toBeVisible();
+    await expect(nav.getByRole('link', { name: 'About' })).toBeVisible();
+  });
 });
 
 test.describe('printing from the dark theme', () => {
