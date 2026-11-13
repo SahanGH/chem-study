@@ -33,31 +33,28 @@ for (const theme of ['light', 'dark'] as const) {
   });
 }
 
-test('an equation is keyboard-focusable exactly while it is wider than the screen', async ({ page }) => {
-  const focusable = page.locator('.katex-display[tabindex="0"]');
-  // Equations stay on one line, so even at 1280px the long worked-example
-  // equation overflows its column; the claim is "exactly the ones that overflow".
-  const overflowing = async () => {
-    await page.evaluate(() => document.fonts.ready);
-    return page
-      .locator('.katex-display')
-      .evaluateAll((all) => all.filter((equation) => equation.scrollWidth > equation.clientWidth).length);
-  };
+test('an equation is keyboard-focusable exactly while it is wider than its space', async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto('/unit-5-kinetics/5-2-rate-law/');
-  const wideCount = await overflowing();
-  await expect(focusable).toHaveCount(wideCount);
+  await page.evaluate(() => document.fonts.ready);
+  const equation = page.locator('.katex-display').first();
+  const setMaxWidth = (value: string) =>
+    equation.evaluate((element, width) => {
+      if (!(element instanceof HTMLElement)) throw new Error('The equation is not an HTML element.');
+      element.style.maxWidth = width;
+    }, value);
+  await expect(equation).not.toHaveAttribute('tabindex');
 
-  await page.setViewportSize({ width: 320, height: 700 });
-  const narrowCount = await overflowing();
-  expect(narrowCount).toBeGreaterThan(wideCount);
-  await expect(focusable).toHaveCount(narrowCount);
-  await expect(focusable.first()).toHaveAttribute('aria-label', /scrolls sideways/);
-  await focusable.first().focus();
-  await expect(focusable.first()).toBeFocused();
+  // Squeeze it until it must scroll, whatever the lesson's equations are today.
+  await setMaxWidth('4rem');
 
-  await page.setViewportSize({ width: 1280, height: 900 });
-  await expect(focusable).toHaveCount(wideCount);
+  await expect(equation).toHaveAttribute('tabindex', '0');
+  await expect(equation).toHaveAttribute('aria-label', /scrolls sideways/);
+  await equation.focus();
+  await expect(equation).toBeFocused();
+
+  await setMaxWidth('');
+  await expect(equation).not.toHaveAttribute('tabindex');
 });
 
 test.describe('a table in a lesson', () => {

@@ -39,6 +39,27 @@ for (const path of paths) {
   });
 }
 
+for (const path of paths) {
+  // A long equation written inside a sentence cannot wrap or scroll, so it
+  // pushes the whole page sideways. Such an equation belongs on its own line.
+  test(`${path} does not scroll sideways on the narrowest phones`, async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 700 });
+    await page.goto(path);
+    await page.evaluate(() => document.fonts.ready);
+    // A closed "Show answer" takes no space, so its math would not be
+    // measured. Open them all: a student will.
+    await page.evaluate(() => {
+      for (const details of document.querySelectorAll('details')) details.open = true;
+    });
+
+    const overflow = await page.evaluate(
+      () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+    );
+
+    expect(overflow).toBeLessThanOrEqual(0);
+  });
+}
+
 test('search finds every published Unit 5 lesson by its title', async ({ page }) => {
   test.slow();
   await page.goto(UNIT);

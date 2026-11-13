@@ -29,6 +29,86 @@ test('the unit page lists every topic and links the ones that have lessons', asy
   await expect(page).toHaveURL(/\/unit-5-kinetics\/5-2-rate-law\/$/);
 });
 
+const PROGRESS_KEY = 'chemstudy:progress:v1';
+const RATE_LAW = '/unit-5-kinetics/5-2-rate-law/';
+
+test.describe('the home page for a returning student', () => {
+  test('offers to continue a lesson that was opened and not finished', async ({ page }) => {
+    await page.goto(RATE_LAW);
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+
+    await page.goto('/');
+
+    const offer = page.locator('[data-continue]');
+    await expect(offer).toContainText('Continue where you left off:');
+    await expect(offer.getByRole('link')).toHaveText('Introduction to Rate Law');
+    await expect(offer.getByRole('link')).toHaveAttribute('href', RATE_LAW);
+  });
+
+  test('offers the next unfinished lesson once the last one opened is done', async ({ page }) => {
+    await page.goto('/');
+    await page.evaluate(
+      ([key, path]) =>
+        localStorage.setItem(
+          key,
+          JSON.stringify({ answered: {}, done: ['5.2', '5.3'], last: { path, title: 'Introduction to Rate Law' } }),
+        ),
+      [PROGRESS_KEY, RATE_LAW],
+    );
+
+    await page.reload();
+
+    const offer = page.locator('[data-continue]');
+    await expect(offer).toContainText('Next up:');
+    await expect(offer.getByRole('link')).toHaveText('Elementary Reactions');
+    await expect(offer.getByRole('link')).toHaveAttribute('href', '/unit-5-kinetics/5-4-elementary-reactions/');
+  });
+
+  test('offers nothing once every lesson is done', async ({ page }) => {
+    await page.goto('/unit-5-kinetics/');
+    const topics = await page
+      .locator('.topic-list > li')
+      .evaluateAll((items) => items.map((item) => item.getAttribute('data-topic-link') ?? ''));
+    expect(topics.length).toBeGreaterThan(0);
+    await page.evaluate(
+      ([key, path, done]) =>
+        localStorage.setItem(
+          key,
+          JSON.stringify({ answered: {}, done: JSON.parse(done), last: { path, title: 'Introduction to Rate Law' } }),
+        ),
+      [PROGRESS_KEY, RATE_LAW, JSON.stringify(topics)],
+    );
+
+    await page.goto('/');
+
+    await expect(page.locator('.unit-row[data-unit="5"] [data-unit-progress]')).toContainText('done');
+    await expect(page.locator('[data-continue]')).toBeHidden();
+  });
+
+  test('offers nothing when the last page opened is not a lesson any more', async ({ page }) => {
+    await page.goto('/');
+    await page.evaluate(
+      (key) =>
+        localStorage.setItem(
+          key,
+          JSON.stringify({
+            answered: {},
+            done: ['5.1'],
+            last: { path: '/unit-5-kinetics/a-lesson-that-moved/', title: 'Gone' },
+          }),
+        ),
+      PROGRESS_KEY,
+    );
+
+    await page.reload();
+
+    // The offer starts hidden, so first wait for proof that the script has
+    // painted this page: the unit row picks up the finished lesson.
+    await expect(page.locator('.unit-row[data-unit="5"] [data-unit-progress]')).toContainText('1 done');
+    await expect(page.locator('[data-continue]')).toBeHidden();
+  });
+});
+
 test('a finished topic shows as done on the unit page and the home page offers to continue', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('[data-continue]')).toBeHidden();
@@ -45,7 +125,9 @@ test('a finished topic shows as done on the unit page and the home page offers t
   await expect(page.locator('[data-topic-link="5.2"]')).toHaveClass(/is-done/);
 
   await page.goto('/');
-  await expect(page.locator('[data-continue] a')).toHaveText('Introduction to Rate Law');
+  // 5.2 is done, so the offer moves on to the lesson after it.
+  await expect(page.locator('[data-continue]')).toContainText('Next up:');
+  await expect(page.locator('[data-continue] a')).toHaveText('Concentration Changes over Time');
   await expect(page.locator('.unit-row[data-unit="5"] .unit-meta')).toHaveText(UNIT_5_READY_ONE_DONE);
 });
 

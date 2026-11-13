@@ -67,8 +67,13 @@
    smaller, and letting those in a numbered step start at the card's edge
    instead of the step's indent, fits most of them on the screen. */
 @media (max-width: 30rem) {
+  /* Shrinks with the screen: about 1.1em on a 412px phone, a little under
+     the text's own size at 360px, about 0.84em at 320px, and never below
+     0.82em. Measured on all
+     eleven Unit 5 lessons (2026-11-13): no display equation scrolls at 360px
+     or wider, and three scroll by a few pixels at 320px. */
   .katex-display > .katex {
-    font-size: 1.1em;
+    font-size: clamp(0.82em, 4.78vw - 1px, 1.1em);
   }
   /* Only the numbered steps of a worked example. 1.3em is the list's own
      indent (":where(.prose) ol" above), so the equation starts at the card's
@@ -76,17 +81,25 @@
   .worked li .katex-display {
     margin-inline-start: -1.3em;
   }
-  /* Narrower gutters, so a three-column table with an equation in it fits. */
+  /* Narrower gutters and slightly smaller math, so a three-column table with
+     an equation in it fits. */
   .prose th,
   .prose td {
     padding-inline: 0.5rem;
   }
+  .prose td .katex,
+  .prose th .katex {
+    font-size: 1.05em;
+  }
 }
-/* An equation in a table cell stays on one line, for the same reason a
-   display equation does. A table that becomes too wide scrolls in its box,
-   and scrolling-equations.ts makes that box reachable from the keyboard. */
-.prose td .katex,
-.prose th .katex {
+/* Math inside a sentence or a table cell stays on one line. KaTeX would
+   otherwise break it at an operator, which strands a number away from its
+   power of ten ("4.8 ×" at the end of one line, "10⁻⁵" at the start of the
+   next). A table that becomes too wide scrolls in its box, and
+   scrolling-equations.ts makes that box reachable from the keyboard. Math in
+   a sentence cannot scroll, so a long equation belongs on its own line;
+   all-lessons.spec.ts fails a lesson whose page scrolls sideways at 320px. */
+.prose .katex {
   white-space: nowrap;
 }
 
