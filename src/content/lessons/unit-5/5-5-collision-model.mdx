@@ -1,0 +1,137 @@
+---
+topic: "5.5"
+minutes: 10
+summary: Why most collisions between molecules lead nowhere, and how energy, orientation and temperature decide which ones count.
+---
+
+In a flask of gas at room temperature and ordinary pressure, each molecule runs into another one billions of times every second. If every one of those collisions led to a reaction, almost every gas reaction would be over in an instant. Most are not. Nearly all collisions fail, and this lesson is about why.
+
+## Two conditions
+
+Two particles cannot react without meeting. For an elementary step between two particles, that means they have to collide. But a collision is only a chance to react, and most chances are wasted. A collision leads to products only if it passes two tests.
+
+The first test is energy. Rearranging bonds starts with pulling some of them apart, and that takes energy. The **activation energy**, written $E_a$, is the minimum energy a collision needs for the bonds to start rearranging. A collision with less than that is like two rubber balls meeting. The particles bounce apart unchanged.
+
+The second test is aim. The **orientation** of a collision is the way the particles are turned toward each other when they meet. The atoms that are going to bond have to touch. Here is an elementary step:
+
+$$
+\ce{NO(g) + O3(g) -> NO2(g) + O2(g)}
+$$
+
+An oxygen atom leaves the ozone and bonds to the nitrogen atom of NO. So the nitrogen atom of NO has to meet an oxygen atom at one end of $\ce{O3}$. If the oxygen end of NO strikes the ozone instead, nothing happens, however hard the collision is. It is like pushing a key into a lock upside down. Pushing harder does not help.
+
+<KeyIdea>
+
+A collision counts only if it is hard enough and aimed right. Miss either one and the particles bounce apart unchanged.
+
+</KeyIdea>
+
+<Check answer={2}>
+Two molecules collide with more than the activation energy but do not react. What is the most likely reason?
+
+- The temperature is too low.
+- They met in the wrong orientation.
+- The activation energy rose during the collision.
+- The collision was too slow.
+
+<div slot="why">Energy was not the problem, so the other condition failed. The atoms that needed to meet were not facing each other.</div>
+</Check>
+
+## How many collisions have enough energy
+
+Orientation depends on shape. Energy depends on temperature, and the easiest way to see how is with a graph.
+
+The particles in a sample do not all have the same energy. They keep colliding and passing energy back and forth, so at any temperature there is a spread: a few slow particles, most somewhere in the middle and a few fast ones. The **Maxwell–Boltzmann distribution** is the curve that shows how many particles have each energy. It starts at zero, climbs to a peak and then trails off in a long tail toward high energy.
+
+Now mark the activation energy on the energy axis. Only the particles to the right of that mark have enough energy to react. Area under the curve stands for particles, so the particles with enough energy to react are the area under the curve beyond $E_a$. Often that is only a thin slice of the tail.
+
+Strictly, the curve counts particles, not collisions. But a collision gets its energy from the particles in it, so the share of particles beyond $E_a$ is a good rough estimate of the share of collisions with enough energy.
+
+Warm the sample and the average energy of its particles goes up. The curve changes shape: it gets lower and stretches out to the right. Two things do not change. The total area under the curve is the same, because the number of particles has not changed. The activation energy is in the same place, because it belongs to the reaction and not to the temperature. What changes is how much of the curve lies beyond $E_a$. That area is now much larger.
+
+<Figure
+  src="/figures/5-5-energy-distribution.svg"
+  alt="Two curves of number of particles against energy. At the lower temperature the curve is tall with its peak at low energy. At the higher temperature the curve is lower and wider, with its peak at higher energy. A vertical line marks the activation energy. The area under each curve beyond that line is shaded, and it is much larger for the higher temperature."
+  caption="Only the particles beyond the activation energy have enough energy to react. Warming the sample puts many more of them there."
+/>
+
+<Check answer={3}>
+A sample is warmed. What happens to its Maxwell–Boltzmann curve?
+
+- The whole curve moves up.
+- The area under the curve grows.
+- The peak gets lower and moves to higher energy.
+- The activation energy moves to the left.
+
+<div slot="why">The same particles are spread over a wider range of energies, so the peak is lower and further right while the total area stays the same. The activation energy belongs to the reaction and does not move.</div>
+</Check>
+
+<Worked title="Why ten degrees matters so much">
+
+Warming many reactions from 25 °C to 35 °C roughly doubles their rate. Is that because the particles collide more often?
+
+"Roughly doubles" is a rule of thumb for many reactions near room temperature. It is not a law. Some reactions speed up more than that and some less.
+
+1. **Find how much faster the particles move.** For a gas, the average speed of the particles is proportional to the square root of the kelvin temperature. On the kelvin scale, 25 °C is 298 K and 35 °C is 308 K.
+
+   $$
+   \sqrt{\frac{308\ \text{K}}{298\ \text{K}}} = 1.017
+   $$
+
+   The particles move about 1.7 percent faster, so in the same volume they collide about 1.7 percent more often.
+
+2. **Ask whether that is enough.** Doubling a rate is a rise of 100 percent. A 1.7 percent rise in collisions cannot do that.
+
+3. **Find what else changed.** It is the fraction of collisions with energy beyond $E_a$. That part of the curve is a thin tail, and a thin tail is sensitive. Stretch the curve a little to the right and the area beyond $E_a$ can double, even though the rest of the curve looks almost the same.
+
+Temperature speeds reactions up mainly by making more of the collisions energetic enough. Making more collisions is only a small part of it.
+
+</Worked>
+
+## Putting it together
+
+Three things decide how many collisions each second lead to products: how many collisions there are, what fraction of them have enough energy and what fraction are aimed right. Each one answers to something different.
+
+| Factor | What it does to collisions |
+|---|---|
+| Raise a concentration | More collisions per second |
+| Raise the temperature | A much larger fraction of collisions with enough energy (and slightly more collisions) |
+| The orientation requirement | A fixed fraction of collisions aimed right, set by the shapes of the particles |
+
+The first two rows are changes you can make in the lab. The third is not a change at all. It comes with the particles.
+
+The first row is also why the rate law of an elementary step in topic 5.4 has concentrations in it. More particles in the same space means more collisions.
+
+<Check answer={1}>
+Doubling the concentration of a gas reactant speeds a reaction up because:
+
+- Its particles collide more often.
+- A larger fraction of collisions have enough energy.
+- The activation energy falls.
+- The particles line up better.
+
+<div slot="why">Concentration changes how often particles meet. It does not change how hard they hit, the activation energy or their shapes.</div>
+</Check>
+
+<Trap>
+
+Four common mistakes on this topic:
+
+- **Stopping at "hotter means more collisions".** Warming a sample does raise the number of collisions, but only slightly. The large rise is in the fraction of collisions with enough energy.
+- **Thinking the activation energy changes with temperature.** It does not. Warming changes the energies of the particles, not the energy the reaction demands.
+- **Thinking the area under the curve grows.** The sample holds the same particles, so the total area is the same. Only the share of it beyond $E_a$ grows.
+- **Forgetting orientation.** Enough energy is necessary, but it is not sufficient. The particles also have to meet the right way around.
+
+</Trap>
+
+<KeyPoints>
+
+- Two particles must collide in order to react, but most collisions do not lead to products.
+- A collision succeeds only if it has at least the activation energy, $E_a$, and the particles meet in an orientation that lets the bonds rearrange.
+- The Maxwell–Boltzmann distribution shows how the energies of the particles are spread out. The share of its area that lies beyond $E_a$ gives an estimate of the fraction of collisions with enough energy to react.
+- Raising the temperature makes that fraction much larger. The activation energy and the total area under the curve stay the same.
+- Raising a concentration raises the number of collisions each second. It does not change the fraction of them that succeed.
+
+</KeyPoints>
+
+<PracticeNext />

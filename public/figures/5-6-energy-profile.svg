@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="system-ui, sans-serif" font-size="14">
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#4F706C"/>
+    </marker>
+  </defs>
+  <rect width="480" height="300" fill="#FDFCF9"/>
+  <path d="M60 16V250H460" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <text x="260" y="284" text-anchor="middle" fill="#26231F">reaction progress</text>
+  <text x="26" y="133" text-anchor="middle" fill="#26231F" transform="rotate(-90 26 133)">energy</text>
+
+  <path d="M152 52H364" fill="none" stroke="#6B655D" stroke-width="1" stroke-dasharray="4 4"/>
+  <path d="M98 215H330" fill="none" stroke="#6B655D" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <path d="M70 170H175C212 170 222 52 250 52C278 52 290 215 330 215H450" fill="none" stroke="#26231F" stroke-width="3"/>
+
+  <path d="M165 110V53" fill="none" stroke="#4F706C" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <path d="M165 110V167.5" fill="none" stroke="#4F706C" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="157" y="115" text-anchor="end" fill="#26231F">E<tspan dy="4" font-size="10">a</tspan><tspan dy="-4" dx="4">(forward)</tspan></text>
+
+  <path d="M350 133V53" fill="none" stroke="#4F706C" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <path d="M350 133V212.5" fill="none" stroke="#4F706C" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="358" y="138" fill="#26231F">E<tspan dy="4" font-size="10">a</tspan><tspan dy="-4" dx="4">(reverse)</tspan></text>
+
+  <path d="M110 193V172.5" fill="none" stroke="#4F706C" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <path d="M110 193V214" fill="none" stroke="#4F706C" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="116" y="198" fill="#26231F">overall energy change, &#916;E</text>
+
+  <text x="250" y="36" text-anchor="middle" fill="#26231F">transition state</text>
+  <text x="72" y="160" fill="#26231F">reactants</text>
+  <text x="376" y="205" fill="#26231F">products</text>
+</svg>
