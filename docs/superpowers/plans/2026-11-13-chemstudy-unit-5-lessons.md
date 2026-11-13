@@ -1487,6 +1487,12 @@ Branch: `topic/unit-5-mechanisms`. Tasks 7, 8 and 9. These three lessons build o
 
 ## Group E: multistep profiles and catalysis (pull request 5)
 
+> **Plan 2 finished 2026-11-13.** All eleven Unit 5 lessons and the three diagrams are written, fact-checked and reviewed. The repository is the record of what shipped. Where the last group differs from the text below:
+>
+> - **The catalyst diagram** says "The catalyzed route (dashed curve) has an activation energy of 80 kJ/mol. The original route's is 120 kJ/mol." in place of "instead of", because the lesson teaches a different route, not the same hill made lower. Its slider's limits are named constants checked against the uncatalyzed value, and its tests now prove the dashed hill is lower and follows the slider.
+> - **Lessons 5.6 and 5.10 each gained a check** the briefs did not list: an endothermic step in 5.6, and building a profile from its steps in 5.10.
+> - **Close-out (Task 12) was run:** the Unit 5 row reads "11 lessons", the unit page links all eleven, previous and next links run in order, and each diagram was tried by touch on a phone.
+
 Branch: `topic/unit-5-catalysis`. Tasks 10, 11 and 12.
 
 ### Task 10: Lesson 5.10, Multistep Reaction Energy Profile
