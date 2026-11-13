@@ -2,8 +2,8 @@ import fs from 'node:fs';
 import { describe, expect, it } from 'vitest';
 
 // Apache is not available to the tests, so these only guard the rules that
-// have gone wrong before. Whether the server applies them is checked once, on
-// the first deploy (docs/DEPLOY.md).
+// have gone wrong before. What the live server sends was measured after the
+// first deploy and is recorded in docs/DEPLOY.md.
 const lines = fs
   .readFileSync(new URL('../../public/.htaccess', import.meta.url), 'utf8')
   .split(/\r?\n/)

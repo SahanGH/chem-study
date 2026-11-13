@@ -10,8 +10,9 @@ ErrorDocument 404 /404.html
 # (pages, the search scripts and index, figures) keeps its name from build to
 # build, so the browser must ask each time whether its copy is still current.
 #
-# SiteGround can serve stylesheets, scripts, fonts and images straight from
-# NGINX, which does not read this file; its own cache headers then apply.
+# This file is only obeyed while "NGINX Direct Delivery" is off in Site Tools
+# (Speed > Caching). With it on, NGINX serves stylesheets, scripts and images
+# itself with a one-year cache and never reads this. See docs/DEPLOY.md.
 <IfModule mod_setenvif.c>
   SetEnvIf Request_URI "^/_astro/" hashed
 </IfModule>
