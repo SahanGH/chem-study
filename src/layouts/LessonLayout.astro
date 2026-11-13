@@ -21,7 +21,11 @@ const published = unit.topics.filter((t) => lessons.has(t.code));
 const position = published.findIndex((t) => t.code === topic.code);
 const prev = published[position - 1];
 const next = published[position + 1];
-const pathFor = (code: string) => lessonPath(unit.slug, lessons.get(code)!);
+const pathFor = (code: string) => {
+  const target = lessons.get(code);
+  if (!target) throw new Error(`Topic ${code} has no published lesson, so there is no page to link to.`);
+  return lessonPath(unit.slug, target);
+};
 const sections = headings.filter((h) => h.depth === 2);
 ---
 
