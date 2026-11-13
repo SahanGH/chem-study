@@ -34,6 +34,12 @@ Variable, in the same environment:
 |---|---|
 | `SG_SITE_ID` | The `id=` of chem-study.com from `site-tools-client domain-all list`. If unset, the cache flush is skipped. |
 
+Setting a secret from Git Bash on Windows: pipe the value in. Git Bash
+rewrites an argument that starts with `/` into a Windows path, so
+`--body "/home/..."` stores the wrong `SG_PATH`.
+
+    printf '%s' '/home/customer/www/chem-study.com/public_html' | gh secret set SG_PATH --env production
+
 Keep them out of **Settings → Secrets and variables → Actions**: a secret
 there can be read by a workflow run from any branch. This repository is
 public, so the environment is what keeps a pull request from a fork away
@@ -67,36 +73,42 @@ the first deploy, `http://chem-study.com/` answered `301` from `nginx` with
 redirect of its own, and must not get one: behind SiteGround's proxy a
 rewrite keyed on `%{HTTPS}` can loop.
 
-## After the first deploy
+## NGINX Direct Delivery stays off
 
-`public/.htaccess` cannot be tested before it reaches a real server, and
-SiteGround can serve stylesheets, scripts, fonts and images straight from
-NGINX, which does not read it. Look at the response headers **once**. Three
-requests, not a loop: SiteGround's bot protection blocks an address after a
-burst of automated requests.
+In Site Tools → Speed → Caching, **NGINX Direct Delivery** is turned
+**off** for chem-study.com, and must stay off.
+
+With it on, SiteGround serves stylesheets, scripts and images straight
+from NGINX, which does not read `public/.htaccess`. Measured on
+2026-11-13, right after the first deploy: pages came through Apache with
+our headers, but `/pagefind/pagefind-ui.js` came back with NGINX's own
+`Cache-Control: max-age=31536000` and none of the security headers. Files
+whose names do not change between builds (the search scripts, everything
+in `/figures/`, the favicon) would then stay stale in a returning
+student's browser for up to a year: a corrected diagram would not reach
+them.
+
+With it off, every response goes through Apache. Measured the same day:
+
+| Request | `Cache-Control` | Security headers |
+|---|---|---|
+| `/` | `no-cache` | all four |
+| `/pagefind/pagefind-ui.js` | `no-cache` | all four |
+| `/_astro/<hashed file>` | `public, max-age=31536000, immutable` | all four |
+
+The four are `X-Content-Type-Options`, `X-Frame-Options`,
+`Referrer-Policy` and `Strict-Transport-Security`.
+
+To check again, for example after SiteGround changes its caching or the
+site moves: three requests, not a loop. SiteGround's bot protection
+blocks an address after a burst of automated requests.
 
     curl.exe -sI https://chem-study.com/
     curl.exe -sI https://chem-study.com/pagefind/pagefind-ui.js
     curl.exe -sI https://chem-study.com/_astro/<any file named in the page source>
 
-What to expect:
-
-- The page: `cache-control: no-cache`, `x-content-type-options: nosniff`,
-  `x-frame-options: DENY`, `referrer-policy` and
-  `strict-transport-security`.
-- `pagefind-ui.js`: not a one-year cache. Its name does not change between
-  builds, so a long cache would pin an old search script.
-- The `/_astro/` file: a long cache is correct, whoever set it. Its name
-  carries a hash.
-
-If the page lacks the security headers, Apache is not applying
-`.htaccess` to it. The content security policy and the referrer policy
-still hold, because they are `<meta>` tags in the page. The other three
-would then have to be set in Site Tools or by SiteGround support.
-
-Then open the site and try search. A search that finds nothing, with a
-`Content-Type` warning in the browser console, means the server does not
-know the `.pagefind` file type.
+If a one-year cache shows up on `pagefind-ui.js` again, Direct Delivery
+has been switched back on.
 
 ## When a deploy fails
 
