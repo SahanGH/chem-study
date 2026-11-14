@@ -34,39 +34,3 @@
 .lewis-charge {
   font-weight: 600;
 }
-
-.lewis-arrow {
-  display: none;
-  flex: 0 0 auto;
-  width: 2.5rem;
-  height: 1rem;
-  fill: none;
-  stroke: var(--muted);
-  stroke-width: 1.6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-/* Wraps onto a new row on a narrow screen; a structure that starts a row
-   keeps its arrow, so the arrow still reads as "and also". */
-.resonance {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.75rem 0.5rem;
-  margin-block: 1.25rem;
-}
-.resonance > .lewis {
-  min-width: 0;
-  max-width: 100%;
-  margin-block: 0;
-}
-.resonance > .lewis + .lewis > .lewis-arrow {
-  display: block;
-}
-
-@media print {
-  .lewis-arrow {
-    stroke: currentColor;
-  }
-}
