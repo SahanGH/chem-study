@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
   BONDS,
   FAMILIES,
+  NEAR_BOND_LENGTH,
   bondById,
   curvePoints,
   distanceAtEnergy,
@@ -150,6 +151,23 @@ describe('distanceReadout', () => {
     expect(distanceReadoutText(single, 156)).toBe(
       'The nuclei are 156 pm apart, close to the bond length of C–C (154 pm). The energy is close to its lowest value, which is 347 kJ/mol below that of the separate atoms.',
     );
+  });
+
+  it('still says close to the bond length exactly NEAR_BOND_LENGTH pm away, on either side', () => {
+    expect(NEAR_BOND_LENGTH).toBe(3);
+
+    expect(distanceReadoutText(single, 154 + NEAR_BOND_LENGTH)).toContain('close to the bond length of C–C');
+    expect(distanceReadoutText(single, 154 - NEAR_BOND_LENGTH)).toContain('close to the bond length of C–C');
+  });
+
+  it('no longer says close to the bond length one pm beyond NEAR_BOND_LENGTH, on either side', () => {
+    const justFarther = distanceReadoutText(single, 154 + NEAR_BOND_LENGTH + 1);
+    const justCloser = distanceReadoutText(single, 154 - NEAR_BOND_LENGTH - 1);
+
+    expect(justFarther).toContain('farther than the bond length (154 pm)');
+    expect(justFarther).not.toContain('close to');
+    expect(justCloser).toContain('closer than the bond length (154 pm)');
+    expect(justCloser).not.toContain('close to');
   });
 
   // Attraction does not stop inside the bond length; repulsion outweighs it.

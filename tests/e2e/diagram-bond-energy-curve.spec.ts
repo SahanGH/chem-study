@@ -76,7 +76,9 @@ test('moving the nuclei closer from the keyboard says repulsion wins and moves t
   const after = await centerOf(marker(diagram));
   expect(after.x).toBeLessThan(before.x);
   expect(after.y, 'higher on the screen: more energy').toBeLessThan(before.y);
-  await expect(diagram.getByRole('slider')).toHaveAccessibleName('Distance between the nuclei: 120 pm');
+  // The name is static; the value is announced once, through aria-valuetext.
+  await expect(diagram.getByRole('slider')).toHaveAccessibleName('Distance between the nuclei');
+  await expect(diagram.getByRole('slider')).toHaveAttribute('aria-valuetext', '120 pm');
 });
 
 test('a step past the bond length says the energy is still close to its lowest', async ({ page }) => {
@@ -159,10 +161,46 @@ for (const bond of BONDS) {
   });
 }
 
-for (const family of ['Bond order (carbon–carbon)', 'Atom size (halogens)']) {
-  test(`${family}: no curve's name touches a curve`, async ({ page }) => {
+for (const bond of BONDS) {
+  test(`${bond.name}: at the slider's far end, the right atom lies wholly inside the drawing`, async ({ page }) => {
     const diagram = await openDiagram(page, PAGE, NAME);
-    await diagram.getByRole('radio', { name: family }).check();
+    await diagram.getByRole('radio', { name: bond.family }).check();
+    await diagram.getByRole('group', { name: 'Bond' }).getByRole('radio', { name: bond.name, exact: true }).check();
+    const slider = diagram.getByRole('slider');
+
+    await slider.fill((await slider.getAttribute('max')) ?? '');
+
+    const edges = await diagram.locator('svg').first().evaluate((svg) => {
+      if (!(svg instanceof SVGSVGElement)) throw new Error('The diagram is not an SVG.');
+      const atom = svg.querySelector('[data-atom="right"]');
+      if (!(atom instanceof SVGCircleElement)) throw new Error('There is no right atom circle.');
+      const box = atom.getBBox();
+      // The outline is drawn half inside and half outside the circle's edge.
+      const halfStroke = Number.parseFloat(getComputedStyle(atom).strokeWidth) / 2;
+      return {
+        left: box.x - halfStroke,
+        right: box.x + box.width + halfStroke,
+        top: box.y - halfStroke,
+        bottom: box.y + box.height + halfStroke,
+        view: { width: svg.viewBox.baseVal.width, height: svg.viewBox.baseVal.height },
+      };
+    });
+
+    expect(edges.left).toBeGreaterThanOrEqual(0);
+    expect(edges.top).toBeGreaterThanOrEqual(0);
+    expect(edges.right, 'right edge of the atom, with its outline').toBeLessThanOrEqual(edges.view.width);
+    expect(edges.bottom).toBeLessThanOrEqual(edges.view.height);
+  });
+}
+
+for (const bond of BONDS) {
+  test(`${bond.name} selected (its name in bold): no curve's name touches a curve`, async ({ page }) => {
+    const diagram = await openDiagram(page, PAGE, NAME);
+    await diagram.getByRole('radio', { name: bond.family }).check();
+    await diagram.getByRole('group', { name: 'Bond' }).getByRole('radio', { name: bond.name, exact: true }).check();
+    await expect(selected(diagram)).toHaveAttribute('data-curve', bond.id);
+    // The box measured below is the bold one.
+    await expect(diagram.locator(`[data-curve-label="${bond.id}"]`)).toHaveCSS('font-weight', '700');
 
     // Near a steep wall one segment climbs about 30 units, so a label could
     // sit between two drawn points: test points every tenth of each segment.

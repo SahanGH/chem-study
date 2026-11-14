@@ -16,8 +16,19 @@
   // distance set, so the gap between them is the distance read on the axis.
   const PLOT = { left: 52, right: 306, top: 84, bottom: 284 };
   const ATOMS_Y = 36;
-  /** Atom circles are drawn with half the bond length as their radius, at this scale. */
+  /**
+   * Drawing units per pm for the atom circles: a circle's radius is half the
+   * bond length times this. It is a picture scale of its own, not the graph's
+   * axis scale (which is about 0.85 units per pm), so atoms stay small enough
+   * to sit above the graph.
+   */
   const ATOM_SCALE = 0.2;
+  // The right atom follows the slider out to the graph's right edge, so the
+  // drawing reserves room beyond it for the biggest atom (the largest bond
+  // length of either family), plus its outline.
+  const OUTLINE_ROOM = 2;
+  const LARGEST_ATOM_RADIUS = (Math.max(...Object.values(BONDS).map((b) => b.length)) / 2) * ATOM_SCALE;
+  const VIEW = { width: Math.ceil(PLOT.right + LARGEST_ATOM_RADIUS) + OUTLINE_ROOM, height: 326 };
   const FAMILY_IDS: FamilyId[] = ['carbon', 'halogens'];
   // Where each curve's name sits, from the bottom of its well, in drawing
   // units. The curves cross, so each name is placed by hand where no curve
@@ -98,7 +109,7 @@
 </script>
 
 <div class="diagram-body" data-diagram="bond-energy-curve" data-hydrated={hydrated ? 'true' : undefined}>
-  <svg viewBox="0 0 320 326" role="img" aria-label={drawing}>
+  <svg viewBox={`0 0 ${VIEW.width} ${VIEW.height}`} role="img" aria-label={drawing}>
     <circle class="diagram-atom" data-atom="left" cx={f(xFor(0))} cy={ATOMS_Y} r={f(atomRadius)} />
     <circle class="diagram-atom" data-atom="right" cx={f(markerX)} cy={ATOMS_Y} r={f(atomRadius)} />
     <text class="diagram-atom-label" x={f(xFor(0))} y={ATOMS_Y} dy="0.35em" text-anchor="middle">{bond.symbol}</text>
@@ -169,8 +180,8 @@
       {/each}
     </fieldset>
     <label class="diagram-slider">
-      <span>Distance between the nuclei: {distance} pm</span>
-      <input type="range" min={range.min} max={range.max} step="1" bind:value={distance} />
+      <span>Distance between the nuclei</span>
+      <input type="range" min={range.min} max={range.max} step="1" aria-valuetext={`${distance} pm`} bind:value={distance} />
     </label>
   </div>
 </div>
