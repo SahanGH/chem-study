@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 464" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Two rows: linear, trigonal planar and tetrahedral above; trigonal bipyramidal and octahedral below. Font size 18 keeps text at 12 px when the figure is 320 px wide. A solid wedge narrows toward A (a bond toward you); a dashed wedge widens away from A (a bond going away). -->
+  <rect width="480" height="464" fill="#FDFCF9"/>
+
+  <g fill="none" stroke="#26231F" stroke-width="2" stroke-linecap="round">
+    <!-- linear, centered on (80, 92) -->
+    <path d="M67 92H37M93 92H123"/>
+    <!-- trigonal planar, centered on (240, 92) -->
+    <path d="M240 79V49M228.74 98.5L202.76 113.5M251.26 98.5L277.24 113.5"/>
+    <!-- tetrahedral, centered on (400, 92): two bonds in the plane -->
+    <path d="M400 79V49M388.74 98.5L362.76 113.5"/>
+    <!-- trigonal bipyramidal, centered on (140, 320): two axial bonds and one equatorial bond in the plane -->
+    <path d="M140 307V274M140 333V366M127 320H94"/>
+    <!-- octahedral, centered on (350, 320): up, down, left and right in the plane -->
+    <path d="M350 307V274M350 333V366M337 320H304M363 320H396"/>
+  </g>
+
+  <!-- Solid wedges: toward you -->
+  <g fill="#26231F">
+    <polygon points="406.47,103.30 407.73,102.48 427.64,125.22 419.26,130.68"/>
+    <polygon points="151.05,326.89 151.77,325.57 175.86,333.87 171.08,342.65"/>
+    <polygon points="340.28,328.66 341.34,329.72 328.03,349.05 320.95,341.97"/>
+  </g>
+
+  <!-- Dashed wedges: away from you -->
+  <g fill="none" stroke="#26231F" stroke-width="1.6" stroke-linecap="round">
+    <path d="M414.17 97.06L414.79 94.74M419.27 99.26L420.31 95.40M424.38 101.46L425.84 96.06M429.48 103.67L431.36 96.71M434.59 105.87L436.87 97.37M439.26 107.75L441.86 98.09"/>
+    <path d="M153.74 313.87L152.60 311.77M158.34 312.28L156.42 308.76M162.94 310.68L160.26 305.76M167.53 309.08L164.09 302.76M172.13 307.48L167.91 299.76M176.64 305.71L171.85 296.93"/>
+    <path d="M361.46 310.24L359.76 308.54M364.99 307.83L362.17 305.01M368.53 305.43L364.57 301.47M372.07 303.03L366.97 297.93M375.60 300.62L369.38 294.40M379.00 298.08L371.92 291.00"/>
+  </g>
+
+  <!-- Central atoms -->
+  <g fill="#4F706C" font-weight="700" text-anchor="middle">
+    <text x="80" y="98">A</text>
+    <text x="240" y="98">A</text>
+    <text x="400" y="98">A</text>
+    <text x="140" y="326">A</text>
+    <text x="350" y="326">A</text>
+  </g>
+
+  <!-- Outer atoms -->
+  <g fill="#26231F" text-anchor="middle">
+    <text x="25" y="98">X</text>
+    <text x="135" y="98">X</text>
+
+    <text x="240" y="43">X</text>
+    <text x="192.4" y="125.5">X</text>
+    <text x="287.6" y="125.5">X</text>
+
+    <text x="400" y="43">X</text>
+    <text x="352.4" y="125.5">X</text>
+    <text x="430" y="144">X</text>
+    <text x="452" y="112">X</text>
+
+    <text x="140" y="268">X</text>
+    <text x="140" y="384">X</text>
+    <text x="82" y="326">X</text>
+    <text x="184" y="350">X</text>
+    <text x="184" y="302">X</text>
+
+    <text x="350" y="268">X</text>
+    <text x="350" y="384">X</text>
+    <text x="292" y="326">X</text>
+    <text x="408" y="326">X</text>
+    <text x="316" y="360">X</text>
+    <text x="384" y="292">X</text>
+  </g>
+
+  <!-- Names -->
+  <g fill="#26231F" font-weight="600" text-anchor="middle">
+    <text x="80" y="182">linear</text>
+    <text x="240" y="182">trigonal planar</text>
+    <text x="400" y="182">tetrahedral</text>
+    <text x="140" y="422">trigonal bipyramidal</text>
+    <text x="350" y="422">octahedral</text>
+  </g>
+
+  <!-- Angles -->
+  <g fill="#6B655D" text-anchor="middle">
+    <text x="80" y="206">180&#176;</text>
+    <text x="240" y="206">120&#176;</text>
+    <text x="400" y="206">109.5&#176;</text>
+    <text x="140" y="446">90&#176;, 120&#176;, 180&#176;</text>
+    <text x="350" y="446">90&#176;, 180&#176;</text>
+  </g>
+</svg>
