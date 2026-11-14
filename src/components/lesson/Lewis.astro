@@ -15,7 +15,11 @@ const { viewBox, brackets } = layout;
 const n = (value: number) => Number(value.toFixed(2));
 ---
 
+{/* The arrow shows only between two structures inside a <Resonance>. */}
 <div class="lewis" data-lewis>
+  <svg class="lewis-arrow" viewBox="0 0 40 16" aria-hidden="true" focusable="false">
+    <path d="M3 8H37M8 3L3 8L8 13M32 3L37 8L32 13"></path>
+  </svg>
   <svg
     class="lewis-drawing"
     viewBox={`${n(viewBox.x)} ${n(viewBox.y)} ${n(viewBox.width)} ${n(viewBox.height)}`}
