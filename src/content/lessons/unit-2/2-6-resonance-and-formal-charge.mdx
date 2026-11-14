@@ -1,0 +1,279 @@
+---
+topic: "2.6"
+minutes: 15
+summary: Why some molecules need more than one Lewis diagram, how formal charge picks the best diagram, and where the Lewis model breaks down.
+---
+
+Draw ozone, O₃, by the five steps of topic 2.5 and you get one double bond and one single bond. But when chemists measure ozone, both O–O bonds come out the same length, 128 pm. That is between an O–O single bond (148 pm) and an O=O double bond (121 pm). One diagram cannot show that.
+
+## Resonance
+
+Look at where the double bond went in your ozone diagram. If you put it on the left, you could just as well have put it on the right. The two diagrams have the same atoms in the same places; they differ only in where the electron pairs go. Neither one is more right than the other.
+
+When two or more equivalent Lewis diagrams like this can be drawn, no single one describes the molecule. The real molecule is a blend of them, a **resonance hybrid**. The diagrams are written side by side, joined by a double-headed arrow:
+
+<Resonance label="Resonance structures of ozone">
+<Lewis
+  alt="First resonance structure of ozone: three oxygen atoms in a row. The left oxygen has a double bond to the central oxygen and two lone pairs. The central oxygen has one lone pair and a formal charge of +1. The right oxygen has a single bond to the central oxygen, three lone pairs and a formal charge of −1."
+  atoms={[
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'O2', symbol: 'O', x: 0, y: 0, lonePairs: 1 },
+    { id: 'O3', symbol: 'O', x: 1, y: 0, lonePairs: 3 },
+  ]}
+  bonds={[['O1', 'O2', 2], ['O2', 'O3', 1]]}
+  formalCharges
+/>
+<Lewis
+  alt="Second resonance structure of ozone: the same three oxygen atoms in a row. Now the left oxygen has a single bond to the central oxygen, three lone pairs and a formal charge of −1. The central oxygen has one lone pair and a formal charge of +1. The right oxygen has a double bond to the central oxygen and two lone pairs."
+  atoms={[
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: 3 },
+    { id: 'O2', symbol: 'O', x: 0, y: 0, lonePairs: 1 },
+    { id: 'O3', symbol: 'O', x: 1, y: 0, lonePairs: ['top', 'bottom'] },
+  ]}
+  bonds={[['O1', 'O2', 1], ['O2', 'O3', 2]]}
+  formalCharges
+/>
+</Resonance>
+
+The small +1 and −1 are formal charges. The second half of this lesson explains them.
+
+The arrow does not mean the molecule switches back and forth between the two. Ozone is the blend all the time. Each O–O bond is "one and a half" bonds, a bond order of 1.5: between a single bond and a double bond, just as the bond lengths are.
+
+<KeyIdea>
+
+Resonance structures keep every atom in the same place and move only electron pairs. The real molecule is a single hybrid, the average of them all, and it never flips between them.
+
+</KeyIdea>
+
+<Worked title="Nitrate ion">
+
+Draw the resonance structures of the nitrate ion, $\ce{NO3-}$.
+
+1. **Count.** $5 + 3 \times 6 + 1 = 24$ electrons. The 1− charge adds one.
+
+2. **Skeleton.** N is central, with the three O atoms around it.
+
+3. **Single bonds and outer octets.** Three N–O bonds use 6 electrons, and three lone pairs on each oxygen use the other 18. That is all 24, and nitrogen has only six.
+
+4. **Fix the center.** Move one lone pair from an oxygen into a double bond, and nitrogen has eight. But which oxygen? Any of the three could take the double bond, so there are three equivalent diagrams.
+
+5. **The real ion.** Nitrate has three identical N–O bonds. Four bonding pairs are shared over three bonds, so each has a bond order of $4/3$.
+
+<Resonance label="Resonance structures of the nitrate ion">
+<Lewis
+  alt="First resonance structure of nitrate: nitrogen in the center with oxygen atoms to its left, right and below. The left oxygen has a double bond to nitrogen and two lone pairs. The right and bottom oxygens each have a single bond, three lone pairs and a formal charge of −1. Nitrogen has no lone pairs and a formal charge of +1. The whole ion is in square brackets with a minus charge."
+  atoms={[
+    { id: 'N', symbol: 'N', x: 0, y: 0 },
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'O2', symbol: 'O', x: 1, y: 0, lonePairs: 3 },
+    { id: 'O3', symbol: 'O', x: 0, y: 1, lonePairs: 3 },
+  ]}
+  bonds={[['N', 'O1', 2], ['N', 'O2', 1], ['N', 'O3', 1]]}
+  ion={-1}
+  formalCharges
+/>
+<Lewis
+  alt="Second resonance structure of nitrate: the same atoms. Now the right oxygen has the double bond to nitrogen and two lone pairs. The left and bottom oxygens each have a single bond, three lone pairs and a formal charge of −1. Nitrogen has no lone pairs and a formal charge of +1. The ion is in square brackets with a minus charge."
+  atoms={[
+    { id: 'N', symbol: 'N', x: 0, y: 0 },
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: 3 },
+    { id: 'O2', symbol: 'O', x: 1, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'O3', symbol: 'O', x: 0, y: 1, lonePairs: 3 },
+  ]}
+  bonds={[['N', 'O1', 1], ['N', 'O2', 2], ['N', 'O3', 1]]}
+  ion={-1}
+  formalCharges
+/>
+<Lewis
+  alt="Third resonance structure of nitrate: the same atoms. Now the bottom oxygen has the double bond to nitrogen and two lone pairs. The left and right oxygens each have a single bond, three lone pairs and a formal charge of −1. Nitrogen has no lone pairs and a formal charge of +1. The ion is in square brackets with a minus charge."
+  atoms={[
+    { id: 'N', symbol: 'N', x: 0, y: 0 },
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: 3 },
+    { id: 'O2', symbol: 'O', x: 1, y: 0, lonePairs: 3 },
+    { id: 'O3', symbol: 'O', x: 0, y: 1, lonePairs: ['left', 'right'] },
+  ]}
+  bonds={[['N', 'O1', 1], ['N', 'O2', 1], ['N', 'O3', 2]]}
+  ion={-1}
+  formalCharges
+/>
+</Resonance>
+
+Only the double bond moves from one diagram to the next. Every atom stays where it is.
+
+</Worked>
+
+<Check answer={3}>
+How many equivalent resonance structures does the carbonate ion, $\ce{CO3^2-}$, have?
+
+- 1
+- 2
+- 3
+- 4
+
+<div slot="why">Carbonate is drawn like nitrate: a central atom, three oxygens, and one double bond. The double bond can go to any one of the three oxygen atoms, so there are three structures.</div>
+</Check>
+
+<Check answer={2}>
+What is the average bond order of the C–O bonds in the carbonate ion?
+
+- 1
+- $4/3$
+- $3/2$
+- 2
+
+<div slot="why">Four bonding pairs (one double bond and two single bonds) are spread over three equal bonds: $4/3$.</div>
+</Check>
+
+## Formal charge
+
+Sometimes the diagrams you can draw are not equivalent. Then one of them is a better model than the others, and you need a way to tell which.
+
+**Formal charge** is a bookkeeping charge for each atom in a diagram. It compares the electrons an atom brings with the electrons it ends up with in the diagram:
+
+$$
+\begin{aligned}
+\text{formal charge} = {}&\text{valence electrons} \\
+&- \text{nonbonding electrons} \\
+&- \text{bonds}
+\end{aligned}
+$$
+
+The nonbonding electrons are the ones the atom keeps to itself: its lone-pair electrons, and an unpaired electron if it has one. Count each bond once, one for each line: a double bond counts 2, a triple bond 3. That is the same as counting half the electrons in its bonds, the form you may see elsewhere.
+
+The formal charges in a diagram always add up to the charge of the molecule or ion. Look back at nitrate: nitrogen is +1 and the two singly bonded oxygens are −1 each. That adds up to −1, the charge of the ion.
+
+<KeyIdea>
+
+The best diagram has formal charges as close to zero as possible, and puts any negative formal charge on the more electronegative atom. And never give C, N, O or F more than eight to make the formal charges smaller: for them the octet rule comes first.
+
+</KeyIdea>
+
+One line of caution. For a central atom from the third period, such as sulfur in the sulfate ion, the octet rule and formal charge can point to different diagrams, and you will see both drawn (four single bonds, with sulfur at +2; or two S=O double bonds, with sulfur at 0 and twelve electrons around it).
+
+<Worked title="Two diagrams for carbon dioxide">
+
+Carbon dioxide can be drawn as O=C=O, or as O≡C–O, with one lone pair on the triple-bonded oxygen and three on the single-bonded one. Both use 16 electrons, and both give every atom eight. Which is the better model?
+
+1. **O=C=O.** Carbon: $4 - 0 - 4 = 0$. Each oxygen: $6 - 4 - 2 = 0$.
+
+2. **O≡C–O.** Carbon: $4 - 0 - 4 = 0$. The triple-bonded oxygen: $6 - 2 - 3 = +1$. The single-bonded oxygen: $6 - 6 - 1 = -1$.
+
+3. **Compare.** Both sets add up to zero, as they must for a neutral molecule. But O=C=O has no formal charges at all, so it is the better model.
+
+<Lewis
+  alt="Lewis diagram of carbon dioxide drawn as O=C=O: carbon in the middle with a double bond to each oxygen, each oxygen with two lone pairs. No formal charges are shown, because every one is zero."
+  atoms={[
+    { id: 'C', symbol: 'C', x: 0, y: 0 },
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'O2', symbol: 'O', x: 1, y: 0, lonePairs: ['top', 'bottom'] },
+  ]}
+  bonds={[['C', 'O1', 2], ['C', 'O2', 2]]}
+  formalCharges
+/>
+
+<Lewis
+  alt="Lewis diagram of carbon dioxide drawn as O≡C–O: the left oxygen has a triple bond to carbon, one lone pair and a formal charge of +1. The right oxygen has a single bond to carbon, three lone pairs and a formal charge of −1. Carbon has no lone pairs and no formal charge."
+  atoms={[
+    { id: 'C', symbol: 'C', x: 0, y: 0 },
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: 1 },
+    { id: 'O2', symbol: 'O', x: 1, y: 0, lonePairs: 3 },
+  ]}
+  bonds={[['C', 'O1', 3], ['C', 'O2', 1]]}
+  formalCharges
+/>
+
+The first diagram shows no numbers because every formal charge in it is zero.
+
+</Worked>
+
+<Check answer={1}>
+Which arrangement gives every atom a formal charge of zero?
+
+- H–C≡N, with one lone pair on N
+- H–N≡C, with one lone pair on C
+- both
+- neither
+
+<div slot="why">In H–C≡N, carbon has $4 - 0 - 4 = 0$ and nitrogen $5 - 2 - 3 = 0$. In H–N≡C, nitrogen has $5 - 0 - 4 = +1$ and carbon $4 - 2 - 3 = -1$.</div>
+</Check>
+
+<Check answer={2}>
+What is the formal charge on nitrogen in the ammonium ion, $\ce{NH4+}$?
+
+- 0
+- +1
+- −1
+- +4
+
+<div slot="why">Nitrogen has 5 valence electrons, no lone pairs and four bonds: $5 - 0 - 4 = +1$. That equals the charge of the ion, since every hydrogen is 0.</div>
+</Check>
+
+## Where the Lewis model breaks down
+
+Bonds and lone pairs each hold two electrons. So a molecule with an odd number of valence electrons cannot give every atom eight.
+
+Nitrogen dioxide, NO₂, has $5 + 2 \times 6 = 17$. The usual diagram gives nitrogen a double bond to one oxygen, a single bond to the other and one unpaired electron. That leaves nitrogen with seven. There are two ways to place the double bond, so NO₂ has resonance too:
+
+<Resonance label="Resonance structures of nitrogen dioxide">
+<Lewis
+  alt="First resonance structure of nitrogen dioxide: nitrogen in the middle of a row with an oxygen on each side. The left oxygen has a double bond to nitrogen and two lone pairs. The right oxygen has a single bond, three lone pairs and a formal charge of −1. Nitrogen has one unpaired electron above it and a formal charge of +1."
+  atoms={[
+    { id: 'N', symbol: 'N', x: 0, y: 0, unpaired: 'top' },
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'O2', symbol: 'O', x: 1, y: 0, lonePairs: 3 },
+  ]}
+  bonds={[['N', 'O1', 2], ['N', 'O2', 1]]}
+  formalCharges
+/>
+<Lewis
+  alt="Second resonance structure of nitrogen dioxide: the same atoms. Now the left oxygen has a single bond, three lone pairs and a formal charge of −1, and the right oxygen has a double bond and two lone pairs. Nitrogen has one unpaired electron above it and a formal charge of +1."
+  atoms={[
+    { id: 'N', symbol: 'N', x: 0, y: 0, unpaired: 'top' },
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: 3 },
+    { id: 'O2', symbol: 'O', x: 1, y: 0, lonePairs: ['top', 'bottom'] },
+  ]}
+  bonds={[['N', 'O1', 1], ['N', 'O2', 2]]}
+  formalCharges
+/>
+</Resonance>
+
+The unpaired electron is a nonbonding electron, so nitrogen's formal charge is $5 - 1 - 3 = +1$.
+
+Here the rules disagree with the evidence. Formal charge alone would put the odd electron on an oxygen instead, because that gives every atom a formal charge of zero. But two NO₂ molecules readily pair up into N₂O₄, joined by a bond between the two nitrogen atoms. That is evidence that the unpaired electron sits mostly on nitrogen. Molecules with an unpaired electron tend to be reactive in just this way: pairing up the odd electron makes a new bond.
+
+So the Lewis model has limits. Resonance itself is one sign of them: a single diagram is not enough to describe the molecule. And NO₂ shows that the rules for picking a diagram are guides, not laws.
+
+<Check answer={3}>
+Why can't every atom in NO₂ be given an octet?
+
+- Nitrogen is in the second period.
+- Oxygen is more electronegative than nitrogen.
+- The molecule has an odd number of valence electrons, 17.
+- NO₂ has resonance structures.
+
+<div slot="why">Bonds and lone pairs each hold two electrons. With 17, one must be left unpaired, so some atom has fewer than eight.</div>
+</Check>
+
+<Trap>
+
+Five mistakes to watch for on this topic:
+
+- **Thinking a molecule flips between resonance structures.** It is one blend, all the time.
+- **Moving atoms between resonance structures.** Only electron pairs move; the atoms stay put.
+- **Treating formal charge as a real charge.** It is bookkeeping, not a measured charge. The real charge on an atom can be quite different, even opposite in sign: in $\ce{NH4+}$ the positive charge is spread over the hydrogens, and nitrogen, the more electronegative atom, is actually slightly negative.
+- **Picking a diagram that gives C, N, O or F more than eight.** Formal charge never justifies that.
+- **Formal charges that do not add up to the charge of the ion.** Check the sum every time.
+
+</Trap>
+
+<KeyPoints>
+
+- When equivalent Lewis diagrams can be drawn, the molecule is a resonance hybrid of them, and its bonds are averaged: each O–O bond in ozone has a bond order of 1.5.
+- Resonance structures differ only in where the electrons go; the atoms stay in the same places.
+- Formal charge = valence electrons − nonbonding electrons − bonds, and the formal charges in a diagram add up to the overall charge.
+- The best diagram keeps formal charges near zero and puts any negative one on the more electronegative atom.
+- A molecule with an odd number of valence electrons, such as NO₂, cannot satisfy the octet rule.
+
+</KeyPoints>
+
+<PracticeNext />

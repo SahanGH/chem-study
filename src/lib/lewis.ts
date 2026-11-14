@@ -59,6 +59,16 @@ export interface LewisLayout {
   readonly brackets: Brackets | undefined;
 }
 
+/** The attribute on the root <div> of every rendered diagram. Lewis.astro writes it; <Resonance> counts it. */
+export const LEWIS_MARKER = 'data-lewis';
+
+const LEWIS_ROOT = new RegExp(`<div\\b[^>]*\\s${LEWIS_MARKER}(?=[\\s=/>])`, 'g');
+
+/** How many Lewis diagrams a piece of rendered HTML holds. */
+export function countLewisStructures(html: string): number {
+  return html.match(LEWIS_ROOT)?.length ?? 0;
+}
+
 // Drawing units: one unit is one CSS pixel when the drawing is at its natural size.
 export const BOND_LENGTH = 50;
 export const MARGIN = 4;

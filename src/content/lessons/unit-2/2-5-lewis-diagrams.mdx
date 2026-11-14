@@ -1,0 +1,229 @@
+---
+topic: "2.5"
+minutes: 15
+summary: How to draw a Lewis diagram for a molecule or ion, step by step, and the atoms that do not end up with an octet.
+---
+
+A Lewis diagram is bookkeeping. It is an account of every valence electron in a molecule, and each one has to be somewhere: either shared in a bond between two atoms, or sitting on one atom as a lone pair. Nothing goes missing and nothing appears from nowhere. If the books do not balance, the diagram is wrong.
+
+## Counting the electrons
+
+So the first job is always the count. For a main-group element, read it off the periodic table: the number of valence electrons is the last digit of the group number. Carbon is in group 14, so it has 4. (Helium, with 2, is the one exception.) The ones you will meet most are hydrogen with 1, carbon with 4, nitrogen with 5, oxygen with 6, and fluorine and chlorine with 7 each.
+
+Add them up for every atom in the formula. An ion needs one more step. A negative ion has gained electrons, so add one for each unit of charge. A positive ion has lost them, so take one away for each unit.
+
+- Methane, CH₄: $4 + 4 \times 1 = 8$.
+- Ammonium, NH₄⁺: $5 + 4 - 1 = 8$. The + charge means one electron fewer.
+- Carbonate, CO₃²⁻: $4 + 3 \times 6 + 2 = 24$. The 2− charge means two more.
+
+Those electrons are then drawn in pairs. A **bonding pair** is shared between two atoms and is drawn as a line between them. A **lone pair** belongs to one atom and is drawn as two dots beside it.
+
+<Check numeric="32">
+How many valence electrons does the sulfate ion, $\ce{SO4^2-}$, have?
+
+<div slot="why">$6 + 4 \times 6 + 2 = 32$. Sulfur and each oxygen bring 6, and the 2− charge adds two more.</div>
+</Check>
+
+## Five steps
+
+With the count in hand, the drawing goes the same way every time.
+
+1. **Count** the valence electrons, adjusted for any charge.
+
+2. **Write the skeleton.** The central atom is usually the least electronegative atom other than hydrogen. Hydrogen is never central, because it forms only one bond.
+
+3. **Join each outer atom to the center** with a single bond. Each bond uses two electrons.
+
+4. **Finish the outer atoms.** Give each outer atom lone pairs until it has eight electrons around it. Hydrogen needs only two.
+
+5. **Put any electrons left over on the central atom.** If the central atom still has fewer than eight, take a lone pair from an outer atom and turn it into a second bond to the center, making a double bond. Take two pairs from the same atom and you get a triple bond. Keep going until the center has eight. Boron is the exception, as you will see below.
+
+When you count the electrons around an atom, count its lone-pair electrons and both electrons of every bond it is part of. A shared pair counts for both of the atoms that share it.
+
+<KeyIdea>
+
+Check twice at the end. The number of electrons drawn must equal your count. And every C, N, O and F should have eight electrons around it, and every hydrogen two. Boron may stop at six, and a molecule with an odd number of electrons must leave one atom short.
+
+</KeyIdea>
+
+<Worked title="Water">
+
+Draw the Lewis diagram of water, H₂O.
+
+1. **Count.** $2 \times 1 + 6 = 8$ electrons.
+
+2. **Skeleton.** Oxygen goes in the center. Hydrogen cannot.
+
+3. **Single bonds.** Two O–H bonds use 4 electrons.
+
+4. **Outer atoms.** Each hydrogen already has its two, from its bond.
+
+5. **Center.** The 4 electrons left go on oxygen as two lone pairs. Oxygen now has eight around it: four in bonds and four in lone pairs.
+
+Both checks pass: 8 electrons drawn, 8 counted, and every atom has its full number.
+
+<Lewis
+  alt="Lewis diagram of water: oxygen in the middle, joined by single bonds to a hydrogen atom on its left and one on its right, with two lone pairs on oxygen, one above it and one below it."
+  atoms={[
+    { id: 'O', symbol: 'O', x: 0, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'H1', symbol: 'H', x: -1, y: 0 },
+    { id: 'H2', symbol: 'H', x: 1, y: 0 },
+  ]}
+  bonds={[['O', 'H1', 1], ['O', 'H2', 1]]}
+/>
+
+The diagram is drawn flat, with H, O and H in a row. A Lewis diagram shows which atoms are bonded and where the electrons are. It does not show the shape of the molecule; topic 2.7 does that.
+
+</Worked>
+
+<Worked title="Carbon dioxide">
+
+Draw the Lewis diagram of carbon dioxide, CO₂.
+
+1. **Count.** $4 + 2 \times 6 = 16$ electrons.
+
+2. **Skeleton.** Carbon goes in the center, because it is less electronegative than oxygen.
+
+3. **Single bonds.** Two C–O bonds use 4, leaving 12.
+
+4. **Outer atoms.** Each oxygen gets three lone pairs. That uses all 12, and none are left.
+
+5. **Center.** Carbon has only four electrons around it, from its two bonds. So move one lone pair from each oxygen into its bond with carbon. That gives O=C=O, each oxygen with two lone pairs. Now every atom has eight.
+
+Check the books: two double bonds hold 8 electrons and four lone pairs hold 8 more, for 16 in all.
+
+<Lewis
+  alt="Lewis diagram of carbon dioxide: carbon in the middle, joined by a double bond to an oxygen atom on each side. Each oxygen has two lone pairs, one above it and one below it. Carbon has no lone pairs."
+  atoms={[
+    { id: 'C', symbol: 'C', x: 0, y: 0 },
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'O2', symbol: 'O', x: 1, y: 0, lonePairs: ['top', 'bottom'] },
+  ]}
+  bonds={[['C', 'O1', 2], ['C', 'O2', 2]]}
+/>
+
+</Worked>
+
+<Check answer={1}>
+Which is the correct Lewis diagram for HCN, with carbon in the middle?
+
+- H–C≡N, with one lone pair on N
+- H–C=N, with two lone pairs on N
+- H–C≡N, with no lone pairs
+- H–C–N, with three lone pairs on N
+
+<div slot="why">HCN has $1 + 4 + 5 = 10$ valence electrons. H–C≡N with one lone pair on N uses all ten and gives C and N eight each. With the double bond, carbon has only six. With no lone pair, only eight electrons are drawn. With single bonds, carbon has only four.</div>
+</Check>
+
+<Check answer={2}>
+How many lone pairs are on the nitrogen atom in ammonia, $\ce{NH3}$?
+
+- 0
+- 1
+- 2
+- 3
+
+<div slot="why">$\ce{NH3}$ has $5 + 3 = 8$ electrons. Three N–H bonds use six, and the remaining two sit on N as one lone pair.</div>
+</Check>
+
+## Ions
+
+An ion is drawn by the same five steps, with the adjusted count at step 1. When the diagram is finished, put it in square brackets and write the charge outside them, at the upper right. The brackets say the charge belongs to the whole ion, not to any one atom.
+
+Ammonium, NH₄⁺, has $5 + 4 - 1 = 8$ electrons. Four N–H bonds use all eight. Nitrogen has eight around it and no lone pairs.
+
+<Lewis
+  alt="Lewis diagram of the ammonium ion: nitrogen in the center, joined by single bonds to four hydrogen atoms, above, below, left and right. Nitrogen has no lone pairs. The whole ion is inside square brackets, with a plus charge at the upper right."
+  atoms={[
+    { id: 'N', symbol: 'N', x: 0, y: 0 },
+    { id: 'H1', symbol: 'H', x: 0, y: -1 },
+    { id: 'H2', symbol: 'H', x: 1, y: 0 },
+    { id: 'H3', symbol: 'H', x: 0, y: 1 },
+    { id: 'H4', symbol: 'H', x: -1, y: 0 },
+  ]}
+  bonds={[['N', 'H1', 1], ['N', 'H2', 1], ['N', 'H3', 1], ['N', 'H4', 1]]}
+  ion={1}
+/>
+
+<Check answer={1}>
+A student's Lewis diagram of the carbonate ion, $\ce{CO3^2-}$, shows 22 electrons. What went wrong?
+
+- The 2− charge was not counted, and it adds two electrons.
+- Oxygen was counted with 5 valence electrons instead of 6.
+- Carbon should have been given an expanded octet.
+- A carbonate ion has 22 electrons, so nothing went wrong.
+
+<div slot="why">$4 + 3 \times 6 = 22$ is the count for the neutral atoms. The 2− charge means two extra electrons: 24.</div>
+</Check>
+
+## When eight is not the number
+
+Eight is the target for most atoms, but not all of them.
+
+Hydrogen holds two. Boron is often satisfied with six. In BF₃, boron is in the center with three single bonds, each fluorine has three lone pairs, and that uses every electron. Boron ends up with six around it.
+
+<Lewis
+  alt="Lewis diagram of boron trifluoride: boron in the center, joined by single bonds to three fluorine atoms, on its left, its right and above it. Each fluorine has three lone pairs. Boron has no lone pairs, so it has only six electrons around it."
+  atoms={[
+    { id: 'B', symbol: 'B', x: 0, y: 0 },
+    { id: 'F1', symbol: 'F', x: -1, y: 0, lonePairs: 3 },
+    { id: 'F2', symbol: 'F', x: 1, y: 0, lonePairs: 3 },
+    { id: 'F3', symbol: 'F', x: 0, y: -1, lonePairs: 3 },
+  ]}
+  bonds={[['B', 'F1', 1], ['B', 'F2', 1], ['B', 'F3', 1]]}
+/>
+
+Some atoms go the other way. A central atom from the third period or below can be drawn with more than eight electrons around it in a Lewis diagram. SF₆ has twelve around sulfur, and PCl₅ has ten around phosphorus. Six neighbors do not fit on four sides, so in the diagram of SF₆ two of the fluorine atoms sit on the diagonals.
+
+<Lewis
+  alt="Lewis diagram of sulfur hexafluoride: sulfur in the center, joined by single bonds to six fluorine atoms, on its left, its right, above, below, at the upper right and at the lower left. Each fluorine has three lone pairs. Sulfur has no lone pairs, so it has twelve electrons around it."
+  atoms={[
+    { id: 'S', symbol: 'S', x: 0, y: 0 },
+    { id: 'F1', symbol: 'F', x: -1, y: 0, lonePairs: 3 },
+    { id: 'F2', symbol: 'F', x: 1, y: 0, lonePairs: 3 },
+    { id: 'F3', symbol: 'F', x: 0, y: -1, lonePairs: 3 },
+    { id: 'F4', symbol: 'F', x: 0, y: 1, lonePairs: 3 },
+    { id: 'F5', symbol: 'F', x: 1, y: -1, lonePairs: 3 },
+    { id: 'F6', symbol: 'F', x: -1, y: 1, lonePairs: 3 },
+  ]}
+  bonds={[['S', 'F1', 1], ['S', 'F2', 1], ['S', 'F3', 1], ['S', 'F4', 1], ['S', 'F5', 1], ['S', 'F6', 1]]}
+/>
+
+Atoms of the second period, such as C, N, O and F, never hold more than eight. Only atoms from the third period down are drawn with more.
+
+One more kind of molecule cannot follow the rule at all. A molecule with an odd number of electrons, such as NO or NO₂, must leave one electron unpaired, so some atom is left short of eight. Topic 2.6 takes this up.
+
+<Check answer={1}>
+In which molecule does the central atom have fewer than eight electrons around it?
+
+- $\ce{BF3}$
+- $\ce{NF3}$
+- $\ce{CF4}$
+- $\ce{OF2}$
+
+<div slot="why">Boron has only three valence electrons and forms three bonds, so it has six around it. N, C and O each reach eight.</div>
+</Check>
+
+<Trap>
+
+Five mistakes to watch for when you draw a Lewis diagram:
+
+- **Forgetting the charge of an ion.** Add electrons for a negative charge, and remove them for a positive one.
+- **Putting hydrogen in the middle.** It forms only one bond, so it is always on the outside.
+- **Counting a bond as one electron.** Every bond line is two electrons.
+- **Leaving the central atom short.** Make a multiple bond from an outer atom's lone pair, unless the center is boron or the molecule has an odd number of electrons.
+- **Giving C, N, O or F more than eight.** Only atoms from the third period down are drawn with more.
+
+</Trap>
+
+<KeyPoints>
+
+- Start by counting the valence electrons of every atom, then add one for each negative charge or take one away for each positive charge.
+- The least electronegative atom other than hydrogen usually goes in the middle; hydrogen never does.
+- Draw single bonds first, then give the outer atoms their octets, then put what is left on the central atom.
+- If the central atom has fewer than eight, turn lone pairs on outer atoms into double or triple bonds (not for boron, or a molecule with an odd number of electrons).
+- Second-period atoms never exceed eight and hydrogen holds two. Boron is often content with six, and atoms from the third period down can hold more than eight.
+
+</KeyPoints>
+
+<PracticeNext />
