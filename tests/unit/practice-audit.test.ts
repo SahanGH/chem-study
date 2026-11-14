@@ -208,6 +208,38 @@ describe('siteFacts', () => {
     expect(question?.numbers).toEqual(['10', '5.7', '5.8']);
   });
 
+  // A drawing is the site's own addition, and its description may contain ">".
+  it('reads no numbers or formulas from a Lewis drawing', () => {
+    const body = [
+      '<Question number={1} topic="2.5">',
+      '',
+      'Draw water.',
+      '',
+      '<Answer>',
+      '',
+      'Two lone pairs on O.',
+      '',
+      '<Lewis',
+      '  alt="Lewis diagram of water: oxygen in the middle with 2 lone pairs, an H-O-H angle > 90 degrees, formal charge 0 on every atom."',
+      '  atoms={[',
+      "    { id: 'O', symbol: 'O', x: 0, y: 0, lonePairs: 2 },",
+      "    { id: 'H1', symbol: 'H', x: -1, y: 0 },",
+      "    { id: 'H2', symbol: 'H', x: 1, y: 0 },",
+      '  ]}',
+      "  bonds={[['O', 'H1', 1], ['O', 'H2', 1]]}",
+      '/>',
+      '',
+      '</Answer>',
+      '',
+      '</Question>',
+    ].join('\n');
+
+    const [, question] = siteFacts(mdx(body));
+
+    expect(question?.numbers).toEqual(['2.5']);
+    expect(question?.formulas).toEqual([]);
+  });
+
   it('reads the numbers of a question and leaves out the powers on units', () => {
     const [, question] = siteFacts(mdx(SITE_QUESTION));
 
