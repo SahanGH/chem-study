@@ -114,9 +114,18 @@ main,
   align-items: center;
   gap: 0.6rem;
   font-family: var(--font-head);
-  font-size: var(--step-1);
+  /* As large as each width allows: 36px from about 1030px, about 22px at
+     412px, where the header has only 15px to spare (measured). */
+  font-size: clamp(1.25rem, 0.8rem + 2.25vw, 2.25rem);
   font-weight: 500;
   text-decoration: none;
+}
+/* The tile is sized from the wordmark so the two grow and shrink together;
+   width follows from the SVG's viewBox. */
+.brand .logo-tile {
+  flex-shrink: 0;
+  width: auto;
+  height: 1.6em;
 }
 /* Words for screen readers only. The brand link says "home" this way rather
    than with an aria-label, because a label must contain all the visible text
@@ -157,7 +166,8 @@ main,
 /* Below 408px (iPhones are 375-393px) the brand and the nav are about 36px too
    wide for one row at 360px. Tighten the gaps and the wordmark rather than the
    44px icon buttons. At 320px the nav still wraps; pushing it to the right
-   makes that look deliberate. 412px and wider are untouched. */
+   makes that look deliberate. From 409px up the brand grows with the screen
+   (see .brand above). */
 @media (max-width: 25.5rem) {
   .site-header {
     gap: 0.5rem;
@@ -165,6 +175,10 @@ main,
   .brand {
     gap: 0.4rem;
     font-size: 1.1rem;
+  }
+  /* At 360px only 4px are left over, so the tile keeps its old fixed size. */
+  .brand .logo-tile {
+    height: 2.125rem;
   }
   .site-header nav {
     gap: 0.3rem;
