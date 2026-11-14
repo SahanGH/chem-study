@@ -128,7 +128,7 @@ test('switching to the halogens from the keyboard draws their curves with chlori
   await page.keyboard.press('ArrowDown');
 
   await expect(diagram.getByRole('radio', { name: 'Atom size (halogens)' })).toBeChecked();
-  await expect(diagram.getByRole('status')).toHaveText(atBondLength('Cl–Cl', 199, 242));
+  await expect(diagram.getByRole('status')).toHaveText(atBondLength('Cl–Cl', 199, 243));
   await expect(selected(diagram)).toHaveAttribute('data-curve', 'cl');
   await expect(diagram.locator('[data-curve="c-single"]')).toHaveCount(0);
   await expect(diagram.getByRole('group', { name: 'Bond' }).locator('label')).toHaveText(['Cl–Cl', 'Br–Br', 'I–I']);

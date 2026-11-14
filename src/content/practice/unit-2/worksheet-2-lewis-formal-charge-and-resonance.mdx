@@ -1,0 +1,266 @@
+---
+title: "Worksheet 2: Lewis diagrams, formal charge and resonance"
+kind: worksheet
+order: 3
+topics: ["2.5", "2.6"]
+summary: Five questions on counting electrons, drawing Lewis diagrams, computing formal charges and explaining resonance.
+---
+
+Work each question on paper before you open its answer. One habit runs through all of them: the electron count comes first, always. Start every structure by writing down the total electron count. A structure without a count cannot be checked, and the count catches most errors before they happen.
+
+## Questions
+
+<Question number={1} topic="2.5">
+
+For each species, give the electron count, then draw the Lewis diagram.
+
+<Part label="a">
+
+$\ce{OF2}$. The electron count: <Blank />
+
+<Answer>
+
+The count: 20. The diagram: F–O–F, with 2 lone pairs on O and 3 on each F. The bent shape comes in topic 2.7; the diagram just needs correct pairs.
+
+<Lewis
+  alt="Lewis diagram of oxygen difluoride: oxygen in the middle, joined by single bonds to a fluorine atom on its left and one on its right. Oxygen has two lone pairs, one above it and one below it. Each fluorine has three lone pairs."
+  atoms={[
+    { id: 'O', symbol: 'O', x: 0, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'F1', symbol: 'F', x: -1, y: 0, lonePairs: 3 },
+    { id: 'F2', symbol: 'F', x: 1, y: 0, lonePairs: 3 },
+  ]}
+  bonds={[['O', 'F1', 1], ['O', 'F2', 1]]}
+/>
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$\ce{C2H4}$. The electron count: <Blank />
+
+<Answer>
+
+The count: 12. The diagram: $\text{H}_2\text{C=CH}_2$, a double bond and no lone pairs.
+
+<Lewis
+  alt="Lewis diagram of ethene: two carbon atoms joined by a double bond. Each carbon has two hydrogen atoms, one above it and one below it, angled outward. There are no lone pairs."
+  atoms={[
+    { id: 'C1', symbol: 'C', x: 0, y: 0 },
+    { id: 'C2', symbol: 'C', x: 1, y: 0 },
+    { id: 'H1', symbol: 'H', x: -0.5, y: -0.87 },
+    { id: 'H2', symbol: 'H', x: -0.5, y: 0.87 },
+    { id: 'H3', symbol: 'H', x: 1.5, y: -0.87 },
+    { id: 'H4', symbol: 'H', x: 1.5, y: 0.87 },
+  ]}
+  bonds={[['C1', 'C2', 2], ['C1', 'H1', 1], ['C1', 'H2', 1], ['C2', 'H3', 1], ['C2', 'H4', 1]]}
+/>
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+$\ce{NO2-}$. The electron count: <Blank />
+
+<Answer>
+
+The count: 18. The diagram: two resonance structures. N is central, with one N=O and one N–O, and a lone pair on N. Each structure goes in square brackets, with the 1− charge at the upper right.
+
+<Resonance label="Resonance structures of the nitrite ion">
+<Lewis
+  alt="First resonance structure of the nitrite ion: nitrogen in the middle of a row with an oxygen on each side. The left oxygen has a double bond to nitrogen and two lone pairs. The right oxygen has a single bond to nitrogen and three lone pairs. Nitrogen has one lone pair above it. The whole ion is in square brackets with a minus charge."
+  atoms={[
+    { id: 'N', symbol: 'N', x: 0, y: 0, lonePairs: 1 },
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'O2', symbol: 'O', x: 1, y: 0, lonePairs: 3 },
+  ]}
+  bonds={[['N', 'O1', 2], ['N', 'O2', 1]]}
+  ion={-1}
+/>
+<Lewis
+  alt="Second resonance structure of the nitrite ion: the same atoms. Now the left oxygen has a single bond to nitrogen and three lone pairs, and the right oxygen has a double bond and two lone pairs. Nitrogen has one lone pair above it. The ion is in square brackets with a minus charge."
+  atoms={[
+    { id: 'N', symbol: 'N', x: 0, y: 0, lonePairs: 1 },
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: 3 },
+    { id: 'O2', symbol: 'O', x: 1, y: 0, lonePairs: ['top', 'bottom'] },
+  ]}
+  bonds={[['N', 'O1', 1], ['N', 'O2', 2]]}
+  ion={-1}
+/>
+</Resonance>
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+$\ce{XeF2}$. The electron count: <Blank />
+
+<Answer>
+
+The count: 22. The diagram: F–Xe–F with **three** lone pairs on Xe: ten electrons around it, which xenon (period 5) can hold. The fluorines are drawn on a diagonal only to leave room for xenon's lone pairs; a Lewis diagram does not show the shape.
+
+<Lewis
+  alt="Lewis diagram of xenon difluoride: xenon in the middle, joined by single bonds to a fluorine atom at its upper right and one at its lower left, so F, Xe and F lie in a straight line. Xenon has three lone pairs, above it, below it and on its left. Each fluorine has three lone pairs."
+  atoms={[
+    { id: 'Xe', symbol: 'Xe', x: 0, y: 0, lonePairs: 3 },
+    { id: 'F1', symbol: 'F', x: 1, y: -1, lonePairs: 3 },
+    { id: 'F2', symbol: 'F', x: -1, y: 1, lonePairs: 3 },
+  ]}
+  bonds={[['Xe', 'F1', 1], ['Xe', 'F2', 1]]}
+/>
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={2} topic="2.6">
+
+Compute the formal charges for the sulfate skeleton drawn with four single bonds (32 electrons).
+
+<Part label="a">
+
+The formal charge on S: <Blank /> On each O: <Blank />
+
+<Answer>
+
+On S: $+2$. On each O: $-1$.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Verify the sum against the ion's charge.
+
+<Answer>
+
+$$
++2 + 4(-1) = -2\ \checkmark
+$$
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={3} topic="2.6">
+
+Cyanide, $\ce{CN-}$ (10 electrons), could be drawn as C≡N with one lone pair on each atom, with both lone pairs on one atom, or with a C=N double bond instead. The accepted structure gives $\ce{C}$ a formal charge of $-1$ and $\ce{N}$ a formal charge of 0. A student objects: "A negative charge should sit on the **more** electronegative atom, so this structure is wrong." Respond.
+
+<Answer>
+
+The electronegativity rule is a preference among valid candidates, not a veto. It picks among structures that already give C and N an octet; it does not override the octet. With 10 electrons only one structure does that: a triple bond with one lone pair on each atom. Every other arrangement leaves an atom short of eight. The closest rival, a double bond with one lone pair on C and two on N, does put the $-1$ on nitrogen, but it leaves carbon with only six electrons. So the octet comes first, and $-1$ on carbon is the price of giving both atoms an octet.
+
+</Answer>
+
+</Question>
+
+<Question number={4} topic="2.6">
+
+Ozone, $\ce{O3}$ (18 electrons).
+
+<Part label="a">
+
+Draw both resonance structures.
+
+<Answer>
+
+A central O with a lone pair, with the O=O and O–O bonds swapping places. Each structure has 18 electrons.
+
+<Resonance label="Resonance structures of ozone">
+<Lewis
+  alt="First resonance structure of ozone: three oxygen atoms in a row. The left oxygen has a double bond to the central oxygen and two lone pairs. The central oxygen has one lone pair and a formal charge of +1. The right oxygen has a single bond to the central oxygen, three lone pairs and a formal charge of −1."
+  atoms={[
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'O2', symbol: 'O', x: 0, y: 0, lonePairs: 1 },
+    { id: 'O3', symbol: 'O', x: 1, y: 0, lonePairs: 3 },
+  ]}
+  bonds={[['O1', 'O2', 2], ['O2', 'O3', 1]]}
+  formalCharges
+/>
+<Lewis
+  alt="Second resonance structure of ozone: the same three oxygen atoms in a row. Now the left oxygen has a single bond to the central oxygen, three lone pairs and a formal charge of −1. The central oxygen has one lone pair and a formal charge of +1. The right oxygen has a double bond to the central oxygen and two lone pairs."
+  atoms={[
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: 3 },
+    { id: 'O2', symbol: 'O', x: 0, y: 0, lonePairs: 1 },
+    { id: 'O3', symbol: 'O', x: 1, y: 0, lonePairs: ['top', 'bottom'] },
+  ]}
+  bonds={[['O1', 'O2', 1], ['O2', 'O3', 2]]}
+  formalCharges
+/>
+</Resonance>
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Both O–O bonds measure 128 pm. A true O=O bond is 121 pm; an O–O single bond is 148 pm. Explain how this is evidence for the resonance hybrid.
+
+<Answer>
+
+Both bonds are identical and intermediate, matching a $3/2$-order average, not one single bond plus one double bond.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The bond order: <Blank />
+
+<Answer>
+
+$3/2$
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={5} topic="2.5">
+
+Each structure below has one error. Find it.
+
+<Part label="a">
+
+$\ce{BF3}$ drawn with a B=F double bond "to complete boron's octet."
+
+<Answer>
+
+The double bond puts $+1$ on F, the most electronegative element. The structure with B's incomplete octet (6 electrons) is the accepted structure. Boron is the exception that may stop at six electrons (topic 2.5), so nothing forces the double bond, and the single-bonded structure has every formal charge at zero.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$\ce{SF4}$ drawn with only 8 electrons on S when the count demands more.
+
+<Answer>
+
+The count:
+
+$$
+6 + 4(7) = 34\ \text{electrons}
+$$
+
+Four bonds use 8, and the F octets use 24, so the last pair **must** sit on S. Sulfur, in period 3, can hold more than eight.
+
+</Answer>
+
+</Part>
+
+</Question>

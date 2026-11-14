@@ -178,7 +178,12 @@ export function sourceFacts(tex, piece = 'question') {
  * @returns {Facts[]}
  */
 export function siteFacts(mdx, piece = 'question') {
-  const body = mdx.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '');
+  const body = mdx
+    .replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '')
+    // A drawn Lewis structure is the site's own addition, and the ">" its
+    // description may contain would end the tag early below. The block is
+    // always closed by "/>" on a line of its own.
+    .replace(/<Lewis\b[\s\S]*?\n\s*\/>/g, ' ');
   return cut(body, STARTS[piece].site).map((segment) => {
     const { formulas, rest } = takeFormulas(segment);
     const text = rest

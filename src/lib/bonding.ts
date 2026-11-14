@@ -46,7 +46,7 @@ export const BONDS = {
   'c-single': { id: 'c-single', name: 'C–C', symbol: 'C', length: 154, energy: 347, stiffness: 0.0198 },
   'c-double': { id: 'c-double', name: 'C=C', symbol: 'C', length: 134, energy: 614, stiffness: 0.0216 },
   'c-triple': { id: 'c-triple', name: 'C≡C', symbol: 'C', length: 120, energy: 839, stiffness: 0.0239 },
-  cl: { id: 'cl', name: 'Cl–Cl', symbol: 'Cl', length: 199, energy: 242, stiffness: 0.02 },
+  cl: { id: 'cl', name: 'Cl–Cl', symbol: 'Cl', length: 199, energy: 243, stiffness: 0.02 },
   br: { id: 'br', name: 'Br–Br', symbol: 'Br', length: 228, energy: 193, stiffness: 0.0196 },
   i: { id: 'i', name: 'I–I', symbol: 'I', length: 267, energy: 151, stiffness: 0.0185 },
 } as const satisfies Record<string, Bond>;
