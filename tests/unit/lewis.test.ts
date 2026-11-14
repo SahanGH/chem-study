@@ -2,9 +2,11 @@ import { describe, expect, it } from 'vitest';
 import {
   BOND_LENGTH,
   DOT_RADIUS,
+  LEWIS_MARKER,
   MARGIN,
   PAIR_GAP,
   bondLineOffsets,
+  countLewisStructures,
   formalCharges,
   layoutLewis,
   symbolHalfHeight,
@@ -743,6 +745,35 @@ describe('where an unpaired electron goes', () => {
 
     expect(dots).toHaveLength(1);
     expect(-dot.cx - DOT_RADIUS - symbolHalfWidth('N')).toBeCloseTo(PAIR_GAP, 6);
+  });
+});
+
+describe('countLewisStructures', () => {
+  // The root of a diagram as Lewis.astro renders it.
+  const root = `<div class="lewis" ${LEWIS_MARKER}><svg class="lewis-drawing"></svg></div>`;
+
+  it('counts none in empty HTML', () => {
+    expect(countLewisStructures('')).toBe(0);
+  });
+
+  it('counts one diagram', () => {
+    expect(countLewisStructures(root)).toBe(1);
+  });
+
+  it('counts two diagrams', () => {
+    expect(countLewisStructures(root + root)).toBe(2);
+  });
+
+  it('does not count an element whose attribute only starts with the marker', () => {
+    expect(countLewisStructures(`<div ${LEWIS_MARKER}-foo></div>`)).toBe(0);
+  });
+
+  it('counts a marker that has a value', () => {
+    expect(countLewisStructures(`<div class="lewis" ${LEWIS_MARKER}="">`)).toBe(1);
+  });
+
+  it('does not count the marker on an element that is not a div', () => {
+    expect(countLewisStructures(`<span ${LEWIS_MARKER}></span>`)).toBe(0);
   });
 });
 

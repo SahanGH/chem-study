@@ -2,11 +2,22 @@
 // Two or more <Lewis> structures side by side, with a resonance arrow between
 // neighbors. Each structure draws its own arrow; the stylesheet shows it only
 // on a structure that follows another one inside this group.
+import { LEWIS_MARKER, countLewisStructures } from '../../lib/lewis';
+
+interface Props {
+  /** Names the group for screen readers, e.g. "Resonance structures of ozone". */
+  label?: string;
+}
+
+const { label } = Astro.props;
 const structures = await Astro.slots.render('default');
-const count = structures.match(/<div\b[^>]*\bdata-lewis\b/g)?.length ?? 0;
+const count = countLewisStructures(structures);
 if (count < 2) {
-  throw new Error(`<Resonance> needs two or more <Lewis> structures inside it, but it holds ${count}.`);
+  throw new Error(
+    `<Resonance> needs two or more <Lewis> structures inside it, but it holds ${count}. ` +
+      `If that is 0 although Lewis diagrams are inside, the Lewis block's marker attribute (${LEWIS_MARKER}) has changed.`,
+  );
 }
 ---
 
-<div class="resonance" role="group" aria-label="Resonance structures"><Fragment set:html={structures} /></div>
+<div class="resonance" role="group" aria-label={label ?? 'Resonance structures'}><Fragment set:html={structures} /></div>

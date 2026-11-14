@@ -14,6 +14,15 @@ const CHLORIDE_DOTS = 8;
 const RESONANCE_LESSON = '/unit-2-compound-structure/2-6-resonance-and-formal-charge/';
 /** Lesson 2.6: the first resonance group is ozone's two structures, with formal charges. */
 const OZONE_FIRST = /^First resonance structure of ozone/;
+/** Lesson 2.6: the groups, named by the label each <Resonance> is given. */
+const OZONE_GROUP = 'Resonance structures of ozone';
+const NITRATE_GROUP = 'Resonance structures of the nitrate ion';
+const NO2_GROUP = 'Resonance structures of nitrogen dioxide';
+const OZONE_STRUCTURES = 2;
+const NITRATE_STRUCTURES = 3;
+const NO2_STRUCTURES = 2;
+const WIDE_SCREEN = { width: 1200, height: 800 };
+const PHONE_SCREEN = { width: 320, height: 800 };
 /** Lesson 2.6: carbon dioxide drawn on its own, not in a resonance group. */
 const CARBON_DIOXIDE = /^Lewis diagram of carbon dioxide drawn as O=C=O/;
 
@@ -88,17 +97,29 @@ test('formal charges are shown when asked for, and only the non-zero ones', asyn
   await expect(page.getByRole('img', { name: CARBON_DIOXIDE }).locator('.lewis-charge')).toHaveCount(0);
 });
 
-test('resonance structures are a labeled group with an arrow between each pair, hidden from screen readers', async ({
+test('each resonance group is named for its molecule and holds all of its structures', async ({ page }) => {
+  await page.goto(RESONANCE_LESSON);
+
+  await expect(page.getByRole('group', { name: OZONE_GROUP }).getByRole('img')).toHaveCount(OZONE_STRUCTURES);
+  await expect(page.getByRole('group', { name: NITRATE_GROUP }).getByRole('img')).toHaveCount(NITRATE_STRUCTURES);
+  await expect(page.getByRole('group', { name: NO2_GROUP }).getByRole('img')).toHaveCount(NO2_STRUCTURES);
+});
+
+test('there is an arrow between each pair of structures and none before the first, hidden from screen readers', async ({
   page,
 }) => {
   await page.goto(RESONANCE_LESSON);
-  const ozone = page.getByRole('group', { name: 'Resonance structures' }).first();
+  const ozoneArrows = page.getByRole('group', { name: OZONE_GROUP }).locator('.lewis-arrow');
+  const nitrateArrows = page.getByRole('group', { name: NITRATE_GROUP }).locator('.lewis-arrow');
 
-  await expect(ozone.getByRole('img')).toHaveCount(2);
-  const arrows = ozone.locator('.lewis-arrow');
-  await expect(arrows.first(), 'no arrow before the first structure').toBeHidden();
-  await expect(arrows.nth(1)).toBeVisible();
-  await expect(arrows.nth(1)).toHaveAttribute('aria-hidden', 'true');
+  await expect(ozoneArrows).toHaveCount(OZONE_STRUCTURES);
+  await expect(ozoneArrows.nth(0), 'ozone: no arrow before the first structure').toBeHidden();
+  await expect(ozoneArrows.nth(1), 'ozone: an arrow between the two').toBeVisible();
+  await expect(ozoneArrows.nth(1)).toHaveAttribute('aria-hidden', 'true');
+  await expect(nitrateArrows).toHaveCount(NITRATE_STRUCTURES);
+  await expect(nitrateArrows.nth(0), 'nitrate: no arrow before the first structure').toBeHidden();
+  await expect(nitrateArrows.nth(1), 'nitrate: an arrow between the first and second').toBeVisible();
+  await expect(nitrateArrows.nth(2), 'nitrate: an arrow between the second and third').toBeVisible();
 });
 
 test('a Lewis diagram on its own shows no resonance arrow', async ({ page }) => {
@@ -109,18 +130,28 @@ test('a Lewis diagram on its own shows no resonance arrow', async ({ page }) => 
 });
 
 test('resonance structures sit side by side on a wide screen and wrap on a narrow one', async ({ page }) => {
-  const ozone = page.getByRole('group', { name: 'Resonance structures' }).first();
-  const tops = async () =>
-    Promise.all((await ozone.locator('.lewis-drawing').all()).map(async (d) => (await d.boundingBox())?.y ?? NaN));
+  const drawings = page.getByRole('group', { name: OZONE_GROUP }).locator('.lewis-drawing');
+  const boxes = async () => {
+    const [first, second] = await Promise.all([drawings.nth(0).boundingBox(), drawings.nth(1).boundingBox()]);
+    if (!first || !second) throw new Error('The ozone structures are not both on the page.');
+    return { first, second };
+  };
 
-  await page.setViewportSize({ width: 1200, height: 800 });
+  await page.setViewportSize(WIDE_SCREEN);
   await page.goto(RESONANCE_LESSON);
-  const wide = await tops();
-  await page.setViewportSize({ width: 320, height: 800 });
-  const narrow = await tops();
+  const wide = await boxes();
+  await page.setViewportSize(PHONE_SCREEN);
+  const narrow = await boxes();
 
-  expect(new Set(wide).size, 'one row on a wide screen').toBe(1);
-  expect(new Set(narrow).size, 'more than one row on a phone').toBeGreaterThan(1);
+  expect(wide.second.x, 'wide: the second drawing is right of the first').toBeGreaterThanOrEqual(
+    wide.first.x + wide.first.width,
+  );
+  expect(wide.second.y, 'wide: the second drawing starts above the first one ends').toBeLessThan(
+    wide.first.y + wide.first.height,
+  );
+  expect(narrow.second.y, 'phone: the second drawing wraps below the first').toBeGreaterThanOrEqual(
+    narrow.first.y + narrow.first.height,
+  );
 });
 
 test('Lewis letters are kept out of the search index', async ({ page }) => {
