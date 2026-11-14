@@ -1,0 +1,149 @@
+---
+title: "Worksheet 4: A long free-response question"
+kind: worksheet
+order: 5
+topics: ["2.5", "2.6", "2.7"]
+summary: One 10-point free-response question on two nitrogen oxide ions, in the exam's long format, with its scoring rubric.
+---
+
+This is one long free-response question, the shape and length of a long question on the AP exam. Write out every part first, then open the answers. The scoring rubric comes after the last part, so you can score yourself.
+
+Score like an exam reader: no point for anything you did not write down.
+
+## Questions
+
+<Question number={1} title="Two nitrogen oxide ions" topic="2.5, 2.6, 2.7" points={10}>
+
+Answer all parts. Nitrogen and oxygen form several species. This question examines $\ce{NO2-}$ and $\ce{NO2+}$.
+
+<Part label="a">
+
+Give the total valence electron count for each species.
+
+<Answer>
+
+$\ce{NO2-}$:
+
+$$
+5 + 2 \times 6 + 1 = 18
+$$
+
+$\ce{NO2+}$:
+
+$$
+5 + 2 \times 6 - 1 = 16
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Draw a complete Lewis diagram for $\ce{NO2+}$.
+
+<Answer>
+
+O=N=O, a linear skeleton, 2 lone pairs on each O, no lone pair on N. Brackets, with the $+$ charge.
+
+<Lewis
+  alt="Lewis diagram of the NO2+ ion: nitrogen in the middle of a row with an oxygen on each side. Each oxygen has a double bond to nitrogen and two lone pairs. Nitrogen has no lone pairs and a formal charge of +1. The whole ion is in square brackets with a plus charge."
+  atoms={[
+    { id: 'N', symbol: 'N', x: 0, y: 0 },
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'O2', symbol: 'O', x: 1, y: 0, lonePairs: ['top', 'bottom'] },
+  ]}
+  bonds={[['N', 'O1', 2], ['N', 'O2', 2]]}
+  ion={1}
+  formalCharges
+/>
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Draw *both* resonance structures of $\ce{NO2-}$.
+
+<Answer>
+
+O=N–O $\leftrightarrow$ O–N=O, with a lone pair *on N*. Brackets, with the $-$ charge.
+
+<Resonance label="Resonance structures of the NO2- ion">
+<Lewis
+  alt="First resonance structure of the NO2- ion: nitrogen in the middle of a row with an oxygen on each side. The left oxygen has a double bond to nitrogen and two lone pairs. The right oxygen has a single bond, three lone pairs and a formal charge of −1. Nitrogen has one lone pair above it and no formal charge. The whole ion is in square brackets with a minus charge."
+  atoms={[
+    { id: 'N', symbol: 'N', x: 0, y: 0, lonePairs: ['top'] },
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'O2', symbol: 'O', x: 1, y: 0, lonePairs: 3 },
+  ]}
+  bonds={[['N', 'O1', 2], ['N', 'O2', 1]]}
+  ion={-1}
+  formalCharges
+/>
+<Lewis
+  alt="Second resonance structure of the NO2- ion: the same atoms. Now the left oxygen has a single bond, three lone pairs and a formal charge of −1, and the right oxygen has a double bond and two lone pairs. Nitrogen has one lone pair above it and no formal charge. The ion is in square brackets with a minus charge."
+  atoms={[
+    { id: 'N', symbol: 'N', x: 0, y: 0, lonePairs: ['top'] },
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: 3 },
+    { id: 'O2', symbol: 'O', x: 1, y: 0, lonePairs: ['top', 'bottom'] },
+  ]}
+  bonds={[['N', 'O1', 1], ['N', 'O2', 2]]}
+  ion={-1}
+  formalCharges
+/>
+</Resonance>
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Predict the O–N–O bond angle in each species and justify the difference.
+
+<Answer>
+
+$\ce{NO2+}$: 180°. There are 2 domains, so it is linear.
+
+$\ce{NO2-}$: less than 120° (about 115°). There are 3 domains, one of them a lone pair on N. The lone pair repels more strongly than the bonding domains and pushes the O–N–O angle below 120°. The ion is bent.
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+In $\ce{NO2-}$, the two N–O bonds are equal in length. Explain using your diagrams from (c).
+
+<Answer>
+
+The true structure is the resonance hybrid, an average of the two structures, so each bond has order $3/2$ and identical length.
+
+</Answer>
+
+</Part>
+
+<Part label="f">
+
+Predict which species has the shorter N–O bonds, and justify with bond order.
+
+<Answer>
+
+$\ce{NO2+}$. Its bond order is 2, against $3/2$ in $\ce{NO2-}$. Higher order, shorter bond.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>Both counts correct, with the charge handled in both directions.</RubricLine>
+<RubricLine part="b" points={2}>A 16-electron structure: 1 point for the correct connectivity and multiple bonds; 1 point for the lone pairs and the charge bracket.</RubricLine>
+<RubricLine part="c" points={2}>Both forms, with the lone pair on N and 18 electrons in each.</RubricLine>
+<RubricLine part="d" points={2}>1 point for each angle *with* its domain-count justification. Bare angles earn 1 point at most.</RubricLine>
+<RubricLine part="e" points={1}>Hybrid or average language, with equal bond order. "Flipping between forms" earns 0.</RubricLine>
+<RubricLine part="f" points={2}>1 point for $\ce{NO2+}$; 1 point for the bond-order comparison, $2 > 3/2$.</RubricLine>
+</Rubric>
+
+</Question>

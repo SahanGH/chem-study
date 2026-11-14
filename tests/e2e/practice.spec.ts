@@ -1,28 +1,45 @@
 import fs from 'node:fs';
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
+import { units } from '../../src/data/units';
 
 // Checks that hold for every practice document, whatever it asks. The list
-// comes from the files, so a new document gets its own tests the day it is added.
+// comes from the files, so a new document, or a unit's first practice, gets its
+// own tests the day it is added.
+const PRACTICE_FILES = new URL('../../src/content/practice/', import.meta.url);
+const practiceUnits = fs
+  .readdirSync(PRACTICE_FILES, { withFileTypes: true })
+  .filter((entry) => entry.isDirectory())
+  .map((folder) => {
+    const unit = units.find((u) => folder.name === `unit-${u.number}`);
+    if (!unit) {
+      throw new Error(`The practice folder ${folder.name} is not named unit-<number> after a unit in src/data/units.ts.`);
+    }
+    const unitPage = `/${unit.slug}/`;
+    const unitPaths = fs
+      .readdirSync(new URL(`${folder.name}/`, PRACTICE_FILES))
+      .filter((name) => name.endsWith('.mdx'))
+      .map((name) => `${unitPage}practice/${name.replace(/\.mdx$/, '')}/`)
+      .sort();
+    return { unit, unitPage, unitPaths };
+  });
+const paths = practiceUnits.flatMap(({ unitPaths }) => unitPaths);
+// The behavior of one page is tested on Unit 5's first worksheet.
 const UNIT = '/unit-5-kinetics/';
-const PRACTICE_FILES = new URL('../../src/content/practice/unit-5/', import.meta.url);
-const paths = fs
-  .readdirSync(PRACTICE_FILES)
-  .filter((name) => name.endsWith('.mdx'))
-  .map((name) => `${UNIT}practice/${name.replace(/\.mdx$/, '')}/`)
-  .sort();
 const WORKSHEET_1 = `${UNIT}practice/worksheet-1-rates-and-rate-laws/`;
 
-test('the unit page links to every practice document that has a file, and to no other', async ({ page }) => {
-  await page.goto(UNIT);
+for (const { unit, unitPage, unitPaths } of practiceUnits) {
+  test(`the Unit ${unit.number} page links to every practice document that has a file, and to no other`, async ({ page }) => {
+    await page.goto(unitPage);
 
-  const linked = await page.locator('.practice-list a').evaluateAll((links) =>
-    links.map((link) => link.getAttribute('href')),
-  );
+    const linked = await page.locator('.practice-list a').evaluateAll((links) =>
+      links.map((link) => link.getAttribute('href')),
+    );
 
-  expect(paths.length).toBeGreaterThanOrEqual(1);
-  expect([...linked].sort()).toEqual(paths);
-});
+    expect(unitPaths.length).toBeGreaterThanOrEqual(1);
+    expect([...linked].sort()).toEqual(unitPaths);
+  });
+}
 
 for (const path of paths) {
   test(`${path} renders its math, keeps its answers closed, fits the screen and is accessible`, async ({ page }) => {
@@ -134,30 +151,34 @@ test('a printed practice page carries the answers that are open and leaves out t
   await expect(page.locator('.print-note')).toBeHidden();
 });
 
-test('search finds every practice document by its title', async ({ page }) => {
-  test.slow();
-  await page.goto(UNIT);
-  const documents = await page.locator('.practice-list a').evaluateAll((links) =>
-    links.map((link) => ({ path: link.getAttribute('href'), title: link.textContent?.trim() ?? '' })),
-  );
-  expect(documents.length).toBeGreaterThanOrEqual(1);
-  await page.getByRole('button', { name: 'Search' }).click();
-  const input = page.locator('.pagefind-ui__search-input');
-  const more = page.locator('.pagefind-ui__button');
+for (const { unit, unitPage } of practiceUnits) {
+  test(`search finds every Unit ${unit.number} practice document by its title`, async ({ page }) => {
+    test.slow();
+    await page.goto(unitPage);
+    const documents = await page.locator('.practice-list a').evaluateAll((links) =>
+      links.map((link) => ({ path: link.getAttribute('href'), title: link.textContent?.trim() ?? '' })),
+    );
+    expect(documents.length).toBeGreaterThanOrEqual(1);
+    await page.getByRole('button', { name: 'Search' }).click();
+    const input = page.locator('.pagefind-ui__search-input');
+    const more = page.locator('.pagefind-ui__button');
 
-  for (const { path, title } of documents) {
-    if (!path || !title) throw new Error(`A practice link has no address or no text: ${JSON.stringify({ path, title })}`);
-    await input.fill(title);
-    // Wait for this query's results: the last query's are still on screen
-    // until Pagefind answers, and could satisfy the check below.
-    await expect(page.locator('.pagefind-ui__message')).toContainText(`for ${title}`);
-    await expect(page.locator('.pagefind-ui__result-link').first()).toBeVisible();
-    const result = page.locator(`.pagefind-ui__result-link[href*="${path}"]`).first();
-    while (!(await result.isVisible()) && (await more.isVisible())) await more.click();
+    for (const { path, title } of documents) {
+      if (!path || !title) throw new Error(`A practice link has no address or no text: ${JSON.stringify({ path, title })}`);
+      await input.fill(title);
+      // Wait for this query's results: the last query's are still on screen
+      // until Pagefind answers, and could satisfy the check below.
+      await expect(page.locator('.pagefind-ui__message')).toContainText(`for ${title}`);
+      await expect(page.locator('.pagefind-ui__result-link').first()).toBeVisible();
+      const result = page.locator(`.pagefind-ui__result-link[href*="${path}"]`).first();
+      // Pagefind shows five results at a time, and units share titles such as
+      // "Free-response set", so the page may be further down the list.
+      while (!(await result.isVisible()) && (await more.isVisible())) await more.click();
 
-    await expect(result, title).toBeVisible();
-  }
-});
+      await expect(result, title).toBeVisible();
+    }
+  });
+}
 
 test('search does not show what is inside an answer', async ({ page }) => {
   test.slow();
@@ -181,6 +202,28 @@ test("the unit page puts each practice document's topics under its title", async
   if (!title || !topics) throw new Error('The first practice item has no visible title or topics note to measure.');
   expect(topics.y).toBeGreaterThanOrEqual(title.y + title.height - 1);
   expect(Math.abs(topics.x - title.x)).toBeLessThanOrEqual(1);
+});
+
+const WORKSHEET_2_UNIT_2 = '/unit-2-compound-structure/practice/worksheet-2-lewis-formal-charge-and-resonance/';
+
+test('an answer to a "draw" question shows the drawn structure', async ({ page }) => {
+  await page.goto(WORKSHEET_2_UNIT_2);
+  const first = page.locator('[data-part="answer"]').first();
+
+  await first.locator('summary').click();
+
+  await expect(first.locator('.lewis svg[role="img"]').first()).toBeVisible();
+});
+
+test('a Unit 2 lesson ends with a link to the practice for its topic', async ({ page }) => {
+  await page.goto('/unit-2-compound-structure/2-5-lewis-diagrams/');
+
+  await page
+    .locator('[data-part="practice-next"]')
+    .getByRole('link', { name: 'Worksheet 2: Lewis diagrams, formal charge and resonance' })
+    .click();
+
+  await expect(page).toHaveURL(new RegExp(`${WORKSHEET_2_UNIT_2}$`));
 });
 
 test.describe('without JavaScript', () => {

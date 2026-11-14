@@ -1,6 +1,8 @@
 ---
 import { getCollection, render } from 'astro:content';
 import PracticeLayout from '../../../layouts/PracticeLayout.astro';
+import Lewis from '../../../components/lesson/Lewis.astro';
+import Resonance from '../../../components/lesson/Resonance.astro';
 import Worked from '../../../components/lesson/Worked.astro';
 import Answer from '../../../components/practice/Answer.astro';
 import Blank from '../../../components/practice/Blank.astro';
@@ -35,9 +37,10 @@ interface Props {
 }
 const { unit, doc } = Astro.props;
 const { Content, headings } = await render(doc);
-// Supplied to every practice document, so the files need no imports. Worked is
-// the lesson's block; the skill ladders use it.
-const blocks = { Answer, Blank, Part, Question, Rubric, RubricLine, Worked };
+// Supplied to every practice document, so the files need no imports. Worked,
+// Lewis and Resonance are the lessons' blocks: the skill ladders use Worked,
+// and Unit 2's answers draw Lewis structures.
+const blocks = { Answer, Blank, Lewis, Part, Question, Resonance, Rubric, RubricLine, Worked };
 ---
 
 <PracticeLayout unit={unit} doc={doc} headings={headings}>
