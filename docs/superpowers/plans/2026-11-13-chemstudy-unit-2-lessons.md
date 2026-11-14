@@ -208,6 +208,27 @@ tests/e2e/all-lessons.spec.ts home.spec.ts   (changed: every unit with lessons, 
 
 ## Group A: bonds, energy and solids (pull request A)
 
+> **As carried out (2026-11-13), all three groups.** The repository is newer than this plan. What changed and why:
+>
+> - **`<Resonance>` moved from Task 1 to Task 7.**
+>   - Group A had no lesson that used it, so the code review called it untested code.
+>   - It came back with lesson 2.6, together with its browser tests.
+>   - Each group now takes a `label` prop ("Resonance structures of ozone"), so a screen reader can tell lesson 2.6's three groups apart.
+>   - The diagrams inside a group are counted by a tested function, `countLewisStructures`, built from one shared marker, `LEWIS_MARKER`.
+> - **The Lewis code is split.**
+>   - Input checks are in `src/lib/lewis-parse.ts`, as small functions, and every failure branch has a test.
+>   - Layout stays in `src/lib/lewis.ts`.
+>   - The block now also refuses a bond line drawn through a third atom.
+>   - Writers find the props at the top of `lewis-parse.ts`.
+> - **The bond-energy diagram:**
+>   - the drawing is wide enough for the largest atom at the slider's far end;
+>   - the slider's name no longer carries its value, which now goes in `aria-valuetext`;
+>   - the readout inside the bond length says repulsion outweighs attraction.
+> - **There is no `<Beyond>` block for lessons.** The rules above were wrong to name one: the only `Beyond` block belongs to practice pages. Lessons mark excluded material as Unit 5's do, with a paragraph that starts "**Beyond the exam:**".
+> - **Figures use font-size 18 on a 480-wide viewBox**, so their text stays about 12 px on a 320 px phone. The Unit 5 figures' 14 would come out at about 9 px.
+> - **The shape viewer's readouts give the real squeezed angles** for SF₄ (about 102°), ClF₃ (about 87.5°) and BrF₅ (about 85°), instead of saying "slightly".
+> - **Writers moved some Checks** next to the idea each one tests, as the rules require, where the brief had placed them later.
+
 Branch: `topic/unit-2-bonds-and-solids`, from an up-to-date `main` after this plan's pull request merges. Tasks 1 to 5. The pull request title is "feat(lessons): Unit 2 lessons 2.1-2.4, Lewis diagrams and the bond-energy diagram".
 
 ### Task 1: The Lewis block, and every unit's lessons in the shared tests

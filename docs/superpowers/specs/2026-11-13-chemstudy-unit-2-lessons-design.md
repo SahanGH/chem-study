@@ -180,3 +180,23 @@ Each pull request stops for the teacher's merge, because a merge deploys.
 - No lesson scrolls sideways at 320 px with every answer open.
 - Both interactive diagrams work by keyboard, and both show a drawn
   picture without JavaScript and in print.
+
+> **As built (Plan 5, 2026-11-13).**
+>
+> - **Delivered:** seven lessons, 2.1 to 2.7, and three code pieces:
+>   - the Lewis block, with `<Resonance>`;
+>   - the bond-energy diagram;
+>   - the 3D shape viewer.
+>
+>   There are 7 drawn figures and 20 Lewis diagrams. They went out in three pull requests, as planned.
+> - **Fact-checks.** Every lesson was fact-checked independently on Opus, and so were the briefs before the plan. No check found a wrong answer key, number or Lewis structure. The findings were about wording and accuracy:
+>   - **Electronegativity trends** are explained with shielding.
+>   - **Formal charge** subtracts all nonbonding electrons, so nitrogen in NO₂ comes out at +1.
+>   - **A formal charge is not a real charge:** NH₄⁺ shows it, since its nitrogen is slightly negative.
+>   - **NO₂'s unpaired electron** is placed on nitrogen by the evidence (N₂O₄ forms through an N–N bond), not by formal charge.
+>   - **Steel** is harder and stronger, not stiffer.
+>   - **The CsF example** replaced KF, because KF's size comparison flips with the radius table.
+> - **Differs from section 4:**
+>   - Excluded material is marked with a "**Beyond the exam:**" paragraph, not a `<Beyond>` block, because lessons have none.
+>   - The drawn wedge-and-dash picture beside the shape viewer is one figure of the five electron geometries.
+>   - The five-column shapes table in lesson 2.7 scrolls inside its own box at 360 and 320 px. The page itself never scrolls sideways.
