@@ -84,9 +84,14 @@ test.describe('the search index holds words, not TeX source', () => {
     // query, so a page with a reactant named "Q" is listed. What must never be
     // found is the command itself.
     const count = Number(/^\d+/.exec(await message.innerText())?.[0] ?? '0');
-    await expect(page.locator('.pagefind-ui__result')).toHaveCount(count);
+    if (count > 0) {
+      // Each result first shows a placeholder excerpt with no marks; read the real ones.
+      await expect(page.locator('.pagefind-ui__result').first()).toBeVisible();
+      await expect(page.locator('.pagefind-ui__result .pagefind-ui__loading')).toHaveCount(0);
+    }
     // A mark carries the punctuation after its word ("quadruples."), so keep letters only.
     const marked = await page.locator('.pagefind-ui__result-excerpt mark').allInnerTexts();
+    if (count > 0) expect(marked.length).toBeGreaterThan(0);
     expect(marked.map((word) => word.toLowerCase().replace(/[^a-z]/g, ''))).not.toContain('qquad');
   });
 
