@@ -393,6 +393,8 @@ git commit -m "feat(practice): add the comprehensive test, session 1"
 
 ### Task 3: Check session 1, and open the pull request
 
+> **As carried out (2026-11-13).** The writers drafted while pull request 15 (this plan) waited; the session was built on a local branch stacked on the plan's. Number checks: Part A 115 values, Part B 237. Fact-checks on Opus found no wrong number or unit; 20 of their 21 points were accepted, mostly rubric lines that refused a correct answer reached another way. Two-letter placeholder names (a reaction to the controller's own note about not repeating reactions) were changed back to single letters, and letters that are element symbols (C, F, N, P, U) were replaced. The originality check (Sonnet) found nothing. Six equations were split so that none scrolls at 320 px; seven four-column tables still scroll inside their own boxes there, as the free-response set's do. A browser test, "a TeX command matches nothing", began to fail: Pagefind falls back to an indexed word that begins the query, so the reactant "Q" matched "qquad". It now checks that "qquad" is never a marked word, after the excerpts load (the TypeScript review caught that the first version could read the marks too early). Two scripts helped and stay in the scratch folder: `assemble.cjs` (joins the head and the drafts byte for byte) and `scroll-boxes.cjs` (names each box that scrolls).
+
 - [ ] Carry out "How every session is checked" for session 1 (parts A and B).
 - [ ] Commit the accepted corrections: `fix(practice): apply the fact-checks to session 1`.
 - [ ] Push and open the pull request:
@@ -451,6 +453,8 @@ If the final test has no Arrhenius calculation, drop the last paragraph's second
 - [ ] **Step 4: Commit:** `feat(practice): add the comprehensive test, session 2`.
 
 ### Task 5: Check session 2, and open the pull request
+
+> **As carried out (2026-11-13).** Written while session 1 waited, on a local branch stacked on session 1's. Number checks: Part C 92 values, Part D 61, Part E 82. Fact-checks on Opus found no wrong number or claim. The originality check found Part C's questions 7 and 8 too close to existing material (lesson 5.9's ozone example; an old-test item taken from Zumdahl, NO + Cl₂), and the Part E fact-check found question 16 repeating Part C's question 4. All three were rewritten, then checked again together on Opus (accuracy and originality), which led to four more small fixes, applied by the controller. Pre-equilibrium rubrics accept either route (equal forward and reverse rates, or the equilibrium expression), as Worksheet 4 does. Question 12 scores "molecules move faster and collide more" as the free-response set's question 5(b) does, 1 point; both follow the teacher's decision on that line. Part C came to 42 points and Part E to 22, so session 2 is 100 points.
 
 - [ ] Carry out "How every session is checked" for session 2 (parts C, D and E), with the number-check loop over `part-[cde].py`.
 - [ ] Commit the accepted corrections: `fix(practice): apply the fact-checks to session 2`.

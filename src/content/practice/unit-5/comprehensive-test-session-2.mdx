@@ -1,0 +1,1720 @@
+---
+title: "Comprehensive test, session 2: mechanisms, energy and catalysis"
+kind: test
+order: 8
+topics: ["5.4", "5.5", "5.6", "5.7", "5.8", "5.9", "5.10", "5.11"]
+summary: Nineteen scored free-response questions on mechanisms, collisions, energy profiles and catalysis, each with a worked answer and its scoring rubric.
+points: 100
+minutes: 100
+---
+
+This is the second of two sittings that together test all of Unit 5. It covers topics 5.4 to 5.11: elementary steps and mechanisms, the collision model, energy profiles and catalysis. Session 1 covers rates and rate laws.
+
+There are 19 questions worth 100 points. Give yourself about 100 minutes. You may use a calculator. Show every step, and write each answer out in full before you open the worked answer and its rubric.
+
+One limit applies. Topic 5.6 leaves calculations with the Arrhenius equation off the exam. The two parts that ask for one, in question 13, are labeled "Beyond the exam"; reading an energy profile and reasoning in words about temperature and catalysts are on the exam, and most of Part D asks for exactly that.
+
+## Part C: Mechanisms
+
+Eight questions on elementary steps and the mechanisms built from them. Questions 1 and 2 are about single steps; questions 3 to 8 add steps up, find intermediates and catalysts, and test mechanisms against measured rate laws, including mechanisms whose slow step is not the first.
+
+<Question number={1} title="Rate laws of elementary steps" topic="5.4" points={4}>
+
+Each equation in parts (a) to (c) is an elementary step: it happens in one event, exactly as written. For each step, state its molecularity and write its rate law.
+
+<Part label="a">
+
+$$
+\ce{DQ -> D + Q}
+$$
+
+<Answer>
+
+A single DQ particle breaks apart on its own. One reactant particle makes the step **unimolecular**, and its concentration appears once:
+
+$$
+\text{rate} = k[\ce{DQ}]
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$$
+\ce{2J -> J2}
+$$
+
+<Answer>
+
+Two J particles collide. That is two reactant particles, so the step is **bimolecular**, even though both are the same substance. The coefficient 2 becomes the exponent:
+
+$$
+\text{rate} = k[\ce{J}]^2
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+$$
+\ce{G + 2L -> GL2}
+$$
+
+<Answer>
+
+One G and two L particles collide at the same instant. Three reactant particles make the step **termolecular**. $[\ce{G}]$ appears once and $[\ce{L}]$ appears once for each L:
+
+$$
+\text{rate} = k[\ce{G}][\ce{L}]^2
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+For the step in part (c), $[\ce{G}]$ is doubled and $[\ce{L}]$ is tripled at the same temperature. Calculate the factor by which the rate of the step changes.
+
+<Answer>
+
+The step is first order in G and second order in L. Doubling $[\ce{G}]$ multiplies the rate by 2, and tripling $[\ce{L}]$ multiplies it by $3^2$:
+
+$$
+2 \times 3^2 = 2 \times 9 = \mathbf{18}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for unimolecular with $\text{rate} = k[\ce{DQ}]$. A rate law with a product in it earns 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for bimolecular with $\text{rate} = k[\ce{J}]^2$. Calling the step unimolecular because only one substance reacts earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for termolecular with $\text{rate} = k[\ce{G}][\ce{L}]^2$.</RubricLine>
+<RubricLine part="d" points={1}>1 point for 18, from $2 \times 3^2$, or the factor that follows from the student's rate law in part (c).</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={2} title="Why four particles do not meet at once" topic="5.4" points={5}>
+
+Nitrogen monoxide reacts with hydrogen at high temperature:
+
+$$
+\begin{aligned}
+&\ce{2NO(g) + 2H2(g)} \\
+&\qquad \ce{-> N2(g) + 2H2O(g)}
+\end{aligned}
+$$
+
+The rate law found by experiment is:
+
+$$
+\text{rate} = k[\ce{NO}]^2[\ce{H2}]
+$$
+
+<Part label="a">
+
+Suppose the balanced equation were a single elementary step. State how many particles would have to collide at once, and explain why chemists rule out a single step.
+
+<Answer>
+
+**Four particles**: two NO molecules and two $\ce{H2}$ molecules, all meeting at the same instant.
+
+Two particles colliding happens all the time. A third arriving at the same spot in the same instant, with enough energy and facing the right way, is already rare. A fourth as well is so unlikely that steps with four or more particles are not seen. So the reaction cannot happen as one event. It must happen in several steps.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Write the rate law that the equation would have if it were a single elementary step. Explain how the measured rate law also shows that the reaction is not a single step.
+
+<Answer>
+
+For an elementary step, the orders equal the coefficients, so a single step would have this rate law:
+
+$$
+\text{rate} = k[\ce{NO}]^2[\ce{H2}]^2
+$$
+
+The measured rate law is first order in $\ce{H2}$, not second order. **The orders are not the coefficients, so the equation is not an elementary step.**
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The measured orders are exactly the ones that a single collision of two NO molecules and one $\ce{H2}$ molecule would give. Explain why chemists still look for a mechanism in which no step needs three particles to collide at once.
+
+<Answer>
+
+A step with three particles needs a third particle to arrive at the very spot where two others are meeting, at the same instant, with enough energy and the right orientation. That happens far less often than a collision of two particles, so a three-particle step is an unlikely route. A mechanism made of two-particle steps can lead to the same rate law (topic 5.9 shows how), so the match with the rate law does not favor the three-particle step.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for four particles (two NO and two $\ce{H2}$) colliding at once; 1 point for explaining that collisions of three or more particles at the same instant are rare, so a four-particle step is not a reasonable event.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $\text{rate} = k[\ce{NO}]^2[\ce{H2}]^2$; 1 point for pointing out that the measured order in $\ce{H2}$ is 1, not 2, or that the measured overall order is 3, not 4, so the orders are not the coefficients.</RubricLine>
+<RubricLine part="c" points={1}>1 point for explaining that a collision of three particles at the same instant is far less likely than a collision of two. Saying that three-particle steps are impossible earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={3} title="Steps that add up" topic="5.7" points={5}>
+
+A gas-phase reaction has this overall equation:
+
+$$
+\ce{2AZ + D2 -> 2AD + Z2}
+$$
+
+One proposed mechanism has two steps.
+
+| Step | Equation |
+|---|---|
+| Step 1 | $\ce{AZ + D2 -> AD + DZ}$ |
+| Step 2 | $\ce{DZ + AZ -> AD + Z2}$ |
+
+<Part label="a">
+
+Write the sum of the steps, and compare it with the overall equation.
+
+<Answer>
+
+Put the left sides of both steps together on the left, and the right sides on the right:
+
+$$
+\begin{aligned}
+&\ce{AZ + D2 + DZ + AZ} \\
+&\quad \ce{-> AD + DZ + AD + Z2}
+\end{aligned}
+$$
+
+$\ce{DZ}$ appears once on each side, so it cancels. Collect the two AZ on the left and the two AD on the right:
+
+$$
+\ce{2AZ + D2 -> 2AD + Z2}
+$$
+
+**That is the overall equation, so the mechanism adds up.**
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Identify the intermediate. Explain how you know.
+
+<Answer>
+
+**$\ce{DZ}$ is the intermediate.** It is made in step 1 and used up in step 2, so it cancels out of the overall equation. It is present only while the reaction runs.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A second mechanism is proposed for the same reaction. Its step 2 is given without its products.
+
+| Step | Equation |
+|---|---|
+| Step 1 | $\ce{AZ + D2 -> AZD2}$ |
+| Step 2 | $\ce{AZD2 + AZ}$, products not given |
+
+Write the products of step 2 so that this mechanism also adds up to the overall equation.
+
+<Answer>
+
+Step 1 has used one AZ and the $\ce{D2}$. Everything else the overall equation does must happen in step 2: the second AZ is used, and 2AD and $\ce{Z2}$ come out.
+
+$$
+\ce{AZD2 + AZ -> 2AD + Z2}
+$$
+
+Check the atoms of step 2: two A, two Z and two D on each side. Adding the steps cancels $\ce{AZD2}$ and leaves the overall equation.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Both mechanisms add up to the same overall equation. Describe an observation that would support the first mechanism over the second.
+
+<Answer>
+
+The two mechanisms go through different intermediates: $\ce{DZ}$ in the first, $\ce{AZD2}$ in the second. **Finding $\ce{DZ}$ in the mixture while the reaction runs** would support the first mechanism. Finding $\ce{AZD2}$ would support the second.
+
+Even then, the first mechanism would be supported by the evidence, not proven.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for adding the two steps, left sides together and right sides together; 1 point for canceling $\ce{DZ}$ and concluding that the sum is the overall equation.</RubricLine>
+<RubricLine part="b" points={1}>1 point for $\ce{DZ}$, made in step 1 and used up in step 2. Naming $\ce{AZ}$, a reactant used in both steps, earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for $\ce{2AD + Z2}$ as the products of step 2.</RubricLine>
+<RubricLine part="d" points={1}>1 point for detecting $\ce{DZ}$, the intermediate only the first mechanism has, in the reacting mixture, or for another specific observation that one mechanism predicts and the other does not. Saying that the steps add up earns 0 points, since both mechanisms do.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={4} title="Catalyst or intermediate" topic="5.7" points={5}>
+
+A reaction in solution has this three-step mechanism.
+
+| Step | Equation |
+|---|---|
+| Step 1 | $\ce{L + J -> JL}$ |
+| Step 2 | $\ce{JL + L -> L2 + J}$ |
+| Step 3 | $\ce{L2 + G -> GL + L}$ |
+
+<Part label="a">
+
+Add the steps and write the overall equation.
+
+<Answer>
+
+Put all the left sides together and all the right sides together:
+
+$$
+\begin{aligned}
+&\ce{L + J + JL + L + L2 + G} \\
+&\quad \ce{-> JL + L2 + J + GL + L}
+\end{aligned}
+$$
+
+Now cancel what appears on both sides. $\ce{JL}$, $\ce{L2}$ and J each appear once on each side, so they go. L appears twice on the left and once on the right, so one L goes from each side and one stays on the left.
+
+$$
+\ce{L + G -> GL}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Identify the catalyst and each intermediate. Justify each by the order in which it is used and made.
+
+<Answer>
+
+- **J is the catalyst.** It is used in step 1 and made again, in full, in step 2, so none of it is consumed.
+- **$\ce{JL}$ is an intermediate.** It is made in step 1 and used up in step 2.
+- **$\ce{L2}$ is an intermediate.** It is made in step 2 and used up in step 3.
+
+All three cancel out of the overall equation. The order tells them apart: the catalyst first appears on the left of an arrow, and the intermediates first appear on the right.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A student says that L is also a catalyst, because step 3 gives an L back. Explain why the student is wrong.
+
+<Answer>
+
+Count the L particles. One L is used in step 1 and another in step 2, so two go in. Step 3 gives only one back. **One L is consumed overall, so L is a reactant**, and it appears in the overall equation. A catalyst has to come back in full.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the sum of the three steps with the canceling shown; 1 point for $\ce{L + G -> GL}$. An overall equation with J, $\ce{JL}$ or $\ce{L2}$ still in it earns at most 1 point.</RubricLine>
+<RubricLine part="b" points={2}>1 point for J as the catalyst, used in step 1 and made again in step 2; 1 point for both $\ce{JL}$ and $\ce{L2}$ as intermediates, each made and then used up. Naming only one intermediate earns 0 points for the second point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for counting two L used and one returned, so one L is consumed and L is a reactant.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={5} title="A reactant that enters after the slow step" topic="5.7, 5.8" points={5}>
+
+A gas-phase reaction has this overall equation:
+
+$$
+\ce{2AG + J -> A2 + G2J}
+$$
+
+This mechanism is proposed. Its steps add up to the overall equation.
+
+| Step | Equation |
+|---|---|
+| Step 1 (slow) | $\ce{2AG -> A2G + G}$ |
+| Step 2 (fast) | $\ce{G + J -> GJ}$ |
+| Step 3 (fast) | $\ce{A2G + GJ -> A2 + G2J}$ |
+
+<Part label="a">
+
+Write the rate law that this mechanism predicts. Justify your answer.
+
+<Answer>
+
+Step 1 is the slow step and it comes first, so the rate law of the reaction is the rate law of step 1. Step 1 is elementary, so its rate law comes from its equation. Two AG particles collide in it:
+
+$$
+\text{rate} = k[\ce{AG}]^2
+$$
+
+J first enters in step 2, after the slow step, so it does not appear. **The reaction is predicted to be second order in AG and zero order in J.**
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+At one temperature, the initial rate is $3.60 \times 10^{-5}\ \text{M/s}$ when $[\ce{AG}]_0 = 0.0400\ \text{M}$ and $[\ce{J}]_0 = 0.0200\ \text{M}$. Use the rate law from part (a) to calculate the initial rate at the same temperature when $[\ce{AG}]_0 = 0.0600\ \text{M}$ and $[\ce{J}]_0 = 0.0800\ \text{M}$.
+
+<Answer>
+
+$[\ce{AG}]$ is multiplied by this factor:
+
+$$
+\frac{0.0600}{0.0400} = 1.50
+$$
+
+The reaction is second order in AG, so the rate is multiplied by the square of that factor:
+
+$$
+1.50^2 = 2.25
+$$
+
+The change in $[\ce{J}]$ does nothing, since J is not in the rate law:
+
+$$
+\begin{aligned}
+\text{rate} &= (2.25)(3.60 \times 10^{-5}) \\
+&= \mathbf{8.10 \times 10^{-5}}\ \text{M/s}
+\end{aligned}
+$$
+
+The rate constant gives the same result. From the first run:
+
+$$
+\begin{aligned}
+k &= \frac{3.60 \times 10^{-5}}{(0.0400)^2} \\
+&= 0.0225\ \text{M}^{-1}\,\text{s}^{-1}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{rate} &= (0.0225)(0.0600)^2 \\
+&= 8.10 \times 10^{-5}\ \text{M/s}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Identify every intermediate in the mechanism.
+
+<Answer>
+
+Each of these is made in one step and used up in a later one:
+
+- **G**: made in step 1, used up in step 2.
+- **$\ce{A2G}$**: made in step 1, used up in step 3.
+- **$\ce{GJ}$**: made in step 2, used up in step 3.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for taking the rate law from the slow first step, written from its equation because the step is elementary; 1 point for $\text{rate} = k[\ce{AG}]^2$. A rate law written from the overall equation ($k[\ce{AG}]^2[\ce{J}]$) earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for multiplying by $1.50^2$, or for $k = 0.0225\ \text{M}^{-1}\,\text{s}^{-1}$, with $[\ce{J}]$ left out; 1 point for $8.10 \times 10^{-5}\ \text{M/s}$, or the value that follows from the student's rate law in part (a).</RubricLine>
+<RubricLine part="c" points={1}>1 point for all three intermediates: G, $\ce{A2G}$ and $\ce{GJ}$.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={6} title="A mechanism the data rule out" topic="5.8" points={6}>
+
+Initial rates for this reaction were measured at one temperature:
+
+$$
+\ce{2Q + X -> Q2X}
+$$
+
+| Experiment | $[\ce{Q}]_0$ (M) | $[\ce{X}]_0$ (M) | Initial rate (M/s) |
+|---|---|---|---|
+| 1 | 0.0100 | 0.0100 | $2.00 \times 10^{-6}$ |
+| 2 | 0.0200 | 0.0100 | $8.00 \times 10^{-6}$ |
+| 3 | 0.0200 | 0.0300 | $8.00 \times 10^{-6}$ |
+
+<Part label="a">
+
+Determine the rate law. For each order, name the experiments you compare.
+
+<Answer>
+
+**Order in Q.** Compare experiments 1 and 2. $[\ce{X}]$ is held constant at 0.0100 M and $[\ce{Q}]$ doubles. The rate changes by this factor:
+
+$$
+\frac{8.00 \times 10^{-6}}{2.00 \times 10^{-6}} = 4.00
+$$
+
+Since $2^m = 4$, the order in Q is **2**.
+
+**Order in X.** Compare experiments 2 and 3. $[\ce{Q}]$ is held constant at 0.0200 M and $[\ce{X}]$ triples. The rate does not change:
+
+$$
+3^n = 1 \quad\Rightarrow\quad n = \mathbf{0}
+$$
+
+The rate law is:
+
+$$
+\text{rate} = k[\ce{Q}]^2
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+This mechanism is proposed first. Its steps add up to the overall equation.
+
+| Step | Equation |
+|---|---|
+| Step 1 (slow) | $\ce{Q + X -> QX}$ |
+| Step 2 (fast) | $\ce{QX + Q -> Q2X}$ |
+
+Explain why this mechanism is ruled out.
+
+<Answer>
+
+The slow step comes first, so it sets the rate law. One Q and one X collide in it:
+
+$$
+\text{rate} = k[\ce{Q}][\ce{X}]
+$$
+
+That predicts first order in X, so tripling $[\ce{X}]$ would triple the rate. In experiments 2 and 3 the rate did not change at all. It also predicts first order in Q, where the data show second order. **The predicted rate law does not match the measured one, so the mechanism is ruled out**, even though its steps add up.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A second mechanism is proposed.
+
+| Step | Equation |
+|---|---|
+| Step 1 (slow) | $\ce{Q + Q -> Q2}$ |
+| Step 2 (fast) | $\ce{Q2 + X -> Q2X}$ |
+
+Determine whether this mechanism adds up to the overall equation and predicts the measured rate law. State what your answer shows about the mechanism.
+
+<Answer>
+
+**The steps add up.** Adding them gives:
+
+$$
+\begin{aligned}
+&\ce{Q + Q + Q2 + X} \\
+&\quad \ce{-> Q2 + Q2X}
+\end{aligned}
+$$
+
+$\ce{Q2}$ cancels, and the two Q make 2Q:
+
+$$
+\ce{2Q + X -> Q2X}
+$$
+
+**The rate law matches.** The slow step comes first, and two Q particles collide in it:
+
+$$
+\text{rate} = k[\ce{Q}]^2
+$$
+
+X enters only in step 2, after the slow step, which is why the rate does not depend on $[\ce{X}]$.
+
+The mechanism passes both tests, so it is **consistent with the evidence**. It is not proven: another mechanism might pass the same tests.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for order 2 in Q from experiments 1 and 2, with $[\ce{X}]$ held constant; 1 point for order 0 in X from experiments 2 and 3, with the rate law $\text{rate} = k[\ce{Q}]^2$.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the predicted rate law $k[\ce{Q}][\ce{X}]$ from the slow first step; 1 point for saying that it does not match the measured orders (first order in X where the data show zero order, or first order in Q where they show second order), so the mechanism is ruled out.</RubricLine>
+<RubricLine part="c" points={2}>1 point for finding that the steps add up and that the slow step predicts the measured $k[\ce{Q}]^2$; 1 point for calling the mechanism consistent with the evidence, not proven. Saying that it is proven earns 0 points for the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={7} title="A catalyst in the fast step" topic="5.9, 5.11" points={7}>
+
+A small amount of Z speeds up a reaction in solution. This mechanism is proposed for the reaction with Z present.
+
+| Step | Equation |
+|---|---|
+| Step 1 (fast, reversible) | $\ce{D + Z <=> DZ}$ |
+| Step 2 (slow) | $\ce{DZ + X -> DX + Z}$ |
+
+<Part label="a">
+
+Add the steps and write the overall equation. Identify the catalyst and the intermediate.
+
+<Answer>
+
+Add the steps and cancel what appears on both sides. Z and $\ce{DZ}$ each appear once on each side:
+
+$$
+\ce{D + X -> DX}
+$$
+
+- **Z is the catalyst.** It is used in step 1 and made again, in full, in step 2.
+- **$\ce{DZ}$ is the intermediate.** It is made in step 1 and used up in step 2.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Write the rate law of the slow step. Then write the rate law of the reaction without the intermediate.
+
+<Answer>
+
+**The slow step.** One $\ce{DZ}$ and one X collide in step 2:
+
+$$
+\text{rate} = k_2[\ce{DZ}][\ce{X}]
+$$
+
+$\ce{DZ}$ is an intermediate, so it has to be replaced.
+
+**The fast step before it.** Step 1 is fast and reversible and comes before the slow step, so treat it as being at equilibrium: its forward and reverse rates are equal. Going forward, one D collides with one Z. Going backward, one $\ce{DZ}$ falls apart:
+
+$$
+k_1[\ce{D}][\ce{Z}] = k_{-1}[\ce{DZ}]
+$$
+
+**Solve for the intermediate.** Divide both sides by $k_{-1}$:
+
+$$
+[\ce{DZ}] = \frac{k_1}{k_{-1}}[\ce{D}][\ce{Z}]
+$$
+
+Writing step 1's equilibrium expression, with $K = k_1/k_{-1}$, gives the same result.
+
+**Substitute**, and combine the constants into $k = k_2 k_1 / k_{-1}$:
+
+$$
+\begin{aligned}
+\text{rate} &= k_2\frac{k_1}{k_{-1}}[\ce{D}][\ce{Z}][\ce{X}] \\
+&= k[\ce{D}][\ce{Z}][\ce{X}]
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+In one run, the initial rate is $5.00 \times 10^{-5}\ \text{M/s}$. A second run at the same temperature has three times the concentration of D, twice the concentration of Z and the same concentration of X. Calculate its initial rate.
+
+<Answer>
+
+The rate is first order in D, first order in Z and first order in X. Tripling $[\ce{D}]$ multiplies the rate by 3, and doubling $[\ce{Z}]$ multiplies it by 2:
+
+$$
+\begin{aligned}
+\text{rate} &= (3)(2)(5.00 \times 10^{-5}) \\
+&= \mathbf{3.00 \times 10^{-4}}\ \text{M/s}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Step 2 keeps using up $\ce{DZ}$, yet part (b) treats step 1 as being at equilibrium. Explain why that is a good approximation.
+
+<Answer>
+
+Step 1 is fast in both directions: $\ce{DZ}$ forms and falls apart many times over in the time step 2 uses up a little of it. That small drain hardly disturbs the balance, so step 1's forward and reverse rates stay almost exactly equal. Nothing has stopped; the two directions simply keep pace with each other.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $\ce{D + X -> DX}$; 1 point for Z as the catalyst and $\ce{DZ}$ as the intermediate.</RubricLine>
+<RubricLine part="b" points={3}>1 point for the slow step's rate law, $k_2[\ce{DZ}][\ce{X}]$; 1 point for using step 1's equilibrium (the equal forward and reverse rates of step 1, or its equilibrium expression with $K$) to write $[\ce{DZ}]$ in terms of $[\ce{D}]$ and $[\ce{Z}]$; 1 point for $\text{rate} = k[\ce{D}][\ce{Z}][\ce{X}]$, with the constants combined or left as $k_2 k_1 / k_{-1}$ or $k_2 K$. A rate law that still contains $[\ce{DZ}]$ earns at most 1 point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for $3.00 \times 10^{-4}\ \text{M/s}$, or the value that follows from the student's rate law in part (b).</RubricLine>
+<RubricLine part="d" points={1}>1 point for explaining that step 1 is fast in both directions while the slow step removes $\ce{DZ}$ only slowly, so step 1's forward and reverse rates stay nearly equal. Saying only that step 1 is fast, or that the reaction has stopped, earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={8} title="A coefficient that is not an order" topic="5.8, 5.9" points={5}>
+
+A gas-phase reaction has this overall equation:
+
+$$
+\ce{GX + 2Q -> GQ + XQ}
+$$
+
+This mechanism is proposed. Its steps add up to the overall equation.
+
+| Step | Equation |
+|---|---|
+| Step 1 (fast, reversible) | $\ce{GX + Q <=> GXQ}$ |
+| Step 2 (slow) | $\ce{GXQ -> G + XQ}$ |
+| Step 3 (fast) | $\ce{G + Q -> GQ}$ |
+
+<Part label="a">
+
+Write the rate law of the slow step. Then write the rate law of the reaction without any intermediate.
+
+<Answer>
+
+**The slow step.** A single $\ce{GXQ}$ breaks apart in step 2:
+
+$$
+\text{rate} = k_2[\ce{GXQ}]
+$$
+
+$\ce{GXQ}$ is an intermediate, so it has to be replaced.
+
+**The fast step before it.** Step 1 is fast and reversible and comes before the slow step, so set its forward and reverse rates equal. Going forward, one GX collides with one Q. Going backward, one $\ce{GXQ}$ falls apart:
+
+$$
+k_1[\ce{GX}][\ce{Q}] = k_{-1}[\ce{GXQ}]
+$$
+
+**Solve for the intermediate.** Divide both sides by $k_{-1}$:
+
+$$
+[\ce{GXQ}] = \frac{k_1}{k_{-1}}[\ce{GX}][\ce{Q}]
+$$
+
+Writing step 1's equilibrium expression, with $K = k_1/k_{-1}$, gives the same result.
+
+**Substitute**, and combine the constants into $k = k_2 k_1 / k_{-1}$:
+
+$$
+\begin{aligned}
+\text{rate} &= k_2\frac{k_1}{k_{-1}}[\ce{GX}][\ce{Q}] \\
+&= k[\ce{GX}][\ce{Q}]
+\end{aligned}
+$$
+
+Step 3 comes after the slow step, so it adds nothing to the rate law.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The overall equation has a coefficient of 2 for Q. State the order in Q that the mechanism predicts, and explain why it is not 2.
+
+<Answer>
+
+**First order in Q.** One Q takes part in the fast equilibrium of step 1, which sets how much $\ce{GXQ}$ is waiting for the slow step. The second Q enters in step 3, after the slow step. Step 3 is fast and never holds the reaction up, so that Q does not count.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+At one temperature, the initial rate is $2.40 \times 10^{-4}\ \text{M/s}$ when $[\ce{GX}]_0 = 0.0500\ \text{M}$ and $[\ce{Q}]_0 = 0.100\ \text{M}$. Calculate the initial rate at the same temperature when $[\ce{GX}]_0 = 0.0250\ \text{M}$ and $[\ce{Q}]_0 = 0.300\ \text{M}$.
+
+<Answer>
+
+Halving $[\ce{GX}]$ multiplies the rate by 0.5, and tripling $[\ce{Q}]$ multiplies it by 3, since the reaction is first order in each:
+
+$$
+\begin{aligned}
+\text{rate} &= (0.5)(3)(2.40 \times 10^{-4}) \\
+&= \mathbf{3.60 \times 10^{-4}}\ \text{M/s}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for the slow step's rate law, $k_2[\ce{GXQ}]$; 1 point for using step 1's equilibrium (the equal forward and reverse rates of step 1, or its equilibrium expression with $K$) to write $[\ce{GXQ}]$ in terms of $[\ce{GX}]$ and $[\ce{Q}]$; 1 point for substituting it into the slow step's rate law to reach $\text{rate} = k[\ce{GX}][\ce{Q}]$, with the constants combined or left as $k_2 k_1 / k_{-1}$ or $k_2 K$. A rate law that still contains $[\ce{GXQ}]$ earns at most 1 point. A rate law taken from step 1 as if it were the slow step earns 0 points for the third award, although it looks the same.</RubricLine>
+<RubricLine part="b" points={1}>1 point for first order in Q, explained by the second Q entering in step 3, after the slow step.</RubricLine>
+<RubricLine part="c" points={1}>1 point for $3.60 \times 10^{-4}\ \text{M/s}$, or the value that follows from the student's rate law in part (a).</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part D: Collisions and energy profiles
+
+Seven questions on why a reaction needs collisions that are energetic enough and aimed right, and on reading energy profiles. Questions 9 and 10 are on the collision model, questions 11 to 13 on the profile of one step and on temperature, and questions 14 and 15 on reactions with more than one step.
+
+<Question number={9} title="Energy and aim in a collision" topic="5.5" points={5}>
+
+In water, hydroxide ion reacts with bromomethane in one elementary step:
+
+$$
+\begin{aligned}
+&\ce{OH-(aq) + CH3Br(aq)} \\
+&\qquad \ce{-> CH3OH(aq) + Br-(aq)}
+\end{aligned}
+$$
+
+In this step the O atom of $\ce{OH-}$ forms a bond to the C atom of $\ce{CH3Br}$, and at the same time the bond between C and Br breaks. The new bond can form only if the O atom reaches the C atom from the side opposite the Br atom.
+
+<Part label="a">
+
+State the two conditions a collision between $\ce{OH-}$ and $\ce{CH3Br}$ must meet to lead to products.
+
+<Answer>
+
+**Energy:** the collision must have at least the activation energy, $E_a$. Bonds have to start breaking, and that takes energy.
+
+**Orientation:** the particles must meet the right way around, so that the bonds can rearrange. Here the O atom of $\ce{OH-}$ must strike the C atom on the side opposite the Br atom.
+
+A collision that fails either condition ends with the particles bouncing apart unchanged.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Three collisions between an $\ce{OH-}$ ion and a $\ce{CH3Br}$ molecule are described below. For each one, state whether it leads to products, and explain.
+
+- Collision 1: the $\ce{OH-}$ ion strikes the Br end of $\ce{CH3Br}$, with far more energy than $E_a$.
+- Collision 2: the O atom strikes the C atom on the side opposite the Br atom, with less energy than $E_a$.
+- Collision 3: the O atom strikes the C atom on the side opposite the Br atom, with more energy than $E_a$.
+
+<Answer>
+
+**Collision 1: no.** It has more than enough energy, but the orientation is wrong. The O atom meets the Br end, so it cannot reach the C atom to bond to it. However hard the collision, the particles bounce apart.
+
+**Collision 2: no.** The orientation is right, but the collision has less than the activation energy. It cannot start breaking the bond between C and Br, so the particles bounce apart.
+
+**Collision 3: yes.** It meets both conditions: at least the activation energy, and the O atom striking the C atom on the side opposite the Br atom. It leads to $\ce{CH3OH}$ and $\ce{Br-}$.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for at least the activation energy; 1 point for an orientation that lets the bonds rearrange (here, O meeting C on the side opposite Br). "The particles must collide" alone earns 0 points: it is not one of the two conditions.</RubricLine>
+<RubricLine part="b" points={3}>1 point for each collision judged correctly with its reason: 1, no, wrong orientation; 2, no, too little energy; 3, yes, both conditions met. A judgment with no reason earns 0 points for that collision.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={10} title="The spread of molecular energies" topic="5.5" points={6}>
+
+Molecules of a gas, G, react with each other in one elementary step:
+
+$$
+\ce{2G(g) -> G2(g)}
+$$
+
+The same sample of the gas is studied at 300 K and at 350 K. Where a part asks for a sketch, describe in words what your sketch shows.
+
+<Part label="a">
+
+Describe a sketch of the distribution of the energies of the G molecules at 300 K and at 350 K, drawn on the same axes. State what each axis shows, how the two curves differ, what stays the same between the two curves, and where the activation energy, $E_a$, goes. Identify the region of the sketch that stands for the molecules with enough energy to react.
+
+<Answer>
+
+The sketch must show these things.
+
+- **The axes.** The horizontal axis is the energy of a molecule. The vertical axis is the number of molecules with that energy (or the fraction of them).
+- **The shape.** Each curve starts at zero, climbs to a peak and trails off in a long tail toward high energy.
+- **The 350 K curve.** Its peak is lower and sits at a higher energy, and its tail stretches further to the right. The molecules have a higher average energy, spread over a wider range.
+- **What stays the same.** The area under the two curves is the same, because the sample has the same number of molecules at both temperatures.
+- **The activation energy.** One vertical line marks $E_a$ on the energy axis, out in the tail. It is in the same place for both curves, because it belongs to the reaction and not to the temperature.
+- **The region that counts.** The area under each curve to the right of the $E_a$ line stands for the molecules with enough energy to react. That area is much larger under the 350 K curve.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+A different reaction of G, with a larger activation energy, takes place in the same gas at 300 K. Using your sketch, explain whether a larger or a smaller fraction of collisions has enough energy for this reaction.
+
+<Answer>
+
+**A smaller fraction.** The curve for 300 K is the same, but the line for the larger activation energy sits further to the right, further out in the thinning tail. Less of the area under the curve lies beyond it, so fewer molecules, and so a smaller fraction of collisions, have enough energy to react.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The gas at 300 K is squeezed into half its volume, and its temperature is kept at 300 K. State whether the 300 K curve changes, and explain why the reaction now goes faster.
+
+<Answer>
+
+**The curve does not change.** The spread of energies depends on the temperature, and the temperature is still 300 K. The fraction of collisions with at least $E_a$ is the same as before.
+
+The reaction goes faster because there are twice as many molecules in each liter, so the molecules collide more often. With the same fraction of a larger number of collisions having enough energy and the right orientation, more collisions lead to products each second.
+
+Because this step is elementary, its rate law is $\text{rate} = k[\ce{G}]^2$. Doubling $[\ce{G}]$ makes the rate four times as fast, with $k$ unchanged.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for the axes (number or fraction of molecules against energy) and curves that rise from zero to a peak and trail off in a tail; 1 point for the 350 K curve with a lower peak at higher energy and the same area under it; 1 point for one $E_a$ line in the same place for both curves, with the area beyond it larger at 350 K. An $E_a$ line moved for the higher temperature earns 0 points for the third award.</RubricLine>
+<RubricLine part="b" points={1}>1 point for a smaller fraction, because the larger $E_a$ lies further out in the tail with less area beyond it.</RubricLine>
+<RubricLine part="c" points={2}>1 point for the curve unchanged because the temperature is unchanged; 1 point for more collisions per second, with the same fraction of them having enough energy, or for the rate law: $[\ce{G}]$ doubles and $\text{rate} = k[\ce{G}]^2$, so the rate is four times as fast with $k$ unchanged. Saying that a larger fraction of collisions has enough energy earns 0 points for the second award.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={11} title="Both barriers from one profile" topic="5.6" points={5}>
+
+In one elementary step in the gas phase, atom J moves from X to Z:
+
+$$
+\ce{XJ(g) + Z(g) -> X(g) + JZ(g)}
+$$
+
+The table gives three points on the step's energy profile. The energies are measured from a chosen zero, not from the reactants. The data are for illustration.
+
+| Point on the profile | Energy (kJ/mol) |
+|---|---|
+| Reactants, $\ce{XJ + Z}$ | 35 |
+| Transition state | 147 |
+| Products, $\ce{X + JZ}$ | 82 |
+
+<Part label="a">
+
+Calculate the activation energy of the forward step and of the reverse step.
+
+<Answer>
+
+The forward step climbs from the reactants to the transition state:
+
+$$
+\begin{aligned}
+E_{a,\text{fwd}} &= 147 - 35 \\
+&= \mathbf{112}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+The reverse step climbs from the products to the same transition state:
+
+$$
+\begin{aligned}
+E_{a,\text{rev}} &= 147 - 82 \\
+&= \mathbf{65}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $\Delta H$ for the forward step, and state whether the step is exothermic or endothermic.
+
+<Answer>
+
+$\Delta H$ is the energy of the products minus the energy of the reactants:
+
+$$
+\begin{aligned}
+\Delta H &= 82 - 35 \\
+&= \mathbf{+47}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+The products are higher than the reactants, so the step is **endothermic**. The three numbers agree:
+
+$$
+\begin{aligned}
+&E_{a,\text{fwd}} - E_{a,\text{rev}} \\
+&= 112 - 65 = 47\ \text{kJ/mol}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+At the same temperature, does a larger fraction of collisions have enough energy to reach the transition state in the forward direction or in the reverse direction? Explain.
+
+<Answer>
+
+**In the reverse direction.** Its barrier is 65 kJ/mol, against 112 kJ/mol for the forward direction. At one temperature the spread of collision energies is the same, so a larger share of the collisions has the 65 kJ/mol needed to climb the lower barrier.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Describe what is happening to the bonds at the transition state, and explain why the transition state cannot be collected.
+
+<Answer>
+
+At the transition state the bond between X and J is partly broken and the bond between J and Z is partly formed. It is the highest-energy arrangement of the atoms on the path from reactants to products, at the top of the hill and not in a valley, so it lasts only an instant. It falls apart, to products or back to reactants, before it could be collected.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for 112 kJ/mol forward; 1 point for 65 kJ/mol reverse. A value read from zero instead of from the reactants or products (147 kJ/mol) earns 0 points for that award.</RubricLine>
+<RubricLine part="b" points={1}>1 point for $+47\ \text{kJ/mol}$ with "endothermic". $-47\ \text{kJ/mol}$, or "exothermic", earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for the reverse direction because its barrier (65 kJ/mol) is lower, or the direction with the lower barrier from the student's part (a).</RubricLine>
+<RubricLine part="d" points={1}>1 point for the X to J bond partly broken and the J to Z bond partly formed, with the transition state at the energy maximum, lasting only an instant. Calling it an intermediate earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={12} title="A glow stick in hot water" topic="5.5, 5.6" points={4}>
+
+A glow stick gives off light from a chemical reaction inside it: the faster the reaction, the brighter the glow. A glow stick placed in a cup of hot water glows brighter than one at room temperature. One placed in a freezer glows only dimly.
+
+<Part label="a">
+
+Explain, in terms of collisions between the reacting molecules, why the glow stick glows brighter in hot water.
+
+<Answer>
+
+In hot water the molecules have a higher average energy, and their energies spread further toward high values. A much larger fraction of the collisions now has at least the activation energy. The molecules also collide a little more often, but that is the smaller effect.
+
+So more collisions each second lead to products: the reaction is faster, and more light is given off each second. The glow is brighter.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+A student says the glow stick is brighter in hot water because the hot water lowers the activation energy of the reaction. State whether the student is right, and explain.
+
+<Answer>
+
+**The student is wrong.** The activation energy is the height of the energy barrier on the reaction's path, from the reactants to the transition state. It belongs to the reaction and does not change with temperature. Warming changes the energies of the molecules, so more of their collisions get over the same barrier. Only a different path, such as one a catalyst provides, has a different activation energy.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+State whether the rate constant, $k$, of the reaction is larger, smaller or the same in hot water. Use the Arrhenius equation, $k = Ae^{-E_a/RT}$, to justify your answer without calculating.
+
+<Answer>
+
+**Larger.** $T$ is in the denominator of the exponent $-E_a/RT$. At a higher $T$ the exponent is less negative, closer to zero, so $e^{-E_a/RT}$ is larger. $A$ and $E_a$ do not change, so $k$ is larger.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for a larger fraction of collisions having at least the activation energy; 1 point for linking more successful collisions per second to a faster reaction and a brighter glow. "The molecules move faster and collide more often", with no mention of energy, earns 1 point in all (the second award).</RubricLine>
+<RubricLine part="b" points={1}>1 point for "wrong", with the activation energy unchanged by temperature because it belongs to the reaction's path; warming changes the molecules' energies instead.</RubricLine>
+<RubricLine part="c" points={1}>1 point for "larger", with the higher $T$ making the exponent less negative. "Larger" with no reason earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={13} title="Activation energy from two rate constants" topic="5.6" points={5}>
+
+A compound $\ce{LQ}$ breaks apart in solution in one elementary step, $\ce{LQ -> L + Q}$. The reaction is first order. Its rate constant was measured at two temperatures. The data are for illustration.
+
+| Temperature (K) | $k$ ($\text{s}^{-1}$) |
+|---|---|
+| 288.0 | $1.20 \times 10^{-4}$ |
+| 308.0 | $1.20 \times 10^{-3}$ |
+
+You may use the Arrhenius equation, its two-temperature form and the value of $R$:
+
+$$
+k = Ae^{-E_a/RT}
+$$
+
+$$
+\ln\frac{k_2}{k_1} = \frac{E_a}{R}\left(\frac{1}{T_1} - \frac{1}{T_2}\right)
+$$
+
+$$
+R = 8.314\ \text{J}\,\text{mol}^{-1}\,\text{K}^{-1}
+$$
+
+<Part label="a" beyond>
+
+Calculate the activation energy of the reaction, in kJ/mol.
+
+<Answer>
+
+Take $T_1 = 288.0\ \text{K}$ and $T_2 = 308.0\ \text{K}$. First the two pieces of the equation:
+
+$$
+\begin{aligned}
+\frac{k_2}{k_1} &= \frac{1.20 \times 10^{-3}}{1.20 \times 10^{-4}} \\
+&= 10.0
+\end{aligned}
+$$
+
+$$
+\ln(10.0) = 2.303
+$$
+
+$$
+\begin{aligned}
+&\frac{1}{T_1} - \frac{1}{T_2} \\
+&= \frac{1}{288.0} - \frac{1}{308.0} \\
+&= 2.255 \times 10^{-4}\ \text{K}^{-1}
+\end{aligned}
+$$
+
+Then solve for $E_a$:
+
+$$
+\begin{aligned}
+E_a &= \frac{R \ln(k_2/k_1)}{1/T_1 - 1/T_2} \\
+&= \frac{(8.314)(2.303)}{2.255 \times 10^{-4}} \\
+&= 8.49 \times 10^{4}\ \text{J/mol} \\
+&= \mathbf{84.9}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+Units: $\text{J}\,\text{mol}^{-1}\,\text{K}^{-1}$ divided by $\text{K}^{-1}$ leaves J/mol.
+
+</Answer>
+
+</Part>
+
+<Part label="b" beyond>
+
+Calculate the rate constant at 298.0 K.
+
+<Answer>
+
+Use the two-temperature form again, from 288.0 K to $T_3 = 298.0\ \text{K}$:
+
+$$
+\begin{aligned}
+&\frac{1}{288.0} - \frac{1}{298.0} \\
+&= 1.165 \times 10^{-4}\ \text{K}^{-1}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\ln\frac{k_3}{k_1} \\
+&= \frac{84\,900}{8.314} \times 1.165 \times 10^{-4} \\
+&= 1.190
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+k_3 &= k_1 e^{1.190} \\
+&= (1.20 \times 10^{-4})(3.287) \\
+&= \mathbf{3.94 \times 10^{-4}}\ \text{s}^{-1}
+\end{aligned}
+$$
+
+The answer lies between the two measured values, as it should for a temperature between the two.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A second reaction has the same value of $A$ as this one but an activation energy of 60.0 kJ/mol. Without calculating, state which reaction has the larger rate constant at 288.0 K, and justify your answer.
+
+<Answer>
+
+**The second reaction.** In $k = Ae^{-E_a/RT}$, $E_a$ is in the exponent with a minus sign. At the same $T$ and the same $A$, a smaller $E_a$ makes the exponent less negative, so $k$ is larger.
+
+In terms of collisions: the lower barrier is crossed by a larger fraction of the collisions at the same temperature.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the two-temperature form with $k_2/k_1 = 10.0$ and both temperatures in kelvins; 1 point for 84.9 kJ/mol (accept 84.8 to 85.1 from rounding along the way). An answer off by a factor of 1000 earns 1 point.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the two-temperature form with the $E_a$ from part (a) and 298.0 K, starting from either measured temperature; 1 point for $3.94 \times 10^{-4}\ \text{s}^{-1}$ (accept 3.93 to $3.95 \times 10^{-4}$), or the value that follows from the student's $E_a$.</RubricLine>
+<RubricLine part="c" points={1}>1 point for the second reaction, because the smaller $E_a$ makes the exponent less negative (or the lower barrier is crossed by a larger fraction of collisions). Choosing it with no reason earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={14} title="A profile with three peaks" topic="5.10" points={5}>
+
+The energy profile of a reaction is described below, point by point from left to right: the start, every peak and every valley, and the end. The reactants are set at 0 kJ/mol. The data are for illustration.
+
+| Point on the curve | Energy (kJ/mol) |
+|---|---|
+| Start: reactants | 0 |
+| Peak | 58 |
+| Valley | $-24$ |
+| Peak | 71 |
+| Valley | $-36$ |
+| Peak | 2 |
+| End: products | $-88$ |
+
+<Part label="a">
+
+Determine the number of elementary steps in the mechanism and the number of intermediates. Justify your answer from the profile.
+
+<Answer>
+
+Each peak is the transition state of one elementary step. There are three peaks, so there are **three steps**.
+
+Each valley between the reactants and the products is an intermediate: made in one step and used up in the next. There are two valleys, so there are **two intermediates**.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the activation energy of each step.
+
+<Answer>
+
+Measure each climb from the level where its step starts: the reactants for step 1, and the valley before the peak for each later step.
+
+$$
+\begin{aligned}
+E_{a,1} &= 58 - 0 \\
+&= \mathbf{58}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+E_{a,2} &= 71 - (-24) \\
+&= \mathbf{95}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+E_{a,3} &= 2 - (-36) \\
+&= \mathbf{38}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Identify the rate-limiting step. Justify your answer.
+
+<Answer>
+
+**Step 2.** It has the largest activation energy, 95 kJ/mol, against 58 kJ/mol and 38 kJ/mol. At a given temperature the smallest fraction of collisions has enough energy for the biggest climb, so step 2 is the slowest step.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Calculate $\Delta H$ for the overall reaction, and state whether the reaction is exothermic or endothermic.
+
+<Answer>
+
+$\Delta H$ is the energy of the final products minus the energy of the first reactants. The peaks and valleys in between do not enter into it.
+
+$$
+\begin{aligned}
+\Delta H &= -88 - 0 \\
+&= \mathbf{-88}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+The sign is negative, so the reaction is **exothermic**. The energy changes of the three steps, valley to valley, add to the same value:
+
+$$
+\begin{aligned}
+&(-24) + (-12) + (-52) \\
+&= -88\ \text{kJ/mol}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for three steps and two intermediates, with peaks as transition states and valleys as intermediates.</RubricLine>
+<RubricLine part="b" points={2}>1 point for measuring the climbs of steps 2 and 3 from the valley before each peak; 1 point for 58, 95 and 38 kJ/mol. Measuring every climb from 0 kJ/mol (58, 71 and 2 kJ/mol) earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for step 2 because its activation energy is the largest (or the step with the largest activation energy from the student's part (b)), or because its transition state is the highest point on the profile. Step 1 because it comes first earns 0 points.</RubricLine>
+<RubricLine part="d" points={1}>1 point for $-88\ \text{kJ/mol}$ with "exothermic".</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={15} title="From the steps to the profile" topic="5.7, 5.10" points={6}>
+
+A reaction takes place in two elementary steps. The data are for illustration.
+
+| Step | Equation |
+|---|---|
+| Step 1 | $\ce{GZ2 -> GZ + Z}$ |
+| Step 2 | $\ce{Z + X -> XZ}$ |
+
+The overall equation is:
+
+$$
+\ce{GZ2 + X -> GZ + XZ}
+$$
+
+The table gives the activation energy and the energy change of each step.
+
+| Step | $E_a$ (kJ/mol) | $\Delta H$ (kJ/mol) |
+|---|---|---|
+| Step 1 | 52 | $+21$ |
+| Step 2 | 27 | $-97$ |
+
+<Part label="a">
+
+Show that the steps add up to the overall equation, and identify the intermediate.
+
+<Answer>
+
+Add the two steps:
+
+$$
+\begin{aligned}
+&\ce{GZ2 + Z + X} \\
+&\qquad \ce{-> GZ + Z + XZ}
+\end{aligned}
+$$
+
+Z appears on both sides and cancels, leaving the overall equation:
+
+$$
+\ce{GZ2 + X -> GZ + XZ}
+$$
+
+**The intermediate is Z.** Step 1 makes it and step 2 uses it up, so it is not in the overall equation.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Set the reactants at 0 kJ/mol. Calculate the energy of the first transition state, the intermediate stage, the second transition state and the products. State $\Delta H$ for the overall reaction.
+
+<Answer>
+
+Step 1 climbs from the reactants and ends at the intermediate stage:
+
+$$
+\begin{aligned}
+\text{first peak} &= 0 + 52 \\
+&= \mathbf{52}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{valley} &= 0 + 21 \\
+&= \mathbf{21}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+Step 2 starts from the valley:
+
+$$
+\begin{aligned}
+\text{second peak} &= 21 + 27 \\
+&= \mathbf{48}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{products} &= 21 + (-97) \\
+&= \mathbf{-76}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+The overall energy change is the products minus the reactants:
+
+$$
+\begin{aligned}
+\Delta H &= -76 - 0 \\
+&= \mathbf{-76}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Describe a sketch of the energy profile, using your values from part (b). State what each axis shows; give the level of the reactants, each transition state, the intermediate and the products; name the intermediate; and mark the activation energy of each step and $\Delta H$.
+
+<Answer>
+
+The sketch must show these things.
+
+- **The axes.** Energy on the vertical axis; reaction progress on the horizontal axis.
+- **The start.** A level line for the reactants, $\ce{GZ2 + X}$, at 0 kJ/mol.
+- **Two peaks.** The first peak, the transition state of step 1, at 52 kJ/mol. The second peak, the transition state of step 2, at 48 kJ/mol, a little lower than the first.
+- **One valley.** Between the peaks, at 21 kJ/mol, above the reactants. It is labeled as the intermediate Z, present there with $\ce{GZ}$ and X.
+- **The end.** The products, $\ce{GZ + XZ}$, at $-76\ \text{kJ/mol}$, below the reactants.
+- **The arrows.** $E_a$ of step 1 from the reactants up to the first peak; $E_a$ of step 2 from the valley up to the second peak; $\Delta H$ from the reactants down to the products.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Identify the rate-limiting step. Justify your answer.
+
+<Answer>
+
+**Step 1.** Its activation energy, 52 kJ/mol, is larger than that of step 2, 27 kJ/mol. A smaller fraction of collisions has enough energy for the bigger climb, so step 1 is the slower step.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for the steps added with Z canceled, and Z named as the intermediate.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the peaks and valley at 52, 21 and 48 kJ/mol; 1 point for products and $\Delta H$ at $-76\ \text{kJ/mol}$. A second peak at 27 kJ/mol, measured from the reactants, earns 0 points for the first award.</RubricLine>
+<RubricLine part="c" points={2}>1 point for energy against reaction progress with the reactants, both transition states, the intermediate and the products at the levels from part (b) (the student's values), and the valley named as the intermediate Z; 1 point for the three marks: $E_a$ of step 1 from the reactants, $E_a$ of step 2 from the valley, and $\Delta H$ from the reactants to the products. An $E_a$ of step 2 marked from the reactants earns 0 points for the second award.</RubricLine>
+<RubricLine part="d" points={1}>1 point for step 1 because its activation energy is the larger, or because its transition state is the highest point on the profile. Step 2 because it releases more energy earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part E: Catalysis
+
+Four questions on topic 5.11. They ask how a catalyst can appear in a rate law, compare energy profiles with and without a catalyst, name the kinds of catalysis, and say what a catalyst changes and what it does not.
+
+<Question number={16} title="A catalyst in the rate law" topic="5.8, 5.11" points={5}>
+
+The gases $\ce{A2}$ and J react in a sealed, rigid container, quickly only when a third gas, Q, is present. The overall equation is
+
+$$
+\ce{A2 + 2J -> 2AJ}
+$$
+
+and this mechanism is proposed for it. Its steps add up to the overall equation.
+
+| Step | Equation |
+|---|---|
+| Step 1 (slow) | $\ce{A2 + Q -> A2Q}$ |
+| Step 2 (fast) | $\ce{A2Q + J -> AJ + AQ}$ |
+| Step 3 (fast) | $\ce{AQ + J -> AJ + Q}$ |
+
+<Part label="a">
+
+Identify the catalyst. Justify your answer from the steps in which it is used and made.
+
+<Answer>
+
+**Q is the catalyst.** It is used in step 1 and made again in step 3, one for one, so none of it is consumed. That is why it does not appear in the overall equation.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Write the rate law that the mechanism predicts. Although Q does not appear in the overall equation, state what happens to the rate when only $[\ce{Q}]$ is doubled.
+
+<Answer>
+
+Step 1 is the slow step and it comes first, so its rate law is the rate law of the reaction. It is an elementary step in which one $\ce{A2}$ and one Q collide:
+
+$$
+\text{rate} = k[\ce{A2}][\ce{Q}]
+$$
+
+The rate is first order in Q, so doubling $[\ce{Q}]$ **doubles the rate**. J does not appear, because it reacts only in the fast steps that follow the slow one.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A run starts with $[\ce{Q}] = 0.0100\ \text{M}$. State $[\ce{Q}]$ when the reaction is over. Then explain how Q can appear in the rate law although none of it is used up.
+
+<Answer>
+
+**$[\ce{Q}]$ is 0.0100 M at the end**, the same as at the start. Every Q that is used in step 1 is made again in step 3. While the reaction runs, some Q is held for a moment in $\ce{A2Q}$ and AQ, but all of it is returned.
+
+Q is used in step 1, the rate-limiting step, and made again only in a later, fast step. The rate of the reaction is the rate of step 1, and step 1 happens each time an $\ce{A2}$ meets a Q. The more Q there is, the more often those collisions happen. So $[\ce{Q}]$ sets the rate, even though the net amount of Q never changes.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for Q as the catalyst, because it is used in step 1 and made again in step 3. Naming $\ce{A2Q}$ or AQ earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $\text{rate} = k[\ce{A2}][\ce{Q}]$ from the slow first step; 1 point for the rate doubling (first order in Q). Saying the rate is unchanged because Q is not used up earns 0 points for the second award.</RubricLine>
+<RubricLine part="c" points={2}>1 point for 0.0100 M, because the Q used in step 1 is made again in step 3; 1 point for explaining that Q is used in the rate-limiting step, so its concentration sets how often that step happens, although it is made again later.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={17} title="One hill or two" topic="5.6, 5.10, 5.11" points={6}>
+
+Without a catalyst, the gas reaction $\ce{G -> L}$ takes place in a single step. Its energy profile starts at the reactants, at 0 kJ/mol, climbs to a transition state at 132 kJ/mol, and falls to the products at $-46\ \text{kJ/mol}$.
+
+With a catalyst, the reaction takes a different path. Its profile passes these levels in order and then falls to the products.
+
+| Point on the catalyzed path | Energy (kJ/mol) |
+|---|---|
+| Start (reactants) | 0 |
+| First peak | 74 |
+| Valley | 18 |
+| Second peak | 61 |
+
+<Part label="a">
+
+Calculate the activation energy and the overall energy change, $\Delta H$, of the reaction without the catalyst.
+
+<Answer>
+
+The activation energy is the transition state minus the reactants:
+
+$$
+E_a = 132 - 0 = \mathbf{132}\ \text{kJ/mol}
+$$
+
+The overall energy change is the products minus the reactants:
+
+$$
+\Delta H = -46 - 0 = \mathbf{-46}\ \text{kJ/mol}
+$$
+
+The sign is negative, so the reaction is exothermic.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+For the catalyzed path, state what the valley at 18 kJ/mol represents. Calculate the activation energy of each step, and identify the rate-limiting step.
+
+<Answer>
+
+The catalyzed profile has two peaks, so the catalyzed path has two elementary steps. **The valley is an intermediate**: a substance made in step 1 and used up in step 2. A catalyst often forms one by binding to the reactant.
+
+Each activation energy is measured from where its step starts. Step 1 starts at the reactants:
+
+$$
+E_{a,1} = 74 - 0 = \mathbf{74}\ \text{kJ/mol}
+$$
+
+Step 2 starts in the valley, not at the reactants:
+
+$$
+E_{a,2} = 61 - 18 = \mathbf{43}\ \text{kJ/mol}
+$$
+
+**Step 1 is the rate-limiting step**, because it has the larger activation energy, so a smaller share of collisions can make that climb.
+
+The catalyst's hardest climb, 74 kJ/mol, is lower than the single climb without it by
+
+$$
+132 - 74 = 58\ \text{kJ/mol}
+$$
+
+That is why the catalyzed reaction is faster.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+State $\Delta H$ for the catalyzed reaction, and explain your answer.
+
+<Answer>
+
+$$
+\Delta H = \mathbf{-46}\ \text{kJ/mol}
+$$
+
+It is the same as without the catalyst. The catalyzed path starts at the same reactants and ends at the same products, at the same energies. The catalyst changes only the path between them, and $\Delta H$ depends only on the two ends.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $E_a = 132\ \text{kJ/mol}$; 1 point for $\Delta H = -46\ \text{kJ/mol}$, with the sign. A $\Delta H$ of $+46\ \text{kJ/mol}$, or 46 with no sign, earns 0 points for that award.</RubricLine>
+<RubricLine part="b" points={3}>1 point for the valley as an intermediate, made in one step and used up in the next; 1 point for 74 kJ/mol and 43 kJ/mol; 1 point for step 1 as the rate-limiting step because its activation energy is larger, or the step that follows from the student's activation energies. Calling the valley a transition state earns 0 points for the first award; 61 kJ/mol for step 2, measured from the reactants, earns 0 points for the second.</RubricLine>
+<RubricLine part="c" points={1}>1 point for $-46\ \text{kJ/mol}$ with the reason that the reactants and the products are the same, at the same energies. A $\Delta H$ that changes because the barrier is lower earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={18} title="Three kinds of catalyst" topic="5.11" points={5}>
+
+Each reaction below is slow on its own and fast when a catalyst is present. The three reactions show three different kinds of catalysis. Read how the catalyst takes part in each one.
+
+**Reaction 1.** Sucrose, which is table sugar, reacts with water to give two smaller sugars, glucose and fructose. In the small intestine, a protein called sucrase holds one sucrose molecule at a time in a pocket on its surface that fits it closely. The sucrose is held there, turned the right way to react with water. Then glucose and fructose leave, and the pocket takes in the next sucrose molecule.
+
+**Reaction 2.** The same reaction is fast in a warm sugar solution with a little hydrochloric acid added. An $\ce{H+}$ ion forms a bond to an oxygen atom of a sucrose molecule. This new particle breaks apart more easily than sucrose does, water completes the reaction, and an $\ce{H+}$ ion is set free again at the end.
+
+**Reaction 3.** In a car's catalytic converter, nitrogen monoxide and carbon monoxide from the engine react on a coating of rhodium metal:
+
+$$
+\begin{aligned}
+&\ce{2NO(g) + 2CO(g)} \\
+&\qquad \ce{-> N2(g) + 2CO2(g)}
+\end{aligned}
+$$
+
+Molecules of NO and CO bind to the metal and react there. Then the $\ce{N2}$ and $\ce{CO2}$ leave the metal.
+
+<Part label="a">
+
+Identify the kind of catalysis at work in each reaction.
+
+<Answer>
+
+**Reaction 1: enzyme catalysis.** Sucrase is a protein that works as a catalyst, an enzyme. It binds the reactant in a pocket, its active site, that holds it turned the right way to react with water, and the path through this bound intermediate has a lower activation energy.
+
+**Reaction 2: acid–base catalysis.** The acid gives a proton, $\ce{H+}$, to the reactant and gets one back at the end.
+
+**Reaction 3: surface catalysis.** The reactants bind to the surface of a solid, react there and leave.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Each catalyst works by forming a new intermediate. Describe the intermediate in each reaction. Then explain why $\ce{H+}$ in reaction 2 is a catalyst and not a reactant.
+
+<Answer>
+
+The new intermediates:
+
+- **Reaction 1:** a sucrose molecule bound in the active site of sucrase.
+- **Reaction 2:** a sucrose molecule with an $\ce{H+}$ ion bonded to it.
+- **Reaction 3:** NO and CO molecules, or the pieces they form, bound to the rhodium surface.
+
+Each one is made in one step and used up in a later step, so none is left at the end.
+
+$\ce{H+}$ is used in an early step, when it bonds to sucrose, and an $\ce{H+}$ is set free again at the end. **None is consumed overall, so it is a catalyst.** It does not appear in the overall equation, which is sucrose plus water giving glucose plus fructose.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for each: enzyme catalysis for reaction 1, acid–base catalysis for reaction 2, surface catalysis for reaction 3.</RubricLine>
+<RubricLine part="b" points={2}>1 point for all three intermediates: sucrose bound in the enzyme, sucrose with $\ce{H+}$ bonded to it, and NO and CO bound to the metal; 1 point for $\ce{H+}$ used in one step and set free again in a later one, so none is consumed. Two of the three intermediates earn 0 points for the first award.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={19} title="Same end, sooner" topic="5.6, 5.11" points={6}>
+
+This gas reaction can run in both directions:
+
+$$
+\ce{2X(g) <=> X2(g)}
+$$
+
+Two identical sealed flasks hold the same amount of X, and no $\ce{X2}$, at the same constant temperature. Flask 2 also holds a small piece of a solid catalyst for the reaction. In flask 1, $[\ce{X2}]$ rises and then stops changing after about 60 min, at 0.150 M.
+
+<Part label="a">
+
+Predict $[\ce{X2}]$ in flask 2 once it stops changing, and state whether it stops changing sooner or later than in flask 1. Justify both answers.
+
+<Answer>
+
+**$[\ce{X2}]$ stops at 0.150 M, and sooner than 60 min.**
+
+The catalyst opens a path with a lower peak. The forward reaction and the reverse reaction both cross that same peak, so the catalyst lowers both activation energies by the same amount, and both directions speed up equally. The reactants and products, and their energies, are the same as in flask 1; only the path between them is new. So flask 2 reaches the same end, sooner. A catalyst changes how fast a reaction reaches its end, not where that end is.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+For each quantity, state whether adding the catalyst changes it: $\Delta H$ of the reaction; the rate constant $k$ of the forward reaction; the activation energy of the reverse reaction.
+
+<Answer>
+
+- **$\Delta H$: not changed.** The reactants and the products are the same, at the same energies.
+- **$k$ of the forward reaction: changed, larger.** The path has a lower activation energy, so at the same temperature a larger share of collisions succeeds.
+- **Activation energy of the reverse reaction: changed, lower**, by the same amount as the forward one, since both climb to the same lower peak.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A student writes: "The catalyst gives the X molecules more energy, so more of their collisions have enough energy to react." Identify what is wrong with the statement, and give a correct explanation in terms of particles.
+
+<Answer>
+
+**The catalyst supplies no energy.** Both flasks are at the same temperature, so the X molecules in flask 2 have the same spread of kinetic energies as those in flask 1.
+
+What changes is the barrier. The catalyst gives the reaction a path with a lower activation energy. With the same spread of energies, a larger fraction of collisions now has at least that activation energy, so more collisions are effective and the rate rises. Binding to the catalyst's surface can also hold the reacting molecules close together, which adds to the number of effective collisions.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for 0.150 M, with either reason: the catalyst speeds the forward and reverse reactions alike, or the reactants and products are the same, at the same energies, and only the path between them has changed; 1 point for sooner than 60 min, because both reactions are faster. A prediction of more than 0.150 M earns 0 points for the first award.</RubricLine>
+<RubricLine part="b" points={2}>2 points for all three: $\Delta H$ unchanged, $k$ larger, reverse activation energy lower. Two of the three earn 1 point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for saying the catalyst adds no energy, so at the same temperature the molecules' energies are unchanged; 1 point for a path with a lower activation energy, so a larger fraction of collisions has enough energy to react. Repeating that more collisions have enough energy, with no lower activation energy, earns 0 points for the second award.</RubricLine>
+</Rubric>
+
+</Question>

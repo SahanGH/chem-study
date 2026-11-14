@@ -146,3 +146,20 @@ add up to its questions.
   site's other practice.
 - Both pages fit a phone at 320 px with every answer open, and pass the
   accessibility checks the browser tests run.
+
+> **As built (Plan 4, 2026-11-13).** Session 1: 25 questions, 134 points
+> (Part A 53, Part B 81); topics 5.1 ×3, 5.2 ×7, 5.3 ×15. Session 2:
+> 19 questions, 100 points (Part C 42, Part D 36, Part E 22); every topic
+> from 5.4 to 5.11 has at least two questions. "Beyond the exam": the two
+> Arrhenius calculations in session 2, question 13, parts (a) and (b);
+> nothing else, and no part needs the zero- or second-order half-life
+> formula. The originality check found nothing in session 1; in session 2
+> it found two questions that followed existing material too closely (one
+> an old-test item taken from a textbook, one lesson 5.9's worked example)
+> and a fact-check found one question repeating another in the same
+> session. All three were rewritten and checked again. Pre-equilibrium
+> rubrics accept either equal forward and reverse rates or the
+> equilibrium expression, as Worksheet 4 does. A search test that
+> expected no result for a TeX command was changed: Pagefind falls back
+> to an indexed word that begins the query, so the reactant "Q" matched;
+> the test now checks that the command itself is never indexed.
