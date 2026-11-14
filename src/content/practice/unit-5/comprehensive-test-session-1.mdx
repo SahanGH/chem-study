@@ -1,0 +1,2224 @@
+---
+title: "Comprehensive test, session 1: rates and rate laws"
+kind: test
+order: 7
+topics: ["5.1", "5.2", "5.3"]
+summary: Twenty-five scored free-response questions on reaction rates, rate laws and concentration over time, each with a worked answer and its scoring rubric.
+points: 134
+minutes: 140
+---
+
+This is the first of two sittings that together test all of Unit 5. It covers topics 5.1 to 5.3: reaction rates, rate laws, and how concentration changes over time. Session 2 covers mechanisms, energy profiles and catalysis.
+
+There are 25 questions worth 134 points. Give yourself about 140 minutes; a break between Part A and Part B is fine. You may use a calculator. Show every step: the rubrics give points for the setup as well as the answer. Write each answer out in full before you open the worked answer and its rubric.
+
+## Part A: Rates and rate laws from data
+
+Ten questions on how fast a reaction goes. Questions 1 to 3 relate the rates of the substances in a reaction and read rates from measurements of concentration over time. Questions 4 to 10 find rate laws, rate constants and their units from initial rates, and use a rate law to predict a rate.
+
+<Question number={1} title="Rates from the balanced equation" topic="5.1" points={5}>
+
+The first step in making nitric acid burns ammonia over a platinum catalyst:
+
+$$
+\begin{aligned}
+&\ce{4NH3(g) + 5O2(g)} \\
+&\qquad \ce{-> 4NO(g) + 6H2O(g)}
+\end{aligned}
+$$
+
+In one experiment, $\ce{NO}$ forms at $2.40 \times 10^{-3}\ \text{M/s}$.
+
+<Part label="a">
+
+Calculate the rate at which $\ce{O2}$ is used up and the rate at which $\ce{H2O}$ forms.
+
+<Answer>
+
+The coefficients set how the rates compare. Five $\ce{O2}$ are used up for every four $\ce{NO}$ that form, so $\ce{O2}$ is used up at
+
+$$
+\begin{aligned}
+&\tfrac{5}{4} \times (2.40 \times 10^{-3}) \\
+&= \mathbf{3.00 \times 10^{-3}}\ \text{M/s}
+\end{aligned}
+$$
+
+Six $\ce{H2O}$ form for every four $\ce{NO}$, so $\ce{H2O}$ forms at
+
+$$
+\begin{aligned}
+&\tfrac{6}{4} \times (2.40 \times 10^{-3}) \\
+&= \mathbf{3.60 \times 10^{-3}}\ \text{M/s}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the rate of the reaction.
+
+<Answer>
+
+Divide any one substance's rate by its coefficient. Using $\ce{NO}$, with coefficient 4:
+
+$$
+\begin{aligned}
+\text{rate} &= \tfrac{1}{4} \times 2.40 \times 10^{-3}\ \text{M/s} \\
+&= \mathbf{6.00 \times 10^{-4}}\ \text{M/s}
+\end{aligned}
+$$
+
+Any other substance gives the same number. For $\ce{O2}$, with coefficient 5:
+
+$$
+\begin{aligned}
+&\frac{3.00 \times 10^{-3}\ \text{M/s}}{5} \\
+&= 6.00 \times 10^{-4}\ \text{M/s}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+State the value of $\Delta[\ce{NH3}]/\Delta t$, with its sign, and explain the sign.
+
+<Answer>
+
+Four $\ce{NH3}$ are used up for every four $\ce{NO}$ that form, so $\ce{NH3}$ is used up at the same $2.40 \times 10^{-3}\ \text{M/s}$. Its concentration falls, so its change is negative:
+
+$$
+\frac{\Delta[\ce{NH3}]}{\Delta t} = \mathbf{-2.40 \times 10^{-3}}\ \text{M/s}
+$$
+
+The rate at which $\ce{NH3}$ disappears is reported as a positive number, $2.40 \times 10^{-3}\ \text{M/s}$. The minus sign belongs to the change in concentration, and it says the concentration is falling.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $3.00 \times 10^{-3}\ \text{M/s}$ for $\ce{O2}$; 1 point for $3.60 \times 10^{-3}\ \text{M/s}$ for $\ce{H2O}$. A rate found with the ratio upside down (4/5 or 4/6) earns 0 points for that rate.</RubricLine>
+<RubricLine part="b" points={2}>1 point for dividing a substance's rate by its coefficient; 1 point for $6.00 \times 10^{-4}\ \text{M/s}$.</RubricLine>
+<RubricLine part="c" points={1}>1 point for $-2.40 \times 10^{-3}\ \text{M/s}$ with the sign explained by the falling concentration of $\ce{NH3}$.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={2} title="Average rate over an interval" topic="5.1" points={5}>
+
+The reaction below runs in solution at constant temperature. It starts with $[\ce{A}]_0 = 0.500\ \text{M}$ and no B.
+
+$$
+\ce{A(aq) -> 2B(aq)}
+$$
+
+The concentration of B is measured as the reaction runs.
+
+| Time (s) | $[\ce{B}]$ (M) |
+|---|---|
+| 0 | 0.000 |
+| 50 | 0.181 |
+| 100 | 0.330 |
+| 150 | 0.451 |
+| 200 | 0.551 |
+
+<Part label="a">
+
+Calculate the average rate at which B forms from 0 s to 100 s.
+
+<Answer>
+
+An average rate is the change in concentration divided by the time the change took:
+
+$$
+\begin{aligned}
+\text{rate} &= \frac{(0.330 - 0.000)\ \text{M}}{(100 - 0)\ \text{s}} \\
+&= \mathbf{3.30 \times 10^{-3}}\ \text{M/s}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the average rate at which B forms from 100 s to 200 s.
+
+<Answer>
+
+$$
+\begin{aligned}
+\text{rate} &= \frac{(0.551 - 0.330)\ \text{M}}{(200 - 100)\ \text{s}} \\
+&= \mathbf{2.21 \times 10^{-3}}\ \text{M/s}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Explain, in terms of particles, why the rate in part (b) is smaller than the rate in part (a).
+
+<Answer>
+
+As the reaction runs, A is used up. In the second interval there are fewer particles of A in each liter of solution, so fewer of them react each second, and B forms more slowly.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Determine $[\ce{A}]$ at 100 s.
+
+<Answer>
+
+Two B form for every A used up. By 100 s, 0.330 M of B has formed, so half as much A, 0.165 M, has been used up:
+
+$$
+\begin{aligned}
+[\ce{A}] &= 0.500 - \tfrac{1}{2}(0.330) \\
+&= \mathbf{0.335}\ \text{M}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the change in $[\ce{B}]$ divided by the time; 1 point for $3.30 \times 10^{-3}\ \text{M/s}$.</RubricLine>
+<RubricLine part="b" points={1}>1 point for $2.21 \times 10^{-3}\ \text{M/s}$.</RubricLine>
+<RubricLine part="c" points={1}>1 point for linking the smaller rate to the lower concentration of A, with less A left to react. Saying only that the reaction slows down earns 0 points.</RubricLine>
+<RubricLine part="d" points={1}>1 point for 0.335 M. Subtracting all of $[\ce{B}]$ (0.170 M) earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={3} title="Reading a rate from concentration data" topic="5.1" points={5}>
+
+Gas X decomposes in a sealed flask at constant temperature:
+
+$$
+\ce{2X(g) -> 2Y(g) + Z(g)}
+$$
+
+The table gives the concentration of X over time. On a graph, these points lie on a curve that falls steeply at first and then flattens.
+
+| Time (s) | $[\ce{X}]$ (M) |
+|---|---|
+| 0 | 0.800 |
+| 20 | 0.655 |
+| 40 | 0.536 |
+| 60 | 0.439 |
+| 80 | 0.359 |
+| 100 | 0.294 |
+| 120 | 0.241 |
+
+<Part label="a">
+
+Estimate the rate at which X is used up at 40 s, using the readings at 20 s and 60 s. Explain why these two readings give a good estimate.
+
+<Answer>
+
+Take the average rate over the interval from 20 s to 60 s, with the sign dropped because X is used up:
+
+$$
+\begin{aligned}
+\text{rate} &= -\frac{(0.439 - 0.655)\ \text{M}}{(60 - 20)\ \text{s}} \\
+&= \frac{0.216\ \text{M}}{40\ \text{s}} \\
+&= \mathbf{5.40 \times 10^{-3}}\ \text{M/s}
+\end{aligned}
+$$
+
+The interval is short and has 40 s at its middle, so the straight line between the two readings has nearly the same slope as the curve at 40 s.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+On a graph of these data, a student draws the tangent to the curve at 40 s. The tangent passes through the points (0 s, 0.751 M) and (100 s, 0.215 M). Calculate the instantaneous rate at which X is used up at 40 s.
+
+<Answer>
+
+The instantaneous rate is the slope of the tangent, with the sign dropped:
+
+$$
+\begin{aligned}
+\text{slope} &= \frac{(0.215 - 0.751)\ \text{M}}{(100 - 0)\ \text{s}} \\
+&= -5.36 \times 10^{-3}\ \text{M/s}
+\end{aligned}
+$$
+
+X is used up at $\mathbf{5.36 \times 10^{-3}}\ \text{M/s}$ at 40 s. The estimate in part (a) is close to it.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+State whether X is used up faster or more slowly at 100 s than at 40 s. Justify your answer with the data.
+
+<Answer>
+
+**More slowly.** Around 100 s, between the readings at 80 s and 120 s, $[\ce{X}]$ falls by much less in the same 40 s:
+
+$$
+\begin{aligned}
+\text{rate} &\approx \frac{(0.359 - 0.241)\ \text{M}}{40\ \text{s}} \\
+&= 2.95 \times 10^{-3}\ \text{M/s}
+\end{aligned}
+$$
+
+That is about half the rate at 40 s. Less X is left, so less of it reacts each second, and the curve is flatter.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Calculate the rate at which Z forms at 40 s, using your answer to part (b).
+
+<Answer>
+
+One Z forms for every two X used up:
+
+$$
+\begin{aligned}
+&\tfrac{1}{2} \times 5.36 \times 10^{-3}\ \text{M/s} \\
+&= \mathbf{2.68 \times 10^{-3}}\ \text{M/s}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $5.40 \times 10^{-3}\ \text{M/s}$ from the readings at 20 s and 60 s; 1 point for explaining that a short interval with 40 s at its middle has nearly the slope of the curve at 40 s. A negative rate earns at most 1 point.</RubricLine>
+<RubricLine part="b" points={1}>1 point for $5.36 \times 10^{-3}\ \text{M/s}$ from the slope of the tangent.</RubricLine>
+<RubricLine part="c" points={1}>1 point for "more slowly" with a comparison from the table, such as a smaller drop in $[\ce{X}]$ over an equal interval.</RubricLine>
+<RubricLine part="d" points={1}>1 point for $2.68 \times 10^{-3}\ \text{M/s}$, or half of the rate the student found in part (a) or (b).</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={4} title="A tripled and a halved concentration" topic="5.2" points={6}>
+
+The initial rate of this reaction was measured three times at the same temperature:
+
+$$
+\ce{D(aq) + 2E(aq) -> products}
+$$
+
+| Experiment | $[\ce{D}]_0$ (M) | $[\ce{E}]_0$ (M) | Initial rate (M/s) |
+|---|---|---|---|
+| 1 | 0.0150 | 0.0400 | $1.80 \times 10^{-5}$ |
+| 2 | 0.0450 | 0.0400 | $1.62 \times 10^{-4}$ |
+| 3 | 0.0450 | 0.0200 | $8.10 \times 10^{-5}$ |
+
+<Part label="a">
+
+Determine the order of the reaction in D. Name the experiments you compare.
+
+<Answer>
+
+Compare experiments 1 and 2. $[\ce{E}]$ is the same in both, 0.0400 M, and $[\ce{D}]$ triples, from 0.0150 M to 0.0450 M. The rate changes by this factor:
+
+$$
+\frac{1.62 \times 10^{-4}}{1.80 \times 10^{-5}} = 9.00
+$$
+
+Tripling $[\ce{D}]$ multiplies the rate by $3^m$:
+
+$$
+3^m = 9 \quad\Rightarrow\quad m = \mathbf{2}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Determine the order of the reaction in E. Name the experiments you compare.
+
+<Answer>
+
+Compare experiments 2 and 3. $[\ce{D}]$ is the same in both, 0.0450 M, and $[\ce{E}]$ is halved, from 0.0400 M to 0.0200 M. The rate changes by this factor:
+
+$$
+\frac{8.10 \times 10^{-5}}{1.62 \times 10^{-4}} = 0.500
+$$
+
+Halving $[\ce{E}]$ halves the rate:
+
+$$
+\left(\tfrac{1}{2}\right)^n = \tfrac{1}{2} \quad\Rightarrow\quad n = \mathbf{1}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Write the rate law and state the overall order.
+
+<Answer>
+
+$$
+\text{rate} = k[\ce{D}]^2[\ce{E}]
+$$
+
+The overall order is $2 + 1 = \mathbf{3}$.
+
+The orders are not the coefficients. D has a coefficient of 1 and an order of 2; E has a coefficient of 2 and an order of 1. Only the data could show this.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for comparing experiments 1 and 2, with $[\ce{E}]$ held constant, and the factor of 9; 1 point for order 2.</RubricLine>
+<RubricLine part="b" points={2}>1 point for comparing experiments 2 and 3, with $[\ce{D}]$ held constant, and the factor of one half; 1 point for order 1.</RubricLine>
+<RubricLine part="c" points={2}>1 point for a rate law that matches the orders found in parts (a) and (b); 1 point for overall order 3. A rate law with the coefficients as exponents ($k[\ce{D}][\ce{E}]^2$) earns neither point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={5} title="Three reactants, one with no effect" topic="5.2" points={8}>
+
+Four experiments were run at the same temperature for this reaction in solution:
+
+$$
+\begin{aligned}
+&\ce{2A(aq) + B(aq) + C(aq)} \\
+&\qquad \ce{-> products}
+\end{aligned}
+$$
+
+The first table gives the starting concentrations in each experiment. The second gives the initial rates.
+
+| Experiment | $[\ce{A}]_0$ (M) | $[\ce{B}]_0$ (M) | $[\ce{C}]_0$ (M) |
+|---|---|---|---|
+| 1 | 0.100 | 0.100 | 0.0200 |
+| 2 | 0.200 | 0.100 | 0.0200 |
+| 3 | 0.100 | 0.300 | 0.0200 |
+| 4 | 0.200 | 0.100 | 0.0400 |
+
+| Experiment | Initial rate (M/s) |
+|---|---|
+| 1 | $5.00 \times 10^{-5}$ |
+| 2 | $1.00 \times 10^{-4}$ |
+| 3 | $5.00 \times 10^{-5}$ |
+| 4 | $4.00 \times 10^{-4}$ |
+
+<Part label="a">
+
+Determine the order of the reaction in each reactant. For each one, name the experiments you compare and what was held constant.
+
+<Answer>
+
+**Order in A.** Compare experiments 1 and 2: $[\ce{B}]$ and $[\ce{C}]$ are held constant and $[\ce{A}]$ doubles. The rate changes by this factor:
+
+$$
+\frac{1.00 \times 10^{-4}}{5.00 \times 10^{-5}} = 2.00
+$$
+
+The rate doubles, so the order in A is **1**.
+
+**Order in B.** Compare experiments 1 and 3: $[\ce{A}]$ and $[\ce{C}]$ are held constant and $[\ce{B}]$ triples, from 0.100 M to 0.300 M. The rate stays at $5.00 \times 10^{-5}\ \text{M/s}$:
+
+$$
+3^n = 1 \quad\Rightarrow\quad n = \mathbf{0}
+$$
+
+The rate does not depend on $[\ce{B}]$ at all.
+
+**Order in C.** Compare experiments 2 and 4: $[\ce{A}]$ and $[\ce{B}]$ are held constant and $[\ce{C}]$ doubles. The rate changes by this factor:
+
+$$
+\frac{4.00 \times 10^{-4}}{1.00 \times 10^{-4}} = 4.00
+$$
+
+Since $2^p = 4$, the order in C is **2**.
+
+Experiments 1 and 4 differ in both $[\ce{A}]$ and $[\ce{C}]$, so they show the order in C only once the order in A is known.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Write the rate law and state the overall order.
+
+<Answer>
+
+$$
+\text{rate} = k[\ce{A}][\ce{C}]^2
+$$
+
+B does not appear, because $[\ce{B}]^0 = 1$. The overall order is $1 + 0 + 2 = \mathbf{3}$.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate the rate constant, with units.
+
+<Answer>
+
+Use experiment 1:
+
+$$
+\begin{aligned}
+k &= \frac{\text{rate}}{[\ce{A}][\ce{C}]^2} \\
+&= \frac{5.00 \times 10^{-5}}{(0.100)(0.0200)^2} \\
+&= \frac{5.00 \times 10^{-5}}{4.00 \times 10^{-5}} \\
+&= \mathbf{1.25}\ \text{M}^{-2}\,\text{s}^{-1}
+\end{aligned}
+$$
+
+Units: the rate is in M/s and $[\ce{A}][\ce{C}]^2$ is in $\text{M}^3$, so $k$ is in $\text{M}^{-2}\,\text{s}^{-1}$.
+
+Check with experiment 4:
+
+$$
+\begin{aligned}
+&(1.25)(0.200)(0.0400)^2 \\
+&= 4.00 \times 10^{-4}\ \checkmark
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Calculate the initial rate at the same temperature when $[\ce{A}]_0 = 0.150\ \text{M}$, $[\ce{B}]_0 = 0.250\ \text{M}$ and $[\ce{C}]_0 = 0.0300\ \text{M}$.
+
+<Answer>
+
+$[\ce{B}]$ does not enter the rate law, so only A and C matter:
+
+$$
+\begin{aligned}
+&k[\ce{A}][\ce{C}]^2 \\
+&= (1.25)(0.150)(0.0300)^2 \\
+&= \mathbf{1.69 \times 10^{-4}}\ \text{M/s}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for each order (1 in A, 0 in B, 2 in C), each with a comparison in which the other two concentrations are held constant. For the order in C, experiments 1 and 4 with the effect of doubling $[\ce{A}]$ taken out also earn the point.</RubricLine>
+<RubricLine part="b" points={1}>1 point for a rate law that matches the orders found in part (a) ($k[\ce{A}][\ce{C}]^2$, or with $[\ce{B}]^0$ written), with overall order 3.</RubricLine>
+<RubricLine part="c" points={2}>1 point for 1.25; 1 point for $\text{M}^{-2}\,\text{s}^{-1}$. A bare number earns 1 point.</RubricLine>
+<RubricLine part="d" points={2}>1 point for substituting into the rate law with the value of $k$; 1 point for $1.69 \times 10^{-4}\ \text{M/s}$. A calculation that includes $[\ce{B}]$ earns at most 1 point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={6} title="The units of the rate constant" topic="5.2" points={4}>
+
+Concentrations are in M (mol/L) and time is in seconds, so every rate is in M/s. Parts (a) to (c) give rate laws for reactions that each have two reactants, A and B. For each one, state the overall order and determine the units of $k$.
+
+<Part label="a">
+
+$\text{rate} = k[\ce{A}]^0[\ce{B}]^0$
+
+<Answer>
+
+Any concentration to the power 0 is 1, so the rate law is just $\text{rate} = k$. The overall order is $0 + 0 = \mathbf{0}$. Here $k$ equals the rate, so it has the units of a rate: **M/s**, also written $\text{M}\,\text{s}^{-1}$.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$\text{rate} = k[\ce{A}][\ce{B}]^0$
+
+<Answer>
+
+The overall order is $1 + 0 = \mathbf{1}$, and the concentration term is in M. Divide the units of the rate by the units of the concentration term:
+
+$$
+\begin{aligned}
+\text{units of } k &= \frac{\text{M/s}}{\text{M}} \\
+&= \mathbf{s}^{-1}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+$\text{rate} = k[\ce{B}]^2$
+
+<Answer>
+
+A does not appear, so the reaction is zero order in A. The overall order is $0 + 2 = \mathbf{2}$, and the concentration term is in $\text{M}^2$:
+
+$$
+\begin{aligned}
+\text{units of } k &= \frac{\text{M/s}}{\text{M}^2} \\
+&= \mathbf{M}^{-1}\,\mathbf{s}^{-1}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+A different reaction has three reactants, X, Y and Z. Its rate constant has units of $\text{M}^{-1}\,\text{s}^{-1}$. Determine the overall order of the reaction.
+
+<Answer>
+
+For an overall order $n$, the concentration term is in $\text{M}^n$, so
+
+$$
+\frac{\text{M/s}}{\text{M}^n} = \text{M}^{1-n}\,\text{s}^{-1}
+$$
+
+Match the power of M:
+
+$$
+1 - n = -1 \quad\Rightarrow\quad n = \mathbf{2}
+$$
+
+The reaction is second order overall, although it has three reactants. The orders add to 2, so if they are whole numbers, the rate does not depend on at least one of X, Y and Z: for example $\text{rate} = k[\ce{X}][\ce{Y}]$, zero order in Z.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for overall order 0 with units of M/s.</RubricLine>
+<RubricLine part="b" points={1}>1 point for overall order 1 with units of $\text{s}^{-1}$.</RubricLine>
+<RubricLine part="c" points={1}>1 point for overall order 2 with units of $\text{M}^{-1}\,\text{s}^{-1}$.</RubricLine>
+<RubricLine part="d" points={1}>1 point for second order, with the units of rate divided by $\text{M}^n$ or the pattern of units shown. Answering 3 because there are three reactants earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={7} title="Predicting the rate after dilution" topic="5.2" points={4}>
+
+The reaction below takes place in water. Its rate law is $\text{rate} = k[\ce{G}][\ce{L}]$, with $k = 0.0350\ \text{M}^{-1}\,\text{s}^{-1}$ at 25 °C.
+
+$$
+\ce{G(aq) + 2L(aq) -> products}
+$$
+
+<Part label="a">
+
+Calculate the initial rate at 25 °C when $[\ce{G}]_0 = 0.120\ \text{M}$ and $[\ce{L}]_0 = 0.300\ \text{M}$.
+
+<Answer>
+
+Substitute into the rate law:
+
+$$
+\begin{aligned}
+&(0.0350)(0.120)(0.300) \\
+&= \mathbf{1.26 \times 10^{-3}}\ \text{M/s}
+\end{aligned}
+$$
+
+Units: $\text{M}^{-1}\,\text{s}^{-1}$ times M times M leaves M/s.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+A second solution is made from the same amounts of G and L, dissolved to make twice the volume of solution, also at 25 °C. Determine its initial rate, and state whether $k$ is different.
+
+<Answer>
+
+The same amount in twice the volume halves each concentration: $[\ce{G}]_0 = 0.0600\ \text{M}$ and $[\ce{L}]_0 = 0.150\ \text{M}$. The temperature is the same, so $k$ is **unchanged**:
+
+$$
+\begin{aligned}
+&(0.0350)(0.0600)(0.150) \\
+&= \mathbf{3.15 \times 10^{-4}}\ \text{M/s}
+\end{aligned}
+$$
+
+That is one quarter of the rate in part (a). The reaction is first order in each reactant, so halving both concentrations halves the rate twice.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for substituting into the rate law; 1 point for $1.26 \times 10^{-3}\ \text{M/s}$.</RubricLine>
+<RubricLine part="b" points={2}>1 point for halving both concentrations with the same $k$, because the temperature is the same; 1 point for $3.15 \times 10^{-4}\ \text{M/s}$. Saying that $k$ changes earns 0 points for the first point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={8} title="Order from a factor of 1.5" topic="5.2" points={5}>
+
+A gas Q decomposes at constant temperature:
+
+$$
+\ce{2Q(g) -> products}
+$$
+
+| Experiment | $[\ce{Q}]_0$ (M) | Initial rate (M/s) |
+|---|---|---|
+| 1 | 0.0400 | $3.20 \times 10^{-6}$ |
+| 2 | 0.0600 | $7.20 \times 10^{-6}$ |
+| 3 | 0.0100 | $2.00 \times 10^{-7}$ |
+
+<Part label="a">
+
+Use experiments 1 and 2 to determine the order of the reaction in Q. Show your reasoning.
+
+<Answer>
+
+Compare experiments 1 and 2. The concentration is multiplied by this factor:
+
+$$
+\frac{0.0600}{0.0400} = 1.50
+$$
+
+The rate is multiplied by this factor:
+
+$$
+\frac{7.20 \times 10^{-6}}{3.20 \times 10^{-6}} = 2.25
+$$
+
+The order $m$ must satisfy $1.50^m = 2.25$. Since $1.50^1 = 1.50$ and $1.50^2 = 2.25$, the order is $m = \mathbf{2}$.
+
+Experiments 1 and 3 agree. The concentration is divided by 4 and the rate by 16, which is $4^2$:
+
+$$
+\frac{3.20 \times 10^{-6}}{2.00 \times 10^{-7}} = 16.0
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the rate constant, with units.
+
+<Answer>
+
+Use experiment 1 in $\text{rate} = k[\ce{Q}]^2$:
+
+$$
+\begin{aligned}
+k &= \frac{3.20 \times 10^{-6}}{(0.0400)^2} \\
+&= \frac{3.20 \times 10^{-6}}{1.60 \times 10^{-3}} \\
+&= \mathbf{2.00 \times 10^{-3}}\ \text{M}^{-1}\,\text{s}^{-1}
+\end{aligned}
+$$
+
+Units: M/s divided by $\text{M}^2$ leaves $\text{M}^{-1}\,\text{s}^{-1}$.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate the initial concentration of Q that gives an initial rate of $5.00 \times 10^{-6}\ \text{M/s}$ at this temperature.
+
+<Answer>
+
+Solve $\text{rate} = k[\ce{Q}]^2$ for the concentration:
+
+$$
+\begin{aligned}
+[\ce{Q}]^2 &= \frac{5.00 \times 10^{-6}}{2.00 \times 10^{-3}} \\
+&= 2.50 \times 10^{-3}\ \text{M}^2
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{Q}] &= \sqrt{2.50 \times 10^{-3}} \\
+&= \mathbf{0.0500}\ \text{M}
+\end{aligned}
+$$
+
+This rate lies between the rates of experiments 1 and 2, and so does this concentration.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the factors 1.50 and 2.25 from experiments 1 and 2; 1 point for order 2.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $2.00 \times 10^{-3}$; 1 point for $\text{M}^{-1}\,\text{s}^{-1}$. A bare number earns 1 point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for 0.0500 M, with the square root of the rate divided by $k$ shown.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={9} title="What changes the rate constant" topic="5.2" points={5}>
+
+This reaction has the rate law $\text{rate} = k[\ce{R}][\ce{W}]$:
+
+$$
+\ce{R(aq) + W(aq) -> products}
+$$
+
+Two runs start with the same concentrations, $[\ce{R}]_0 = 0.0500\ \text{M}$ and $[\ce{W}]_0 = 0.0800\ \text{M}$, at two temperatures.
+
+| Temperature | Initial rate (M/s) |
+|---|---|
+| 25.0 °C | $4.80 \times 10^{-5}$ |
+| 35.0 °C | $1.32 \times 10^{-4}$ |
+
+<Part label="a">
+
+Calculate $k$ at 25.0 °C, with units.
+
+<Answer>
+
+$$
+\begin{aligned}
+k &= \frac{\text{rate}}{[\ce{R}][\ce{W}]} \\
+&= \frac{4.80 \times 10^{-5}}{(0.0500)(0.0800)} \\
+&= \frac{4.80 \times 10^{-5}}{4.00 \times 10^{-3}} \\
+&= \mathbf{0.0120}\ \text{M}^{-1}\,\text{s}^{-1}
+\end{aligned}
+$$
+
+The reaction is second order overall, so $k$ is in $\text{M}^{-1}\,\text{s}^{-1}$.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $k$ at 35.0 °C. Explain why the rate rose although no concentration changed.
+
+<Answer>
+
+$$
+\begin{aligned}
+k &= \frac{1.32 \times 10^{-4}}{4.00 \times 10^{-3}} \\
+&= \mathbf{0.0330}\ \text{M}^{-1}\,\text{s}^{-1}
+\end{aligned}
+$$
+
+The concentrations are the same in both runs, so the whole rise in rate comes from $k$. The rate constant depends on temperature. Here it is larger at 35.0 °C by this factor:
+
+$$
+\frac{0.0330}{0.0120} = 2.75
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A student wants the order in R. She compares the run at 25.0 °C with a third run at 45.0 °C in which $[\ce{R}]_0$ is doubled. Explain why this comparison cannot give the order.
+
+<Answer>
+
+Two things changed at once. The higher temperature makes $k$ larger by an amount that is not known, since $k$ has not been measured at 45.0 °C, and the doubled $[\ce{R}]$ changes the concentration term. The change in rate cannot be split between the two, so it cannot be credited to $[\ce{R}]$ alone. To find the order in R, the runs must be at the same temperature, with only $[\ce{R}]$ changed.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for 0.0120; 1 point for $\text{M}^{-1}\,\text{s}^{-1}$. A bare number earns 1 point.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $0.0330\ \text{M}^{-1}\,\text{s}^{-1}$; 1 point for explaining that $k$ depends on temperature, so with the concentrations unchanged the rise comes from $k$. An explanation that at the higher temperature more collisions have enough energy to react, so the rate rises at the same concentrations, also earns the point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for saying that $k$ changed as well as $[\ce{R}]$, so the change in rate cannot be credited to $[\ce{R}]$ alone.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={10} title="An order when two concentrations change" topic="5.2" points={6}>
+
+Initial rates for this gas reaction were measured at one temperature:
+
+$$
+\ce{2J(g) + L(g) -> products}
+$$
+
+| Experiment | $[\ce{J}]_0$ (M) | $[\ce{L}]_0$ (M) | Initial rate (M/s) |
+|---|---|---|---|
+| 1 | 0.0200 | 0.0300 | $9.00 \times 10^{-4}$ |
+| 2 | 0.0400 | 0.0300 | $1.80 \times 10^{-3}$ |
+| 3 | 0.0800 | 0.0150 | $9.00 \times 10^{-4}$ |
+
+<Part label="a">
+
+Determine the order of the reaction in J.
+
+<Answer>
+
+Compare experiments 1 and 2. $[\ce{L}]$ is held constant at 0.0300 M and $[\ce{J}]$ doubles. The rate changes by this factor:
+
+$$
+\frac{1.80 \times 10^{-3}}{9.00 \times 10^{-4}} = 2.00
+$$
+
+The rate doubles, so the order in J is **1**.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+No two experiments differ in $[\ce{L}]$ alone. Use experiments 2 and 3 to determine the order of the reaction in L.
+
+<Answer>
+
+From experiment 2 to experiment 3, $[\ce{J}]$ doubles (0.0400 M to 0.0800 M) and $[\ce{L}]$ is halved (0.0300 M to 0.0150 M). The rate changes by this factor:
+
+$$
+\frac{9.00 \times 10^{-4}}{1.80 \times 10^{-3}} = 0.500
+$$
+
+The order in J is 1, so doubling $[\ce{J}]$ alone would double the rate. The change in $[\ce{L}]$ must account for the rest:
+
+$$
+\frac{0.500}{2} = 0.250 = \tfrac{1}{4}
+$$
+
+Halving $[\ce{L}]$ multiplies the rate by $\left(\tfrac{1}{2}\right)^n$:
+
+$$
+\left(\tfrac{1}{2}\right)^n = \tfrac{1}{4} \quad\Rightarrow\quad n = \mathbf{2}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Write the rate law and calculate the rate constant, with units.
+
+<Answer>
+
+$$
+\text{rate} = k[\ce{J}][\ce{L}]^2
+$$
+
+Use experiment 1:
+
+$$
+\begin{aligned}
+k &= \frac{9.00 \times 10^{-4}}{(0.0200)(0.0300)^2} \\
+&= \frac{9.00 \times 10^{-4}}{1.80 \times 10^{-5}} \\
+&= \mathbf{50.0}\ \text{M}^{-2}\,\text{s}^{-1}
+\end{aligned}
+$$
+
+The overall order is 3, so $k$ is in $\text{M}^{-2}\,\text{s}^{-1}$.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for order 1 from experiments 1 and 2, with $[\ce{L}]$ held constant.</RubricLine>
+<RubricLine part="b" points={3}>1 point for the rate factor of 0.500 between experiments 2 and 3; 1 point for taking out the factor of 2 caused by doubling $[\ce{J}]$; 1 point for order 2. The same result from experiments 1 and 3 earns full credit.</RubricLine>
+<RubricLine part="c" points={2}>1 point for a rate law that matches the orders found in parts (a) and (b); 1 point for $50.0\ \text{M}^{-2}\,\text{s}^{-1}$, value and units. A bare number earns 0 points for this line.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part B: Concentration over time and half-life
+
+These questions are on topic 5.3: finding the order from the plot that is a straight line, rate constants from slopes, the integrated rate laws for zero, first and second order, and half-life.
+
+<Question number={11} title="First order from a straight-line plot" topic="5.3" points={6}>
+
+A gas, A, decomposes in a sealed flask at constant temperature:
+
+$$
+\ce{A(g) -> products}
+$$
+
+The concentration of A was measured every 150 s. The data are for illustration.
+
+| Time (s) | $[\ce{A}]$ (M) |
+|---|---|
+| 0 | 0.0500 |
+| 150 | 0.0365 |
+| 300 | 0.0266 |
+| 450 | 0.0194 |
+| 600 | 0.0142 |
+| 750 | 0.0104 |
+| 900 | 0.00755 |
+
+<Part label="a">
+
+Determine the order of the reaction in A. Justify your answer by naming the plot that is a straight line.
+
+<Answer>
+
+Work out $\ln[\ce{A}]$ and $1/[\ce{A}]$ for every reading.
+
+| Time (s) | $[\ce{A}]$ (M) | $\ln[\ce{A}]$ | $1/[\ce{A}]$ ($\text{M}^{-1}$) |
+|---|---|---|---|
+| 0 | 0.0500 | $-2.996$ | 20.0 |
+| 150 | 0.0365 | $-3.310$ | 27.4 |
+| 300 | 0.0266 | $-3.627$ | 37.6 |
+| 450 | 0.0194 | $-3.942$ | 51.5 |
+| 600 | 0.0142 | $-4.255$ | 70.4 |
+| 750 | 0.0104 | $-4.566$ | 96.2 |
+| 900 | 0.00755 | $-4.886$ | 132 |
+
+The readings are 150 s apart, so compare how much each column changes from one row to the next.
+
+- $[\ce{A}]$ falls by less each time: 0.0135 M in the first 150 s, only 0.00285 M in the last. That plot curves.
+- $1/[\ce{A}]$ rises by more each time: 7.4 in the first 150 s, about 36 in the last. That plot curves too.
+- $\ln[\ce{A}]$ falls by 0.31 to 0.32 every time. Equal drops in equal times make a straight line.
+
+**The plot of $\ln[\ce{A}]$ against time is a straight line, so the reaction is first order in A.**
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the rate constant, $k$, with units.
+
+<Answer>
+
+For first order, the slope of the $\ln[\ce{A}]$ plot is $-k$. Take the slope from the first and last points:
+
+$$
+\begin{aligned}
+\text{slope} &= \frac{-4.886 - (-2.996)}{900\ \text{s} - 0\ \text{s}} \\
+&= \frac{-1.890}{900\ \text{s}} \\
+&= -2.10 \times 10^{-3}\ \text{s}^{-1}
+\end{aligned}
+$$
+
+$$
+k = -\text{slope} = \mathbf{2.10 \times 10^{-3}}\ \text{s}^{-1}
+$$
+
+Any two points from the table, or a best-fit line, give 2.08 to $2.14 \times 10^{-3}\ \text{s}^{-1}$.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate the half-life of the reaction.
+
+<Answer>
+
+$$
+\begin{aligned}
+t_{1/2} &= \frac{0.693}{k} \\
+&= \frac{0.693}{2.10 \times 10^{-3}\ \text{s}^{-1}} \\
+&= \mathbf{3.30 \times 10^{2}}\ \text{s}
+\end{aligned}
+$$
+
+Check it against the table. Half of 0.0500 M is 0.0250 M, which should come at 330 s. The table has 0.0266 M at 300 s and 0.0194 M at 450 s, so it fits.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for naming the plot of $\ln[\ce{A}]$ against time as the straight one, supported by the data; 1 point for first order. "The graph is linear" without naming the plot earns 0 points for the first award.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $k = 2.10 \times 10^{-3}$ from the slope (accept 2.08 to $2.14 \times 10^{-3}$ from any two table points or a best-fit line), with $k$ positive; 1 point for $\text{s}^{-1}$. A bare number earns 1 point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for $t_{1/2} = 0.693/k$; 1 point for $3.30 \times 10^{2}$ s, or the value that follows from the student's $k$ in part (b).</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={12} title="Zero order on a hot surface" topic="5.3" points={6}>
+
+A gas, B, decomposes on a hot metal surface. The data are for illustration.
+
+| Time (s) | $[\ce{B}]$ (M) |
+|---|---|
+| 0 | 0.0450 |
+| 200 | 0.0378 |
+| 400 | 0.0306 |
+| 600 | 0.0234 |
+| 800 | 0.0162 |
+| 1000 | 0.00900 |
+
+<Part label="a">
+
+Determine the order of the reaction in B. Justify your answer by naming the plot that is a straight line.
+
+<Answer>
+
+The readings are 200 s apart.
+
+| Time (s) | $[\ce{B}]$ (M) | $\ln[\ce{B}]$ | $1/[\ce{B}]$ ($\text{M}^{-1}$) |
+|---|---|---|---|
+| 0 | 0.0450 | $-3.101$ | 22.2 |
+| 200 | 0.0378 | $-3.275$ | 26.5 |
+| 400 | 0.0306 | $-3.487$ | 32.7 |
+| 600 | 0.0234 | $-3.755$ | 42.7 |
+| 800 | 0.0162 | $-4.123$ | 61.7 |
+| 1000 | 0.00900 | $-4.711$ | 111 |
+
+- $[\ce{B}]$ falls by exactly 0.0072 M in every 200 s. Equal drops in equal times make a straight line.
+- $\ln[\ce{B}]$ falls by more each time: 0.174 in the first 200 s, 0.588 in the last. That plot curves.
+- $1/[\ce{B}]$ rises by more each time: about 4 in the first 200 s, about 49 in the last. That plot curves too.
+
+**The plot of $[\ce{B}]$ against time is a straight line, so the reaction is zero order in B.**
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the rate constant, $k$, with units.
+
+<Answer>
+
+For zero order, the slope of the $[\ce{B}]$ plot is $-k$.
+
+$$
+\begin{aligned}
+\text{slope} &= \frac{0.00900 - 0.0450}{1000 - 0} \\
+&= \frac{-0.0360\ \text{M}}{1000\ \text{s}} \\
+&= -3.60 \times 10^{-5}\ \text{M/s}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+k &= -\text{slope} \\
+&= \mathbf{3.60 \times 10^{-5}}\ \text{M/s}
+\end{aligned}
+$$
+
+Because the plot is exactly straight, any two points give the same slope.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate the time at which $[\ce{B}]$ reaches 0.00300 M. Assume the reaction stays zero order.
+
+<Answer>
+
+Use the zero-order integrated rate law and solve for $t$.
+
+$$
+[\ce{B}]_t = [\ce{B}]_0 - kt
+$$
+
+$$
+\begin{aligned}
+t &= \frac{[\ce{B}]_0 - [\ce{B}]_t}{k} \\
+&= \frac{0.0450 - 0.00300}{3.60 \times 10^{-5}} \\
+&= \frac{0.0420\ \text{M}}{3.60 \times 10^{-5}\ \text{M/s}} \\
+&= \mathbf{1.17 \times 10^{3}}\ \text{s}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for naming the plot of $[\ce{B}]$ against time as the straight one, supported by the equal drops; 1 point for zero order.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $k = 3.60 \times 10^{-5}$ from the slope, with $k$ positive; 1 point for M/s. A bare number earns 1 point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for the zero-order integrated rate law with the values substituted; 1 point for $1.17 \times 10^{3}$ s, or the value that follows from the student's $k$.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={13} title="Second order in solution" topic="5.3" points={6}>
+
+A compound E reacts in solution:
+
+$$
+\ce{E -> products}
+$$
+
+The data are for illustration.
+
+| Time (s) | $[\ce{E}]$ (M) |
+|---|---|
+| 0 | 0.200 |
+| 100 | 0.111 |
+| 200 | 0.0769 |
+| 300 | 0.0588 |
+| 400 | 0.0476 |
+| 500 | 0.0400 |
+| 600 | 0.0345 |
+
+<Part label="a">
+
+Determine the order of the reaction in E. Justify your answer by naming the plot that is a straight line.
+
+<Answer>
+
+The readings are 100 s apart.
+
+| Time (s) | $[\ce{E}]$ (M) | $\ln[\ce{E}]$ | $1/[\ce{E}]$ ($\text{M}^{-1}$) |
+|---|---|---|---|
+| 0 | 0.200 | $-1.609$ | 5.00 |
+| 100 | 0.111 | $-2.198$ | 9.01 |
+| 200 | 0.0769 | $-2.565$ | 13.0 |
+| 300 | 0.0588 | $-2.834$ | 17.0 |
+| 400 | 0.0476 | $-3.045$ | 21.0 |
+| 500 | 0.0400 | $-3.219$ | 25.0 |
+| 600 | 0.0345 | $-3.367$ | 29.0 |
+
+- $[\ce{E}]$ falls by less each time: 0.089 M in the first 100 s, 0.0055 M in the last. That plot curves.
+- $\ln[\ce{E}]$ also falls by less each time: 0.589 in the first 100 s, 0.148 in the last. That plot curves too.
+- $1/[\ce{E}]$ rises by 4.0 in every 100 s. Equal rises in equal times make a straight line.
+
+**The plot of $1/[\ce{E}]$ against time is a straight line, so the reaction is second order in E.**
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the rate constant, $k$, with units.
+
+<Answer>
+
+For second order, the slope of the $1/[\ce{E}]$ plot is $+k$. From the first and last points:
+
+$$
+\begin{aligned}
+k &= \frac{29.0 - 5.00}{600 - 0} \\
+&= \frac{24.0\ \text{M}^{-1}}{600\ \text{s}} \\
+&= \mathbf{0.0400}\ \text{M}^{-1}\,\text{s}^{-1}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The reaction continues in the same way. Calculate $[\ce{E}]$ at 1500 s.
+
+<Answer>
+
+Use the second-order integrated rate law.
+
+$$
+\begin{aligned}
+\frac{1}{[\ce{E}]_t} &= \frac{1}{[\ce{E}]_0} + kt \\
+&= 5.00 + (0.0400)(1500) \\
+&= 5.00 + 60.0 \\
+&= 65.0\ \text{M}^{-1}
+\end{aligned}
+$$
+
+Then turn it over:
+
+$$
+[\ce{E}]_t = \frac{1}{65.0} = \mathbf{0.0154}\ \text{M}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for naming the plot of $1/[\ce{E}]$ against time as the straight one, supported by the equal rises; 1 point for second order.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $k = 0.0400$ as the positive slope of the $1/[\ce{E}]$ plot; 1 point for $\text{M}^{-1}\,\text{s}^{-1}$. A bare number earns 1 point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for $1/[\ce{E}] = 65.0\ \text{M}^{-1}$ from the second-order integrated rate law; 1 point for 0.0154 M, or the value that follows from the student's $k$. Stopping at 65.0 earns 1 point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={14} title="When the first two points mislead" topic="5.3" points={6}>
+
+A compound X decomposes in solution. The data are for illustration.
+
+| Time (s) | $[\ce{X}]$ (M) |
+|---|---|
+| 0 | 0.480 |
+| 30 | 0.240 |
+| 75 | 0.137 |
+| 150 | 0.0800 |
+| 240 | 0.0533 |
+| 360 | 0.0369 |
+
+A student notices that $[\ce{X}]$ halved in the first 30 s. The student concludes that the reaction is first order with a half-life of 30 s.
+
+<Part label="a">
+
+If the student were right, what would $[\ce{X}]$ be at 150 s? Use your answer to decide whether the student is right.
+
+<Answer>
+
+At 150 s, five half-lives of 30 s would have passed. Each half-life halves what is left:
+
+$$
+\begin{aligned}
+&0.480 \to 0.240 \to 0.120 \\
+&\to 0.0600 \to 0.0300 \\
+&\to \mathbf{0.0150}\ \text{M}
+\end{aligned}
+$$
+
+The table shows 0.0800 M at 150 s, more than five times as much. **The student is wrong.** The second halving, from 0.240 M to 0.120 M, has not even finished by 75 s, so the half-life is not constant and the reaction is not first order.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Determine the order of the reaction in X. Justify your answer by naming the plot that is a straight line.
+
+<Answer>
+
+The readings are not evenly spaced, so compare how fast each quantity changes per second between readings.
+
+| Time (s) | $\ln[\ce{X}]$ | $1/[\ce{X}]$ ($\text{M}^{-1}$) |
+|---|---|---|
+| 0 | $-0.734$ | 2.083 |
+| 30 | $-1.427$ | 4.167 |
+| 75 | $-1.988$ | 7.299 |
+| 150 | $-2.526$ | 12.50 |
+| 240 | $-2.932$ | 18.76 |
+| 360 | $-3.300$ | 27.10 |
+
+- $\ln[\ce{X}]$ falls by 0.0231 per second over the first 30 s but only by 0.0031 per second over the last 120 s. That plot curves.
+- $1/[\ce{X}]$ rises by 0.069 to 0.070 per second over every interval. A steady rise makes a straight line.
+
+**The plot of $1/[\ce{X}]$ against time is a straight line, so the reaction is second order in X.** The plot of $[\ce{X}]$ against time curves as well, since $[\ce{X}]$ fell by 0.240 M in the first 30 s and by only 0.0164 M in the last 120 s.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate the rate constant, $k$, with units.
+
+<Answer>
+
+The slope of the $1/[\ce{X}]$ plot is $+k$. Use the points at 0 s and 150 s:
+
+$$
+\begin{aligned}
+k &= \frac{12.50 - 2.083}{150 - 0} \\
+&= \frac{10.417\ \text{M}^{-1}}{150\ \text{s}} \\
+&= \mathbf{0.0694}\ \text{M}^{-1}\,\text{s}^{-1}
+\end{aligned}
+$$
+
+Other pairs of points give 0.0693 to $0.0696\ \text{M}^{-1}\,\text{s}^{-1}$.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for 0.0150 M; 1 point for comparing it with the measured 0.0800 M and concluding that the student is wrong.</RubricLine>
+<RubricLine part="b" points={2}>1 point for naming the plot of $1/[\ce{X}]$ against time as the straight one, supported by the data; 1 point for second order.</RubricLine>
+<RubricLine part="c" points={2}>1 point for $k$ from the slope of the $1/[\ce{X}]$ plot (accept 0.0693 to 0.0696); 1 point for $\text{M}^{-1}\,\text{s}^{-1}$.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={15} title="A drug cleared from the blood" topic="5.3" points={6}>
+
+After an injection, the concentration of a drug in a patient's blood is 12.0 mg/L. The body clears the drug by a first-order process with $k = 0.115\ \text{h}^{-1}$. The numbers are for illustration.
+
+<Part label="a">
+
+Calculate the half-life of the drug in the blood.
+
+<Answer>
+
+$$
+\begin{aligned}
+t_{1/2} &= \frac{0.693}{k} = \frac{0.693}{0.115\ \text{h}^{-1}} \\
+&= \mathbf{6.03}\ \text{h}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the concentration of the drug 8.00 h after the injection.
+
+<Answer>
+
+Write $C$ for the drug's concentration and use the first-order integrated rate law. The concentration may stay in mg/L: the law depends only on the ratio of two concentrations, so the unit cancels.
+
+$$
+kt = (0.115)(8.00) = 0.920
+$$
+
+$$
+\begin{aligned}
+\ln C_t &= \ln C_0 - kt \\
+&= \ln(12.0) - 0.920 \\
+&= 2.485 - 0.920 \\
+&= 1.565
+\end{aligned}
+$$
+
+$$
+C_t = e^{1.565} = \mathbf{4.78}\ \text{mg/L}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The next dose is due when the concentration has fallen to 2.00 mg/L. Calculate how long after the injection that is.
+
+<Answer>
+
+Rearrange the same law to solve for $t$:
+
+$$
+\begin{aligned}
+kt &= \ln C_0 - \ln C_t \\
+&= \ln(12.0) - \ln(2.00) \\
+&= 2.485 - 0.693 = 1.792
+\end{aligned}
+$$
+
+$$
+t = \frac{1.792}{0.115\ \text{h}^{-1}} = \mathbf{15.6}\ \text{h}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $t_{1/2} = 0.693/k$; 1 point for 6.03 h.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the first-order integrated rate law with the values substituted, or an equivalent first-order method such as $C_0 (1/2)^{t/t_{1/2}}$; 1 point for 4.78 mg/L. Using the zero-order or second-order law earns 0 points.</RubricLine>
+<RubricLine part="c" points={2}>1 point for solving the first-order law for $t$ with 12.0 and 2.00 mg/L; 1 point for 15.6 h.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={16} title="A fading dye" topic="5.3" points={5}>
+
+Crystal violet is a purple dye that fades as it reacts with hydroxide ion. In this run, the hydroxide concentration is more than a thousand times the dye's, and the dye's concentration is found from its color. Concentrations are in micromolar (µM). The data are for illustration.
+
+| Time (min) | $[\text{dye}]$ (µM) |
+|---|---|
+| 0 | 16.0 |
+| 2.0 | 14.7 |
+| 10.0 | 10.6 |
+| 20.0 | 7.05 |
+| 30.0 | 4.68 |
+| 40.0 | 3.10 |
+| 60.0 | 1.37 |
+
+From the first two readings, a student says the dye is being used up at a steady 0.65 µM per minute, so the reaction is zero order in the dye.
+
+<Part label="a">
+
+Use the data to show that the student is wrong.
+
+<Answer>
+
+If the dye were used up at a steady 0.65 µM per minute, then at 20.0 min:
+
+$$
+\begin{aligned}
+[\text{dye}] &= 16.0 - (0.65)(20.0) \\
+&= 3.0\ \mu\text{M}
+\end{aligned}
+$$
+
+The table shows 7.05 µM, more than twice that. The drops in each 10.0 min also shrink: 3.55 µM from 10.0 to 20.0 min, 2.37 µM from 20.0 to 30.0 min, 1.58 µM from 30.0 to 40.0 min. **A zero-order reaction would lose the same amount in every 10.0 min, so the reaction is not zero order in the dye.**
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Show that the reaction is first order in the dye, and calculate the rate constant, $k$, with units.
+
+<Answer>
+
+| Time (min) | $\ln[\text{dye}]$ |
+|---|---|
+| 0 | 2.773 |
+| 2.0 | 2.688 |
+| 10.0 | 2.361 |
+| 20.0 | 1.953 |
+| 30.0 | 1.543 |
+| 40.0 | 1.131 |
+| 60.0 | 0.315 |
+
+$\ln[\text{dye}]$ falls by about 0.41 in every 10.0 min, so the plot of $\ln[\text{dye}]$ against time is a straight line: **first order in the dye**. Working in µM instead of M shifts every $\ln$ by the same amount, so the slope does not change.
+
+The slope is $-k$. From the first and last points:
+
+$$
+\begin{aligned}
+\text{slope} &= \frac{0.315 - 2.773}{60.0\ \text{min} - 0\ \text{min}} \\
+&= \frac{-2.458}{60.0\ \text{min}} \\
+&= -0.0410\ \text{min}^{-1}
+\end{aligned}
+$$
+
+$$
+k = \mathbf{0.0410}\ \text{min}^{-1}
+$$
+
+Any two readings at least 10 min apart, or a best-fit line, give 0.0408 to $0.0412\ \text{min}^{-1}$.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Explain why the hydroxide is in large excess, and what that means for the $k$ found in part (b).
+
+<Answer>
+
+With so much hydroxide, its concentration hardly changes during the run, so only the dye's fall shows in the data. **The $k$ from the plot has the constant hydroxide concentration folded into it, so it holds only for that hydroxide concentration.**
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for a zero-order prediction that disagrees with a reading (such as 3.0 µM against 7.05 µM at 20.0 min) or for drops that shrink in equal times; 1 point for concluding that the reaction is not zero order.</RubricLine>
+<RubricLine part="b" points={2}>1 point for a straight plot of $\ln[\text{dye}]$ against time, so first order; 1 point for $k = 0.0410\ \text{min}^{-1}$ with units (accept 0.0408 to 0.0412 from any two readings at least 10 min apart or a best-fit line).</RubricLine>
+<RubricLine part="c" points={1}>1 point for saying that the hydroxide concentration stays nearly constant, so $k$ includes it and holds only for that concentration.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={17} title="A radioactive tracer" topic="5.3" points={4}>
+
+Phosphorus-32 is a radioactive isotope used as a tracer in biology. Its half-life is 14.3 days. Like all radioactive decay, its decay is first order.
+
+<Part label="a">
+
+Calculate the rate constant, $k$, for the decay of phosphorus-32, with units.
+
+<Answer>
+
+$$
+\begin{aligned}
+k &= \frac{0.693}{t_{1/2}} = \frac{0.693}{14.3\ \text{days}} \\
+&= \mathbf{0.0485}\ \text{day}^{-1}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+A sample contains 2.50 mg of phosphorus-32. Calculate the mass of phosphorus-32 left after 20.0 days.
+
+<Answer>
+
+The mass of the isotope is proportional to the amount of it, so the first-order integrated rate law works with mass in place of concentration.
+
+$$
+kt = (0.0485)(20.0) = 0.9700
+$$
+
+$$
+\begin{aligned}
+\ln m_t &= \ln m_0 - kt \\
+&= \ln(2.50) - 0.9700 \\
+&= 0.9163 - 0.9700 \\
+&= -0.0537
+\end{aligned}
+$$
+
+$$
+m_t = e^{-0.0537} = \mathbf{0.948}\ \text{mg}
+$$
+
+Check: 20.0 days is between one and two half-lives, so the mass should be between 1.25 mg and 0.625 mg. It is.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $k = 0.693/t_{1/2}$; 1 point for $0.0485\ \text{day}^{-1}$ with units.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the first-order integrated rate law with the values substituted, or an equivalent first-order method such as $m_0 (1/2)^{t/t_{1/2}}$; 1 point for 0.948 mg.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={18} title="From the rate constant to the half-life" topic="5.3" points={4}>
+
+A reaction in solution, $\ce{Y -> products}$, is first order in Y with $k = 1.60 \times 10^{-3}\ \text{s}^{-1}$.
+
+<Part label="a">
+
+Calculate the half-life.
+
+<Answer>
+
+$$
+\begin{aligned}
+t_{1/2} &= \frac{0.693}{1.60 \times 10^{-3}\ \text{s}^{-1}} \\
+&= \mathbf{433}\ \text{s}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the time it takes for 87.5% of Y to react.
+
+<Answer>
+
+If 87.5% has reacted, 12.5% is left. That is 1/8, and
+
+$$
+\left(\tfrac{1}{2}\right)^3 = \tfrac{1}{8}
+$$
+
+so it takes three half-lives:
+
+$$
+t = 3 \times 433\ \text{s} = \mathbf{1.30 \times 10^{3}}\ \text{s}
+$$
+
+The integrated rate law gives the same result. The ratio of starting to final concentration is 8, so:
+
+$$
+\begin{aligned}
+t &= \frac{\ln 8}{k} = \frac{2.079}{1.60 \times 10^{-3}\ \text{s}^{-1}} \\
+&= 1.30 \times 10^{3}\ \text{s}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $t_{1/2} = 0.693/k$; 1 point for 433 s.</RubricLine>
+<RubricLine part="b" points={2}>1 point for 12.5% left as three half-lives, or for the integrated rate law with a ratio of 8; 1 point for $1.30 \times 10^{3}$ s. Using 87.5% as the fraction left earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={19} title="Counting half-lives" topic="5.3" points={5}>
+
+A reaction $\ce{Z -> products}$ is first order in Z, with a half-life of 12.0 min. At the start, $[\ce{Z}]_0 = 0.880\ \text{M}$.
+
+<Part label="a">
+
+Calculate $[\ce{Z}]$ after 48.0 min.
+
+<Answer>
+
+In 48.0 min, four half-lives of 12.0 min pass. Halve the concentration four times:
+
+$$
+\begin{aligned}
+&0.880 \to 0.440 \to 0.220 \\
+&\to 0.110 \to \mathbf{0.0550}\ \text{M}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+What fraction of the Z is left after 1.00 h?
+
+<Answer>
+
+An hour, 60.0 min, is five half-lives.
+
+$$
+\left(\tfrac{1}{2}\right)^5 = \mathbf{\tfrac{1}{32}}
+$$
+
+That is about 0.031, or 3.1%.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Determine the smallest whole number of half-lives after which less than 1.0% of the Z is left, and how long that takes.
+
+<Answer>
+
+After six half-lives, 1/64 is left, which is 1.6%: still more than 1.0%. After seven half-lives, 1/128 is left, which is 0.78%. **Seven half-lives**, which take
+
+$$
+7 \times 12.0\ \text{min} = \mathbf{84.0}\ \text{min}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for counting four half-lives, or for the first-order integrated rate law with $k = 0.693/t_{1/2}$; 1 point for 0.0550 M.</RubricLine>
+<RubricLine part="b" points={1}>1 point for 1/32 (or 0.031, or 3.1%).</RubricLine>
+<RubricLine part="c" points={2}>1 point for seven half-lives, with 1/128 or 0.78% shown to be below 1.0% and six half-lives shown to be above it; 1 point for 84.0 min.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={20} title="Order from successive half-lives" topic="5.3" points={7}>
+
+Two reactions, $\ce{D -> products}$ and $\ce{G -> products}$, are each started at 0.960 M at the same temperature. The table gives the time at which each reactant reaches each concentration. The data are for illustration.
+
+| Concentration (M) | Time for D (s) | Time for G (s) |
+|---|---|---|
+| 0.960 | 0 | 0 |
+| 0.480 | 35.0 | 35.0 |
+| 0.240 | 70.0 | 105 |
+| 0.120 | 105 | 245 |
+
+<Part label="a">
+
+Determine the order of each reaction. Justify each answer from the data.
+
+<Answer>
+
+Each row is half the concentration of the row above, so the time between rows is a half-life.
+
+**D:** the half-lives are 35.0 s, 35.0 s and 35.0 s. A constant half-life is the mark of a first-order reaction, so **D is first order**.
+
+**G:** the half-lives are 35.0 s, 70.0 s and 140 s. Each is twice the one before. The half-life is not constant, so the reaction is not first order. To find the order, test the plot of $1/[\ce{G}]$ against time. At 0, 35.0, 105 and 245 s, $1/[\ce{G}]$ is 1.042, 2.083, 4.167 and 8.333 $\text{M}^{-1}$.
+
+| Interval (s) | Rise in $1/[\ce{G}]$ ($\text{M}^{-1}$) | Rise per second ($\text{M}^{-1}\,\text{s}^{-1}$) |
+|---|---|---|
+| 0 to 35.0 | 1.041 | 0.02974 |
+| 35.0 to 105 | 2.084 | 0.02977 |
+| 105 to 245 | 4.166 | 0.02976 |
+
+$1/[\ce{G}]$ rises at the same rate in every interval, so the plot of $1/[\ce{G}]$ against time is a straight line: **G is second order**.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the rate constant for each reaction, with units.
+
+<Answer>
+
+For D, from the first-order half-life:
+
+$$
+\begin{aligned}
+k_{\ce{D}} &= \frac{0.693}{35.0\ \text{s}} \\
+&= \mathbf{0.0198}\ \text{s}^{-1}
+\end{aligned}
+$$
+
+For G, $k$ is the slope of the $1/[\ce{G}]$ plot, the rise per second found in part (a):
+
+$$
+k_{\ce{G}} = \mathbf{0.0298}\ \text{M}^{-1}\,\text{s}^{-1}
+$$
+
+Keep one more digit, 0.02976, for the next part.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate the time at which each reactant reaches 0.0600 M.
+
+<Answer>
+
+**D:** 0.0600 M is 1/16 of 0.960 M, which is four half-lives:
+
+$$
+4 \times 35.0\ \text{s} = \mathbf{140}\ \text{s}
+$$
+
+**G:** use the second-order integrated rate law and solve for $t$.
+
+$$
+\begin{aligned}
+t &= \frac{1/[\ce{G}]_t - 1/[\ce{G}]_0}{k} \\
+&= \frac{16.67 - 1.042}{0.02976} \\
+&= \mathbf{525}\ \text{s}
+\end{aligned}
+$$
+
+This fits the pattern in part (a). The next half-life of G would be 280 s, twice 140 s, and 525 s is 280 s after the reading at 245 s.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for D first order because its half-life is constant; 1 point for G not first order because its half-life changes; 1 point for G second order, supported by equal rises of $1/[\ce{G}]$ in equal times or by a half-life that doubles each time.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $0.0198\ \text{s}^{-1}$; 1 point for $0.0298\ \text{M}^{-1}\,\text{s}^{-1}$. Each value needs its units.</RubricLine>
+<RubricLine part="c" points={2}>1 point for 140 s for D; 1 point for 525 s for G (accept 524 s), or the value that follows from the student's $k$.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={21} title="Second-order concentration and time" topic="5.3" points={5}>
+
+A gas-phase reaction, $\ce{Q -> products}$, is second order in Q with $k = 1.36\ \text{M}^{-1}\,\text{min}^{-1}$. At the start, $[\ce{Q}]_0 = 0.0750\ \text{M}$.
+
+<Part label="a">
+
+Calculate $[\ce{Q}]$ after 5.00 min.
+
+<Answer>
+
+Use the second-order integrated rate law.
+
+$$
+\begin{aligned}
+\frac{1}{[\ce{Q}]_t} &= \frac{1}{[\ce{Q}]_0} + kt \\
+&= \frac{1}{0.0750} + (1.36)(5.00) \\
+&= 13.33 + 6.80 \\
+&= 20.13\ \text{M}^{-1}
+\end{aligned}
+$$
+
+$$
+[\ce{Q}]_t = \frac{1}{20.13} = \mathbf{0.0497}\ \text{M}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the time it takes for $[\ce{Q}]$ to fall to 0.0250 M.
+
+<Answer>
+
+Solve the same law for $t$:
+
+$$
+\begin{aligned}
+t &= \frac{1/[\ce{Q}]_t - 1/[\ce{Q}]_0}{k} \\
+&= \frac{40.0 - 13.33}{1.36} \\
+&= \mathbf{19.6}\ \text{min}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for the second-order integrated rate law; 1 point for $1/[\ce{Q}] = 20.1\ \text{M}^{-1}$; 1 point for 0.0497 M. Using the first-order law earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the law solved for $t$ with the values substituted; 1 point for 19.6 min.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={22} title="Zero-order concentration and time" topic="5.3" points={5}>
+
+A reaction in solution, $\ce{L -> products}$, is zero order in L with $k = 2.40 \times 10^{-5}\ \text{M/s}$. At the start, $[\ce{L}]_0 = 0.0160\ \text{M}$. The numbers are for illustration.
+
+<Part label="a">
+
+Calculate $[\ce{L}]$ after 5.00 min.
+
+<Answer>
+
+The units of $k$ are M/s, so the time must be in seconds: 5.00 min is 300 s.
+
+$$
+\begin{aligned}
+kt &= (2.40 \times 10^{-5})(300) \\
+&= 0.00720\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{L}]_t &= [\ce{L}]_0 - kt \\
+&= 0.0160 - 0.00720 \\
+&= \mathbf{0.00880}\ \text{M}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the time for $[\ce{L}]$ to fall from 0.0160 M to 0.00800 M, and the time for it to fall from 0.00800 M to 0.00400 M. Compare the two times, and explain how this differs from a first-order reaction.
+
+<Answer>
+
+Each time is the drop in concentration divided by $k$.
+
+$$
+\begin{aligned}
+t_1 &= \frac{0.0160 - 0.00800}{2.40 \times 10^{-5}} \\
+&= \mathbf{333}\ \text{s}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+t_2 &= \frac{0.00800 - 0.00400}{2.40 \times 10^{-5}} \\
+&= \mathbf{167}\ \text{s}
+\end{aligned}
+$$
+
+**The second halving takes half as long as the first.** A zero-order reaction uses up the same amount every second, whatever is left, so halving a smaller amount takes less time. For a first-order reaction both halvings would take the same time, because its half-life is constant.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the zero-order integrated rate law with consistent units ($t = 300$ s, or $k$ in M/min); 1 point for 0.00880 M. Using 5.00 with $k$ in M/s earns 0 points for the answer.</RubricLine>
+<RubricLine part="b" points={3}>1 point for 333 s; 1 point for 167 s; 1 point for saying that the second halving is shorter while a first-order half-life would stay the same.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={23} title="Rate constants from slopes" topic="5.3" points={6}>
+
+Each part describes a different reaction. In each, one plot of the data is a straight line, and two points on that line are given.
+
+<Part label="a">
+
+For a reaction of J, the plot of $\ln[\ce{J}]$ against time in minutes is a straight line. At $t = 0$, $\ln[\ce{J}] = -1.204$. At $t = 40.0$ min, $\ln[\ce{J}] = -2.464$. Determine the order in J and calculate $k$, with units.
+
+<Answer>
+
+A straight $\ln[\ce{J}]$ plot means **first order**, and its slope is $-k$.
+
+$$
+\begin{aligned}
+\text{slope} &= \frac{-2.464 - (-1.204)}{40.0\ \text{min}} \\
+&= -0.0315\ \text{min}^{-1}
+\end{aligned}
+$$
+
+$$
+k = \mathbf{0.0315}\ \text{min}^{-1}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+For a reaction of W, the plot of $1/[\ce{W}]$ against time in seconds is a straight line. At $t = 0$, $1/[\ce{W}] = 4.00\ \text{M}^{-1}$. At $t = 500$ s, $1/[\ce{W}] = 5.30\ \text{M}^{-1}$. Determine the order in W and calculate $k$, with units.
+
+<Answer>
+
+A straight $1/[\ce{W}]$ plot means **second order**, and its slope is $+k$.
+
+$$
+\begin{aligned}
+k &= \frac{5.30\ \text{M}^{-1} - 4.00\ \text{M}^{-1}}{500\ \text{s}} \\
+&= \mathbf{2.60 \times 10^{-3}}\ \text{M}^{-1}\,\text{s}^{-1}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+For a reaction of R, the plot of $[\ce{R}]$ against time in hours is a straight line. At $t = 0$, $[\ce{R}] = 0.0880$ M. At $t = 12.0$ h, $[\ce{R}] = 0.0352$ M. Determine the order in R and calculate $k$, with units.
+
+<Answer>
+
+A straight $[\ce{R}]$ plot means **zero order**, and its slope is $-k$.
+
+$$
+\begin{aligned}
+\text{slope} &= \frac{0.0352\ \text{M} - 0.0880\ \text{M}}{12.0\ \text{h}} \\
+&= -4.40 \times 10^{-3}\ \text{M/h}
+\end{aligned}
+$$
+
+$$
+k = \mathbf{4.40 \times 10^{-3}}\ \text{M/h}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for first order, from the straight $\ln[\ce{J}]$ plot; 1 point for $k = 0.0315\ \text{min}^{-1}$ with units. A negative $k$ (the slope itself) earns 0 points for the second award.</RubricLine>
+<RubricLine part="b" points={2}>1 point for second order, from the straight $1/[\ce{W}]$ plot; 1 point for $k = 2.60 \times 10^{-3}\ \text{M}^{-1}\,\text{s}^{-1}$ with units.</RubricLine>
+<RubricLine part="c" points={2}>1 point for zero order, from the straight $[\ce{R}]$ plot; 1 point for $k = 4.40 \times 10^{-3}$ M/h with units. A negative $k$ (the slope itself) earns 0 points for the second award.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={24} title="First order from two measurements" topic="5.3" points={5}>
+
+A compound V changes into another form in solution by a first-order reaction. $[\ce{V}]$ falls from 0.250 M to 0.180 M in 15.0 min. The data are for illustration.
+
+<Part label="a">
+
+Calculate the rate constant, $k$, with units.
+
+<Answer>
+
+Solve the first-order integrated rate law for $k$:
+
+$$
+\begin{aligned}
+k &= \frac{\ln[\ce{V}]_0 - \ln[\ce{V}]_t}{t} \\
+&= \frac{\ln(0.250) - \ln(0.180)}{15.0\ \text{min}} \\
+&= \frac{-1.386 - (-1.715)}{15.0\ \text{min}} \\
+&= \mathbf{0.0219}\ \text{min}^{-1}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the half-life.
+
+<Answer>
+
+$$
+\begin{aligned}
+t_{1/2} &= \frac{0.693}{0.0219\ \text{min}^{-1}} \\
+&= \mathbf{31.6}\ \text{min}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate $[\ce{V}]$ after 1.00 h.
+
+<Answer>
+
+An hour is 60.0 min.
+
+$$
+kt = (0.0219)(60.0) = 1.314
+$$
+
+$$
+\begin{aligned}
+\ln[\ce{V}]_t &= \ln[\ce{V}]_0 - kt \\
+&= -1.386 - 1.314 \\
+&= -2.700
+\end{aligned}
+$$
+
+$$
+[\ce{V}]_t = e^{-2.700} = \mathbf{0.0672}\ \text{M}
+$$
+
+A check that needs no logarithms: 60.0 min is four periods of 15.0 min, and each period multiplies $[\ce{V}]$ by the same factor.
+
+$$
+\frac{0.180}{0.250} = 0.720
+$$
+
+$$
+0.250 \times 0.720^4 = 0.0672\ \text{M}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the first-order integrated rate law with both concentrations and the time substituted; 1 point for $0.0219\ \text{min}^{-1}$ with units.</RubricLine>
+<RubricLine part="b" points={1}>1 point for 31.6 min, or the value that follows from the student's $k$.</RubricLine>
+<RubricLine part="c" points={2}>1 point for the first-order integrated rate law with 60.0 min (not 1.00), or for four 15.0-min periods each multiplying $[\ce{V}]$ by 0.720; 1 point for 0.0672 M (accept 0.0670 to 0.0672), or the value that follows from the student's $k$.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={25} title="One start, three orders" topic="5.3" points={5}>
+
+Three different reactions each use up their own reactant, and each reactant starts at 0.500 M. The data are for illustration.
+
+| Reactant | Order | $k$ |
+|---|---|---|
+| $\ce{X}$ | zero | $6.00 \times 10^{-3}\ \text{M/s}$ |
+| $\ce{J}$ | first | $1.50 \times 10^{-2}\ \text{s}^{-1}$ |
+| $\ce{D}$ | second | $3.50 \times 10^{-2}\ \text{M}^{-1}\,\text{s}^{-1}$ |
+
+At the start, the reaction of $\ce{D}$ is the fastest. The three initial rates are $6.00 \times 10^{-3}$, $7.50 \times 10^{-3}$ and $8.75 \times 10^{-3}$ M/s, for $\ce{X}$, $\ce{J}$ and $\ce{D}$ in that order.
+
+<Part label="a">
+
+Calculate $[\ce{X}]$ after 40.0 s.
+
+<Answer>
+
+Zero order:
+
+$$
+\begin{aligned}
+kt &= (6.00 \times 10^{-3})(40.0) \\
+&= 0.240
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{X}]_t &= [\ce{X}]_0 - kt \\
+&= 0.500 - 0.240 \\
+&= \mathbf{0.260}\ \text{M}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $[\ce{J}]$ after 40.0 s.
+
+<Answer>
+
+First order:
+
+$$
+kt = (0.0150)(40.0) = 0.600
+$$
+
+$$
+\begin{aligned}
+\ln[\ce{J}]_t &= \ln[\ce{J}]_0 - kt \\
+&= -0.693 - 0.600 \\
+&= -1.293
+\end{aligned}
+$$
+
+$$
+[\ce{J}]_t = e^{-1.293} = \mathbf{0.274}\ \text{M}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate $[\ce{D}]$ after 40.0 s.
+
+<Answer>
+
+Second order:
+
+$$
+\begin{aligned}
+\frac{1}{[\ce{D}]_t} &= \frac{1}{0.500} + (0.0350)(40.0) \\
+&= 2.00 + 1.40 \\
+&= 3.40\ \text{M}^{-1}
+\end{aligned}
+$$
+
+$$
+[\ce{D}]_t = \frac{1}{3.40} = \mathbf{0.294}\ \text{M}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+The reaction of $\ce{D}$ starts fastest, yet after 40.0 s it has the most reactant left. Explain why.
+
+<Answer>
+
+As each reactant is used up, each rate changes in its own way. The zero-order rate does not depend on $[\ce{X}]$, so that reaction keeps going at its starting rate. The first-order rate falls in proportion to $[\ce{J}]$. **The second-order rate depends on $[\ce{D}]^2$, so it falls fastest of all: when $[\ce{D}]$ halves, its rate drops to a quarter.** The reaction of $\ce{D}$ soon becomes the slowest of the three, and by 40.0 s it has used up the least reactant.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for 0.260 M.</RubricLine>
+<RubricLine part="b" points={1}>1 point for 0.274 M from the first-order integrated rate law.</RubricLine>
+<RubricLine part="c" points={1}>1 point for 0.294 M from the second-order integrated rate law.</RubricLine>
+<RubricLine part="d" points={2}>1 point for saying that the second-order rate depends on the square of the concentration, so it falls fastest as the reactant is used up; 1 point for contrasting it with the zero-order rate, which stays the same, or with the first-order rate, which falls only in proportion to $[\ce{J}]$.</RubricLine>
+</Rubric>
+
+</Question>

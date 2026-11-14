@@ -147,4 +147,8 @@ describe('kindLabel', () => {
     expect(kindLabel('ladders')).toBe('Skill ladders');
     expect(kindLabel('free-response')).toBe('Free response');
   });
+
+  it('names a comprehensive test', () => {
+    expect(kindLabel('test')).toBe('Comprehensive test');
+  });
 });
