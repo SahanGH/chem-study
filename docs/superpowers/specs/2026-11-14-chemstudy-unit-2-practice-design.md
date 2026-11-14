@@ -118,3 +118,29 @@ Each stops for the teacher's merge, because a merge deploys.
 - Each document has been fact-checked and every accepted finding fixed.
 - Every drawn structure has been checked.
 - No page scrolls sideways at 412, 390, 360 or 320 px with every answer open.
+
+> **As built (Plan 6, 2026-11-14).**
+>
+> - **Delivered:** the six documents and 13 drawn Lewis structures (three
+>   resonance pairs and seven single drawings), in two pull requests after
+>   the design and plan.
+> - **Audits:** every document ends `0 unexplained, 0 stale`. Each remaining
+>   difference is the left-out Quick review or tick table, a topic tag, or a
+>   fact-check edit, each recorded with its reason.
+> - **Fact-checks** (Opus) found four errors in the originals, all corrected:
+>   - PCl₃'s angle given as ammonia's 107°;
+>   - "replace one Cl of CCl₄ with H" said to give CH₃Cl;
+>   - two places that call MgO's and CaO's ions "smaller" when only the
+>     cations are.
+>
+>   Other corrections: the cyanide argument (the octet decides, not
+>   minimal charge); the thiocyanate answer now shows the formal charges
+>   it claims; Ladder 10's opening no longer describes how hybrid orbitals
+>   are built.
+> - **One value changed on the lessons' side:** Cl–Cl is 243 kJ/mol site-wide
+>   (it was 242 in lesson 2.2 and the bond-energy diagram; data give 242.6).
+>   The practice moved to the lessons' values instead for electronegativity
+>   (Ladder 1) and F–F (159).
+> - **Rubrics are as the teacher wrote them.** Two suggested changes are put
+>   to the teacher in the pull requests: Worksheet 4 part c, and
+>   free-response 1(c).
