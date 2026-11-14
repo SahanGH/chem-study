@@ -75,9 +75,19 @@ test.describe('the search index holds words, not TeX source', () => {
     await page.getByRole('button', { name: 'Search' }).click();
   });
 
-  test('a TeX command matches nothing', async ({ page }) => {
+  test('a TeX command is not in the index', async ({ page }) => {
     await page.locator('.pagefind-ui__search-input').fill('qquad');
-    await expect(page.locator('.pagefind-ui__message')).toHaveText('No results for qquad');
+    const message = page.locator('.pagefind-ui__message');
+    await expect(message).toHaveText(/^(No results|[1-9]\d* results?) for qquad$/);
+
+    // With no exact match, Pagefind falls back to an indexed word that begins the
+    // query, so a page with a reactant named "Q" is listed. What must never be
+    // found is the command itself.
+    const count = Number(/^\d+/.exec(await message.innerText())?.[0] ?? '0');
+    await expect(page.locator('.pagefind-ui__result')).toHaveCount(count);
+    // A mark carries the punctuation after its word ("quadruples."), so keep letters only.
+    const marked = await page.locator('.pagefind-ui__result-excerpt mark').allInnerTexts();
+    expect(marked.map((word) => word.toLowerCase().replace(/[^a-z]/g, ''))).not.toContain('qquad');
   });
 
   test('ordinary words around an equation still find the lesson', async ({ page }) => {
