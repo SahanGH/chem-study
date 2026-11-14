@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import LessonLayout from '../../layouts/LessonLayout.astro';
+import BondEnergyCurve from '../../components/lesson/BondEnergyCurve.astro';
 import CatalystProfile from '../../components/lesson/CatalystProfile.astro';
 import Check from '../../components/lesson/Check.astro';
 import ConcentrationPlots from '../../components/lesson/ConcentrationPlots.astro';
@@ -32,6 +33,7 @@ const { lesson } = Astro.props;
 const { Content, headings } = await render(lesson);
 // Supplied to every lesson, so lesson files need no imports.
 const blocks = {
+  BondEnergyCurve,
   CatalystProfile,
   Check,
   ConcentrationPlots,

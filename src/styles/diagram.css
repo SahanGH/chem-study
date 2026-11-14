@@ -67,10 +67,50 @@
   stroke-width: 3;
   stroke-dasharray: 9 6;
 }
+/* The curves a diagram compares against the chosen one. Each curve keeps its
+   own dash pattern whether chosen or not, so curves differ by more than color. */
+.diagram-curve.is-faint {
+  stroke: var(--muted);
+  stroke-width: 1.5;
+  opacity: 0.75;
+}
+.diagram-curve.is-pattern-1 {
+  stroke-dasharray: 8 5;
+}
+.diagram-curve.is-pattern-2 {
+  stroke-dasharray: 2 4;
+}
+.diagram-zero,
+.diagram-guide {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+.diagram-marker {
+  fill: var(--u-ink);
+  stroke: var(--card);
+  stroke-width: 2;
+}
+.diagram-atom {
+  fill: var(--u-tint);
+  stroke: var(--u-ink);
+  stroke-width: 1.5;
+}
+.diagram-atom-label {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 600;
+  fill: var(--ink);
+}
 .diagram-label {
   font-family: var(--font-ui);
   font-size: 11px;
   fill: var(--muted);
+}
+.diagram-label.is-selected {
+  fill: var(--u-ink);
+  font-weight: 700;
 }
 
 .diagram-readout {
