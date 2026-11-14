@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" font-family="system-ui, sans-serif" font-size="18">
+  <defs>
+    <g id="ion">
+      <circle r="24" fill="#DDE6E4" stroke="#4F706C" stroke-width="1.5"/>
+      <path d="M-7 0H7M0-7V7" fill="none" stroke="#26231F" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  </defs>
+  <rect width="480" height="320" fill="#FDFCF9"/>
+
+  <use href="#ion" x="85" y="46"/>
+  <use href="#ion" x="147" y="46"/>
+  <use href="#ion" x="209" y="46"/>
+  <use href="#ion" x="271" y="46"/>
+  <use href="#ion" x="333" y="46"/>
+  <use href="#ion" x="395" y="46"/>
+  <use href="#ion" x="85" y="108"/>
+  <use href="#ion" x="147" y="108"/>
+  <use href="#ion" x="209" y="108"/>
+  <use href="#ion" x="271" y="108"/>
+  <use href="#ion" x="333" y="108"/>
+  <use href="#ion" x="395" y="108"/>
+  <use href="#ion" x="85" y="170"/>
+  <use href="#ion" x="147" y="170"/>
+  <use href="#ion" x="209" y="170"/>
+  <use href="#ion" x="271" y="170"/>
+  <use href="#ion" x="333" y="170"/>
+  <use href="#ion" x="395" y="170"/>
+  <use href="#ion" x="85" y="232"/>
+  <use href="#ion" x="147" y="232"/>
+  <use href="#ion" x="209" y="232"/>
+  <use href="#ion" x="271" y="232"/>
+  <use href="#ion" x="333" y="232"/>
+  <use href="#ion" x="395" y="232"/>
+
+  <g fill="#26231F">
+    <circle cx="110" cy="72" r="4"/>
+    <circle cx="172" cy="70" r="4"/>
+    <circle cx="186" cy="86" r="4"/>
+    <circle cx="236" cy="70" r="4"/>
+    <circle cx="309" cy="80" r="4"/>
+    <circle cx="360" cy="88" r="4"/>
+    <circle cx="122" cy="146" r="4"/>
+    <circle cx="171" cy="133" r="4"/>
+    <circle cx="296" cy="134" r="4"/>
+    <circle cx="369" cy="141" r="4"/>
+    <circle cx="113" cy="205" r="4"/>
+    <circle cx="186" cy="196" r="4"/>
+    <circle cx="234" cy="208" r="4"/>
+    <circle cx="296" cy="196" r="4"/>
+    <circle cx="310" cy="208" r="4"/>
+    <circle cx="358" cy="193" r="4"/>
+    <circle cx="116" cy="17" r="4"/>
+    <circle cx="240" cy="19" r="4"/>
+    <circle cx="364" cy="16" r="4"/>
+    <circle cx="178" cy="261" r="4"/>
+    <circle cx="302" cy="261" r="4"/>
+    <circle cx="55" cy="139" r="4"/>
+    <circle cx="426" cy="77" r="4"/>
+    <circle cx="425" cy="201" r="4"/>
+  </g>
+
+  <path d="M85 259V281M302 268V281" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="85" y="302" text-anchor="middle" fill="#26231F">positive ion</text>
+  <text x="302" y="302" text-anchor="middle" fill="#26231F">delocalized electron, e⁻</text>
+</svg>
