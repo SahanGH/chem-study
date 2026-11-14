@@ -41,7 +41,11 @@ itself once the practice is published.
 ## 3. Staying inside the framework
 
 Lessons are written fresh from the framework's learning objectives and
-essential knowledge, never from a textbook or from the teacher's old notes.
+essential knowledge. The teacher's Unit 2 guided notes, from the old site
+(`D:\AP_Chem_Prep\Units\unit02-compound-structure\u02-notes.tex`), are a
+reference for coverage and emphasis, at the teacher's request on
+2026-11-13. Those notes follow the Zumdahl textbook, so their wording,
+examples and problems are not copied. No textbook is used.
 The framework excludes three things from the exam in Unit 2:
 - specific crystal structures (2.3);
 - the derivation and drawing of hybrid orbitals, and hybridization that
