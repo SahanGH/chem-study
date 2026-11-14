@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="system-ui, sans-serif" font-size="14">
+  <defs>
+    <g id="anion">
+      <circle r="29.5" fill="#E3EAE9" stroke="#4F706C" stroke-width="1.5"/>
+      <path d="M-8 0H8" fill="none" stroke="#26231F" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+    <g id="cation">
+      <circle r="16.5" fill="#4F706C"/>
+      <path d="M-6 0H6M0 -6V6" fill="none" stroke="#FDFCF9" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  </defs>
+  <rect width="480" height="300" fill="#FDFCF9"/>
+
+  <use href="#anion" x="46" y="58"/>
+  <use href="#cation" x="92" y="58"/>
+  <use href="#anion" x="138" y="58"/>
+  <use href="#cation" x="184" y="58"/>
+  <use href="#anion" x="230" y="58"/>
+  <use href="#cation" x="276" y="58"/>
+
+  <use href="#cation" x="46" y="104"/>
+  <use href="#anion" x="92" y="104"/>
+  <use href="#cation" x="138" y="104"/>
+  <use href="#anion" x="184" y="104"/>
+  <use href="#cation" x="230" y="104"/>
+  <use href="#anion" x="276" y="104"/>
+
+  <use href="#anion" x="46" y="150"/>
+  <use href="#cation" x="92" y="150"/>
+  <use href="#anion" x="138" y="150"/>
+  <use href="#cation" x="184" y="150"/>
+  <use href="#anion" x="230" y="150"/>
+  <use href="#cation" x="276" y="150"/>
+
+  <use href="#cation" x="46" y="196"/>
+  <use href="#anion" x="92" y="196"/>
+  <use href="#cation" x="138" y="196"/>
+  <use href="#anion" x="184" y="196"/>
+  <use href="#cation" x="230" y="196"/>
+  <use href="#anion" x="276" y="196"/>
+
+  <use href="#anion" x="46" y="242"/>
+  <use href="#cation" x="92" y="242"/>
+  <use href="#anion" x="138" y="242"/>
+  <use href="#cation" x="184" y="242"/>
+  <use href="#anion" x="230" y="242"/>
+  <use href="#cation" x="276" y="242"/>
+
+  <path d="M297 58H334M310 196H334" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="342" y="66" font-size="24" fill="#26231F">Na<tspan dy="-9" font-size="18">+</tspan></text>
+  <text x="342" y="90" font-size="18" fill="#6B655D">smaller cation</text>
+  <text x="342" y="204" font-size="24" fill="#26231F">Cl<tspan dy="-9" font-size="18">−</tspan></text>
+  <text x="342" y="228" font-size="18" fill="#6B655D">larger anion</text>
+</svg>

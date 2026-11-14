@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 264" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Axis runs from x=50 (difference 0) to x=440 (difference 3): 130 units per 1.0 of difference. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <defs>
+    <linearGradient id="shade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E9EEEC"/>
+      <stop offset="1" stop-color="#3E5956"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="264" fill="#FDFCF9"/>
+
+  <text x="50" y="32" fill="#26231F">nonpolar</text>
+  <text x="50" y="54" fill="#26231F">covalent</text>
+  <text x="245" y="32" text-anchor="middle" fill="#26231F">polar</text>
+  <text x="245" y="54" text-anchor="middle" fill="#26231F">covalent</text>
+  <text x="380" y="32" text-anchor="middle" fill="#26231F">mostly</text>
+  <text x="380" y="54" text-anchor="middle" fill="#26231F">ionic</text>
+
+  <rect x="50" y="66" width="390" height="40" fill="url(#shade)"/>
+
+  <text x="50" y="156" text-anchor="middle" fill="#26231F">Cl&#8211;Cl</text>
+  <text x="102" y="156" text-anchor="middle" fill="#26231F">C&#8211;H</text>
+  <text x="180" y="156" text-anchor="middle" fill="#26231F">H&#8211;Cl</text>
+  <text x="284" y="156" text-anchor="middle" fill="#26231F">H&#8211;F</text>
+  <text x="349" y="156" text-anchor="middle" fill="#26231F">Na&#8211;Cl</text>
+
+  <path d="M50 176H440" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M50 176V185M180 176V185M310 176V185M440 176V185" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <text x="50" y="206" text-anchor="middle" fill="#6B655D">0</text>
+  <text x="180" y="206" text-anchor="middle" fill="#6B655D">1</text>
+  <text x="310" y="206" text-anchor="middle" fill="#6B655D">2</text>
+  <text x="440" y="206" text-anchor="middle" fill="#6B655D">3</text>
+
+  <circle cx="50" cy="176" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="102" cy="176" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="180" cy="176" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="284" cy="176" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="349" cy="176" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+
+  <text x="245" y="246" text-anchor="middle" fill="#26231F">electronegativity difference</text>
+</svg>

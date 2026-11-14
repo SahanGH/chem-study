@@ -1,0 +1,145 @@
+---
+topic: "2.3"
+minutes: 10
+summary: How cations and anions pack into a regular three-dimensional pattern, how to draw that pattern, and why it makes ionic solids hard, brittle and high-melting.
+---
+
+Pour a little table salt onto a dark sheet of paper and look at it through a magnifying glass. The grains are tiny cubes, with flat faces and square corners. That neat outside is a clue to the inside: the ions in a salt crystal are lined up in a pattern just as regular.
+
+## Every ion surrounded by opposites
+
+In an ionic solid, every cation is surrounded by anions and every anion is surrounded by cations. The pattern repeats over and over, in all three dimensions, all the way to the edge of the crystal.
+
+Why this pattern? Coulomb's law says opposite charges attract and like charges repel, and both forces grow stronger as the charges get closer. So the arrangement that wins puts opposite charges as close together as they can get and keeps like charges apart. Each ion is pulled on by all of its neighbors at once, and they all hold it in place.
+
+Notice what is missing: molecules. There is no single "NaCl" unit you could pick out of the crystal. The formula NaCl gives the **ratio** of the ions, one Na⁺ for every Cl⁻. In the same way, a crystal of MgCl₂ holds two Cl⁻ ions for every Mg²⁺ ion.
+
+Here are the two ions in sodium chloride as Lewis diagrams. Sodium has given up its one valence electron, so Na⁺ has no dots left to show. Chlorine has taken that electron, so Cl⁻ has a full set of eight. The brackets and the charge mark each one as an ion.
+
+<Lewis
+  alt="Lewis diagram of the sodium ion: the symbol Na with no dots, inside square brackets, with a plus charge at the upper right."
+  atoms={[
+    { id: 'Na', symbol: 'Na', x: 0, y: 0 },
+  ]}
+  bonds={[]}
+  ion={1}
+/>
+
+<Lewis
+  alt="Lewis diagram of the chloride ion: the symbol Cl with four lone pairs, eight dots in all, inside square brackets, with a minus charge at the upper right."
+  atoms={[
+    { id: 'Cl', symbol: 'Cl', x: 0, y: 0, lonePairs: 4 },
+  ]}
+  bonds={[]}
+  ion={-1}
+/>
+
+Now put many of them together. Take a thin slice through a salt crystal and you see this:
+
+<Figure
+  src="/figures/2-3-ionic-lattice.svg"
+  alt="A flat grid of circles representing a slice of an ionic solid. Large circles marked with a minus sign alternate with small circles marked with a plus sign, so every circle's neighbors above, below, left and right carry the opposite charge."
+  caption="A slice through sodium chloride. The real pattern repeats in three dimensions."
+/>
+
+Look at any small Na⁺ circle. Its neighbors above, below, left and right are all Cl⁻. Look at any Cl⁻, and its neighbors are all Na⁺. No ion touches another ion of its own charge.
+
+<KeyIdea>
+
+A good particulate model of an ionic solid shows four things: opposite charges side by side, like charges kept apart, the ratio of ions the formula gives, and each ion drawn at its relative size.
+
+</KeyIdea>
+
+## Drawing the ions to size
+
+Ions are not all the same size, and a model should show that. A cation is smaller than the atom it came from: sodium loses its whole outer shell when it becomes Na⁺. An anion is larger than its atom: the extra electron adds repulsion, and the electron cloud spreads out.
+
+In sodium chloride the difference is large. The chloride ion has a radius of 181 pm, and the sodium ion only 102 pm. That is why the figure above draws the Cl⁻ circles much bigger than the Na⁺ circles.
+
+In most common salts the anion is the larger ion. Not in all of them, though. In cesium fluoride, Cs⁺ (about 167 pm) is larger than F⁻ (133 pm). So check the sizes; do not assume them. Published radii differ a little from one table to another; the values here are for an ion surrounded by six neighbors.
+
+<Worked title="Fixing a model of lithium fluoride">
+
+A student drew lithium fluoride as a grid of circles. In the drawing, the Li⁺ circles are bigger than the F⁻ circles, and in one place two Li⁺ ions sit side by side. What needs fixing?
+
+1. **Sizes.** Li⁺ has a radius of about 76 pm, and F⁻ about 133 pm. The F⁻ circles must be the larger ones.
+
+2. **Neighbors.** Two Li⁺ ions side by side would repel each other. Every Li⁺ must be surrounded by F⁻ ions, and every F⁻ by Li⁺ ions.
+
+3. **Ratio.** LiF has one Li⁺ for each F⁻, so the ions come in a 1:1 ratio, and across a large grid there are equal numbers of each.
+
+4. **The corrected model** alternates small Li⁺ circles and large F⁻ circles, in every row and every column.
+
+Each fix comes straight from the key idea above. Run through its list whenever you check a model.
+
+</Worked>
+
+<Check answer={2}>
+Why do ionic solids generally have high melting points?
+
+- Their molecules are very heavy.
+- Melting requires overcoming strong attractions between many oppositely charged ions.
+- Their covalent bonds must be broken to melt them.
+- Ions cannot move even in a liquid.
+
+<div slot="why">In the solid, every ion is held by its attractions to all of its oppositely charged neighbors. Melting means pulling the ions free of that arrangement, and that takes a lot of energy. The same attractions, pulling in every direction, are what make the solid hard.</div>
+</Check>
+
+## Brittle, and a conductor only when melted
+
+Hit a salt crystal with a hammer and it does not dent. It shatters. The pattern of charges explains why.
+
+A sharp blow can push one layer of ions sideways, past the layer below it. Move it by just one ion, and every cation in that layer now sits on top of a cation, and every anion on top of an anion. Like charges repel, so the two layers push apart and the crystal splits along that plane.
+
+<Figure
+  src="/figures/2-3-brittle.svg"
+  alt="Two grids of alternating positive and negative ions. In the first the top row is about to be pushed sideways. In the second the top row has moved by one ion, so each ion sits above an ion with the same charge, and arrows show the like charges repelling."
+  caption="Shift one layer and like charges meet. The crystal cracks instead of bending."
+/>
+
+<Check answer={3}>
+A crystal of potassium chloride shatters when struck with a hammer. Why?
+
+- The hammer breaks the covalent bonds inside the crystal.
+- The ions are pushed so close together that they turn into atoms.
+- A shifted layer puts ions of the same charge next to each other, and they repel.
+- The delocalized electrons are knocked out of the crystal.
+
+<div slot="why">The blow moves one layer against the next. Like charges end up side by side, and they push the layers apart.</div>
+</Check>
+
+An ionic solid is full of charged particles, so you might expect it to carry an electric current. It does not. A current needs charges that can move, and in the solid every ion is locked in place by its neighbors. Melt the solid, or dissolve it in water, and the ions are free to move. Now they can carry a current.
+
+<Check answer={2}>
+When does sodium chloride conduct electricity?
+
+- Only as a solid.
+- Only when melted or dissolved in water.
+- In every state.
+- Never, because it contains no free electrons.
+
+<div slot="why">The current is carried by moving ions. They are fixed in place in the solid, and free to move in the melt or in solution.</div>
+</Check>
+
+<Trap>
+
+Four mistakes to watch for on this topic:
+
+- **Drawing NaCl as separate molecules.** An ionic solid is one continuous array of ions. The formula is a ratio, not a molecule.
+- **Drawing every ion the same size.** A model should show the relative sizes, such as Cl⁻ much larger than Na⁺.
+- **Saying an ionic solid conducts.** It conducts only when its ions can move: melted or dissolved, not as a solid.
+- **Learning crystal structures by name.** The exam does not ask for specific structures. What matters is opposite charges together and like charges apart.
+
+</Trap>
+
+<KeyPoints>
+
+- An ionic solid is a repeating three-dimensional array of cations and anions.
+- Each ion is surrounded by ions of the opposite charge, which maximizes attractions and minimizes repulsions.
+- The formula of an ionic compound gives the ratio of its ions, not a molecule: NaCl is one Na⁺ for each Cl⁻.
+- A good model of an ionic solid shows the ratio of the ions and their relative sizes.
+- Ionic solids have high melting points, are brittle, and conduct electricity only when melted or dissolved.
+
+</KeyPoints>
+
+<PracticeNext />

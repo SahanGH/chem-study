@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 296" font-family="system-ui, sans-serif" font-size="18">
+  <defs>
+    <circle id="host" r="18" fill="#E6E1D8" stroke="#6B655D" stroke-width="1.5"/>
+    <circle id="swap" r="19" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+    <circle id="small" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  </defs>
+  <rect width="480" height="296" fill="#FDFCF9"/>
+  <path d="M240 18V286" fill="none" stroke="#6B655D" stroke-width="1" stroke-opacity="0.35"/>
+
+  <text x="120" y="40" text-anchor="middle" fill="#26231F" font-weight="600">Substitutional</text>
+  <use href="#host" x="32" y="80"/>
+  <use href="#swap" x="76" y="80"/>
+  <use href="#host" x="120" y="80"/>
+  <use href="#host" x="164" y="80"/>
+  <use href="#host" x="208" y="80"/>
+  <use href="#host" x="32" y="124"/>
+  <use href="#host" x="76" y="124"/>
+  <use href="#host" x="120" y="124"/>
+  <use href="#swap" x="164" y="124"/>
+  <use href="#host" x="208" y="124"/>
+  <use href="#swap" x="32" y="168"/>
+  <use href="#host" x="76" y="168"/>
+  <use href="#host" x="120" y="168"/>
+  <use href="#host" x="164" y="168"/>
+  <use href="#host" x="208" y="168"/>
+  <use href="#host" x="32" y="212"/>
+  <use href="#host" x="76" y="212"/>
+  <use href="#swap" x="120" y="212"/>
+  <use href="#host" x="164" y="212"/>
+  <use href="#host" x="208" y="212"/>
+  <path d="M120 233V256" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="120" y="278" text-anchor="middle" fill="#26231F">replaces an atom</text>
+
+  <text x="360" y="40" text-anchor="middle" fill="#26231F" font-weight="600">Interstitial</text>
+  <use href="#host" x="272" y="80"/>
+  <use href="#host" x="316" y="80"/>
+  <use href="#host" x="360" y="80"/>
+  <use href="#host" x="404" y="80"/>
+  <use href="#host" x="448" y="80"/>
+  <use href="#host" x="272" y="124"/>
+  <use href="#host" x="316" y="124"/>
+  <use href="#host" x="360" y="124"/>
+  <use href="#host" x="404" y="124"/>
+  <use href="#host" x="448" y="124"/>
+  <use href="#host" x="272" y="168"/>
+  <use href="#host" x="316" y="168"/>
+  <use href="#host" x="360" y="168"/>
+  <use href="#host" x="404" y="168"/>
+  <use href="#host" x="448" y="168"/>
+  <use href="#host" x="272" y="212"/>
+  <use href="#host" x="316" y="212"/>
+  <use href="#host" x="360" y="212"/>
+  <use href="#host" x="404" y="212"/>
+  <use href="#host" x="448" y="212"/>
+  <use href="#small" x="294" y="102"/>
+  <use href="#small" x="382" y="102"/>
+  <use href="#small" x="338" y="146"/>
+  <use href="#small" x="426" y="146"/>
+  <use href="#small" x="294" y="190"/>
+  <use href="#small" x="338" y="190"/>
+  <path d="M338 199V256" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="338" y="278" text-anchor="middle" fill="#26231F">fills a gap</text>
+</svg>

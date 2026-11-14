@@ -1,0 +1,164 @@
+---
+topic: "2.2"
+minutes: 12
+summary: How a graph of energy against the distance between two nuclei shows a bond's length and strength, and how bond order, atom size and ion charge change them.
+---
+
+Two hydrogen atoms far apart do not notice each other. Bring them closer and each nucleus starts to pull on the other atom's electron, so the energy falls. Push them too close and the two nuclei repel, so the energy shoots up. Somewhere in between is the most comfortable distance. Two atoms settled there are bonded.
+
+## The energy of two atoms
+
+Picture a graph. Across the bottom is the distance between the two hydrogen nuclei. Up the side is the potential energy of the pair.
+
+Start at the far right, with the atoms far apart. They do not interact, so we call their energy zero. Now slide them together. Each nucleus attracts the other atom's electron, and the energy drops below zero. At 74 pm it reaches its lowest point. Here the attraction and the repulsion balance, and this is where the atoms settle. That distance is the **bond length**, the distance between the nuclei at which the energy is lowest.
+
+Push the nuclei closer than 74 pm and the repulsion between the two positive nuclei wins. The energy climbs steeply.
+
+The depth of the valley tells you something too. To pull the atoms apart again, you have to lift them out of the valley back up to zero. The **bond energy** is the energy needed to pull a mole of bonds apart into separate atoms. For $\ce{H2}$ it is 436 kJ/mol.
+
+The Lewis diagram shows the same bond as one shared pair of electrons:
+
+<Lewis
+  alt="Lewis diagram of hydrogen, H2: two hydrogen atoms joined by a single bond, with no lone pairs."
+  atoms={[
+    { id: 'H1', symbol: 'H', x: 0, y: 0 },
+    { id: 'H2', symbol: 'H', x: 1, y: 0 },
+  ]}
+  bonds={[['H1', 'H2', 1]]}
+/>
+
+<Figure
+  src="/figures/2-2-hydrogen-curve.svg"
+  alt="Graph of potential energy against the distance between two hydrogen nuclei. The curve is high at very short distances, where the nuclei repel, falls to a lowest point at 74 picometers, then rises gently toward zero as the atoms move apart. The distance of the lowest point is the bond length, 74 picometers. The depth of the lowest point below zero is the bond energy, 436 kilojoules per mole."
+  caption="The bottom of the valley gives the bond length (straight down to the axis) and the bond energy (its depth below zero)."
+/>
+
+<KeyIdea>
+
+Find the bottom of the valley. Drop straight down to the distance axis for the bond length. Measure from zero down to the bottom for the bond energy. Breaking a bond always takes energy; forming one releases it.
+
+</KeyIdea>
+
+<Check answer={2}>
+On a graph of potential energy against distance between two nuclei, where do you read the bond length?
+
+- Where the curve crosses zero
+- At the lowest point of the curve
+- At the far right, where the curve levels off
+- Where the curve is steepest
+
+<div slot="why">The bond length is the distance at which the energy is lowest. That is where the atoms settle.</div>
+</Check>
+
+## Order and size
+
+Two things set how long and how strong a covalent bond is.
+
+The first is **bond order**, the number of electron pairs shared between the two atoms. A double bond is shorter and stronger than a single bond between the same two atoms, and a triple bond is shorter and stronger still. More shared electrons pull the nuclei closer together and hold them there more tightly.
+
+| Bond | Length (pm) | Energy (kJ/mol) |
+|---|---|---|
+| C–C | 154 | 347 |
+| C=C | 134 | 614 |
+| C≡C | 120 | 839 |
+
+The second is the size of the atoms. Bigger atoms keep their nuclei farther apart, so the bond is longer, and the shared electrons are usually held less tightly, so the bond is weaker. Going down the halogens shows it:
+
+| Bond | Length (pm) | Energy (kJ/mol) |
+|---|---|---|
+| Cl–Cl | 199 | 242 |
+| Br–Br | 228 | 193 |
+| I–I | 267 | 151 |
+
+Fluorine is a well-known exception: F–F (about 159 kJ/mol) is weaker than Cl–Cl.
+
+The carbon values are averages over many compounds, so you may see slightly different numbers elsewhere.
+
+Choose a bond and move the nuclei.
+
+<BondEnergyCurve />
+
+<Check answer={3}>
+Carbon and oxygen can be joined by a single, a double or a triple bond. Which is the shortest?
+
+- The single bond
+- The double bond
+- The triple bond
+- All three are the same length
+
+<div slot="why">The more electron pairs shared between the same two atoms, the shorter and stronger the bond.</div>
+</Check>
+
+## Ions and Coulomb's law
+
+Between ions there is no shared pair, just a positive ion and a negative ion pulling on each other. That pull follows Coulomb's law: it is proportional to the product of the charges, and it grows as the distance between the ions' centers shrinks.
+
+Two rules come straight out of that:
+
+- Larger charges attract more strongly.
+- Smaller ions attract more strongly, because their centers can get closer.
+
+Chemists call the energy needed to pull apart the ions in a mole of an ionic solid its lattice energy. The stronger the attraction between the ions, the larger it is.
+
+When you compare two ionic compounds, look at the charges first. A change in charge usually matters more than a change in size. Only when the charges tie do you compare the sizes.
+
+<Worked title="Ranking three ionic compounds">
+
+Rank MgO, NaF and NaCl by the strength of attraction between their ions.
+
+1. **Compare the charges.** MgO is made of $\ce{Mg^2+}$ and $\ce{O^2-}$ ions, so the sizes of the charges multiply to $2 \times 2 = 4$. NaF and NaCl are both made of 1+ and 1− ions: $1 \times 1 = 1$. MgO has the strongest attraction.
+
+2. **The charges tie, so compare the sizes.** NaF and NaCl share the same cation. $\ce{F-}$ is smaller than $\ce{Cl-}$, so the ions in NaF get closer and attract more strongly.
+
+3. **Put them in order.** MgO > NaF > NaCl.
+
+4. **Check against the melting points.** MgO melts at about 2800 °C, NaF at about 990 °C and NaCl at 801 °C. The order agrees.
+
+</Worked>
+
+<Check answer={3}>
+Which compound has the strongest attraction between its ions?
+
+- KBr
+- KCl
+- CaO
+- NaCl
+
+<div slot="why">CaO is made of 2+ and 2− ions; the other three are made of 1+ and 1− ions. The larger charges win.</div>
+</Check>
+
+<Check answer={1}>
+MgO and CaO are both made of 2+ and 2− ions. Which has the stronger attraction between its ions, and why?
+
+- MgO, because $\ce{Mg^2+}$ is smaller than $\ce{Ca^2+}$
+- CaO, because $\ce{Ca^2+}$ is larger than $\ce{Mg^2+}$
+- MgO, because magnesium ions carry a larger charge than calcium ions
+- They are the same, because the charges are the same
+
+<div slot="why">With the charges equal, size decides. Magnesium is above calcium in the same group, so its ion is smaller, and the ions' centers in MgO get closer together.</div>
+</Check>
+
+<Trap>
+
+The mistakes that come up most on this topic:
+
+- **Reading the bond length where the curve crosses zero.** Read it at the lowest point.
+- **Saying the bottom of the valley is "where the attraction stops."** The atoms still attract there. It is where attraction and repulsion balance.
+- **Saying that breaking a bond releases energy.** Breaking a bond always takes energy. Making one releases it.
+- **Mixing up the order trend.** A higher-order bond is both shorter and stronger.
+- **Comparing ion sizes before charges.** Look at the charges first; size usually decides only when the charges are the same.
+
+</Trap>
+
+<KeyPoints>
+
+- The lowest point of a potential energy curve gives the bond length: the distance where the energy is lowest.
+- The depth of that lowest point below zero gives the bond energy, the energy needed to separate the atoms.
+- Breaking a bond always takes energy; forming one releases it.
+- Between the same two atoms, a higher bond order means a shorter, stronger bond.
+- Bigger atoms make longer bonds, and usually weaker ones.
+- Between ions, larger charges and smaller ions mean a stronger attraction. Compare charges first.
+
+</KeyPoints>
+
+<PracticeNext />
