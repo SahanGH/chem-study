@@ -1,4 +1,12 @@
+import fs from 'node:fs';
 import { expect, test } from '@playwright/test';
+
+/** Units with at least one lesson file: their rows link to a unit page instead of saying "Coming soon". */
+const LESSON_FILES = new URL('../../src/content/lessons/', import.meta.url);
+const UNITS_WITH_LESSONS = fs
+  .readdirSync(LESSON_FILES, { withFileTypes: true })
+  .filter((entry) => entry.isDirectory())
+  .filter((folder) => fs.readdirSync(new URL(`${folder.name}/`, LESSON_FILES)).some((name) => name.endsWith('.mdx'))).length;
 
 // The counts grow as lessons are published, so these match any count rather
 // than today's, and check that the verb agrees with it.
@@ -14,7 +22,7 @@ test('the home page lists all nine units and is honest about what exists', async
   await expect(page.getByRole('heading', { level: 1 })).toContainText('finally clicks');
   const rows = page.locator('.unit-row');
   await expect(rows).toHaveCount(9);
-  await expect(rows.filter({ hasText: 'Coming soon' })).toHaveCount(8);
+  await expect(rows.filter({ hasText: 'Coming soon' })).toHaveCount(9 - UNITS_WITH_LESSONS);
   await expect(page.getByRole('link', { name: 'Kinetics', exact: true })).toHaveAttribute(
     'href',
     '/unit-5-kinetics/',
@@ -65,11 +73,12 @@ test.describe('the home page for a returning student', () => {
   });
 
   test('offers nothing once every lesson is done', async ({ page }) => {
-    await page.goto('/unit-5-kinetics/');
+    // Every published lesson in every unit, as the home page lists them.
+    await page.goto('/');
     const topics = await page
-      .locator('.topic-list > li')
-      .evaluateAll((items) => items.map((item) => item.getAttribute('data-topic-link') ?? ''));
-    expect(topics.length).toBeGreaterThan(0);
+      .locator('.unit-row')
+      .evaluateAll((rows) => rows.flatMap((row) => (row.getAttribute('data-unit-topics') ?? '').split(',').filter(Boolean)));
+    expect(topics).toContain('5.1');
     await page.evaluate(
       ([key, path, done]) =>
         localStorage.setItem(

@@ -1,27 +1,41 @@
 import fs from 'node:fs';
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
+import { units } from '../../src/data/units';
 
 // Checks that hold for every lesson, whatever it teaches. The list comes from
-// the lesson files, so a new lesson gets its own test the day it is added.
-const UNIT = '/unit-5-kinetics/';
-const LESSON_FILES = new URL('../../src/content/lessons/unit-5/', import.meta.url);
-const paths = fs
-  .readdirSync(LESSON_FILES)
-  .filter((name) => name.endsWith('.mdx'))
-  .map((name) => `${UNIT}${name.replace(/\.mdx$/, '')}/`)
-  .sort();
+// the lesson files, so a new lesson, or a unit's first lesson, gets its own
+// test the day it is added.
+const LESSON_FILES = new URL('../../src/content/lessons/', import.meta.url);
+const lessonUnits = fs
+  .readdirSync(LESSON_FILES, { withFileTypes: true })
+  .filter((entry) => entry.isDirectory())
+  .map((folder) => {
+    const unit = units.find((u) => folder.name === `unit-${u.number}`);
+    if (!unit) {
+      throw new Error(`The lesson folder ${folder.name} is not named unit-<number> after a unit in src/data/units.ts.`);
+    }
+    const unitPaths = fs
+      .readdirSync(new URL(`${folder.name}/`, LESSON_FILES))
+      .filter((name) => name.endsWith('.mdx'))
+      .map((name) => `/${unit.slug}/${name.replace(/\.mdx$/, '')}/`)
+      .sort();
+    return { unit, unitPage: `/${unit.slug}/`, unitPaths };
+  });
+const paths = lessonUnits.flatMap(({ unitPaths }) => unitPaths);
 
-test('the unit page links to every lesson that has a file, and to nothing else', async ({ page }) => {
-  await page.goto(UNIT);
+for (const { unit, unitPage, unitPaths } of lessonUnits) {
+  test(`the Unit ${unit.number} page links to every lesson that has a file, and to nothing else`, async ({ page }) => {
+    await page.goto(unitPage);
 
-  const linked = await page.locator('.topic-list a').evaluateAll((links) =>
-    links.map((link) => link.getAttribute('href')),
-  );
+    const linked = await page.locator('.topic-list a').evaluateAll((links) =>
+      links.map((link) => link.getAttribute('href')),
+    );
 
-  expect(paths.length).toBeGreaterThanOrEqual(1);
-  expect([...linked].sort()).toEqual(paths);
-});
+    expect(unitPaths.length).toBeGreaterThanOrEqual(1);
+    expect([...linked].sort()).toEqual(unitPaths);
+  });
+}
 
 for (const path of paths) {
   test(`${path} renders its math, has its checks, fits the screen and is accessible`, async ({ page }) => {
@@ -60,9 +74,10 @@ for (const path of paths) {
   });
 }
 
-test('search finds every published Unit 5 lesson by its title', async ({ page }) => {
+for (const { unit, unitPage } of lessonUnits) {
+test(`search finds every published Unit ${unit.number} lesson by its title`, async ({ page }) => {
   test.slow();
-  await page.goto(UNIT);
+  await page.goto(unitPage);
   const lessons = await page.locator('.topic-list a').evaluateAll((links) =>
     links.map((link) => ({ path: link.getAttribute('href'), title: link.textContent?.trim() ?? '' })),
   );
@@ -86,3 +101,4 @@ test('search finds every published Unit 5 lesson by its title', async ({ page })
     await expect(result, title).toBeVisible();
   }
 });
+}
