@@ -1,0 +1,65 @@
+---
+import {
+  BRACKET_ARM,
+  CHARGE_FONT_SIZE,
+  DOT_RADIUS,
+  SYMBOL_FONT_SIZE,
+  layoutLewis,
+  type LewisInput,
+} from '../../lib/lewis';
+
+type Props = LewisInput;
+// Throws, failing the build, on a wrong electron count or any other mistake in the diagram.
+const layout = layoutLewis(Astro.props);
+const { viewBox, brackets } = layout;
+const n = (value: number) => Number(value.toFixed(2));
+---
+
+{/* The arrow shows only between two structures inside a <Resonance>. */}
+<div class="lewis" data-lewis>
+  <svg class="lewis-arrow" viewBox="0 0 40 16" aria-hidden="true" focusable="false">
+    <path d="M3 8H37M8 3L3 8L8 13M32 3L37 8L32 13"></path>
+  </svg>
+  <svg
+    class="lewis-drawing"
+    viewBox={`${n(viewBox.x)} ${n(viewBox.y)} ${n(viewBox.width)} ${n(viewBox.height)}`}
+    width={n(viewBox.width)}
+    height={n(viewBox.height)}
+    role="img"
+    aria-label={Astro.props.alt}
+    data-pagefind-ignore
+  >
+    {layout.lines.map((line) => <line x1={n(line.x1)} y1={n(line.y1)} x2={n(line.x2)} y2={n(line.y2)} />)}
+    {
+      layout.symbols.map((symbol) => (
+        <text x={n(symbol.x)} y={n(symbol.y)} dy="0.35em" text-anchor="middle" font-size={SYMBOL_FONT_SIZE}>
+          {symbol.text}
+        </text>
+      ))
+    }
+    {layout.dots.map((dot) => <circle cx={n(dot.cx)} cy={n(dot.cy)} r={DOT_RADIUS} />)}
+    {
+      layout.formalCharges.map((charge) => (
+        <text class="lewis-charge" x={n(charge.x)} y={n(charge.y)} dy="0.35em" text-anchor="middle" font-size={CHARGE_FONT_SIZE}>
+          {charge.text}
+        </text>
+      ))
+    }
+    {
+      brackets && (
+        <path
+          class="lewis-bracket"
+          d={`M${n(brackets.left + BRACKET_ARM)} ${n(brackets.top)}H${n(brackets.left)}V${n(brackets.bottom)}H${n(brackets.left + BRACKET_ARM)}` +
+            `M${n(brackets.right - BRACKET_ARM)} ${n(brackets.top)}H${n(brackets.right)}V${n(brackets.bottom)}H${n(brackets.right - BRACKET_ARM)}`}
+        />
+      )
+    }
+    {
+      brackets && (
+        <text x={n(brackets.charge.x)} y={n(brackets.charge.y)} dy="0.35em" font-size={CHARGE_FONT_SIZE}>
+          {brackets.charge.text}
+        </text>
+      )
+    }
+  </svg>
+</div>
