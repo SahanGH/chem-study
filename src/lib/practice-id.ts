@@ -5,13 +5,14 @@ const PRACTICE_ID = /^unit-(\d+)\/([a-z0-9]+(?:-[a-z0-9]+)*)$/;
 const LESSON_PATH = /^\/unit-\d+-[a-z0-9-]+\/(\d+)-(\d+)-[a-z0-9-]+\/$/;
 export const TOPIC_CODE = /^[1-9]\.[1-9]\d?$/;
 
-export const PRACTICE_KINDS = ['worksheet', 'ladders', 'free-response'] as const;
+export const PRACTICE_KINDS = ['worksheet', 'ladders', 'free-response', 'test'] as const;
 export type PracticeKind = (typeof PRACTICE_KINDS)[number];
 
 const KIND_LABEL: Record<PracticeKind, string> = {
   worksheet: 'Worksheet',
   ladders: 'Skill ladders',
   'free-response': 'Free response',
+  test: 'Comprehensive test',
 };
 
 export function kindLabel(kind: PracticeKind): string {
