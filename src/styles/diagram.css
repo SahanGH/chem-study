@@ -185,6 +185,82 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   accent-color: var(--u-ink);
 }
 
+.diagram-select {
+  display: grid;
+  gap: 0.2rem;
+}
+.diagram-select select {
+  min-height: 2.75rem;
+  max-width: 100%;
+  font: inherit;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  padding: 0 0.5rem;
+}
+.diagram-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.75rem;
+}
+.diagram-actions .diagram-detail {
+  margin: 0;
+}
+.diagram-button {
+  min-height: 2.75rem;
+  padding: 0 1rem;
+  font: inherit;
+  color: var(--ink);
+  background: var(--u-tint);
+  border: 1px solid var(--u-ink);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* The shape viewer: a molecule drawn in 3D with plain SVG. Vertical swipes
+   still scroll the page on a phone; sideways drags turn the molecule. */
+.diagram-body[data-hydrated] .shape-stage {
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+.shape-bond {
+  stroke: var(--ink);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+.shape-atom {
+  fill: var(--card);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.shape-atom.is-central {
+  fill: var(--u-tint);
+  stroke: var(--u-ink);
+  stroke-width: 2.5;
+}
+.shape-atom-label {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  fill: var(--ink);
+  text-anchor: middle;
+}
+.shape-atom-label.is-central {
+  font-size: 14px;
+}
+.shape-pair {
+  fill: var(--muted);
+  fill-opacity: 0.22;
+  stroke: var(--muted);
+  stroke-width: 1;
+}
+.shape-pair-dot {
+  fill: var(--ink);
+}
+
 @media print {
   .diagram-controls {
     display: none;
