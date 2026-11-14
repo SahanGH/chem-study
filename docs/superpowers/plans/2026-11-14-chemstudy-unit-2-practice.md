@@ -56,6 +56,8 @@ Formal charges are shown (`formalCharges`) where the question or its neighbors a
 
 **Terms.** The answers use the lessons' words. Formal charge is "valence electrons − nonbonding electrons − ½ (bonding electrons)", as lesson 2.6 writes it. A bond between identical atoms is "nonpolar covalent".
 
+> **As carried out.** That sentence misquotes lesson 2.6, which writes "valence electrons − nonbonding electrons − bonds" and calls half the bonding electrons the same thing. The ladders keep the source's ½ form with the lesson's "nonbonding electrons"; the free-response set, after its fact-check, uses the lesson's form, which is also the Lewis block's.
+
 **Wording to recast.** "grader answer" (Worksheet 3, question 2) becomes the three-part answer that lesson 2.7 teaches. "The diagram police" (Worksheet 2, question 5) becomes plain: "Each structure below has one error. Find it." British spellings in the ladders and the free-response set: centre, neighbour, favourable, hybridisation.
 
 **Left out, as in Unit 5:** each worksheet's `spiralstrip`; the ladders' "Where you stand" table (its advice stays, as `## If you missed some`); notes to the teacher inside a rubric line (free-response questions 3 and 5 each end with one).
@@ -93,6 +95,8 @@ Branch `topic/unit-2-practice-design`. This plan and the design, committed and o
 Branch `topic/unit-2-practice-worksheets`, from `topic/unit-2-practice-design`.
 
 ### Task 1: The practice pages take Unit 2
+
+> **As carried out (2026-11-14).** The audit test passed at once, so it was given a `>` in the drawing's description and seen to fail; the audit now removes each `<Lewis ... />` block whole (ending at a `/>` on its own line) instead of relying on descriptions never holding `>`. The build failed on Worksheet 2 with "Expected component `Lewis` to be defined" before the route gained the blocks, as Step 4 expected. The Worksheet 1 fact-check found the site disagreeing with itself on Cl–Cl (242 in lesson 2.2 and the diagram, 243 in the practice), so `src/lib/bonding.ts`, the lesson table and their two tests moved to 243, test first.
 
 **Files:**
 - Modify: `tests/unit/practice-audit.test.ts`
@@ -344,6 +348,8 @@ The body gives what Plan 3's does (each document's questions and points, each au
 Branch `topic/unit-2-practice-ladders-frq`, from `topic/unit-2-practice-worksheets`. The two drafts may be written in the scratch folder while Group B is checked, then copied in.
 
 ### Task 4: Convert the skill ladders and the free-response set
+
+> **As carried out (2026-11-14).** Both drafts were written in the scratch folder alongside the worksheets and fact-checked there. The ladders' check found three errors in the original (11(b)'s CH₃Cl, and MgO's and CaO's ions called "smaller"), and the ladders moved to lesson 2.1's electronegativities and lesson 2.2's F–F (159). Question 5(c), which compared interstitial and substitutional alloys (nothing in the lessons or the framework does), now asks why carbon hardens iron; 4(d) asks about "a substance", since HCl is not a solid. The free-response 1(b) formula scrolled inside its box at every phone width; "formal charge" went onto its own line.
 
 **Skill ladders** (`u02-selfstudy.tex`):
 

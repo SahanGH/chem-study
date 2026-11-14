@@ -1,0 +1,277 @@
+---
+title: "Free-response set"
+kind: free-response
+order: 6
+topics: ["2.1", "2.2", "2.3", "2.4", "2.5", "2.6", "2.7"]
+summary: Five free-response questions on all of Unit 2, two long and three short, each with a worked answer and its scoring rubric.
+points: 32
+minutes: 50
+---
+
+This set covers all of compound structure and properties, topics 2.1 through 2.7. The unit is 7% to 9% of the exam.
+
+There are 5 questions worth 32 points. Give yourself about 50 minutes. You may use a calculator. Write out each answer in full before you open the worked answer and the scoring rubric.
+
+Three limits apply, and nothing below asks for any of them. Topic 2.3 excludes **specific crystal structures**, so unit-cell geometry is not asked. Topic 2.7 excludes **hybridization involving $d$ orbitals**: for more than four electron domains only the *shape* is required, never an sp³d label. Topic 2.7 also leaves **molecular orbital diagrams** off the exam.
+
+Every structural explanation must reach the **Coulombic** level: the attraction and repulsion between charges. An answer that rests on "it wants a full octet" earns no credit.
+
+## Questions
+
+<Question number={1} title="Lewis structure, formal charge and shape" topic="2.5, 2.6, 2.7" points={10}>
+
+Consider the thiocyanate ion, $\ce{SCN-}$, whose skeleton is $\ce{S-C-N}$.
+
+<Part label="a">
+
+Determine the total number of valence electrons and draw a Lewis structure.
+
+<Answer>
+
+Valence electrons:
+
+$$
+\begin{aligned}
+&6(\ce{S}) + 4(\ce{C}) + 5(\ce{N}) \\
+&\quad + 1(\text{charge}) = \mathbf{16}
+\end{aligned}
+$$
+
+The best structure is $\ce{[S=C=N]-}$: two double bonds, with two lone pairs on sulfur and two on nitrogen. Carbon is central and carries no lone pair.
+
+<Lewis
+  alt="Lewis diagram of the thiocyanate ion: sulfur, carbon and nitrogen in a row, with carbon in the middle. Carbon has a double bond to sulfur, a double bond to nitrogen and no lone pairs. Sulfur has two lone pairs and no formal charge. Nitrogen has two lone pairs and a formal charge of −1. Carbon has no formal charge. The whole ion is in square brackets with a minus charge."
+  atoms={[
+    { id: 'C', symbol: 'C', x: 0, y: 0 },
+    { id: 'S', symbol: 'S', x: -1, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'N', symbol: 'N', x: 1, y: 0, lonePairs: ['top', 'bottom'] },
+  ]}
+  bonds={[['C', 'S', 2], ['C', 'N', 2]]}
+  ion={-1}
+  formalCharges
+/>
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Assign the formal charge on each atom in your structure.
+
+<Answer>
+
+$$
+\begin{aligned}
+&\text{formal charge} \\
+&= \text{valence electrons} \\
+&\phantom{=}\ - \text{nonbonding electrons} \\
+&\phantom{=}\ - \text{bonds}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\ce{S}&: 6 - 4 - 2 = \mathbf{0} \\
+\ce{C}&: 4 - 0 - 4 = \mathbf{0} \\
+\ce{N}&: 5 - 4 - 2 = \mathbf{-1}
+\end{aligned}
+$$
+
+The charges sum to $-1$, matching the ion's overall charge.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+An alternative structure places a triple bond between C and N. State which structure is preferred and justify using formal charge.
+
+<Answer>
+
+Both are valid Lewis diagrams with an octet on every atom. In $\ce{[S-C#N]-}$, the formal charges are S $-1$, C $0$ and N $0$. Each structure has one $-1$ and two zeros, so formal charge alone ties. The $-1$ should then sit on the more electronegative atom: nitrogen (3.0), not sulfur (2.6). So by formal charge $\ce{[S=C=N]-}$, with its $-1$ on nitrogen, is the better model.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Predict the shape and bond angle about the central carbon, and state the model used.
+
+<Answer>
+
+Two electron domains on carbon and no lone pair, so by VSEPR the ion is **linear** with a bond angle of 180°.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for 16 valence electrons, *including* the one for the charge; 1 point for a structure with a complete octet on every atom; 1 point for all lone pairs shown, with brackets and charge.</RubricLine>
+<RubricLine part="b" points={3}>1 point for the formal-charge relationship stated or used correctly; 1 point for all three values; 1 point for noting that they sum to the ion's charge.</RubricLine>
+<RubricLine part="c" points={2}>1 point for identifying the more electronegative atom as the one that should carry the negative charge; 1 point for applying it to choose between the structures.</RubricLine>
+<RubricLine part="d" points={2}>1 point for linear; 1 point for 180° from two domains with no lone pair.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={2} title="The bonding continuum and potential energy" topic="2.1, 2.2" points={10}>
+
+<Part label="a">
+
+Bonding is better described as a continuum than as three separate categories. Place $\ce{NaCl}$, $\ce{HCl}$ and $\ce{Cl2}$ on that continuum and justify using electronegativity.
+
+<Answer>
+
+$\ce{Cl2}$: two identical atoms, so the electronegativity difference is **zero** and the pair is shared equally. It is a **nonpolar covalent** bond.
+
+$\ce{HCl}$: a moderate difference, so the pair is shared but pulled toward chlorine. It is **polar covalent**, with partial charges $\delta+$ on H and $\delta-$ on Cl.
+
+$\ce{NaCl}$: a large difference, large enough that the electron is effectively transferred rather than shared. It is **ionic**.
+
+The three differ in *degree* of electron-pair sharing, not in kind.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Sketch, in words, how the potential energy of two approaching atoms varies with internuclear distance, and identify what the minimum represents.
+
+<Answer>
+
+At large separation the energy is essentially zero: the atoms barely interact. As they approach, attraction between each nucleus and the other's electrons lowers the energy, and the curve falls.
+
+At very short distance the two *nuclei* repel one another strongly and the curve turns sharply upward.
+
+The **minimum** is the balance point of those two effects. Its horizontal position is the **bond length**; its depth below zero is the **bond energy**, the energy released on forming the bond and required to break it.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The $\ce{Cl2}$ bond energy is 243 kJ/mol and that of $\ce{Br2}$ is 193 kJ/mol. Explain the difference.
+
+<Answer>
+
+Bromine atoms are larger, so the bonded nuclei sit farther apart and the shared pair is farther from both nuclei. The Coulombic attraction holding the bond together is correspondingly weaker, giving a longer, weaker bond.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+State how the potential-energy curve for $\ce{Br2}$ differs from that for $\ce{Cl2}$.
+
+<Answer>
+
+Its minimum is **shallower** (smaller bond energy) and lies at a **greater** internuclear distance (longer bond).
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for each substance correctly placed with an electronegativity-difference justification.</RubricLine>
+<RubricLine part="b" points={3}>1 point for attraction lowering the energy on approach; 1 point for repulsion between the nuclei at short range; 1 point for reading the minimum as bond length and bond energy.</RubricLine>
+<RubricLine part="c" points={2}>1 point for saying that larger atoms give a longer bond; 1 point for weaker Coulombic attraction over that greater distance. "$\ce{Br2}$ is less stable" earns 0 points.</RubricLine>
+<RubricLine part="d" points={2}>1 point for a shallower minimum; 1 point for a minimum at greater distance.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={3} title="Ionic solids" topic="2.3" points={4}>
+
+<Part label="a">
+
+Explain why ionic solids are hard and brittle, while being poor conductors as solids but good conductors when molten.
+
+<Answer>
+
+**Hard:** every ion is held by strong electrostatic attraction to all its oppositely charged neighbors throughout the lattice.
+
+**Brittle:** a blow displaces one plane of ions by one position, bringing ions of *like* charge face to face. The attraction along that plane is replaced by strong repulsion and the crystal splits.
+
+**Conductivity:** conduction needs mobile charges. In the solid the ions are locked in fixed positions; melting frees them to move, so the liquid conducts.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={4}>1 point for hardness from strong electrostatic attraction; 1 point for brittleness from like charges being brought adjacent; 1 point for ions fixed in the solid; 1 point for ions mobile in the melt.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={4} title="Metals and alloys" topic="2.4" points={4}>
+
+<Part label="a">
+
+Explain, using the electron sea model, why metals conduct electricity and can be drawn into wire.
+
+<Answer>
+
+A metal is a lattice of cations in a sea of **delocalized** electrons belonging to no particular atom. Those electrons drift through the solid under a potential difference, so the metal conducts. When the metal is drawn out, layers of cations slide over one another while the electron sea flows with them and keeps binding the lattice together, so it deforms instead of fracturing.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Steel is an alloy of iron with a small amount of carbon and is much harder than pure iron. Give the structural reason.
+
+<Answer>
+
+The carbon atoms are much smaller than the iron atoms and sit in the gaps between them (an interstitial alloy), disrupting the regular layers. Layers can no longer slide over one another easily, so the metal resists deformation and is harder.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for delocalized electrons free to move; 1 point for layers that slide while the electron sea maintains bonding.</RubricLine>
+<RubricLine part="b" points={2}>1 point for differently sized atoms disrupting the lattice; 1 point for layers that slide less easily.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={5} title="Hybridization and bond counting" topic="2.7" points={4}>
+
+<Part label="a">
+
+State the hybridization of each carbon in ethanoic acid (acetic acid), $\ce{CH3COOH}$.
+
+<Answer>
+
+The $\ce{CH3}$ carbon has four electron domains: $\ce{sp^3}$. The $\ce{COOH}$ carbon has three domains (one $\ce{C=O}$, one $\ce{C-O}$, one $\ce{C-C}$): $\ce{sp^2}$.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Count the sigma and pi bonds in the whole molecule.
+
+<Answer>
+
+**Seven sigma:** three $\ce{C-H}$, one $\ce{C-C}$, one $\ce{C=O}$ (its σ bond), one $\ce{C-O}$ and one $\ce{O-H}$. **One pi:** the π bond of the $\ce{C=O}$. A double bond is always one sigma plus one pi.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for each carbon, with the domain count behind it.</RubricLine>
+<RubricLine part="b" points={2}>1 point for seven sigma; 1 point for one pi.</RubricLine>
+</Rubric>
+
+</Question>
