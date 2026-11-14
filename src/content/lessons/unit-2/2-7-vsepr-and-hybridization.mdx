@@ -1,0 +1,266 @@
+---
+topic: "2.7"
+minutes: 20
+summary: How electron pairs push each other apart to give a molecule its shape, how to tell whether a molecule is polar, and what sp, sp² and sp³, sigma and pi mean.
+---
+
+In topic 2.5 you drew water in a straight line: H–O–H. Real water is not straight. It is bent, like a wide letter V. A Lewis diagram counts electrons and shows who is bonded to whom, but it says nothing about where those electrons sit in space. This lesson does.
+
+## Electron domains
+
+Stand on the central atom and look outward. Count the **electron domains** around you: the regions where electrons gather. Each lone pair is one domain. Each bond is one domain too, and it does not matter whether it is single, double or triple. A double bond holds more electrons, but they all lie in the same region, between the same two atoms.
+
+Every domain is negative charge, so the domains repel each other. They spread out as far apart as they can. That one idea, called VSEPR (valence shell electron pair repulsion), fixes the arrangement for each number of domains:
+
+| Domains | Electron geometry | Ideal angles |
+|---|---|---|
+| 2 | linear | 180° |
+| 3 | trigonal planar | 120° |
+| 4 | tetrahedral | 109.5° |
+| 5 | trigonal bipyramidal | 90°, 120° and 180° |
+| 6 | octahedral | 90° and 180° |
+
+Notice that four domains do not lie flat. In a flat square they would be only 90° apart. In three dimensions they can get 109.5° apart, so that is where they go.
+
+<Figure
+  src="/figures/2-7-electron-geometries.svg"
+  alt="Five drawings of a central atom with its electron domains. Linear: two bonds in a straight line, 180 degrees apart. Trigonal planar: three bonds in a flat triangle, 120 degrees apart. Tetrahedral: four bonds, 109.5 degrees apart, one coming toward you and one going away. Trigonal bipyramidal: three bonds around the middle, 120 degrees apart, and one straight up and one straight down. Octahedral: six bonds, 90 degrees apart, four around the middle and one up and one down."
+  caption="The five arrangements. A wedge comes toward you; a dashed wedge goes away."
+/>
+
+Turn each shape to see it from every side.
+
+<ShapeViewer />
+
+<KeyIdea>
+
+Count the domains to get the electron geometry. Then look only at where the atoms are to name the molecular shape.
+
+</KeyIdea>
+
+## Lone pairs and the shape
+
+The **molecular shape** is named from the positions of the atoms only. The lone pairs are still there, still taking up room and pushing on the bonds, but they are invisible in the name. Water has four domains, so its electron geometry is tetrahedral. Two of those domains are lone pairs, though, and the three atoms that are left form a bent shape.
+
+| Domains | Bonds | Lone pairs | Shape | Example |
+|---|---|---|---|---|
+| 3 | 3 | 0 | trigonal planar | BF₃ |
+| 3 | 2 | 1 | bent | SO₂ |
+| 4 | 4 | 0 | tetrahedral | CH₄ |
+| 4 | 3 | 1 | trigonal pyramidal | NH₃ |
+| 4 | 2 | 2 | bent | H₂O |
+| 5 | 5 | 0 | trigonal bipyramidal | PCl₅ |
+| 5 | 4 | 1 | seesaw | SF₄ |
+| 5 | 3 | 2 | T-shaped | ClF₃ |
+| 5 | 2 | 3 | linear | XeF₂ |
+| 6 | 6 | 0 | octahedral | SF₆ |
+| 6 | 5 | 1 | square pyramidal | BrF₅ |
+| 6 | 4 | 2 | square planar | XeF₄ |
+
+Lone pairs do more than hide. A bonding pair is held between two nuclei, but a lone pair is held by one nucleus only. Its cloud spreads out wider, and it repels more strongly than a bonding pair does. So a lone pair pushes the bonds a little closer together. The angle in NH₃ closes to about 107°, and in H₂O, with two lone pairs, to about 104.5°, instead of the ideal 109.5°.
+
+With five domains, the positions are not all alike. A position at the top or bottom has three neighbors only 90° away. A position around the middle, an **equatorial** position, has only two neighbors that close, the ones at the top and bottom. So lone pairs take the equatorial positions first, where they have more room.
+
+The same rules work for polyatomic ions. NH₄⁺ has four bonds and no lone pairs, so it is tetrahedral. NO₃⁻ has three domains around nitrogen (the double bond counts once), so it is trigonal planar.
+
+And the shape does not change what you learned about the bonds themselves. Topics 2.2 and 2.6 showed that bond order and the size of the atoms set how long and how strong each bond is. That holds inside every shape here.
+
+<KeyIdea>
+
+A full answer about a bond angle has three parts. Count the domains, say what differs (the lone pairs), and conclude with the angle and the reason: "Water and methane both have four domains, but two of water's four are lone pairs, which repel more strongly than bonding pairs, so the H–O–H angle closes from 109.5° to about 104.5°."
+
+</KeyIdea>
+
+<Worked title="The shape of ammonia">
+
+Predict the shape of ammonia, NH₃, and its H–N–H bond angle.
+
+<Lewis
+  alt="Lewis diagram of ammonia: nitrogen in the middle, joined by single bonds to hydrogen atoms on its left, on its right and below it, with one lone pair above nitrogen."
+  atoms={[
+    { id: 'N', symbol: 'N', x: 0, y: 0, lonePairs: 1 },
+    { id: 'H1', symbol: 'H', x: -1, y: 0 },
+    { id: 'H2', symbol: 'H', x: 1, y: 0 },
+    { id: 'H3', symbol: 'H', x: 0, y: 1 },
+  ]}
+  bonds={[['N', 'H1', 1], ['N', 'H2', 1], ['N', 'H3', 1]]}
+/>
+
+1. **Lewis diagram.** As drawn above, nitrogen has three single bonds to hydrogen and one lone pair. It is drawn flat, so its angles mean nothing yet.
+
+2. **Count the domains.** Three bonds and one lone pair make four domains, so the electron geometry is tetrahedral.
+
+3. **Name the shape.** Three domains are bonds and one is a lone pair. The nitrogen sits on top of a short pyramid with the three hydrogens as its base: the shape is trigonal pyramidal.
+
+4. **The angle.** The lone pair repels more strongly than the bonds and pushes them together. The H–N–H angle is a little less than 109.5°, about 107°.
+
+</Worked>
+
+<Check answer={2}>
+The Lewis diagram of $\ce{H2S}$ has two S–H bonds and two lone pairs on sulfur. What is the molecular shape?
+
+- linear
+- bent
+- trigonal pyramidal
+- tetrahedral
+
+<div slot="why">Four domains give a tetrahedral electron geometry, but only two of them are bonds. The three atoms form a bent shape, like water.</div>
+</Check>
+
+<Worked title="The shape of sulfur tetrafluoride">
+
+Predict the shape of sulfur tetrafluoride, SF₄.
+
+1. **Lewis diagram.** Count: $6 + 4 \times 7 = 34$ electrons. Sulfur goes in the center with four S–F bonds, which use 8. The fluorines take 24 as lone pairs, three each. That leaves $34 - 8 - 24 = 2$, one lone pair on sulfur.
+
+2. **Count the domains.** Four bonds and one lone pair make five domains: trigonal bipyramidal.
+
+3. **Name the shape.** The lone pair takes an equatorial position, where it has the most room. The four fluorines that are left make a seesaw.
+
+4. **The angles.** The ideal angles are 90°, 120° and 180°, and the lone pair squeezes them.
+
+With more than four domains, you name the shape and stop there. The exam asks for no hybridization for these.
+
+</Worked>
+
+<Check answer={3}>
+$\ce{XeF4}$ has six electron domains around xenon: four bonds and two lone pairs. What is its shape?
+
+- tetrahedral
+- seesaw
+- square planar
+- octahedral
+
+<div slot="why">The two lone pairs sit opposite each other, one above and one below. That leaves the four F atoms in a square around Xe.</div>
+</Check>
+
+## Is the molecule polar?
+
+A polar bond has a positive end and a negative end. A whole molecule can have a positive side and a negative side too. That is a **dipole moment**. As a rule, a molecule has a dipole moment, and is polar, when two things are both true. It has polar bonds, and its shape does not make their dipoles cancel.
+
+Carbon dioxide has two polar C=O bonds. But they point in opposite directions along a straight line, so they cancel, like two equal teams pulling on a rope. CO₂ is nonpolar. Water is bent, so its two O–H dipoles both point partly toward the oxygen side and add up. Water is polar.
+
+A molecule is nonpolar when every outer atom is the same and the bonds are spread evenly around the center, with any lone pairs evenly placed too, as in CH₄, BF₃, SF₆, XeF₂ and XeF₄. A lone pair on one side, as in NH₃, H₂O and SO₂, breaks that balance. Replace one outer atom, as in CH₃Cl, and the symmetry breaks: CH₃Cl is polar.
+
+Compare SO₂ and SO₃. SO₃ is trigonal planar, and its three equal S–O dipoles cancel, so it is nonpolar. SO₂ is bent by its lone pair, so its dipoles do not cancel, and it is polar.
+
+<Check answer={3}>
+Which molecule is polar?
+
+- $\ce{CO2}$
+- $\ce{BF3}$
+- $\ce{NH3}$
+- $\ce{CH4}$
+
+<div slot="why">$\ce{NH3}$ is trigonal pyramidal, so its three N–H dipoles all point partly the same way and do not cancel. The other three are symmetrical, with identical outer atoms.</div>
+</Check>
+
+## Hybridization
+
+The course names the arrangements of two, three and four domains with a **hybridization** label, which can be given to any atom in a molecule that has them:
+
+- two domains: **sp**, with angles of 180°;
+- three domains: **sp²**, with angles of 120°;
+- four domains: **sp³**, with angles of 109.5°.
+
+Count the domains on the atom, and the name follows. In CH₄, carbon has four domains and is sp³. In CO₂, carbon has two and is sp. In formaldehyde, H₂C=O, carbon has three (two C–H bonds and the double bond) and is sp². In water, oxygen has four domains, two bonds and two lone pairs, so it is sp³ too. In the nitrate ion, nitrogen has three domains and is sp².
+
+**Beyond the exam:** how hybrid orbitals are built from s and p orbitals, and the hybridization names used for five and six domains, are not on the AP exam. For those atoms, name the shape and leave it there.
+
+## Sigma and pi bonds
+
+A bond forms where an orbital on one atom overlaps an orbital on another. That overlap can happen in two ways.
+
+A single bond is one **sigma (σ) bond**. Its overlap lies directly between the two nuclei, on the line that joins them. A double bond is one sigma bond and one **pi (π) bond**, whose overlap lies above and below that line instead. A triple bond is one sigma and two pi.
+
+Sigma overlap is stronger than pi overlap, so a sigma bond has the greater bond energy. For carbon, that is why a C=C bond (614 kJ/mol) is less than twice as strong as a C–C bond (347 kJ/mol): the second bond is a pi bond, and it adds less.
+
+A pi bond does one more thing. It stops the atoms from rotating about the bond, because turning one end would twist its half of the pi bond out of line with the other half. The overlap would be lost and the pi bond would break. That makes **geometric isomers** possible: compounds with the same atoms bonded in the same order, but held in different places in space. In 1,2-dichloroethene, the two Cl atoms can be on the same side of the C=C (cis) or on opposite sides (trans). Neither turns into the other at room temperature, so they are different compounds. Cis boils at about 60 °C, and trans at about 48 °C.
+
+The cis isomer, with both chlorines on top:
+
+<Lewis
+  alt="Lewis diagram of cis-1,2-dichloroethene: two carbon atoms joined by a double bond. Each carbon has a chlorine atom above it, angled outward, and a hydrogen atom below it, angled outward, so both chlorines are on the same side. Each chlorine has three lone pairs."
+  atoms={[
+    { id: 'C1', symbol: 'C', x: 0, y: 0 },
+    { id: 'C2', symbol: 'C', x: 1, y: 0 },
+    { id: 'Cl1', symbol: 'Cl', x: -0.5, y: -0.87, lonePairs: 3 },
+    { id: 'H1', symbol: 'H', x: -0.5, y: 0.87 },
+    { id: 'Cl2', symbol: 'Cl', x: 1.5, y: -0.87, lonePairs: 3 },
+    { id: 'H2', symbol: 'H', x: 1.5, y: 0.87 },
+  ]}
+  bonds={[['C1', 'C2', 2], ['C1', 'Cl1', 1], ['C1', 'H1', 1], ['C2', 'Cl2', 1], ['C2', 'H2', 1]]}
+/>
+
+The trans isomer, with one chlorine on top and one below:
+
+<Lewis
+  alt="Lewis diagram of trans-1,2-dichloroethene: two carbon atoms joined by a double bond. The left carbon has a chlorine above it and a hydrogen below it; the right carbon has a hydrogen above it and a chlorine below it, so the chlorines are on opposite sides. Each chlorine has three lone pairs."
+  atoms={[
+    { id: 'C1', symbol: 'C', x: 0, y: 0 },
+    { id: 'C2', symbol: 'C', x: 1, y: 0 },
+    { id: 'Cl1', symbol: 'Cl', x: -0.5, y: -0.87, lonePairs: 3 },
+    { id: 'H1', symbol: 'H', x: -0.5, y: 0.87 },
+    { id: 'H2', symbol: 'H', x: 1.5, y: -0.87 },
+    { id: 'Cl2', symbol: 'Cl', x: 1.5, y: 0.87, lonePairs: 3 },
+  ]}
+  bonds={[['C1', 'C2', 2], ['C1', 'Cl1', 1], ['C1', 'H1', 1], ['C2', 'H2', 1], ['C2', 'Cl2', 1]]}
+/>
+
+Polarity explains the difference: cis is polar and trans is not, because in trans the two C–Cl dipoles point in opposite directions and cancel. Polar molecules attract one another more strongly, so cis needs more heat to boil (Unit 3 explains why).
+
+<Worked title="Counting sigma and pi bonds in HCN">
+
+How many sigma and pi bonds are in hydrogen cyanide, H–C≡N, and what is the hybridization of its carbon?
+
+1. **H–C.** A single bond: one σ.
+
+2. **C≡N.** A triple bond: one σ and two π.
+
+3. **Total.** Two σ and two π.
+
+4. **Carbon.** It has two domains, the bond to H and the triple bond, so it is sp, and the molecule is linear.
+
+</Worked>
+
+<Check numeric="2">
+How many pi bonds are there in a molecule of $\ce{CO2}$?
+
+<div slot="why">O=C=O has two double bonds, and each is made of one σ bond and one π bond.</div>
+</Check>
+
+<Check answer={2}>
+What is the hybridization of each carbon atom in ethene, H₂C=CH₂?
+
+- sp
+- sp²
+- sp³
+- It cannot be told without the shape.
+
+<div slot="why">Each carbon has three domains: two C–H bonds and the double bond, which counts once. So each is sp², with angles near 120°. The molecule has five σ bonds (four C–H and one in the C=C) and one π bond.</div>
+</Check>
+
+<Trap>
+
+Five mistakes to watch for on this topic:
+
+- **Naming the shape from the electron geometry.** Water has a tetrahedral electron geometry, but its shape is bent.
+- **Counting a double bond as two domains.** Any bond, single, double or triple, is one domain.
+- **Trusting the angles in a Lewis diagram.** It is drawn flat. Use VSEPR for the angles.
+- **Calling a molecule polar because it has polar bonds.** CO₂ has polar bonds and no dipole moment.
+- **Assigning a hybridization to an atom with five or six domains.** Name the shape; the exam asks for no more.
+
+</Trap>
+
+<KeyPoints>
+
+- Bonds and lone pairs are electron domains, and they spread as far apart as possible: 2, 3, 4, 5 and 6 domains give linear, trigonal planar, tetrahedral, trigonal bipyramidal and octahedral arrangements.
+- The molecular shape is named from the atoms only, and lone pairs squeeze the bond angles, as in NH₃ (about 107°) and H₂O (about 104.5°).
+- A molecule is polar when its bond dipoles do not cancel.
+- An atom with two, three or four domains is sp, sp² or sp³.
+- A double bond is one σ and one π bond; a triple bond is one σ and two π.
+- A pi bond prevents rotation about the bond, which allows geometric isomers such as cis and trans 1,2-dichloroethene.
+
+</KeyPoints>
+
+<PracticeNext />
