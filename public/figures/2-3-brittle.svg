@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" font-family="system-ui, sans-serif" font-size="14">
+  <defs>
+    <g id="anion">
+      <circle r="25.6" fill="#E3EAE9" stroke="#4F706C" stroke-width="1.5"/>
+      <path d="M-7 0H7" fill="none" stroke="#26231F" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+    <g id="cation">
+      <circle r="14.4" fill="#4F706C"/>
+      <path d="M-6 0H6M0 -6V6" fill="none" stroke="#FDFCF9" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  </defs>
+  <rect width="480" height="280" fill="#FDFCF9"/>
+  <path d="M223 24V262" fill="none" stroke="#6B655D" stroke-width="1" stroke-opacity="0.35"/>
+
+  <text x="116" y="48" text-anchor="middle" font-size="20" font-weight="600" fill="#26231F">before</text>
+  <text x="116" y="92" text-anchor="middle" font-size="18" fill="#6B655D">push</text>
+  <path d="M66 105H162" fill="none" stroke="#26231F" stroke-width="3"/>
+  <path d="M174 105L160 98V112Z" fill="#26231F"/>
+
+  <use href="#anion" x="56" y="150"/>
+  <use href="#cation" x="96" y="150"/>
+  <use href="#anion" x="136" y="150"/>
+  <use href="#cation" x="176" y="150"/>
+
+  <use href="#cation" x="56" y="190"/>
+  <use href="#anion" x="96" y="190"/>
+  <use href="#cation" x="136" y="190"/>
+  <use href="#anion" x="176" y="190"/>
+
+  <use href="#anion" x="56" y="230"/>
+  <use href="#cation" x="96" y="230"/>
+  <use href="#anion" x="136" y="230"/>
+  <use href="#cation" x="176" y="230"/>
+
+  <text x="350" y="48" text-anchor="middle" font-size="20" font-weight="600" fill="#26231F">after the shift</text>
+
+  <use href="#anion" x="310" y="110"/>
+  <use href="#cation" x="350" y="110"/>
+  <use href="#anion" x="390" y="110"/>
+  <use href="#cation" x="430" y="110"/>
+
+  <use href="#cation" x="270" y="190"/>
+  <use href="#anion" x="310" y="190"/>
+  <use href="#cation" x="350" y="190"/>
+  <use href="#anion" x="390" y="190"/>
+
+  <use href="#anion" x="270" y="230"/>
+  <use href="#cation" x="310" y="230"/>
+  <use href="#anion" x="350" y="230"/>
+  <use href="#cation" x="390" y="230"/>
+
+  <path d="M310 144V156M350 134V166M390 144V156" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M310 139L305 146H315ZM310 161L305 154H315Z" fill="#26231F"/>
+  <path d="M350 129L345 136H355ZM350 171L345 164H355Z" fill="#26231F"/>
+  <path d="M390 139L385 146H395ZM390 161L385 154H395Z" fill="#26231F"/>
+  <text x="420" y="156" font-size="18" fill="#26231F">repel</text>
+</svg>
