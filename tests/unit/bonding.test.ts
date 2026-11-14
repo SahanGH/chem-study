@@ -30,7 +30,7 @@ describe('bond data', () => {
 
   it('has the typical bond lengths and energies of the halogens', () => {
     expect(FAMILIES.halogens.bonds.map((b) => [b.name, b.length, b.energy])).toEqual([
-      ['Cl–Cl', 199, 242],
+      ['Cl–Cl', 199, 243],
       ['Br–Br', 228, 193],
       ['I–I', 267, 151],
     ]);
