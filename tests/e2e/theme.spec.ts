@@ -211,6 +211,38 @@ test.describe('the header on a phone', () => {
   });
 });
 
+test.describe('the brand size', () => {
+  async function measureBrand(page: Page, width: number) {
+    await page.setViewportSize({ width, height: 800 });
+    await page.goto('/');
+    await page.evaluate(() => document.fonts.ready);
+    const brand = page.getByRole('link', { name: 'ChemStudy home' });
+    const tile = await brand.locator('.logo-tile').boundingBox();
+    if (!tile) throw new Error('The brand link has no logo tile.');
+    const wordmarkPx = await brand.evaluate((link) => parseFloat(getComputedStyle(link).fontSize));
+    return { tile, wordmarkPx };
+  }
+
+  test('is large on a wide screen', async ({ page }) => {
+    const { tile, wordmarkPx } = await measureBrand(page, 1280);
+
+    expect(wordmarkPx, 'wordmark font size').toBe(36);
+    expect(tile.height, 'tile height').toBeGreaterThanOrEqual(56);
+  });
+
+  test('keeps the tile in its 46:52 shape', async ({ page }) => {
+    const { tile } = await measureBrand(page, 1280);
+
+    expect(tile.width / tile.height).toBeCloseTo(46 / 52, 2);
+  });
+
+  test('keeps the old 34px tile on a 360px phone', async ({ page }) => {
+    const { tile } = await measureBrand(page, 360);
+
+    expect(tile.height).toBeCloseTo(34, 0);
+  });
+});
+
 test('the page does not scroll sideways at 320px wide', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 640 });
   await page.goto('/');
