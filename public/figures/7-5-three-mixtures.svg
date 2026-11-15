@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Three different made-up reactions, each at equilibrium in its own box: A to B (19 A, 1 B), C to D (8 C, 12 D), E to F (1 E, 19 F). Every box holds exactly 20 circles of the same outer size (radius 9). Reactant: filled ink circle. Product: open circle with an accent outline. Positions come from scratchpad/unit7/w75/three-mixtures.cjs (seeded dart-throwing): centers at least 25 apart, so no two circles touch, and at least 15 from a wall. The equilibrium arrows are drawn as paths, so they do not depend on a font having the character. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="270" fill="#FDFCF9"/>
+
+  <!-- Key -->
+  <circle cx="131" cy="20" r="9" fill="#26231F"/>
+  <text x="148" y="26" fill="#26231F">reactant</text>
+  <circle cx="281" cy="20" r="7.75" fill="#FDFCF9" stroke="#4F706C" stroke-width="2.5"/>
+  <text x="298" y="26" fill="#26231F">product</text>
+
+  <!-- A to B: 19 A (filled), 1 B (open) -->
+  <text x="55" y="52" text-anchor="middle" fill="#26231F" font-weight="600">A</text>
+  <path d="M69 42.5H95l-6 -5.5M95 48.5H69l6 5.5" fill="none" stroke="#26231F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="109" y="52" text-anchor="middle" fill="#26231F" font-weight="600">B</text>
+  <rect x="8" y="62" width="148" height="148" rx="8" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <g fill="#26231F">
+    <circle cx="78" cy="80.1" r="9"/>
+    <circle cx="52" cy="82.4" r="9"/>
+    <circle cx="126" cy="82.4" r="9"/>
+    <circle cx="37.7" cy="103.7" r="9"/>
+    <circle cx="64.8" cy="105.8" r="9"/>
+    <circle cx="98.1" cy="112.8" r="9"/>
+    <circle cx="136.6" cy="114.5" r="9"/>
+    <circle cx="80.8" cy="133.4" r="9"/>
+    <circle cx="115.8" cy="134.5" r="9"/>
+    <circle cx="46.2" cy="139.3" r="9"/>
+    <circle cx="24.6" cy="153.6" r="9"/>
+    <circle cx="139.1" cy="158.4" r="9"/>
+    <circle cx="113.7" cy="160.4" r="9"/>
+    <circle cx="84.2" cy="165.6" r="9"/>
+    <circle cx="54.8" cy="180.4" r="9"/>
+    <circle cx="28.1" cy="184.4" r="9"/>
+    <circle cx="106.4" cy="191.4" r="9"/>
+    <circle cx="140.2" cy="192.1" r="9"/>
+    <circle cx="76.5" cy="194.3" r="9"/>
+  </g>
+  <g fill="#FDFCF9" stroke="#4F706C" stroke-width="2.5">
+    <circle cx="25.8" cy="80.3" r="7.75"/>
+  </g>
+  <text x="82" y="234" text-anchor="middle" fill="#26231F">19 A, 1 B</text>
+  <text x="82" y="258" text-anchor="middle" fill="#26231F"><tspan font-style="italic">K</tspan> = 0.053</text>
+
+  <!-- C to D: 8 C (filled), 12 D (open) -->
+  <text x="213" y="52" text-anchor="middle" fill="#26231F" font-weight="600">C</text>
+  <path d="M227 42.5H253l-6 -5.5M253 48.5H227l6 5.5" fill="none" stroke="#26231F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="267" y="52" text-anchor="middle" fill="#26231F" font-weight="600">D</text>
+  <rect x="166" y="62" width="148" height="148" rx="8" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <g fill="#26231F">
+    <circle cx="209.6" cy="79.4" r="9"/>
+    <circle cx="208.6" cy="106.6" r="9"/>
+    <circle cx="293.1" cy="110.9" r="9"/>
+    <circle cx="186.1" cy="123.1" r="9"/>
+    <circle cx="296.6" cy="142.1" r="9"/>
+    <circle cx="199.8" cy="152.4" r="9"/>
+    <circle cx="181.5" cy="169.8" r="9"/>
+    <circle cx="291.6" cy="194.4" r="9"/>
+  </g>
+  <g fill="#FDFCF9" stroke="#4F706C" stroke-width="2.5">
+    <circle cx="242.1" cy="78.1" r="7.75"/>
+    <circle cx="279.3" cy="79.9" r="7.75"/>
+    <circle cx="181.6" cy="83.2" r="7.75"/>
+    <circle cx="250" cy="103.5" r="7.75"/>
+    <circle cx="213.9" cy="131.6" r="7.75"/>
+    <circle cx="239" cy="132.8" r="7.75"/>
+    <circle cx="264.3" cy="134.5" r="7.75"/>
+    <circle cx="229" cy="155.8" r="7.75"/>
+    <circle cx="272.4" cy="164.9" r="7.75"/>
+    <circle cx="236.4" cy="183.5" r="7.75"/>
+    <circle cx="200" cy="187.9" r="7.75"/>
+    <circle cx="265.3" cy="189.8" r="7.75"/>
+  </g>
+  <text x="240" y="234" text-anchor="middle" fill="#26231F">8 C, 12 D</text>
+  <text x="240" y="258" text-anchor="middle" fill="#26231F"><tspan font-style="italic">K</tspan> = 1.5</text>
+
+  <!-- E to F: 1 E (filled), 19 F (open) -->
+  <text x="371" y="52" text-anchor="middle" fill="#26231F" font-weight="600">E</text>
+  <path d="M385 42.5H411l-6 -5.5M411 48.5H385l6 5.5" fill="none" stroke="#26231F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="425" y="52" text-anchor="middle" fill="#26231F" font-weight="600">F</text>
+  <rect x="324" y="62" width="148" height="148" rx="8" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <g fill="#26231F">
+    <circle cx="401.6" cy="168.9" r="9"/>
+  </g>
+  <g fill="#FDFCF9" stroke="#4F706C" stroke-width="2.5">
+    <circle cx="364.6" cy="77.5" r="7.75"/>
+    <circle cx="392" cy="79.1" r="7.75"/>
+    <circle cx="448.3" cy="81.6" r="7.75"/>
+    <circle cx="339" cy="81.7" r="7.75"/>
+    <circle cx="417.9" cy="89.2" r="7.75"/>
+    <circle cx="375.8" cy="103.4" r="7.75"/>
+    <circle cx="344.7" cy="107.2" r="7.75"/>
+    <circle cx="424.1" cy="114.8" r="7.75"/>
+    <circle cx="452.6" cy="131.6" r="7.75"/>
+    <circle cx="343" cy="133.1" r="7.75"/>
+    <circle cx="407.3" cy="139.2" r="7.75"/>
+    <circle cx="367.1" cy="149.3" r="7.75"/>
+    <circle cx="344.2" cy="162.5" r="7.75"/>
+    <circle cx="450.8" cy="163.6" r="7.75"/>
+    <circle cx="428.3" cy="183.3" r="7.75"/>
+    <circle cx="347.4" cy="188.1" r="7.75"/>
+    <circle cx="373" cy="192.4" r="7.75"/>
+    <circle cx="452.7" cy="193.8" r="7.75"/>
+    <circle cx="400.2" cy="194.1" r="7.75"/>
+  </g>
+  <text x="398" y="234" text-anchor="middle" fill="#26231F">1 E, 19 F</text>
+  <text x="398" y="258" text-anchor="middle" fill="#26231F"><tspan font-style="italic">K</tspan> = 19</text>
+</svg>
