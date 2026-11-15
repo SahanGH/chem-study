@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Drawn to scale at 25 units per centimeter. The plate is 10 cm tall (y=25 to y=275). The start line is 1.0 cm above the bottom edge, at y=250. The solvent front is 8.0 cm above the start line, at y=50. Spot centers: A 6.4 cm (y=90), B 3.6 cm (y=160), C 1.2 cm (y=220). The shaded part of the plate is the part the solvent has wetted. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#4F706C"/>
+    </marker>
+  </defs>
+  <rect width="480" height="300" fill="#FDFCF9"/>
+
+  <rect x="128" y="25" width="70" height="250" fill="#F4F1EA"/>
+  <rect x="128" y="50" width="70" height="225" fill="#E3EAE9"/>
+  <rect x="128" y="25" width="70" height="250" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+
+  <path d="M128 50H198" fill="none" stroke="#26231F" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <path d="M128 250H198" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <text x="118" y="56" text-anchor="end" fill="#26231F">solvent front</text>
+  <text x="118" y="256" text-anchor="end" fill="#26231F">start line</text>
+
+  <ellipse cx="172" cy="90" rx="9" ry="7" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <ellipse cx="172" cy="160" rx="9" ry="7" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <ellipse cx="172" cy="220" rx="9" ry="7" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <text x="147" y="96.5" text-anchor="middle" fill="#26231F" font-weight="600">A</text>
+  <text x="147" y="166.5" text-anchor="middle" fill="#26231F" font-weight="600">B</text>
+  <text x="147" y="226.5" text-anchor="middle" fill="#26231F" font-weight="600">C</text>
+
+  <!-- Guide lines carry the three levels out to the measuring arrows. -->
+  <path d="M198 50H310M198 250H310M185 160H232" fill="none" stroke="#6B655D" stroke-width="1"/>
+
+  <path d="M222 205V161.5" fill="none" stroke="#4F706C" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <path d="M222 205V248.5" fill="none" stroke="#4F706C" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="231" y="211" fill="#26231F">3.6 cm</text>
+
+  <path d="M300 150V51.5" fill="none" stroke="#4F706C" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <path d="M300 150V248.5" fill="none" stroke="#4F706C" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="310" y="106" fill="#26231F">8.0 cm</text>
+
+  <text x="314" y="156" fill="#26231F"><tspan font-style="italic">R</tspan><tspan font-style="italic" dy="6">f</tspan><tspan dy="-6"> of B =</tspan></text>
+  <text x="314" y="186" fill="#26231F">3.6 ÷ 8.0 = 0.45</text>
+</svg>
