@@ -166,3 +166,23 @@ None expected. The practice kind `test`, the blocks and the build check
 - No constant or handbook value has two values anywhere on the site.
 - Both pages fit a phone at 320 px with every answer open, and pass the
   browser tests' accessibility checks.
+
+## As built (Plan 13, 2026-11-15)
+
+Two pages, 43 questions, 200 points, in three pull requests (#47 the design and plan, #48 session 1, then session 2 with these notes).
+
+- **Session 1:** 22 questions, 103 points (A 27, B 23, C 28, D 25), topics 3.1 to 3.6.
+- **Session 2:** 21 questions, 97 points (E 27, F 23, G 22, H 25), topics 3.7 to 3.13.
+- **Every number was recomputed by a script per part**, and every part was fact-checked twice by fresh agents that solved before reading. **No fact-check found an error.** The findings were rubric lines a sound route could not earn, stems that gave a part away, an "only" the facts break, and two places where checkers disagreed with a handbook's rounding (neon's boiling point is now given in kelvin, where the handbooks agree).
+- **The originality checks found ten strong matches, nine of them with the site's own lessons and practice**:
+  - lesson 3.1's worked example and Checks (four questions of Part A);
+  - lesson 3.2's unknown-solid Check and its tin trap;
+  - lesson 3.9's chromatogram worked example;
+  - lesson 3.10's density trap;
+  - lesson 3.13's calibration worked example.
+
+  The tenth was a textbook problem (KO₂ in a breathing set). All were rewritten with a different task, and a re-check found no strong match. The weak matches left are listed in #48 and the session 2 pull request.
+- **Why so many:** the plan's part tables asked for kinds of question the lessons already teach (for example "a larger molecule that out-boils one that hydrogen-bonds"), and the avoid list named those kinds but the part tables pointed straight at them. A later test's plan should name tasks the lessons do not already set, and clear each part's list against the lessons' worked examples and Checks before writing.
+- **Writers and fact-checkers ran on Opus**, not Fable (Fable's usage limit, 2026-11-15 to 17).
+- **Phones:** two lines split; tables scroll inside their boxes at 320 px only, as lesson 7.4's does. No page scrolls sideways.
+- No "Beyond the exam" label was needed, and no constant or handbook value has a second value on the site.

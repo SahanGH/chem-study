@@ -139,7 +139,7 @@ title: "Comprehensive test, session 2: solutions and light"
 kind: test
 order: 9
 topics: ["3.7", "3.8", "3.9", "3.10", "3.11", "3.12", "3.13"]
-summary: Twenty-one scored free-response questions on solutions and their particle pictures, separation and solubility, spectroscopy and photons, and Beer's law, each with a worked answer and its scoring rubric.
+summary: Twenty-one scored free-response questions on solutions and particle pictures, separation and solubility, spectroscopy and photons, and Beer's law, each with a worked answer and its scoring rubric.
 points: <the sum>
 minutes: 100
 ---
@@ -150,6 +150,15 @@ The introduction mirrors session 1's, naming topics 3.7 to 3.13, and gives $h$, 
 ### Task 5: Check session 2, and open the pull request
 
 As Task 3, with `part-[efgh].py` and `comprehensive-test-session-2`. In addition: `grep` under `src/content` for every handbook value the session states, and confirm it has one value site-wide. Commit (`feat(practice): add the Unit 3 comprehensive test, session 2`).
+
+> **As carried out (2026-11-15), Tasks 1 to 5.**
+>
+> - **Task 1.** The avoid list (Sonnet, with four reader agents for Tro) has about 1,240 lines and names the kind of question for every site item. It does not cover Tro's stoichiometry chapters, where the one textbook match (KO₂ in a breathing set) was found. The pools (one Opus agent) gave each part its own substances with cited handbook values, marked the uncertain ones, and listed five liquid pairs whose boiling points and vapor pressures disagree.
+> - **Writers** (eight, on Opus) wrote all eight parts at once; session 2's were checked while session 1 was. Every number check passed before the fact-checks.
+> - **The fact-checks found no errors.** Their findings, and the second checks', were rubric lines, stems that gave a part away, overstatements, and two handbook roundings. Neon's boiling point is now given as 27.1 K, where the two handbooks agree.
+> - **The originality checks found ten strong matches**, nine with the site's own lessons and practice. The part tables of Tasks 2 and 4 asked for kinds of question the lessons already set: a larger molecule out-boiling a hydrogen-bonder; isomers by contact area; a chromatogram's R_f, polarity and match; a calibration line. The writers built exactly those. Each was rewritten with a different task by its own writer (SendMessage), then re-checked by a fresh originality agent. Weak matches (a shared standard skill) were left and listed in the pull requests.
+> - **Phones:** two electron-count lines (Part A) and two display lines (Part C) were split. Tables scroll inside their boxes at 320 px only.
+> - **The session ended once** in the middle of session 1's second fact-check; the agent was resumed from its transcript (SendMessage), and nothing was lost.
 
 ### Task 6: Close out
 
