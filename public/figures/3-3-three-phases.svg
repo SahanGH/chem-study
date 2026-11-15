@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 212" font-family="system-ui, sans-serif" font-size="18">
+  <!-- One substance in three phases: every particle is the same circle (r 14). Solid and liquid each hold 16 touching particles and reach about the same height; the gas holds 5, far apart. -->
+  <defs>
+    <circle id="p" r="14" fill="#E3EAE9" stroke="#4F706C" stroke-width="1.5"/>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#26231F"/>
+    </marker>
+  </defs>
+  <rect width="480" height="212" fill="#FDFCF9"/>
+
+  <rect x="10" y="16" width="148" height="148" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <rect x="166" y="16" width="148" height="148" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <rect x="322" y="16" width="148" height="148" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+
+  <!-- Solid: a 4 x 4 grid resting on the floor. -->
+  <use href="#p" x="42" y="149"/>
+  <use href="#p" x="70" y="149"/>
+  <use href="#p" x="98" y="149"/>
+  <use href="#p" x="126" y="149"/>
+  <use href="#p" x="42" y="121"/>
+  <use href="#p" x="70" y="121"/>
+  <use href="#p" x="98" y="121"/>
+  <use href="#p" x="126" y="121"/>
+  <use href="#p" x="42" y="93"/>
+  <use href="#p" x="70" y="93"/>
+  <use href="#p" x="98" y="93"/>
+  <use href="#p" x="126" y="93"/>
+  <use href="#p" x="42" y="65"/>
+  <use href="#p" x="70" y="65"/>
+  <use href="#p" x="98" y="65"/>
+  <use href="#p" x="126" y="65"/>
+  <!-- Vibration marks beside three particles. -->
+  <path d="M35 45Q42 41 49 45M37 39Q42 36 47 39" fill="none" stroke="#6B655D" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M91 45Q98 41 105 45M93 39Q98 36 103 39" fill="none" stroke="#6B655D" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M145 114Q149 121 145 128M151 116Q154 121 151 126" fill="none" stroke="#6B655D" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Liquid: 16 touching particles with no pattern, filling the bottom of the box with a level surface. Three particles carry short arrows, each pointing a different way. -->
+  <!-- Positions settled under gravity between the walls (scratch script liquid-pack.py), so every particle touches at least two others. -->
+  <use href="#p" x="180.8" y="149.2"/>
+  <use href="#p" x="208.7" y="149.2"/>
+  <use href="#p" x="236.6" y="149.2"/>
+  <use href="#p" x="271.3" y="149.2"/>
+  <use href="#p" x="299.2" y="149.2"/>
+  <use href="#p" x="254" y="127.4"/>
+  <use href="#p" x="180.8" y="121.3"/>
+  <use href="#p" x="208.7" y="121.4"/>
+  <use href="#p" x="299.2" y="121.4"/>
+  <use href="#p" x="233.4" y="108.3"/>
+  <use href="#p" x="274.5" y="108.4"/>
+  <use href="#p" x="180.8" y="93.3"/>
+  <use href="#p" x="208.7" y="93.5"/>
+  <use href="#p" x="298.3" y="93.4"/>
+  <use href="#p" x="254" y="89.4"/>
+  <use href="#p" x="229.9" y="75.3"/>
+  <!-- The arrows are drawn on the particles themselves, so they read as motion within the liquid, not as particles leaving it. -->
+  <path d="M245 131L263 124" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M242 105L225 112" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M274.5 99.5V117.5" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Gas: 5 particles far apart, each moving a different way. -->
+  <use href="#p" x="352" y="50"/>
+  <use href="#p" x="442" y="56"/>
+  <use href="#p" x="398" y="104"/>
+  <use href="#p" x="348" y="138"/>
+  <use href="#p" x="440" y="138"/>
+  <path d="M369 50H391" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M442 73V95" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M386 92L371 77" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M348 121V99" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M423 138H401" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <text x="84" y="194" text-anchor="middle" fill="#26231F">solid</text>
+  <text x="240" y="194" text-anchor="middle" fill="#26231F">liquid</text>
+  <text x="396" y="194" text-anchor="middle" fill="#26231F">gas</text>
+</svg>

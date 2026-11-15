@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Na+ at (120,120), Cl- at (360,120). Water: O-H bonds 44 long at a bent angle of 105 degrees. Left: each O faces the cation, both H point away. Right: one H of each water points straight at the anion. -->
+  <rect width="480" height="280" fill="#FDFCF9"/>
+  <path d="M240 14V270" fill="none" stroke="#6B655D" stroke-width="1" stroke-opacity="0.35"/>
+
+  <!-- Covalent O-H bonds, drawn under the atoms. -->
+  <path d="M166 120L192.8 85.1M166 120L192.8 154.9M120 166L154.9 192.8M120 166L85.1 192.8M74 120L47.2 85.1M74 120L47.2 154.9M120 74L154.9 47.2M120 74L85.1 47.2" fill="none" stroke="#26231F" stroke-width="2.5"/>
+  <path d="M450 120L406 120M450 120L461.4 77.5M360 210L360 166M360 210L402.5 221.4M270 120L314 120M270 120L258.6 162.5M360 30L360 74M360 30L317.5 18.6" fill="none" stroke="#26231F" stroke-width="2.5"/>
+
+  <!-- Ions. -->
+  <circle cx="120" cy="120" r="22" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="360" cy="120" r="30" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <text x="118" y="126.5" text-anchor="middle" fill="#FDFCF9">Na<tspan dy="-7" font-size="14">+</tspan></text>
+  <text x="358" y="126.5" text-anchor="middle" fill="#FDFCF9">Cl<tspan dy="-7" font-size="14">&#8722;</tspan></text>
+
+  <!-- Oxygen atoms. -->
+  <g fill="#E3EAE9" stroke="#26231F" stroke-width="1.5">
+    <circle cx="166" cy="120" r="18"/>
+    <circle cx="120" cy="166" r="18"/>
+    <circle cx="74" cy="120" r="18"/>
+    <circle cx="120" cy="74" r="18"/>
+    <circle cx="450" cy="120" r="18"/>
+    <circle cx="360" cy="210" r="18"/>
+    <circle cx="270" cy="120" r="18"/>
+    <circle cx="360" cy="30" r="18"/>
+  </g>
+  <!-- Hydrogen atoms. -->
+  <g fill="#FDFCF9" stroke="#26231F" stroke-width="1.5">
+    <circle cx="192.8" cy="85.1" r="11"/>
+    <circle cx="192.8" cy="154.9" r="11"/>
+    <circle cx="154.9" cy="192.8" r="11"/>
+    <circle cx="85.1" cy="192.8" r="11"/>
+    <circle cx="47.2" cy="85.1" r="11"/>
+    <circle cx="47.2" cy="154.9" r="11"/>
+    <circle cx="154.9" cy="47.2" r="11"/>
+    <circle cx="85.1" cy="47.2" r="11"/>
+    <circle cx="406" cy="120" r="11"/>
+    <circle cx="461.4" cy="77.5" r="11"/>
+    <circle cx="360" cy="166" r="11"/>
+    <circle cx="402.5" cy="221.4" r="11"/>
+    <circle cx="314" cy="120" r="11"/>
+    <circle cx="258.6" cy="162.5" r="11"/>
+    <circle cx="360" cy="74" r="11"/>
+    <circle cx="317.5" cy="18.6" r="11"/>
+  </g>
+
+  <g fill="#26231F" text-anchor="middle">
+    <text x="166" y="126.5">O</text>
+    <text x="120" y="172.5">O</text>
+    <text x="74" y="126.5">O</text>
+    <text x="120" y="80.5">O</text>
+    <text x="450" y="126.5">O</text>
+    <text x="360" y="216.5">O</text>
+    <text x="270" y="126.5">O</text>
+    <text x="360" y="36.5">O</text>
+    <text x="192.8" y="91.6">H</text>
+    <text x="192.8" y="161.4">H</text>
+    <text x="154.9" y="199.3">H</text>
+    <text x="85.1" y="199.3">H</text>
+    <text x="47.2" y="91.6">H</text>
+    <text x="47.2" y="161.4">H</text>
+    <text x="154.9" y="53.7">H</text>
+    <text x="85.1" y="53.7">H</text>
+    <text x="406" y="126.5">H</text>
+    <text x="461.4" y="84">H</text>
+    <text x="360" y="172.5">H</text>
+    <text x="402.5" y="227.9">H</text>
+    <text x="314" y="126.5">H</text>
+    <text x="258.6" y="169">H</text>
+    <text x="360" y="80.5">H</text>
+    <text x="317.5" y="25.1">H</text>
+  </g>
+
+  <!-- Partial charges: beside the right-hand O on the left panel (clear of its hydrogens and the ion), one pointing H on the right. -->
+  <g fill="#26231F" text-anchor="middle">
+    <text x="146" y="153">&#948;&#8722;</text>
+    <text x="407" y="104">&#948;+</text>
+  </g>
+
+  <text x="120" y="262" text-anchor="middle" fill="#26231F">O end toward the cation</text>
+  <text x="360" y="262" text-anchor="middle" fill="#26231F">H end toward the anion</text>
+</svg>
