@@ -178,6 +178,15 @@ The introduction mirrors session 1's, naming topics 7.7 to 7.12, and adds two sc
 
 As Task 3, with `part-[efgh].py` and `comprehensive-test-session-2`. In addition: `grep` every salt's formula under `src/content` and confirm one K_sp per salt. Commit (`feat(practice): add the Unit 7 comprehensive test, session 2`).
 
+> **As carried out (2026-11-15), Tasks 1 to 5.**
+>
+> - **Task 1.** The avoid list (Sonnet) has 405 rows; Tro's numbers are marked "as read". The pools named, for each part, real systems found in no source, with K values "at a certain temperature" except Part D's four sizes at 25 °C (each recomputed from standard Gibbs energies). Two gaps showed later: the pools cleared Part H's salts against the lessons only by salt, so two questions repeated a lesson's *kind* of example (a worked example and a Check of lesson 7.11), and two systems are in Zumdahl, which no source covered. A future pool should name, for each salt or reaction, the kinds of question the lessons already ask with it.
+> - **Fable's usage limit** was reached minutes after the eight writers started; none had saved anything. On the teacher's switch to Opus and "resume", the writers and fact-checkers ran on Opus: session 1's four first, session 2's four once session 1 was in its checks.
+> - **Writers' calls worth keeping:** a K chosen "at a certain temperature" was checked against standard data by the fact-checker every time; the writers avoided values ending in an exact 5 (rounding ties); Part A's tables were generated from a rate model so the rates really meet.
+> - **The fact-checks found two errors of real chemistry** (nitryl chloride's K for a reaction "when heated"; CuO and Cu at equilibrium together), both verified by the controller from standard data before the fix, and no wrong arithmetic. The second checks found none.
+> - **Phones:** a summary over 200 characters failed the content schema on the first build; a rubric line with a long expression inside a sentence pushed session 2's page sideways at 320 px. `wide-table.cjs` and `find-wide.cjs` in the scratch folder name the table or element at fault.
+> - **Fixes** went to the drafts (`drafts/part-<x>.mdx`), never to the session file, which `assemble.cjs` rebuilds from the drafts and the heading; each fixer re-ran its part's number check.
+
 ### Task 6: Close out
 
 - [ ] An "As built" note at the end of the design: questions and points per part, the topic count, the findings and what was done.
