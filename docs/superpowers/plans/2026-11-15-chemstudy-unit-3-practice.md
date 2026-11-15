@@ -207,6 +207,17 @@ gh pr create --base main --title "feat(practice): Unit 3 worksheets 1 to 5" --bo
 
 The body gives each document's questions and points, each audit's last line and expected differences, the fact-check's findings and what was done, the labels, the models used, test and build output, and, set apart, **every correction to the originals**, for the teacher to accept or reverse.
 
+> **As carried out (2026-11-15), Tasks 1 to 3.** Five Opus writers converted the worksheets in parallel (Fable's limit had been reached). The first audits needed only the entries this plan foresaw, plus one for the source's unit `s$^{-1}$`, which the audit reads as a number. Then:
+>
+> - **The first fact-checks** (Opus) found four errors, all in the source. Ammonia boils at −33.3 °C, not −33.0. CuSO₄ is 159.61 g/mol with the AP table's S = 32.06, and the mass is 16.0 g to three significant figures, not 15.96 g. Worksheet 5's 3(c) called absorbance "a ratio of transmitted to incident light", which is transmittance, upside down. The accuracy findings were of a few kinds:
+>   - a list of forces that left some out where the question asks for "every" force;
+>   - a rule that lesson 3.1 lists as a trap;
+>   - answers that said more than the lessons (melting "overcomes" hydrogen bonds; ionic compounds "dissociate completely");
+>   - steps and terms that were not the lessons'.
+> - **Worksheet 1, question 6 changed substance:** pentane for hexane. Real hexane boils above methanol yet has the higher vapor pressure, against lesson 3.2's rule.
+> - **One Sonnet fixer per worksheet** applied the decided list and brought its audit back to clean. **A second Opus check** of every changed passage found one error the fixes had introduced: Worksheet 1's new rule said force type decides "only" among molecules of similar size, which the worksheet's own question 2 disproves. It also found one significant-figure slip and two places where the reasoning was missing. Those four were fixed by hand.
+> - **Phones:** nothing scrolled at any width, before or after the fixes.
+
 ---
 
 ## Group C: the skill ladders and the free-response set (pull request C)
@@ -281,6 +292,28 @@ With all seven documents in place, check by hand: each Unit 3 lesson's "Practice
 git add src/content/practice/unit-3
 git commit -m "feat(practice): add the Unit 3 skill ladders and free-response set"
 ```
+
+> **As carried out (2026-11-15), Tasks 4 and 5.** Both documents were written, fact-checked, fixed and checked a second time as drafts in the scratch folder while the worksheets were checked, then copied in.
+>
+> - **Skill ladders:** five errors, four of them from the source.
+>   - Ladder 2 taught "compare force type first; only if the types match does size decide", which lesson 3.1 lists as a trap. The introduction, the method and 2(b) now count electrons first.
+>   - Ladder 2(c) said the ether has "both" hydrogens on carbon (it has six).
+>   - Ladder 7 printed 0.60 atm among three-figure values.
+>   - Ladder 14(b) gave 0.300 from a concentration with two figures; the concentration is now 1.50 × 10⁻⁴ M.
+>   - The one error from the conversion: Ladder 13(b)'s 7.83 × 10⁻¹⁹ J is 7.82 with c = 2.998 × 10⁸. The 471 kJ/mol stands.
+>   - **Accuracy findings:**
+>     - Ladder 2's order is now written out.
+>     - "Effusion" is defined under its label, and the label covers the warning about the ratio's direction.
+>     - Ladder 4 says that heating curves are topic 6.5.
+>     - Ladder 14's paragraph on transmittance went, since lesson 3.13 does not teach it.
+>     - Ladder 12 names Unit 8 for acids.
+>     - "The hardest unit in AP Chemistry" became "covers more of the exam than any other".
+> - **Free-response set:** two errors from the source. Both were "only" claims that left out a force: London forces in 2(b), and dipole–induced dipole forces in 2(c).
+>   - **Topic 3.2 is tested** (2(a) and 2(b) rank boiling points) and 3.7 is not. So the topics list and question 2's tag include 3.2, and the introduction says "most of Unit 3: topics 3.1 to 3.6 and 3.8 to 3.13".
+>   - Rubric lines say how another route scores: 1(c)'s use of 745 torr loses only the dry-pressure point; 0.2175 earns 4(b). The points are unchanged.
+> - **Second check:** no errors. Seven wording points and one accuracy point (3(b)'s "more compressed than the law assumes", the same wording Ladder 9 had lost) were fixed by hand.
+> - **Phones:** two calculations in the ladders' answers (13(a), 14(b)) scrolled inside their boxes from 412 px down and are split over more lines.
+> - **The hand checks:** each lesson's "Practice next" lists the documents with a question on its topic. The unit page lists the seven in order. No constant has two values under `src/content`.
 
 ### Task 6: Close out
 
