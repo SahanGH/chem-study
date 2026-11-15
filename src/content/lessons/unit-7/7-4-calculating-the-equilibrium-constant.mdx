@@ -1,0 +1,311 @@
+---
+topic: "7.4"
+minutes: 10
+summary: "How to calculate K from measurements on an equilibrium mixture, and how a table of initial, change and equilibrium values supplies the ones that were not measured."
+---
+
+Many of the equilibrium constants in a data table began as an experiment like this one: someone sealed a reaction in a container, held the temperature steady, waited until nothing was changing and measured what was inside. Turning those measurements into $K$ takes one line of arithmetic, and most slips in it are of two kinds: an exponent left off, and a number put in that was not an equilibrium concentration.
+
+## Measure, then substitute
+
+The routine has four steps:
+
+1. **Write the expression** for $K$ from the balanced equation (topic 7.3).
+2. **Get every quantity into the right form.** $K_c$ takes concentrations in mol/L, so divide moles by the volume of the container. $K_p$ takes partial pressures in atm.
+3. **Substitute the equilibrium values**, each raised to the power of its coefficient.
+4. **Report $K$** with no unit and the right number of significant figures.
+
+Step 2 is the easy one to skip. $K_c$ is built from concentrations, and moles are not concentrations unless the container happens to hold exactly 1 L.
+
+<Worked title="K from an equilibrium mixture">
+
+Nitrogen trifluoride, $\ce{NF3}$, is a gas the electronics industry uses to clean its equipment. Strong heating breaks it down reversibly:
+
+$$
+\ce{2NF3(g) <=> N2(g) + 3F2(g)}
+$$
+
+A 5.00 L nickel reactor, held at a certain high temperature, is found to contain at equilibrium 0.200 mol of NF₃, 0.0500 mol of N₂ and 0.150 mol of F₂. Calculate $K_c$. (The amounts are made up for this example.)
+
+1. **Write the expression.** Products on top, each concentration raised to its coefficient.
+
+   $$
+   K_c = \frac{[\ce{N2}][\ce{F2}]^3}{[\ce{NF3}]^2}
+   $$
+
+2. **Change moles into mol/L.** Divide each amount by 5.00 L.
+
+   $$
+   \begin{aligned}
+   [\ce{NF3}] &= \frac{0.200\ \text{mol}}{5.00\ \text{L}} \\
+   &= 0.0400\ \text{M}
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   [\ce{N2}] &= \frac{0.0500\ \text{mol}}{5.00\ \text{L}} \\
+   &= 0.0100\ \text{M}
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   [\ce{F2}] &= \frac{0.150\ \text{mol}}{5.00\ \text{L}} \\
+   &= 0.0300\ \text{M}
+   \end{aligned}
+   $$
+
+3. **Substitute.**
+
+   $$
+   \begin{aligned}
+   K_c &= \frac{(0.0100)(0.0300)^3}{(0.0400)^2} \\
+   &= \frac{(0.0100)(2.70 \times 10^{-5})}{1.60 \times 10^{-3}} \\
+   &= 1.69 \times 10^{-4}
+   \end{aligned}
+   $$
+
+4. **Report it.** $K_c$ = 1.69 × 10⁻⁴, with no unit, to three significant figures like the data.
+
+5. **See what the two slips would have cost.** Leave the cube off [F₂]:
+
+   $$
+   \frac{(0.0100)(0.0300)}{(0.0400)^2} = 0.188
+   $$
+
+   That is about 1100 times too large. Or put in the moles without dividing by the volume:
+
+   $$
+   \begin{aligned}
+   &\frac{(0.0500)(0.150)^3}{(0.200)^2} \\
+   &= 4.22 \times 10^{-3}
+   \end{aligned}
+   $$
+
+   That is 25 times too large. The volumes do not cancel in this expression. Four concentrations are multiplied on top and only two on the bottom, so two factors of 5.00 are left over.
+
+</Worked>
+
+<Check numeric="150">
+Iodine and bromine react reversibly:
+
+$$
+\ce{I2(g) + Br2(g) <=> 2IBr(g)}
+$$
+
+A sealed glass bulb is kept in an oven, hot enough that everything in it is a gas. At a certain temperature it holds an equilibrium mixture: I₂ at 0.0150 atm, Br₂ at 0.0400 atm and IBr at 0.300 atm. What is $K_p$?
+
+<div slot="why">
+
+The data are partial pressures in atm, so they go straight into $K_p$.
+
+$$
+\begin{aligned}
+K_p &= \frac{(P_{\ce{IBr}})^2}{(P_{\ce{I2}})(P_{\ce{Br2}})} \\
+&= \frac{(0.300)^2}{(0.0150)(0.0400)} \\
+&= 150
+\end{aligned}
+$$
+
+So $K_p$ = 150, or 1.50 × 10² to show its three significant figures, like the data. A coefficient becomes an exponent and nothing else. The 2 in front of IBr squares its pressure. It does not also double it.
+
+If you got 500, you left off the exponent. If you got 1000, you doubled the IBr pressure where you should have squared it. If you got 600, you doubled it and squared it as well. If you got 6.67 × 10⁻³, your fraction is upside down. (The pressures are made up for this Check.)
+
+</div>
+</Check>
+
+## When only one equilibrium value was measured
+
+Often a chemist knows exactly what went into the container, but can measure only one substance once the mixture has settled: the one with a color, say. That is enough, because the balanced equation ties every change to every other.
+
+The bookkeeping goes in an **ICE table**: a table with one column for each substance in the $K$ expression and three rows, Initial, Change and Equilibrium, whose first letters give it its name.
+
+- The **Initial** row holds what was put in, with 0 for anything not there at the start.
+- The **Change** row holds how much each concentration went up (+) or down (−). Its entries are in the ratio of the coefficients.
+- The **Equilibrium** row is Initial plus Change.
+
+In this lesson, the measured value lets you fill in the Change row with numbers. Topic 7.7 runs the same table when the changes are not known. Either way, only the Equilibrium row goes into $K$.
+
+<KeyIdea>
+
+Only equilibrium values go into $K$, each raised to its coefficient. Everything else in a problem, the starting amounts and the balanced equation, is there to help you find them.
+
+</KeyIdea>
+
+<Worked title="K from one measurement">
+
+Nitrosyl chloride, $\ce{NOCl}$, is sealed in a vessel at 0.240 M and held at a certain temperature, where it breaks down reversibly:
+
+$$
+\ce{2NOCl(g) <=> 2NO(g) + Cl2(g)}
+$$
+
+The vessel starts with no NO and no Cl₂. At equilibrium, the concentration of Cl₂ is measured: 0.0450 M. Calculate $K_c$. (The data are made up for this example.)
+
+1. **Put in what is known.** The Initial row is 0.240 M for NOCl, and 0 for NO and for Cl₂. In the Equilibrium row only Cl₂ is known: 0.0450 M.
+
+2. **Find the change in the measured substance.** Cl₂ went from 0 to 0.0450 M, a change of +0.0450 M.
+
+3. **Fill in the Change row from the coefficients.** The equation makes 2 NO for every Cl₂, so NO rose by twice as much.
+
+   $$
+   2 \times 0.0450\ \text{M} = 0.0900\ \text{M}
+   $$
+
+   NO changed by +0.0900 M. The equation uses up 2 NOCl for every Cl₂, so NOCl changed by −0.0900 M.
+
+4. **Add down each column.**
+
+   $$
+   \begin{aligned}
+   [\ce{NOCl}] &= 0.240\ \text{M} - 0.0900\ \text{M} \\
+   &= 0.150\ \text{M}
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   [\ce{NO}] &= 0 + 0.0900\ \text{M} \\
+   &= 0.0900\ \text{M}
+   \end{aligned}
+   $$
+
+   The finished table, with every value in M. Its rows are labeled I, C and E, for Initial, Change and Equilibrium:
+
+   | | NOCl | NO | Cl₂ |
+   |---|---|---|---|
+   | I | 0.240 | 0 | 0 |
+   | C | −0.0900 | +0.0900 | +0.0450 |
+   | E | 0.150 | 0.0900 | 0.0450 |
+
+5. **Substitute the Equilibrium row.**
+
+   $$
+   \begin{aligned}
+   K_c &= \frac{[\ce{NO}]^2[\ce{Cl2}]}{[\ce{NOCl}]^2} \\
+   &= \frac{(0.0900)^2(0.0450)}{(0.150)^2} \\
+   &= 0.0162
+   \end{aligned}
+   $$
+
+6. **Look back at the table.** The changes are in the ratio 2 : 2 : 1, like the coefficients, and nothing in the Equilibrium row is negative. Now suppose the starting concentration of NOCl, 0.240 M, had gone into $K$ in place of 0.150 M:
+
+   $$
+   \begin{aligned}
+   &\frac{(0.0900)^2(0.0450)}{(0.240)^2} \\
+   &= 6.33 \times 10^{-3}
+   \end{aligned}
+   $$
+
+   That is less than half the right value.
+
+</Worked>
+
+The same table works in atm when the data are partial pressures and the constant you want is $K_p$. In a sealed container at a constant temperature, each gas's partial pressure is proportional to its moles (topic 3.4), so the pressures change in the ratio of the coefficients too.
+
+<Check numeric="3.0e-3">
+A 2.00 L quartz bulb is sealed with 0.0500 mol of iodine, I₂, inside and heated in a furnace. At a certain high temperature all of the iodine is vapor, and some of the molecules split into atoms:
+
+$$
+\ce{I2(g) <=> 2I(g)}
+$$
+
+At equilibrium, the strength of the vapor's violet color shows that 0.0420 mol of I₂ is left. What is $K_c$?
+
+<div slot="why">
+
+First find the moles of I₂ that split.
+
+$$
+0.0500 - 0.0420 = 0.0080\ \text{mol}
+$$
+
+Each I₂ gives two atoms, so the moles of I that formed are
+
+$$
+2 \times 0.0080 = 0.016\ \text{mol}
+$$
+
+Divide both equilibrium amounts by the volume.
+
+$$
+\begin{aligned}
+[\ce{I2}] &= \frac{0.0420\ \text{mol}}{2.00\ \text{L}} \\
+&= 0.0210\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{I}] &= \frac{0.016\ \text{mol}}{2.00\ \text{L}} \\
+&= 0.0080\ \text{M}
+\end{aligned}
+$$
+
+Then substitute.
+
+$$
+\begin{aligned}
+K_c &= \frac{[\ce{I}]^2}{[\ce{I2}]} \\
+&= \frac{(0.0080)^2}{0.0210} \\
+&= 3.0 \times 10^{-3}
+\end{aligned}
+$$
+
+The subtraction leaves two significant figures, so $K_c$ has two. An answer of 3.05 × 10⁻³, not yet rounded, is accepted too.
+
+If you got 7.6 × 10⁻⁴, you did not double the iodine atoms. If you got 6.1 × 10⁻³, you used moles without dividing by 2.00 L. If you got 2.6 × 10⁻³, you used the starting amount of I₂ in place of the equilibrium amount. If you got 0.38, you forgot the square. (The data are made up for this Check.)
+
+</div>
+</Check>
+
+## One temperature, one K
+
+In topic 7.3, three tubes held three different mixtures, and all three gave one value of $K$. So a measurement on any one equilibrium mixture gives the $K$ for every mixture of that reaction at that temperature. What a different starting mixture changes is where the concentrations settle.
+
+<Check answer={2}>
+The sealed vessel of the second worked example started with 0.240 M NOCl and reached equilibrium at 0.150 M NOCl, 0.0900 M NO and 0.0450 M Cl₂, giving $K_c$ = 0.0162. A second vessel at the same temperature starts with twice as much, 0.480 M NOCl. What is true of the second vessel at equilibrium?
+
+- $K_c$ is twice as large, because there is twice as much NOCl.
+- $K_c$ is the same, but the concentrations are not simply doubled.
+- $K_c$ is the same, and every concentration is exactly double the first vessel's.
+- $K_c$ is smaller, because a smaller fraction of the NOCl breaks down.
+
+<div slot="why">
+
+$K_c$ depends only on the temperature, so it is 0.0162 again. The concentrations cannot simply be double the first vessel's. Try it, with 0.300 M NOCl, 0.180 M NO and 0.0900 M Cl₂:
+
+$$
+\frac{(0.180)^2(0.0900)}{(0.300)^2} = 0.0324
+$$
+
+That is twice $K_c$, so a mixture with those concentrations would not be at equilibrium. The second vessel settles at other concentrations, which again give 0.0162. A smaller fraction of its NOCl does break down, but that changes the concentrations, not $K$.
+
+</div>
+</Check>
+
+<Trap>
+
+Six mistakes come up again and again on this topic:
+
+- **Leaving off an exponent.** Each concentration is raised to its coefficient. Without the cube on [F₂], the NF₃ answer came out about 1100 times too large.
+- **Using moles in $K_c$.** Divide by the volume first: 0.200 mol in 5.00 L is 0.0400 M.
+- **Putting in a starting value.** Only equilibrium values go into $K$. The Initial row is there to help you find them.
+- **Giving every substance the same change.** The Change row follows the coefficients: NO changed by 0.0900 M while Cl₂ changed by 0.0450 M.
+- **Mixing pressures and concentrations.** Pressures in atm go with $K_p$ and concentrations in mol/L with $K_c$, never both in one expression.
+- **Putting a unit on $K$.** On the AP exam, $K$ has none.
+
+</Trap>
+
+<KeyPoints>
+
+- $K$ is found by experiment: measure the concentrations or partial pressures in a mixture at equilibrium, and substitute them into the $K$ expression.
+- Concentrations go in as mol/L for $K_c$ and pressures as atm for $K_p$, each raised to its coefficient. $K$ has no unit.
+- When only one equilibrium value was measured, a table of initial, change and equilibrium values gives the rest, because the changes are in the ratio of the coefficients.
+- Only equilibrium values go into $K$, never starting values.
+- At a given temperature, every equilibrium mixture of a reaction gives the same $K$.
+
+</KeyPoints>
+
+<PracticeNext />
