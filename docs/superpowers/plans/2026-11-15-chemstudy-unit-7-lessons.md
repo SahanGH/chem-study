@@ -801,6 +801,27 @@ Branch: `topic/unit-7-using-k`, from `main` after pull request B merges. Tasks 6
 
 Branch: `topic/unit-7-shifts-and-solubility`, from `main` after pull request C merges. Tasks 10 to 15. The pull request title is "feat(lessons): Unit 7 lessons 7.9-7.12 and the disturbed-equilibrium explorer".
 
+> **As carried out (2026-11-15).** The repository is newer than Tasks 10 to 14 below. Each lesson was fact-checked on Fable 5.2 (no wrong answer, number or figure count in any), the group was checked for originality (no strong match), and two reviewers approved the explorer's code. What changed, and why:
+>
+> - **The explorer (Task 10).**
+>   - `formatConstant` delegates to `formatQuantity` in `src/lib/format.ts`. `formatConcentration` stays in the module, since nothing shared prints "three figures, or four when the exact value needs them".
+>   - The module also exports `shiftTable` (the table as strings), `describeGraph` (the graph's accessible name) and `stepAt`, which throws if the disturbance does not fall on a whole step of the drawn path.
+>   - The table's caption is "Before and after the disturbance. Concentrations in M."
+>   - The finite-number and range guards now repeated across the diagram modules, and the small helpers repeated across the diagram components, are left for a change of their own.
+> - **Lesson 7.9.**
+>   - Check 2 asks for the number of moles of product. After a squeeze the product ends more concentrated in all four mixtures, so "amount" had more than one reading.
+>   - The pH rule is stated as the shift's own effect. In three of the lesson's four pH cases the stress itself adds or removes H⁺, and the pH ends on the side the stress pushed it; the brief's summary sentence gave the wrong answer for those. The rule speaks of the concentration of H⁺ at the end against the start, not of "more H⁺". For dilution the lesson says that when the shift makes H⁺ the two effects pull against each other and the direction of the shift does not settle the pH. A correction made on the way claimed that the pH then always ends higher; a third fact-check showed that false for the lesson's own chromate equilibrium, where dilution by a factor f raises [H⁺] by about √f.
+>   - The water of a solution is "the solvent, and like a pure liquid it is left out of K". Adding more solvent is dilution, which does shift; the lesson says so beside "more of a pure solid or liquid shifts nothing".
+>   - The figure draws N₂O₄ solid and NO₂ dashed, as the explorer does, and labels its five concentrations.
+>   - Check 2's four equations are lettered A to D in the question (an option is never math alone). The worked example's table has short headers and fits a phone down to 360 px.
+> - **Lesson 7.10.**
+>   - The temperature section goes back to the starting mixture by name. Read in order, the brief's "lock the piston again and warm the cylinder" warmed the squeezed mixture, for which the stated new equilibrium is impossible.
+>   - The last section starts from two changes made at once that pull in opposite directions. The brief's wording followed the old notes' ("any mixture", "never at equilibrium").
+>   - A paragraph under the diagram says why "Add N₂O₄" and "Add NO₂" end at the same mixture.
+> - **Lesson 7.11.** Cations are drawn dark and anions pale in the figure, as in Unit 3 (the brief had them the other way). Check 1's four expressions are lettered A to D. Headings and one worked example title avoid plain "K_sp".
+> - **Lesson 7.12.** The table's rows are I, C and E. The rinse Check says that dilute sulfuric acid holds sulfate ions. A filtered solution with no solid is no longer called saturated.
+> - **Kept, after the originality check:** N₂O₄ ⇌ 2 NO₂ as the system of 7.9 and 7.10 (decided in the design); strontium fluoride in a strontium nitrate solution (a Tro practice item has calcium fluoride in calcium nitrate); the silver chromate expression Check; the standard order of a common-ion calculation.
+
 ### Task 10: The disturbed-equilibrium explorer
 
 **Files:**

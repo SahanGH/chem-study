@@ -266,3 +266,39 @@ The Unit 3 pipeline, with its lessons learned built in:
 - No lesson scrolls sideways at 320 px with every answer open.
 - Both interactive diagrams work by keyboard, and both show a drawn picture
   without JavaScript and in print.
+
+## As built (Plan 9, 2026-11-15)
+
+Twelve lessons, 49 Checks (16 of them numeric), 19 worked examples, 14 drawn
+figures and two interactive diagrams, in four pull requests (#34 to #37).
+
+- **Every lesson was fact-checked twice on Fable 5.2** by fresh agents that
+  solved each Check before reading its answer. No round found a wrong
+  answer, number, particle count or plotted value. Their findings were about
+  wording: a rule stated without its condition, a Check that could be
+  answered without thinking, a K_c set beside a K_p.
+- **Every group was checked for originality twice on Sonnet.** No lesson
+  shares a scenario's numbers with a source. The briefs had two strong
+  matches, both solubility examples, and they were replaced before the plan
+  was committed. `salt-clearance.md` in the session scratch folder records
+  which salts appear in a source's solubility calculations.
+- **What changed from this design:**
+  - The first diagram lets the student pick rate constants, not K, because
+    K is not defined until lesson 7.3.
+  - The second diagram uses lesson 7.10's own numbers (K = 0.490, starting
+    at 0.0625 M and 0.175 M), chosen so that all five new equilibria are
+    exact decimals. It shows a table under the graph, not beside it.
+  - Fourteen figures, not ten: lesson 7.1 gained two concentration graphs,
+    lesson 7.7 a number line for Q against K, and lesson 7.8 a second
+    particle drawing.
+- **Two rules for writing lessons came out of the work**, and they hold for
+  the units to come:
+  - An answer option is never math alone. A rendered fraction's visible
+    text is not its accessible name, and the accessibility test fails.
+    Expressions are lettered A to D in the question.
+  - The rows of a table of initial, change and equilibrium values are
+    labeled I, C and E, with a sentence saying what they stand for. With
+    the words in the first column the table is too wide for a phone.
+- **Left for a change of its own:** the diagram modules now repeat their
+  range and finite-number guards, and the diagram components repeat a few
+  drawing helpers. Both reviews said to extract them separately.
