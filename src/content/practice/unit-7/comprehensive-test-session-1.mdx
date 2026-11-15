@@ -1,0 +1,1729 @@
+---
+title: "Comprehensive test, session 1: equilibrium and its constant"
+kind: test
+order: 8
+topics: ["7.1", "7.2", "7.3", "7.4", "7.5", "7.6"]
+summary: Twenty scored free-response questions on reversible reactions, Q and K, calculating K, and the size and rules of K, each with a worked answer and its scoring rubric.
+points: 98
+minutes: 100
+---
+
+This is the first of two sittings that together test all of Unit 7. It covers topics 7.1 to 7.6: reversible reactions and equilibrium, the reaction quotient and the equilibrium constant, calculating $K$, and what the size of $K$ and its rules tell you. Session 2 covers calculating equilibrium concentrations, particle pictures of equilibrium, Le Châtelier's principle, and solubility.
+
+There are 20 questions worth 98 points. Give yourself about 100 minutes. You may use a calculator. Write out each answer in full before you open the worked answer and the scoring rubric.
+
+Where a later part uses a value you found earlier, a correct method applied to your own earlier value earns the later points, as on the AP exam.
+
+## Part A: Reversible reactions and equilibrium
+
+Five questions on what equilibrium is and how a mixture gets there. You will read tables of concentrations and of rates against time, follow the same equilibrium reached from either side, and correct some common wrong ideas about what equilibrium means.
+
+<Question number={1} title="Reading a table of concentrations" topic="7.1" points={5}>
+
+Over a solid catalyst, butane, $\ce{C4H10}$, turns into its isomer 2-methylpropane (also called isobutane), which has the same atoms arranged differently. The reaction runs both ways:
+
+$$
+\begin{aligned}
+&\text{butane(g)} \;\ce{<=>} \\
+&\quad \text{2-methylpropane(g)}
+\end{aligned}
+$$
+
+A sealed steel vessel holding the catalyst is filled with 0.0800 M butane and nothing else, and kept at a fixed temperature. The table gives both concentrations as time goes on. (The data are for illustration.)
+
+| Time (min) | Butane (M) | 2-Methylpropane (M) |
+|---|---|---|
+| 0 | 0.0800 | 0 |
+| 5 | 0.0408 | 0.0392 |
+| 10 | 0.0295 | 0.0505 |
+| 15 | 0.0263 | 0.0537 |
+| 20 | 0.0254 | 0.0546 |
+| 25 | 0.0251 | 0.0549 |
+| 30 | 0.0250 | 0.0550 |
+| 40 | 0.0250 | 0.0550 |
+| 50 | 0.0250 | 0.0550 |
+
+<Part label="a">
+
+Identify the first reading at which the mixture is at equilibrium, and justify your choice with the data.
+
+<Answer>
+
+The mixture is at equilibrium from **30 min** on.
+
+At equilibrium the concentrations stop changing. From 30 min to 50 min, $[\text{butane}]$ stays at 0.0250 M and $[\text{2-methylpropane}]$ stays at 0.0550 M. At 25 min they were still changing: butane was 0.0251 M, and it fell to 0.0250 M by 30 min.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Show from the table that the reaction did not go to completion, and calculate the percent of the butane that was converted to 2-methylpropane by the time equilibrium was reached.
+
+<Answer>
+
+Butane is still present at equilibrium (0.0250 M from 30 min on), so the reaction did not go to completion.
+
+The 2-methylpropane at equilibrium came from butane, one to one, so the percent converted is the 2-methylpropane at equilibrium divided by the starting butane:
+
+$$
+\frac{0.0550}{0.0800} \times 100\% = 68.75\%
+$$
+
+About 69 percent of the butane was converted.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Describe what is happening to butane and 2-methylpropane molecules between 40 min and 50 min, and explain why the concentrations stay constant.
+
+<Answer>
+
+Both reactions are still running. Butane molecules are still turning into 2-methylpropane, and 2-methylpropane molecules are still turning back into butane.
+
+What is equal is the two **rates**: each second, as many butane molecules become 2-methylpropane as 2-methylpropane molecules become butane. So there is no net change, and the concentrations stay constant. The concentrations themselves are not equal.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for 30 min; 1 point for the justification that both concentrations are constant from 30 min on (noting that butane still changes between 25 min and 30 min is welcome but not required). An answer of 5 min earns 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for the percent converted (68.75, 68.8 or about 69 percent). A percent below 100, or the statement that butane is still present at equilibrium, shows the reaction did not go to completion; it is expected in the answer but earns no separate point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for saying that both reactions are still running (butane to 2-methylpropane and back); 1 point for saying that the forward and reverse rates are equal, so there is no net change. Saying that the reactions have stopped, or that the concentrations are equal, earns 0 points for this part.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={2} title="Two rates that close in" topic="7.2" points={5}>
+
+A gas X breaks down reversibly into a gas Y:
+
+$$
+\ce{X(g) <=> 2Y(g)}
+$$
+
+A sealed flask is filled with 0.100 M X and no Y, and kept at a fixed temperature. The forward rate is the rate at which the forward reaction uses up X. The reverse rate is the rate at which the reverse reaction makes X. Both are measured as time goes on. (The values are made up.)
+
+| Time (s) | Forward rate (M/s) | Reverse rate (M/s) |
+|---|---|---|
+| 0 | $1.0 \times 10^{-3}$ | 0 |
+| 20 | $8.3 \times 10^{-4}$ | $1.1 \times 10^{-4}$ |
+| 40 | $7.2 \times 10^{-4}$ | $3.0 \times 10^{-4}$ |
+| 60 | $6.6 \times 10^{-4}$ | $4.5 \times 10^{-4}$ |
+| 80 | $6.3 \times 10^{-4}$ | $5.3 \times 10^{-4}$ |
+| 100 | $6.1 \times 10^{-4}$ | $5.7 \times 10^{-4}$ |
+| 150 | $6.0 \times 10^{-4}$ | $6.0 \times 10^{-4}$ |
+| 200 | $6.0 \times 10^{-4}$ | $6.0 \times 10^{-4}$ |
+| 250 | $6.0 \times 10^{-4}$ | $6.0 \times 10^{-4}$ |
+
+<Part label="a">
+
+Describe how each rate changes from 0 s to 150 s, and explain each change in terms of the particles in the flask.
+
+<Answer>
+
+The **forward rate falls**, from $1.0 \times 10^{-3}$ M/s to $6.0 \times 10^{-4}$ M/s. The forward reaction uses up X, so there are fewer X particles in each liter, and fewer of them break down each second.
+
+The **reverse rate rises from zero**, to $6.0 \times 10^{-4}$ M/s. At the start there is no Y, so the reverse reaction cannot run at all. As Y builds up, Y particles meet more often, and more of them turn back into X each second.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate how fast $[\ce{Y}]$ is changing at 60 s, and state whether it is rising or falling.
+
+<Answer>
+
+At 60 s the forward rate is the larger, so there is a net conversion of X into Y. X is being used up, net, at the difference between the two rates:
+
+$$
+\begin{aligned}
+&6.6 \times 10^{-4}\ \text{M/s} \\
+&\quad - 4.5 \times 10^{-4}\ \text{M/s} \\
+&= 2.1 \times 10^{-4}\ \text{M/s}
+\end{aligned}
+$$
+
+Each X that breaks down makes 2 Y, so $[\ce{Y}]$ changes twice as fast:
+
+$$
+\begin{aligned}
+&2 \times 2.1 \times 10^{-4}\ \text{M/s} \\
+&= \mathbf{4.2 \times 10^{-4}}\ \text{M/s}
+\end{aligned}
+$$
+
+$[\ce{Y}]$ is **rising**.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Identify the reading by which the flask has reached equilibrium, and state the forward and reverse rates there.
+
+<Answer>
+
+By **150 s**. From 150 s on, the forward and reverse rates are equal, both $6.0 \times 10^{-4}$ M/s, so there is no net change. At 100 s the forward rate was still the larger.
+
+Neither rate is zero: both reactions are still running at equilibrium.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the forward rate falling because X is used up (fewer X particles per liter); 1 point for the reverse rate rising from zero because Y builds up (none at the start). A description of the changes with no reasons earns 1 point in total.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the net rate as the difference of the two rates, $2.1 \times 10^{-4}$ M/s; 1 point for doubling it to $4.2 \times 10^{-4}$ M/s with $[\ce{Y}]$ rising. An answer of $2.1 \times 10^{-4}$ M/s for Y earns the first point only; adding the two rates earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for 150 s with the two rates equal at $6.0 \times 10^{-4}$ M/s. Saying that both rates are zero at equilibrium earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={3} title="The same mixture from the other side" topic="7.1, 7.2" points={4}>
+
+The white solid $\ce{PH3BCl3}$ breaks down into two gases, phosphine and boron trichloride, and the two gases combine to make it again:
+
+$$
+\begin{aligned}
+&\ce{PH3BCl3(s) <=>} \\
+&\quad \ce{PH3(g) + BCl3(g)}
+\end{aligned}
+$$
+
+Two identical 1.00 L vessels, emptied of air, are kept at the same fixed temperature.
+
+- Vessel 1 starts with 0.0200 mol of solid $\ce{PH3BCl3}$ and nothing else.
+- Vessel 2 starts with 0.0200 mol of $\ce{PH3}$ and 0.0200 mol of $\ce{BCl3}$, and no solid.
+
+In each vessel $[\ce{BCl3}]$ equals $[\ce{PH3}]$ at every moment, because the two gases start equal and form or are used up one for one. The table gives $[\ce{PH3}]$ in each vessel. (The data are for illustration.)
+
+| Time (min) | Vessel 1: $[\ce{PH3}]$ (M) | Vessel 2: $[\ce{PH3}]$ (M) |
+|---|---|---|
+| 0 | 0 | 0.0200 |
+| 2 | 0.00175 | 0.0110 |
+| 5 | 0.00381 | 0.00764 |
+| 10 | 0.00543 | 0.00633 |
+| 15 | 0.00587 | 0.00607 |
+| 20 | 0.00597 | 0.00602 |
+| 30 | 0.00600 | 0.00600 |
+| 40 | 0.00600 | 0.00600 |
+
+<Part label="a">
+
+At the moment vessel 2 is filled, state which reaction is running, forward or reverse, and explain why the other cannot run.
+
+<Answer>
+
+Only the **reverse** reaction is running: $\ce{PH3}$ and $\ce{BCl3}$ combine to make the solid. The forward reaction is the breakdown of solid $\ce{PH3BCl3}$, and vessel 2 holds no solid yet, so there is nothing to break down.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Compare the two vessels once both are at equilibrium, and explain why they end as they do.
+
+<Answer>
+
+From 30 min on, both vessels hold **0.00600 M** $\ce{PH3}$ and 0.00600 M $\ce{BCl3}$. They end at the same equilibrium, one from each side: in vessel 1 some solid breaks down, and in vessel 2 some of the gases combine.
+
+The two vessels hold the same atoms: 0.0200 mol of $\ce{PH3BCl3}$ contains exactly the atoms of 0.0200 mol of $\ce{PH3}$ and 0.0200 mol of $\ce{BCl3}$. With the same atoms in the same volume at the same temperature, the forward and reverse rates balance at the same mixture, whichever side it starts from.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate the amount of solid $\ce{PH3BCl3}$, in moles, in each vessel at equilibrium.
+
+<Answer>
+
+Each vessel is 1.00 L, so 0.00600 M is 0.00600 mol of each gas. One mole of solid goes with one mole of each gas.
+
+In vessel 1, 0.00600 mol of the solid broke down:
+
+$$
+\begin{aligned}
+&0.0200 - 0.00600 \\
+&= \mathbf{0.0140}\ \text{mol}
+\end{aligned}
+$$
+
+In vessel 2, each gas fell from 0.0200 mol to 0.00600 mol, so 0.0140 mol of each combined, making **0.0140 mol** of solid.
+
+Both vessels hold 0.0140 mol of solid beside their gases: reactant and products are both present at equilibrium.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for the reverse reaction only, because there is no solid to break down.</RubricLine>
+<RubricLine part="b" points={2}>1 point for both vessels ending at 0.00600 M of each gas, read from the table; 1 point for the reason: the same atoms in the same volume at the same temperature give the same equilibrium, reached from either side (or: at the same temperature $K$ is the same, and with $[\ce{PH3}] = [\ce{BCl3}]$ and solid present in both, the gas concentrations must be the same).</RubricLine>
+<RubricLine part="c" points={1}>1 point for 0.0140 mol of solid in each vessel. Giving 0.00600 mol (the gas, not the solid) earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={4} title="Which way each flask is going" topic="7.2" points={4}>
+
+Gases A and B combine reversibly to make gas D:
+
+$$
+\ce{A(g) + B(g) <=> D(g)}
+$$
+
+Three sealed flasks hold different mixtures of the three gases, all at the same fixed temperature. At one moment the forward and reverse rates are measured in each flask. (The values are made up.)
+
+| Flask | Forward rate (M/s) | Reverse rate (M/s) |
+|---|---|---|
+| 1 | $3.6 \times 10^{-5}$ | $3.6 \times 10^{-5}$ |
+| 2 | $1.5 \times 10^{-5}$ | $4.0 \times 10^{-5}$ |
+| 3 | $2.4 \times 10^{-5}$ | 0 |
+
+<Part label="a">
+
+For each flask, state whether there is a net change at that moment and, if there is, whether it is toward D or toward A and B. Justify each answer.
+
+<Answer>
+
+- **Flask 1: no net change.** The two rates are equal, so the flask is at equilibrium.
+- **Flask 2: a net change toward A and B.** The reverse rate is the larger, so D is breaking down faster than it forms.
+- **Flask 3: a net change toward D.** The forward rate is the larger. (The reverse rate is zero, so this flask holds no D yet.)
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Flask 2 holds 0.10 M A, 0.10 M B and 0.020 M D. A student says that because there is so much more A and B than D, flask 2 must be making D. Calculate how fast $[\ce{D}]$ is changing in flask 2, and explain the student's error.
+
+<Answer>
+
+The reverse rate is the larger, so the net change is the difference:
+
+$$
+\begin{aligned}
+&4.0 \times 10^{-5}\ \text{M/s} \\
+&\quad - 1.5 \times 10^{-5}\ \text{M/s} \\
+&= 2.5 \times 10^{-5}\ \text{M/s}
+\end{aligned}
+$$
+
+Every coefficient is 1, so $[\ce{D}]$ is **falling** at $\mathbf{2.5 \times 10^{-5}}$ M/s, and $[\ce{A}]$ and $[\ce{B}]$ are each rising at the same rate.
+
+The student judged the direction from the amounts. What decides the direction is which rate is larger. In flask 2 the reverse rate is larger, so D is being used up even though there is less D than A or B.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>2 points for all three flasks right, each with the comparison of its two rates; 1 point for two flasks right.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $[\ce{D}]$ falling at $2.5 \times 10^{-5}$ M/s; 1 point for saying that the direction is set by which rate is larger, not by which substance is present in the larger amount.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={5} title="Correcting three claims" topic="7.1, 7.2" points={4}>
+
+Cyclopropane, $\ce{C3H6}$, is a gas whose three carbon atoms form a ring. At a high temperature the ring opens and the molecule becomes its isomer propene, which has the same atoms in a chain. Propene can also close back into the ring:
+
+$$
+\begin{aligned}
+&\text{cyclopropane(g)} \;\ce{<=>} \\
+&\quad \text{propene(g)}
+\end{aligned}
+$$
+
+A sealed bulb of cyclopropane is held at a fixed high temperature. After several hours, analyses made an hour apart all give the same result: the bulb is almost all propene, with a trace of cyclopropane.
+
+Three students explain the result.
+
+<Part label="a">
+
+Student 1: "The reaction has stopped, because nothing in the bulb is changing any more." Explain what is wrong with this claim.
+
+<Answer>
+
+The bulb is at equilibrium, and equilibrium is dynamic. Both reactions are still running: cyclopropane rings are still opening into propene, and propene chains are still closing into cyclopropane.
+
+They run at **equal rates**, so each second as many molecules change one way as the other. That is why nothing measurable changes. No net change does not mean no change.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Student 2: "At equilibrium the two concentrations must be equal. They are not, so the bulb is not at equilibrium." Explain what is wrong with this claim.
+
+<Answer>
+
+Equilibrium means equal rates, not equal concentrations. The sign of equilibrium is that the concentrations are **constant**, and the analyses an hour apart show exactly that. How much of each substance is present at equilibrium depends on the reaction, the temperature and how much was put in, and here it is mostly propene.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Student 3: "There is far more propene than cyclopropane, so propene must now be turning into cyclopropane faster than cyclopropane turns into propene." Explain what is wrong with this claim.
+
+<Answer>
+
+At equilibrium the two rates are **equal**. If propene were turning into cyclopropane faster, there would be a net conversion to cyclopropane, and the amount of cyclopropane would be growing. The analyses show it is constant.
+
+The amounts can be so different while the rates are equal because a cyclopropane molecule opens far more readily than a propene molecule closes. The few cyclopropane molecules make as many changes each second as the many propene molecules.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for saying that both reactions are still running; 1 point for saying that they run at equal rates, so there is no net change. Saying that both rates are zero earns 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for saying that equilibrium means equal rates (or constant concentrations), not equal concentrations.</RubricLine>
+<RubricLine part="c" points={1}>1 point for saying that the rates are equal at equilibrium (or that a faster reverse reaction would make the cyclopropane grow, which it does not). Explaining why the amounts differ is not needed for the point.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part B: The reaction quotient and the equilibrium constant
+
+Five questions on topic 7.3: writing $K_c$ and $K_p$ for gases, a solution and reactions with a solid or a liquid, and saying what is left out and why; working out $Q$ for a mixture as it stands and saying what $Q$ equal to $K$ means; what changes the value of $K$; and which constant a set of numbers belongs with.
+
+<Question number={6} title="Writing K for an all-gas reaction" topic="7.3" points={4}>
+
+Over a hot platinum catalyst, ammonia reacts with oxygen to give nitrogen monoxide and steam. Every substance in the equation is a gas:
+
+$$
+\begin{aligned}
+&\ce{4NH3(g) + 5O2(g) <=>} \\
+&\quad \ce{4NO(g) + 6H2O(g)}
+\end{aligned}
+$$
+
+<Part label="a">
+
+Write the expression for $K_c$.
+
+<Answer>
+
+Products go on top and reactants on the bottom, each concentration raised to the power of its coefficient, and the terms are multiplied:
+
+$$
+K_c = \frac{[\ce{NO}]^4[\ce{H2O}]^6}{[\ce{NH3}]^4[\ce{O2}]^5}
+$$
+
+All four substances are gases, so all four are in.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Write the expression for $K_p$.
+
+<Answer>
+
+The same pattern, with the partial pressure of each gas in place of its concentration:
+
+$$
+K_p = \frac{(P_{\ce{NO}})^4(P_{\ce{H2O}})^6}{(P_{\ce{NH3}})^4(P_{\ce{O2}})^5}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A student writes the expression below, saying, "Water is always left out of $K$."
+
+$$
+K_c = \frac{[\ce{NO}]^4}{[\ce{NH3}]^4[\ce{O2}]^5}
+$$
+
+Explain what is wrong with the student's expression.
+
+<Answer>
+
+The water in this equation is **a gas**, $\ce{H2O(g)}$, so it **belongs in the expression**, as $[\ce{H2O}]^6$ on top. The rule is about the state, not the substance. A gas can be more or less concentrated, so its concentration changes as the reaction runs, and every gas goes in. Only a pure liquid or a pure solid is left out, because its concentration is fixed. Water is left out only when it is written $\ce{H2O(l)}$, as a pure liquid or as the solvent.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for products over reactants with all four species and the terms multiplied; 1 point for all four exponents (4, 6, 4, 5). Multiplying by a coefficient instead of using it as an exponent, as in $4[\ce{NO}]$, loses the second point; an expression upside down earns only the exponent point.</RubricLine>
+<RubricLine part="b" points={1}>1 point for the same expression written with partial pressures. An expression built from concentrations earns 0 points here.</RubricLine>
+<RubricLine part="c" points={1}>1 point for saying that the water here is a gas, whose concentration can change, so $[\ce{H2O}]^6$ belongs in the expression (only water written as a liquid, $\ce{H2O(l)}$, is left out). "Water is never left out" earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={7} title="Q for a solution of triiodide ions" topic="7.3" points={5}>
+
+Iodine dissolves only slightly in pure water, but much better in a solution of potassium iodide. The dissolved iodine combines with iodide ions to form the brown triiodide ion:
+
+$$
+\ce{I2(aq) + I-(aq) <=> I3-(aq)}
+$$
+
+<Part label="a">
+
+Write the expression for $K_c$, and explain why this reaction has no $K_p$.
+
+<Answer>
+
+$$
+K_c = \frac{[\ce{I3-}]}{[\ce{I2}][\ce{I-}]}
+$$
+
+All three species are dissolved, (aq), so all three are in. The water is the solvent and does not appear in the equation.
+
+There is **no $K_p$** because none of the species is a gas. Only gases have partial pressures, so a reaction in solution has a $K_c$ only.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+At a certain temperature, $K_c = 7.10 \times 10^2$ for this reaction. A solution at that temperature holds these concentrations:
+
+| Species | Concentration (M) |
+|---|---|
+| $\ce{I2}$ | $5.60 \times 10^{-5}$ |
+| $\ce{I-}$ | 0.0250 |
+| $\ce{I3-}$ | $9.94 \times 10^{-4}$ |
+
+Calculate $Q_c$ for the solution.
+
+<Answer>
+
+$Q_c$ is the same fraction as $K_c$, filled in with the concentrations as they are now:
+
+$$
+\begin{aligned}
+Q_c &= \frac{9.94 \times 10^{-4}}{(5.60 \times 10^{-5})(0.0250)} \\
+&= \frac{9.94 \times 10^{-4}}{1.40 \times 10^{-6}} \\
+&= \mathbf{7.10 \times 10^2}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+State whether the solution is at equilibrium, and describe what is happening in it at the level of the particles.
+
+<Answer>
+
+$Q_c$ equals $K_c$, so the solution **is at equilibrium**. Its concentrations will stay as they are as long as nothing is added or taken away and the temperature does not change.
+
+The reaction has **not stopped**. Iodine molecules keep combining with iodide ions to form triiodide ions, and triiodide ions keep coming apart into iodine and iodide, **at equal rates**. Each triiodide ion that forms is matched by one that comes apart, so there is no net change.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the $K_c$ expression with all three dissolved species and nothing else; 1 point for saying that there is no $K_p$ because no species is a gas (only gases have partial pressures).</RubricLine>
+<RubricLine part="b" points={1}>1 point for $Q_c = 7.10 \times 10^2$ from the correct substitution. A value from an upside-down fraction ($1.41 \times 10^{-3}$) earns 0 points.</RubricLine>
+<RubricLine part="c" points={2}>1 point for "at equilibrium" because $Q_c = K_c$; 1 point for saying that the forward and reverse reactions both continue at equal rates. "The reaction has stopped" earns 0 points for the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={8} title="Leaving out a solid and a liquid" topic="7.3" points={4}>
+
+Mercury(II) oxide is a red solid that can break down into mercury and oxygen:
+
+$$
+\ce{2HgO(s) <=> 2Hg(l) + O2(g)}
+$$
+
+<Part label="a">
+
+Write the expression for $K_c$ and the expression for $K_p$.
+
+<Answer>
+
+The solid $\ce{HgO}$ and the liquid $\ce{Hg}$ are left out, which leaves only the oxygen, with nothing on the bottom:
+
+$$
+K_c = [\ce{O2}]
+$$
+
+$$
+K_p = P_{\ce{O2}}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Explain why $\ce{HgO}$ and $\ce{Hg}$ are left out of both expressions.
+
+<Answer>
+
+$\ce{HgO}$ is a **pure solid** and $\ce{Hg}$ is a **pure liquid**. At a given temperature the concentration of a pure solid or a pure liquid is **fixed by its density**: a grain of the solid and a heap of it, or a drop of the liquid and a pool of it, have the same concentration. So it does not change as the reaction runs, and putting it into the fraction would only carry the same fixed number in every mixture. Only the oxygen, whose concentration can change, is in.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A student says, "Because $\ce{HgO}$ is left out of the expression, a sealed flask of mercury and oxygen can still be at equilibrium after every bit of the $\ce{HgO}$ has broken down." Evaluate the claim.
+
+<Answer>
+
+The claim is **wrong**. Left out of the expression does not mean absent from the flask. With no $\ce{HgO}$ left, the forward reaction cannot happen at all, so there are no longer two reactions going on at equal rates, and nothing holds the oxygen at the pressure that $K_p$ sets. **Some $\ce{HgO}$ must be present** for this equilibrium to exist.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $K_c = [\ce{O2}]$; 1 point for $K_p = P_{\ce{O2}}$. An expression that includes $\ce{HgO}$ or $\ce{Hg}$ earns 0 points for that expression.</RubricLine>
+<RubricLine part="b" points={1}>1 point for saying that the concentration of a pure solid or pure liquid is fixed (by its density, whatever the amount), so it does not change as the reaction runs. "Because they are not gases" earns 0 points: dissolved substances are not gases either, and they are in.</RubricLine>
+<RubricLine part="c" points={1}>1 point for saying that the claim is wrong because some $\ce{HgO}$ must be present for the equilibrium to exist (without it the forward reaction cannot happen).</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={9} title="What the value of K depends on" topic="7.3" points={4}>
+
+Silver oxide, a dark brown solid, breaks down when it is heated, leaving solid silver:
+
+$$
+\ce{2Ag2O(s) <=> 4Ag(s) + O2(g)}
+$$
+
+Two sealed steel vessels are emptied of air and kept at the same temperature. Vessel 1 has a volume of 1.00 L and is loaded with 5.00 g of $\ce{Ag2O}$. Vessel 2 has a volume of 2.00 L and is loaded with 20.0 g of $\ce{Ag2O}$. Each vessel is left until it reaches equilibrium, with some $\ce{Ag2O}$ still left in both.
+
+<Part label="a">
+
+Write the expression for $K_p$.
+
+<Answer>
+
+The two solids are left out:
+
+$$
+K_p = P_{\ce{O2}}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Compare the pressure of oxygen in vessel 1 with the pressure of oxygen in vessel 2 at equilibrium. Justify your answer.
+
+<Answer>
+
+The two pressures are **the same**. At equilibrium $P_{\ce{O2}}$ equals $K_p$, and for a given equation $K_p$ depends **only on the temperature**. It does not depend on the size of the container or on how much of the solid was put in. The two vessels are at the same temperature, so they have the same $K_p$ and the same oxygen pressure.
+
+Vessel 2 holds more oxygen, in moles, because it is larger. But the pressure, the quantity in $K_p$, is the same in both. The masses and volumes are not needed.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Both vessels are then heated to a higher temperature and left to reach equilibrium again, still with some $\ce{Ag2O}$ in each. State whether the value of $K_p$ is the same as before, and explain.
+
+<Answer>
+
+$K_p$ **is not the same**. For a given equation, $K$ depends on the temperature, so each temperature has its own value. At the new temperature, the oxygen pressure in each vessel settles at the new value of $K_p$, and the two vessels again match each other.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for $K_p = P_{\ce{O2}}$, with neither solid. An expression that includes $\ce{Ag2O}$ or $\ce{Ag}$ earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for "the same"; 1 point for the reason: $P_{\ce{O2}}$ equals $K_p$, which depends only on the temperature, not on the amount of solid or the size of the vessel. An answer that says vessel 2 has the higher pressure because it holds more solid earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for saying that $K_p$ changes because the value of $K$ depends on the temperature.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={10} title="Pressures or concentrations" topic="7.3" points={6}>
+
+Baking soda, sodium hydrogen carbonate, breaks down when it is heated in a closed container. Water vapor and carbon dioxide form, and solid sodium carbonate is left:
+
+$$
+\begin{aligned}
+&\ce{2NaHCO3(s) <=>} \\
+&\quad \ce{Na2CO3(s) + H2O(g) + CO2(g)}
+\end{aligned}
+$$
+
+<Part label="a">
+
+Write the expression for $K_c$ and the expression for $K_p$.
+
+<Answer>
+
+Both solids are left out. The water is a gas here, so it is in:
+
+$$
+K_c = [\ce{H2O}][\ce{CO2}]
+$$
+
+$$
+K_p = (P_{\ce{H2O}})(P_{\ce{CO2}})
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+At a certain temperature, $K_p = 0.250$ for this reaction. A container at that temperature holds both solids, with water vapor at 0.400 atm and carbon dioxide at 0.500 atm. Calculate $Q_p$, and state whether the mixture is at equilibrium.
+
+<Answer>
+
+The data are partial pressures in atm, so they go into $Q_p$:
+
+$$
+\begin{aligned}
+Q_p &= (P_{\ce{H2O}})(P_{\ce{CO2}}) \\
+&= (0.400)(0.500) \\
+&= \mathbf{0.200}
+\end{aligned}
+$$
+
+$Q_p$ is 0.200 and $K_p$ is 0.250. They are not equal, so the mixture is **not at equilibrium**. Its pressures will keep changing until $Q_p$ reaches $K_p$.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A student measures the concentrations of water vapor and carbon dioxide, in mol/L, in another container at the same temperature. The student multiplies the two concentrations and compares the product with 0.250. Explain what is wrong with this comparison, and state what the student could compare instead.
+
+<Answer>
+
+A product of concentrations in mol/L is **$Q_c$**. It has to be compared with **$K_c$**, not with $K_p$. The value 0.250 is $K_p$, which is built from partial pressures in atm, and for the same reaction at the same temperature $K_c$ and $K_p$ are usually different numbers. So setting $Q_c$ beside 0.250 shows nothing.
+
+The student could compare $Q_c$ with **the value of $K_c$** at that temperature, or measure the **partial pressures in atm**, work out $Q_p$, and compare that with $K_p = 0.250$.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $K_c = [\ce{H2O}][\ce{CO2}]$; 1 point for $K_p = (P_{\ce{H2O}})(P_{\ce{CO2}})$. An expression that includes either solid, or leaves out the water, earns 0 points for that expression.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $Q_p = 0.200$; 1 point for "not at equilibrium" because $Q_p$ is not equal to $K_p$. A correct statement of which way the mixture runs is not required and earns no extra point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for saying that the product of concentrations is $Q_c$, which cannot be compared with $K_p$ (the two constants are usually different numbers); 1 point for a sound alternative, for example: compare $Q_c$ with $K_c$; measure the partial pressures in atm and compare $Q_p$ with $K_p$; or turn each concentration into a partial pressure with the ideal gas law and compare $Q_p$ with $K_p$. Converting 0.250 into a $K_c$ is not expected and earns no extra point.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part C: Calculating the equilibrium constant
+
+In this part you calculate $K$ from measurements on mixtures at equilibrium: a set of concentrations, a set of partial pressures, one measured value with a table of initial, change and equilibrium values, and the share of a reactant that has reacted. In every question, $K$ is the unknown.
+
+<Question number={11} title="K from two equilibrium mixtures" topic="7.4" points={4}>
+
+Nitrogen and ethyne (acetylene) react reversibly to form hydrogen cyanide:
+
+$$
+\ce{N2(g) + C2H2(g) <=> 2HCN(g)}
+$$
+
+Two sealed steel vessels are held at the same temperature, a certain high temperature. Vessel 1 was filled with $\ce{N2}$ and $\ce{C2H2}$ only. Vessel 2 was filled with $\ce{HCN}$ only, so its mixture ran toward $\ce{N2}$ and $\ce{C2H2}$. Once nothing in either vessel was changing, the concentrations were measured. (The data are made up.)
+
+| Vessel | $[\ce{N2}]$ (M) | $[\ce{C2H2}]$ (M) | $[\ce{HCN}]$ (M) |
+|---|---|---|---|
+| 1 | 0.250 | 0.160 | 0.00400 |
+| 2 | 0.0750 | 0.0750 | 0.00150 |
+
+<Part label="a">
+
+Write the expression for $K_c$, and calculate its value from the data for vessel 1.
+
+<Answer>
+
+Product on top, reactants on the bottom, each raised to its coefficient:
+
+$$
+K_c = \frac{[\ce{HCN}]^2}{[\ce{N2}][\ce{C2H2}]}
+$$
+
+Substitute vessel 1's equilibrium concentrations:
+
+$$
+\begin{aligned}
+K_c &= \frac{(4.00 \times 10^{-3})^2}{(0.250)(0.160)} \\
+&= \frac{1.60 \times 10^{-5}}{0.0400} \\
+&= \mathbf{4.00 \times 10^{-4}}
+\end{aligned}
+$$
+
+$K_c$ has no unit.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $K_c$ from the data for vessel 2. State what the two results show, and explain why.
+
+<Answer>
+
+$$
+\begin{aligned}
+K_c &= \frac{(1.50 \times 10^{-3})^2}{(0.0750)(0.0750)} \\
+&= \frac{2.25 \times 10^{-6}}{5.625 \times 10^{-3}} \\
+&= \mathbf{4.00 \times 10^{-4}}
+\end{aligned}
+$$
+
+The two vessels give **the same $K_c$**, although they started from opposite sides of the equation and settled at very different concentrations. For a given equation, $K$ depends only on the temperature, not on the starting amounts or on the side the reaction started from. So every equilibrium mixture of this reaction at this temperature gives $4.00 \times 10^{-4}$.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the expression with $[\ce{HCN}]$ squared; 1 point for $K_c = 4.00 \times 10^{-4}$ with no unit. Leaving off the square gives 0.100 and earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $K_c = 4.00 \times 10^{-4}$ from vessel 2; 1 point for saying that both mixtures give the same $K_c$ because at a given temperature $K$ does not depend on the starting amounts or on the side the reaction started from. Saying only that the two values match earns the first point alone.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={12} title="K from partial pressures in torr" topic="7.4" points={5}>
+
+Nitryl chloride, $\ce{NO2Cl}$, breaks down reversibly when it is heated:
+
+$$
+\begin{aligned}
+&\ce{2NO2Cl(g) <=>} \\
+&\quad \ce{2NO2(g) + Cl2(g)}
+\end{aligned}
+$$
+
+A rigid flask is filled with $\ce{NO2Cl}$ alone and held at a certain temperature. At equilibrium the partial pressures are 7.60 torr of $\ce{NO2Cl}$, 456 torr of $\ce{NO2}$ and 228 torr of $\ce{Cl2}$. One atmosphere is 760 torr. (The data are made up.)
+
+<Part label="a">
+
+Calculate $K_p$.
+
+<Answer>
+
+$K_p$ takes partial pressures in atm, so first divide each pressure by 760 torr/atm.
+
+$$
+\begin{aligned}
+P_{\ce{NO2Cl}} &= \frac{7.60\ \text{torr}}{760\ \text{torr/atm}} \\
+&= 0.0100\ \text{atm}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+P_{\ce{NO2}} &= \frac{456\ \text{torr}}{760\ \text{torr/atm}} \\
+&= 0.600\ \text{atm}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+P_{\ce{Cl2}} &= \frac{228\ \text{torr}}{760\ \text{torr/atm}} \\
+&= 0.300\ \text{atm}
+\end{aligned}
+$$
+
+Write the expression, with each coefficient as an exponent:
+
+$$
+K_p = \frac{(P_{\ce{NO2}})^2(P_{\ce{Cl2}})}{(P_{\ce{NO2Cl}})^2}
+$$
+
+Substitute the pressures in atm:
+
+$$
+\begin{aligned}
+K_p &= \frac{(0.600)^2(0.300)}{(0.0100)^2} \\
+&= \frac{0.108}{1.00 \times 10^{-4}} \\
+&= \mathbf{1.08 \times 10^{3}}
+\end{aligned}
+$$
+
+$K_p$ is far above 1, which fits a flask in which most of the $\ce{NO2Cl}$ has broken down.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+A classmate puts the pressures in torr straight into the expression. Calculate the number the classmate gets. Explain why it differs from your answer to part (a), and by what factor.
+
+<Answer>
+
+$$
+\begin{aligned}
+&\frac{(456)^2(228)}{(7.60)^2} \\
+&= 8.21 \times 10^{5}
+\end{aligned}
+$$
+
+That is **760 times** the value of $K_p$:
+
+$$
+\frac{8.21 \times 10^{5}}{1.08 \times 10^{3}} = 760
+$$
+
+Each pressure in torr is 760 times the same pressure in atm. The top of the expression multiplies three pressures ($\ce{NO2}$ twice and $\ce{Cl2}$ once), and the bottom multiplies two ($\ce{NO2Cl}$ twice). Two factors of 760 cancel and **one is left over** on top. $K_p$ is defined with pressures in atm, so the classmate's $8.21 \times 10^{5}$ is not $K_p$.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for the pressures in atm (0.0100, 0.600 and 0.300 atm); 1 point for the expression with $P_{\ce{NO2}}$ and $P_{\ce{NO2Cl}}$ squared, with the pressures substituted; 1 point for $K_p = 1.08 \times 10^{3}$ with no unit. Working in torr and dividing the result by 760 (the one factor left over) is a sound route and earns all 3 points. Leaving off both squares gives 18.0 and earns the first point only.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $8.21 \times 10^{5}$; 1 point for the explanation: three pressures on top and two on the bottom leave one factor of 760, so the number is 760 times too large. Saying only that torr is the wrong unit earns the first point alone.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={13} title="K from one measured concentration" topic="7.4" points={5}>
+
+Carbonyl bromide, $\ce{COBr2}$, breaks down reversibly into carbon monoxide and bromine:
+
+$$
+\ce{COBr2(g) <=> CO(g) + Br2(g)}
+$$
+
+A sealed vessel is filled to 0.250 M $\ce{COBr2}$ and 0.0500 M $\ce{CO}$, with no $\ce{Br2}$, and held at a certain temperature at which all three substances are gases. The mixture runs toward products. Once the red-brown color of the bromine stops changing, its strength shows that $[\ce{Br2}]$ = 0.0620 M. (The data are made up.)
+
+<Part label="a">
+
+Complete a table of initial, change and equilibrium concentrations for the three gases.
+
+<Answer>
+
+Bromine went from 0 to 0.0620 M, a change of +0.0620 M. All three coefficients are 1, so $\ce{CO}$ also rose by 0.0620 M and $\ce{COBr2}$ fell by 0.0620 M. Add down each column:
+
+$$
+\begin{aligned}
+[\ce{COBr2}] &= 0.250 - 0.0620 \\
+&= 0.188\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{CO}] &= 0.0500 + 0.0620 \\
+&= 0.1120\ \text{M}
+\end{aligned}
+$$
+
+Every value is in M. The rows are labeled I, C and E, for Initial, Change and Equilibrium:
+
+| | COBr₂ | CO | Br₂ |
+|---|---|---|---|
+| I | 0.250 | 0.0500 | 0 |
+| C | −0.0620 | +0.0620 | +0.0620 |
+| E | 0.188 | 0.1120 | 0.0620 |
+
+The $\ce{CO}$ that was there at the start stays in its column: its equilibrium value is the starting 0.0500 M plus what formed.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $K_c$.
+
+<Answer>
+
+$$
+K_c = \frac{[\ce{CO}][\ce{Br2}]}{[\ce{COBr2}]}
+$$
+
+Only the equilibrium row goes in:
+
+$$
+\begin{aligned}
+K_c &= \frac{(0.1120)(0.0620)}{0.188} \\
+&= \mathbf{0.0369}
+\end{aligned}
+$$
+
+If you got 0.0204, you left out the $\ce{CO}$ that was present at the start. If you got 0.0278, you put in the starting concentration of $\ce{COBr2}$ in place of the equilibrium one.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for the initial row, with 0.0500 M for CO; 1 point for the change row, a change of 0.0620 M for every gas with the right signs; 1 point for the equilibrium row (0.188, 0.1120 and 0.0620 M).</RubricLine>
+<RubricLine part="b" points={2}>1 point for the expression with equilibrium values substituted; 1 point for $K_c = 0.0369$. A value worked correctly from an error in part (a) earns both points. Putting in a starting concentration (0.250 M for $\ce{COBr2}$ gives 0.0278) earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={14} title="K from the share of a reactant that reacted" topic="7.4" points={5}>
+
+Two dissolved substances, X and Y, combine in water:
+
+$$
+\ce{X(aq) + Y(aq) <=> Z(aq)}
+$$
+
+A student dissolves 0.0100 mol of X and 0.0150 mol of Y in enough water to make 250.0 mL of solution, with no Z, and keeps it at a certain temperature. At equilibrium, 35.0 percent of the X has reacted. (The reaction and the data are made up.)
+
+<Part label="a">
+
+Complete a table of initial, change and equilibrium concentrations.
+
+<Answer>
+
+First turn moles into concentrations. The volume is 0.2500 L.
+
+$$
+\begin{aligned}
+[\ce{X}]_0 &= \frac{0.0100\ \text{mol}}{0.2500\ \text{L}} \\
+&= 0.0400\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{Y}]_0 &= \frac{0.0150\ \text{mol}}{0.2500\ \text{L}} \\
+&= 0.0600\ \text{M}
+\end{aligned}
+$$
+
+Of the X, 35.0 percent reacted:
+
+$$
+\begin{aligned}
+&0.350 \times 0.0400\ \text{M} \\
+&= 0.0140\ \text{M}
+\end{aligned}
+$$
+
+X and Y react one to one and make one Z, so Y also fell by 0.0140 M and Z rose by 0.0140 M.
+
+Every value is in M. The rows are labeled I, C and E, for Initial, Change and Equilibrium:
+
+| | X | Y | Z |
+|---|---|---|---|
+| I | 0.0400 | 0.0600 | 0 |
+| C | −0.0140 | −0.0140 | +0.0140 |
+| E | 0.0260 | 0.0460 | 0.0140 |
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $K_c$.
+
+<Answer>
+
+$$
+K_c = \frac{[\ce{Z}]}{[\ce{X}][\ce{Y}]}
+$$
+
+$$
+\begin{aligned}
+K_c &= \frac{0.0140}{(0.0260)(0.0460)} \\
+&= \mathbf{11.7}
+\end{aligned}
+$$
+
+If you got 46.8, you used moles in place of concentrations. Here the volume does not cancel: one concentration is on top and two are on the bottom. If you got 54.6, you took 35.0 percent as the share of X left over, not the share that reacted.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate the percent of the Y that has reacted, and explain why it is not 35.0 percent.
+
+<Answer>
+
+$$
+\frac{0.0140\ \text{M}}{0.0600\ \text{M}} \times 100\% = \mathbf{23.3\%}
+$$
+
+X and Y react one to one, so the same concentration of each, 0.0140 M, was used up. But the solution started with more Y than X, so that amount is a **smaller share** of the Y.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the initial row, 0.0400 M X and 0.0600 M Y (moles divided by 0.2500 L); 1 point for the change and equilibrium rows from a change of 0.0140 M. Working in moles (change 0.00350 mol) and dividing each equilibrium amount by 0.2500 L before substituting earns both points. Taking 35.0 percent as the share of X left earns the first point only.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the expression with the equilibrium concentrations substituted; 1 point for $K_c = 11.7$. A value worked correctly from an error in part (a) earns both points. A value from moles not divided by the volume (46.8) earns 0 points for the value, even when part (a) was also worked in moles: $K_c$ takes concentrations.</RubricLine>
+<RubricLine part="c" points={1}>1 point for 23.3 percent, with the division shown, together with the reason: the same 0.0140 M of each reacted, out of a larger starting amount of Y. A percentage worked correctly from an error in part (a), with the reason, earns the point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={15} title="A solid that breaks down into two gases" topic="7.4" points={8}>
+
+Solid ammonium carbamate, $\ce{NH2COONH4}$, breaks down reversibly into ammonia and carbon dioxide:
+
+$$
+\begin{aligned}
+&\ce{NH2COONH4(s) <=>} \\
+&\quad \ce{2NH3(g) + CO2(g)}
+\end{aligned}
+$$
+
+Some of the solid is put into a rigid flask from which all the air has been pumped out, and the flask is held at a certain temperature. Once the pressure stops changing, some solid is still left, and the total pressure of the gas in the flask is 0.366 atm. (The data are made up.)
+
+<Part label="a">
+
+Write the expression for $K_p$.
+
+<Answer>
+
+The pure solid is left out of the expression, so it has no denominator:
+
+$$
+K_p = (P_{\ce{NH3}})^2(P_{\ce{CO2}})
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the equilibrium partial pressures of $\ce{NH3}$ and $\ce{CO2}$.
+
+<Answer>
+
+The flask started with no gas. In a rigid flask at a constant temperature, each gas's partial pressure is proportional to its moles. Each unit of solid that breaks down gives two $\ce{NH3}$ and one $\ce{CO2}$, so if the pressure of $\ce{CO2}$ rises by $x$, the pressure of $\ce{NH3}$ rises by $2x$.
+
+Every value is in atm. The rows are labeled I, C and E, for Initial, Change and Equilibrium:
+
+| | NH₃ | CO₂ |
+|---|---|---|
+| I | 0 | 0 |
+| C | +2x | +x |
+| E | 2x | x |
+
+The only gases are $\ce{NH3}$ and $\ce{CO2}$, so their pressures add up to the total:
+
+$$
+\begin{aligned}
+2x + x &= 0.366 \\
+x &= 0.122
+\end{aligned}
+$$
+
+$$
+P_{\ce{CO2}} = \mathbf{0.122}\ \text{atm}
+$$
+
+$$
+\begin{aligned}
+P_{\ce{NH3}} &= 2(0.122) \\
+&= \mathbf{0.244}\ \text{atm}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate $K_p$.
+
+<Answer>
+
+$$
+\begin{aligned}
+K_p &= (0.244)^2(0.122) \\
+&= \mathbf{7.26 \times 10^{-3}}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Two students each made one mistake. Student 1 gave $\ce{NH3}$ the same change as $\ce{CO2}$, $x$, so found $x$ from $2x$ = 0.366 atm, and then used the correct expression. Student 2 found the correct pressures but left the exponent off $P_{\ce{NH3}}$. Calculate the value of $K_p$ each student reports, and explain where the coefficient 2 belongs.
+
+<Answer>
+
+Student 1 has both pressures equal:
+
+$$
+\begin{aligned}
+x &= \frac{0.366}{2} \\
+&= 0.183\ \text{atm}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+K_p &= (0.183)^2(0.183) \\
+&= \mathbf{6.13 \times 10^{-3}}
+\end{aligned}
+$$
+
+Student 2 has the right pressures and no square:
+
+$$
+\begin{aligned}
+K_p &= (0.244)(0.122) \\
+&= \mathbf{0.0298}
+\end{aligned}
+$$
+
+Neither is the right value, $7.26 \times 10^{-3}$. The coefficient 2 is used **twice**, for two different reasons. In the change row, it says that two $\ce{NH3}$ form for every $\ce{CO2}$, so $P_{\ce{NH3}}$ is twice $P_{\ce{CO2}}$. In the expression, it is the exponent on $P_{\ce{NH3}}$. Using it in one place does not make up for leaving it out of the other.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for $K_p = (P_{\ce{NH3}})^2(P_{\ce{CO2}})$ with no term for the solid. An expression that includes the solid earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for changes in the ratio 2 : 1 with their sum set equal to 0.366 atm (or for taking two thirds of the total for $\ce{NH3}$ and one third for $\ce{CO2}$); 1 point for both pressures, 0.244 atm and 0.122 atm. Giving $\ce{NH3}$ the same change as $\ce{CO2}$ earns 0 points.</RubricLine>
+<RubricLine part="c" points={2}>1 point for substituting the pressures with $P_{\ce{NH3}}$ squared; 1 point for $K_p = 7.26 \times 10^{-3}$ with no unit. A value worked correctly from wrong pressures in part (b) earns both points.</RubricLine>
+<RubricLine part="d" points={3}>1 point for student 1's $6.13 \times 10^{-3}$; 1 point for student 2's 0.0298; 1 point for saying that the 2 belongs both in the change row (two $\ce{NH3}$ for each $\ce{CO2}$) and as the exponent on $P_{\ce{NH3}}$.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part D: The size of K and the rules for K
+
+These five questions ask what the size of an equilibrium constant says about the mixture at equilibrium, and what it does not say. Then they change the way a reaction is written: reversed, multiplied through and added to another.
+
+<Question number={16} title="Two reactions at opposite extremes" topic="7.5" points={4}>
+
+Here are two reactions, each with its constant at 25 °C.
+
+Reaction 1, with $K_p$ about $10^{33}$ at 25 °C:
+
+$$
+\ce{H2(g) + Cl2(g) <=> 2HCl(g)}
+$$
+
+Reaction 2, with $K_p$ about $10^{-18}$ at 25 °C:
+
+$$
+\ce{N2(g) + 2O2(g) <=> 2NO2(g)}
+$$
+
+<Part label="a">
+
+For each reaction, state whether a mixture of its gases at equilibrium at 25 °C is mostly reactants or mostly products. Justify each answer using the reaction's $K_p$ expression.
+
+<Answer>
+
+Reaction 1:
+
+$$
+K_p = \frac{(P_{\ce{HCl}})^2}{(P_{\ce{H2}})(P_{\ce{Cl2}})} \approx 10^{33}
+$$
+
+The top of the fraction, the product term, is enormous beside the bottom. So at equilibrium the mixture is **mostly products**: the reaction goes essentially to completion, and hydrogen and chlorine are, for every practical purpose, all turned into HCl. Whichever reactant was in excess is left over, and the other is present only as a trace.
+
+Reaction 2:
+
+$$
+K_p = \frac{(P_{\ce{NO2}})^2}{(P_{\ce{N2}})(P_{\ce{O2}})^2} \approx 10^{-18}
+$$
+
+Now the top is tiny beside the bottom. So at equilibrium the mixture is **mostly reactants**, almost all $\ce{N2}$ and $\ce{O2}$: the reaction barely goes at all. Some $\ce{NO2}$ is still there, as a trace, because $K$ is never zero.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+A student writes: "$K_p$ for reaction 1 is $10^{51}$ times $K_p$ for reaction 2, so reaction 1 goes $10^{51}$ times as far as reaction 2." Explain what the student can and cannot conclude from the two values.
+
+<Answer>
+
+The division is right:
+
+$$
+\frac{10^{33}}{10^{-18}} = 10^{51}
+$$
+
+But a ratio of two $K$ values is not a ratio of how far two reactions go. The two expressions have different forms. Reaction 1 has two molecules of gas on each side. Reaction 2 has three on the left, with the oxygen pressure squared, and two on the right. How much of each substance is present at equilibrium depends on the exponents in the expression and on the starting mixture, not on $K$ alone. So $10^{51}$ is not a factor by which one reaction goes further than the other. A reaction that is already essentially complete cannot go any further, whatever its $K$. Comparing two $K$ values directly says which reaction goes further only when the two equations have the same form.
+
+What the student **can** conclude: reaction 1 goes essentially to completion, and reaction 2 barely goes at all.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for reaction 1 mostly products (HCl), with the reason that a very large $K_p$ means the product term on top of the expression is far larger than the reactant terms below; 1 point for reaction 2 mostly reactants ($\ce{N2}$ and $\ce{O2}$), with the reason that a very small $K_p$ means the top is tiny beside the bottom. Either the written expression or the statement that $K$ is products over reactants earns the reason. A side named with no reason earns 0 points for that reaction.</RubricLine>
+<RubricLine part="b" points={2}>1 point for either reason: the two expressions have different forms (different exponents or numbers of gas molecules), so the amounts at equilibrium depend on the exponents and the starting mixture, not on $K$ alone; or the amounts formed are not proportional to $K$ (reaction 1 is already essentially complete and cannot go $10^{51}$ times as far as anything). 1 point for what can be concluded: reaction 1 goes essentially to completion and reaction 2 barely goes. Agreeing with the student earns 0 points. A reply about speed alone earns 0 points: the claim is about how far, not how fast.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={17} title="A middling K and the exponents in its expression" topic="7.5" points={6}>
+
+Both reactions below are for made-up gases at a fixed temperature. Each constant is a $K_c$.
+
+Reaction 1, with $K_c$ = 3.0:
+
+$$
+\ce{A(g) <=> B(g)}
+$$
+
+Reaction 2, with $K_c$ = 0.040:
+
+$$
+\ce{D(g) <=> 2E(g)}
+$$
+
+<Part label="a">
+
+A mixture of A and B is at equilibrium. Calculate the percentage of the molecules in it that are B.
+
+<Answer>
+
+$$
+K_c = \frac{[\ce{B}]}{[\ce{A}]} = 3.0
+$$
+
+So there are 3.0 molecules of B for each molecule of A. Both are in the same volume, so the ratio of concentrations is the ratio of molecules. The fraction that is B is
+
+$$
+\frac{3.0}{3.0 + 1} = 0.75
+$$
+
+That is **75 percent B** and 25 percent A. A $K$ of 3.0 is neither very large nor very small, and both substances are present in noticeable amounts.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Two different mixtures of D and E are each at equilibrium at the same temperature. In mixture 1, $[\ce{D}]$ = 0.0100 M. In mixture 2, $[\ce{D}]$ = 0.160 M. Calculate $[\ce{E}]$ in each mixture.
+
+<Answer>
+
+$$
+K_c = \frac{[\ce{E}]^2}{[\ce{D}]} = 0.040
+$$
+
+So $[\ce{E}]^2 = K_c[\ce{D}]$. Mixture 1:
+
+$$
+\begin{aligned}
+[\ce{E}] &= \sqrt{(0.040)(0.0100)} \\
+&= \sqrt{4.0 \times 10^{-4}} \\
+&= \mathbf{0.020}\ \text{M}
+\end{aligned}
+$$
+
+Mixture 2:
+
+$$
+\begin{aligned}
+[\ce{E}] &= \sqrt{(0.040)(0.160)} \\
+&= \sqrt{0.0064} \\
+&= \mathbf{0.080}\ \text{M}
+\end{aligned}
+$$
+
+Check each by putting it back into the expression:
+
+$$
+\frac{(0.020)^2}{0.0100} = 0.040\ \checkmark
+$$
+
+$$
+\frac{(0.080)^2}{0.160} = 0.040\ \checkmark
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A student says: "$K_c$ for reaction 2 is less than 1, so its equilibrium mixture always holds more D than E." Use your results from part (b) to evaluate the claim.
+
+<Answer>
+
+The claim is **wrong**. In mixture 1 there is more E than D (0.020 M against 0.0100 M). In mixture 2 there is more D than E (0.160 M against 0.080 M). The same $K_c$ gives more product in one mixture and more reactant in the other.
+
+The reason is the exponent. $[\ce{E}]$ is squared in the expression, so the ratio of E to D is not fixed by $K_c$:
+
+$$
+\frac{[\ce{E}]}{[\ce{D}]} = \frac{K_c}{[\ce{E}]}
+$$
+
+That ratio changes with how much gas is present. For reaction 1, where one molecule becomes one molecule, the ratio of B to A is $K_c$ itself in every mixture. A $K$ that is neither very large nor very small says that both sides are present in noticeable amounts. Exactly how much of each depends on the exponents in the expression and on the mixture.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the ratio $[\ce{B}]/[\ce{A}] = 3.0$, or three B for each A; 1 point for 75 percent. A bare 75 percent earns 1 point. Turning the ratio upside down (25 percent B), or answering 300 percent, earns 0 points for the percentage.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the expression with $[\ce{E}]$ squared set equal to 0.040, or for $[\ce{E}] = \sqrt{K_c[\ce{D}]}$; 1 point for both 0.020 M and 0.080 M. Leaving out the square gives $4.0 \times 10^{-4}$ M and $6.4 \times 10^{-3}$ M and earns 0 points for the values.</RubricLine>
+<RubricLine part="c" points={2}>1 point for more E than D in mixture 1 and more D than E in mixture 2, so the claim is wrong (a comparison that follows correctly from wrong values in part (b) earns this point, even where it then agrees with the claim); 1 point for the reason: because $[\ce{E}]$ is squared, the ratio of E to D depends on the concentrations, not on $K_c$ alone.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={18} title="Ozone, far from equilibrium" topic="7.5" points={6}>
+
+Ozone breaks down to oxygen:
+
+$$
+\ce{2O3(g) <=> 3O2(g)}
+$$
+
+At 25 °C, $K_p$ for this equation is about $10^{57}$. A clean, dry glass flask at 25 °C is filled with oxygen that holds some ozone: $P_{\ce{O3}}$ = 0.0400 atm and $P_{\ce{O2}}$ = 0.960 atm. An hour later, neither partial pressure has measurably changed.
+
+<Part label="a">
+
+Is the mixture in the flask at equilibrium? Justify your answer.
+
+<Answer>
+
+For this mixture,
+
+$$
+\begin{aligned}
+Q_p &= \frac{(P_{\ce{O2}})^3}{(P_{\ce{O3}})^2} \\
+&= \frac{(0.960)^3}{(0.0400)^2} \\
+&= 553
+\end{aligned}
+$$
+
+$Q_p$ is about 550, and $K_p$ is about $10^{57}$. $Q_p$ is far smaller than $K_p$, so the mixture is **not at equilibrium**. It can still proceed a long way toward oxygen.
+
+The same conclusion follows from the size of $K_p$ alone: with a $K$ this large, the mixture at equilibrium would be essentially all oxygen, with only a trace of ozone. The pressures stay the same because the reaction is too slow to see, not because it has reached equilibrium.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+A student says: "With $K_p$ as large as $10^{57}$, ozone should break down fast. Since it does not, the value of $K_p$ must be wrong." Evaluate the claim.
+
+<Answer>
+
+The claim is **wrong**. $K_p$ says how far a reaction goes, where equilibrium lies. It says nothing about how fast the mixture gets there.
+
+How fast is the business of the activation energy and the rate law (Unit 5). Breaking down ozone has a high enough activation energy that at 25 °C very few collisions have enough energy to react. So the reaction is slow, and the mixture stays far from equilibrium for a long time. $K_p$ is still right about where it is headed.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A catalyst that speeds up the breakdown of ozone (manganese dioxide is one) is put into the flask, which is kept at 25 °C and at the same volume. Calculate $P_{\ce{O2}}$ and $P_{\ce{O3}}$ once the mixture has reached equilibrium.
+
+<Answer>
+
+The catalyst does not change $K_p$. It changes only how fast the mixture reaches equilibrium.
+
+$K_p$ is enormous, so treat the reaction as complete: all the ozone is used up. At a fixed volume and temperature, each partial pressure changes in proportion to the moles of that gas, so the coefficients apply to the pressures. Each 2 O₃ give 3 O₂, so 0.0400 atm of ozone gives
+
+$$
+\frac{3}{2} \times 0.0400 = 0.0600\ \text{atm}
+$$
+
+Every value is in atm. The rows are labeled I, C and E, for Initial, Change and Equilibrium:
+
+| | O₃ | O₂ |
+|---|---|---|
+| I | 0.0400 | 0.960 |
+| C | −0.0400 | +0.0600 |
+| E | about 0 | 1.020 |
+
+$$
+P_{\ce{O2}} = \mathbf{1.020}\ \text{atm}
+$$
+
+The ozone cannot be exactly zero, because every substance is present at equilibrium. Put the oxygen pressure into the $K_p$ expression and solve for the ozone:
+
+$$
+\begin{aligned}
+(P_{\ce{O3}})^2 &= \frac{(P_{\ce{O2}})^3}{K_p} \\
+&= \frac{(1.020)^3}{10^{57}} \\
+&= 1.06 \times 10^{-57}
+\end{aligned}
+$$
+
+$$
+P_{\ce{O3}} = \mathbf{3 \times 10^{-29}}\ \text{atm}
+$$
+
+Give it to one significant figure at most, because $K_p$ is known only to a power of ten. Check by putting it back:
+
+$$
+\frac{(1.020)^3}{(3 \times 10^{-29})^2} = 1 \times 10^{57}\ \checkmark
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for "not at equilibrium"; 1 point for the justification, either $Q_p$ (about 550) far smaller than $K_p$, or the statement that with a $K_p$ this large the mixture at equilibrium would be almost all oxygen. "Yes, because the pressures are not changing" earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for saying that $K_p$ tells how far a reaction goes (where equilibrium lies), not how fast; 1 point for saying that the rate depends on the activation energy (or the rate law), so at 25 °C too few collisions have enough energy. Agreeing that $K_p$ must be wrong earns 0 points.</RubricLine>
+<RubricLine part="c" points={2}>1 point for treating the reaction as complete and $P_{\ce{O2}} = 1.020$ atm, with the 3-to-2 ratio of the coefficients applied (1.000 atm, from adding 0.0400 atm, earns 0 points); 1 point for $P_{\ce{O3}}$ about $3 \times 10^{-29}$ atm from the $K_p$ expression (any value that rounds to $3 \times 10^{-29}$ earns it). An answer of exactly zero for the ozone earns 0 points for the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={19} title="One reaction written three ways" topic="7.6" points={5}>
+
+Dinitrogen monoxide, N₂O, can break down into nitrogen and oxygen:
+
+$$
+\ce{2N2O(g) <=> 2N2(g) + O2(g)}
+$$
+
+At 25 °C, $K_p$ for this equation is about $10^{36}$. Every part of this question is about the same temperature, 25 °C.
+
+<Part label="a">
+
+Write the $K_p$ expression for the equation below. Use it to show how its $K_p$ is related to the $K_p$ above, and give its value at 25 °C.
+
+$$
+\ce{N2O(g) <=> N2(g) + 1/2 O2(g)}
+$$
+
+<Answer>
+
+Every coefficient is half of the one in the first equation, so every exponent is halved:
+
+$$
+K_{p,\text{half}} = \frac{(P_{\ce{N2}})(P_{\ce{O2}})^{1/2}}{P_{\ce{N2O}}}
+$$
+
+Square it:
+
+$$
+(K_{p,\text{half}})^2 = \frac{(P_{\ce{N2}})^2(P_{\ce{O2}})}{(P_{\ce{N2O}})^2}
+$$
+
+That is the $K_p$ expression of the first equation. So the new constant is the square root of the first one:
+
+$$
+\begin{aligned}
+K_{p,\text{half}} &= \sqrt{10^{36}} \\
+&= \mathbf{10^{18}}
+\end{aligned}
+$$
+
+So $K_p$ is about $10^{18}$ at 25 °C.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $K_p$ at 25 °C for this equation:
+
+$$
+\ce{2N2(g) + O2(g) <=> 2N2O(g)}
+$$
+
+<Answer>
+
+This is the first equation reversed, so its constant is the reciprocal:
+
+$$
+\begin{aligned}
+K_p &= \frac{1}{10^{36}} \\
+&= \mathbf{10^{-36}}
+\end{aligned}
+$$
+
+So $K_p$ is about $10^{-36}$ at 25 °C. Reversing never makes $K$ negative.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A sealed flask at 25 °C holds $\ce{N2O}$ with small amounts of $\ce{N2}$ and $\ce{O2}$. For the equation in part (a), this mixture has $Q_p = 4.0 \times 10^{-6}$. Calculate $Q_p$ for the first equation in this question, the one with 2 N₂O on the left, and state which way the mixture can run.
+
+<Answer>
+
+The first equation is the equation in part (a) with every coefficient doubled. $Q$ follows the same rules as $K$, so doubling squares it:
+
+$$
+\begin{aligned}
+Q_p &= (4.0 \times 10^{-6})^2 \\
+&= \mathbf{1.6 \times 10^{-11}}
+\end{aligned}
+$$
+
+Compare it with the $K_p$ of the same equation, about $10^{36}$. $Q_p$ is far smaller than $K_p$, so the mixture can run **toward $\ce{N2}$ and $\ce{O2}$**, using up $\ce{N2O}$. Comparing $4.0 \times 10^{-6}$ with $10^{18}$, both for the equation in part (a), gives the same direction.
+
+How fast it does so is another matter: at 25 °C this reaction is so slow that dinitrogen monoxide can be stored for years.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the expression, with the exponent ½ on the oxygen pressure and no exponent on the other two; 1 point for about $10^{18}$, as the square root of $10^{36}$. Halving $K$ to $5 \times 10^{35}$ earns 0 points for the value.</RubricLine>
+<RubricLine part="b" points={1}>1 point for about $10^{-36}$, the reciprocal. An answer of $-10^{36}$ earns 0 points.</RubricLine>
+<RubricLine part="c" points={2}>1 point for $Q_p = 1.6 \times 10^{-11}$, by squaring; 1 point for running toward $\ce{N2}$ and $\ce{O2}$ because $Q_p$ is less than $K_p$, comparing $Q_p$ and $K_p$ for the same equation (either equation earns it). Multiplying $Q_p$ by 2 ($8.0 \times 10^{-6}$) earns 0 points for the value; comparing a $Q_p$ for one equation with the $K_p$ of the other earns 0 points for the direction.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={20} title="Xenon fluorides in two steps" topic="7.6" points={5}>
+
+Xenon reacts with fluorine in two steps. Here is each step with its $K_p$ at a certain temperature at which all four substances are gases. Both constants are for that same temperature.
+
+Step 1:
+
+$$
+\begin{aligned}
+&\ce{Xe(g) + F2(g) <=> XeF2(g)} \\[0.4em]
+&K_1 = 7.5 \times 10^{4}
+\end{aligned}
+$$
+
+Step 2:
+
+$$
+\begin{aligned}
+&\ce{XeF2(g) + F2(g) <=> XeF4(g)} \\[0.4em]
+&K_2 = 1.5 \times 10^{2}
+\end{aligned}
+$$
+
+<Part label="a">
+
+Add the two steps to get the overall equation for making $\ce{XeF4}$ from xenon and fluorine. Calculate $K_p$ for the overall reaction at the same temperature.
+
+<Answer>
+
+$\ce{XeF2}$ is made in step 1 and used up in step 2, so it cancels. The two steps use one $\ce{F2}$ each. Overall:
+
+$$
+\ce{Xe(g) + 2F2(g) <=> XeF4(g)}
+$$
+
+When equations are added, their constants multiply. Both are for the same temperature, so they can be combined:
+
+$$
+\begin{aligned}
+K_p &= K_1 \times K_2 \\
+&= (7.5 \times 10^{4})(1.5 \times 10^{2}) \\
+&= \mathbf{1.1 \times 10^{7}}
+\end{aligned}
+$$
+
+Check with the expressions: $P_{\ce{XeF2}}$ cancels from the top of one fraction and the bottom of the other.
+
+$$
+\begin{aligned}
+&\frac{P_{\ce{XeF2}}}{(P_{\ce{Xe}})(P_{\ce{F2}})} \\[0.3em]
+&\quad \times \frac{P_{\ce{XeF4}}}{(P_{\ce{XeF2}})(P_{\ce{F2}})} \\[0.3em]
+&= \frac{P_{\ce{XeF4}}}{(P_{\ce{Xe}})(P_{\ce{F2}})^2}
+\end{aligned}
+$$
+
+That is the expression for the overall equation.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Xenon tetrafluoride and xenon can react to give xenon difluoride:
+
+$$
+\ce{XeF4(g) + Xe(g) <=> 2XeF2(g)}
+$$
+
+Calculate $K_p$ for this reaction at the same temperature. Show which equations you reversed, multiplied or added.
+
+<Answer>
+
+The target has $\ce{XeF4}$ on the left, so reverse step 2. Reversing inverts the constant:
+
+$$
+\ce{XeF4(g) <=> XeF2(g) + F2(g)}
+$$
+
+$$
+\begin{aligned}
+\frac{1}{K_2} &= \frac{1}{1.5 \times 10^{2}} \\
+&= 6.67 \times 10^{-3}
+\end{aligned}
+$$
+
+The target has Xe on the left and a second $\ce{XeF2}$ on the right, so add step 1 as it is. The left sides together are $\ce{XeF4 + Xe + F2}$, and the right sides together are $\ce{2XeF2 + F2}$. One $\ce{F2}$ is on each side, so it cancels, and what is left is the target. Both constants are for the same temperature, so they multiply:
+
+$$
+\begin{aligned}
+K_p &= K_1 \times \frac{1}{K_2} \\
+&= \frac{7.5 \times 10^{4}}{1.5 \times 10^{2}} \\
+&= \mathbf{5.0 \times 10^{2}}
+\end{aligned}
+$$
+
+Another route gives the same value: double step 1 ($K_1^2$) and add the reverse of the overall reaction from part (a), whose constant is $1/(K_1K_2)$. Then $K_1^2/(K_1K_2) = K_1/K_2$.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the overall equation, with 2 F₂ on the left and $\ce{XeF2}$ canceled; 1 point for $1.1 \times 10^{7}$, by multiplying the constants. Adding the constants ($7.5 \times 10^{4}$) earns 0 points for the value.</RubricLine>
+<RubricLine part="b" points={3}>1 point for a reversed equation with its constant inverted (for example the reverse of step 2 with $1/K_2$); 1 point for equations that add up to the target, with their constants multiplied; 1 point for $5.0 \times 10^{2}$. Any sound route earns all 3 points, for example doubling step 1 ($K_1^2$) and adding the reverse of part (a)'s overall reaction. Reversing step 1 instead of step 2 and adding step 2 gives the target backward, with $K_2/K_1 = 2.0 \times 10^{-3}$: that earns only the first point.</RubricLine>
+</Rubric>
+
+</Question>

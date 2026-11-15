@@ -118,7 +118,7 @@ title: "Comprehensive test, session 1: equilibrium and its constant"
 kind: test
 order: 8
 topics: ["7.1", "7.2", "7.3", "7.4", "7.5", "7.6"]
-summary: Twenty scored free-response questions on reversible reactions, the reaction quotient and the equilibrium constant, calculating K, and what the size of K and its rules tell you, each with a worked answer and its scoring rubric.
+summary: Twenty scored free-response questions on reversible reactions, Q and K, calculating K, and the size and rules of K, each with a worked answer and its scoring rubric.
 points: <the sum>
 minutes: 100
 ---
@@ -166,7 +166,7 @@ title: "Comprehensive test, session 2: using the equilibrium constant"
 kind: test
 order: 9
 topics: ["7.7", "7.8", "7.9", "7.10", "7.11", "7.12"]
-summary: Twenty-one scored free-response questions on calculating equilibrium concentrations, particle pictures of equilibrium, Le Châtelier's principle and Q, and solubility and the common-ion effect, each with a worked answer and its scoring rubric.
+summary: Twenty-one scored free-response questions on equilibrium concentrations, particle pictures, Le Châtelier's principle and Q, and solubility, each with a worked answer and its scoring rubric.
 points: <the sum>
 minutes: 110
 ---
