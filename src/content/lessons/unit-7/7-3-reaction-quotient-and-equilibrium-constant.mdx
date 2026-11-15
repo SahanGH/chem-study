@@ -1,0 +1,392 @@
+---
+topic: "7.3"
+minutes: 13
+summary: "How to write the reaction quotient Q and the equilibrium constant K from a balanced equation, with concentrations or partial pressures, and which substances to leave out."
+---
+
+Topic 7.1 followed a sealed quartz tube of brown nitrogen dioxide gas, kept in a furnace above 500 °C, until it reached equilibrium: 0.0200 M NO₂, 0.0300 M NO and 0.0150 M O₂. Start with more NO₂, or start from the other side with a different amount of NO and O₂, and the tube settles at different concentrations. It looks as if every tube finds its own ending. It does not. One fraction built from the three concentrations comes out the same every time.
+
+## The reaction quotient, Q
+
+Write any reversible reaction with letters in place of the formulas. The capital letters are the substances, and the small letters are their coefficients:
+
+$$
+a\,\ce{A} + b\,\ce{B} \;\ce{<=>}\; c\,\ce{C} + d\,\ce{D}
+$$
+
+The **reaction quotient**, $Q$, is a fraction built from the concentrations in the mixture, with the balanced equation as its pattern:
+
+$$
+Q_c = \frac{[\ce{C}]^c[\ce{D}]^d}{[\ce{A}]^a[\ce{B}]^b}
+$$
+
+Three rules build it:
+
+- Products go on top and reactants on the bottom, as the equation is written.
+- Each concentration is raised to the power of its coefficient.
+- The terms are multiplied, never added.
+
+The square brackets mean concentration in mol/L, as they did in Unit 5. The small c says that the quotient is built from concentrations.
+
+The equation for the tube is
+
+$$
+\ce{2NO2(g) <=> 2NO(g) + O2(g)}
+$$
+
+so its reaction quotient is
+
+$$
+Q_c = \frac{[\ce{NO}]^2[\ce{O2}]}{[\ce{NO2}]^2}
+$$
+
+You can work out $Q$ at any moment, whether or not the mixture is at equilibrium. It is a snapshot of how far along the mixture is.
+
+Take the tube that starts with NO₂ only. Its $Q$ starts at 0, because the top of the fraction is zero. A little later the tube holds 0.0400 M NO₂, 0.0100 M NO and 0.0050 M O₂. Put those numbers into the fraction:
+
+$$
+\begin{aligned}
+Q_c &= \frac{(0.0100)^2(0.0050)}{(0.0400)^2} \\
+&= 3.1 \times 10^{-4}
+\end{aligned}
+$$
+
+$Q$ keeps rising as products form, until the tube reaches equilibrium and $Q$ stops changing.
+
+<Check answer={3}>
+Chlorine trifluoride is made from its elements:
+
+$$
+\ce{Cl2(g) + 3F2(g) <=> 2ClF3(g)}
+$$
+
+Which of these is the expression for $Q_c$?
+
+$$
+\begin{aligned}
+\textbf{A}\quad & \dfrac{[\ce{ClF3}]}{[\ce{Cl2}][\ce{F2}]} \\[1.4em]
+\textbf{B}\quad & \dfrac{[\ce{Cl2}][\ce{F2}]^3}{[\ce{ClF3}]^2} \\[1.4em]
+\textbf{C}\quad & \dfrac{[\ce{ClF3}]^2}{[\ce{Cl2}][\ce{F2}]^3} \\[1.4em]
+\textbf{D}\quad & \dfrac{2[\ce{ClF3}]}{[\ce{Cl2}] + 3[\ce{F2}]}
+\end{aligned}
+$$
+
+- Expression A
+- Expression B
+- Expression C
+- Expression D
+
+<div slot="why">
+
+The product, ClF₃, goes on top and the reactants go on the bottom. Each coefficient becomes an exponent: 2 on $[\ce{ClF3}]$, 3 on $[\ce{F2}]$, and 1 (not written) on $[\ce{Cl2}]$. That is expression C.
+
+Expression A drops the exponents. Expression B is upside down. Expression D multiplies by the coefficients and adds the reactants, where the terms should be raised to powers and multiplied.
+
+</div>
+</Check>
+
+## At equilibrium, Q is K
+
+Here are three tubes, all kept at the same temperature.
+
+- Tube 1 starts with 0.0500 M NO₂.
+- Tube 2 starts with 0.0778 M NO₂.
+- Tube 3 starts from the other side, with 0.0294 M NO and 0.0147 M O₂. That is fewer atoms than tube 1 holds, so it does not end where tube 1 ends.
+
+Each tube is left until its concentrations stop changing. The table gives those equilibrium concentrations. Its last column is the fraction from the section above, worked out from them.
+
+| Tube | $[\ce{NO2}]$ (M) | $[\ce{NO}]$ (M) | $[\ce{O2}]$ (M) | $\frac{[\ce{NO}]^2[\ce{O2}]}{[\ce{NO2}]^2}$ |
+|---|---|---|---|---|
+| 1 | 0.0200 | 0.0300 | 0.0150 | 0.034 |
+| 2 | 0.0346 | 0.0432 | 0.0216 | 0.034 |
+| 3 | 0.0102 | 0.0192 | 0.00960 | 0.034 |
+
+The data are made up for this lesson, and they obey the rule that real mixtures obey.
+
+Look down each column of concentrations: no number repeats. The share of the NO₂ that broke down differs too, 60 percent in tube 1 and about 56 percent in tube 2. Only the fraction is the same. (Worked out to three figures, the fractions are 0.0338, 0.0337 and 0.0340. They agree to two significant figures, and the third figure differs only because the concentrations in the table are rounded. That is why the fraction is quoted to two figures here, and not to the three of the data.)
+
+The value that $Q$ has at equilibrium is the **equilibrium constant**, $K$. Written with equilibrium concentrations, it is $K_c$:
+
+$$
+K_c = \frac{[\ce{NO}]^2[\ce{O2}]}{[\ce{NO2}]^2}
+$$
+
+For this reaction at the tubes' temperature, $K_c$ = 0.034. Working out a value of $K$ from measurements like these is the business of topic 7.4.
+
+Four things are true of every $K$:
+
+- $Q$ and $K$ are the same fraction. The only difference is the moment: $Q$ takes the concentrations at any moment, and $K$ takes them at equilibrium.
+- For a given equation, $K$ depends only on the temperature. It does not depend on the starting amounts, the size of the container or the side the reaction started from.
+- $K$ has no unit, because the concentrations go in as plain numbers of mol/L.
+- Capital $K$ is not the rate constant, small $k$, of Unit 5.
+
+The fact that this fraction settles at one value for each temperature is called the **law of mass action**.
+
+It also tells you where a mixture is heading: $Q$ moves toward $K$. A mixture whose $Q$ is not equal to $K$ is not at equilibrium, and it reacts until $Q$ equals $K$. Tube 1's $Q$ climbed from 0 to 0.034. Tube 3 began with no NO₂, so the bottom of its fraction began at zero, and at the very start its $Q$ could not be worked out at all: a fraction with zero on the bottom has no value. As soon as a trace of NO₂ formed, its $Q$ was enormous. From there it fell to 0.034. Comparing $Q$ with $K$ is how topic 7.7 decides which way a mixture will go.
+
+One note on the equation sheet. It gives the expression for $K_c$ (and for $K_p$, which the next section explains) and nothing for $Q$. Write $Q$ in the same form.
+
+<KeyIdea>
+
+$Q$ and $K$ are one fraction: products over reactants, each raised to its coefficient. $Q$ uses the concentrations at any moment. $K$ is the value $Q$ has at equilibrium, and at a given temperature it is always the same number.
+
+</KeyIdea>
+
+## Concentrations or pressures: two kinds of K
+
+For a gas, pressure is the thing a chemist measures. So when the substances are gases, the fraction is often written with partial pressures in place of concentrations. Nothing is lost by the swap. At a fixed temperature, a gas's partial pressure is proportional to its concentration (topic 3.4). The value of this fraction at any moment is $Q_p$, and its value at equilibrium is $K_p$. For the general reaction:
+
+$$
+K_p = \frac{(P_{\ce{C}})^c(P_{\ce{D}})^d}{(P_{\ce{A}})^a(P_{\ce{B}})^b}
+$$
+
+For the tube:
+
+$$
+K_p = \frac{(P_{\ce{NO}})^2(P_{\ce{O2}})}{(P_{\ce{NO2}})^2}
+$$
+
+Pressures go in as numbers of atm, and $K_p$ has no unit either.
+
+Three things to hold on to:
+
+- $K_c$ and $K_p$ for the same reaction at the same temperature are usually different numbers.
+- A question, or a table of data, says which one it means. The numbers that go with $K_c$ are molarities, and the numbers that go with $K_p$ are partial pressures. Never use a mixture of the two.
+- Only gases have partial pressures, so a reaction in solution has a $K_c$ and no $K_p$.
+
+**Beyond the exam:** the two constants are linked by
+
+$$
+K_p = K_c(RT)^{\Delta n}
+$$
+
+where Δn is the moles of gas on the product side minus the moles of gas on the reactant side. So they are the same number only when Δn is zero. The exam does not ask for the conversion. It does expect you to notice which constant you have been given.
+
+<Check answer={4}>
+A data table lists $K_p$ = 0.42 at a certain temperature for this reaction:
+
+$$
+\ce{2NOCl(g) <=> 2NO(g) + Cl2(g)}
+$$
+
+A student measures the three concentrations in a mixture at that temperature, in mol/L, and works out
+
+$$
+\frac{[\ce{NO}]^2[\ce{Cl2}]}{[\ce{NOCl}]^2} = 0.42
+$$
+
+The student concludes that the mixture is at equilibrium. What is wrong with the conclusion?
+
+- Nothing is wrong, because the fraction has the same value as the constant in the table, so the mixture must be at equilibrium.
+- The fraction is upside down, because NOCl belongs on top.
+- A mixture is at equilibrium only when its fraction equals 1.
+- The fraction was built from concentrations, so it is $Q_c$, and it has to be compared with $K_c$, not $K_p$.
+
+<div slot="why">
+
+A fraction built from molarities is $Q_c$, and at equilibrium $Q_c$ equals $K_c$. The table gives $K_p$, which is built from partial pressures in atm. For this reaction the two constants are different numbers, so matching $K_p$ shows nothing. The student needs either $K_c$ or the three partial pressures.
+
+The fraction itself is the right way up: NO and Cl₂ are the products. And the number 1 is nothing special. At equilibrium the fraction equals the constant, whatever its value. (The value 0.42 is made up for this Check.)
+
+</div>
+</Check>
+
+## What is left out
+
+Go back to the sealed water bottle of topic 7.1:
+
+$$
+\ce{H2O(l) <=> H2O(g)}
+$$
+
+How concentrated is the liquid water? A liter of it has a mass of 997 g at 25 °C, and the molar mass of water is 18.02 g/mol. So a liter holds
+
+$$
+\frac{997\ \text{g}}{18.02\ \text{g/mol}} = 55.3\ \text{mol}
+$$
+
+Liquid water is 55.3 mol/L. That is true of a drop and of a bucket. The amount of liquid in the bottle can change. The concentration of the liquid cannot.
+
+The same holds for any pure solid or pure liquid. At a given temperature, its concentration is fixed by its density, whatever amount is present, so it cannot change as the reaction runs. Put into the fraction, it would only carry the same fixed number in every mixture. That tells you nothing about how far the reaction has gone, so it is left out of $Q$ and $K$.
+
+The rule:
+
+- **Gases (g)** and **dissolved substances (aq)** are in the expression, because their concentrations change.
+- **Pure solids (s)** and **pure liquids (l)** are left out.
+
+For the bottle, that leaves
+
+$$
+K_p = P_{\ce{H2O}}
+$$
+
+The equilibrium constant of the bottle is simply its vapor pressure. At 25 °C that is 23.8 torr. In atm:
+
+$$
+\frac{23.8\ \text{torr}}{760\ \text{torr/atm}} = 0.0313\ \text{atm}
+$$
+
+So $K_p$ = 0.0313.
+
+Two warnings. First, read the state symbol, not the formula: H₂O(l) is left out, and H₂O(g) is in. In a reaction in water solution, the water is the solvent, H₂O(l). It is so nearly pure that its concentration hardly moves from 55.3 mol/L, and it is left out.
+
+Second, left out of the expression does not mean absent from the flask. The solid or liquid must be there for the equilibrium to exist. With no liquid water in the bottle, the vapor pressure would not be held at 23.8 torr.
+
+<Figure
+  src="/figures/7-3-in-or-out.svg"
+  alt="Four boxes in two rows. The top row is headed in the expression: a box labeled gas holds 5 particles far apart, and a box labeled dissolved holds 5 particles spread through water. Both are marked concentration can change. The bottom row is headed left out: a box labeled pure solid holds 12 particles packed in 3 rows of 4, and a box labeled pure liquid holds 12 particles touching in no regular order. Both are marked same concentration, whatever the amount."
+  caption="Gases and dissolved substances can be more or less concentrated, so they appear in Q and K. A pure solid or pure liquid has one fixed concentration, so it is left out."
+/>
+
+<Worked title="Three expressions">
+
+Write the expression for $K$ in each case.
+
+1. **All gases.** Hot nitric acid vapor breaks down reversibly into nitrogen dioxide, water vapor and oxygen. (The same breakdown, going slowly in the liquid, is what turns an old bottle of concentrated nitric acid yellow-brown.)
+
+   $$
+   \begin{aligned}
+   &\ce{4HNO3(g) <=>} \\
+   &\quad \ce{4NO2(g) + 2H2O(g) + O2(g)}
+   \end{aligned}
+   $$
+
+   Every substance is a gas, so every one is in. Products on top, coefficients as exponents:
+
+   $$
+   K_c = \frac{[\ce{NO2}]^4[\ce{H2O}]^2[\ce{O2}]}{[\ce{HNO3}]^4}
+   $$
+
+   The water is in, because here it is a gas. With partial pressures:
+
+   $$
+   K_p = \frac{(P_{\ce{NO2}})^4(P_{\ce{H2O}})^2(P_{\ce{O2}})}{(P_{\ce{HNO3}})^4}
+   $$
+
+2. **A reaction in water.** Chlorine dissolved in a swimming pool reacts with the water. (HOCl, hypochlorous acid, is the substance that disinfects the pool.)
+
+   $$
+   \begin{aligned}
+   &\ce{Cl2(aq) + H2O(l) <=>} \\
+   &\quad \ce{H+(aq) + Cl-(aq) + HOCl(aq)}
+   \end{aligned}
+   $$
+
+   The water is the liquid solvent, so it is left out. The four dissolved substances are in:
+
+   $$
+   K_c = \frac{[\ce{H+}][\ce{Cl-}][\ce{HOCl}]}{[\ce{Cl2}]}
+   $$
+
+   There is no $K_p$: nothing in the equation is a gas.
+
+3. **A solid.** White solid ammonium chloride, heated in a sealed tube, breaks down into two gases:
+
+   $$
+   \ce{NH4Cl(s) <=> NH3(g) + HCl(g)}
+   $$
+
+   The solid is left out, which leaves nothing on the bottom:
+
+   $$
+   K_c = [\ce{NH3}][\ce{HCl}]
+   $$
+
+   $$
+   K_p = (P_{\ce{NH3}})(P_{\ce{HCl}})
+   $$
+
+   An expression does not have to be a fraction.
+
+</Worked>
+
+<Check answer={2}>
+At room temperature, nitrogen monoxide gas in a sealed flask reacts with a little liquid bromine lying at the bottom:
+
+$$
+\ce{2NO(g) + Br2(l) <=> 2NOBr(g)}
+$$
+
+Which of these is the expression for $K_p$?
+
+$$
+\begin{aligned}
+\textbf{A}\quad & \dfrac{(P_{\ce{NOBr}})^2}{(P_{\ce{NO}})^2(P_{\ce{Br2}})} \\[1.4em]
+\textbf{B}\quad & \dfrac{(P_{\ce{NOBr}})^2}{(P_{\ce{NO}})^2} \\[1.4em]
+\textbf{C}\quad & \dfrac{P_{\ce{NOBr}}}{P_{\ce{NO}}} \\[1.4em]
+\textbf{D}\quad & \dfrac{(P_{\ce{NO}})^2}{(P_{\ce{NOBr}})^2}
+\end{aligned}
+$$
+
+- Expression A
+- Expression B
+- Expression C
+- Expression D
+
+<div slot="why">
+
+In this equation the bromine is a pure liquid, Br₂(l), so it is left out. The partial pressures of the two gases stay, each squared, with the product's pressure on top. That is expression B.
+
+Some bromine vapor is in the flask too, at a fixed pressure set by the liquid. But the expression follows the equation as written, and the equation has Br₂(l). Expression A, which includes a bromine pressure, would be right only if the equation had the bromine as a gas, Br₂(g). Expression C drops the exponents, and expression D is upside down.
+
+</div>
+</Check>
+
+<Check answer={1}>
+A sealed jar holds a few crystals of iodine and violet iodine vapor at equilibrium:
+
+$$
+\ce{I2(s) <=> I2(g)}
+$$
+
+The jar is opened for a moment, more iodine crystals are dropped in, and it is sealed again and left at the same temperature. Once it is back at equilibrium, how does the pressure of the iodine vapor compare with before?
+
+- It is the same as before.
+- It is higher, because there is more iodine to turn into vapor.
+- It is lower, because the extra crystals take vapor out of the space.
+- It cannot be known without the value of $K_p$.
+
+<div slot="why">
+
+The solid is left out, so the expression is just
+
+$$
+K_p = P_{\ce{I2}}
+$$
+
+$K_p$ depends only on the temperature, which has not changed, so the vapor returns to the same pressure. Extra solid does not change the solid's concentration: a crystal of iodine is as concentrated as a jarful. (The little space the new crystals take up makes no difference to the pressure.)
+
+</div>
+</Check>
+
+<Trap>
+
+Seven mistakes come up again and again on this topic:
+
+- **Putting the reactants on top.** It is products over reactants, in the direction the equation is written.
+- **Multiplying by a coefficient, or adding terms.** A coefficient becomes an exponent, and the terms are multiplied: $[\ce{F2}]^3$, never $3[\ce{F2}]$.
+- **Including a solid or a pure liquid.** (s) and (l) are left out. (g) and (aq) are in.
+- **Leaving water out because it is water.** Water written (l) is a liquid, either the pure liquid itself or the solvent the reaction happens in, and it is left out. Water written (g) is one of the gases in the mixture, with a pressure or concentration of its own, and it goes in. Read the state before you write the expression.
+- **Mixing $K_c$ and $K_p$.** Molarities go with $K_c$, and partial pressures in atm go with $K_p$. The two constants are usually different numbers.
+- **Treating $Q$ and $K$ as different formulas.** It is one fraction. $Q$ is its value at any moment, and $K$ is its value at equilibrium.
+- **Reading $K$ as the rate constant.** Capital $K$ says where a reaction ends up. Small $k$ says how fast it goes.
+
+</Trap>
+
+<KeyPoints>
+
+- For $a\,\ce{A} + b\,\ce{B} \;\ce{<=>}\; c\,\ce{C} + d\,\ce{D}$, the reaction quotient is products over reactants, each raised to its coefficient:
+
+  $$
+  Q_c = \frac{[\ce{C}]^c[\ce{D}]^d}{[\ce{A}]^a[\ce{B}]^b}
+  $$
+
+- $Q$ can be worked out at any moment. It moves toward $K$ as the reaction runs, and at equilibrium $Q = K$.
+- At a given temperature, $K$ is the same number whatever the mixture started as.
+- $K_c$ is built from concentrations in mol/L, and $K_p$ from partial pressures of gases in atm. The two are usually different numbers, and neither has a unit.
+- Pure solids and pure liquids are left out, because their concentrations do not depend on the amount present. Read each state before writing the expression: water as a liquid, (l), stays out, while water as a gas, (g), has a pressure or concentration of its own and goes in.
+- The equation sheet gives the expressions for $K_c$ and $K_p$. $Q$ is written in the same form.
+
+</KeyPoints>
+
+<PracticeNext />

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 318" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Two capped bottles, each half full of liquid water (the shaded band; liquid molecules are not drawn). Left, "just sealed": 2 vapor molecules, 4 solid arrows up (leaving the liquid), 1 dashed arrow down (returning). Right, "at equilibrium": 8 vapor molecules, 4 solid arrows up, 4 dashed arrows down. The up arrows are the same in number, length and position in both bottles. Each arrow crosses the liquid surface at y=186 and runs from y=166 to y=206. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <defs>
+    <g id="bottle">
+      <path d="M-80 186H80V262a12 12 0 0 1 -12 12H-68a12 12 0 0 1 -12 -12Z" fill="#4F706C" fill-opacity="0.22"/>
+      <path d="M-80 186H80" fill="none" stroke="#4F706C" stroke-width="1.5"/>
+      <path d="M-17 48V66C-17 86 -80 82 -80 104V262a12 12 0 0 0 12 12H68a12 12 0 0 0 12 -12V104C80 82 17 86 17 66V48" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+      <rect x="-22" y="34" width="44" height="14" rx="3" fill="#6B655D" stroke="#26231F" stroke-width="1.5"/>
+    </g>
+    <g id="leaving">
+      <path d="M0 206V175" fill="none" stroke="#26231F" stroke-width="2.5"/>
+      <path d="M0 166L-5.5 177H5.5Z" fill="#26231F"/>
+    </g>
+    <g id="returning">
+      <path d="M0 166V197" fill="none" stroke="#4F706C" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <path d="M0 206L-5.5 195H5.5Z" fill="#4F706C"/>
+    </g>
+    <circle id="vapor" r="6.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  </defs>
+  <rect width="480" height="318" fill="#FDFCF9"/>
+
+  <text x="120" y="24" text-anchor="middle" fill="#26231F" font-weight="600">just sealed</text>
+  <use href="#bottle" x="120"/>
+  <use href="#leaving" x="54"/>
+  <use href="#leaving" x="72"/>
+  <use href="#leaving" x="90"/>
+  <use href="#leaving" x="108"/>
+  <use href="#returning" x="150"/>
+  <use href="#vapor" x="62" y="144"/>
+  <use href="#vapor" x="178" y="140"/>
+  <path d="M69.6 139.8L88 129" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="92" y="128" fill="#26231F">water vapor</text>
+  <text x="120" y="250" text-anchor="middle" fill="#26231F">liquid water</text>
+  <text x="120" y="304" text-anchor="middle" fill="#26231F">leaving 4, returning 1</text>
+
+  <text x="360" y="24" text-anchor="middle" fill="#26231F" font-weight="600">at equilibrium</text>
+  <use href="#bottle" x="360"/>
+  <use href="#leaving" x="294"/>
+  <use href="#leaving" x="312"/>
+  <use href="#leaving" x="330"/>
+  <use href="#leaving" x="348"/>
+  <use href="#returning" x="372"/>
+  <use href="#returning" x="390"/>
+  <use href="#returning" x="408"/>
+  <use href="#returning" x="426"/>
+  <use href="#vapor" x="300" y="118"/>
+  <use href="#vapor" x="336" y="106"/>
+  <use href="#vapor" x="372" y="120"/>
+  <use href="#vapor" x="412" y="108"/>
+  <use href="#vapor" x="316" y="144"/>
+  <use href="#vapor" x="352" y="140"/>
+  <use href="#vapor" x="392" y="146"/>
+  <use href="#vapor" x="424" y="136"/>
+  <text x="360" y="304" text-anchor="middle" fill="#26231F">leaving 4, returning 4</text>
+</svg>

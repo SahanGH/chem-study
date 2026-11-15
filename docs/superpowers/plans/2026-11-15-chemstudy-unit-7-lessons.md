@@ -210,6 +210,21 @@ tests/e2e/diagram-equilibrium-approach.spec.ts diagram-equilibrium-shift.spec.ts
 
 Branch: `topic/unit-7-reaching-equilibrium`, from an up-to-date `main` after this plan's pull request merges. Tasks 1 to 5. The pull request title is "feat(lessons): Unit 7 lessons 7.1-7.4 and the approach-to-equilibrium explorer".
 
+> **As carried out (2026-11-15).** The repository is newer than Tasks 1 to 5 below. Each lesson was fact-checked on Fable 5.2 (no wrong answer, number or figure count in any), the group was checked for originality (no strong match), and two reviewers approved the explorer's code. What changed, and why:
+>
+> - **The explorer (Task 1).**
+>   - The module's functions take ids (`'forward-favored'`, `'only-a'`), and the id types are derived from the tables, so the two cannot drift apart.
+>   - `inTenths` is exported and throws for a rate constant that is not a whole number of tenths. The readout works in whole numbers, and a constant such as 0.25 would have made it disagree with the drawing in silence.
+>   - The absorbance explorer's panel classes were renamed to shared ones (`.diagram-panels`, `.diagram-panel-title`, `.diagram-chosen`), not copied.
+>   - The range check is now in three diagram modules. Extracting one shared `assertInRange` is left for its own change.
+> - **An answer option is never math alone (lesson 7.3).** Two Checks had bare fractions as options, and the accessibility test failed: the visible text of a rendered fraction is not its accessible name. The four expressions are now listed in the question, lettered A to D, and the options read "Expression A" to "Expression D". The second of them asks for K_p, so one Check practices a pressure expression.
+> - **ICE table rows are labeled I, C and E (lesson 7.4),** with a sentence saying what they stand for and that every value is in M. With "Equilibrium (M)" in the first column the table scrolled in its box from 390 px down; it now fits to 360 px.
+> - **Lesson 7.1.** The correct option of the crystal Check does not repeat the key idea's phrase "at equal rates". The definition of equilibrium says reactants and products are both still present. The fifth key point covers partial-pressure and rate graphs as well.
+> - **Lesson 7.2.** Check 2's third option is a pair of rates that lies between the starting values but is not equal (4.0 and 3.0 × 10⁻⁵ M/s), so the Check cannot be answered by "in between" alone. The figure "has the same shape" as lesson 7.1's rate graph: its curves meet at 40 percent, which no setting of the diagram gives.
+> - **Lesson 7.3.** Reworded, because the phrasing sat close to Tro's or the old notes': the opening of the K_p section, the reason a pure solid or liquid is left out, and the trap and key point about water as a liquid and as a gas. K is quoted to two figures, with the reason given. Tube 3's Q "had no value" at the very start.
+> - **Lesson 7.4.** The nitrosyl chloride is in a "sealed vessel", not a bulb: at 0.240 M it is at more than 10 atm. The wrong-method values shown to students are the main four of each numeric Check; the rest are in the check scripts.
+> - **Kept, after the originality check:** I₂ ⇌ 2 I in lesson 7.4 (Tro has a practice item on the same reaction, asking for a concentration from K; ours asks for K from moles with other numbers, and bromine in its place would need an unrealistic temperature); the library analogy of lesson 7.2 (Tro uses a population analogy for the same idea).
+
 ### Task 1: The approach-to-equilibrium explorer
 
 **Files:**

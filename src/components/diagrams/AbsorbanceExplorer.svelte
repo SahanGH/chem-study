@@ -93,11 +93,10 @@
 {/snippet}
 
 <div class="diagram-body" data-diagram="absorbance" data-hydrated={hydrated ? 'true' : undefined}>
-  <div class="absorbance-panels">
+  <div class="diagram-panels">
     <figure class="diagram-plot" data-panel="spectrum">
-      <figcaption class="absorbance-title">Absorption spectrum</figcaption>
+      <figcaption class="diagram-panel-title">Absorption spectrum</figcaption>
       <svg
-        class="absorbance"
         viewBox={`0 0 ${VIEW.width} ${VIEW.height}`}
         role="img"
         aria-label={describeSpectrum(wavelength, pathLength, concentration)}
@@ -128,7 +127,7 @@
         {/if}
         <path class="diagram-curve is-accent" data-curve d={spectrumPath} />
         <line
-          class="absorbance-chosen"
+          class="diagram-chosen"
           data-chosen
           x1={f(xForWavelength(wavelength))}
           y1={PLOT.bottom + 4}
@@ -140,9 +139,8 @@
     </figure>
 
     <figure class="diagram-plot" data-panel="calibration">
-      <figcaption class="absorbance-title">Calibration line</figcaption>
+      <figcaption class="diagram-panel-title">Calibration line</figcaption>
       <svg
-        class="absorbance"
         viewBox={`0 0 ${VIEW.width} ${VIEW.height}`}
         role="img"
         aria-label={describeCalibration(wavelength, pathLength, concentration)}
