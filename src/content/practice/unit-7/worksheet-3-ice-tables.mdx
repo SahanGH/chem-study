@@ -1,0 +1,448 @@
+---
+title: "Worksheet 3: ICE tables"
+kind: worksheet
+order: 4
+topics: ["7.7"]
+summary: Eight questions on tables of initial, change and equilibrium values, the small-x shortcut and its 5 percent check.
+---
+
+Work each question on paper before you open its answer. One idea runs through all of them: the 5 percent check is part of the answer, not a formality.
+
+The routine is the same every time. Set up an ICE table, with rows for the initial, change and equilibrium values. Take the change row from the coefficients. Then substitute the equilibrium row into $K$. Approximate only when it is justified, and always report the percentage.
+
+Questions 4 and 7 use the quadratic formula, and question 8 asks about its roots. The AP exam seldom needs it.
+
+## Questions
+
+<Question number={1} topic="7.7">
+
+In stoichiometry (topic 4.5), a reaction that goes to completion can be tracked in a table with rows for before, change and after. An ICE table has the same shape. State the one difference and why it arises.
+
+<Answer>
+
+In the stoichiometry table the reaction runs to completion, so the change row is a known quantity fixed by the limiting reactant. In an ICE table the reaction reaches equilibrium before any reactant runs out, so the change is an unknown $x$ whose value is set by $K$. Both still take the change row from the coefficients.
+
+</Answer>
+
+</Question>
+
+<Question number={2} topic="7.7">
+
+For $\ce{A <=> B + C}$, $K = 1.0 \times 10^{-5}$ and $[\ce{A}]_0 = 0.100\ \text{M}$. No B or C is present at the start.
+
+<Part label="a">
+
+Complete the equilibrium row: $[\ce{A}] =$ <Blank /> $[\ce{B}] = [\ce{C}] =$ <Blank />
+
+<Answer>
+
+For A: $0.100 - x$. For B and C: $x$.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Write the $K$ expression in terms of $x$.
+
+<Answer>
+
+$$
+\frac{x^2}{0.100 - x}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Apply the small-$x$ approximation and solve.
+
+<Answer>
+
+$$
+\begin{aligned}
+\frac{x^2}{0.100} &\approx 1.0 \times 10^{-5} \\
+x^2 &= 1.0 \times 10^{-6} \\
+x &= \mathbf{1.0 \times 10^{-3}}\ \text{M}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Carry out the 5 percent check explicitly.
+
+<Answer>
+
+$$
+\begin{aligned}
+\frac{x}{[\ce{A}]_0} &= \frac{1.0 \times 10^{-3}}{0.100} \\
+&= 1.0\%
+\end{aligned}
+$$
+
+That is below 5 percent, so the approximation is justified.
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+Give the three equilibrium concentrations.
+
+<Answer>
+
+$$
+[\ce{A}] = 0.099\ \text{M}
+$$
+
+$$
+[\ce{B}] = [\ce{C}] = 1.0 \times 10^{-3}\ \text{M}
+$$
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={3} topic="7.7">
+
+For $\ce{A <=> 2B}$, $K = 4.0 \times 10^{-6}$ and $[\ce{A}]_0 = 0.50\ \text{M}$. No B is present at the start.
+
+<Part label="a">
+
+Why is the change in B written as $+2x$ rather than $+x$?
+
+<Answer>
+
+The coefficient of B is 2, so two moles of B form for every mole of A consumed. The change row always follows the coefficients.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Solve for $[\ce{B}]$ at equilibrium.
+
+<Answer>
+
+$$
+\begin{aligned}
+K &= \frac{(2x)^2}{0.50 - x} \\
+&\approx \frac{4x^2}{0.50}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+4x^2 &= 2.0 \times 10^{-6} \\
+x &= 7.1 \times 10^{-4}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{B}] &= 2x \\
+&= \mathbf{1.4 \times 10^{-3}}\ \text{M}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Check the approximation.
+
+<Answer>
+
+$$
+\frac{x}{[\ce{A}]_0} = \frac{7.1 \times 10^{-4}}{0.50} = 0.14\%
+$$
+
+That is below 5 percent, so the approximation is valid.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={4} topic="7.7">
+
+This is the same setup as question 2, $\ce{A <=> B + C}$ with $[\ce{A}]_0 = 0.100\ \text{M}$, but now $K = 0.20$. No B or C is present at the start.
+
+<Part label="a">
+
+Apply the small-$x$ approximation and report the value it gives.
+
+<Answer>
+
+$$
+x = 0.141\ \text{M}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Carry out the check. What does it show?
+
+<Answer>
+
+$$
+\frac{x}{[\ce{A}]_0} = 141\%
+$$
+
+The supposedly small $x$ exceeds the entire initial concentration, which is impossible. The approximation is invalid.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Solve properly with the quadratic.
+
+<Answer>
+
+$$
+x^2 = 0.20(0.100 - x)
+$$
+
+so
+
+$$
+x^2 + 0.20x - 0.020 = 0
+$$
+
+$$
+\begin{aligned}
+x &= \frac{-0.20 + \sqrt{0.040 + 0.080}}{2} \\
+&= \frac{-0.20 + 0.3464}{2} \\
+&= \mathbf{0.073}\ \text{M}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+By what percentage was the approximation wrong?
+
+<Answer>
+
+About 93 percent too high:
+
+$$
+\frac{0.141 - 0.073}{0.073} = 0.93
+$$
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={5} topic="7.7">
+
+For $\ce{A <=> B + C}$, decide in each case whether the small-$x$ approximation will hold, and say why.
+
+<Part label="a">
+
+$K = 1 \times 10^{-8}$ and $[\ce{A}]_0 = 1.0\ \text{M}$: <Blank />
+
+<Answer>
+
+valid: $K$ is very small beside $[\ce{A}]_0$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$K = 2.0$ and $[\ce{A}]_0 = 0.10\ \text{M}$: <Blank />
+
+<Answer>
+
+invalid: $K$ exceeds $[\ce{A}]_0$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+$K = 1 \times 10^{-6}$ and $[\ce{A}]_0 = 1 \times 10^{-5}\ \text{M}$
+
+<Answer>
+
+Invalid. Although $K$ is small in absolute terms, the initial concentration is small too, and it is the *ratio* $[\ce{A}]_0/K$ that decides. Here that ratio is only 10, far too small for $x$ to be negligible. The 5 percent check would fail.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={6} topic="7.7">
+
+For the reaction below, $K = 50.0$ and both reactants start at 1.00 M. No HI is present at the start.
+
+$$
+\ce{H2 + I2 <=> 2HI}
+$$
+
+<Part label="a">
+
+Write $K$ in terms of $x$ and explain why no quadratic formula is needed.
+
+<Answer>
+
+$$
+\begin{aligned}
+K &= \frac{(2x)^2}{(1.00 - x)(1.00 - x)} \\
+&= \left[\frac{2x}{1.00 - x}\right]^2
+\end{aligned}
+$$
+
+The top and the bottom are both squares, so taking the square root of both sides gives a linear equation in $x$.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Solve for $x$.
+
+<Answer>
+
+$$
+\begin{aligned}
+\frac{2x}{1.00 - x} &= \sqrt{50.0} \\
+&= 7.07
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+2x &= 7.07 - 7.07x \\
+9.07x &= 7.07 \\
+x &= \mathbf{0.780}\ \text{M}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Give the three equilibrium concentrations.
+
+<Answer>
+
+$$
+[\ce{H2}] = [\ce{I2}] = 0.220\ \text{M}
+$$
+
+$$
+[\ce{HI}] = 1.56\ \text{M}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Verify by substituting back into $K$.
+
+<Answer>
+
+$$
+\begin{aligned}
+\frac{(1.56)^2}{(0.220)^2} &= \frac{2.434}{0.0484} \\
+&= \mathbf{50.3}
+\end{aligned}
+$$
+
+That agrees with 50.0 to rounding. ✓
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={7} topic="7.7">
+
+Solve $\ce{A <=> 2B}$ with $K = 0.50$ and $[\ce{A}]_0 = 1.00\ \text{M}$. No B is present at the start. Use the quadratic formula.
+
+<Answer>
+
+$$
+K = \frac{4x^2}{1.00 - x} = 0.50
+$$
+
+so
+
+$$
+4x^2 = 0.50 - 0.50x
+$$
+
+and
+
+$$
+4x^2 + 0.50x - 0.50 = 0
+$$
+
+$$
+\begin{aligned}
+x &= \frac{-0.50 + \sqrt{0.25 + 8.0}}{8} \\
+&= \frac{-0.50 + 2.872}{8} \\
+&= \mathbf{0.297}\ \text{M}
+\end{aligned}
+$$
+
+So:
+
+$$
+[\ce{A}] = 0.703\ \text{M}
+$$
+
+$$
+[\ce{B}] = 0.593\ \text{M}
+$$
+
+</Answer>
+
+</Question>
+
+<Question number={8} topic="7.7">
+
+Why is a negative root always discarded when solving an equilibrium quadratic?
+
+<Answer>
+
+A negative $x$ would mean a negative concentration for a species starting at zero. A positive root larger than the starting concentration is discarded too: it would mean more reactant consumed than was present. Only the physically possible root is kept.
+
+</Answer>
+
+</Question>
