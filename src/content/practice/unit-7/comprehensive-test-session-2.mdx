@@ -1,0 +1,2195 @@
+---
+title: "Comprehensive test, session 2: using the equilibrium constant"
+kind: test
+order: 9
+topics: ["7.7", "7.8", "7.9", "7.10", "7.11", "7.12"]
+summary: Twenty-one scored free-response questions on equilibrium concentrations, particle pictures, Le Châtelier's principle and Q, and solubility, each with a worked answer and its scoring rubric.
+points: 111
+minutes: 110
+---
+
+This is the second of two sittings that together test all of Unit 7. It covers topics 7.7 to 7.12: calculating equilibrium concentrations, particle pictures of equilibrium, Le Châtelier's principle and $Q$, and solubility and the common-ion effect. Session 1 covers reversible reactions, the reaction quotient and the equilibrium constant, calculating $K$, and the size and rules of $K$.
+
+There are 21 questions worth 111 points. Give yourself about 110 minutes. You may use a calculator. Write out each answer in full before you open the worked answer and the scoring rubric.
+
+Two notes on scope. One question (question 6) uses the quadratic formula, which the AP exam seldom needs. No question asks you to turn a $K_c$ into a $K_p$ or back.
+
+Where a later part uses a value you found earlier, a correct method applied to your own earlier value earns the later points, as on the AP exam.
+
+## Part E: Calculating equilibrium concentrations
+
+In this part you start from a mixture and a value of $K$ and work out what is there at equilibrium. First find which way the mixture runs, from $Q$ against $K$. Then set up a table with an unknown $x$ and solve it: by a square root, by the small-x shortcut with its 5 percent check, or, in one question, by the quadratic formula.
+
+<Question number={1} title="Which way three mixtures run" topic="7.7" points={5}>
+
+For the made-up reaction
+
+$$
+\ce{2A(g) + B(g) <=> 2G(g)}
+$$
+
+$K_c$ = 40.0 at a certain temperature. Three sealed flasks are held at that temperature. Each was filled with a different mixture of the three gases. The table gives the concentrations just after filling.
+
+| Flask | $[\ce{A}]$ (M) | $[\ce{B}]$ (M) | $[\ce{G}]$ (M) |
+|---|---|---|---|
+| 1 | 0.100 | 0.200 | 0.400 |
+| 2 | 0.200 | 0.100 | 0.400 |
+| 3 | 0.300 | 0.0500 | 0.300 |
+
+<Part label="a">
+
+Write the expression for $Q_c$.
+
+<Answer>
+
+Product on top, reactants on the bottom, each raised to its coefficient:
+
+$$
+Q_c = \frac{[\ce{G}]^2}{[\ce{A}]^2[\ce{B}]}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $Q_c$ for each flask. For each, state whether the mixture runs toward products, runs toward reactants, or is already at equilibrium, and justify your answer.
+
+<Answer>
+
+Flask 1:
+
+$$
+\begin{aligned}
+Q_c &= \frac{(0.400)^2}{(0.100)^2(0.200)} \\
+&= \frac{0.160}{0.00200} \\
+&= \mathbf{80.0}
+\end{aligned}
+$$
+
+That is greater than 40.0: there is too much G for equilibrium. Flask 1 **runs toward reactants**, using up G, until $Q_c$ has fallen to 40.0.
+
+Flask 2:
+
+$$
+\begin{aligned}
+Q_c &= \frac{(0.400)^2}{(0.200)^2(0.100)} \\
+&= \frac{0.160}{0.00400} \\
+&= \mathbf{40.0}
+\end{aligned}
+$$
+
+That equals $K_c$, so flask 2 is **already at equilibrium**. Both reactions keep running, at the same rate, and the concentrations stay as they are.
+
+Flask 3:
+
+$$
+\begin{aligned}
+Q_c &= \frac{(0.300)^2}{(0.300)^2(0.0500)} \\
+&= \frac{0.0900}{0.00450} \\
+&= \mathbf{20.0}
+\end{aligned}
+$$
+
+That is less than 40.0: there is too little G. Flask 3 **runs toward products**, until $Q_c$ has risen to 40.0.
+
+Flasks 1 and 2 hold the same concentration of G and simply swap A and B. They behave differently because $[\ce{A}]$ is squared and $[\ce{B}]$ is not. Without the exponents, every flask gives 20.0, and flasks 1 and 2 would wrongly seem to run toward products.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+For flask 1, write the change row of a table of initial, change and equilibrium concentrations, in terms of $x$, for A, B and G.
+
+<Answer>
+
+Flask 1 runs toward reactants, so A and B are formed (plus) and G is used up (minus). The sizes follow the coefficients 2, 1 and 2: **+2x for A, +x for B and −2x for G**.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for the expression with $[\ce{G}]$ squared on top and $[\ce{A}]$ squared on the bottom. An expression without the exponents earns 0 points.</RubricLine>
+<RubricLine part="b" points={3}>1 point for each flask: the value of $Q_c$ (80.0, 40.0, 20.0) and the direction that follows from comparing it with 40.0 (toward reactants, at equilibrium, toward products). A direction with no $Q_c$ earns 0 points for that flask. An expression without the exponents gives 20.0 for every flask and earns 0 points here.</RubricLine>
+<RubricLine part="c" points={1}>1 point for +2x for A, +x for B and −2x for G. The signs of a reaction running forward, or a plain x for every gas, earn 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={2} title="Methanol to dimethyl ether" topic="7.7" points={6}>
+
+Over a hot catalyst, two molecules of methanol vapor join and give off one molecule of water, forming dimethyl ether, $\ce{CH3OCH3}$:
+
+$$
+\begin{aligned}
+&\ce{2CH3OH(g) <=>} \\
+&\quad \ce{CH3OCH3(g) + H2O(g)}
+\end{aligned}
+$$
+
+At a certain temperature $K_c$ = 9.00. A sealed 2.00 L vessel is filled with 0.700 mol of methanol and nothing else, and held at that temperature. (The values are made up for practice.)
+
+<Part label="a">
+
+State which way the reaction runs, and set up a table of initial, change and equilibrium concentrations.
+
+<Answer>
+
+The starting concentration of methanol:
+
+$$
+\begin{aligned}
+[\ce{CH3OH}]_0 &= \frac{0.700\ \text{mol}}{2.00\ \text{L}} \\
+&= 0.350\ \text{M}
+\end{aligned}
+$$
+
+There are no products, so $Q_c$ = 0, which is less than $K_c$. The reaction **runs toward products**.
+
+Every value is in M. The rows are labeled I, C and E, for Initial, Change and Equilibrium:
+
+| | CH₃OH | CH₃OCH₃ | H₂O |
+|---|---|---|---|
+| I | 0.350 | 0 | 0 |
+| C | −2x | +x | +x |
+| E | 0.350 − 2x | x | x |
+
+Methanol's coefficient is 2, so it falls by $2x$ while each product rises by $x$.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $x$.
+
+<Answer>
+
+Put the equilibrium row into the $K_c$ expression:
+
+$$
+\begin{aligned}
+K_c &= \frac{[\ce{CH3OCH3}][\ce{H2O}]}{[\ce{CH3OH}]^2} \\
+&= \frac{x^2}{(0.350 - 2x)^2} = 9.00
+\end{aligned}
+$$
+
+The top and the bottom are both squares, so take the square root of both sides:
+
+$$
+\begin{aligned}
+\frac{x}{0.350 - 2x} &= \sqrt{9.00} \\
+&= 3.00
+\end{aligned}
+$$
+
+Use the positive root. The negative one, $-3.00$, gives $x$ = 0.210, which would make $[\ce{CH3OH}]$ negative ($0.350 - 0.420$).
+
+$$
+\begin{aligned}
+x &= 3.00(0.350 - 2x) \\
+x &= 1.050 - 6.00x \\
+7.00x &= 1.050 \\
+x &= \mathbf{0.150}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate the three concentrations at equilibrium, and show that they give $K_c$ back.
+
+<Answer>
+
+$$
+\begin{aligned}
+[\ce{CH3OCH3}] &= [\ce{H2O}] \\
+&= \mathbf{0.150}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{CH3OH}] &= 0.350 - 2(0.150) \\
+&= \mathbf{0.050}\ \text{M}
+\end{aligned}
+$$
+
+Check:
+
+$$
+\begin{aligned}
+&\frac{(0.150)(0.150)}{(0.050)^2} \\
+&= \frac{0.0225}{0.0025} = 9.00
+\end{aligned}
+$$
+
+The answers give $K_c$ back. Six sevenths of the methanol has reacted.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the direction, toward products, because $Q_c$ = 0 (no products) is less than $K_c$; 1 point for the table with 0.350 M methanol at the start, −2x for methanol and +x for each product. A change row of −x for methanol earns 0 points for the table.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the expression in $x$ with the square root of both sides taken (3.00 on the right); 1 point for $x$ = 0.150. Expanding and solving the full quadratic instead earns both points. A change row of −x for methanol, carried through, gives $x$ = 0.2625 and earns the first point only.</RubricLine>
+<RubricLine part="c" points={2}>1 point for all three concentrations (0.150 M, 0.150 M and 0.050 M methanol); 1 point for putting them into the $K_c$ expression and getting 9.00. Giving 0.150 M as the methanol concentration loses the first point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={3} title="Bromine atoms in a hot vessel" topic="7.7" points={6}>
+
+At high temperatures a small share of bromine molecules split into atoms:
+
+$$
+\ce{Br2(g) <=> 2Br(g)}
+$$
+
+At a certain high temperature $K_c = 1.2 \times 10^{-5}$. A sealed 3.00 L quartz vessel holds 0.150 mol of $\ce{Br2}$ and nothing else, and is heated to that temperature. (The values are made up for practice.)
+
+<Part label="a">
+
+Set up a table of initial, change and equilibrium concentrations, and write $K_c$ in terms of $x$.
+
+<Answer>
+
+$$
+\begin{aligned}
+[\ce{Br2}]_0 &= \frac{0.150\ \text{mol}}{3.00\ \text{L}} \\
+&= 0.0500\ \text{M}
+\end{aligned}
+$$
+
+There are no bromine atoms at the start, so $Q_c$ = 0 and the reaction runs forward.
+
+Every value is in M. The rows are labeled I, C and E, for Initial, Change and Equilibrium:
+
+| | Br₂ | Br |
+|---|---|---|
+| I | 0.0500 | 0 |
+| C | −x | +2x |
+| E | 0.0500 − x | 2x |
+
+$$
+\begin{aligned}
+K_c &= \frac{[\ce{Br}]^2}{[\ce{Br2}]} \\
+&= \frac{(2x)^2}{0.0500 - x} \\
+&= 1.2 \times 10^{-5}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$K_c$ is very small, so use the small-x approximation to calculate $x$. Say where $x$ is left out.
+
+<Answer>
+
+$x$ is left out only where it is subtracted from 0.0500, so $0.0500 - x$ becomes 0.0500. The $(2x)^2$ on top stands alone and stays. It is $4x^2$.
+
+$$
+\frac{4x^2}{0.0500} = 1.2 \times 10^{-5}
+$$
+
+$$
+\begin{aligned}
+x^2 &= \frac{(1.2 \times 10^{-5})(0.0500)}{4} \\
+&= 1.5 \times 10^{-7} \\
+x &= \mathbf{3.87 \times 10^{-4}}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Carry out the 5 percent check, and state what it shows.
+
+<Answer>
+
+What was left out is $x$, and it was left out of the starting concentration of $\ce{Br2}$, 0.0500 M:
+
+$$
+\begin{aligned}
+&\frac{3.87 \times 10^{-4}}{0.0500} \times 100\% \\
+&= \mathbf{0.77\%}
+\end{aligned}
+$$
+
+That is **under 5 percent**, so leaving $x$ out was justified.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Calculate $[\ce{Br}]$ and $[\ce{Br2}]$ at equilibrium, and show that they give $K_c$ back.
+
+<Answer>
+
+$$
+\begin{aligned}
+[\ce{Br}] &= 2(3.87 \times 10^{-4}) \\
+&= \mathbf{7.7 \times 10^{-4}}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{Br2}] &= 0.0500 - 0.000387 \\
+&= \mathbf{0.0496}\ \text{M}
+\end{aligned}
+$$
+
+Check:
+
+$$
+\begin{aligned}
+&\frac{(7.7 \times 10^{-4})^2}{0.0496} \\
+&= 1.2 \times 10^{-5}
+\end{aligned}
+$$
+
+The answers give $K_c$ back. Fewer than 1 in 100 of the bromine molecules have split.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the table: 0.0500 M $\ce{Br2}$ at the start, −x for $\ce{Br2}$ and +2x for Br; 1 point for $K_c$ with $(2x)^2$ on top and $0.0500 - x$ on the bottom. Writing $(2x)^2$ as $2x^2$ loses the second point.</RubricLine>
+<RubricLine part="b" points={1}>1 point for $x = 3.87 \times 10^{-4}$ (or $3.9 \times 10^{-4}$), with $x$ left out only beside 0.0500. Solving the full quadratic instead gives $3.86 \times 10^{-4}$ and earns the point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for dividing $x$ by 0.0500 and giving the percentage, 0.77 percent (0.78 percent from the rounded $x$); 1 point for saying it is under 5 percent, so the approximation is justified. Dividing $2x$ by 0.0500 (1.5 percent) earns the second point only. A student who solved the quadratic in part (b) earns both points by dividing that $x$ by 0.0500.</RubricLine>
+<RubricLine part="d" points={1}>1 point for $[\ce{Br}] = 7.7 \times 10^{-4}$ M and $[\ce{Br2}]$ = 0.0496 M, with the check giving $1.2 \times 10^{-5}$. Giving $x$ as $[\ce{Br}]$ earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={4} title="Equilibrium partial pressures of HOCl" topic="7.7" points={5}>
+
+Dichlorine monoxide, $\ce{Cl2O}$, reacts with water vapor to give hypochlorous acid, HOCl:
+
+$$
+\begin{aligned}
+&\ce{H2O(g) + Cl2O(g) <=>} \\
+&\quad \ce{2HOCl(g)}
+\end{aligned}
+$$
+
+At a certain temperature $K_p$ = 0.160. A rigid flask is filled with water vapor at a partial pressure of 0.0240 atm and $\ce{Cl2O}$ at 0.0240 atm, with no HOCl, and held at that temperature. (The values are made up for practice.)
+
+<Part label="a">
+
+State which way the reaction runs, and set up a table of initial, change and equilibrium partial pressures.
+
+<Answer>
+
+There is no HOCl, so $Q_p$ = 0, which is less than $K_p$. The reaction **runs toward products**.
+
+Every value is in atm. The rows are labeled I, C and E, for Initial, Change and Equilibrium:
+
+| | H₂O | Cl₂O | HOCl |
+|---|---|---|---|
+| I | 0.0240 | 0.0240 | 0 |
+| C | −x | −x | +2x |
+| E | 0.0240 − x | 0.0240 − x | 2x |
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the partial pressure of each gas at equilibrium.
+
+<Answer>
+
+$$
+\begin{aligned}
+K_p &= \frac{(P_{\ce{HOCl}})^2}{(P_{\ce{H2O}})(P_{\ce{Cl2O}})} \\
+&= \frac{(2x)^2}{(0.0240 - x)^2} \\
+&= 0.160
+\end{aligned}
+$$
+
+The two reactants started equal and fall by the same amount, so the bottom is a perfect square like the top. Take the square root of both sides:
+
+$$
+\begin{aligned}
+\frac{2x}{0.0240 - x} &= \sqrt{0.160} \\
+&= 0.400
+\end{aligned}
+$$
+
+Use the positive root. The negative one gives a negative $x$, which would make the pressure of HOCl negative.
+
+$$
+\begin{aligned}
+2x &= 0.400(0.0240 - x) \\
+2x &= 0.00960 - 0.400x \\
+2.400x &= 0.00960 \\
+x &= 0.00400
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+P_{\ce{HOCl}} &= 2(0.00400) \\
+&= \mathbf{0.00800}\ \text{atm}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+P_{\ce{H2O}} &= P_{\ce{Cl2O}} \\
+&= 0.0240 - 0.00400 \\
+&= \mathbf{0.0200}\ \text{atm}
+\end{aligned}
+$$
+
+Check:
+
+$$
+\begin{aligned}
+&\frac{(0.00800)^2}{(0.0200)(0.0200)} \\
+&= \frac{6.40 \times 10^{-5}}{4.00 \times 10^{-4}} = 0.160
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate the total pressure in the flask at equilibrium, and explain why it equals the total pressure at the start.
+
+<Answer>
+
+$$
+\begin{aligned}
+P_{\text{total}} &= 0.0200 + 0.0200 \\
+&\quad + 0.00800 \\
+&= \mathbf{0.0480}\ \text{atm}
+\end{aligned}
+$$
+
+At the start it was the same:
+
+$$
+0.0240 + 0.0240 = 0.0480\ \text{atm}
+$$
+
+Each time one $\ce{H2O}$ and one $\ce{Cl2O}$ react, two HOCl form: two molecules of gas become two. The total amount of gas does not change, so in a rigid flask at a fixed temperature the total pressure does not change either.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for the direction, toward products because $Q_p$ = 0, with the table in atm: −x for each reactant and +2x for HOCl.</RubricLine>
+<RubricLine part="b" points={3}>1 point for the expression in $x$ with the square root of both sides taken (0.400 on the right); 1 point for $x$ = 0.00400; 1 point for the three pressures (0.0200 atm, 0.0200 atm and 0.00800 atm HOCl). Expanding and solving the full quadratic instead earns the first two points. Giving $x$ as the pressure of HOCl loses the third point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for 0.0480 atm with the reason: two molecules of gas on each side of the equation, so the total amount of gas, and with it the total pressure, does not change. Showing that the $x$ terms cancel in the sum of the three pressures also earns the point. A total with no reason earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={5} title="A mixture that starts with product" topic="7.7" points={6}>
+
+For the made-up reaction
+
+$$
+\ce{X(s) + Y(g) <=> Z(g)}
+$$
+
+$K_c$ = 1.50 at a certain temperature. A sealed vessel at that temperature holds some solid X, which stays present throughout, with $[\ce{Y}]$ = 0.100 M and $[\ce{Z}]$ = 0.400 M at the start.
+
+<Part label="a">
+
+Write the expression for $Q_c$, calculate it for the starting mixture, and state which way the reaction runs.
+
+<Answer>
+
+X is a solid, so it is left out:
+
+$$
+Q_c = \frac{[\ce{Z}]}{[\ce{Y}]}
+$$
+
+$$
+\begin{aligned}
+Q_c &= \frac{0.400}{0.100} \\
+&= \mathbf{4.00}
+\end{aligned}
+$$
+
+That is greater than 1.50: there is too much Z for equilibrium. The reaction **runs toward reactants**, using up Z and forming Y and X, until $Q_c$ has fallen to 1.50.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Set up a table of initial, change and equilibrium concentrations, and calculate $x$.
+
+<Answer>
+
+The solid has no concentration in the table. The reaction runs toward reactants, so Y rises by $x$ and Z falls by $x$.
+
+Every value is in M. The rows are labeled I, C and E, for Initial, Change and Equilibrium:
+
+| | Y | Z |
+|---|---|---|
+| I | 0.100 | 0.400 |
+| C | +x | −x |
+| E | 0.100 + x | 0.400 − x |
+
+$$
+K_c = \frac{0.400 - x}{0.100 + x} = 1.50
+$$
+
+$$
+\begin{aligned}
+0.400 - x &= 1.50(0.100 + x) \\
+0.400 - x &= 0.150 + 1.50x \\
+0.250 &= 2.50x \\
+x &= \mathbf{0.100}
+\end{aligned}
+$$
+
+If you skipped the direction and wrote the table for a forward reaction, you would get $x = -0.100$. The minus sign says the reaction runs the other way.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate $[\ce{Y}]$ and $[\ce{Z}]$ at equilibrium, and show that they give $K_c$ back.
+
+<Answer>
+
+$$
+\begin{aligned}
+[\ce{Y}] &= 0.100 + 0.100 \\
+&= \mathbf{0.200}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{Z}] &= 0.400 - 0.100 \\
+&= \mathbf{0.300}\ \text{M}
+\end{aligned}
+$$
+
+Check:
+
+$$
+\frac{0.300}{0.200} = 1.50
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+State whether the mass of solid X increases, decreases or stays the same as the mixture reaches equilibrium. Justify your answer.
+
+<Answer>
+
+The mass of X **increases**. The reaction runs toward reactants, and every Z that reacts forms one X along with one Y. X is left out of $K$ because its concentration is fixed, not because its amount cannot change.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $Q_c = [\ce{Z}]/[\ce{Y}]$ with no X and the value 4.00; 1 point for the direction, toward reactants, because $Q_c$ is greater than $K_c$. An expression that includes X loses the first point.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the table with +x for Y and −x for Z; 1 point for $x$ = 0.100. A table written for the forward direction that gives $x = -0.100$, with the minus sign read as the reverse direction, earns both points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for $[\ce{Y}]$ = 0.200 M and $[\ce{Z}]$ = 0.300 M, with the check giving 1.50.</RubricLine>
+<RubricLine part="d" points={1}>1 point for "increases", because the reaction runs toward reactants and forms X. "Stays the same because a solid is left out of $K$" earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={6} title="When the shortcut fails" topic="7.7" points={7}>
+
+For the made-up reaction
+
+$$
+\ce{A(g) + B(g) <=> AB(g)}
+$$
+
+$K_c$ = 0.500 at a certain temperature. A vessel is filled with 0.450 M A and 0.300 M B, with no AB, and held at that temperature.
+
+<Part label="a">
+
+Set up a table of initial, change and equilibrium concentrations, and write $K_c$ in terms of $x$.
+
+<Answer>
+
+There is no AB, so $Q_c$ = 0 and the reaction runs forward.
+
+Every value is in M. The rows are labeled I, C and E, for Initial, Change and Equilibrium:
+
+| | A | B | AB |
+|---|---|---|---|
+| I | 0.450 | 0.300 | 0 |
+| C | −x | −x | +x |
+| E | 0.450 − x | 0.300 − x | x |
+
+$$
+\begin{aligned}
+K_c &= \frac{[\ce{AB}]}{[\ce{A}][\ce{B}]} \\
+&= \frac{x}{(0.450 - x)(0.300 - x)} \\
+&= 0.500
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+A student leaves $x$ out beside both starting concentrations. Calculate the $x$ this gives, carry out the 5 percent check, and state what it shows.
+
+<Answer>
+
+With $0.450 - x$ taken as 0.450 and $0.300 - x$ as 0.300:
+
+$$
+\frac{x}{(0.450)(0.300)} = 0.500
+$$
+
+$$
+\begin{aligned}
+x &= (0.500)(0.450)(0.300) \\
+&= 0.0675
+\end{aligned}
+$$
+
+$x$ was left out of two starting concentrations, so check it against both:
+
+$$
+\frac{0.0675}{0.300} \times 100\% = 22.5\%
+$$
+
+$$
+\frac{0.0675}{0.450} \times 100\% = 15.0\%
+$$
+
+Both are **well over 5 percent**. The approximation has failed, and 0.0675 is not good enough. Too large a share of the reactants reacts for $x$ to be left out, and only the check could tell you so.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Solve for $x$ with the quadratic formula. Give both roots, and explain which one you keep.
+
+<Answer>
+
+Clear the fraction:
+
+$$
+\begin{aligned}
+x &= 0.500(0.450 - x) \\
+&\quad \times (0.300 - x)
+\end{aligned}
+$$
+
+Multiply out the brackets:
+
+$$
+\begin{aligned}
+&(0.450 - x)(0.300 - x) \\
+&= 0.135 - 0.750x + x^2
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+x &= 0.0675 - 0.375x \\
+&\quad + 0.500x^2
+\end{aligned}
+$$
+
+Collect every term on one side and multiply through by 2:
+
+$$
+x^2 - 2.75x + 0.135 = 0
+$$
+
+In the quadratic formula, $a$ = 1, $b = -2.75$ and $c$ = 0.135. The quantity under the square root, $b^2 - 4ac$, is
+
+$$
+\begin{aligned}
+&(2.75)^2 - 4(0.135) \\
+&= 7.5625 - 0.540 \\
+&= 7.0225
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+x &= \frac{2.75 \pm \sqrt{7.0225}}{2} \\
+&= \frac{2.75 \pm 2.65}{2}
+\end{aligned}
+$$
+
+The two roots:
+
+$$
+x = \frac{2.75 + 2.65}{2} = 2.70
+$$
+
+$$
+x = \frac{2.75 - 2.65}{2} = 0.0500
+$$
+
+Both roots are positive, so the sign does not decide. **Reject 2.70**: it is larger than what was there of either reactant. It would make both concentrations negative, which is impossible:
+
+$$
+\begin{aligned}
+[\ce{A}] &= 0.450 - 2.70 \\
+&= -2.25\ \text{M}
+\end{aligned}
+$$
+
+and $[\ce{B}]$ would be $-2.40$ M. **Keep $x$ = 0.0500.**
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Calculate the three concentrations at equilibrium, and show that they give $K_c$ back.
+
+<Answer>
+
+$$
+[\ce{AB}] = \mathbf{0.0500}\ \text{M}
+$$
+
+$$
+\begin{aligned}
+[\ce{A}] &= 0.450 - 0.0500 \\
+&= \mathbf{0.400}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{B}] &= 0.300 - 0.0500 \\
+&= \mathbf{0.250}\ \text{M}
+\end{aligned}
+$$
+
+Check:
+
+$$
+\begin{aligned}
+&\frac{0.0500}{(0.400)(0.250)} \\
+&= \frac{0.0500}{0.100} = 0.500
+\end{aligned}
+$$
+
+The answers give $K_c$ back. The shortcut's 0.0675 was 35 percent too high:
+
+$$
+\begin{aligned}
+&\frac{0.0675 - 0.0500}{0.0500} \times 100\% \\
+&= 35\%
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for the table with −x for A and for B and +x for AB, and the $K_c$ expression written with these equilibrium values.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $x$ = 0.0675 and at least one percentage with its division shown (22.5 percent of 0.300, or 15.0 percent of 0.450); 1 point for saying that this is over 5 percent, so the approximation fails. A percentage with no conclusion earns the first point only.</RubricLine>
+<RubricLine part="c" points={3}>1 point for the quadratic in standard form (1, $-2.75$ and $0.135$ as the coefficients) or any multiple of it; 1 point for both roots, 2.70 and 0.0500; 1 point for rejecting 2.70 because it is larger than the starting concentrations, or because it would make $[\ce{A}]$ and $[\ce{B}]$ negative (either reason earns the point). Rejecting 2.70 only because it is the larger root, with no reason, earns 0 points for the third point.</RubricLine>
+<RubricLine part="d" points={1}>1 point for $[\ce{AB}]$ = 0.0500 M, $[\ce{A}]$ = 0.400 M and $[\ce{B}]$ = 0.250 M, with the check giving 0.500. Keeping the root 2.70 earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part F: Particle pictures of equilibrium
+
+There are no drawings on this page. Each particle picture is given as a table of counts: how many particles of each kind a drawing of the container shows, with the container's volume and the amount of substance each particle stands for. In this part you read $K$, $Q$ and the progress of a reaction from those counts, and decide when the counts alone are enough.
+
+<Question number={7} title="Hydrogen and deuterium trade atoms" topic="7.8" points={4}>
+
+Deuterium, D, is the heavier isotope of hydrogen. Molecules of hydrogen and deuterium trade atoms to form HD:
+
+$$
+\ce{H2(g) + D2(g) <=> 2HD(g)}
+$$
+
+Two sealed flasks are held at the same temperature, each with a catalyst that lets the molecules trade atoms. Flask 1 has a volume of 1.00 L and has been left until nothing in it changes. Flask 2 has a volume of 2.00 L and has just been filled with a mixture of all three gases. A drawing of each flask shows these numbers of molecules, and each molecule in a drawing stands for 0.0100 mol of that substance. (The data are made up.)
+
+| Flask | $\ce{H2}$ | $\ce{D2}$ | $\ce{HD}$ |
+|---|---|---|---|
+| 1 (1.00 L) | 4 | 5 | 8 |
+| 2 (2.00 L) | 3 | 3 | 8 |
+
+<Part label="a">
+
+Explain why the counts for flask 1 can be put straight into the expression for $K_c$, without first being turned into concentrations. Then calculate $K_c$ at this temperature.
+
+<Answer>
+
+$$
+K_c = \frac{[\ce{HD}]^2}{[\ce{H2}][\ce{D2}]}
+$$
+
+Each concentration is the count times 0.0100 mol, divided by the volume of the flask. The top of the expression multiplies two concentrations, because $[\ce{HD}]$ is squared, and the bottom multiplies two as well. So the factor of 0.0100 mol over the volume appears twice on top and twice underneath, and it cancels. That happens because the equation has the same number of particles on each side: two on the left and two on the right.
+
+So the counts go straight in, with the count of HD squared:
+
+$$
+\begin{aligned}
+K_c &= \frac{8^2}{(4)(5)} = \frac{64}{20} \\
+&= \mathbf{3.20}
+\end{aligned}
+$$
+
+The concentrations give the same value. In flask 1 they are 0.0400 M $\ce{H2}$, 0.0500 M $\ce{D2}$ and 0.0800 M $\ce{HD}$:
+
+$$
+\begin{aligned}
+K_c &= \frac{(0.0800)^2}{(0.0400)(0.0500)} \\
+&= \frac{0.00640}{0.00200} = 3.20
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Determine whether flask 2 is at equilibrium. If it is not, state which way its mixture runs. Justify your answer.
+
+<Answer>
+
+Flask 2 is twice the size of flask 1, but that does not matter: for this equation the volume cancels in any flask. Put flask 2's counts into $Q$:
+
+$$
+\begin{aligned}
+Q &= \frac{8^2}{(3)(3)} = \frac{64}{9} \\
+&= 7.11
+\end{aligned}
+$$
+
+The concentrations, 0.0150 M $\ce{H2}$, 0.0150 M $\ce{D2}$ and 0.0400 M $\ce{HD}$, give the same 7.11.
+
+$Q$ is greater than $K_c$ (7.11 against 3.20), so flask 2 is **not at equilibrium**. It holds too much HD for its H₂ and D₂. The mixture **runs toward $\ce{H2}$ and $\ce{D2}$**: HD molecules trade atoms back faster than they form, until $Q$ falls to 3.20.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the reason: the same number of particles on each side of the equation (two and two), so the volume, or the amount per particle over the volume, cancels; 1 point for $K_c = 3.20$ (3.2 also earns it), from the counts or from the concentrations. Leaving off the square gives 0.40 and earns 0 points for the value.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $Q = 7.11$ (7.1 also earns it), from the counts or from the concentrations; 1 point for "not at equilibrium, runs toward $\ce{H2}$ and $\ce{D2}$" because $Q$ is greater than $K_c$. Leaving off the square gives 0.89 and the opposite direction, and earns 0 points. Saying that flask 2 cannot be compared with flask 1 because its volume differs earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={8} title="Three drawings of aluminum chloride vapor" topic="7.8" points={5}>
+
+At high temperatures, aluminum chloride vapor holds two kinds of molecule: $\ce{Al2Cl6}$, and $\ce{AlCl3}$, which is half of one. They turn into each other reversibly:
+
+$$
+\ce{Al2Cl6(g) <=> 2AlCl3(g)}
+$$
+
+A sealed vessel of volume 0.250 L is filled with $\ce{Al2Cl6}$ alone and held at a fixed high temperature. It is drawn at three times after filling. Each particle in a drawing stands for 0.00100 mol of that substance. The count of $\ce{AlCl3}$ at 2 minutes was not recorded. (The data are made up.)
+
+| Time (min) | $\ce{Al2Cl6}$ | $\ce{AlCl3}$ |
+|---|---|---|
+| 2 | 8 | ? |
+| 6 | 6 | 12 |
+| 10 | 6 | 12 |
+
+<Part label="a">
+
+Use the atoms in the vessel to determine the count of $\ce{AlCl3}$ at 2 minutes.
+
+<Answer>
+
+The vessel is sealed, so it holds the same atoms at every time. Count the aluminum atoms at 6 minutes: each $\ce{Al2Cl6}$ holds two and each $\ce{AlCl3}$ holds one.
+
+$$
+2(6) + 12 = 24\ \text{Al atoms}
+$$
+
+At 2 minutes, with $n$ the missing count:
+
+$$
+\begin{aligned}
+2(8) + n &= 24 \\
+n &= \mathbf{8}
+\end{aligned}
+$$
+
+The chlorine atoms agree. At 6 minutes and at 2 minutes:
+
+$$
+\begin{aligned}
+6(6) + 3(12) &= 72\ \text{Cl atoms} \\
+6(8) + 3(8) &= 72\ \text{Cl atoms}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+State at which of the three times the vessel is at equilibrium, and justify your answer.
+
+<Answer>
+
+The vessel is at equilibrium **at 6 minutes and at 10 minutes**.
+
+The counts are the same in those two drawings, 6 $\ce{Al2Cl6}$ and 12 $\ce{AlCl3}$, so the amounts have stopped changing. Between 2 and 6 minutes they were still changing: $\ce{Al2Cl6}$ fell from 8 to 6 and $\ce{AlCl3}$ rose from 8 to 12. So at 2 minutes the vessel was not yet at equilibrium, even though it held equal numbers of the two molecules. Equilibrium means constant amounts, not equal ones.
+
+The drawings show that equilibrium was reached at some moment between 2 and 6 minutes. They cannot say exactly when. Neither $K$ nor the volume is needed for this part.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Compare what is happening in the vessel at 2 minutes with what is happening at 10 minutes. Then state whether a drawing at 10 minutes shows the same molecules as the drawing at 6 minutes, and explain.
+
+<Answer>
+
+At **2 minutes** both reactions are running, but the forward reaction is faster: $\ce{Al2Cl6}$ molecules split into $\ce{AlCl3}$ faster than $\ce{AlCl3}$ molecules pair up. That is why $\ce{Al2Cl6}$ is still being used up and $\ce{AlCl3}$ is still building up.
+
+At **10 minutes** both reactions are still running, **at equal rates**. Each second, as many $\ce{Al2Cl6}$ molecules split as form, so the counts do not change.
+
+So the drawing at 10 minutes shows **the same counts but not the same molecules**. Between 6 and 10 minutes, some $\ce{Al2Cl6}$ molecules have split into pairs of $\ce{AlCl3}$, and other $\ce{AlCl3}$ molecules have paired up to replace them.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for 8, with an atom count shown (aluminum or chlorine). A bare 8 with no atom count earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for 6 minutes and 10 minutes (both, and not 2 minutes); 1 point for the reason: the counts are the same at 6 and 10 minutes, after changing between 2 and 6 minutes. Choosing 2 minutes because the two counts are equal there earns 0 points for this part.</RubricLine>
+<RubricLine part="c" points={2}>1 point for saying that at 2 minutes the forward reaction (splitting of $\ce{Al2Cl6}$) is faster than the reverse; showing that $Q$ at 2 minutes, 0.032, is less than $K_c$, 0.096, so the net reaction runs forward, also earns this point; 1 point for saying that at 10 minutes both reactions continue at equal rates, so the counts stay the same while the molecules are not the same ones. "The reaction has stopped at 10 minutes" earns 0 points for the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={9} title="Acetic acid vapor, where counts are not enough" topic="7.8" points={6}>
+
+In acetic acid vapor, two molecules can pair up, held together by hydrogen bonds, to form a dimer:
+
+$$
+\begin{aligned}
+&\ce{2CH3COOH(g) <=>} \\
+&\quad \ce{(CH3COOH)2(g)}
+\end{aligned}
+$$
+
+Flask 1, a sealed 0.500 L flask of acetic acid vapor, is held at a certain temperature until nothing in it changes. A drawing of it shows the particles below. Each particle in the drawing, single molecule or dimer, stands for 0.00200 mol of that substance. (The data are made up.)
+
+| Particle | Count |
+|---|---|
+| single molecule, $\ce{CH3COOH}$ | 6 |
+| dimer, $\ce{(CH3COOH)2}$ | 9 |
+
+<Part label="a">
+
+Write the expression for $K_c$. Explain why the counts cannot be put straight into it.
+
+<Answer>
+
+$$
+K_c = \frac{[\ce{(CH3COOH)2}]}{[\ce{CH3COOH}]^2}
+$$
+
+Each concentration is the count times 0.00200 mol, divided by 0.500 L. The top of the expression holds one concentration and the bottom multiplies two, because $[\ce{CH3COOH}]$ is squared. So the factor of 0.00200 mol over 0.500 L appears once on top and twice underneath, and one of them is left over. It does not cancel, because the equation has two particles on the left and one on the right. The counts must be turned into concentrations first.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $K_c$ at this temperature.
+
+<Answer>
+
+Turn each count into a concentration, with every amount in mol and the volume in L:
+
+$$
+\begin{aligned}
+[\ce{CH3COOH}] &= \frac{6(0.00200)}{0.500} \\
+&= 0.0240\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{(CH3COOH)2}] &= \frac{9(0.00200)}{0.500} \\
+&= 0.0360\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+K_c &= \frac{0.0360}{(0.0240)^2} \\
+&= \mathbf{62.5}
+\end{aligned}
+$$
+
+The bare counts would give a wrong value:
+
+$$
+\frac{9}{6^2} = 0.25
+$$
+
+That is too small by a factor of 250, which is the volume divided by the amount per particle (0.500 L divided by 0.00200 mol): the factor that does not cancel.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Flask 2 has a volume of 1.00 L and is at the same temperature. It has just been filled, and a drawing of it shows the same counts as flask 1: 6 single molecules and 9 dimers, each particle again standing for 0.00200 mol. Determine whether flask 2 is at equilibrium. If it is not, state which way its mixture runs. Justify your answer with a calculation.
+
+<Answer>
+
+In twice the volume, the same counts give half the concentrations:
+
+$$
+\begin{aligned}
+[\ce{CH3COOH}] &= \frac{6(0.00200)}{1.00} \\
+&= 0.0120\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{(CH3COOH)2}] &= \frac{9(0.00200)}{1.00} \\
+&= 0.0180\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+Q &= \frac{0.0180}{(0.0120)^2} \\
+&= 125
+\end{aligned}
+$$
+
+$Q$ is greater than $K_c$ (125 against 62.5), so flask 2 is **not at equilibrium**, although its counts match flask 1's exactly. It holds too many dimers for its single molecules. The mixture **runs toward single molecules**: dimers break apart faster than they form, until $Q$ falls to 62.5.
+
+Halving every concentration halves the top of $Q$ and divides the bottom by four, so $Q$ is twice $K_c$. In question 7 the same move would have changed nothing, because there the volume cancels.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the expression, with $[\ce{CH3COOH}]$ squared; 1 point for the reason: one particle on one side of the equation and two on the other (or one concentration on top and two underneath), so the volume does not cancel. Saying only "the volume matters", with no reason, earns 0 points for the reason.</RubricLine>
+<RubricLine part="b" points={2}>1 point for both concentrations, 0.0240 M and 0.0360 M; 1 point for $K_c = 62.5$ with no unit. The bare counts give 0.25 and earn 0 points. An upside-down expression gives 0.0160 and earns the first point only.</RubricLine>
+<RubricLine part="c" points={2}>1 point for $Q = 125$ from the concentrations 0.0120 M and 0.0180 M (or for showing that $Q$ is twice $K_c$); 1 point for "not at equilibrium, runs toward single molecules" because $Q$ is greater than $K_c$. Reasoning that flask 2 holds flask 1's equilibrium mixture spread over twice the volume, so it goes toward the side with more particles, also earns the direction point. Saying that flask 2 is at equilibrium because its counts match flask 1's earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part G: Le Châtelier's principle and Q
+
+Six questions on what happens when a system at equilibrium is disturbed. You will predict the direction of each shift, say which changes alter $K$, explain shifts with $Q$, calculate $Q$ just after a disturbance, and choose conditions for the best yield.
+
+<Question number={10} title="Four changes to a hot gas mixture" topic="7.9, 7.10" points={6}>
+
+Hydrogen turns nitrogen monoxide into nitrogen and steam:
+
+$$
+\begin{aligned}
+&\ce{2NO(g) + 2H2(g) <=>} \\
+&\quad \ce{N2(g) + 2H2O(g)}
+\end{aligned}
+$$
+
+The forward reaction is exothermic. A mixture of the four gases is at equilibrium in a cylinder with a piston, at a fixed high temperature. Each change below is made to a fresh sample of this equilibrium mixture, and the temperature is held constant throughout.
+
+<Part label="a">
+
+With the piston locked, so that the volume cannot change, more $\ce{H2}$ is pumped in. State the direction in which the equilibrium shifts. Then compare $[\ce{H2}]$ at the new equilibrium with $[\ce{H2}]$ just before the $\ce{H2}$ was added and just after.
+
+<Answer>
+
+The equilibrium shifts **toward products**. $\ce{H2}$ is a reactant, and the shift uses up some of what was added. In terms of $Q$: $[\ce{H2}]$ is in the bottom of the fraction, so adding it makes $Q$ smaller than $K$, and the reaction runs toward products until $Q$ equals $K$ again.
+
+At the new equilibrium, $[\ce{H2}]$ is **lower than just after the addition but higher than just before it**. The shift uses up part of the added $\ce{H2}$, not all of it.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Instead, the piston is pushed in, so that the gases take up a smaller volume. State the direction in which the equilibrium shifts, and justify your answer.
+
+<Answer>
+
+The equilibrium shifts **toward products**. A smaller volume shifts an equilibrium toward the side with fewer moles of gas. Here there are 2 + 2 = 4 moles of gas on the left and 1 + 2 = 3 on the right.
+
+With $Q$ instead:
+
+$$
+Q_c = \frac{[\ce{N2}][\ce{H2O}]^2}{[\ce{NO}]^2[\ce{H2}]^2}
+$$
+
+The squeeze multiplies every concentration by the same factor, $f$, which is greater than 1. The top of the fraction picks up $f$ three times and the bottom four times:
+
+$$
+\frac{f^{1+2}}{f^{2+2}} = \frac{1}{f}
+$$
+
+So $Q$ falls below $K$, and the reaction runs toward products.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Instead, with the piston locked, argon is pumped in. Argon does not react with any of the gases. The total pressure rises. State whether the equilibrium shifts, and justify your answer.
+
+<Answer>
+
+**No shift.** The volume has not changed, and neither has the number of moles of each reacting gas. So the concentration and the partial pressure of each of the four gases are what they were, $Q$ still equals $K$, and nothing shifts. The rise in total pressure comes from the argon alone.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Instead, a catalyst for the reaction is added. State whether the amount of $\ce{N2}$ in the cylinder changes, and justify your answer.
+
+<Answer>
+
+**It does not change.** A catalyst speeds up the forward and the reverse reaction by the same factor. The two rates were equal, and they stay equal, so there is no shift. A catalyst gets a mixture to equilibrium sooner; this mixture is already there.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for a shift toward products, justified by the added reactant being used up or by $Q$ falling below $K$; 1 point for $[\ce{H2}]$ ending between its value before the addition and its value just after. Saying that $[\ce{H2}]$ goes back to its old value earns 0 points for the second point.</RubricLine>
+<RubricLine part="b" points={2}>1 point for a shift toward products; 1 point for the justification: the count of 4 moles of gas against 3, or $Q$ falling below $K$ because the top picks up the factor fewer times than the bottom. "The pressure is higher" with no count of moles of gas and no $Q$ earns the first point only.</RubricLine>
+<RubricLine part="c" points={1}>1 point for no shift, because the concentrations (or partial pressures) of the reacting gases are unchanged (or because $Q$ still equals $K$). A shift toward products "because the pressure rose" earns 0 points.</RubricLine>
+<RubricLine part="d" points={1}>1 point for no change in the amount of $\ce{N2}$, because the catalyst speeds both directions equally. Saying that the catalyst makes more $\ce{N2}$, or makes it faster and so more of it, earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={11} title="A carbonate in a sealed vessel" topic="7.9, 7.10" points={5}>
+
+Strontium carbonate breaks down when it is strongly heated:
+
+$$
+\begin{aligned}
+&\ce{SrCO3(s) <=>} \\
+&\quad \ce{SrO(s) + CO2(g)}
+\end{aligned}
+$$
+
+The forward reaction is endothermic. A rigid sealed vessel holds solid $\ce{SrCO3}$, solid $\ce{SrO}$ and $\ce{CO2}$ gas at equilibrium, at a fixed high temperature. Some of each solid is present throughout. Each change below is made to a fresh sample of this equilibrium.
+
+<Part label="a">
+
+Write the expression for $K_p$. Then explain why adding more solid $\ce{SrCO3}$ to the vessel, at the same temperature, does not shift the equilibrium.
+
+<Answer>
+
+$$
+K_p = P_{\ce{CO2}}
+$$
+
+Both solids are left out. The concentration of a pure solid does not depend on how much of it there is, so a solid does not appear in $Q$ or in $K$. Adding more $\ce{SrCO3}$ leaves $P_{\ce{CO2}}$ where it was, so $Q_p$ is unchanged and **still equals $K_p$: no shift**.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Instead, some of the $\ce{CO2}$ is pumped out, at the same temperature. State the direction in which the equilibrium shifts, and what happens to the amount of solid $\ce{SrO}$ in the vessel.
+
+<Answer>
+
+Removing $\ce{CO2}$, a product, shifts the equilibrium **toward products**: more $\ce{SrCO3}$ breaks down and makes $\ce{CO2}$. (With $Q$: $P_{\ce{CO2}}$ falls, so $Q_p$ is less than $K_p$.) The amount of **$\ce{SrO}$ increases**.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Instead, the vessel is heated to a higher temperature and held there. State the direction in which the equilibrium shifts and what happens to the value of $K_p$. Then compare the pressure of $\ce{CO2}$ at the new equilibrium with its pressure before heating.
+
+<Answer>
+
+The forward reaction is endothermic. Heating shifts an equilibrium in the endothermic direction, so this one shifts **toward products**. For an endothermic reaction $K$ rises with temperature, so **$K_p$ increases**.
+
+Since $K_p = P_{\ce{CO2}}$, the pressure of $\ce{CO2}$ at the new equilibrium equals the new, larger $K_p$. It is **higher than before heating**.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $K_p = P_{\ce{CO2}}$ ($K_c = [\ce{CO2}]$ also earns it; an expression that includes either solid earns 0 points for this point); 1 point for the explanation: a pure solid has a constant concentration, or is not in $Q$ or $K$, so $Q$ still equals $K$ and there is no shift.</RubricLine>
+<RubricLine part="b" points={1}>1 point for a shift toward products with the amount of $\ce{SrO}$ increasing.</RubricLine>
+<RubricLine part="c" points={2}>1 point for a shift toward products, because heating favors the endothermic direction, or because $K_p$ rises while $Q_p$ is unchanged, so $Q$ is less than $K$; 1 point for $K_p$ increasing and the pressure of $\ce{CO2}$ ending higher (both are needed). Saying that $K_p$ stays the same earns 0 points for the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={12} title="Q just after steam is injected" topic="7.9, 7.10" points={5}>
+
+Formic acid vapor breaks down into carbon monoxide and steam:
+
+$$
+\begin{aligned}
+&\ce{HCOOH(g) <=>} \\
+&\quad \ce{CO(g) + H2O(g)}
+\end{aligned}
+$$
+
+At a certain temperature $K_c = 80.0$. A rigid container at that temperature holds a mixture at equilibrium with these concentrations:
+
+| Substance | Concentration (M) |
+|---|---|
+| $\ce{HCOOH}$ | $5.00 \times 10^{-4}$ |
+| $\ce{CO}$ | 0.160 |
+| $\ce{H2O}$ | 0.250 |
+
+<Part label="a">
+
+Show that these concentrations fit the value of $K_c$.
+
+<Answer>
+
+$$
+Q_c = \frac{[\ce{CO}][\ce{H2O}]}{[\ce{HCOOH}]}
+$$
+
+$$
+\begin{aligned}
+Q_c &= \frac{(0.160)(0.250)}{5.00 \times 10^{-4}} \\
+&= \frac{0.0400}{5.00 \times 10^{-4}} \\
+&= 80.0
+\end{aligned}
+$$
+
+$Q_c$ equals $K_c$, so the concentrations fit an equilibrium mixture.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Steam is injected, with the volume and the temperature held constant. Just after the injection, before anything has reacted, $[\ce{H2O}]$ is 0.400 M. Calculate $Q_c$ at that moment, and state the direction in which the reaction then runs.
+
+<Answer>
+
+Nothing has reacted yet, so $[\ce{HCOOH}]$ and $[\ce{CO}]$ are what they were. Only $[\ce{H2O}]$ is new.
+
+$$
+\begin{aligned}
+Q_c &= \frac{(0.160)(0.400)}{5.00 \times 10^{-4}} \\
+&= \frac{0.0640}{5.00 \times 10^{-4}} \\
+&= \mathbf{128}
+\end{aligned}
+$$
+
+Since 128 is greater than 80.0, $Q$ is greater than $K$. There is too much product for the amount of reactant, and the reaction runs **toward reactants**: some $\ce{CO}$ and $\ce{H2O}$ combine to make $\ce{HCOOH}$.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Explain how Le Châtelier's principle predicts the same direction.
+
+<Answer>
+
+Steam is a product, and it is a gas, so it appears in $Q$. Adding it is a stress, and the equilibrium shifts in the direction that uses up some of it: **toward reactants**.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Once equilibrium is reached again, compare $[\ce{H2O}]$ with 0.250 M and with 0.400 M. Then state whether $[\ce{HCOOH}]$ is higher or lower than $5.00 \times 10^{-4}$ M.
+
+<Answer>
+
+$[\ce{H2O}]$ ends **between 0.250 M and 0.400 M**. The shift uses up part of the added steam, not all of it. (A calculation gives $[\ce{H2O}]$ = 0.3997 M, just below 0.400 M: so little $\ce{HCOOH}$ is present that a small amount of reaction, $3.0 \times 10^{-4}$ M, brings $Q$ back to $K$.)
+
+$[\ce{HCOOH}]$ is **higher** than $5.00 \times 10^{-4}$ M, because the reaction ran toward reactants. The temperature did not change, so $K_c$ is still 80.0, and the new concentrations fit it.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for the expression with $Q_c = 80.0$, equal to $K_c$.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $Q_c = 128$, using the new $[\ce{H2O}]$ and the old values of the other two; 1 point for a net reaction toward reactants because $Q$ is greater than $K$. A value of 80.0 (the old $[\ce{H2O}]$) or $7.81 \times 10^{-3}$ (the fraction upside down) earns 0 points for the first point; a direction that follows correctly from the student's own $Q$ earns the second.</RubricLine>
+<RubricLine part="c" points={1}>1 point for saying that a product was added, so the equilibrium shifts toward reactants to use up some of it.</RubricLine>
+<RubricLine part="d" points={1}>1 point for $[\ce{H2O}]$ between 0.250 M and 0.400 M (or just below 0.400 M) together with $[\ce{HCOOH}]$ higher. Saying that $[\ce{H2O}]$ goes back to 0.250 M earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={13} title="When squeezing changes nothing" topic="7.9, 7.10" points={4}>
+
+Hot iron(II) oxide reacts with carbon monoxide to give iron and carbon dioxide:
+
+$$
+\begin{aligned}
+&\ce{FeO(s) + CO(g) <=>} \\
+&\quad \ce{Fe(s) + CO2(g)}
+\end{aligned}
+$$
+
+The forward reaction is exothermic. A sealed cylinder with a piston holds $\ce{FeO}$, $\ce{Fe}$, $\ce{CO}$ and $\ce{CO2}$ at equilibrium, at a fixed high temperature. Some of each solid is present throughout. Each change below is made to a fresh sample of this equilibrium.
+
+<Part label="a">
+
+Write the expression for $Q_c$. Then explain why pushing the piston in until the volume is halved, at constant temperature, does not shift the equilibrium.
+
+<Answer>
+
+$$
+Q_c = \frac{[\ce{CO2}]}{[\ce{CO}]}
+$$
+
+The two solids are left out. Halving the volume doubles both concentrations:
+
+$$
+\frac{2[\ce{CO2}]}{2[\ce{CO}]} = \frac{[\ce{CO2}]}{[\ce{CO}]}
+$$
+
+The factors cancel, so **$Q$ is unchanged and still equals $K$: no shift**. Counting gives the same answer: there is 1 mole of gas on each side of the equation. (The solids are not counted.)
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Instead, with the piston locked, the cylinder is cooled. State the direction in which the equilibrium shifts and what happens to the value of $K$.
+
+<Answer>
+
+The forward reaction is exothermic. Cooling shifts an equilibrium in the exothermic direction, so this one shifts **toward products**: more iron and carbon dioxide. For an exothermic reaction $K$ falls as the temperature rises, so on cooling **$K$ increases**.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $Q_c = [\ce{CO2}]/[\ce{CO}]$ with no solids; 1 point for the explanation: both concentrations change by the same factor, so $Q$ is unchanged, or there is 1 mole of gas on each side. Counting the solids too (2 on each side) reaches "no shift" for a wrong reason and earns 0 points for the second point.</RubricLine>
+<RubricLine part="b" points={2}>1 point for a shift toward products, because cooling favors the exothermic direction, or because $K$ rises while $Q_c$ is unchanged, so $Q$ is less than $K$; 1 point for $K$ increasing.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={14} title="Expansion and heating compared" topic="7.9, 7.10" points={5}>
+
+Ammonia burns in oxygen to give nitrogen and steam:
+
+$$
+\begin{aligned}
+&\ce{4NH3(g) + 3O2(g) <=>} \\
+&\quad \ce{2N2(g) + 6H2O(g)}
+\end{aligned}
+$$
+
+The forward reaction is exothermic. A mixture of the four gases is at equilibrium in a cylinder with a piston, at a certain temperature. Each change below is made to a fresh sample of this equilibrium.
+
+<Part label="a">
+
+The piston is pulled out until the volume is doubled, at constant temperature. Calculate the factor by which $Q_c$ is multiplied at that moment, and state the direction in which the reaction then runs.
+
+<Answer>
+
+$$
+Q_c = \frac{[\ce{N2}]^2[\ce{H2O}]^6}{[\ce{NH3}]^4[\ce{O2}]^3}
+$$
+
+Doubling the volume halves every concentration. The exponents decide what that does to $Q$:
+
+$$
+\begin{aligned}
+\text{top:}\quad & \left(\tfrac{1}{2}\right)^{2+6} = \frac{1}{256} \\[0.8em]
+\text{bottom:}\quad & \left(\tfrac{1}{2}\right)^{4+3} = \frac{1}{128} \\[0.8em]
+Q\text{:}\quad & \frac{1}{256} \div \frac{1}{128} = \frac{1}{2}
+\end{aligned}
+$$
+
+$Q_c$ is multiplied by $\mathbf{\tfrac{1}{2}}$. Now $Q$ is less than $K$, so the reaction runs **toward products**. That is the side with more moles of gas, 8 against 7, as Le Châtelier's principle predicts for a larger volume.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Instead, with the piston locked, the mixture is heated. Just after the temperature rises, before anything has reacted, state whether $Q_c$ and $K$ have each changed. Then state the direction in which the reaction runs.
+
+<Answer>
+
+Nothing was added, removed or squeezed, so every concentration is what it was. **$Q_c$ is unchanged.**
+
+The forward reaction is exothermic, so $K$ falls as the temperature rises. **$K$ is smaller.**
+
+$Q$ is now greater than the new $K$, so the reaction runs **toward reactants**. That agrees with Le Châtelier's principle: heating shifts an equilibrium in the endothermic direction, which here is the reverse reaction.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A student says: "Both changes upset the equilibrium, so both changed the value of $K$." Evaluate the claim.
+
+<Answer>
+
+The claim is **wrong for the expansion**. At a fixed temperature $K$ keeps its value. The expansion changed $Q$, and the mixture then reacted until its concentrations fit the same $K$ again. Only the heating changed $K$.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the factor $\tfrac{1}{2}$, from the exponents (8 factors of one half on top, 7 underneath); 1 point for a net reaction toward products because $Q$ is now less than $K$, or because a larger volume favors the side with more moles of gas (8 against 7). Leaving out the exponents gives a factor of 1 and "no shift", which earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $Q_c$ unchanged and $K$ smaller (both are needed); 1 point for a net reaction toward reactants, from $Q$ greater than $K$ or from heating favoring the endothermic direction. Saying that $Q$ changes on heating earns 0 points for the first point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for saying that the expansion did not change $K$ (only the temperature change did), because $K$ depends only on temperature.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={15} title="Choosing conditions to make ethanol" topic="7.9" points={5}>
+
+Ethanol vapor breaks down into ethene and steam, and the reaction runs both ways:
+
+$$
+\begin{aligned}
+&\ce{C2H5OH(g) <=>} \\
+&\quad \ce{C2H4(g) + H2O(g)}
+\end{aligned}
+$$
+
+The forward reaction, as written, is endothermic. A chemist wants to make ethanol from ethene and steam. So she wants this equilibrium to lie as far toward ethanol, the reactant side, as she can get it. She starts from a mixture of the three gases at equilibrium in a reactor.
+
+<Part label="a">
+
+Should she run the reactor at a lower or a higher temperature? Justify your choice, and state what she gives up by making it.
+
+<Answer>
+
+A **lower temperature**. The forward reaction is endothermic, so the reverse reaction, which makes ethanol, is exothermic. Cooling shifts an equilibrium in the exothermic direction, toward ethanol. (Put another way: $K$ for the forward reaction is smaller at a lower temperature.)
+
+What she gives up is **speed**. At a lower temperature the reaction is slower, so the mixture takes longer to reach equilibrium.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Should she make the volume of the gas mixture smaller or larger, at the same temperature? Justify your choice, and state one thing she gives up.
+
+<Answer>
+
+A **smaller volume**, which raises the pressure. That shifts the equilibrium toward the side with fewer moles of gas: 1 on the ethanol side against 2 on the other. (With $Q$: every concentration is multiplied by the same factor, greater than 1. The top of $Q$ has two concentrations and the bottom one, so $Q$ rises above $K$ and the reaction runs toward ethanol.)
+
+What she gives up is **cost**: a reactor strong enough to hold a high pressure costs more to build, and compressing the gases takes energy.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A colleague suggests adding a catalyst to raise the amount of ethanol at equilibrium. Evaluate the suggestion, and explain how a catalyst can still help her.
+
+<Answer>
+
+The suggestion is **wrong**. A catalyst speeds up the forward and the reverse reaction by the same factor, so it does not change where equilibrium lies or how much ethanol is there at equilibrium.
+
+It still helps, because it gets the mixture to equilibrium **sooner**. That makes up for some of the speed she gave up by choosing a lower temperature.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for a lower temperature, because the reaction that makes ethanol is exothermic (or because $K$ for the endothermic forward reaction is smaller at a lower temperature); 1 point for saying that the reaction is slower, so equilibrium takes longer to reach. A higher temperature earns 0 points for the first point.</RubricLine>
+<RubricLine part="b" points={2}>1 point for a smaller volume, because it favors the side with fewer moles of gas (1 against 2), or because $Q$ rises above $K$; 1 point for a cost of high pressure, such as stronger equipment or the energy to compress the gases. A smaller volume with no count of moles of gas and no $Q$ earns 0 points for the first point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for saying that a catalyst does not change the amount of ethanol at equilibrium but gets the mixture there sooner (both are needed).</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part H: Solubility and the common-ion effect
+
+Six questions on salts that dissolve only slightly. You will write dissolving equations and $K_{sp}$ expressions, go from $K_{sp}$ to a molar solubility and back, compare two salts, and work out how an ion already in the water lowers a salt's solubility but not its $K_{sp}$. Every $K_{sp}$ given for a real salt is for 25 °C.
+
+<Question number={16} title="Copper(I) iodide in water" topic="7.11" points={5}>
+
+Copper(I) iodide, $\ce{CuI}$, is a solid that dissolves only very slightly in water. Its molar mass is 190.45 g/mol.
+
+<Part label="a">
+
+Write the dissolving equation for copper(I) iodide, with state symbols, and write its $K_{sp}$ expression.
+
+<Answer>
+
+$$
+\begin{aligned}
+&\ce{CuI(s) <=>} \\
+&\quad \ce{Cu^+(aq) + I^-(aq)}
+\end{aligned}
+$$
+
+$$
+K_{sp} = [\ce{Cu^+}][\ce{I^-}]
+$$
+
+The solid is left out of the expression, because the concentration of a pure solid does not depend on how much of it there is.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+At 25 °C, $K_{sp}$ for copper(I) iodide is $1.27 \times 10^{-12}$. Calculate its molar solubility, and then the volume of saturated solution that holds 1.00 mg of dissolved $\ce{CuI}$.
+
+<Answer>
+
+Each mole of $\ce{CuI}$ that dissolves gives one mole of $\ce{Cu^+}$ and one mole of $\ce{I^-}$, so $[\ce{Cu^+}] = [\ce{I^-}] = s$, the molar solubility.
+
+$$
+\begin{aligned}
+K_{sp} &= s^2 \\
+s &= \sqrt{1.27 \times 10^{-12}} \\
+&= \mathbf{1.13 \times 10^{-6}}\ \text{M}
+\end{aligned}
+$$
+
+First find the moles of $\ce{CuI}$ in 1.00 mg:
+
+$$
+\begin{aligned}
+n &= \frac{1.00 \times 10^{-3}\ \text{g}}{190.45\ \text{g/mol}} \\
+&= 5.25 \times 10^{-6}\ \text{mol}
+\end{aligned}
+$$
+
+Each liter of saturated solution holds $s$ mol, so divide:
+
+$$
+\begin{aligned}
+V &= \frac{5.25 \times 10^{-6}\ \text{mol}}{1.127 \times 10^{-6}\ \text{M}} \\
+&= \mathbf{4.66}\ \text{L}
+\end{aligned}
+$$
+
+Using the rounded $s$, $1.13 \times 10^{-6}$ M, gives 4.65 L.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The saturated solution stands with some solid $\ce{CuI}$ on the bottom. Describe what is happening to ions at the surface of the solid, and explain why the amount of dissolved $\ce{CuI}$ stays the same.
+
+<Answer>
+
+Both processes keep going. $\ce{Cu^+}$ and $\ce{I^-}$ ions leave the solid and go into the water (dissolving), and dissolved ions meet the solid and join it again (precipitation).
+
+The two happen at the **same rate**, so there is no net change in the amount dissolved. The saturated solution is a dynamic equilibrium, not a solution in which dissolving has stopped.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the dissolving equation with $\ce{CuI(s)}$ on the left and $\ce{Cu^+(aq)}$ and $\ce{I^-(aq)}$ on the right; 1 point for $K_{sp} = [\ce{Cu^+}][\ce{I^-}]$ with nothing on the bottom. An expression with $[\ce{CuI}]$ in it earns 0 for the second point.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the molar solubility, $s = \sqrt{K_{sp}} = 1.13 \times 10^{-6}$ M; 1 point for the volume, 4.65 to 4.66 L, from the moles in 1.00 mg divided by $s$. Taking $s$ to be $K_{sp}$ itself, without the square root, earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for saying that dissolving and precipitation both continue at equal rates, so there is no net change. Saying that dissolving has stopped earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={17} title="Ranking two salts by solubility" topic="7.11" points={6}>
+
+At 25 °C, copper(I) bromide, $\ce{CuBr}$, has $K_{sp} = 6.27 \times 10^{-9}$. A salt with the made-up formula $\ce{A2B}$ has $K_{sp} = 2.0 \times 10^{-9}$ (a made-up value) at the same temperature.
+
+A student says: "$\ce{A2B}$ has the smaller $K_{sp}$, so it is the less soluble of the two in water."
+
+<Part label="a">
+
+Calculate the molar solubility of copper(I) bromide in pure water.
+
+<Answer>
+
+$$
+\begin{aligned}
+&\ce{CuBr(s) <=>} \\
+&\quad \ce{Cu^+(aq) + Br^-(aq)}
+\end{aligned}
+$$
+
+Each mole that dissolves gives one mole of each ion, so $[\ce{Cu^+}] = [\ce{Br^-}] = s$.
+
+$$
+\begin{aligned}
+K_{sp} &= (s)(s) = s^2 \\
+s &= \sqrt{6.27 \times 10^{-9}} \\
+&= \mathbf{7.92 \times 10^{-5}}\ \text{M}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Write the dissolving equation for $\ce{A2B}$, which gives $\ce{A+}$ and $\ce{B^2-}$ ions, and calculate its molar solubility in pure water.
+
+<Answer>
+
+$$
+\begin{aligned}
+&\ce{A2B(s) <=>} \\
+&\quad \ce{2A+(aq) + B^2-(aq)}
+\end{aligned}
+$$
+
+Each mole that dissolves gives two moles of $\ce{A+}$ and one mole of $\ce{B^2-}$, so $[\ce{A+}] = 2s$ and $[\ce{B^2-}] = s$.
+
+$$
+K_{sp} = (2s)^2(s) = 4s^3
+$$
+
+$$
+\begin{aligned}
+s &= \sqrt[3]{\frac{2.0 \times 10^{-9}}{4}} \\
+&= \sqrt[3]{5.0 \times 10^{-10}} \\
+&= \mathbf{7.9 \times 10^{-4}}\ \text{M}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Decide whether the student is right. State which salt is more soluble in water and by how many times, and explain why comparing the two $K_{sp}$ values misled the student.
+
+<Answer>
+
+The student is **wrong**. $\ce{A2B}$ has the greater molar solubility, even though its constant is the smaller of the two:
+
+$$
+\frac{7.9 \times 10^{-4}}{7.92 \times 10^{-5}} = 9.97
+$$
+
+The unrounded solubilities give 10.0, so $\ce{A2B}$ dissolves to about **10 times** the molar solubility of copper(I) bromide.
+
+The two salts give different numbers of ions. For copper(I) bromide $K_{sp}$ is $s^2$; for $\ce{A2B}$ it is $4s^3$. With $s$ raised to different powers, a smaller $K_{sp}$ need not mean a smaller $s$. $K_{sp}$ values rank solubilities directly only for salts that give the same number of ions. Otherwise, calculate $s$ for each salt and compare those.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $K_{sp} = s^2$, from $[\ce{Cu^+}] = [\ce{Br^-}] = s$; 1 point for $7.92 \times 10^{-5}$ M.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the dissolving equation, with $\ce{2A+}$; 1 point for $7.9 \times 10^{-4}$ M from $K_{sp} = 4s^3$. Writing $K_{sp} = s^3$ or $2s^2$ (which give $1.3 \times 10^{-3}$ M and $3.2 \times 10^{-5}$ M) earns 0 points for the second point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for $\ce{A2B}$ as the more soluble, about 10 times, with the division shown, so the student is wrong (a ratio from your own answers to (a) and (b) earns it); 1 point for explaining that $K_{sp}$ values rank solubilities only for salts that give the same number of ions ($s^2$ against $4s^3$ here). Choosing copper(I) bromide because its $K_{sp}$ is larger earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={18} title="The constant from one ion" topic="7.11" points={4}>
+
+A salt with the made-up formula $\ce{MX2}$ dissolves slightly in water, giving $\ce{M^2+}$ and $\ce{X^-}$ ions. In a saturated solution of it in pure water, kept at a fixed temperature, $[\ce{M^2+}]$ is $3.60 \times 10^{-4}$ M. All the dissolved ions come from the salt.
+
+<Part label="a">
+
+Write the dissolving equation and the $K_{sp}$ expression for $\ce{MX2}$.
+
+<Answer>
+
+$$
+\begin{aligned}
+&\ce{MX2(s) <=>} \\
+&\quad \ce{M^2+(aq) + 2X^-(aq)}
+\end{aligned}
+$$
+
+$$
+K_{sp} = [\ce{M^2+}][\ce{X^-}]^2
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Determine $[\ce{X^-}]$ in the saturated solution, and calculate $K_{sp}$ for $\ce{MX2}$.
+
+<Answer>
+
+Each formula unit that dissolves gives one $\ce{M^2+}$ and two $\ce{X^-}$, so $[\ce{X^-}]$ is twice $[\ce{M^2+}]$:
+
+$$
+\begin{aligned}
+[\ce{X^-}] &= 2 \times 3.60 \times 10^{-4} \\
+&= \mathbf{7.20 \times 10^{-4}}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+K_{sp} &= [\ce{M^2+}][\ce{X^-}]^2 \\
+&= (3.60 \times 10^{-4}) \\
+&\quad \times (7.20 \times 10^{-4})^2 \\
+&= \mathbf{1.87 \times 10^{-10}}
+\end{aligned}
+$$
+
+The same value comes from the molar solubility. Here $s = [\ce{M^2+}] = 3.60 \times 10^{-4}$ M, and $4s^3$ is also $1.87 \times 10^{-10}$.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A student reports $K_{sp} = 4.67 \times 10^{-11}$ for this salt. Identify the student's mistake.
+
+<Answer>
+
+The student cubed $3.60 \times 10^{-4}$:
+
+$$
+(3.60 \times 10^{-4})^3 = 4.67 \times 10^{-11}
+$$
+
+That takes $[\ce{X^-}]$ to be equal to $[\ce{M^2+}]$. But each formula unit gives **two** $\ce{X^-}$ ions, so $[\ce{X^-}]$ is $7.20 \times 10^{-4}$ M, twice $[\ce{M^2+}]$. Leaving out the 2 gives a value 4 times too small.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for $\ce{MX2(s)}$ giving $\ce{M^2+(aq)}$ and $2\,\ce{X^-(aq)}$, with $K_{sp} = [\ce{M^2+}][\ce{X^-}]^2$.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $[\ce{X^-}] = 7.20 \times 10^{-4}$ M; 1 point for $K_{sp} = 1.87 \times 10^{-10}$ (by substitution, or as $4s^3$ with $s = 3.60 \times 10^{-4}$ M). Doubling without squaring ($2.59 \times 10^{-7}$) earns the first point only; taking $[\ce{X^-}]$ as $3.60 \times 10^{-4}$ M earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for saying that the student set $[\ce{X^-}]$ equal to $[\ce{M^2+}]$ (cubing $3.60 \times 10^{-4}$), leaving out that each formula unit gives two $\ce{X^-}$ ions.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={19} title="Celestine in a sulfate solution" topic="7.12" points={6}>
+
+Strontium sulfate, $\ce{SrSO4}$, occurs in nature as the mineral celestine (also called celestite). At 25 °C its $K_{sp}$ is $3.44 \times 10^{-7}$, and its calculated molar solubility in pure water is $5.87 \times 10^{-4}$ M.
+
+Excess powdered strontium sulfate is stirred into 0.0400 M sodium sulfate, $\ce{Na2SO4}$, at 25 °C until no more dissolves.
+
+<Part label="a">
+
+Write the dissolving equation and the $K_{sp}$ expression for strontium sulfate. Then set up a table of initial, change and equilibrium concentrations for it dissolving in 0.0400 M $\ce{Na2SO4}$, with $s$ as its molar solubility.
+
+<Answer>
+
+$$
+\begin{aligned}
+&\ce{SrSO4(s) <=>} \\
+&\quad \ce{Sr^2+(aq) + SO4^2-(aq)}
+\end{aligned}
+$$
+
+$$
+K_{sp} = [\ce{Sr^2+}][\ce{SO4^2-}]
+$$
+
+Sodium sulfate is soluble, like every sodium salt, so before any strontium sulfate dissolves $[\ce{SO4^2-}]$ is 0.0400 M and $[\ce{Sr^2+}]$ is 0. Each mole of $\ce{SrSO4}$ that dissolves adds one mole of each ion.
+
+Every value is in M. The rows are labeled I, C and E, for Initial, Change and Equilibrium, and the solid is not in the table:
+
+| | [Sr²⁺] | [SO₄²⁻] |
+|---|---|---|
+| I | 0 | 0.0400 |
+| C | +s | +s |
+| E | s | 0.0400 + s |
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the molar solubility of strontium sulfate in 0.0400 M $\ce{Na2SO4}$.
+
+<Answer>
+
+$$
+\begin{aligned}
+K_{sp} &= (s)(0.0400 + s) \\
+&= 3.44 \times 10^{-7}
+\end{aligned}
+$$
+
+The salt is only slightly soluble, and the sulfate already there holds it back further, so $s$ should be tiny beside 0.0400. Leave it out of the sum:
+
+$$
+(s)(0.0400) = 3.44 \times 10^{-7}
+$$
+
+$$
+\begin{aligned}
+s &= \frac{3.44 \times 10^{-7}}{0.0400} \\
+&= \mathbf{8.60 \times 10^{-6}}\ \text{M}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Check your approximation. Say what you left out, what you compared it with, and the percentage.
+
+<Answer>
+
+What was left out is $s$, $8.60 \times 10^{-6}$ M, from the sulfate concentration of 0.0400 M.
+
+$$
+\frac{8.60 \times 10^{-6}}{0.0400} \times 100\% = 0.022\%
+$$
+
+That is far under 5 percent, so the approximation holds.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+How many times as soluble is strontium sulfate in pure water as in 0.0400 M $\ce{Na2SO4}$? Show the division.
+
+<Answer>
+
+$$
+\frac{5.87 \times 10^{-4}}{8.60 \times 10^{-6}} = 68.3
+$$
+
+The unrounded solubilities give 68.2, so the figures agree only as far as **about 68 times**.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the dissolving equation with $K_{sp} = [\ce{Sr^2+}][\ce{SO4^2-}]$; 1 point for a table in which $[\ce{SO4^2-}]$ starts at 0.0400 M and $[\ce{Sr^2+}]$ at 0, each changing by $+s$. Starting the sulfate at 0 earns 0 for the second point.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $(s)(0.0400) = 3.44 \times 10^{-7}$ ($s$ left out of the sum; solving the full equation also earns it); 1 point for $8.60 \times 10^{-6}$ M. Using $\sqrt{K_{sp}}$, $5.87 \times 10^{-4}$ M, earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for dividing $s$ by 0.0400 M and stating the percentage, about 0.02 percent, under 5 percent. A check that does not say what was divided by what, or gives no percentage, earns 0 points.</RubricLine>
+<RubricLine part="d" points={1}>1 point for about 68 times, with the division shown (a ratio from your own answer to (b) earns it).</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={20} title="Adding a common ion to a saturated solution" topic="7.12" points={6}>
+
+A salt with the made-up formula $\ce{M2X}$ dissolves slightly in water:
+
+$$
+\begin{aligned}
+&\ce{M2X(s) <=>} \\
+&\quad \ce{2M^+(aq) + X^2-(aq)}
+\end{aligned}
+$$
+
+At a fixed temperature, its $K_{sp}$ is $6.25 \times 10^{-11}$ (a made-up value). A saturated solution of $\ce{M2X}$ in pure water stands over some undissolved solid. In it, $[\ce{M^+}] = 5.00 \times 10^{-4}$ M and $[\ce{X^2-}] = 2.50 \times 10^{-4}$ M.
+
+Crystals of $\ce{MNO3}$, a soluble nitrate of the same cation, are dissolved in this solution without changing its volume. Just after they dissolve, before anything else happens, $[\ce{M^+}]$ is 0.0250 M and $[\ce{X^2-}]$ is still $2.50 \times 10^{-4}$ M.
+
+<Part label="a">
+
+Calculate $Q$ just after the crystals dissolve. Compare it with $K_{sp}$, and state what happens to the amount of solid $\ce{M2X}$ as the solution returns to equilibrium.
+
+<Answer>
+
+$Q$ has the same form as $K_{sp}$:
+
+$$
+\begin{aligned}
+Q &= [\ce{M^+}]^2[\ce{X^2-}] \\
+&= (0.0250)^2 \\
+&\quad \times (2.50 \times 10^{-4}) \\
+&= \mathbf{1.56 \times 10^{-7}}
+\end{aligned}
+$$
+
+Before the crystals went in, $Q$ was equal to $K_{sp}$: the solution was saturated. Now $Q$ is far greater than $K_{sp}$:
+
+$$
+\frac{1.56 \times 10^{-7}}{6.25 \times 10^{-11}} = 2.50 \times 10^{3}
+$$
+
+The solution holds more dissolved ions than a saturated solution can, so the equilibrium shifts toward the solid. Solid $\ce{M2X}$ precipitates, and the **amount of solid increases**, until $Q$ has fallen back to $K_{sp}$.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Explain the same result with Le Châtelier's principle.
+
+<Answer>
+
+The saturated solution was at equilibrium. $\ce{M^+}$ is a product of the dissolving equation, so adding it shifts the equilibrium toward the reactant side, which here is the solid. $\ce{M^+}$ and $\ce{X^2-}$ ions leave the solution as solid $\ce{M2X}$, and less of the salt stays dissolved. The shift uses up only a small part of the added $\ce{M^+}$.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A student says, "Adding $\ce{MNO3}$ lowered the $K_{sp}$ of $\ce{M2X}$, and that is why solid formed." Correct the student's statement.
+
+<Answer>
+
+$K_{sp}$ did not change. It is still $6.25 \times 10^{-11}$, because the temperature did not change. What the added $\ce{M^+}$ changed was $Q$, which rose above $K_{sp}$, so solid formed.
+
+When equilibrium returns, $[\ce{M^+}]^2[\ce{X^2-}]$ again equals $6.25 \times 10^{-11}$, now with $[\ce{M^+}]$ much larger and $[\ce{X^2-}]$ smaller than before. The **solubility** fell, not $K_{sp}$.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Calculate the molar solubility of $\ce{M2X}$ in a fresh solution that is 0.0250 M in $\ce{MNO3}$, and check any approximation you make.
+
+<Answer>
+
+$\ce{MNO3}$ is soluble, like every nitrate, so $[\ce{M^+}]$ starts at 0.0250 M and $[\ce{X^2-}]$ at 0. Each mole of $\ce{M2X}$ that dissolves adds two moles of $\ce{M^+}$ and one mole of $\ce{X^2-}$.
+
+Every value is in M. The rows are labeled I, C and E, for Initial, Change and Equilibrium:
+
+| | [M⁺] | [X²⁻] |
+|---|---|---|
+| I | 0.0250 | 0 |
+| C | +2s | +s |
+| E | 0.0250 + 2s | s |
+
+$$
+\begin{aligned}
+K_{sp} &= (0.0250 + 2s)^2(s) \\
+&= 6.25 \times 10^{-11}
+\end{aligned}
+$$
+
+Leave $2s$ out of the sum:
+
+$$
+(0.0250)^2(s) = 6.25 \times 10^{-11}
+$$
+
+$$
+\begin{aligned}
+s &= \frac{6.25 \times 10^{-11}}{6.25 \times 10^{-4}} \\
+&= \mathbf{1.00 \times 10^{-7}}\ \text{M}
+\end{aligned}
+$$
+
+The 0.0250 M is not doubled. The 2 in the equation belongs to the $\ce{M^+}$ that comes from $\ce{M2X}$ (the $2s$), and the exponent 2 applies to the whole $\ce{M^+}$ concentration.
+
+Check: what was left out is $2s$, $2.00 \times 10^{-7}$ M, from the 0.0250 M of $\ce{M^+}$.
+
+$$
+\begin{aligned}
+&\frac{2.00 \times 10^{-7}}{0.0250} \\
+&\quad \times 100\% = 0.0008\%
+\end{aligned}
+$$
+
+That is far under 5 percent, so the approximation holds.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $Q = 1.56 \times 10^{-7}$; 1 point for $Q$ greater than $K_{sp}$, so solid $\ce{M2X}$ precipitates (the amount of solid increases) until $Q$ equals $K_{sp}$. A $Q$ without the square on $[\ce{M^+}]$ ($6.25 \times 10^{-6}$) earns 0 for the first point but can earn the second.</RubricLine>
+<RubricLine part="b" points={1}>1 point for saying that the added $\ce{M^+}$ is a product of the dissolving equation, so the equilibrium shifts toward the solid and less $\ce{M2X}$ stays dissolved.</RubricLine>
+<RubricLine part="c" points={1}>1 point for saying that $K_{sp}$ is unchanged (only a change of temperature changes it), and that the added ion raised $Q$, or lowered the solubility, instead.</RubricLine>
+<RubricLine part="d" points={2}>1 point for $(0.0250)^2(s) = 6.25 \times 10^{-11}$, giving $1.00 \times 10^{-7}$ M (solving the full equation also earns it); 1 point for the check: $2s$ divided by 0.0250 M, under 0.001 percent, far under 5 percent. Doubling the 0.0250 M (giving $2.50 \times 10^{-8}$ M) or leaving out the square (giving $2.50 \times 10^{-9}$ M) earns 0 for the first point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={21} title="The wrong water in a procedure" topic="7.12" points={4}>
+
+A salt with the made-up formula $\ce{MZ}$ dissolves slightly in water:
+
+$$
+\begin{aligned}
+&\ce{MZ(s) <=>} \\
+&\quad \ce{M^+(aq) + Z^-(aq)}
+\end{aligned}
+$$
+
+A procedure for finding its $K_{sp}$ says: stir excess solid $\ce{MZ}$ with distilled water at a fixed temperature until no more dissolves; filter off the solid; measure $[\ce{M^+}]$ in the clear liquid; calculate $K_{sp}$ as $[\ce{M^+}]^2$.
+
+Student 1 follows the procedure and measures $[\ce{M^+}] = 2.40 \times 10^{-5}$ M. Student 2 works at the same temperature but, by mistake, uses $1.00 \times 10^{-3}$ M $\ce{NaZ}$ in place of distilled water. $\ce{NaZ}$ is soluble, like every sodium salt. Student 2 does everything else the same way, including calculating $K_{sp}$ as $[\ce{M^+}]^2$.
+
+<Part label="a">
+
+Calculate $K_{sp}$ from student 1's result.
+
+<Answer>
+
+In distilled water every $\ce{Z^-}$ ion comes from the salt, so $[\ce{Z^-}] = [\ce{M^+}]$.
+
+$$
+\begin{aligned}
+K_{sp} &= [\ce{M^+}][\ce{Z^-}] \\
+&= (2.40 \times 10^{-5})^2 \\
+&= \mathbf{5.76 \times 10^{-10}}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Using your value of $K_{sp}$, calculate the $[\ce{M^+}]$ that student 2 would find, checking any approximation you make. Then calculate the $K_{sp}$ value that student 2 would report.
+
+<Answer>
+
+In student 2's liquid, $[\ce{Z^-}]$ starts at $1.00 \times 10^{-3}$ M and $[\ce{M^+}]$ at 0. If $s$ mol/L of $\ce{MZ}$ dissolves, then at equilibrium $[\ce{M^+}] = s$ and $[\ce{Z^-}] = 1.00 \times 10^{-3} + s$.
+
+$$
+\begin{aligned}
+&s(1.00 \times 10^{-3} + s) \\
+&= 5.76 \times 10^{-10}
+\end{aligned}
+$$
+
+Leave $s$ out of the sum:
+
+$$
+\begin{aligned}
+s &= \frac{5.76 \times 10^{-10}}{1.00 \times 10^{-3}} \\
+&= \mathbf{5.76 \times 10^{-7}}\ \text{M}
+\end{aligned}
+$$
+
+Check: what was left out is $s$, $5.76 \times 10^{-7}$ M, from the $1.00 \times 10^{-3}$ M of $\ce{Z^-}$.
+
+$$
+\frac{5.76 \times 10^{-7}}{1.00 \times 10^{-3}} \times 100\% = 0.058\%
+$$
+
+That is far under 5 percent. So student 2 would find $[\ce{M^+}] = 5.76 \times 10^{-7}$ M, and would report
+
+$$
+\begin{aligned}
+K_{sp} &= (5.76 \times 10^{-7})^2 \\
+&= \mathbf{3.32 \times 10^{-13}}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+State whether student 2's reported value is too high or too low, and explain why, referring to the true value of $K_{sp}$.
+
+<Answer>
+
+**Too low**, by far: $3.32 \times 10^{-13}$ is less than a thousandth of $5.76 \times 10^{-10}$.
+
+The $\ce{Z^-}$ from the $\ce{NaZ}$ is a common ion, so much less $\ce{MZ}$ dissolves and $[\ce{M^+}]$ is small. $K_{sp}$ itself has not changed: in student 2's liquid
+
+$$
+\begin{aligned}
+&[\ce{M^+}][\ce{Z^-}] \\
+&= (5.76 \times 10^{-7}) \\
+&\quad \times (1.00 \times 10^{-3}) \\
+&= 5.76 \times 10^{-10}
+\end{aligned}
+$$
+
+Calculating $K_{sp}$ as $[\ce{M^+}]^2$ assumes that $[\ce{Z^-}]$ equals $[\ce{M^+}]$, which is true only in distilled water. Here it leaves out nearly all of the $\ce{Z^-}$.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for $5.76 \times 10^{-10}$.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $[\ce{M^+}] = 5.76 \times 10^{-7}$ M from $s(1.00 \times 10^{-3}) = K_{sp}$ (or from the full equation), with the check ($s$ divided by $1.00 \times 10^{-3}$ M, about 0.06 percent); 1 point for the reported value, $3.32 \times 10^{-13}$. Values from your own $K_{sp}$ in (a) earn both points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for too low, with the reason that the common ion lowers $[\ce{M^+}]$ while $K_{sp}$ stays the same, so $[\ce{M^+}]^2$ leaves out the $\ce{Z^-}$ from the $\ce{NaZ}$ (the reason may be given with Le Châtelier's principle or with $[\ce{M^+}][\ce{Z^-}] = K_{sp}$). Saying that the $\ce{NaZ}$ lowered $K_{sp}$ earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
