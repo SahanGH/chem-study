@@ -131,3 +131,30 @@ adding up) already exist.
   numbers.
 - Both pages fit a phone at 320 px with every answer open, and pass the
   browser tests' accessibility checks.
+
+> **As built (Plan 7, 2026-11-14).**
+>
+> - **Session 1:** 19 questions, 90 points (A 22, B 28, C 20, D 20).
+>   Topics: 2.1 ×5, 2.2 ×8, 2.3 ×4, 2.4 ×4. Two Part C questions use
+>   Coulomb's law from 2.2.
+> - **Session 2:** 22 questions, 113 points (E 32, F 30, G 51). Topics:
+>   2.5 ×6, 2.6 ×7, 2.7 ×10.
+> - **Checks:**
+>   - The number checks match: A 113 values, B 110, C 57, D 39, E 241,
+>     F 199, G 350.
+>   - No fact-check found a wrong answer, number or rubric total.
+> - **Originality:**
+>   - Session 1 had nothing from a textbook or the closed exam. One
+>     question that reused lesson 2.2's own table was rewritten.
+>   - Session 2's first check found that the writers, without reading a
+>     textbook, had picked several of its worked examples and exercises:
+>     nitromethane, the azide ion, diazomethane, ICl₄⁻ and I₃⁻, NO, and
+>     the phosgene chain. Two items also repeated lesson 2.7: the cis and
+>     trans dichloroethene pattern, and 614 against 2 × 347.
+>   - Those were replaced (N₂O₄, the cyanamide ion, an enolate ion, SeF₄,
+>     ClF₂⁻, IF₅, the hydroxyl radical, urea, the three C₂H₂F₂ compounds),
+>     then fact-checked and checked for originality again: no strong
+>     match. One sentence describing urea was reworded.
+> - **Repeats within a session** were removed: molten MgCl₂ in session 1;
+>   BCl₃, H₃O⁺, PF₅ and NH₂⁻ in session 2.
+> - **No "Beyond the exam" labels** were needed.

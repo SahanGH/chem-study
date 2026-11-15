@@ -106,6 +106,8 @@ Branch `topic/unit-2-test-session-2`, from `topic/unit-2-test-session-1`. The dr
 
 ### Task 3: Write session 2
 
+> **As carried out (2026-11-14).** The session 2 drafts were written alongside session 1. The writers never read a textbook, yet the originality check found several textbook worked examples among their choices, because the standard examples of each skill are few. The second round gave each writer a list of species to avoid, which worked. A future test should give that avoid list from the start: the worked examples of the Tro chapters, the site's lessons and practice, and the closed exam. Writers also chose some of the same substances across parts (BCl₃, H₃O⁺, PF₅, NH₂⁻); the controller should compare the parts' substances before the fact-checks. One drawing (N₂O₄) had its two formal-charge labels run together over a one-unit N–N bond; drawing that bond 1.5 units long fixed it.
+
 Three writers in parallel:
 
 | Part | Title | Topic | Questions | Points | Practice |

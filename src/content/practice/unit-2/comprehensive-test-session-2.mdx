@@ -1,0 +1,1932 @@
+---
+title: "Comprehensive test, session 2: Lewis diagrams and shapes"
+kind: test
+order: 8
+topics: ["2.5", "2.6", "2.7"]
+summary: Twenty-two scored free-response questions on Lewis diagrams, resonance and formal charge, and molecular shape, polarity and hybridization, each with a worked answer and its scoring rubric.
+points: 113
+minutes: 120
+---
+
+This is the second of two sittings that together test all of Unit 2. It covers topics 2.5 to 2.7: Lewis diagrams, resonance and formal charge, and the shapes of molecules, with their polarity and hybridization. Session 1 covers bonds and solids.
+
+There are 22 questions worth 113 points. Give yourself about 120 minutes. You may use a calculator. Draw each diagram and write out each answer in full before you open the worked answer and the scoring rubric.
+
+One limit applies. For a central atom with five or six electron domains, you are asked for the shape only, never a hybridization.
+
+## Part E: Lewis diagrams
+
+These six questions are about drawing Lewis diagrams: counting the valence electrons, building the diagram step by step, and the atoms that end up with fewer than eight electrons or more. A drawing is complete only with every bond, every lone pair, and, for an ion, square brackets and the charge.
+
+<Question number={1} title="Counting valence electrons" topic="2.5" points={5}>
+
+Every Lewis diagram starts with a count of the valence electrons.
+
+<Part label="a">
+
+Determine the total number of valence electrons in each species. Show how you got each count.
+
+- hydrazine, $\ce{N2H4}$, a fuel for the small thrusters that steer spacecraft
+- the hydronium ion, $\ce{H3O+}$
+- the phosphate ion, $\ce{PO4^3-}$
+
+<Answer>
+
+Add the valence electrons of every atom: N has 5, H has 1, O has 6 and P has 5. Then add one electron for each unit of negative charge, or take one away for each unit of positive charge.
+
+$$
+\ce{N2H4}: 2(5) + 4(1) = \mathbf{14}
+$$
+
+$$
+\ce{H3O+}: 6 + 3(1) - 1 = \mathbf{8}
+$$
+
+The + charge means one electron fewer.
+
+$$
+\ce{PO4^3-}: 5 + 4(6) + 3 = \mathbf{32}
+$$
+
+The 3− charge means three electrons more.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Draw the Lewis diagram of the hydronium ion, $\ce{H3O+}$.
+
+<Answer>
+
+Oxygen goes in the center, because hydrogen forms only one bond and is never central. Three O–H bonds use 6 of the 8 electrons, and each hydrogen has its two. The last 2 go on oxygen as one lone pair, so oxygen has eight around it: six in bonds and two in the lone pair. The diagram goes in square brackets, with the + charge outside them at the upper right.
+
+<Lewis
+  alt="Lewis diagram of the hydronium ion: oxygen in the center, joined by single bonds to three hydrogen atoms, on its left, its right and below it. Oxygen has one lone pair, above it. The whole ion is inside square brackets, with a plus charge at the upper right."
+  atoms={[
+    { id: 'O', symbol: 'O', x: 0, y: 0, lonePairs: ['top'] },
+    { id: 'H1', symbol: 'H', x: -1, y: 0 },
+    { id: 'H2', symbol: 'H', x: 1, y: 0 },
+    { id: 'H3', symbol: 'H', x: 0, y: 1 },
+  ]}
+  bonds={[['O', 'H1', 1], ['O', 'H2', 1], ['O', 'H3', 1]]}
+  ion={1}
+/>
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for each correct count: 14, 8 and 32. A count with the charge left out or applied the wrong way (for hydronium, 9 or 10; for phosphate, 29 or 26) earns 0 points for that species.</RubricLine>
+<RubricLine part="b" points={2}>1 point for three O–H single bonds and one lone pair on oxygen, 8 electrons in all; 1 point for square brackets with the + charge outside them. A diagram with no lone pair on oxygen, or with two, earns at most the bracket point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={2} title="Double and triple bonds" topic="2.5" points={6}>
+
+Some molecules need multiple bonds before every atom has eight electrons around it.
+
+<Part label="a">
+
+Acetone, $\ce{C3H6O}$, is the solvent in many nail polish removers. Its three carbon atoms form a chain, the oxygen atom is bonded to the middle carbon, and three hydrogen atoms are bonded to each end carbon. Determine the number of valence electrons and draw the Lewis diagram.
+
+<Answer>
+
+The count:
+
+$$
+3(4) + 6(1) + 6 = \mathbf{24}
+$$
+
+Single bonds first: two C–C bonds, six C–H bonds and one C–O bond make 9 bonds, which use 18 electrons. The 6 left go on oxygen as three lone pairs. Each end carbon now has four bonds, eight electrons. The middle carbon has only three bonds, six electrons. So move one lone pair from oxygen into the C–O bond to make a double bond. Now every carbon and the oxygen have eight, and every hydrogen has two.
+
+The diagram has **a C=O double bond, two lone pairs on oxygen, and every other bond single**.
+
+<Lewis
+  alt="Lewis diagram of acetone: three carbon atoms in a row, joined by single bonds. The middle carbon has a double bond to an oxygen atom above it, and the oxygen has two lone pairs, one on its left and one on its right; no other atom is in the oxygen's row. Each end carbon has single bonds to three hydrogen atoms: one beside it on the outer side, one below it and one at its lower outer corner. There are no other lone pairs."
+  atoms={[
+    { id: 'C1', symbol: 'C', x: -1, y: 0 },
+    { id: 'C2', symbol: 'C', x: 0, y: 0 },
+    { id: 'C3', symbol: 'C', x: 1, y: 0 },
+    { id: 'O', symbol: 'O', x: 0, y: -1, lonePairs: ['left', 'right'] },
+    { id: 'H1', symbol: 'H', x: -2, y: 0 },
+    { id: 'H2', symbol: 'H', x: -2, y: 1 },
+    { id: 'H3', symbol: 'H', x: -1, y: 1 },
+    { id: 'H4', symbol: 'H', x: 2, y: 0 },
+    { id: 'H5', symbol: 'H', x: 2, y: 1 },
+    { id: 'H6', symbol: 'H', x: 1, y: 1 },
+  ]}
+  bonds={[['C1', 'C2', 1], ['C2', 'C3', 1], ['C2', 'O', 2], ['C1', 'H1', 1], ['C1', 'H2', 1], ['C1', 'H3', 1], ['C3', 'H4', 1], ['C3', 'H5', 1], ['C3', 'H6', 1]]}
+/>
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Cyanogen, $\ce{C2N2}$, is a toxic gas. Its atoms are joined in the order N, C, C, N. Determine the number of valence electrons and draw the Lewis diagram.
+
+<Answer>
+
+The count:
+
+$$
+2(4) + 2(5) = \mathbf{18}
+$$
+
+Three single bonds (N–C, C–C and C–N) use 6, leaving 12. Each nitrogen gets three lone pairs, which uses all 12. Each carbon now has only four electrons around it, from its two bonds, and needs four more. So move two lone pairs from each nitrogen into its bond with carbon. That makes two C≡N triple bonds, and each nitrogen keeps one lone pair.
+
+The diagram is **N≡C–C≡N, with one lone pair on each nitrogen and none on carbon**.
+
+<Lewis
+  alt="Lewis diagram of cyanogen: four atoms in a row, nitrogen, carbon, carbon, nitrogen. Each nitrogen has a triple bond to the carbon beside it, and the two carbons are joined by a single bond. Each nitrogen has one lone pair, on its outer side. The carbons have no lone pairs."
+  atoms={[
+    { id: 'N1', symbol: 'N', x: -1.5, y: 0, lonePairs: ['left'] },
+    { id: 'C1', symbol: 'C', x: -0.5, y: 0 },
+    { id: 'C2', symbol: 'C', x: 0.5, y: 0 },
+    { id: 'N2', symbol: 'N', x: 1.5, y: 0, lonePairs: ['right'] },
+  ]}
+  bonds={[['N1', 'C1', 3], ['C1', 'C2', 1], ['C2', 'N2', 3]]}
+/>
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+In your diagram of cyanogen, determine how many electrons are in bonds and how many are in lone pairs. Show that every atom has eight electrons around it.
+
+<Answer>
+
+$$
+\begin{aligned}
+\text{bonds}&: 2(6) + 2 = 14 \\
+\text{lone pairs}&: 2(2) = 4 \\
+\text{total}&: 14 + 4 = \mathbf{18}
+\end{aligned}
+$$
+
+That matches the count. Each carbon has 6 electrons from its triple bond and 2 from the C–C bond, **8** in all. Each nitrogen has 6 from its triple bond and 2 in its lone pair, also **8**.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for 24; 1 point for a complete diagram with a C=O double bond, two lone pairs on oxygen and all other bonds single.</RubricLine>
+<RubricLine part="b" points={3}>1 point for 18; 1 point for two C≡N triple bonds and a C–C single bond; 1 point for one lone pair on each nitrogen and none on either carbon. N=C=C=N with two lone pairs on each nitrogen shows 20 electrons and earns the count point only.</RubricLine>
+<RubricLine part="c" points={1}>1 point for 14 electrons in bonds and 4 in lone pairs, adding to 18, with eight shown around a carbon and around a nitrogen.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={3} title="Fewer than eight around boron" topic="2.5" points={5}>
+
+Boron trichloride, $\ce{BCl3}$, and nitrogen trichloride, $\ce{NCl3}$, have the same pattern of atoms, a central atom bonded to three chlorine atoms, but different Lewis diagrams.
+
+<Part label="a">
+
+Determine the number of valence electrons in $\ce{BCl3}$ and draw its Lewis diagram.
+
+<Answer>
+
+The count:
+
+$$
+3 + 3(7) = \mathbf{24}
+$$
+
+Boron goes in the center, with the three chlorine atoms around it. Three B–Cl bonds use 6, leaving 18. Each chlorine gets three lone pairs, which uses all 18. No electrons are left for boron.
+
+<Lewis
+  alt="Lewis diagram of boron trichloride: boron in the center, joined by single bonds to three chlorine atoms, on its left, its right and above it. Each chlorine has three lone pairs. Boron has no lone pairs."
+  atoms={[
+    { id: 'B', symbol: 'B', x: 0, y: 0 },
+    { id: 'Cl1', symbol: 'Cl', x: -1, y: 0, lonePairs: 3 },
+    { id: 'Cl2', symbol: 'Cl', x: 1, y: 0, lonePairs: 3 },
+    { id: 'Cl3', symbol: 'Cl', x: 0, y: -1, lonePairs: 3 },
+  ]}
+  bonds={[['B', 'Cl1', 1], ['B', 'Cl2', 1], ['B', 'Cl3', 1]]}
+/>
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+State the number of electrons around the boron atom and around each chlorine atom in your diagram. Explain why boron is left with fewer than eight.
+
+<Answer>
+
+Boron has **6** electrons around it, all in its three bonds. Each chlorine has **8**: two in its bond and six in its three lone pairs.
+
+Boron brings only three valence electrons, and all three go into its three bonds. Once each chlorine has eight, all 24 electrons are placed, so none are left for boron. Boron is the atom that is often content with six, so the diagram stops there.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Nitrogen trichloride, $\ce{NCl3}$, is the compound that gives the air above some indoor swimming pools its sharp smell. Draw its Lewis diagram, and explain why its central atom has eight electrons around it while boron in $\ce{BCl3}$ has six.
+
+<Answer>
+
+The count:
+
+$$
+5 + 3(7) = 26
+$$
+
+Three N–Cl bonds use 6, and the chlorines' lone pairs use 18, which leaves 2. They go on nitrogen as one lone pair, so nitrogen has eight around it: six in bonds and two in the lone pair.
+
+<Lewis
+  alt="Lewis diagram of nitrogen trichloride: nitrogen in the center, joined by single bonds to three chlorine atoms, on its left, its right and below it. Each chlorine has three lone pairs. Nitrogen has one lone pair, above it."
+  atoms={[
+    { id: 'N', symbol: 'N', x: 0, y: 0, lonePairs: ['top'] },
+    { id: 'Cl1', symbol: 'Cl', x: -1, y: 0, lonePairs: 3 },
+    { id: 'Cl2', symbol: 'Cl', x: 1, y: 0, lonePairs: 3 },
+    { id: 'Cl3', symbol: 'Cl', x: 0, y: 1, lonePairs: 3 },
+  ]}
+  bonds={[['N', 'Cl1', 1], ['N', 'Cl2', 1], ['N', 'Cl3', 1]]}
+/>
+
+Nitrogen brings five valence electrons, two more than boron's three. **Those two extra electrons become the lone pair on nitrogen**, and they bring it from six to eight.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for 24; 1 point for three B–Cl single bonds, three lone pairs on each chlorine and none on boron.</RubricLine>
+<RubricLine part="b" points={1}>1 point for 6 around boron and 8 around each chlorine, with either reason: all 24 electrons are placed once the chlorines have eight, or boron's three valence electrons all go into its three bonds, leaving none for a lone pair, or boron is the exception allowed to stop at six, so no chlorine lone pair is made into a double bond.</RubricLine>
+<RubricLine part="c" points={2}>1 point for a diagram with three N–Cl single bonds, three lone pairs on each chlorine and one lone pair on nitrogen, 26 electrons in all; 1 point for explaining that nitrogen's two extra valence electrons (5 against 3) form the lone pair.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={4} title="More than eight around the central atom" topic="2.5" points={5}>
+
+Atoms from the third period down can be drawn with more than eight electrons around them.
+
+<Part label="a">
+
+Chlorine trifluoride, $\ce{ClF3}$, is a very reactive gas used in the computer-chip industry to clean equipment. Its chlorine atom is bonded to three fluorine atoms. Determine the number of valence electrons, draw the Lewis diagram, and state how many electrons surround the chlorine atom.
+
+<Answer>
+
+The count:
+
+$$
+7 + 3(7) = \mathbf{28}
+$$
+
+Three Cl–F bonds use 6, leaving 22. Each fluorine gets three lone pairs, which uses 18 and leaves 4. Those 4 go on chlorine as two lone pairs.
+
+Chlorine has **10** electrons around it: six in its bonds and four in its lone pairs. Chlorine is in the third period, so it can hold more than eight.
+
+<Lewis
+  alt="Lewis diagram of chlorine trifluoride: chlorine in the center, joined by single bonds to three fluorine atoms, one on its left, one at its upper right and one at its lower right. Chlorine has two lone pairs, one above it and one below it. Each fluorine has three lone pairs."
+  atoms={[
+    { id: 'Cl', symbol: 'Cl', x: 0, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'F1', symbol: 'F', x: -1, y: 0, lonePairs: 3 },
+    { id: 'F2', symbol: 'F', x: 1, y: -1, lonePairs: 3 },
+    { id: 'F3', symbol: 'F', x: 1, y: 1, lonePairs: 3 },
+  ]}
+  bonds={[['Cl', 'F1', 1], ['Cl', 'F2', 1], ['Cl', 'F3', 1]]}
+/>
+
+Two fluorine atoms are drawn on diagonals only to leave room for chlorine's lone pairs. A Lewis diagram does not show the shape.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Phosphorus pentafluoride, $\ce{PF5}$, is a stable compound, but no molecule of $\ce{NF5}$ is known. Determine how many electrons would surround the central atom in a Lewis diagram of either molecule. Explain why phosphorus can be drawn this way but nitrogen cannot.
+
+<Answer>
+
+The count for $\ce{PF5}$:
+
+$$
+5 + 5(7) = 40
+$$
+
+Five P–F bonds use 10, and the fluorines' lone pairs use 30, so none are left. The central atom has **10** electrons around it, in five bonds. Nitrogen also has five valence electrons. A diagram of $\ce{NF5}$ drawn the same way would put 10 around nitrogen.
+
+Phosphorus is in the third period, and atoms from the third period down can be drawn with more than eight. **Nitrogen is in the second period, and a second-period atom never holds more than eight**, so nitrogen cannot be drawn with five bonds.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for 28; 1 point for three Cl–F single bonds with three lone pairs on each fluorine and two on chlorine; 1 point for 10 electrons around chlorine. A diagram with only one lone pair on chlorine shows 26 electrons and earns the count point only.</RubricLine>
+<RubricLine part="b" points={2}>1 point for 10 electrons around the central atom, from five bonds; 1 point for stating that phosphorus, in period 3, can hold more than eight, while nitrogen, in period 2, never can.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={5} title="An odd number of electrons" topic="2.5, 2.6" points={5}>
+
+The hydroxyl radical, $\ce{OH}$, is a neutral particle made of one oxygen atom and one hydrogen atom. Sunlight makes it in the air, where it is so reactive that it breaks down many pollutants.
+
+<Part label="a">
+
+Determine the number of valence electrons in $\ce{OH}$. Explain why no Lewis diagram of $\ce{OH}$ can give oxygen eight electrons and hydrogen two.
+
+<Answer>
+
+The count:
+
+$$
+6 + 1 = \mathbf{7}
+$$
+
+Electrons in a bond come two at a time, and so do the electrons in a lone pair. A diagram built only from bonds and lone pairs therefore holds an even number of electrons, and 7 is not even. One electron has to stand alone. Hydrogen already has two from its bond to oxygen and can hold no more, so the lone electron cannot go on hydrogen. **It goes on oxygen, which is left with seven**, one short of eight.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Draw the Lewis diagram of $\ce{OH}$.
+
+<Answer>
+
+The O–H bond uses 2 of the 7 electrons and gives hydrogen its two. The other 5 go on oxygen: two lone pairs and one unpaired electron. Oxygen has seven around it: two in the bond, four in its lone pairs and the unpaired one.
+
+<Lewis
+  alt="Lewis diagram of the hydroxyl radical: oxygen on the left, joined by a single bond to a hydrogen atom on its right. Oxygen has two lone pairs, one above it and one below it, and a single unpaired electron on its left."
+  atoms={[
+    { id: 'O', symbol: 'O', x: 0, y: 0, lonePairs: ['top', 'bottom'], unpaired: 'left' },
+    { id: 'H', symbol: 'H', x: 1, y: 0 },
+  ]}
+  bonds={[['O', 'H', 1]]}
+/>
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A student suggests an O=H double bond, so that oxygen reaches eight. Explain why this does not work.
+
+<Answer>
+
+A double bond would put **four electrons around hydrogen**, and hydrogen holds only two. It would not get rid of the lone electron either: the double bond holds 4 of the 7, and the 3 left over still include one that has no partner.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for 7; 1 point for explaining either that bonds and lone pairs hold two electrons each, so an odd total leaves one electron unpaired and some atom short, or that oxygen with eight and hydrogen with two would need 8 electrons, one more than 7. "OH breaks the octet rule" with no reason earns 0 points for the explanation.</RubricLine>
+<RubricLine part="b" points={2}>1 point for an O–H single bond with two lone pairs on oxygen; 1 point for one unpaired electron on oxygen, 7 electrons in all.</RubricLine>
+<RubricLine part="c" points={1}>1 point for hydrogen ending up with four electrons when it holds only two. A reply that says instead that the total is still odd, so one electron is still unpaired, or that oxygen would still have only seven (4 + 3), also earns the point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={6} title="Find the error and fix it" topic="2.5" points={6}>
+
+Each Lewis diagram below is described in words, and each has one error. For each one, identify the error and draw the correct diagram.
+
+<Part label="a">
+
+Hydroxylamine, $\ce{NH2OH}$. Nitrogen is bonded to two hydrogen atoms and has a double bond to oxygen. Oxygen is bonded to the third hydrogen atom. Nitrogen has one lone pair, and oxygen has one lone pair.
+
+<Answer>
+
+The electron count is right:
+
+$$
+5 + 6 + 3(1) = 14
+$$
+
+The diagram shows 10 electrons in bonds and 4 in lone pairs, which is also 14. The error is around nitrogen. It has 4 electrons in its two N–H bonds, 4 in the double bond and 2 in its lone pair: 10 in all. **Nitrogen is in the second period and never holds more than eight.**
+
+To fix it, make the N–O bond single and give oxygen the freed pair as a second lone pair. Nitrogen then has 8 (three bonds and one lone pair), oxygen has 8 (two bonds and two lone pairs), and the diagram still shows 14 electrons.
+
+<Lewis
+  alt="Lewis diagram of hydroxylamine: nitrogen on the left, with single bonds to a hydrogen atom above it, a hydrogen atom below it and an oxygen atom on its right. Nitrogen has one lone pair, on its left. The oxygen has a single bond to a hydrogen atom on its right and two lone pairs, one above it and one below it."
+  atoms={[
+    { id: 'N', symbol: 'N', x: 0, y: 0, lonePairs: ['left'] },
+    { id: 'H1', symbol: 'H', x: 0, y: -1 },
+    { id: 'H2', symbol: 'H', x: 0, y: 1 },
+    { id: 'O', symbol: 'O', x: 1, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'H3', symbol: 'H', x: 2, y: 0 },
+  ]}
+  bonds={[['N', 'H1', 1], ['N', 'H2', 1], ['N', 'O', 1], ['O', 'H3', 1]]}
+/>
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Formaldehyde, $\ce{CH2O}$, the gas that preserves biological specimens when it is dissolved in water. Carbon is in the center, with single bonds to two hydrogen atoms and to oxygen. Oxygen has three lone pairs, and carbon has one lone pair.
+
+<Answer>
+
+Every atom has eight around it, so the diagram looks right. Compare the electrons drawn with the count:
+
+$$
+\begin{aligned}
+\text{drawn}&: 3(2) + 4(2) = 14 \\
+\text{count}&: 4 + 2(1) + 6 = 12
+\end{aligned}
+$$
+
+**The diagram shows two electrons too many.**
+
+To fix it, start again from 12. Three single bonds use 6, and oxygen takes three lone pairs, 6 more. Nothing is left for carbon, which has only six around it. So move one lone pair from oxygen into the C–O bond. That gives a C=O double bond with two lone pairs on oxygen and none on carbon. Carbon and oxygen each have eight, and the diagram shows 12.
+
+<Lewis
+  alt="Lewis diagram of formaldehyde: carbon in the center, with single bonds to a hydrogen atom above it and one below it, and a double bond to an oxygen atom on its right. The oxygen has two lone pairs, one above it and one below it. Carbon has no lone pairs."
+  atoms={[
+    { id: 'C', symbol: 'C', x: 0, y: 0 },
+    { id: 'H1', symbol: 'H', x: 0, y: -1 },
+    { id: 'H2', symbol: 'H', x: 0, y: 1 },
+    { id: 'O', symbol: 'O', x: 1, y: 0, lonePairs: ['top', 'bottom'] },
+  ]}
+  bonds={[['C', 'H1', 1], ['C', 'H2', 1], ['C', 'O', 2]]}
+/>
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The hypochlorite ion, $\ce{ClO-}$, the ion in household bleach. A student counts 12 valence electrons and draws chlorine and oxygen joined by a single bond, with two lone pairs on chlorine and three on oxygen, inside square brackets with a minus charge.
+
+<Answer>
+
+The charge was applied the wrong way. A negative ion has gained electrons, so its charge adds one:
+
+$$
+\begin{aligned}
+\text{student}&: 7 + 6 - 1 = 12 \\
+\text{correct}&: 7 + 6 + 1 = \mathbf{14}
+\end{aligned}
+$$
+
+The student's diagram also leaves chlorine with only six around it. With 14, the single bond uses 2, and the other 12 go as **three lone pairs on each atom**. Chlorine and oxygen then have eight each.
+
+<Lewis
+  alt="Lewis diagram of the hypochlorite ion: chlorine on the left, joined by a single bond to an oxygen atom on its right. Each atom has three lone pairs. The whole ion is inside square brackets, with a minus charge at the upper right."
+  atoms={[
+    { id: 'Cl', symbol: 'Cl', x: 0, y: 0, lonePairs: 3 },
+    { id: 'O', symbol: 'O', x: 1, y: 0, lonePairs: 3 },
+  ]}
+  bonds={[['Cl', 'O', 1]]}
+  ion={-1}
+/>
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for identifying 10 electrons around nitrogen, more than a second-period atom can hold; 1 point for the corrected diagram: all single bonds, one lone pair on nitrogen and two on oxygen.</RubricLine>
+<RubricLine part="b" points={2}>1 point for identifying that the diagram shows 14 electrons where the count is 12; 1 point for the corrected diagram: a C=O double bond, two lone pairs on oxygen and none on carbon.</RubricLine>
+<RubricLine part="c" points={2}>1 point for identifying that the negative charge adds an electron, for 14 in all; 1 point for the corrected diagram: a Cl–O single bond and three lone pairs on each atom, in brackets with the minus charge.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part F: Resonance and formal charge
+
+Six questions on topic 2.6. Questions 7 and 8 draw resonance structures and read bond order and bond length from the hybrid; question 9 computes formal charges and asks what they mean; questions 10 and 11 use them to choose between diagrams; question 12 is about a molecule the Lewis model cannot fully describe.
+
+<Question number={7} title="The formate ion" topic="2.6" points={6}>
+
+Formic acid, $\ce{HCOOH}$, is the acid some ants spray to defend themselves. When it loses the hydrogen from its OH group, it becomes the formate ion, $\ce{HCOO-}$. In the formate ion, carbon is the central atom, bonded to the hydrogen and to both oxygen atoms.
+
+<Part label="a">
+
+Determine the number of valence electrons in the formate ion, and draw its resonance structures.
+
+<Answer>
+
+Valence electrons, with one more for the 1− charge:
+
+$$
+1 + 4 + 2(6) + 1 = \mathbf{18}
+$$
+
+Three single bonds from carbon use 6 electrons. Three lone pairs on each oxygen use the other 12. That is all 18, but carbon has only six electrons around it. So one oxygen lone pair becomes a second bond to carbon, and carbon has eight.
+
+Either oxygen can take the double bond, so there are **two equivalent resonance structures**. In each, the singly bonded oxygen has a formal charge of $-1$ and every other atom has 0.
+
+<Resonance label="Resonance structures of the formate ion">
+<Lewis
+  alt="First resonance structure of the formate ion: carbon in the center, with a hydrogen on its left, an oxygen on its right and an oxygen below it. The right oxygen has a double bond to carbon and two lone pairs. The bottom oxygen has a single bond to carbon, three lone pairs and a formal charge of −1. Carbon has no lone pairs. The whole ion is in square brackets with a minus charge."
+  atoms={[
+    { id: 'C', symbol: 'C', x: 0, y: 0 },
+    { id: 'H', symbol: 'H', x: -1, y: 0 },
+    { id: 'O1', symbol: 'O', x: 1, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'O2', symbol: 'O', x: 0, y: 1, lonePairs: 3 },
+  ]}
+  bonds={[['C', 'H', 1], ['C', 'O1', 2], ['C', 'O2', 1]]}
+  ion={-1}
+  formalCharges
+/>
+<Lewis
+  alt="Second resonance structure of the formate ion: the same atoms in the same places. Now the right oxygen has a single bond to carbon, three lone pairs and a formal charge of −1, and the bottom oxygen has a double bond to carbon and two lone pairs. Carbon has no lone pairs. The ion is in square brackets with a minus charge."
+  atoms={[
+    { id: 'C', symbol: 'C', x: 0, y: 0 },
+    { id: 'H', symbol: 'H', x: -1, y: 0 },
+    { id: 'O1', symbol: 'O', x: 1, y: 0, lonePairs: 3 },
+    { id: 'O2', symbol: 'O', x: 0, y: 1, lonePairs: ['left', 'right'] },
+  ]}
+  bonds={[['C', 'H', 1], ['C', 'O1', 1], ['C', 'O2', 2]]}
+  ion={-1}
+  formalCharges
+/>
+</Resonance>
+
+Only the electron pairs move from one structure to the other. Every atom stays where it is.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Describe the resonance hybrid. State the bond order of each $\ce{C-O}$ bond, and where the 1− charge is.
+
+<Answer>
+
+The hybrid is one ion, the same all the time. It does not switch between the two structures. Three bonding pairs (one double bond and one single bond) are shared equally by the two $\ce{C-O}$ bonds:
+
+$$
+\text{bond order} = \frac{3}{2} = \mathbf{1.5}
+$$
+
+The $-1$ formal charge is on a different oxygen in each structure, so in the hybrid the 1− charge is **spread equally over both oxygen atoms**.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+In formic acid, carbon is bonded to the hydrogen, to one oxygen by a double bond and to an OH group. Its two $\ce{C-O}$ bonds measure about 120 pm and 134 pm. Predict how the two $\ce{C-O}$ bonds in the formate ion compare in length with each other and with these values. Then explain why the two $\ce{C-O}$ bonds in formic acid are not the same length.
+
+<Answer>
+
+In the formate ion both $\ce{C-O}$ bonds have a bond order of 1.5, so they are **the same length**, **between 120 pm and 134 pm**: shorter than the single bond in formic acid and longer than its double bond.
+
+In formic acid the two oxygen atoms are not alike, because one of them carries the hydrogen. Moving the double bond to that oxygen gives a different kind of diagram, with a formal charge of $+1$ on the oxygen bonded to H and $-1$ on the other oxygen. It is not equivalent to the first diagram. So formic acid has no second equivalent resonance structure, and it keeps one double bond (120 pm) and one single bond (134 pm).
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for 18 valence electrons, including the one for the charge; 1 point for both resonance structures, each with an octet on C and O, the right lone pairs, and the atoms in the same places in both. Structures drawn without the square brackets and the 1− charge earn 0 for the second point, and so does a pair of structures that moves an atom.</RubricLine>
+<RubricLine part="b" points={2}>1 point for a bond order of 1.5 for each $\ce{C-O}$ bond; 1 point for the 1− charge spread equally over both oxygen atoms in a single hybrid. Saying the ion switches between the two structures earns 0 for the second point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for two equal $\ce{C-O}$ bonds with lengths between 120 pm and 134 pm; 1 point for explaining that the hydrogen on one oxygen makes the two oxygens different, so formic acid has no second equivalent resonance structure. "Formic acid has no resonance" with no reason earns 0 for the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={8} title="The benzene ring" topic="2.6" points={5}>
+
+Benzene, $\ce{C6H6}$, is a flat ring of six carbon atoms, each bonded to one hydrogen atom. It is a starting material for many plastics. Here is one Lewis diagram for it.
+
+<Lewis
+  alt="A Lewis diagram of benzene: six carbon atoms in a hexagonal ring, each bonded to one hydrogen atom pointing outward. Going around the ring from the top carbon clockwise, the ring bonds are double, single, double, single, double, single. There are no lone pairs."
+  atoms={[
+    { id: 'C1', symbol: 'C', x: 0, y: -1 },
+    { id: 'C2', symbol: 'C', x: 0.87, y: -0.5 },
+    { id: 'C3', symbol: 'C', x: 0.87, y: 0.5 },
+    { id: 'C4', symbol: 'C', x: 0, y: 1 },
+    { id: 'C5', symbol: 'C', x: -0.87, y: 0.5 },
+    { id: 'C6', symbol: 'C', x: -0.87, y: -0.5 },
+    { id: 'H1', symbol: 'H', x: 0, y: -2 },
+    { id: 'H2', symbol: 'H', x: 1.73, y: -1 },
+    { id: 'H3', symbol: 'H', x: 1.73, y: 1 },
+    { id: 'H4', symbol: 'H', x: 0, y: 2 },
+    { id: 'H5', symbol: 'H', x: -1.73, y: 1 },
+    { id: 'H6', symbol: 'H', x: -1.73, y: -1 },
+  ]}
+  bonds={[
+    ['C1', 'C2', 2], ['C2', 'C3', 1], ['C3', 'C4', 2], ['C4', 'C5', 1], ['C5', 'C6', 2], ['C6', 'C1', 1],
+    ['C1', 'H1', 1], ['C2', 'H2', 1], ['C3', 'H3', 1], ['C4', 'H4', 1], ['C5', 'H5', 1], ['C6', 'H6', 1],
+  ]}
+/>
+
+For comparison, a $\ce{C-C}$ single bond is 154 pm long and a $\ce{C=C}$ double bond is 134 pm long.
+
+<Part label="a">
+
+Show that the diagram uses the right number of valence electrons, and draw the other resonance structure.
+
+<Answer>
+
+Valence electrons:
+
+$$
+6(4) + 6(1) = \mathbf{30}
+$$
+
+The diagram shows six C–H bonds (12 electrons), three C–C single bonds (6) and three C=C double bonds (12): 30 in all, so it matches.
+
+The other resonance structure moves every double bond one place around the ring. The atoms stay where they are.
+
+<Resonance label="Resonance structures of benzene">
+<Lewis
+  alt="First resonance structure of benzene, the one given: a hexagonal ring of six carbon atoms, each with a hydrogen pointing outward. From the top carbon clockwise, the ring bonds are double, single, double, single, double, single. There are no lone pairs."
+  atoms={[
+    { id: 'C1', symbol: 'C', x: 0, y: -1 },
+    { id: 'C2', symbol: 'C', x: 0.87, y: -0.5 },
+    { id: 'C3', symbol: 'C', x: 0.87, y: 0.5 },
+    { id: 'C4', symbol: 'C', x: 0, y: 1 },
+    { id: 'C5', symbol: 'C', x: -0.87, y: 0.5 },
+    { id: 'C6', symbol: 'C', x: -0.87, y: -0.5 },
+    { id: 'H1', symbol: 'H', x: 0, y: -2 },
+    { id: 'H2', symbol: 'H', x: 1.73, y: -1 },
+    { id: 'H3', symbol: 'H', x: 1.73, y: 1 },
+    { id: 'H4', symbol: 'H', x: 0, y: 2 },
+    { id: 'H5', symbol: 'H', x: -1.73, y: 1 },
+    { id: 'H6', symbol: 'H', x: -1.73, y: -1 },
+  ]}
+  bonds={[
+    ['C1', 'C2', 2], ['C2', 'C3', 1], ['C3', 'C4', 2], ['C4', 'C5', 1], ['C5', 'C6', 2], ['C6', 'C1', 1],
+    ['C1', 'H1', 1], ['C2', 'H2', 1], ['C3', 'H3', 1], ['C4', 'H4', 1], ['C5', 'H5', 1], ['C6', 'H6', 1],
+  ]}
+/>
+<Lewis
+  alt="Second resonance structure of benzene: the same ring of six carbon atoms with the same hydrogens. From the top carbon clockwise, the ring bonds are now single, double, single, double, single, double. There are no lone pairs."
+  atoms={[
+    { id: 'C1', symbol: 'C', x: 0, y: -1 },
+    { id: 'C2', symbol: 'C', x: 0.87, y: -0.5 },
+    { id: 'C3', symbol: 'C', x: 0.87, y: 0.5 },
+    { id: 'C4', symbol: 'C', x: 0, y: 1 },
+    { id: 'C5', symbol: 'C', x: -0.87, y: 0.5 },
+    { id: 'C6', symbol: 'C', x: -0.87, y: -0.5 },
+    { id: 'H1', symbol: 'H', x: 0, y: -2 },
+    { id: 'H2', symbol: 'H', x: 1.73, y: -1 },
+    { id: 'H3', symbol: 'H', x: 1.73, y: 1 },
+    { id: 'H4', symbol: 'H', x: 0, y: 2 },
+    { id: 'H5', symbol: 'H', x: -1.73, y: 1 },
+    { id: 'H6', symbol: 'H', x: -1.73, y: -1 },
+  ]}
+  bonds={[
+    ['C1', 'C2', 1], ['C2', 'C3', 2], ['C3', 'C4', 1], ['C4', 'C5', 2], ['C5', 'C6', 1], ['C6', 'C1', 2],
+    ['C1', 'H1', 1], ['C2', 'H2', 1], ['C3', 'H3', 1], ['C4', 'H4', 1], ['C5', 'H5', 1], ['C6', 'H6', 1],
+  ]}
+/>
+</Resonance>
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Determine the bond order of each carbon-carbon bond in the resonance hybrid.
+
+<Answer>
+
+Each structure has three double bonds and three single bonds in the ring: nine bonding pairs shared by six equal bonds.
+
+$$
+\text{bond order} = \frac{9}{6} = \mathbf{1.5}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Predict how the six carbon-carbon bonds in benzene compare in length with each other and with the single and double bonds above.
+
+<Answer>
+
+All six bonds have the same bond order, so they are **all the same length**, **between 134 pm and 154 pm**: shorter than a single bond and longer than a double bond. Measured, each is about 140 pm.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+A student says: "Benzene has three short bonds and three long bonds, and they swap places back and forth very fast." Explain what is wrong with this claim.
+
+<Answer>
+
+Benzene is one resonance hybrid, the same all the time. The two resonance structures are two drawings of one molecule; neither exists on its own, and the molecule never switches between them. So there are never three short and three long bonds: all six are the same, as the measured length of about 140 pm for every bond shows.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for 30 valence electrons, matched to the bonds in the diagram; 1 point for the second structure, with every double bond moved one place around the ring and the atoms in the same places.</RubricLine>
+<RubricLine part="b" points={1}>1 point for a bond order of 1.5, from nine bonding pairs over six bonds.</RubricLine>
+<RubricLine part="c" points={1}>1 point for six equal bonds with a length between 134 pm and 154 pm. A prediction of three bonds at 134 pm and three at 154 pm earns 0 points.</RubricLine>
+<RubricLine part="d" points={1}>1 point for explaining that benzene is a single hybrid at all times, never switching between the structures, so all six bonds are equal.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={9} title="Formal charges in dinitrogen tetroxide" topic="2.6" points={5}>
+
+Dinitrogen tetroxide, $\ce{N2O4}$, is a rocket oxidizer, burned with hydrazine-based fuels in the engines of many spacecraft. Its skeleton is $\ce{O2N-NO2}$: the two nitrogen atoms are bonded to each other, and each nitrogen is bonded to two oxygen atoms.
+
+<Part label="a">
+
+Determine the number of valence electrons, and draw a Lewis diagram that gives every atom an octet.
+
+<Answer>
+
+Valence electrons:
+
+$$
+2(5) + 4(6) = \mathbf{34}
+$$
+
+Five single bonds (one N–N and four N–O) use 10 electrons. Three lone pairs on each oxygen use the other 24. That is all 34, but each nitrogen has only six electrons around it. So on each nitrogen, one oxygen lone pair becomes an N=O double bond, and each nitrogen has eight.
+
+On each nitrogen, either oxygen can take the double bond. The diagrams that differ only in that choice are resonance structures, and any one of them earns full credit.
+
+<Lewis
+  alt="Lewis diagram of dinitrogen tetroxide: two nitrogen atoms side by side, joined by a single bond. Each nitrogen is bonded to two oxygen atoms, one at its upper outer side and one at its lower outer side. Each upper oxygen has a double bond to its nitrogen and two lone pairs. Each lower oxygen has a single bond to its nitrogen, three lone pairs and a formal charge of −1. Neither nitrogen has a lone pair, and each has a formal charge of +1."
+  atoms={[
+    { id: 'N1', symbol: 'N', x: 0, y: 0 },
+    { id: 'N2', symbol: 'N', x: 1.5, y: 0 },
+    { id: 'O1', symbol: 'O', x: -0.5, y: -0.87, lonePairs: ['top', 'left'] },
+    { id: 'O2', symbol: 'O', x: -0.5, y: 0.87, lonePairs: 3 },
+    { id: 'O3', symbol: 'O', x: 2, y: -0.87, lonePairs: ['top', 'right'] },
+    { id: 'O4', symbol: 'O', x: 2, y: 0.87, lonePairs: 3 },
+  ]}
+  bonds={[['N1', 'N2', 1], ['N1', 'O1', 2], ['N1', 'O2', 1], ['N2', 'O3', 2], ['N2', 'O4', 1]]}
+  formalCharges
+/>
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Determine the formal charge on every atom in your diagram, and show that they add up to the right total.
+
+<Answer>
+
+Formal charge = valence electrons − nonbonding electrons − bonds.
+
+$$
+\begin{aligned}
+\text{each } \ce{N}&: 5 - 0 - 4 = \mathbf{+1} \\
+\ce{O}\ (\ce{N=O})&: 6 - 4 - 2 = \mathbf{0} \\
+\ce{O}\ (\ce{N-O})&: 6 - 6 - 1 = \mathbf{-1}
+\end{aligned}
+$$
+
+There are two of each kind of atom. The sum:
+
+$$
+\begin{aligned}
+&2(+1) + 2(0) + 2(-1) \\
+&= \mathbf{0}
+\end{aligned}
+$$
+
+That is the charge of a neutral molecule, as it must be.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A student concludes from part (b) that each nitrogen atom in $\ce{N2O4}$ carries a real charge of +1. Explain why this conclusion does not follow.
+
+<Answer>
+
+Formal charge is bookkeeping, not a measured charge. It counts one electron of every bond for each of the two atoms, as if every bond were shared equally. Real bonds between different atoms are not shared equally: oxygen (3.4) pulls the shared electrons harder than nitrogen (3.0). So the real charge on each atom is set by those pulls, and it can be quite different from the formal charge.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for 34 valence electrons; 1 point for a diagram with an N–N single bond and, on each nitrogen, one N=O and one N–O bond, with two lone pairs on each doubly bonded oxygen, three on each singly bonded oxygen and none on nitrogen, so that every atom has an octet.</RubricLine>
+<RubricLine part="b" points={2}>1 point for all the formal charges (each N +1, each singly bonded O −1, each doubly bonded O 0), or charges consistent with the student's diagram; 1 point for the sum shown to be zero, matched to the neutral molecule. Correct charges with no sum shown earn only the first point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for explaining that formal charge is bookkeeping that treats every bond as equally shared, so it is not the real charge, which depends on electronegativity. "Nitrogen has four bonds, so it is positive" earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={10} title="Three diagrams for the cyanamide ion" topic="2.6" points={5}>
+
+Calcium cyanamide, $\ce{CaCN2}$, is spread on fields as a nitrogen fertilizer. It contains the cyanamide ion, $\ce{CN2^2-}$, which has 16 valence electrons and its carbon atom between the two nitrogen atoms. Each diagram below uses all 16 electrons.
+
+Diagram I:
+
+<Lewis
+  alt="Diagram I of the cyanamide ion: nitrogen, carbon and nitrogen in a row, with carbon in the middle joined to each nitrogen by a double bond. Each nitrogen has two lone pairs, one above it and one below it. Carbon has no lone pairs. The ion is in square brackets with a 2− charge."
+  atoms={[
+    { id: 'N1', symbol: 'N', x: -1, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'C', symbol: 'C', x: 0, y: 0 },
+    { id: 'N2', symbol: 'N', x: 1, y: 0, lonePairs: ['top', 'bottom'] },
+  ]}
+  bonds={[['N1', 'C', 2], ['C', 'N2', 2]]}
+  ion={-2}
+/>
+
+Diagram II:
+
+<Lewis
+  alt="Diagram II of the cyanamide ion: nitrogen, carbon and nitrogen in a row. The left nitrogen has a triple bond to carbon and one lone pair. The right nitrogen has a single bond to carbon and three lone pairs. Carbon has no lone pairs. The ion is in square brackets with a 2− charge."
+  atoms={[
+    { id: 'N1', symbol: 'N', x: -1, y: 0, lonePairs: 1 },
+    { id: 'C', symbol: 'C', x: 0, y: 0 },
+    { id: 'N2', symbol: 'N', x: 1, y: 0, lonePairs: 3 },
+  ]}
+  bonds={[['N1', 'C', 3], ['C', 'N2', 1]]}
+  ion={-2}
+/>
+
+Diagram III:
+
+<Lewis
+  alt="Diagram III of the cyanamide ion: nitrogen, carbon and nitrogen in a row. The left nitrogen has a triple bond to carbon and one lone pair. The right nitrogen has a double bond to carbon and two lone pairs, one above it and one below it. Carbon has no lone pairs. The ion is in square brackets with a 2− charge."
+  atoms={[
+    { id: 'N1', symbol: 'N', x: -1, y: 0, lonePairs: 1 },
+    { id: 'C', symbol: 'C', x: 0, y: 0 },
+    { id: 'N2', symbol: 'N', x: 1, y: 0, lonePairs: ['top', 'bottom'] },
+  ]}
+  bonds={[['N1', 'C', 3], ['C', 'N2', 2]]}
+  ion={-2}
+/>
+
+<Part label="a">
+
+Determine the formal charge on each atom in all three diagrams, and show that each set adds up to the charge of the ion.
+
+<Answer>
+
+Formal charge = valence electrons − nonbonding electrons − bonds. Each nitrogen brings 5 and carbon brings 4.
+
+Diagram I:
+
+$$
+\begin{aligned}
+\text{each N}&: 5 - 4 - 2 = \mathbf{-1} \\
+\ce{C}&: 4 - 0 - 4 = \mathbf{0} \\
+\text{sum}&: -1 + 0 - 1 = -2
+\end{aligned}
+$$
+
+Diagram II:
+
+$$
+\begin{aligned}
+\text{left N}&: 5 - 2 - 3 = \mathbf{0} \\
+\ce{C}&: 4 - 0 - 4 = \mathbf{0} \\
+\text{right N}&: 5 - 6 - 1 = \mathbf{-2} \\
+\text{sum}&: 0 + 0 - 2 = -2
+\end{aligned}
+$$
+
+Diagram III:
+
+$$
+\begin{aligned}
+\text{left N}&: 5 - 2 - 3 = \mathbf{0} \\
+\ce{C}&: 4 - 0 - 5 = \mathbf{-1} \\
+\text{right N}&: 5 - 4 - 2 = \mathbf{-1} \\
+\text{sum}&: 0 - 1 - 1 = -2
+\end{aligned}
+$$
+
+Each set adds up to $-2$, the charge of the cyanamide ion.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Diagram III has formal charges just as small as diagram I's. Explain why it is still not an acceptable model of the cyanamide ion.
+
+<Answer>
+
+Carbon in diagram III has a triple bond and a double bond: 10 electrons around it. Carbon is in the second period and never holds more than eight. For C, N, O and F the octet rule comes first; formal charge only chooses among diagrams that already obey it. So diagram III is ruled out before formal charge is considered.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Identify which of diagrams I and II is the better model, and justify your choice.
+
+<Answer>
+
+Both diagrams give every atom eight electrons, so formal charge decides. The rule is to keep every formal charge as close to zero as possible: a diagram that puts $-2$ on one atom loses to a diagram in which every charge is 0 or $-1$. Diagram I has charges of $-1$, $0$ and $-1$; diagram II has $0$, $0$ and $-2$. Both add up to $-2$, and the sizes add up to 2 in both, so the deciding point is the $-2$ on one nitrogen in diagram II. **Diagram I** is the better model. (The negative charges in both diagrams are on nitrogen, so the electronegativity rule cannot help here, and it is not needed.)
+
+<Lewis
+  alt="Diagram I of the cyanamide ion with its formal charges: nitrogen, carbon and nitrogen in a row, with a double bond from carbon to each nitrogen. Each nitrogen has two lone pairs and a formal charge of −1. Carbon has no lone pairs and no formal charge. The ion is in square brackets with a 2− charge."
+  atoms={[
+    { id: 'N1', symbol: 'N', x: -1, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'C', symbol: 'C', x: 0, y: 0 },
+    { id: 'N2', symbol: 'N', x: 1, y: 0, lonePairs: ['top', 'bottom'] },
+  ]}
+  bonds={[['N1', 'C', 2], ['C', 'N2', 2]]}
+  ion={-2}
+  formalCharges
+/>
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for all nine formal charges; 1 point for all three sums shown equal to −2, the charge of the ion. Correct charges with any sum missing earn only the first point.</RubricLine>
+<RubricLine part="b" points={1}>1 point for 10 electrons around carbon in diagram III, more than the eight a second-period atom can hold. "Its formal charges do not add up" earns 0 points, since they do.</RubricLine>
+<RubricLine part="c" points={2}>1 point for stating the criterion that formal charges should be as close to zero as possible, so a −2 on one atom loses to charges of 0 and −1; 1 point for choosing diagram I. Choosing diagram I only because its sizes "add up to less" earns 0 for the first point, since both add up to 2.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={11} title="Where the negative charge belongs" topic="2.6" points={4}>
+
+When a strong base pulls a hydrogen ion off the $\ce{CH3}$ group of acetaldehyde, $\ce{CH3CHO}$, it leaves the ion $\ce{CH2CHO-}$, which chemists use to join carbon chains together. In this ion, the first carbon is bonded to two hydrogen atoms and to the second carbon; the second carbon is bonded to one hydrogen and to the oxygen. Here are two diagrams, each with 18 valence electrons. Electronegativities: H 2.2, C 2.6, O 3.4.
+
+Diagram A:
+
+<Lewis
+  alt="Diagram A of the ion CH2CHO minus: the first carbon, on the left, is bonded to a hydrogen above it, a hydrogen below it and, by a double bond, to the second carbon on its right. The second carbon is bonded to a hydrogen above it and by a single bond to the oxygen on its right. The oxygen has three lone pairs. Neither carbon has a lone pair. The ion is in square brackets with a minus charge."
+  atoms={[
+    { id: 'C1', symbol: 'C', x: 0, y: 0 },
+    { id: 'H1', symbol: 'H', x: 0, y: -1 },
+    { id: 'H2', symbol: 'H', x: 0, y: 1 },
+    { id: 'C2', symbol: 'C', x: 1, y: 0 },
+    { id: 'H3', symbol: 'H', x: 1, y: -1 },
+    { id: 'O', symbol: 'O', x: 2, y: 0, lonePairs: 3 },
+  ]}
+  bonds={[['C1', 'H1', 1], ['C1', 'H2', 1], ['C1', 'C2', 2], ['C2', 'H3', 1], ['C2', 'O', 1]]}
+  ion={-1}
+/>
+
+Diagram B:
+
+<Lewis
+  alt="Diagram B of the ion CH2CHO minus: the first carbon, on the left, is bonded to a hydrogen above it, a hydrogen below it and, by a single bond, to the second carbon on its right. The first carbon has one lone pair, on its left. The second carbon is bonded to a hydrogen above it and by a double bond to the oxygen on its right. The oxygen has two lone pairs, one above it and one below it. The second carbon has no lone pair. The ion is in square brackets with a minus charge."
+  atoms={[
+    { id: 'C1', symbol: 'C', x: 0, y: 0, lonePairs: ['left'] },
+    { id: 'H1', symbol: 'H', x: 0, y: -1 },
+    { id: 'H2', symbol: 'H', x: 0, y: 1 },
+    { id: 'C2', symbol: 'C', x: 1, y: 0 },
+    { id: 'H3', symbol: 'H', x: 1, y: -1 },
+    { id: 'O', symbol: 'O', x: 2, y: 0, lonePairs: ['top', 'bottom'] },
+  ]}
+  bonds={[['C1', 'H1', 1], ['C1', 'H2', 1], ['C1', 'C2', 1], ['C2', 'H3', 1], ['C2', 'O', 2]]}
+  ion={-1}
+/>
+
+<Part label="a">
+
+Determine the formal charges on both carbon atoms and on the oxygen in each diagram, and show that each set adds up to the charge of the ion. (Every hydrogen has a formal charge of 0.)
+
+<Answer>
+
+Formal charge = valence electrons − nonbonding electrons − bonds.
+
+Diagram A:
+
+$$
+\begin{aligned}
+\text{first C}&: 4 - 0 - 4 = \mathbf{0} \\
+\text{second C}&: 4 - 0 - 4 = \mathbf{0} \\
+\ce{O}&: 6 - 6 - 1 = \mathbf{-1}
+\end{aligned}
+$$
+
+Diagram B:
+
+$$
+\begin{aligned}
+\text{first C}&: 4 - 2 - 3 = \mathbf{-1} \\
+\text{second C}&: 4 - 0 - 4 = \mathbf{0} \\
+\ce{O}&: 6 - 4 - 2 = \mathbf{0}
+\end{aligned}
+$$
+
+In each diagram the charges add up to $-1$, with the three hydrogens at 0: the charge of the ion.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Identify which diagram is the better model, and justify your choice.
+
+<Answer>
+
+Both diagrams give both carbons and the oxygen eight electrons, so both are valid. Each has a single formal charge of $-1$ and every other charge 0, so they are equally close to zero, and that rule does not decide. The next rule does: any negative formal charge belongs on the more electronegative atom. Oxygen (3.4) is more electronegative than carbon (2.6), and diagram A puts the $-1$ on oxygen, so **diagram A** is the better model.
+
+<Lewis
+  alt="Diagram A of the ion CH2CHO minus with its formal charges: the first carbon bonded to two hydrogens and by a double bond to the second carbon, which is bonded to a hydrogen and by a single bond to the oxygen. The oxygen has three lone pairs and a formal charge of −1. Neither carbon has a lone pair or a formal charge. The ion is in square brackets with a minus charge."
+  atoms={[
+    { id: 'C1', symbol: 'C', x: 0, y: 0 },
+    { id: 'H1', symbol: 'H', x: 0, y: -1 },
+    { id: 'H2', symbol: 'H', x: 0, y: 1 },
+    { id: 'C2', symbol: 'C', x: 1, y: 0 },
+    { id: 'H3', symbol: 'H', x: 1, y: -1 },
+    { id: 'O', symbol: 'O', x: 2, y: 0, lonePairs: 3 },
+  ]}
+  bonds={[['C1', 'H1', 1], ['C1', 'H2', 1], ['C1', 'C2', 2], ['C2', 'H3', 1], ['C2', 'O', 1]]}
+  ion={-1}
+  formalCharges
+/>
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the formal charges in diagram A (both C 0, O −1) with their sum shown equal to −1; 1 point for the formal charges in diagram B (first C −1, second C 0, O 0) with their sum shown equal to −1. Correct charges for a diagram with its sum missing earn 0 for that diagram's point.</RubricLine>
+<RubricLine part="b" points={2}>1 point for noting that the formal charges of the two diagrams are equally far from zero (noting that both obey the octet rule is welcome, not required); 1 point for choosing diagram A because it puts the −1 on oxygen, more electronegative (3.4) than carbon (2.6). Choosing A with no electronegativity reason earns 0 for the second point, and choosing B earns 0 for it.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={12} title="Chlorine dioxide and its odd electron" topic="2.6" points={5}>
+
+Chlorine dioxide, $\ce{ClO2}$, is a yellow gas used to bleach wood pulp for paper and to disinfect drinking water. Chlorine is the central atom. Here are two Lewis diagrams for it.
+
+Diagram P:
+
+<Lewis
+  alt="Diagram P of chlorine dioxide: chlorine in the middle, joined by single bonds to an oxygen on each side. Each oxygen has three lone pairs. Chlorine has one lone pair below it and one unpaired electron above it."
+  atoms={[
+    { id: 'Cl', symbol: 'Cl', x: 0, y: 0, lonePairs: ['bottom'], unpaired: 'top' },
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: 3 },
+    { id: 'O2', symbol: 'O', x: 1, y: 0, lonePairs: 3 },
+  ]}
+  bonds={[['Cl', 'O1', 1], ['Cl', 'O2', 1]]}
+/>
+
+Diagram Q:
+
+<Lewis
+  alt="Diagram Q of chlorine dioxide: chlorine in the middle, joined by double bonds to an oxygen on each side. Each oxygen has two lone pairs, one above it and one below it. Chlorine has one lone pair below it and one unpaired electron above it."
+  atoms={[
+    { id: 'Cl', symbol: 'Cl', x: 0, y: 0, lonePairs: ['bottom'], unpaired: 'top' },
+    { id: 'O1', symbol: 'O', x: -1, y: 0, lonePairs: ['top', 'bottom'] },
+    { id: 'O2', symbol: 'O', x: 1, y: 0, lonePairs: ['top', 'bottom'] },
+  ]}
+  bonds={[['Cl', 'O1', 2], ['Cl', 'O2', 2]]}
+/>
+
+<Part label="a">
+
+Determine the number of valence electrons in $\ce{ClO2}$.
+
+<Answer>
+
+Valence electrons:
+
+$$
+7 + 2(6) = \mathbf{19}
+$$
+
+The count is odd, so one electron is left unpaired, as both diagrams show.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Determine the formal charges in both diagrams. State which diagram formal charge favors, and whether that diagram is allowed.
+
+<Answer>
+
+The nonbonding electrons on chlorine are its lone pair and its unpaired electron: 3.
+
+Diagram P:
+
+$$
+\begin{aligned}
+\ce{Cl}&: 7 - 3 - 2 = \mathbf{+2} \\
+\text{each } \ce{O}&: 6 - 6 - 1 = \mathbf{-1}
+\end{aligned}
+$$
+
+Diagram Q:
+
+$$
+\begin{aligned}
+\ce{Cl}&: 7 - 3 - 4 = \mathbf{0} \\
+\text{each } \ce{O}&: 6 - 4 - 2 = \mathbf{0}
+\end{aligned}
+$$
+
+Both sets add up to 0, the charge of a neutral molecule. Formal charge favors **diagram Q**, where every formal charge is zero. In Q, chlorine has 8 bonding electrons and 3 nonbonding electrons around it, 11 in all. That is allowed: chlorine is in the third period, and a central atom from the third period can hold more than eight.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A student says: "Diagram Q has every formal charge at zero, so it shows exactly where the unpaired electron is in a real $\ce{ClO2}$ molecule." Explain why this claim goes too far.
+
+<Answer>
+
+Formal charge is bookkeeping, and the rules for choosing a diagram are guides, not laws. They pick the best model the Lewis rules allow, but they cannot locate a real electron. Here they cannot even pick one place: a diagram with one Cl=O double bond, one Cl–O single bond, two lone pairs on chlorine, and the unpaired electron on the singly bonded oxygen also has every formal charge zero.
+
+$$
+\begin{aligned}
+\ce{Cl}&: 7 - 4 - 3 = 0 \\
+\ce{O}\ (\ce{Cl=O})&: 6 - 4 - 2 = 0 \\
+\ce{O}\ (\text{unpaired})&: 6 - 5 - 1 = 0
+\end{aligned}
+$$
+
+So formal charge cannot tell whether the odd electron is on chlorine or on an oxygen. Even where formal charge does pick one place, it can be wrong. In nitrogen dioxide, formal charge would put its unpaired electron on an oxygen, but the way two $\ce{NO2}$ molecules join through their nitrogen atoms shows it sits mostly on nitrogen. Only evidence from the real molecule can show where the unpaired electron is. A molecule with an odd number of electrons is exactly where the Lewis model reaches its limits.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for 19 valence electrons.</RubricLine>
+<RubricLine part="b" points={3}>1 point for the formal charges in diagram P (Cl +2, each O −1); 1 point for the formal charges in diagram Q (all zero); 1 point for choosing Q and stating that its 11 electrons around chlorine are allowed because chlorine is in the third period. Rejecting Q because chlorine "must have an octet" earns 0 for the third point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for explaining that formal charge is bookkeeping and the rules are guides, so only evidence from the real molecule can show where the unpaired electron is; or for showing that another diagram, with the unpaired electron on an oxygen (O=Cl–O with the odd electron on the singly bonded O), also has every formal charge zero, so formal charge cannot locate the odd electron.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part G: Shapes, polarity and hybridization
+
+Ten questions on topic 2.7. They run from counting electron domains to naming shapes and bond angles, then to polarity, sp, sp² and sp³, sigma and pi bonds, and the cis and trans isomers a double bond allows.
+
+<Question number={13} title="Domains, geometry and shape" topic="2.7" points={6}>
+
+For each species, determine the number of electron domains around the central atom, the electron geometry and the molecular shape. Show your count of valence electrons.
+
+<Part label="a">
+
+Sulfur trioxide, $\ce{SO3}$, with sulfur in the center.
+
+<Answer>
+
+Count the valence electrons:
+
+$$
+6 + 3(6) = 24
+$$
+
+Three S–O bonds use 6 electrons, and the three oxygens take 18 as lone pairs. That uses all 24, so sulfur has no lone pair. Sulfur is short of eight, so turn oxygen lone pairs into S=O double bonds (sulfur can hold more than eight). Each double bond is still one domain, and no electrons are left for sulfur however many you draw.
+
+Sulfur has **3 electron domains**, all of them bonds. Electron geometry: **trigonal planar**. Molecular shape: **trigonal planar**, with 120° angles.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The chlorate ion, $\ce{ClO3-}$, with chlorine in the center.
+
+<Answer>
+
+Count the valence electrons, adding one for the negative charge:
+
+$$
+7 + 3(6) + 1 = 26
+$$
+
+Three Cl–O bonds use 6 electrons, and the three oxygens take 18 as lone pairs:
+
+$$
+26 - 6 - 18 = 2
+$$
+
+The 2 left over are a lone pair on chlorine. If you drew Cl=O double bonds instead (chlorine can hold more than eight), the count of domains would not change: a double bond is still one domain, and chlorine still has its lone pair.
+
+Chlorine has **4 electron domains**: 3 bonds and 1 lone pair. Electron geometry: **tetrahedral**. The atoms alone form a short pyramid with chlorine at the top, so the molecular shape is **trigonal pyramidal**.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Dichlorine monoxide, $\ce{Cl2O}$, with oxygen in the center.
+
+<Answer>
+
+Count the valence electrons:
+
+$$
+2(7) + 6 = 20
+$$
+
+Two O–Cl bonds use 4 electrons, and the two chlorines take 12 as lone pairs:
+
+$$
+20 - 4 - 12 = 4
+$$
+
+The 4 left over are two lone pairs on oxygen. Oxygen has **4 electron domains**: 2 bonds and 2 lone pairs. Electron geometry: **tetrahedral**. Molecular shape: **bent**.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for 3 domains from a count of 24 electrons; 1 point for trigonal planar as both the electron geometry and the shape.</RubricLine>
+<RubricLine part="b" points={2}>1 point for 4 domains (1 of them a lone pair) from a count of 26 electrons (a count of 25 that ignores the charge earns 0 for this point); 1 point for tetrahedral electron geometry with a trigonal pyramidal shape. "Trigonal planar" or "tetrahedral" as the shape earns 0 for the second point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for 4 domains from a count of 20 electrons; 1 point for tetrahedral electron geometry with a bent shape. "Linear" earns 0 for the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={14} title="Five and six domains" topic="2.7" points={6}>
+
+The central atom in each species below is in period 3 or below, so it can hold more than eight electrons. For each species, determine the number of electron domains around the central atom and name the molecular shape. With five or six domains, the shape is all that is asked: no hybridization.
+
+<Part label="a">
+
+Selenium tetrafluoride, $\ce{SeF4}$, with selenium in the center.
+
+<Answer>
+
+Count the valence electrons:
+
+$$
+6 + 4(7) = 34
+$$
+
+Four Se–F bonds use 8 electrons, and the four fluorines take 24 as lone pairs:
+
+$$
+34 - 8 - 24 = 2
+$$
+
+The 2 left over are one lone pair on selenium. It has **5 electron domains**: 4 bonds and 1 lone pair, in a trigonal bipyramidal arrangement. The lone pair takes an equatorial position, where it has more room. The four fluorines are left at the top, at the bottom and in the other two equatorial positions. Molecular shape: **seesaw**.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The $\ce{ClF2-}$ ion, with chlorine in the center.
+
+<Answer>
+
+Count the valence electrons, adding one for the negative charge:
+
+$$
+7 + 2(7) + 1 = 22
+$$
+
+Two Cl–F bonds use 4 electrons, and the two fluorines take 12 as lone pairs:
+
+$$
+22 - 4 - 12 = 6
+$$
+
+The 6 left over are three lone pairs on chlorine. It has **5 electron domains**: 2 bonds and 3 lone pairs. All three lone pairs take the equatorial positions, around the middle. The two fluorines are left at the top and bottom, 180° apart. Molecular shape: **linear**.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Iodine pentafluoride, $\ce{IF5}$, with iodine in the center.
+
+<Answer>
+
+Count the valence electrons:
+
+$$
+7 + 5(7) = 42
+$$
+
+Five I–F bonds use 10 electrons, and the five fluorines take 30 as lone pairs:
+
+$$
+42 - 10 - 30 = 2
+$$
+
+The 2 left over are one lone pair on iodine. It has **6 electron domains**: 5 bonds and 1 lone pair, in an octahedral arrangement. The lone pair takes one position, so the five fluorines are one at the top and four in a square below it. Molecular shape: **square pyramidal**.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for 5 domains (1 of them a lone pair) from a count of 34 electrons; 1 point for seesaw. "Tetrahedral" or "trigonal bipyramidal" as the shape earns 0 for the second point. A hybridization is not asked and earns nothing.</RubricLine>
+<RubricLine part="b" points={2}>1 point for 5 domains (3 of them lone pairs) from a count of 22 electrons; 1 point for linear. "Bent" or "trigonal bipyramidal" earns 0 for the second point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for 6 domains (1 of them a lone pair) from a count of 42 electrons; 1 point for square pyramidal. "Trigonal bipyramidal" or "octahedral" earns 0 for the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={15} title="Ammonium, ammonia and amide" topic="2.7" points={4}>
+
+The ammonium ion, $\ce{NH4+}$, ammonia, $\ce{NH3}$, and the amide ion, $\ce{NH2-}$, each have nitrogen in the center, bonded only to hydrogen.
+
+<Part label="a">
+
+Rank the three by their H–N–H bond angle, from largest to smallest. Justify your ranking.
+
+<Answer>
+
+First count the valence electrons in each. A positive charge removes one, and a negative charge adds one:
+
+$$
+\begin{aligned}
+\ce{NH4+}&: 5 + 4 - 1 = 8 \\
+\ce{NH3}&: 5 + 3 = 8 \\
+\ce{NH2-}&: 5 + 2 + 1 = 8
+\end{aligned}
+$$
+
+Each N–H bond uses 2 electrons, and the rest are lone pairs on nitrogen. So $\ce{NH4+}$ has 4 bonds and no lone pair, $\ce{NH3}$ has 3 bonds and 1 lone pair, and $\ce{NH2-}$ has 2 bonds and 2 lone pairs.
+
+**Count the domains.** All three have 4 electron domains around nitrogen, so all three start from the tetrahedral arrangement, with angles of 109.5°.
+
+**Say what differs.** They have 0, 1 and 2 lone pairs. A lone pair is held by one nucleus only, so its cloud spreads wider than a bonding pair's, and it repels more strongly. Each lone pair pushes the N–H bonds a little closer together.
+
+**Conclude.** $\ce{NH4+}$, with no lone pair, keeps the full 109.5°. $\ce{NH3}$ closes to about 107°. $\ce{NH2-}$, with two lone pairs, closes further, below 107°:
+
+$$
+\ce{NH4+} > \ce{NH3} > \ce{NH2-}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={4}>1 point for 4 electron domains in all three; 1 point for 0, 1 and 2 lone pairs; 1 point for lone pairs repelling more strongly than bonding pairs; 1 point for the ranking $\ce{NH4+} > \ce{NH3} > \ce{NH2-}$. A ranking with no reasoning earns 1 point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={16} title="Two bent molecules" topic="2.7" points={4}>
+
+Selenium forms two bent molecules. Selenium dioxide, $\ce{SeO2}$, is a solid made of chains at room temperature, but its vapor is made of single $\ce{SeO2}$ molecules, with selenium bonded to both oxygen atoms. Selenium dichloride, $\ce{SeCl2}$, has selenium bonded to both chlorine atoms.
+
+<Part label="a">
+
+Determine the number of electron domains around selenium in each molecule, and its electron geometry.
+
+<Answer>
+
+**$\ce{SeO2}$.** Count the valence electrons:
+
+$$
+6 + 2(6) = 18
+$$
+
+Two Se–O single bonds use 4 electrons, and the oxygens take 12 as lone pairs, which leaves 2: one lone pair on selenium. Selenium is then short of eight, so one oxygen lone pair becomes a second bond, Se=O. That changes no domain count: the double bond still counts once. Selenium has **3 electron domains**: two bonds and one lone pair. Electron geometry: **trigonal planar**.
+
+**$\ce{SeCl2}$.** Count the valence electrons:
+
+$$
+6 + 2(7) = 20
+$$
+
+Two Se–Cl bonds use 4 electrons, and the chlorines take 12 as lone pairs:
+
+$$
+20 - 4 - 12 = 4
+$$
+
+That leaves two lone pairs on selenium. Selenium has **4 electron domains**: 2 bonds and 2 lone pairs. Electron geometry: **tetrahedral**.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Predict which molecule has the larger bond angle at selenium. Justify your prediction.
+
+<Answer>
+
+**$\ce{SeO2}$** has the larger angle.
+
+The two molecules have different numbers of domains, so they start from different angles. Three domains spread to 120°. Four domains spread only to 109.5°.
+
+Lone pairs repel more strongly than bonding pairs, so each molecule's angle closes below its ideal. The O–Se–O angle is less than 120°, and the Cl–Se–Cl angle is less than 109.5°. A lone pair closes an angle only a little, so the molecule that starts from 120° keeps the larger angle.
+
+The lone pairs point the same way. $\ce{SeCl2}$ has two lone pairs on selenium to $\ce{SeO2}$'s one, so its angle is closed more, and from an ideal that is already lower. Both effects make the Cl–Se–Cl angle the smaller one.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for 3 domains and trigonal planar for $\ce{SeO2}$; 1 point for 4 domains and tetrahedral for $\ce{SeCl2}$. Counting the Se=O double bond as two domains earns 0 for the first point.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $\ce{SeO2}$, from its smaller domain count giving the larger ideal angle (120° against 109.5°); 1 point for either line of reasoning: lone pairs closing each angle only a little below its ideal, so the three-domain molecule's angle stays larger, or $\ce{SeCl2}$'s two lone pairs against $\ce{SeO2}$'s one closing its angle more. "Both are bent, so the angles are equal" earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={17} title="Polar bonds, polar molecules" topic="2.7" points={6}>
+
+For each molecule, state whether it is polar or nonpolar. Justify your answer from its shape and its bond dipoles. Use these electronegativities where you need them: C 2.6, N 3.0, O 3.4, F 4.0, S 2.6.
+
+<Part label="a">
+
+Arsenic pentafluoride, $\ce{AsF5}$.
+
+<Answer>
+
+Count the valence electrons:
+
+$$
+5 + 5(7) = 40
+$$
+
+Five As–F bonds use 10 electrons, and the fluorines take 30 as lone pairs. Nothing is left, so arsenic has no lone pair. Arsenic is in period 4 and can hold more than eight. It has 5 domains, all bonds: the shape is **trigonal bipyramidal**.
+
+Each As–F bond is polar, because fluorine is the most electronegative element and arsenic is far less electronegative. But the dipoles cancel. The two axial bonds point in exactly opposite directions. The three equatorial bonds are 120° apart in one plane, like the bonds of $\ce{BF3}$, and they cancel too. $\ce{AsF5}$ is **nonpolar**, even though every bond in it is polar.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Carbonyl sulfide, OCS, with carbon in the center.
+
+<Answer>
+
+Count the valence electrons:
+
+$$
+6 + 4 + 6 = 16
+$$
+
+The Lewis diagram is S=C=O, with two lone pairs on each end atom and none on carbon. Carbon has 2 domains, the two double bonds, so the molecule is **linear**, like $\ce{CO2}$.
+
+But its two ends are different. The electronegativity differences are:
+
+$$
+\begin{aligned}
+\ce{C=O}&: 3.4 - 2.6 = 0.8 \\
+\ce{C=S}&: 2.6 - 2.6 = 0
+\end{aligned}
+$$
+
+The C=O bond is polar and the C=S bond is not, so nothing on the sulfur side balances the C=O dipole. The dipoles do not cancel, and OCS is **polar**. In $\ce{CO2}$, two equal C=O dipoles point in opposite directions and cancel.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Nitrogen trifluoride, $\ce{NF3}$.
+
+<Answer>
+
+Count the valence electrons:
+
+$$
+5 + 3(7) = 26
+$$
+
+Three N–F bonds use 6 electrons and the fluorines take 18 as lone pairs, which leaves 2: one lone pair on nitrogen. Nitrogen has 4 domains, 3 bonds and 1 lone pair, so the shape is **trigonal pyramidal**.
+
+Each N–F bond is polar:
+
+$$
+4.0 - 3.0 = 1.0
+$$
+
+The three bonds all point down and away from the nitrogen at the top of the pyramid, so their dipoles point partly the same way and do not cancel. $\ce{NF3}$ is **polar**.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for trigonal bipyramidal from 5 domains with no lone pair; 1 point for nonpolar because the polar As–F dipoles cancel. "Nonpolar because the bonds are nonpolar" earns 0 for the second point.</RubricLine>
+<RubricLine part="b" points={2}>1 point for linear from 2 domains on carbon; 1 point for polar because the C=O and C=S dipoles differ and do not cancel. "Nonpolar because it is linear, like $\ce{CO2}$" earns 0 for the second point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for trigonal pyramidal from 4 domains with 1 lone pair; 1 point for polar because the N–F dipoles do not cancel. "Polar because it has polar bonds", with no reference to the shape, earns 0 for the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={18} title="Count the domains, not the atoms" topic="2.7" points={4}>
+
+Methyl isocyanate, $\ce{CH3-N=C=O}$, is used to make some pesticides. Its Lewis diagram:
+
+<Lewis
+  alt="Lewis diagram of methyl isocyanate: a carbon atom on the left bonded to three hydrogen atoms, above it, below it and to its left, and by a single bond to a nitrogen atom on its right. Nitrogen has one lone pair above it and a double bond to a second carbon atom. The second carbon has no lone pairs and a double bond to an oxygen atom on the far right. Oxygen has two lone pairs."
+  atoms={[
+    { id: 'C1', symbol: 'C', x: 0, y: 0 },
+    { id: 'H1', symbol: 'H', x: 0, y: -1 },
+    { id: 'H2', symbol: 'H', x: 0, y: 1 },
+    { id: 'H3', symbol: 'H', x: -1, y: 0 },
+    { id: 'N', symbol: 'N', x: 1, y: 0, lonePairs: ['top'] },
+    { id: 'C2', symbol: 'C', x: 2, y: 0 },
+    { id: 'O', symbol: 'O', x: 3, y: 0, lonePairs: ['top', 'bottom'] },
+  ]}
+  bonds={[['C1', 'H1', 1], ['C1', 'H2', 1], ['C1', 'H3', 1], ['C1', 'N', 1], ['N', 'C2', 2], ['C2', 'O', 2]]}
+/>
+
+<Part label="a">
+
+State the hybridization of the carbon atom bonded to the hydrogens, of the nitrogen atom, and of the carbon atom bonded to oxygen. Give the number of electron domains behind each answer.
+
+<Answer>
+
+**The carbon bonded to the hydrogens** has 4 domains: three C–H bonds and the C–N bond. It is **sp³**.
+
+**The nitrogen** has 3 domains: the single bond to carbon, the double bond to the other carbon (which counts once) and its lone pair. It is **sp²**.
+
+**The carbon bonded to oxygen** has 2 domains: the double bond to nitrogen and the double bond to oxygen. It has no lone pair. It is **sp**.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+A student says the nitrogen atom is sp, because it is bonded to only two atoms. Explain the error.
+
+<Answer>
+
+The hybridization follows the number of electron domains, and a lone pair is a domain. Nitrogen is bonded to two atoms, but its lone pair is a third domain. Three domains make it **sp²**, not sp.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for each atom: sp³ with 4 domains, sp² with 3 domains, sp with 2 domains. A bare label without its domain count earns 0 for that point.</RubricLine>
+<RubricLine part="b" points={1}>1 point for saying that the lone pair on nitrogen counts as a domain, which makes 3 domains and sp².</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={19} title="Sigma and pi in acrylonitrile" topic="2.7" points={5}>
+
+Acrylonitrile, $\ce{H2C=CH-C#N}$, is used to make acrylic fibers. Its Lewis diagram:
+
+<Lewis
+  alt="Lewis diagram of acrylonitrile: three carbon atoms in a row, then a nitrogen atom on the right. The left carbon has hydrogen atoms above and below it and a double bond to the middle carbon. The middle carbon has a hydrogen atom above it and a single bond to the right carbon. The right carbon has a triple bond to nitrogen. Nitrogen has one lone pair on its right. No carbon has a lone pair."
+  atoms={[
+    { id: 'C1', symbol: 'C', x: 0, y: 0 },
+    { id: 'H1', symbol: 'H', x: 0, y: -1 },
+    { id: 'H2', symbol: 'H', x: 0, y: 1 },
+    { id: 'C2', symbol: 'C', x: 1, y: 0 },
+    { id: 'H3', symbol: 'H', x: 1, y: -1 },
+    { id: 'C3', symbol: 'C', x: 2, y: 0 },
+    { id: 'N', symbol: 'N', x: 3, y: 0, lonePairs: ['right'] },
+  ]}
+  bonds={[['C1', 'H1', 1], ['C1', 'H2', 1], ['C1', 'C2', 2], ['C2', 'H3', 1], ['C2', 'C3', 1], ['C3', 'N', 3]]}
+/>
+
+<Part label="a">
+
+Determine the number of sigma bonds and the number of pi bonds in one molecule.
+
+<Answer>
+
+Every single bond is one σ bond. A double bond is one σ and one π. A triple bond is one σ and two π.
+
+- Three C–H bonds: 3 σ.
+- The C=C bond: 1 σ and 1 π.
+- The C–C bond: 1 σ.
+- The C≡N bond: 1 σ and 2 π.
+
+Total: **6 sigma bonds** and **3 pi bonds**.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Predict the H–C–H bond angle at the carbon atom bonded to two hydrogens, and the C=C–C bond angle at the carbon atom bonded to one hydrogen. Justify each with a domain count.
+
+<Answer>
+
+**The carbon bonded to two hydrogens** has 3 domains: the two bonds to H and the double bond (which counts once). No lone pair. Three domains spread to **about 120°**.
+
+**The carbon bonded to one hydrogen** also has 3 domains: the double bond, the bond to H and the bond to the next carbon. No lone pair, so the C=C–C angle is also **about 120°**.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The Lewis diagram draws the three carbons and the nitrogen in a row. Identify the atoms of acrylonitrile that really lie on one straight line, and justify your answer with the hybridization of the carbon bonded to nitrogen.
+
+<Answer>
+
+The carbon bonded to nitrogen has 2 domains: the single bond to the middle carbon and the triple bond to nitrogen (which counts once). It has no lone pair, so it is **sp**, and its two domains point in opposite directions, 180° apart.
+
+So **the middle carbon, the carbon bonded to nitrogen and the nitrogen** lie on one straight line. The carbon bonded to two hydrogens is not on that line. At the middle carbon the C=C–C angle is about 120°, as part (b) found; the diagram puts it in the row only because a Lewis diagram is drawn flat.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for 6 sigma bonds; 1 point for 3 pi bonds. Counting the triple bond as three sigma bonds earns 0 for both points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for each angle: about 120° from 3 domains, at each carbon. A bare angle without its domain count earns 0 for that point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for the middle carbon, the carbon bonded to nitrogen and the nitrogen on one line, because the carbon bonded to nitrogen is sp with 2 domains (180°). Putting all three carbons and the nitrogen on one line, as the flat diagram draws them, earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={20} title="Three compounds, one formula" topic="2.7" points={6}>
+
+Three different compounds have the formula $\ce{C2H2F2}$. In each, two carbon atoms are joined by a double bond, and the two hydrogens and two fluorines are bonded to the carbons. Their Lewis diagrams are below. Electronegativities: H 2.2, C 2.6, F 4.0.
+
+Compound A:
+
+<Lewis
+  alt="Lewis diagram of compound A: two carbon atoms joined by a double bond. Each carbon has a fluorine atom above it, angled outward, and a hydrogen atom below it, angled outward, so both fluorines are on the same side of the double bond. Each fluorine has three lone pairs."
+  atoms={[
+    { id: 'C1', symbol: 'C', x: 0, y: 0 },
+    { id: 'C2', symbol: 'C', x: 1, y: 0 },
+    { id: 'F1', symbol: 'F', x: -0.5, y: -0.87, lonePairs: 3 },
+    { id: 'H1', symbol: 'H', x: -0.5, y: 0.87 },
+    { id: 'F2', symbol: 'F', x: 1.5, y: -0.87, lonePairs: 3 },
+    { id: 'H2', symbol: 'H', x: 1.5, y: 0.87 },
+  ]}
+  bonds={[['C1', 'C2', 2], ['C1', 'F1', 1], ['C1', 'H1', 1], ['C2', 'F2', 1], ['C2', 'H2', 1]]}
+/>
+
+Compound B:
+
+<Lewis
+  alt="Lewis diagram of compound B: two carbon atoms joined by a double bond. The left carbon has both fluorine atoms, one above it and one below it, angled outward. The right carbon has both hydrogen atoms, one above it and one below it, angled outward. Each fluorine has three lone pairs."
+  atoms={[
+    { id: 'C1', symbol: 'C', x: 0, y: 0 },
+    { id: 'C2', symbol: 'C', x: 1, y: 0 },
+    { id: 'F1', symbol: 'F', x: -0.5, y: -0.87, lonePairs: 3 },
+    { id: 'F2', symbol: 'F', x: -0.5, y: 0.87, lonePairs: 3 },
+    { id: 'H1', symbol: 'H', x: 1.5, y: -0.87 },
+    { id: 'H2', symbol: 'H', x: 1.5, y: 0.87 },
+  ]}
+  bonds={[['C1', 'C2', 2], ['C1', 'F1', 1], ['C1', 'F2', 1], ['C2', 'H1', 1], ['C2', 'H2', 1]]}
+/>
+
+Compound C:
+
+<Lewis
+  alt="Lewis diagram of compound C: two carbon atoms joined by a double bond. The left carbon has a fluorine above it and a hydrogen below it; the right carbon has a hydrogen above it and a fluorine below it, so the fluorines are on opposite sides of the double bond. Each fluorine has three lone pairs."
+  atoms={[
+    { id: 'C1', symbol: 'C', x: 0, y: 0 },
+    { id: 'C2', symbol: 'C', x: 1, y: 0 },
+    { id: 'F1', symbol: 'F', x: -0.5, y: -0.87, lonePairs: 3 },
+    { id: 'H1', symbol: 'H', x: -0.5, y: 0.87 },
+    { id: 'H2', symbol: 'H', x: 1.5, y: -0.87 },
+    { id: 'F2', symbol: 'F', x: 1.5, y: 0.87, lonePairs: 3 },
+  ]}
+  bonds={[['C1', 'C2', 2], ['C1', 'F1', 1], ['C1', 'H1', 1], ['C2', 'H2', 1], ['C2', 'F2', 1]]}
+/>
+
+<Part label="a">
+
+State whether each of compounds A, B and C is polar or nonpolar. Justify each answer.
+
+<Answer>
+
+Each carbon has 3 domains and no lone pair, so its bonds are about 120° apart. Compare the bonds:
+
+$$
+\begin{aligned}
+\ce{C-F}&: 4.0 - 2.6 = 1.4 \\
+\ce{C-H}&: 2.6 - 2.2 = 0.4
+\end{aligned}
+$$
+
+Each C–F bond is strongly polar, and the C–H bonds are close to nonpolar. So each answer turns on whether the two C–F dipoles cancel.
+
+**A is polar.** Both fluorines are on the same side of the double bond. Both C–F dipoles point partly toward that side, so they add up.
+
+**B is polar.** Both fluorines are on the same carbon. Both C–F dipoles point partly toward that end of the molecule, so they add up.
+
+**C is nonpolar.** The fluorines are on opposite sides and opposite ends. The two C–F dipoles point in exactly opposite directions and cancel.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Two of the three compounds are geometric isomers of each other. Identify them, and state which is cis and which is trans.
+
+<Answer>
+
+**A and C.** They have the same atoms bonded in the same order: each carbon carries one H and one F. They differ only in where the atoms are held in space. **A is cis**, with both fluorines on the same side, and **C is trans**, with the fluorines on opposite sides.
+
+B is not a geometric isomer of either. Its fluorines are both on one carbon, so its atoms are bonded in a different order.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Explain why the two compounds you named in part (b) cannot turn into each other at room temperature.
+
+<Answer>
+
+To turn A into C, one carbon would have to rotate half a turn about the C=C bond. The double bond is one σ bond and one π bond, and the π bond's overlap lies above and below the line between the carbons. Rotating one carbon pulls that overlap apart, so the π bond would have to break first. At room temperature it does not, so the atoms cannot rotate, and A and C stay separate compounds.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for each compound: A polar and B polar because their C–F dipoles add, C nonpolar because its C–F dipoles cancel. "Polar because it has polar bonds", with no reference to where the fluorines are, earns 0 for that compound.</RubricLine>
+<RubricLine part="b" points={1}>1 point for A and C, with A cis and C trans.</RubricLine>
+<RubricLine part="c" points={2}>1 point for the pi bond's overlap lying above and below the line between the carbons; 1 point for rotation breaking that overlap, so the carbons cannot rotate. "The double bond is too strong to break" with no mention of the pi bond earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={21} title="A carbon with fewer than eight" topic="2.7" points={3}>
+
+The methyl cation, $\ce{CH3+}$, and the methyl anion, $\ce{CH3-}$, each have a carbon atom bonded to three hydrogen atoms.
+
+<Part label="a">
+
+For each ion, determine the number of electron domains around carbon and the molecular shape.
+
+<Answer>
+
+**$\ce{CH3+}$.** Count the valence electrons, removing one for the charge:
+
+$$
+4 + 3(1) - 1 = 6
+$$
+
+Three C–H bonds use all 6, so carbon has no lone pair and only six electrons around it. No outer atom has a lone pair to share, so no double bond can be made. It has **3 domains**, all bonds: **trigonal planar**.
+
+**$\ce{CH3-}$.** Count the valence electrons, adding one for the charge:
+
+$$
+4 + 3(1) + 1 = 8
+$$
+
+Three C–H bonds use 6, and the last 2 are a lone pair on carbon. It has **4 domains**, 3 bonds and 1 lone pair: **trigonal pyramidal**, like $\ce{NH3}$.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+State the hybridization of carbon in each ion.
+
+<Answer>
+
+$\ce{CH3+}$: 3 domains, so **sp²**. $\ce{CH3-}$: 4 domains, so **sp³**.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $\ce{CH3+}$: 3 domains, trigonal planar; 1 point for $\ce{CH3-}$: 4 domains, trigonal pyramidal. Calling both trigonal planar because both have three hydrogens earns 1 point at most.</RubricLine>
+<RubricLine part="b" points={1}>1 point for sp² and sp³, in that order, or the labels that follow from the student's domain counts in part (a).</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={22} title="Urea from diagram to dipole" topic="2.7" points={7}>
+
+Urea, $\ce{CO(NH2)2}$, is the main form in which the human body gets rid of nitrogen, and it is widely used as a fertilizer. Urea has a central carbon atom with one oxygen atom and two $\ce{NH2}$ groups attached. Electronegativities: H 2.2, C 2.6, N 3.0, O 3.4.
+
+<Part label="a">
+
+Determine the number of valence electrons and draw the best Lewis diagram of urea, using formal charge to choose where any double bond goes.
+
+<Answer>
+
+Count the valence electrons:
+
+$$
+4 + 6 + 2(5) + 4(1) = 24
+$$
+
+Single bonds for the skeleton (C–O, two C–N and four N–H) use 14 electrons. Oxygen takes three lone pairs and each nitrogen one, which uses the other 10. But carbon then has only six electrons. Turn one lone pair on oxygen into a second bond: C=O. Now every atom other than hydrogen has an octet, and the total is still 24.
+
+Formal charge says the double bond belongs on oxygen. With C=O, every atom has a formal charge of 0. A C=N double bond instead would give that nitrogen $+1$ and oxygen $-1$.
+
+<Lewis
+  alt="Lewis diagram of urea: carbon in the middle with a double bond to an oxygen atom above it and single bonds to nitrogen atoms on its left and right. Oxygen has two lone pairs. Each nitrogen has one lone pair above it and single bonds to two hydrogen atoms, one beside it and one below it. Carbon has no lone pairs."
+  atoms={[
+    { id: 'C', symbol: 'C', x: 0, y: 0 },
+    { id: 'O', symbol: 'O', x: 0, y: -1, lonePairs: ['left', 'right'] },
+    { id: 'N1', symbol: 'N', x: -1, y: 0, lonePairs: ['top'] },
+    { id: 'H1', symbol: 'H', x: -2, y: 0 },
+    { id: 'H2', symbol: 'H', x: -1, y: 1 },
+    { id: 'N2', symbol: 'N', x: 1, y: 0, lonePairs: ['top'] },
+    { id: 'H3', symbol: 'H', x: 2, y: 0 },
+    { id: 'H4', symbol: 'H', x: 1, y: 1 },
+  ]}
+  bonds={[['C', 'O', 2], ['C', 'N1', 1], ['C', 'N2', 1], ['N1', 'H1', 1], ['N1', 'H2', 1], ['N2', 'H3', 1], ['N2', 'H4', 1]]}
+/>
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Determine the number of electron domains around carbon, and name the shape around carbon.
+
+<Answer>
+
+Carbon has **3 domains**: the double bond to oxygen (which counts once) and the two bonds to nitrogen. It has no lone pair, so the shape around carbon is **trigonal planar**.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+State the hybridization of the carbon atom.
+
+<Answer>
+
+Three domains: **sp²**.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Determine the number of sigma bonds and the number of pi bonds in the molecule.
+
+<Answer>
+
+The four N–H bonds and the two C–N bonds are 6 σ. The C=O bond is 1 σ and 1 π. Total: **7 sigma bonds** and **1 pi bond**.
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+State whether urea is polar or nonpolar. Justify your answer.
+
+<Answer>
+
+The electronegativity differences of the bonds to carbon are:
+
+$$
+\begin{aligned}
+\ce{C=O}&: 3.4 - 2.6 = 0.8 \\
+\ce{C-N}&: 3.0 - 2.6 = 0.4
+\end{aligned}
+$$
+
+The C=O bond (0.8) is far more polar than the C–N bonds (0.4). In a trigonal planar shape, three bond dipoles cancel only when they are equal, as in $\ce{BF3}$. Nothing balances the C=O dipole, so urea is **polar**.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for 24 valence electrons; 1 point for a diagram with a C=O double bond, two C–N single bonds, two N–H bonds on each nitrogen, two lone pairs on O, one on each N and an octet on every atom other than hydrogen.</RubricLine>
+<RubricLine part="b" points={1}>1 point for trigonal planar from 3 domains with no lone pair.</RubricLine>
+<RubricLine part="c" points={1}>1 point for sp², or the label that follows from the student's domain count in part (b).</RubricLine>
+<RubricLine part="d" points={1}>1 point for 7 sigma and 1 pi. Leaving out the N–H bonds (3 sigma) earns 0 points.</RubricLine>
+<RubricLine part="e" points={2}>1 point for the C=O dipole being much larger than the C–N dipoles; 1 point for polar, because nothing balances the C=O dipole. "Nonpolar because it is trigonal planar" earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
