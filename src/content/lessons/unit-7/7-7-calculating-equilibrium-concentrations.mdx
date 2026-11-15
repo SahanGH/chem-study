@@ -1,0 +1,529 @@
+---
+topic: "7.7"
+minutes: 15
+summary: "How to find the concentrations or pressures at equilibrium from the starting mixture and K, using Q for the direction, a table with an unknown x and the small-x shortcut with its check."
+---
+
+Put 0.220 mol of one gas and 0.220 mol of another into a one-liter steel cell, seal it and wait. Hours later the cell holds three gases, and nothing more is changing. How much of each? You do not have to open the cell to find out. You need the balanced equation, the starting amounts and one number: $K$.
+
+## First, which way? Compare Q with K
+
+Before any algebra, find out which way the mixture will go. Work out $Q$ from the concentrations as they are now (topic 7.3) and set it beside $K$.
+
+- **$Q$ less than $K$:** the ratio of products to reactants is too small for equilibrium. The reaction runs toward products, using up reactants, until $Q$ has risen to $K$.
+- **$Q$ greater than $K$:** there is too much product for equilibrium. The reaction runs toward reactants, using up products, until $Q$ has fallen to $K$.
+- **$Q$ equal to $K$:** the mixture is at equilibrium already. Both directions are still running, at the same rate, and the amounts stay as they are.
+
+Why does this work? $K$ is the one value of the ratio at which the forward and reverse rates balance (topics 7.2 and 7.3), and $Q$ always moves toward it.
+
+Two cases need no arithmetic. A mixture with no products at all has $Q$ = 0, so it can only go forward. A mixture with no reactants has nothing to run forward with, so it can only go backward.
+
+<Figure
+  src="/figures/7-7-q-and-k.svg"
+  alt="A number line for Q with the value K marked at its middle. A point to the left of K, where Q is less than K, has an arrow pointing right toward K and is labeled runs toward products. A point to the right of K, where Q is greater than K, has an arrow pointing left toward K and is labeled runs toward reactants. At K itself the label is Q equals K, equilibrium."
+  caption="Wherever Q starts, it moves toward K. The direction it has to move tells you which way the reaction runs."
+/>
+
+Here is the reaction this lesson starts with. Carbon disulfide and carbon dioxide trade atoms to make carbonyl sulfide, COS:
+
+$$
+\ce{CS2(g) + CO2(g) <=> 2COS(g)}
+$$
+
+At a certain temperature, $K_c$ = 4.30. (The values of $K$ and the mixtures in this lesson are made up for practice.) Suppose a mixture holds 0.060 M CS₂, 0.040 M CO₂ and 0.120 M COS.
+
+$$
+\begin{aligned}
+Q_c &= \frac{[\ce{COS}]^2}{[\ce{CS2}][\ce{CO2}]} \\
+&= \frac{(0.120)^2}{(0.060)(0.040)} \\
+&= 6.0
+\end{aligned}
+$$
+
+Since 6.0 is greater than 4.30, this mixture has too much COS. It will run toward CS₂ and CO₂.
+
+<KeyIdea>
+
+$Q$ less than $K$: the reaction runs toward products. $Q$ greater than $K$: it runs toward reactants. $Q$ equal to $K$: the mixture is at equilibrium.
+
+</KeyIdea>
+
+<Check answer={2}>
+In a reactor, solid carbon and hydrogen make methane:
+
+$$
+\ce{C(s) + 2H2(g) <=> CH4(g)}
+$$
+
+At a certain temperature $K_c$ = 8.1. The reactor holds solid carbon, 0.050 M H₂ and 0.060 M CH₄. Which way does the reaction run?
+
+- Toward methane, because $Q$ = 1.2 is less than $K$
+- Toward hydrogen, because $Q$ = 24 is greater than $K$
+- Neither way, because the mixture is already at equilibrium
+- It cannot be decided without the mass of carbon
+
+<div slot="why">
+
+Carbon is a solid, so it is left out of $Q$ (topic 7.3), and the coefficient 2 becomes an exponent.
+
+$$
+\begin{aligned}
+Q_c &= \frac{[\ce{CH4}]}{[\ce{H2}]^2} \\
+&= \frac{0.060}{(0.050)^2} \\
+&= 24
+\end{aligned}
+$$
+
+Since 24 is greater than 8.1, there is too much methane, and the reaction runs toward hydrogen and carbon. Forgetting the exponent gives
+
+$$
+\frac{0.060}{0.050} = 1.2
+$$
+
+and the opposite, wrong, direction. The amount of solid carbon does not matter, as long as some is there.
+
+</div>
+</Check>
+
+## A table with an unknown
+
+Topic 7.4 used an ICE table, with its three rows for initial, change and equilibrium values, and every change in it was a number you could work out. Here the changes are not known. Call the unknown $x$ and let the balanced equation do the rest:
+
+1. **Initial row:** the starting concentrations (or partial pressures).
+2. **Change row:** each entry is $x$ times that substance's coefficient in the balanced equation. A substance with a coefficient of 2 changes by $2x$. The signs come from the direction you found with $Q$: minus for the side being used up, plus for the side being formed.
+3. **Equilibrium row:** initial plus change.
+4. **Solve:** put the equilibrium row into the $K$ expression and solve for $x$.
+5. **Finish:** put $x$ back into the equilibrium row to get each concentration. Then check the answers by putting them into the $K$ expression. They must give $K$ back.
+
+The figure shows the layout for a made-up equation, 2 A + B ⇌ 3 C, running forward. It has no numbers. Its job is to show how the change row follows the coefficients.
+
+<Figure
+  src="/figures/7-7-ice-table.svg"
+  alt="The layout of an initial, change, equilibrium table, drawn under the made-up equation 2 A plus B gives 3 C. The initial row holds the starting concentrations of A, B and C. The change row holds minus 2x, minus x and plus 3x, with arrows showing that each change is x times the coefficient above it, 2, 1 and 3. The equilibrium row holds each starting concentration plus its change. Notes say that a minus sign means used up, a plus sign means formed, and the table is drawn for a reaction running forward."
+  caption="The change row follows the coefficients, and its signs follow the direction of the reaction. The equilibrium row is what goes into the K expression."
+/>
+
+One more thing: $x$ has to make sense. It is positive, and it cannot be so large that any concentration comes out negative.
+
+<Check answer={4}>
+For the made-up reaction
+
+$$
+\ce{2D(g) <=> 2E(g) + G(g)}
+$$
+
+a mixture of all three gases has $Q$ greater than $K$. Which change row is right, in the order D, E, G?
+
+- −2x, +2x, +x
+- −x, +x, +x
+- +x, −x, −x
+- +2x, −2x, −x
+
+<div slot="why">
+
+$Q$ is greater than $K$, so $Q$ has to fall, and the reaction runs toward the reactant. D is formed (plus), and E and G are used up (minus). The sizes follow the coefficients 2, 2 and 1: +2x, −2x, −x.
+
+The first option has the right sizes but the signs of a reaction running forward. The two options with a plain x for every gas ignore the coefficients.
+
+</div>
+</Check>
+
+<Worked title="The sealed cell: a perfect square">
+
+The cell in the opening was filled with 0.220 mol of CS₂ and 0.220 mol of CO₂ in one liter, so it starts at 0.220 M CS₂, 0.220 M CO₂ and no COS.
+
+$$
+\ce{CS2(g) + CO2(g) <=> 2COS(g)}
+$$
+
+At the cell's temperature, $K_c$ = 4.30. Find the three concentrations at equilibrium.
+
+1. **Which way?** There is no COS, so $Q$ = 0, which is less than $K$. The reaction runs forward.
+
+2. **Set up the table.** Every value is in M. The rows are labeled I, C and E, for Initial, Change and Equilibrium:
+
+   | | CS₂ | CO₂ | COS |
+   |---|---|---|---|
+   | I | 0.220 | 0.220 | 0 |
+   | C | −x | −x | +2x |
+   | E | 0.220 − x | 0.220 − x | 2x |
+
+3. **Put the equilibrium row into $K$.**
+
+   $$
+   \begin{aligned}
+   K_c &= \frac{[\ce{COS}]^2}{[\ce{CS2}][\ce{CO2}]} \\
+   &= \frac{(2x)^2}{(0.220 - x)^2} = 4.30
+   \end{aligned}
+   $$
+
+4. **Take the square root of both sides.** The top and the bottom are both squares, so nothing harder is needed.
+
+   $$
+   \begin{aligned}
+   \frac{2x}{0.220 - x} &= \sqrt{4.30} \\
+   &= 2.074
+   \end{aligned}
+   $$
+
+   Use the positive root. The negative one gives an $x$ larger than 0.220, which would make two concentrations negative.
+
+5. **Solve for $x$.**
+
+   $$
+   \begin{aligned}
+   2x &= 2.074(0.220 - x) \\
+   2x &= 0.4563 - 2.074x \\
+   4.074x &= 0.4563 \\
+   x &= 0.1120
+   \end{aligned}
+   $$
+
+6. **Find the concentrations.**
+
+   $$
+   \begin{aligned}
+   [\ce{COS}] &= 2(0.1120) \\
+   &= 0.224\ \text{M}
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   [\ce{CS2}] &= 0.220 - 0.1120 \\
+   &= 0.108\ \text{M}
+   \end{aligned}
+   $$
+
+   CO₂ started equal to CS₂ and changed by the same amount, so it is 0.108 M too.
+
+7. **Check.**
+
+   $$
+   \frac{(0.224)^2}{(0.108)(0.108)} = 4.30
+   $$
+
+   The answers give $K$ back.
+
+</Worked>
+
+The square root worked because the two reactants started equal, which made the bottom of the expression a perfect square like the top. Look for that before reaching for anything harder. Another easy case is when $x$ appears only to the first power, as in the next question.
+
+<Check numeric="0.244" unit="M">
+Over a catalyst, the two forms of 2-butene, C₄H₈, turn into each other. They have the same atoms, arranged differently:
+
+$$
+\begin{aligned}
+&\text{cis-2-butene(g)} \;\ce{<=>} \\
+&\quad \text{trans-2-butene(g)}
+\end{aligned}
+$$
+
+At a certain temperature $K_c$ = 2.10. A vessel is filled with 0.300 M cis-2-butene and 0.060 M trans-2-butene. What is the concentration of trans-2-butene at equilibrium?
+
+<div slot="why">
+
+First the direction.
+
+$$
+Q_c = \frac{0.060}{0.300} = 0.20
+$$
+
+That is less than 2.10, so the reaction runs forward: cis falls by $x$ and trans rises by $x$.
+
+$$
+K_c = \frac{0.060 + x}{0.300 - x} = 2.10
+$$
+
+$$
+\begin{aligned}
+0.060 + x &= 2.10(0.300 - x) \\
+0.060 + x &= 0.630 - 2.10x \\
+3.10x &= 0.570 \\
+x &= 0.184
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\text{trans}] &= 0.060 + 0.184 \\
+&= 0.244\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\text{cis}] &= 0.300 - 0.184 \\
+&= 0.116\ \text{M}
+\end{aligned}
+$$
+
+Check:
+
+$$
+\frac{0.244}{0.116} = 2.10
+$$
+
+No square root and no shortcut were needed, because $x$ appears only to the first power.
+
+If you got 0.184 M, you stopped at $x$. If you got 0.203 M, you left out the trans-2-butene that was there at the start. If you got 0.116 M, your fraction was upside down, or you gave the cis concentration.
+
+</div>
+</Check>
+
+## When K is small: leave x out, then check
+
+Most problems are not perfect squares. But when $K$ is very small and the mixture starts as reactants, the reaction barely goes (topic 7.5). Then $x$ is tiny beside the starting concentration, and the starting concentration minus $x$ is very nearly the starting concentration. Leaving $x$ out of that one place turns a hard equation into an easy one. This is the **small-x approximation**: treating a starting amount as unchanged when the $x$ taken from it is too small to matter.
+
+Two rules go with it:
+
+- **Leave $x$ out only where it is added to or subtracted from a much larger number.** Never drop an $x$ that stands alone, such as the $x^2$ on top.
+- **Check it, every time.** Divide $x$ (or whatever multiple of $x$ was left out) by the starting concentration it was left out of. If the result is **under 5 percent**, the approximation is good. Write the percentage down: it is part of the answer.
+
+<Worked title="Propane to propene: a small K">
+
+Propene, the gas that polypropylene plastic is made from, is produced by removing hydrogen from propane over a hot catalyst:
+
+$$
+\ce{C3H8(g) <=> C3H6(g) + H2(g)}
+$$
+
+At a certain temperature $K_p$ = 5.2 × 10⁻⁵. A reactor of fixed volume is filled with propane alone at 1.30 atm. Find the partial pressures at equilibrium.
+
+$K_p$ uses partial pressures in atm, and the table works with pressures exactly as it does with concentrations: at a fixed volume and temperature, each gas's partial pressure is proportional to its moles (topic 3.4).
+
+1. **Which way?** There are no products yet, so $Q$ = 0 and the reaction runs forward.
+
+2. **Set up the table.** Every value is in atm. The rows are I, C and E, for Initial, Change and Equilibrium:
+
+   | | C₃H₈ | C₃H₆ | H₂ |
+   |---|---|---|---|
+   | I | 1.30 | 0 | 0 |
+   | C | −x | +x | +x |
+   | E | 1.30 − x | x | x |
+
+3. **Put the equilibrium row into $K$.**
+
+   $$
+   \begin{aligned}
+   K_p &= \frac{(P_{\ce{C3H6}})(P_{\ce{H2}})}{P_{\ce{C3H8}}} \\
+   &= \frac{x^2}{1.30 - x} \\
+   &= 5.2 \times 10^{-5}
+   \end{aligned}
+   $$
+
+4. **Leave $x$ out beside 1.30.** $K$ is very small, so $1.30 - x$ is very nearly 1.30.
+
+   $$
+   \frac{x^2}{1.30} = 5.2 \times 10^{-5}
+   $$
+
+   $$
+   \begin{aligned}
+   x^2 &= (5.2 \times 10^{-5})(1.30) \\
+   &= 6.76 \times 10^{-5} \\
+   x &= 8.2 \times 10^{-3}
+   \end{aligned}
+   $$
+
+5. **Check the approximation.**
+
+   $$
+   \frac{8.2 \times 10^{-3}}{1.30} \times 100\% = 0.63\%
+   $$
+
+   That is under 5 percent, so leaving $x$ out was justified.
+
+6. **Find the pressures.** Propene and hydrogen are each at $x$, 8.2 × 10⁻³ atm. For propane:
+
+   $$
+   \begin{aligned}
+   P_{\ce{C3H8}} &= 1.30 - 0.0082 \\
+   &= 1.29\ \text{atm}
+   \end{aligned}
+   $$
+
+7. **Check.**
+
+   $$
+   \begin{aligned}
+   &\frac{(8.2 \times 10^{-3})^2}{1.29} \\
+   &= 5.2 \times 10^{-5}
+   \end{aligned}
+   $$
+
+   The answers give $K$ back.
+
+</Worked>
+
+The check can fail. Run the same reactor hotter, where $K_p$ = 0.0120, with the same 1.30 atm of propane. The shortcut gives
+
+$$
+\begin{aligned}
+x^2 &= (0.0120)(1.30) \\
+&= 0.0156 \\
+x &= 0.125\ \text{atm}
+\end{aligned}
+$$
+
+and the check gives
+
+$$
+\frac{0.125}{1.30} \times 100\% = 9.6\%
+$$
+
+That is over 5 percent. The approximation has failed, and 0.125 atm is not good enough.
+
+Without the shortcut, the equation is
+
+$$
+x^2 = K_p(1.30 - x)
+$$
+
+which rearranges to
+
+$$
+x^2 + K_p x - 1.30K_p = 0
+$$
+
+and is solved with the quadratic formula; it gives $x$ = 0.119 atm here, so the shortcut's answer was about 0.006 atm too high. That route is rare on the exam, whose numbers are nearly always chosen so that the expression is a perfect square or $x$ is negligible.
+
+Why did one case pass and the other fail? It is not $K$ alone that decides, but how large the starting amount is compared with $K$. In the first case the starting pressure was 25,000 times $K_p$ (1.30 divided by 5.2 × 10⁻⁵). In the second it was only about 110 times $K_p$ (1.30 divided by 0.0120). For a reaction like this one, where one particle becomes two, the larger the starting amount is beside $K$, the smaller the share of it that reacts. There is no cutoff worth memorizing, so always do the check.
+
+<Check numeric="1.2e-4" unit="M">
+Inside a very hot furnace a little carbon dioxide breaks apart:
+
+$$
+\ce{2CO2(g) <=> 2CO(g) + O2(g)}
+$$
+
+At the furnace's temperature $K_c$ = 2.2 × 10⁻⁹. A sample of gas starts as 0.0200 M CO₂, with no CO or O₂. What is [CO] at equilibrium?
+
+<div slot="why">
+
+There are no products at the start, so the reaction runs forward. The change row follows the coefficients: $-2x$ for CO₂, $+2x$ for CO and $+x$ for O₂.
+
+$$
+\begin{aligned}
+K_c &= \frac{[\ce{CO}]^2[\ce{O2}]}{[\ce{CO2}]^2} \\
+&= \frac{(2x)^2(x)}{(0.0200 - 2x)^2} \\
+&= 2.2 \times 10^{-9}
+\end{aligned}
+$$
+
+$K$ is very small, so $0.0200 - 2x$ is very nearly 0.0200. On top, $(2x)^2(x)$ is $4x^3$.
+
+$$
+\frac{4x^3}{(0.0200)^2} = 2.2 \times 10^{-9}
+$$
+
+$$
+\begin{aligned}
+4x^3 &= (2.2 \times 10^{-9}) \\
+&\quad \times (0.0200)^2 \\
+&= 8.8 \times 10^{-13} \\
+x^3 &= 2.2 \times 10^{-13} \\
+x &= 6.0 \times 10^{-5}
+\end{aligned}
+$$
+
+Check the approximation. What was left out is $2x$, which is 1.2 × 10⁻⁴.
+
+$$
+\frac{1.2 \times 10^{-4}}{0.0200} \times 100\% = 0.60\%
+$$
+
+That is under 5 percent. The question asks for [CO], which is $2x$: 1.2 × 10⁻⁴ M. ([O₂] is $x$, 6.0 × 10⁻⁵ M.)
+
+If you got 6.0 × 10⁻⁵ M, you gave $x$ where the question asks for $2x$. If you got 9.6 × 10⁻⁵ M, your change row was $-x$, $+x$, $+x$, without the coefficients. If you got 1.5 × 10⁻⁴ M, you wrote $(2x)^2$ as $2x^2$.
+
+This is the reaction that opened topic 7.5, where $K_p$ was about 10⁻⁹⁰ at 25 °C. Every equilibrium constant depends on temperature, and even in a furnace this one is small.
+
+</div>
+</Check>
+
+<Check answer={1}>
+For the made-up reaction
+
+$$
+\ce{X(g) <=> 2Y(g)}
+$$
+
+$K_c$ = 1.6 × 10⁻⁴ at a certain temperature. The equilibrium concentrations are to be found twice: once starting from 0.40 M X, and once starting from 0.0010 M X, with no Y either time. In which case does the small-x approximation pass the 5 percent check?
+
+- Only starting from 0.40 M
+- Only starting from 0.0010 M
+- In both cases, because $K$ is small
+- In neither case
+
+<div slot="why">
+
+The change row is $-x$ for X and $+2x$ for Y, so
+
+$$
+K_c = \frac{(2x)^2}{c - x}
+$$
+
+where $c$ is the starting concentration of X. With $x$ left out beside $c$:
+
+$$
+4x^2 = K_c \times c
+$$
+
+From 0.40 M:
+
+$$
+\begin{aligned}
+x &= \sqrt{\frac{(1.6 \times 10^{-4})(0.40)}{4}} \\
+&= 4.0 \times 10^{-3}
+\end{aligned}
+$$
+
+$$
+\frac{4.0 \times 10^{-3}}{0.40} \times 100\% = 1.0\%
+$$
+
+It passes. From 0.0010 M:
+
+$$
+\begin{aligned}
+x &= \sqrt{\frac{(1.6 \times 10^{-4})(0.0010)}{4}} \\
+&= 2.0 \times 10^{-4}
+\end{aligned}
+$$
+
+$$
+\frac{2.0 \times 10^{-4}}{0.0010} \times 100\% = 20\%
+$$
+
+It fails. The same $K$ is 2,500 times smaller than 0.40 M but only about 6 times smaller than 0.0010 M. A small $K$ is not enough. It has to be small compared with the starting concentration, and only the check tells you.
+
+</div>
+</Check>
+
+<Trap>
+
+Seven mistakes come up again and again on this topic:
+
+- **Skipping the direction.** When products are present at the start, find $Q$ first. The signs in the change row depend on it.
+- **Writing the change row without the coefficients.** A coefficient of 2 means $2x$, in the change row and in the answer.
+- **Squaring only the $x$.** $(2x)^2$ is $4x^2$, not $2x^2$.
+- **Using the small-x shortcut without the check.** State what was left out ($x$, or $2x$) as a percentage of the starting amount. Over 5 percent, the shortcut has failed.
+- **Dropping an $x$ that stands alone.** $x$ is left out only beside a much larger number.
+- **Stopping at $x$.** The question asks for a concentration or a pressure: often $2x$, or $0.220 - x$, and not always $x$ itself.
+- **Using this routine when $K$ is enormous.** Then the reaction goes essentially to completion, and topic 7.5 has the routine for that.
+
+</Trap>
+
+<KeyPoints>
+
+- Compare $Q$ with $K$ first. $Q$ less than $K$ means the reaction runs toward products, $Q$ greater than $K$ toward reactants, and $Q$ equal to $K$ means equilibrium.
+- In the initial, change, equilibrium table, the change row is $x$ times each coefficient, with signs set by the direction.
+- Put the equilibrium row into the $K$ expression, solve for $x$, and then find every concentration or partial pressure.
+- If the expression is a perfect square, take the square root of both sides.
+- If $K$ is very small, leave $x$ out where it is subtracted from the starting amount, then check that what was left out ($x$, or $2x$) is under 5 percent of that amount.
+- Finish by putting the answers back into the $K$ expression, which must give $K$.
+
+</KeyPoints>
+
+<PracticeNext />

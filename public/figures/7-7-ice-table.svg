@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 316" font-family="system-ui, sans-serif" font-size="18">
+  <!-- The general layout of an initial, change, equilibrium table for the made-up equation 2 A + B <=> 3 C. It carries no numbers. Columns are centered at x=190 (A), 300 (B) and 410 (C). Under each formula is a tag with its coefficient (2, 1, 3). From each tag a connector runs down the right of its column, clear of the initial entry, and turns in to point at that column's entry in the change row. The equilibrium arrow is drawn as a path, so it does not depend on a font having the character. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="316" fill="#FDFCF9"/>
+
+  <!-- The equation, each formula over its own column. -->
+  <text x="190" y="34" text-anchor="middle" fill="#26231F" font-weight="600">2 A</text>
+  <text x="245" y="34" text-anchor="middle" fill="#26231F">+</text>
+  <text x="300" y="34" text-anchor="middle" fill="#26231F" font-weight="600">B</text>
+  <path d="M342 24.5H368l-6 -5.5M368 30.5H342l6 5.5" fill="none" stroke="#26231F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="410" y="34" text-anchor="middle" fill="#26231F" font-weight="600">3 C</text>
+
+  <!-- Row rules. -->
+  <path d="M8 84H472M8 128H472M8 172H472M8 216H472" fill="none" stroke="#6B655D" stroke-width="1" stroke-opacity="0.45"/>
+
+  <!-- Coefficient tags, one under each formula. -->
+  <g fill="#FDFCF9" stroke="#4F706C" stroke-width="1.5">
+    <rect x="176" y="46" width="28" height="24" rx="5"/>
+    <rect x="286" y="46" width="28" height="24" rx="5"/>
+    <rect x="396" y="46" width="28" height="24" rx="5"/>
+  </g>
+  <g text-anchor="middle" fill="#4F706C" font-weight="600">
+    <text x="190" y="64">2</text>
+    <text x="300" y="64">1</text>
+    <text x="410" y="64">3</text>
+  </g>
+
+  <!-- From each tag to its column's entry in the change row. -->
+  <g fill="none" stroke="#4F706C" stroke-width="2">
+    <path d="M204 58H226Q234 58 234 66V142Q234 150 226 150"/>
+    <path d="M314 58H336Q344 58 344 66V142Q344 150 336 150"/>
+    <path d="M424 58H446Q454 58 454 66V142Q454 150 446 150"/>
+  </g>
+  <g fill="#4F706C">
+    <path d="M227 144L216 150L227 156Z"/>
+    <path d="M337 144L326 150L337 156Z"/>
+    <path d="M447 144L436 150L447 156Z"/>
+  </g>
+
+  <!-- Initial row. -->
+  <text x="16" y="112" fill="#26231F">Initial</text>
+  <g text-anchor="middle" fill="#26231F">
+    <text x="190" y="112">[A]<tspan dy="4" font-size="14">0</tspan></text>
+    <text x="300" y="112">[B]<tspan dy="4" font-size="14">0</tspan></text>
+    <text x="410" y="112">[C]<tspan dy="4" font-size="14">0</tspan></text>
+  </g>
+
+  <!-- Change row: accent and bold. -->
+  <text x="16" y="156" fill="#4F706C" font-weight="700">Change</text>
+  <g text-anchor="middle" fill="#4F706C" font-weight="700">
+    <text x="190" y="156">−2<tspan font-style="italic">x</tspan></text>
+    <text x="300" y="156">−<tspan font-style="italic">x</tspan></text>
+    <text x="410" y="156">+3<tspan font-style="italic">x</tspan></text>
+  </g>
+
+  <!-- Equilibrium row. -->
+  <text x="16" y="200" fill="#26231F">Equilibrium</text>
+  <g text-anchor="middle" fill="#26231F">
+    <text x="190" y="200">[A]<tspan dy="4" font-size="14">0</tspan><tspan dy="-4"> − 2</tspan><tspan font-style="italic">x</tspan></text>
+    <text x="300" y="200">[B]<tspan dy="4" font-size="14">0</tspan><tspan dy="-4"> − </tspan><tspan font-style="italic">x</tspan></text>
+    <text x="410" y="200">[C]<tspan dy="4" font-size="14">0</tspan><tspan dy="-4"> + 3</tspan><tspan font-style="italic">x</tspan></text>
+  </g>
+
+  <!-- Notes. -->
+  <g fill="#6B655D">
+    <text x="16" y="248">Change = <tspan font-style="italic">x</tspan> × coefficient</text>
+    <text x="16" y="274">− used up, + formed (here: running forward)</text>
+    <text x="16" y="300">Equilibrium = initial + change</text>
+  </g>
+</svg>

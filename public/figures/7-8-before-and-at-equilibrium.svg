@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 332" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Two boxes of the same size for X2 + Y2 <=> 2 XY. Left, before: 6 X2 and 6 Y2 (12 X atoms, 12 Y atoms), Q = 0. Right, at equilibrium: 2 X2, 2 Y2 and 8 XY (12 X atoms, 12 Y atoms), Q = 8^2 / (2 x 2) = 16 = K. X atoms are filled dark circles, Y atoms open circles; a molecule is two circles touching. Positions come from scratchpad/unit7/w78/gen.cjs (seeds 5790 and 5597): no molecule comes within 19 units of another. -->
+  <defs>
+    <g id="x2" fill="#4F706C" stroke="#26231F" stroke-width="1.5">
+      <circle cx="-9" r="9"/>
+      <circle cx="9" r="9"/>
+    </g>
+    <g id="y2" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5">
+      <circle cx="-9" r="9"/>
+      <circle cx="9" r="9"/>
+    </g>
+    <g id="xy" stroke="#26231F" stroke-width="1.5">
+      <circle cx="-9" r="9" fill="#4F706C"/>
+      <circle cx="9" r="9" fill="#FDFCF9"/>
+    </g>
+  </defs>
+  <rect width="480" height="332" fill="#FDFCF9"/>
+
+  <use href="#x2" transform="translate(97 22)"/>
+  <text x="125" y="28" fill="#26231F">X<tspan dy="4" font-size="14">2</tspan></text>
+  <use href="#y2" transform="translate(221 22)"/>
+  <text x="249" y="28" fill="#26231F">Y<tspan dy="4" font-size="14">2</tspan></text>
+  <use href="#xy" transform="translate(345 22)"/>
+  <text x="373" y="28" fill="#26231F">XY</text>
+
+  <text x="111" y="62" text-anchor="middle" fill="#26231F" font-weight="600">Before</text>
+  <rect x="8" y="72" width="206" height="196" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <use href="#y2" transform="translate(74 95) rotate(330)"/>
+  <use href="#y2" transform="translate(177 95) rotate(12)"/>
+  <use href="#x2" transform="translate(133 112) rotate(65)"/>
+  <use href="#x2" transform="translate(30 128) rotate(269)"/>
+  <use href="#y2" transform="translate(182 145) rotate(30)"/>
+  <use href="#x2" transform="translate(76 156) rotate(131)"/>
+  <use href="#y2" transform="translate(126 167) rotate(352)"/>
+  <use href="#x2" transform="translate(194 196) rotate(85)"/>
+  <use href="#y2" transform="translate(67 209) rotate(21)"/>
+  <use href="#x2" transform="translate(131 216) rotate(152)"/>
+  <use href="#x2" transform="translate(35 238) rotate(21)"/>
+  <use href="#y2" transform="translate(161 247) rotate(348)"/>
+  <text x="111" y="292" text-anchor="middle" fill="#26231F">6 X<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">, 6 Y</tspan><tspan dy="4" font-size="14">2</tspan></text>
+  <text x="111" y="318" text-anchor="middle" fill="#26231F" font-weight="600">Q = 0</text>
+
+  <line x1="224" y1="170" x2="248" y2="170" stroke="#6B655D" stroke-width="2.5"/>
+  <polygon points="258,170 246,163 246,177" fill="#6B655D"/>
+
+  <text x="369" y="62" text-anchor="middle" fill="#26231F" font-weight="600">At equilibrium</text>
+  <rect x="266" y="72" width="206" height="196" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <use href="#xy" transform="translate(430 95) rotate(175)"/>
+  <use href="#xy" transform="translate(368 96) rotate(158)"/>
+  <use href="#y2" transform="translate(306 110) rotate(205)"/>
+  <use href="#xy" transform="translate(443 144) rotate(256)"/>
+  <use href="#y2" transform="translate(354 146) rotate(334)"/>
+  <use href="#xy" transform="translate(294 156) rotate(154)"/>
+  <use href="#xy" transform="translate(391 190) rotate(72)"/>
+  <use href="#xy" transform="translate(331 192) rotate(204)"/>
+  <use href="#x2" transform="translate(451 202) rotate(271)"/>
+  <use href="#x2" transform="translate(292 226) rotate(41)"/>
+  <use href="#xy" transform="translate(413 239) rotate(184)"/>
+  <use href="#xy" transform="translate(356 241) rotate(150)"/>
+  <text x="369" y="292" text-anchor="middle" fill="#26231F">2 X<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">, 2 Y</tspan><tspan dy="4" font-size="14">2</tspan><tspan dy="-4">, 8 XY</tspan></text>
+  <text x="369" y="318" text-anchor="middle" fill="#26231F" font-weight="600">Q = 16 = K</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 214" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Two reactions written one above the other and added, with their constants multiplied beside them. Left column: step 1, CH4 + H2O to CO + 3 H2; step 2, CO + H2O to CO2 + H2, with a plus sign at its left; a rule; the sum, CH4 + 2 H2O to CO2 + 4 H2. The CO on the right of step 1 and the CO on the left of step 2 are each struck through in the accent color, and the label "CO cancels" has one leader line to each. Right column: K1 = 3.8 x 10^-3; K2 = 1.4, with an accent multiplication sign at its left; a rule; K = K1 x K2 = 5.3 x 10^-3. The terms of the three equations sit in the same columns, so they line up like a sum. The equilibrium arrows are drawn as paths, so they do not depend on a font having the character. State symbols are left off to save width: every substance is a gas. Font size 18 keeps the main text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="214" fill="#FDFCF9"/>
+
+  <!-- Step 1 -->
+  <g fill="#26231F">
+    <text x="30" y="38">CH<tspan dy="4" font-size="14">4</tspan></text>
+    <text x="78" y="38" text-anchor="middle">+</text>
+    <text x="142" y="38" text-anchor="end">H<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O</tspan></text>
+    <text x="198" y="38">CO</text>
+    <text x="245" y="38" text-anchor="middle">+</text>
+    <text x="294" y="38" text-anchor="end">3 H<tspan dy="4" font-size="14">2</tspan></text>
+    <text x="328" y="38"><tspan font-style="italic">K</tspan><tspan dy="4" font-size="14">1</tspan><tspan dy="-4"> = 3.8 × 10</tspan><tspan dy="-7" font-size="14">−3</tspan></text>
+  </g>
+  <path d="M156 28.5H182l-6 -5.5M182 34.5H156l6 5.5" fill="none" stroke="#26231F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- "CO cancels", with a leader to each struck-through CO -->
+  <text x="124" y="82" text-anchor="middle" fill="#4F706C" font-weight="600">CO cancels</text>
+  <g stroke="#4F706C" stroke-width="1.5" stroke-linecap="round">
+    <line x1="176" y1="70" x2="203" y2="49"/>
+    <line x1="74" y1="88" x2="50" y2="101"/>
+  </g>
+
+  <!-- Step 2 -->
+  <g fill="#26231F">
+    <text x="12" y="120" text-anchor="middle">+</text>
+    <text x="30" y="120">CO</text>
+    <text x="78" y="120" text-anchor="middle">+</text>
+    <text x="142" y="120" text-anchor="end">H<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O</tspan></text>
+    <text x="198" y="120">CO<tspan dy="4" font-size="14">2</tspan></text>
+    <text x="245" y="120" text-anchor="middle">+</text>
+    <text x="294" y="120" text-anchor="end">H<tspan dy="4" font-size="14">2</tspan></text>
+    <text x="328" y="120"><tspan font-style="italic">K</tspan><tspan dy="4" font-size="14">2</tspan><tspan dy="-4"> = 1.4</tspan></text>
+  </g>
+  <path d="M156 110.5H182l-6 -5.5M182 116.5H156l6 5.5" fill="none" stroke="#26231F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="312" y="122" text-anchor="middle" fill="#4F706C" font-size="26" font-weight="700">×</text>
+
+  <!-- The two CO that cancel, struck through -->
+  <g stroke="#4F706C" stroke-width="2.5" stroke-linecap="round">
+    <line x1="194" y1="41" x2="227" y2="23"/>
+    <line x1="26" y1="123" x2="59" y2="105"/>
+  </g>
+
+  <!-- Rules: one under the equations, one under the constants -->
+  <g stroke="#26231F" stroke-width="1.5">
+    <line x1="6" y1="138" x2="296" y2="138"/>
+    <line x1="304" y1="138" x2="462" y2="138"/>
+  </g>
+
+  <!-- The sum -->
+  <g fill="#26231F">
+    <text x="30" y="170">CH<tspan dy="4" font-size="14">4</tspan></text>
+    <text x="78" y="170" text-anchor="middle">+</text>
+    <text x="142" y="170" text-anchor="end">2 H<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O</tspan></text>
+    <text x="198" y="170">CO<tspan dy="4" font-size="14">2</tspan></text>
+    <text x="245" y="170" text-anchor="middle">+</text>
+    <text x="294" y="170" text-anchor="end">4 H<tspan dy="4" font-size="14">2</tspan></text>
+    <text x="328" y="170"><tspan font-style="italic">K</tspan> = <tspan font-style="italic">K</tspan><tspan dy="4" font-size="14">1</tspan><tspan dy="-4"> × </tspan><tspan font-style="italic">K</tspan><tspan dy="4" font-size="14">2</tspan></text>
+    <text x="343" y="198">= 5.3 × 10<tspan dy="-7" font-size="14">−3</tspan></text>
+  </g>
+  <path d="M156 160.5H182l-6 -5.5M182 166.5H156l6 5.5" fill="none" stroke="#26231F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 308" font-family="system-ui, sans-serif" font-size="18">
+  <!-- One box at equilibrium for 2 Z <=> Z2: 10 separate Z atoms and 5 Z2 molecules (15 particles, 20 Z atoms). Each particle stands for 0.010 M, so [Z] = 0.10 M, [Z2] = 0.050 M and K_c = 0.050 / 0.10^2 = 5.0. A Z atom is a lightly shaded circle; Z2 is two such circles touching. Positions come from scratchpad/unit7/w78/gen.cjs (seed 9522): no particle comes within 27 units of another. -->
+  <defs>
+    <circle id="z" r="10" fill="#E3EAE9" stroke="#4F706C" stroke-width="2"/>
+    <g id="z2" fill="#E3EAE9" stroke="#4F706C" stroke-width="2">
+      <circle cx="-10" r="10"/>
+      <circle cx="10" r="10"/>
+    </g>
+  </defs>
+  <rect width="480" height="308" fill="#FDFCF9"/>
+
+  <use href="#z" x="52" y="22"/>
+  <text x="70" y="28" fill="#26231F">Z</text>
+  <use href="#z2" transform="translate(146 22)"/>
+  <text x="174" y="28" fill="#26231F">Z<tspan dy="4" font-size="14">2</tspan></text>
+
+  <text x="118" y="62" text-anchor="middle" fill="#26231F" font-weight="600">At equilibrium</text>
+  <rect x="8" y="72" width="220" height="226" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <use href="#z" x="75" y="92"/>
+  <use href="#z" x="205" y="93"/>
+  <use href="#z" x="157" y="95"/>
+  <use href="#z" x="28" y="102"/>
+  <use href="#z" x="110" y="142"/>
+  <use href="#z" x="55" y="143"/>
+  <use href="#z2" transform="translate(186 155) rotate(154)"/>
+  <use href="#z2" transform="translate(54 191) rotate(192)"/>
+  <use href="#z" x="121" y="197"/>
+  <use href="#z" x="198" y="202"/>
+  <use href="#z" x="155" y="230"/>
+  <use href="#z2" transform="translate(29 244) rotate(82)"/>
+  <use href="#z2" transform="translate(86 261) rotate(163)"/>
+  <use href="#z2" transform="translate(199 264) rotate(275)"/>
+  <use href="#z" x="146" y="277"/>
+
+  <text x="244" y="146" fill="#26231F">each particle = 0.010 M</text>
+  <text x="244" y="178" fill="#26231F">[Z] = 0.10 M</text>
+  <text x="244" y="210" fill="#26231F">[Z<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">] = 0.050 M</tspan></text>
+  <text x="244" y="242" fill="#26231F" font-weight="600">K<tspan dy="4" font-size="14">c</tspan><tspan dy="-4"> = 5.0</tspan></text>
+</svg>
