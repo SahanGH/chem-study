@@ -1,4 +1,5 @@
 /** Grading for Check questions. No DOM here, so it is testable directly. */
+import { fromSuperscript, toSuperscript } from './format';
 
 export type NumericGrade = 'correct' | 'incorrect' | 'invalid';
 
@@ -22,18 +23,25 @@ const FLOAT_SLACK = 1e-9;
 // integer part may be absent (".05").
 const NUMBER_PATTERN = /^[+-]?(?:(?:[1-9]\d{0,2}(?:,\d{3})+|\d+)(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i;
 
+// A power of ten written the way the answer line shows one: "× 10" and then
+// a raised exponent, to the end of the text. Raised characters anywhere else
+// ("5²", "10²^3") are left alone, so the number pattern rejects them.
+const RAISED_POWER_OF_TEN = /[×x*]10([⁺⁻]?[⁰¹²³⁴⁵⁶⁷⁸⁹]+)$/i;
+
 /**
  * Reads what a student types for a number: plain decimals ("0.05", ".05",
- * "5."), e-notation ("2.5e-3") and the handwritten form ("2.5×10^-3",
- * "2.5 x 10^-3"). Commas are accepted only as thousands separators in the
- * integer part ("1,234,567.5"). The Unicode minus sign and en dash count as
- * a minus, in the number and in the exponent. Returns null when the text is
- * not a number, or is too large to be finite.
+ * "5."), e-notation ("2.5e-3"), the handwritten form ("2.5×10^-3",
+ * "2.5 x 10^-3") and the form the answer line shows ("2.5 × 10⁻³"). Commas
+ * are accepted only as thousands separators in the integer part
+ * ("1,234,567.5"). The Unicode minus sign and en dash count as a minus, in
+ * the number and in the exponent. Returns null when the text is not a
+ * number, or is too large to be finite.
  */
 export function parseNumber(text: string): number | null {
   const normalized = text
     .replace(/\s+/g, '')
     .replace(/[−–]/g, '-')
+    .replace(RAISED_POWER_OF_TEN, (_whole, exponent: string) => `e${fromSuperscript(exponent)}`)
     .replace(/[×x*]10\^/i, 'e');
   if (!NUMBER_PATTERN.test(normalized)) return null;
   const value = Number(normalized.replace(/,/g, ''));
@@ -79,24 +87,21 @@ export function shownAnswer({ answer, numeric, unit }: CheckAnswer): string {
   return unit ? `${shown} ${unit}` : shown;
 }
 
-const SUPERSCRIPT_DIGITS = '⁰¹²³⁴⁵⁶⁷⁸⁹';
-
 /**
  * A lesson writes a very large or very small answer in e-notation
  * ("5.86e-20"), which is what the grader reads. Students write it as a power
  * of ten, so that is how the answer line shows it: "5.86 × 10⁻²⁰". The digits
- * before the e are left as written, so their significant figures survive.
+ * before the e are left as written, sign included, so their significant
+ * figures survive. An answer with no e is shown as written.
  */
 function asPowerOfTen(numeric: string): string {
-  const match = /^(.+)e([+-]?)0*(\d+)$/i.exec(numeric.trim());
-  if (!match) return numeric;
-  const [, mantissa, sign, digits] = match;
-  // Both groups are present whenever the pattern matches; this is for the type checker.
-  if (mantissa === undefined || digits === undefined) {
-    throw new Error(`Could not read the power of ten in the numeric answer ${JSON.stringify(numeric)}.`);
-  }
-  const exponent = [...digits].map((digit) => SUPERSCRIPT_DIGITS.charAt(Number(digit))).join('');
-  return `${mantissa} × 10${sign === '-' ? '⁻' : ''}${exponent}`;
+  return numeric.trim().replace(/^(.+)e([+-]?)0*(\d+)$/i, (_whole, mantissa: string, sign: string, digits: string) => {
+    const coefficient = mantissa.trim();
+    // Leading zeros are dropped by the pattern, so "0" is an exponent of zero.
+    // Ten to the power zero is 1: "× 10⁰" would say nothing.
+    if (digits === '0') return coefficient;
+    return `${coefficient} × 10${toSuperscript((sign === '-' ? '-' : '') + digits)}`;
+  });
 }
 
 export function gradeNumeric(text: string, answer: number): NumericGrade {
