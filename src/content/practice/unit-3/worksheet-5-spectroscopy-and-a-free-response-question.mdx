@@ -1,0 +1,301 @@
+---
+title: "Worksheet 5: Spectroscopy, and a free-response question"
+kind: worksheet
+order: 6
+topics: ["3.11", "3.12", "3.13"]
+summary: Three questions on the regions of the spectrum, photon energy and Beer's law, then one 10-point free-response question with its scoring rubric.
+---
+
+Work each question on paper before you open its answer.
+
+You will need these relationships:
+
+$$
+c = \lambda\nu
+$$
+
+$$
+E = h\nu
+$$
+
+Use these constants, the speed of light, Planck's constant and Avogadro's number:
+
+$$
+c = 2.998 \times 10^{8}\ \text{m/s}
+$$
+
+$$
+h = 6.626 \times 10^{-34}\ \text{J·s}
+$$
+
+$$
+N_A = 6.022 \times 10^{23}\ \text{mol}^{-1}
+$$
+
+The last question is a free-response question, the kind the AP exam asks. Answer every part fully first, then open the answers. Its scoring rubric comes after the last part, so you can score yourself.
+
+## Questions
+
+<Question number={1} topic="3.11">
+
+Match each spectroscopic region to the molecular transition it probes.
+
+<Part label="a">
+
+Microwave: <Blank />
+
+<Answer>
+
+molecular rotation
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Infrared: <Blank />
+
+<Answer>
+
+bond vibration
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Ultraviolet–visible: <Blank />
+
+<Answer>
+
+electronic transitions
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={2} topic="3.12">
+
+This question is about photon calculations.
+
+<Part label="a">
+
+Frequency of 400. nm light: <Blank />
+
+<Answer>
+
+$7.50 \times 10^{14}\ \text{s}^{-1}$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Energy of one photon at that wavelength: <Blank />
+
+<Answer>
+
+$4.97 \times 10^{-19}\ \text{J}$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Energy of one mole of those photons: <Blank />
+
+<Answer>
+
+299 kJ/mol
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+A photon of 200 nm light has how many times the energy of one at 600 nm? Answer without a calculator.
+
+<Answer>
+
+3 times
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={3} topic="3.13">
+
+These parts use the Beer–Lambert law:
+
+$$
+A = \varepsilon b c
+$$
+
+Here $c$ is the concentration, not the speed of light.
+
+<Part label="a">
+
+A solution has $A = 0.480$ in a 1.00 cm cell with $\varepsilon = 240\ \text{M}^{-1}\,\text{cm}^{-1}$. Find $c$.
+
+<Answer>
+
+0.00200 M
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+If the same solution is measured in a 2.00 cm cell, what is $A$?
+
+<Answer>
+
+0.960
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Why does absorbance have no units?
+
+<Answer>
+
+In $A = \varepsilon b c$ the units cancel. Multiply the units of $\varepsilon$, $b$ and $c$:
+
+$$
+\text{M}^{-1}\,\text{cm}^{-1} \times \text{cm} \times \text{M}
+$$
+
+Nothing is left. Absorbance comes from comparing two amounts of light, the light sent into the sample and the light that comes out, so it is a pure number.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={4} title="A copper(II) calibration curve" topic="3.13" points={10}>
+
+A student determines the concentration of a copper(II) solution by visible spectroscopy. Standards are measured at 635 nm in a 1.00 cm cell:
+
+| $c$ (M) | $A$ |
+|---|---|
+| 0.0100 | 0.125 |
+| 0.0200 | 0.250 |
+| 0.0300 | 0.375 |
+| 0.0400 | 0.500 |
+
+<Part label="a">
+
+On paper, plot $A$ versus $c$ and draw the best-fit line.
+
+<Answer>
+
+The four points, from (0.0100 M, 0.125) to (0.0400 M, 0.500), with $c$ on the horizontal axis and $A$ on the vertical, lie on one straight line. The best-fit line passes through all four and through the origin.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Determine the slope of the line, including units.
+
+<Answer>
+
+$$
+\frac{0.500}{0.0400} = 12.5\ \text{M}^{-1}
+$$
+
+This equals $\varepsilon b$.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate $\varepsilon$, stating its units.
+
+<Answer>
+
+$$
+\begin{aligned}
+\varepsilon &= \frac{\text{slope}}{b} \\
+&= \frac{12.5}{1.00} \\
+&= 12.5\ \text{M}^{-1}\,\text{cm}^{-1}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+An unknown gives $A = 0.300$. Determine its concentration.
+
+<Answer>
+
+$$
+\begin{aligned}
+c &= \frac{0.300}{12.5} \\
+&= 0.0240\ \text{M}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+The student dilutes the unknown to half its concentration and measures it again. Predict the new absorbance and justify your prediction.
+
+<Answer>
+
+$$
+A = 0.150
+$$
+
+Absorbance is directly proportional to concentration at fixed $\lambda$ and $b$.
+
+</Answer>
+
+</Part>
+
+<Part label="f">
+
+Explain why the calibration must be performed at a single fixed wavelength.
+
+<Answer>
+
+$\varepsilon$ is wavelength-dependent, so changing $\lambda$ changes the slope and the calibration no longer applies.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for correctly plotted points; 1 point for a straight best-fit line through the origin.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the value of the slope; 1 point for its units.</RubricLine>
+<RubricLine part="c" points={1}>$\varepsilon$ with $b$ divided out, with its unit, $\text{M}^{-1}\,\text{cm}^{-1}$.</RubricLine>
+<RubricLine part="d" points={2}>1 point for dividing by the slope, not multiplying by it; 1 point for the correct value.</RubricLine>
+<RubricLine part="e" points={1}>Gives 0.150, with the proportionality stated.</RubricLine>
+<RubricLine part="f" points={1}>Names the wavelength dependence of $\varepsilon$.</RubricLine>
+<RubricLine points={1}>Overall: every concentration is given with its unit, M, and to three significant figures.</RubricLine>
+</Rubric>
+
+</Question>
