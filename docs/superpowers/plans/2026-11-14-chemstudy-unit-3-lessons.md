@@ -563,6 +563,16 @@ A small topic (one piece of essential knowledge): the lesson is short, not padde
 
 Branch: `topic/unit-3-solutions`, as for Group C. Tasks 8 to 11, after the change below. The pull request title is "feat(lessons): Unit 3 lessons 3.7-3.10, solutions".
 
+> **As carried out (2026-11-15).** The repository is newer than Tasks 8 to 11 below. Each lesson was fact-checked on Fable 5.2 (no wrong answer, number or figure count) and the group was checked for originality. Groups D and E were written and checked together and then split into two pull requests. What changed, and why:
+>
+> - **The answer display** was built as described, then shared: `toSuperscript` and `formatQuantity(value, significantFigures)` now live in `src/lib/format.ts` and serve the Check answer line and both explorers. The grader also reads the form the answer line shows ("5.12 × 10²¹"), which a student who copies it would otherwise have had rejected. That part ships with Group E.
+> - **Lesson 3.7.** Check 1's options are examples the text has not named (concrete among sterling silver, apple juice and rubbing alcohol in water). The "liters of solution" point uses 0.250 mol in 500 mL; "1 mol in 1.000 L" repeated a Tro passage. The ion-count Check carries the unit "ions" and a hint on typing a power of ten.
+> - **Lesson 3.8.**
+>   - **Checks:** ethanol replaces glucose in the molecular-solute Check, which the text above had answered. Aluminum nitrate replaces AlCl₃, which the site's Unit 2 test teaches is molecular. A numeric Check mixes glucose and CaBr₂ in one box (10 particles), replacing a water-orientation Check that repeated lesson 3.1's.
+>   - **Figures:** Mg²⁺ is drawn smaller than lesson 3.1's Na⁺, as lesson 3.1 says it is. Cations are dark and anions pale in both lessons, so the Cl⁻ of `3-1-ion-dipole.svg` was restyled.
+> - **Lesson 3.9.** The rule that the most polar component moves least now carries its condition (a less polar solvent) everywhere, including for paper. The chromatography section names the forces. The figure is a thin-layer plate, as the brief said.
+> - **Lesson 3.10.** "Miscible" is defined. Water and a hydrocarbon attract through London dispersion and dipole–induced dipole forces, as lesson 3.1 teaches. The alcohol trend is in sentences, not a table, which matched a Tro table. The worked example and the chain-length Check use the pre-cleared replacements (sodium bromide, limonene and menthol; four carboxylic acids).
+
 **First, in this group: a numeric answer in scientific notation.** Lesson 3.7 has the first Check whose answer needs a power of ten: `numeric="5.12e21"` (a number of ions). Lesson 3.12 has another, `numeric="5.86e-20" unit="J"`. The grader already accepts e-notation (`parseNumber` in `src/lib/check.ts`), but `shownAnswer` prints the text as written, so the answer line would read "5.12e21". It must read "5.12 × 10²¹". Do this before the writers start Task 8, on this group's branch.
 
 **Files:** Modify `src/lib/check.ts` (`shownAnswer`). Test: `tests/unit/check.test.ts`.
@@ -739,6 +749,18 @@ Run `npx vitest run tests/unit/check.test.ts`: the first two fail.
 ## Group E: light (pull request E)
 
 Branch: `topic/unit-3-light`, as for Group C. Tasks 12 to 16. The pull request title is "feat(lessons): Unit 3 lessons 3.11-3.13 and the absorbance explorer".
+
+> **As carried out (2026-11-15).** The repository is newer than Tasks 12 to 15 below. Each lesson was fact-checked on Fable 5.2 (no wrong answer, number or figure count), the group was checked for originality, and two reviewers approved the explorer's code. What changed, and why:
+>
+> - **The absorbance explorer (Task 12).**
+>   - **The dye's ε is tabulated to three significant figures**, and every absorbance is computed from that value, so the ε, path length and concentration a student reads multiply to the absorbance shown. With ε shown to two figures and computed unrounded, as the contract had it, 298 of the 1342 states did not multiply out. A unit test checks every state in whole numbers.
+>   - **The spectrum is drawn through the 61 tabulated wavelengths.** The unit-test table in Task 12 is superseded (ε at 450 nm is 4330, at 600 nm 2710).
+>   - **The two graphs stack at every width,** each capped at 22rem. Side by side on a desktop their text rendered at 11 px or less.
+>   - **The slope label reads "slope = εb"** with no value, since εb in the 2 cm cell can need four figures.
+>   - **The concentration slider counts in units of 10⁻⁵ M,** to avoid floating-point drift.
+> - **Lesson 3.11.** Checks 1 and 2 are applications (the most energetic of four wavelengths in different units; absorptions at 3 cm and 300 nm), where the brief's were answered by the text above. Ranges read long to short, as the figure's band runs. A sentence says an atom has only electronic levels.
+> - **Lesson 3.12.** The infrared Check uses a made-up molecule (5.20 × 10¹³ s⁻¹, 3.45 × 10⁻²⁰ J); the brief's frequency was HCl's, used by a Tro exercise for the same calculation. The comparison uses 300 nm against 2400 nm. The brightener emits at 445 nm, so its significant figures are unambiguous.
+> - **Lesson 3.13.** The rule for experimental errors is limited to mistakes made when the unknown is read, and a sentence gives the opposite case (a standard that reads too high). "Scratches" is dropped, because the same cuvette is used throughout. The calibration line is introduced from A = (εb)c, and the trap about the slope is reworded; both had followed the old notes' sequence.
 
 ### Task 12: The absorbance explorer
 

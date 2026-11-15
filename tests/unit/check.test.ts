@@ -33,6 +33,25 @@ describe('parseNumber', () => {
     expect(parseNumber(text)).toBeCloseTo(value, 12);
   });
 
+  // The answer line shows a power of ten with a raised exponent, so a student
+  // may type or paste one back.
+  it.each([
+    ['5.12 × 10²¹', 5.12e21],
+    ['5.86×10⁻²⁰', 5.86e-20],
+    ['2.998 x 10⁸', 2.998e8],
+    ['2.998 X 10⁸', 2.998e8],
+    ['2.5*10⁻³', 0.0025],
+    ['2.5 * 10⁻³', 0.0025],
+    ['1 × 10⁺²', 100],
+    ['-1.60 × 10⁻¹⁹', -1.6e-19],
+    ['−1.60 × 10⁻¹⁹', -1.6e-19],
+    ['3 × 10⁰', 3],
+    ['1,200 × 10³', 1.2e6],
+    ['.5×10¹', 5],
+  ])('reads %s, with its exponent raised', (text, value) => {
+    expect(parseNumber(text)).toBe(value);
+  });
+
   it.each([
     '',
     'abc',
@@ -51,6 +70,28 @@ describe('parseNumber', () => {
     '-',
     '.e3',
     '1e999',
+  ])('rejects %s', (text) => {
+    expect(parseNumber(text)).toBeNull();
+  });
+
+  // A raised exponent counts only straight after "× 10", and only to the end.
+  it.each([
+    '5 × 10²^3',
+    '5 × 10^²',
+    '5 × 10²1',
+    '5 × 10²¹ J',
+    '5²',
+    '5e²¹',
+    '10²',
+    '× 10²',
+    '5 × 10⁻',
+    '5 × 10²⁻',
+    '5 × 10⁻⁺²',
+    '5 × 10',
+    '5 × 100²',
+    '5 × ²',
+    '0,5 × 10²',
+    '1 × 10⁹⁹⁹',
   ])('rejects %s', (text) => {
     expect(parseNumber(text)).toBeNull();
   });
@@ -96,6 +137,31 @@ describe('gradeNumeric', () => {
     expect(gradeNumeric('0', 0)).toBe('correct');
     expect(gradeNumeric('0.5', 0)).toBe('incorrect');
   });
+
+  it('accepts an answer typed as a power of ten with a raised exponent', () => {
+    expect(gradeNumeric('5.12 × 10²¹', 5.12e21)).toBe('correct');
+    expect(gradeNumeric('5.9 × 10⁻²⁰', 5.86e-20)).toBe('correct');
+    expect(gradeNumeric('5.86 × 10⁻¹⁹', 5.86e-20)).toBe('incorrect');
+    expect(gradeNumeric('5.86 × 10²⁰', 5.86e-20)).toBe('incorrect');
+  });
+
+  // What the answer line prints, a student can type or paste back. The first
+  // two are the e-notation answers the lessons use (3.7 and 3.12).
+  it.each([
+    { numeric: '5.12e21', unit: undefined },
+    { numeric: '5.86e-20', unit: 'J' },
+    { numeric: '2.998E+08', unit: 'm/s' },
+    { numeric: '-1.60e-19', unit: 'C' },
+    { numeric: '1e-05', unit: 'M' },
+    { numeric: '3e0', unit: 'mol' },
+    { numeric: '0.020', unit: 'M/s' },
+  ])('grades the answer line of $numeric as correct when it is typed back', ({ numeric, unit }) => {
+    const shown = shownAnswer({ numeric, unit });
+    const typedBack = unit === undefined ? shown : shown.slice(0, -` ${unit}`.length);
+
+    expect(shown.endsWith(unit === undefined ? typedBack : ` ${unit}`)).toBe(true);
+    expect(gradeNumeric(typedBack, Number(numeric))).toBe('correct');
+  });
 });
 
 describe('shownAnswer', () => {
@@ -132,6 +198,35 @@ describe('shownAnswer', () => {
 
   it('leaves the digits before the e exactly as written', () => {
     expect(shownAnswer({ numeric: '-1.60e-19', unit: 'C' })).toBe('-1.60 × 10⁻¹⁹ C');
+  });
+
+  it('drops the padding of an exponent written with leading zeros', () => {
+    expect(shownAnswer({ numeric: '1e-05' })).toBe('1 × 10⁻⁵');
+  });
+
+  // Ten to the power zero is 1, so "× 10⁰" would say nothing.
+  it.each([
+    ['3e0', '3'],
+    ['1.5e+00', '1.5'],
+    ['1e-0', '1'],
+    ['2.50E0', '2.50'],
+  ])('shows %s, whose exponent is zero, as just %s', (numeric, expected) => {
+    expect(shownAnswer({ numeric })).toBe(expected);
+    expect(shownAnswer({ numeric, unit: 'mol' })).toBe(`${expected} mol`);
+  });
+
+  it('leaves no stray space where the digits before the e were followed by one', () => {
+    expect(shownAnswer({ numeric: '5.86 e-20', unit: 'J' })).toBe('5.86 × 10⁻²⁰ J');
+  });
+
+  it('shows a number written with spaces around it without them', () => {
+    expect(shownAnswer({ numeric: ' 5.86e-20 ', unit: 'J' })).toBe('5.86 × 10⁻²⁰ J');
+    expect(shownAnswer({ numeric: ' 0.020 ', unit: 'M/s' })).toBe('0.020 M/s');
+  });
+
+  it('passes a plain number through unchanged', () => {
+    expect(shownAnswer({ numeric: '0.020' })).toBe('0.020');
+    expect(shownAnswer({ numeric: '1200' })).toBe('1200');
   });
 
   it('throws when a choice question is given a unit', () => {

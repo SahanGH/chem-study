@@ -231,3 +231,43 @@ Each pull request stops for the teacher's merge, because a merge deploys.
 - No lesson scrolls sideways at 320 px with every answer open.
 - Both interactive diagrams work by keyboard, and both show a drawn picture
   without JavaScript and in print.
+
+> **As built (Plan 8, 2026-11-15).**
+>
+> - **Delivered:** thirteen lessons, 3.1 to 3.13, with 58 Checks (18 of them
+>   numeric), 16 worked examples and 22 drawn figures; the Maxwell–Boltzmann
+>   explorer; the absorbance explorer. They went out in four pull requests
+>   after the design and plan, as planned.
+> - **Fact-checks.** Every lesson was fact-checked independently on Fable 5.2,
+>   and again after its fixes. No check found a wrong answer, number or
+>   figure count in a lesson. What the checks did change:
+>   - **A gap in the source text.** The text extracted from the framework had
+>     lost three list items of topic 3.1, so lesson 3.1 was written without
+>     dipole–induced dipole forces and the pi-bond clause. A fact-checker
+>     noticed; both were added, and all fifteen topic pages were compared
+>     with the PDF as pictures. From Unit 7 on, the framework is read from
+>     page pictures before any brief is written.
+>   - **Checks that the text above answered** were turned into applications,
+>     in most lessons.
+>   - **A Check that graded a mistake correct** (3.4): the Celsius error,
+>     with its minus sign dropped, fell inside the grader's 2 percent.
+>   - **Figures:** diamond and graphite atoms that showed the wrong number of
+>     bonds; molecules of a solid drawn apart; Mg²⁺ drawn larger than Na⁺.
+> - **Originality.** The briefs were checked before the plan, the finished
+>   prose after, and every replacement was searched for before it was used.
+>   Replacements can match too: the first substitute for 3.3's worked
+>   example matched a Tro exercise. No strong or moderate match remains.
+> - **Differs from section 4:**
+>   - The Maxwell–Boltzmann explorer offers methane, nitrogen and carbon
+>     dioxide from 200 K to 600 K. With helium and 100 K to 1000 K the main
+>     curve filled a fifth of the graph.
+>   - The absorbance explorer's two graphs stack at every width, and its dye
+>     is tabulated to three figures, so the numbers shown multiply to the
+>     absorbance shown.
+>   - 3.9's chromatogram is a thin-layer plate, where the polarity order is
+>     clear-cut. 3.5 has two figures the table did not list.
+> - **Code beyond the diagrams:** a numeric answer written in e-notation
+>   shows as a power of ten, and the grader accepts that form when typed.
+> - **Models.** Writers and fact-checkers ran on Fable 5.2 from lesson 3.1's
+>   checks onward (the teacher's decision, 2026-11-14); the briefs had been
+>   checked on Opus. Fixers and originality checks ran on Sonnet.

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" font-family="system-ui, sans-serif" font-size="18">
+  <!-- One row at y=112: lamp, wavelength selector, cuvette, detector. The beam entering the sample is 8 units thick and the beam leaving it 3, because the sample absorbs part of the light. Labels alternate above and below the row so they fit at font size 18, which stays 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="200" fill="#FDFCF9"/>
+
+  <!-- Lamp: rays every 45 degrees except toward the right, where the beam leaves. -->
+  <circle cx="38" cy="112" r="13" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M51.4 98.6L57.1 92.9M38 93V85M24.6 98.6L18.9 92.9M19 112H11M24.6 125.4L18.9 131.1M38 131V139M51.4 125.4L57.1 131.1" fill="none" stroke="#26231F" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="10" y="68" fill="#26231F">light source</text>
+
+  <!-- Beam from the lamp to the selector, then on to the sample. -->
+  <path d="M51 112H112" fill="none" stroke="#4F706C" stroke-width="8"/>
+  <rect x="112" y="90" width="60" height="44" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <text x="142" y="166" text-anchor="middle" fill="#26231F">picks one wavelength</text>
+  <path d="M172 112H248" fill="none" stroke="#4F706C" stroke-width="8"/>
+  <path d="M246 101L262 112L246 123Z" fill="#4F706C"/>
+
+  <!-- Cuvette, with its width marked as the path length b. -->
+  <rect x="262" y="82" width="60" height="60" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+  <text x="292" y="68" text-anchor="middle" fill="#26231F">sample in cuvette</text>
+  <path d="M262 158H322M262 152V164M322 152V164" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="292" y="186" text-anchor="middle" fill="#26231F" font-style="italic">b</text>
+
+  <!-- Thinner beam leaving the sample. -->
+  <path d="M322 112H386" fill="none" stroke="#4F706C" stroke-width="3"/>
+  <path d="M384 105.5L396 112L384 118.5Z" fill="#4F706C"/>
+  <rect x="396" y="90" width="60" height="44" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <text x="426" y="166" text-anchor="middle" fill="#26231F">detector</text>
+</svg>

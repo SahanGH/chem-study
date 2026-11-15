@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 308" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Three ladders of energy levels. The lowest line of every ladder is at y=258, so the step sizes compare fairly. Rotation: five lines 16 apart (258 to 194). Vibration: four lines 48 apart (258 to 114). Electronic: two lines 190 apart (258 and 68). The rotational spacing is 16, not smaller, so that its arrow still reads as an arrow on a phone; it stays a third of the vibrational step. In each ladder an arrow runs from the lowest line to the next one up. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <defs>
+    <marker id="axis-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#6B655D"/>
+    </marker>
+  </defs>
+  <rect width="480" height="308" fill="#FDFCF9"/>
+
+  <!-- Energy axis -->
+  <path d="M36 266V44" fill="none" stroke="#6B655D" stroke-width="2" marker-end="url(#axis-head)"/>
+  <text x="20" y="155" text-anchor="middle" fill="#6B655D" transform="rotate(-90 20 155)">energy</text>
+
+  <!-- Rotation: five levels, 16 apart -->
+  <text x="120" y="180" text-anchor="middle" fill="#26231F" font-weight="600">rotation</text>
+  <path d="M72 258H168M72 242H168M72 226H168M72 210H168M72 194H168" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M120 257V251" fill="none" stroke="#4F706C" stroke-width="2.5"/>
+  <path d="M120 243L125 252H115z" fill="#4F706C"/>
+  <text x="120" y="290" text-anchor="middle" fill="#26231F">microwave</text>
+
+  <!-- Vibration: four levels, 48 apart -->
+  <text x="262" y="100" text-anchor="middle" fill="#26231F" font-weight="600">vibration</text>
+  <path d="M214 258H310M214 210H310M214 162H310M214 114H310" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M262 257V220" fill="none" stroke="#4F706C" stroke-width="2.5"/>
+  <path d="M262 211L267.5 222H256.5z" fill="#4F706C"/>
+  <text x="262" y="290" text-anchor="middle" fill="#26231F">infrared</text>
+
+  <!-- Electronic: two levels, 190 apart -->
+  <text x="404" y="54" text-anchor="middle" fill="#26231F" font-weight="600">electronic</text>
+  <path d="M356 258H452M356 68H452" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M404 257V78" fill="none" stroke="#4F706C" stroke-width="2.5"/>
+  <path d="M404 69L409.5 80H398.5z" fill="#4F706C"/>
+  <text x="404" y="290" text-anchor="middle" fill="#26231F">UV or visible</text>
+</svg>

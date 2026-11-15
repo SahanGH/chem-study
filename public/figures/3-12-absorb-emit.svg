@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 296" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Higher level at y=92, lower level at y=206. Absorption arrow at x=150, emission arrow at x=330, the gap marker at x=240. Each photon is a sine wave of 4 full waves, 22 units long and 8 units high, computed every unit along the center line y=178; both photons have the same wavelength because both carry the same energy. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="296" fill="#FDFCF9"/>
+
+  <text x="120" y="28" text-anchor="middle" fill="#26231F" font-weight="600">absorption</text>
+  <text x="360" y="28" text-anchor="middle" fill="#26231F" font-weight="600">emission</text>
+
+  <!-- The two energy levels. -->
+  <path d="M16 92H464M16 206H464" fill="none" stroke="#26231F" stroke-width="2.5"/>
+  <text x="16" y="80" fill="#26231F">higher level</text>
+  <text x="16" y="230" fill="#26231F">lower level</text>
+
+  <!-- The gap between the levels. -->
+  <path d="M240 103V195" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <path d="M240 95L235.5 104H244.5ZM240 203L235.5 194H244.5Z" fill="#6B655D"/>
+  <text x="252" y="156" fill="#26231F">&#916;<tspan font-style="italic">E</tspan></text>
+
+  <!-- Absorption: the atom moves up. -->
+  <path d="M150 205V106" fill="none" stroke="#26231F" stroke-width="2.5"/>
+  <path d="M150 94L143 107H157Z" fill="#26231F"/>
+
+  <!-- Emission: the atom drops down. -->
+  <path d="M330 93V192" fill="none" stroke="#26231F" stroke-width="2.5"/>
+  <path d="M330 204L323 191H337Z" fill="#26231F"/>
+
+  <!-- Photon in. -->
+  <path d="M30 178.0 L31 175.7 L32 173.7 L33 172.0 L34 170.7 L35 170.1 L36 170.1 L37 170.7 L38 172.0 L39 173.7 L40 175.7 L41 178.0 L42 180.3 L43 182.3 L44 184.0 L45 185.3 L46 185.9 L47 185.9 L48 185.3 L49 184.0 L50 182.3 L51 180.3 L52 178.0 L53 175.7 L54 173.7 L55 172.0 L56 170.7 L57 170.1 L58 170.1 L59 170.7 L60 172.0 L61 173.7 L62 175.7 L63 178.0 L64 180.3 L65 182.3 L66 184.0 L67 185.3 L68 185.9 L69 185.9 L70 185.3 L71 184.0 L72 182.3 L73 180.3 L74 178.0 L75 175.7 L76 173.7 L77 172.0 L78 170.7 L79 170.1 L80 170.1 L81 170.7 L82 172.0 L83 173.7 L84 175.7 L85 178.0 L86 180.3 L87 182.3 L88 184.0 L89 185.3 L90 185.9 L91 185.9 L92 185.3 L93 184.0 L94 182.3 L95 180.3 L96 178.0 L97 175.7 L98 173.7 L99 172.0 L100 170.7 L101 170.1 L102 170.1 L103 170.7 L104 172.0 L105 173.7 L106 175.7 L107 178.0 L108 180.3 L109 182.3 L110 184.0 L111 185.3 L112 185.9 L113 185.9 L114 185.3 L115 184.0 L116 182.3 L117 180.3 L118 178.0 L125 178" fill="none" stroke="#4F706C" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M136 178L124 171.5V184.5Z" fill="#4F706C"/>
+  <text x="80" y="154" text-anchor="middle" fill="#26231F">photon in</text>
+
+  <!-- Photon out. -->
+  <path d="M344 178.0 L345 175.7 L346 173.7 L347 172.0 L348 170.7 L349 170.1 L350 170.1 L351 170.7 L352 172.0 L353 173.7 L354 175.7 L355 178.0 L356 180.3 L357 182.3 L358 184.0 L359 185.3 L360 185.9 L361 185.9 L362 185.3 L363 184.0 L364 182.3 L365 180.3 L366 178.0 L367 175.7 L368 173.7 L369 172.0 L370 170.7 L371 170.1 L372 170.1 L373 170.7 L374 172.0 L375 173.7 L376 175.7 L377 178.0 L378 180.3 L379 182.3 L380 184.0 L381 185.3 L382 185.9 L383 185.9 L384 185.3 L385 184.0 L386 182.3 L387 180.3 L388 178.0 L389 175.7 L390 173.7 L391 172.0 L392 170.7 L393 170.1 L394 170.1 L395 170.7 L396 172.0 L397 173.7 L398 175.7 L399 178.0 L400 180.3 L401 182.3 L402 184.0 L403 185.3 L404 185.9 L405 185.9 L406 185.3 L407 184.0 L408 182.3 L409 180.3 L410 178.0 L411 175.7 L412 173.7 L413 172.0 L414 170.7 L415 170.1 L416 170.1 L417 170.7 L418 172.0 L419 173.7 L420 175.7 L421 178.0 L422 180.3 L423 182.3 L424 184.0 L425 185.3 L426 185.9 L427 185.9 L428 185.3 L429 184.0 L430 182.3 L431 180.3 L432 178.0 L439 178" fill="none" stroke="#4F706C" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M450 178L438 171.5V184.5Z" fill="#4F706C"/>
+  <text x="394" y="154" text-anchor="middle" fill="#26231F">photon out</text>
+
+  <text x="120" y="274" text-anchor="middle" fill="#26231F">photon energy = &#916;<tspan font-style="italic">E</tspan></text>
+  <text x="360" y="274" text-anchor="middle" fill="#26231F">photon energy = &#916;<tspan font-style="italic">E</tspan></text>
+</svg>

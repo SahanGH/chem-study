@@ -290,6 +290,40 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   stroke-linejoin: round;
 }
 
+/* The absorbance explorer: two graphs, one above the other at every width.
+   Each drawing is 320 units wide, so text at 12px is 12 px when a drawing
+   itself is shown 320 px wide: the ratio of the site's figures (18 on 480).
+   Side by side, a drawing is under 300 px wide on any desktop and its text
+   under 12 px; stacked, it is 12 px or more from a 412px phone up. */
+.absorbance-panels {
+  display: grid;
+  gap: 0.75rem;
+}
+/* A drawing as wide as the lesson would be taller than it is useful, and two
+   of them would push the sliders off a laptop screen, so each stops at 22rem
+   (text about 13 px) and sits in the middle. */
+.absorbance-panels .diagram-plot {
+  width: 100%;
+  max-width: 22rem;
+  margin-inline: auto;
+}
+/* Two classes, to outrank ".figure figcaption" in prose.css: this caption is
+   a title above its graph, not a note under it. */
+.diagram-plot .absorbance-title {
+  color: var(--ink);
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 0.2rem;
+}
+.absorbance .diagram-label {
+  font-size: 12px;
+}
+/* The chosen wavelength: a solid line, where the line at the peak is dashed. */
+.absorbance-chosen {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+
 @media print {
   .diagram-controls {
     display: none;
