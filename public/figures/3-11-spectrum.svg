@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 292" font-family="system-ui, sans-serif" font-size="18">
+  <!-- A band of four equal segments, each 114 wide, from x=12 to x=468: microwave, infrared, visible, ultraviolet, shaded lightest to darkest. Wavelength gets shorter and energy per photon larger from left to right. Under each segment is its wavelength range, written from long to short to match the band; under those, the change each region causes. The electron pictogram is centered on x=354, the border between visible and ultraviolet, because it belongs to both. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <defs>
+    <marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#26231F"/>
+    </marker>
+  </defs>
+  <rect width="480" height="292" fill="#FDFCF9"/>
+
+  <!-- Direction of shorter wavelength and more energy -->
+  <text x="240" y="24" text-anchor="middle" fill="#26231F">shorter wavelength, more energy per photon</text>
+  <path d="M14 40H466" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#head)"/>
+
+  <!-- The band -->
+  <rect x="12" y="54" width="114" height="40" fill="#F7F9F8" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="126" y="54" width="114" height="40" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="240" y="54" width="114" height="40" fill="#BFD0CD" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="354" y="54" width="114" height="40" fill="#8FA9A5" stroke="#26231F" stroke-width="1.5"/>
+  <text x="69" y="80" text-anchor="middle" fill="#26231F">microwave</text>
+  <text x="183" y="80" text-anchor="middle" fill="#26231F">infrared</text>
+  <text x="297" y="80" text-anchor="middle" fill="#26231F">visible</text>
+  <text x="411" y="80" text-anchor="middle" fill="#26231F">ultraviolet</text>
+
+  <!-- Wavelength ranges -->
+  <text x="69" y="118" text-anchor="middle" fill="#6B655D">1 m to</text>
+  <text x="69" y="140" text-anchor="middle" fill="#6B655D">1 mm</text>
+  <text x="183" y="118" text-anchor="middle" fill="#6B655D">1 mm to</text>
+  <text x="183" y="140" text-anchor="middle" fill="#6B655D">700 nm</text>
+  <text x="297" y="118" text-anchor="middle" fill="#6B655D">700 to</text>
+  <text x="297" y="140" text-anchor="middle" fill="#6B655D">400 nm</text>
+  <text x="411" y="118" text-anchor="middle" fill="#6B655D">400 to</text>
+  <text x="411" y="140" text-anchor="middle" fill="#6B655D">10 nm</text>
+
+  <!-- Brackets: which segments each change belongs to -->
+  <path d="M18 152v6H120v-6M132 152v6H234v-6M246 152v6H462v-6" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+
+  <!-- Rotation: a dumbbell with a curved arrow around it -->
+  <path d="M56 212.5L82 197.5" fill="none" stroke="#26231F" stroke-width="3"/>
+  <circle cx="56" cy="212.5" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="82" cy="197.5" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M93.5 225.6A32 32 0 1 1 93.5 184.4" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#head)"/>
+  <text x="69" y="270" text-anchor="middle" fill="#26231F">rotation</text>
+
+  <!-- Vibration: two atoms joined by a spring, with a two-headed arrow along it -->
+  <path d="M164 200L168 192L174 208L180 192L186 208L192 192L198 208L202 200" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="155" cy="200" r="9" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="211" cy="200" r="9" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M150 228H216" fill="none" stroke="#26231F" stroke-width="2" marker-start="url(#head)" marker-end="url(#head)"/>
+  <text x="183" y="270" text-anchor="middle" fill="#26231F">vibration</text>
+
+  <!-- Electronic: two levels, an electron on the lower one and an arrow up to the higher one -->
+  <path d="M300 230H408M300 180H408" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M354 221V182" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#head)"/>
+  <circle cx="354" cy="230" r="7" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <text x="354" y="270" text-anchor="middle" fill="#26231F">electron moves up</text>
+</svg>
