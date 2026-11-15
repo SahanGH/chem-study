@@ -1,0 +1,478 @@
+---
+topic: "7.11"
+minutes: 15
+summary: "How the solubility-product constant K_sp describes a salt dissolving, how to go between K_sp and solubility, and how to tell whether a precipitate will form."
+---
+
+To coax snow out of winter clouds, aircraft release a smoke of tiny silver iodide crystals, which give ice something to grow on. The crystals come down in the snow, and people fairly ask how much of the silver ends up dissolved in the meltwater. Very little of it ever dissolves: silver iodide is one of the least soluble of the common salts. By calculation, a liter of water can hold about two millionths of a gram of it, and then no more dissolves. This lesson is about where that limit comes from.
+
+## A saturated solution is an equilibrium
+
+Drop some solid silver iodide, AgI, into water. At first, ions only leave the crystal. As dissolved ions build up, some of them meet the crystal and stick to it again. That is **precipitation**, the reverse of dissolving. (A solid that forms out of a solution is called a **precipitate**, the subject of topic 4.7.)
+
+The more ions there are in the water, the faster they return, until ions return exactly as fast as they leave. From then on the amount dissolved does not change. The solution is **saturated**: it holds as much dissolved salt as it can at that temperature, with solid still present.
+
+$$
+\ce{AgI(s) <=> Ag^+(aq) + I^-(aq)}
+$$
+
+This is the dynamic equilibrium of topic 7.1, which had dissolving and precipitating on its list of reversible processes. Both directions keep running, at equal rates.
+
+<Figure
+  src="/figures/7-11-saturated-solution.svg"
+  alt="A beaker of saturated silver iodide solution. A block of solid on the bottom is made of 6 silver ions and 6 iodide ions packed in an alternating pattern. In the water above it, 4 silver ions and 4 iodide ions are scattered, apart from one another. Silver ions are drawn as small dark circles and iodide ions as larger pale circles. Beside the solid, an arrow labeled dissolving points up from it into the water, and an arrow of the same length labeled precipitating points down to it. Water molecules are not drawn, and far more ions are drawn in the water than really dissolve."
+  caption="A saturated solution. Ions leave the solid and return to it at the same rate, so the amount dissolved stays constant."
+/>
+
+## The solubility-product constant
+
+Write the $K$ expression for the dissolving equation by the rules of topic 7.3. The solid is left out, because the concentration of a pure solid does not depend on how much of it there is. What is left is a product of ion concentrations, with nothing on the bottom of the fraction:
+
+$$
+K_{sp} = [\ce{Ag^+}][\ce{I^-}]
+$$
+
+The name says what it is. $K_{sp}$ is the **solubility-product constant**: the equilibrium constant for a salt dissolving, which comes out as a product of ion concentrations. For silver iodide at 25 °C, $K_{sp}$ = 8.52 × 10⁻¹⁷. Like every $K$ it has no unit, with the concentrations taken in mol/L.
+
+Coefficients become exponents, as always. Each formula unit of calcium iodate gives one calcium ion and two iodate ions:
+
+$$
+\begin{aligned}
+&\ce{Ca(IO3)2(s) <=>} \\
+&\quad \ce{Ca^2+(aq) + 2IO3^-(aq)}
+\end{aligned}
+$$
+
+$$
+K_{sp} = [\ce{Ca^2+}][\ce{IO3^-}]^2
+$$
+
+Always write the equation with the solid on the left and the separate ions on the right. A polyatomic ion such as iodate, IO₃⁻, stays whole (topic 3.8).
+
+$K_{sp}$ is not on the equation sheet. There is no formula to look up: you build the expression from the dissolving equation every time.
+
+Here are the values this lesson uses.
+
+| Salt | Formula | $K_{sp}$ at 25 °C |
+|---|---|---|
+| Silver iodide | AgI | 8.52 × 10⁻¹⁷ |
+| Barium sulfate | BaSO₄ | 1.08 × 10⁻¹⁰ |
+| Strontium fluoride | SrF₂ | 4.33 × 10⁻⁹ |
+| Strontium sulfate | SrSO₄ | 3.44 × 10⁻⁷ |
+| Calcium iodate | Ca(IO₃)₂ | 6.47 × 10⁻⁶ |
+| Thallium(I) chloride | TlCl | 1.86 × 10⁻⁴ |
+
+Tables differ a little from book to book, because very small solubilities are hard to measure. Use the value a question gives.
+
+<KeyIdea>
+
+$K_{sp}$ is the equilibrium constant for a solid salt dissolving into its ions. The solid is left out, so $K_{sp}$ is the product of the ion concentrations in a saturated solution, each raised to its coefficient.
+
+</KeyIdea>
+
+<Check answer={4}>
+Silver chromate, Ag₂CrO₄, is a dark red solid that dissolves very slightly in water. Which of these is its $K_{sp}$ expression?
+
+$$
+\begin{aligned}
+\textbf{A}\quad & [\ce{Ag^+}][\ce{CrO4^2-}] \\[1.4em]
+\textbf{B}\quad & \dfrac{[\ce{Ag^+}]^2[\ce{CrO4^2-}]}{[\ce{Ag2CrO4}]} \\[1.4em]
+\textbf{C}\quad & 2[\ce{Ag^+}][\ce{CrO4^2-}] \\[1.4em]
+\textbf{D}\quad & [\ce{Ag^+}]^2[\ce{CrO4^2-}]
+\end{aligned}
+$$
+
+- Expression A
+- Expression B
+- Expression C
+- Expression D
+
+<div slot="why">
+
+The dissolving equation is
+
+$$
+\begin{aligned}
+&\ce{Ag2CrO4(s) <=>} \\
+&\quad \ce{2Ag^+(aq) + CrO4^2-(aq)}
+\end{aligned}
+$$
+
+The solid is left out, so nothing goes on the bottom. The coefficient 2 becomes an exponent on [Ag⁺]; it does not multiply the concentration. The chromate ion, CrO₄²⁻, stays in one piece. That is expression D.
+
+Expression A drops the exponent. Expression B puts the solid on the bottom. Expression C multiplies by the coefficient where it should raise to a power.
+
+</div>
+</Check>
+
+## From the constant to the solubility
+
+The **molar solubility** of a salt, $s$, is the number of moles of it that dissolve in a liter of saturated solution.
+
+$K_{sp}$ and $s$ are not the same thing. $K_{sp}$ is a constant for the salt at a given temperature. $s$ is how much dissolves, and $K_{sp}$ fixes it for pure water. The link between the two is the dissolving equation: it says how many of each ion every dissolved formula unit gives.
+
+<Worked title="Silver iodide in water">
+
+Calculate the molar solubility of silver iodide, AgI, in water at 25 °C, and the mass that dissolves in a liter. $K_{sp}$ = 8.52 × 10⁻¹⁷.
+
+1. **Put the ion concentrations in terms of $s$.** The dissolving equation is
+
+   $$
+   \ce{AgI(s) <=> Ag^+(aq) + I^-(aq)}
+   $$
+
+   Each mole that dissolves gives one mole of Ag⁺ and one mole of I⁻, so [Ag⁺] = $s$ and [I⁻] = $s$.
+
+2. **Substitute and solve.**
+
+   $$
+   \begin{aligned}
+   K_{sp} &= (s)(s) = s^2 \\
+   s &= \sqrt{8.52 \times 10^{-17}} \\
+   &= 9.23 \times 10^{-9}\ \text{M}
+   \end{aligned}
+   $$
+
+3. **Convert to a mass.** The molar mass of AgI is 234.77 g/mol.
+
+   $$
+   \begin{aligned}
+   &(9.23 \times 10^{-9}\ \text{mol/L}) \\
+   &\quad \times (234.77\ \text{g/mol}) \\
+   &= 2.17 \times 10^{-6}\ \text{g/L}
+   \end{aligned}
+   $$
+
+   That is the two millionths of a gram of the opening.
+
+4. **Check it.** The two ion concentrations must multiply back to $K_{sp}$.
+
+   $$
+   \begin{aligned}
+   &(9.23 \times 10^{-9})^2 \\
+   &= 8.52 \times 10^{-17}
+   \end{aligned}
+   $$
+
+</Worked>
+
+<Worked title="A salt that gives three ions">
+
+Calculate the molar solubility of calcium iodate, Ca(IO₃)₂, in water at 25 °C. $K_{sp}$ = 6.47 × 10⁻⁶. Its dissolving equation and its $K_{sp}$ expression are written out earlier, in the section on the constant.
+
+1. **Put the ion concentrations in terms of $s$.** Each mole of Ca(IO₃)₂ that dissolves gives one mole of Ca²⁺ and two moles of IO₃⁻, so [Ca²⁺] = $s$ and [IO₃⁻] = $2s$.
+
+2. **Substitute.**
+
+   $$
+   K_{sp} = (s)(2s)^2 = 4s^3
+   $$
+
+   The 2 is inside the square, so it becomes 4.
+
+3. **Solve.** Divide by 4 first, then take the cube root. (On a calculator, a cube root is the power 1/3.)
+
+   $$
+   \begin{aligned}
+   s &= \sqrt[3]{\frac{6.47 \times 10^{-6}}{4}} \\
+   &= \sqrt[3]{1.62 \times 10^{-6}} \\
+   &= 0.0117\ \text{M}
+   \end{aligned}
+   $$
+
+4. **Give the ion concentrations.**
+
+   $$
+   \begin{aligned}
+   [\ce{Ca^2+}] &= s = 0.0117\ \text{M} \\
+   [\ce{IO3^-}] &= 2s = 0.0235\ \text{M}
+   \end{aligned}
+   $$
+
+   The second value comes from the unrounded $s$, 0.01174 M.
+
+</Worked>
+
+The two examples show the pattern:
+
+- A salt that gives one cation and one anion has $K_{sp} = s^2$.
+- A salt that gives three ions, in a 1 : 2 or a 2 : 1 ratio, has $K_{sp} = 4s^3$.
+
+These come from the dissolving equation, and they are not worth memorizing apart from it. Build them each time.
+
+<Check numeric="1.03e-3" unit="M">
+Strontium fluoride, SrF₂, has $K_{sp}$ = 4.33 × 10⁻⁹ at 25 °C. Calculate its molar solubility in water.
+
+<div slot="why">
+
+The dissolving equation is
+
+$$
+\ce{SrF2(s) <=> Sr^2+(aq) + 2F^-(aq)}
+$$
+
+so [Sr²⁺] = $s$ and [F⁻] = $2s$.
+
+$$
+\begin{aligned}
+K_{sp} &= (s)(2s)^2 = 4s^3 \\
+s &= \sqrt[3]{\frac{4.33 \times 10^{-9}}{4}} \\
+&= \sqrt[3]{1.08 \times 10^{-9}} \\
+&= 1.03 \times 10^{-3}\ \text{M}
+\end{aligned}
+$$
+
+If you got 6.58 × 10⁻⁵ M, you took a square root, as for a salt that gives two ions. If you got 1.63 × 10⁻³ M, you left out the 4. If you got 1.29 × 10⁻³ M, you wrote $2s^3$ in place of $4s^3$.
+
+</div>
+</Check>
+
+## From a solubility to the constant
+
+The same road runs the other way. Start from how much of a salt is dissolved in a saturated solution, turn it into the concentration of each ion, and put those into the $K_{sp}$ expression.
+
+<Worked title="The constant from a saturated solution">
+
+Suppose a measurement finds that a liter of saturated thallium(I) chloride solution at 25 °C holds 3.27 g of dissolved TlCl. What $K_{sp}$ does that give? (Thallium compounds are very poisonous, so this is a calculation, not an experiment to try.)
+
+1. **Convert to molar solubility.** The molar mass of TlCl is 239.83 g/mol.
+
+   $$
+   \begin{aligned}
+   s &= \frac{3.27\ \text{g/L}}{239.83\ \text{g/mol}} \\
+   &= 0.01363\ \text{M}
+   \end{aligned}
+   $$
+
+   That is 0.0136 M to three significant figures. Carry the extra digit.
+
+2. **Find each ion's concentration.**
+
+   $$
+   \ce{TlCl(s) <=> Tl^+(aq) + Cl^-(aq)}
+   $$
+
+   Each mole that dissolves gives one mole of each ion, so [Tl⁺] = [Cl⁻] = 0.01363 M.
+
+3. **Substitute.**
+
+   $$
+   \begin{aligned}
+   K_{sp} &= [\ce{Tl^+}][\ce{Cl^-}] \\
+   &= (0.01363)^2 \\
+   &= 1.86 \times 10^{-4}
+   \end{aligned}
+   $$
+
+   That is the same as the table's value.
+
+</Worked>
+
+For a salt that gives three ions the road is the same, but the two ion concentrations are not equal, and one of them is squared.
+
+<Check numeric="9.84e-9">
+Suppose a measurement on a saturated solution of lead(II) iodide, PbI₂, at 25 °C finds [I⁻] = 2.70 × 10⁻³ M. What $K_{sp}$ does that give?
+
+<div slot="why">
+
+The dissolving equation is
+
+$$
+\ce{PbI2(s) <=> Pb^2+(aq) + 2I^-(aq)}
+$$
+
+Two iodide ions dissolve for every lead ion, so [Pb²⁺] is half of [I⁻]: 1.35 × 10⁻³ M.
+
+$$
+\begin{aligned}
+K_{sp} &= [\ce{Pb^2+}][\ce{I^-}]^2 \\
+&= (1.35 \times 10^{-3}) \\
+&\quad \times (2.70 \times 10^{-3})^2 \\
+&= 9.84 \times 10^{-9}
+\end{aligned}
+$$
+
+(Handbooks list 9.8 × 10⁻⁹.)
+
+The number given is already [I⁻], which is $2s$. It is not doubled again. If you got 1.97 × 10⁻⁸, twice too large, you set [Pb²⁺] equal to [I⁻]. If you got 7.87 × 10⁻⁸, you treated 2.70 × 10⁻³ M as $s$ and used $4s^3$. If you got 3.65 × 10⁻⁶, you forgot the square.
+
+</div>
+</Check>
+
+## Comparing salts
+
+Which of two salts is more soluble? If they give the same number of ions, the one with the larger $K_{sp}$ is the more soluble, and no calculation is needed. These three salts all give two ions, so their $K_{sp}$ values put them in order. Each solubility in the table is the square root of the $K_{sp}$.
+
+| Salt | $K_{sp}$ | Calculated $s$ (M) |
+|---|---|---|
+| AgI | 8.52 × 10⁻¹⁷ | 9.23 × 10⁻⁹ |
+| BaSO₄ | 1.08 × 10⁻¹⁰ | 1.04 × 10⁻⁵ |
+| SrSO₄ | 3.44 × 10⁻⁷ | 5.87 × 10⁻⁴ |
+
+If the salts give different numbers of ions, their $K_{sp}$ values cannot be compared directly, because one is $s^2$ and the other is $4s^3$. Strontium fluoride's $K_{sp}$ (4.33 × 10⁻⁹) is about 80 times smaller than strontium sulfate's (3.44 × 10⁻⁷). Yet its calculated molar solubility, 1.03 × 10⁻³ M (from the strontium fluoride question above), is about 1.8 times that of SrSO₄, 5.87 × 10⁻⁴ M. When the ion ratios differ, calculate $s$ for each salt and compare those.
+
+<Check answer={3}>
+At 25 °C, silver iodate, AgIO₃, has $K_{sp}$ = 3.17 × 10⁻⁸ and barium iodate, Ba(IO₃)₂, has $K_{sp}$ = 4.01 × 10⁻⁹. By calculation from these values, which has the greater molar solubility in water, and by about how much?
+
+- Silver iodate, about 8 times as soluble
+- Silver iodate, about 3 times as soluble
+- Barium iodate, about 6 times as soluble
+- Barium iodate, about 9 times as soluble
+
+<div slot="why">
+
+The two salts give different numbers of ions, so compare solubilities, not $K_{sp}$ values. Silver iodate gives two ions, so $K_{sp} = s^2$:
+
+$$
+\begin{aligned}
+s &= \sqrt{3.17 \times 10^{-8}} \\
+&= 1.78 \times 10^{-4}\ \text{M}
+\end{aligned}
+$$
+
+Barium iodate gives three, so $K_{sp} = 4s^3$:
+
+$$
+\begin{aligned}
+s &= \sqrt[3]{\frac{4.01 \times 10^{-9}}{4}} \\
+&= 1.00 \times 10^{-3}\ \text{M}
+\end{aligned}
+$$
+
+Barium iodate is the more soluble, although its $K_{sp}$ is the smaller:
+
+$$
+\frac{1.00 \times 10^{-3}}{1.78 \times 10^{-4}} = 5.6
+$$
+
+"About 8 times" is the ratio of the $K_{sp}$ values, and "about 3 times" is the square root of that ratio. Neither is a ratio of solubilities. "About 9 times" comes from leaving the 4 out of $4s^3$ for barium iodate, which gives 1.59 × 10⁻³ M and a ratio of 8.9.
+
+</div>
+</Check>
+
+## Soluble salts: a constant above 1
+
+The $K_{sp}$ values in the table are all far below 1, and those salts are the ones called insoluble or slightly soluble. What about salts that dissolve freely?
+
+Topic 4.7 has a rule for them: every sodium, potassium, ammonium and nitrate salt is soluble. $K_{sp}$ carries the same message as a number: a $K_{sp}$ above 1 goes with a soluble salt. Read that in one direction only: a $K_{sp}$ above 1 tells you the salt is soluble. It is not a definition of "soluble".
+
+Table salt shows the size of the numbers. A saturated solution of NaCl holds more than 5 mol of each ion in a liter, so the product [Na⁺][Cl⁻] is more than 25.
+
+Tables of $K_{sp}$ list the slightly soluble salts, because those are the ones the constant is used for. You will not be asked here to calculate with a $K_{sp}$ above 1.
+
+## Will a precipitate form?
+
+Mix two solutions, each holding one ion of a slightly soluble salt, and the salt may or may not come out as a solid. $Q$ decides, as in topic 7.7. Here $Q$ has the same form as $K_{sp}$, with the ion concentrations in the mixture at the moment of mixing.
+
+- **$Q$ greater than $K_{sp}$:** the mixture holds more dissolved ions than a saturated solution can. The reaction runs toward the solid: a precipitate forms, and it keeps forming until $Q$ has fallen to $K_{sp}$.
+- **$Q$ less than $K_{sp}$:** the solution is not saturated. No precipitate forms, and more solid could still dissolve in it.
+- **$Q$ equal to $K_{sp}$:** the solution is exactly saturated.
+
+One warning before the example. When two solutions are mixed, each is diluted by the other. Find the concentrations in the combined volume before you put them into $Q$. That is the dilution of topic 3.7.
+
+<Worked title="Mixing two clear solutions">
+
+A chemist pours 25.0 mL of 0.120 M calcium nitrate, Ca(NO₃)₂, into 75.0 mL of 0.0800 M potassium iodate, KIO₃. Does calcium iodate, the salt of the second worked example ($K_{sp}$ = 6.47 × 10⁻⁶), precipitate?
+
+1. **Dilute.** Taking the volumes to add, the total volume is 100.0 mL. Each formula unit of calcium nitrate gives one Ca²⁺, and each formula unit of potassium iodate gives one IO₃⁻. With the concentrations in M and the volumes in mL:
+
+   $$
+   \begin{aligned}
+   [\ce{Ca^2+}] &= 0.120 \times \frac{25.0}{100.0} \\
+   &= 0.0300\ \text{M}
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   [\ce{IO3^-}] &= 0.0800 \times \frac{75.0}{100.0} \\
+   &= 0.0600\ \text{M}
+   \end{aligned}
+   $$
+
+   Nitrate and potassium ions stay dissolved, by the rule of topic 4.7, and take no part.
+
+2. **Calculate $Q$,** which has the form of $K_{sp}$.
+
+   $$
+   \begin{aligned}
+   Q &= [\ce{Ca^2+}][\ce{IO3^-}]^2 \\
+   &= (0.0300)(0.0600)^2 \\
+   &= 1.08 \times 10^{-4}
+   \end{aligned}
+   $$
+
+   It is the iodate concentration that is squared.
+
+3. **Compare.** 1.08 × 10⁻⁴ is greater than 6.47 × 10⁻⁶: $Q$ is about 17 times $K_{sp}$. A precipitate of calcium iodate forms, and the ion concentrations fall until $Q$ equals $K_{sp}$.
+
+</Worked>
+
+<Check answer={2}>
+20.0 mL of 0.00400 M barium nitrate, Ba(NO₃)₂, is added to 80.0 mL of 0.00150 M potassium iodate, KIO₃. Does barium iodate, Ba(IO₃)₂ ($K_{sp}$ = 4.01 × 10⁻⁹), precipitate?
+
+- Yes: $Q$ = 9.00 × 10⁻⁹, which is larger than $K_{sp}$
+- No: $Q$ = 1.15 × 10⁻⁹, which is smaller than $K_{sp}$
+- Yes: $Q$ = 9.60 × 10⁻⁷, which is larger than $K_{sp}$
+- No: the potassium and nitrate ions keep the barium iodate dissolved
+
+<div slot="why">
+
+After mixing, the volume is 100.0 mL. With the concentrations in M and the volumes in mL:
+
+$$
+\begin{aligned}
+[\ce{Ba^2+}] &= 0.00400 \times \frac{20.0}{100.0} \\
+&= 8.00 \times 10^{-4}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{IO3^-}] &= 0.00150 \times \frac{80.0}{100.0} \\
+&= 1.20 \times 10^{-3}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+Q &= [\ce{Ba^2+}][\ce{IO3^-}]^2 \\
+&= (8.00 \times 10^{-4}) \\
+&\quad \times (1.20 \times 10^{-3})^2 \\
+&= 1.15 \times 10^{-9}
+\end{aligned}
+$$
+
+That is below 4.01 × 10⁻⁹, so the mixture is not saturated and nothing precipitates.
+
+9.00 × 10⁻⁹ comes from forgetting that mixing dilutes both solutions, and 9.60 × 10⁻⁷ from forgetting to square [IO₃⁻]. Each gives the wrong verdict. Potassium and nitrate ions take no part.
+
+</div>
+</Check>
+
+<Trap>
+
+Seven mistakes come up again and again on this topic:
+
+- **Putting the solid in the expression.** $K_{sp}$ has nothing on the bottom of its fraction.
+- **Multiplying by a coefficient that should be an exponent, or losing it inside the square.** For Ca(IO₃)₂, [IO₃⁻] is $2s$, and $(2s)^2$ is $4s^2$. So $K_{sp}$ is $4s^3$, not $2s^2$, not $2s^3$ and not $s^3$.
+- **Doubling a given ion concentration again.** If a question gives [I⁻] in saturated PbI₂, that number is already $2s$.
+- **Calling $K_{sp}$ the solubility.** $K_{sp}$ is a constant. The solubility, $s$, is calculated from it.
+- **Ranking salts with different ion ratios by $K_{sp}$.** Calculate $s$ for each and compare those.
+- **Forgetting that mixing dilutes.** $Q$ takes the concentrations in the combined volume.
+- **Reading the comparison backward.** A precipitate forms when $Q$ is greater than $K_{sp}$.
+
+</Trap>
+
+<KeyPoints>
+
+- A saturated solution is a dynamic equilibrium between a solid salt and its dissolved ions, with dissolving and precipitating going on at equal rates.
+- $K_{sp}$ is the equilibrium constant for the dissolving equation: the product of the ion concentrations, each raised to its coefficient, with the solid left out. It is not on the equation sheet.
+- To calculate the molar solubility $s$ from $K_{sp}$, write each ion concentration in terms of $s$. That gives $K_{sp} = s^2$ for a salt that gives two ions and $K_{sp} = 4s^3$ for one that gives three.
+- To find $K_{sp}$ from a solubility, turn it into the concentration of each ion and substitute.
+- $K_{sp}$ values rank solubilities directly only for salts that give the same number of ions. A $K_{sp}$ above 1 goes with a soluble salt.
+- A precipitate forms when $Q$, calculated from the concentrations after mixing, is greater than $K_{sp}$.
+
+</KeyPoints>
+
+<PracticeNext />

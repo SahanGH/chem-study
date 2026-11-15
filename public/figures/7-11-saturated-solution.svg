@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 332" font-family="system-ui, sans-serif" font-size="18">
+  <!-- One beaker of saturated silver iodide solution; water is not drawn, and far more ions are drawn in the water than really dissolve. Solid on the bottom: 2 rows of 6 (6 Ag+ and 6 I-), on a square grid 31 apart (12 + 19), so every ion touches only ions of the other kind. Dissolved: 4 Ag+ and 4 I-; no dissolved ion comes within 26 units of another ion or of the solid. Ag+: small dark circle (radius 12). I-: larger pale circle (radius 19). Each kind is labeled once, beside a dissolved ion, in the style of 7-12-common-ion.svg. The two arrows beside the solid are the same length (80): dissolving points up, precipitating points down. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <defs>
+    <circle id="ag" r="12" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+    <circle id="iodide" r="19" fill="#B7C4C1" stroke="#26231F" stroke-width="1.5"/>
+  </defs>
+  <rect width="480" height="332" fill="#FDFCF9"/>
+
+  <!-- Beaker and water. -->
+  <path d="M30 44H450V252a10 10 0 0 1 -10 10H40a10 10 0 0 1 -10 -10Z" fill="#4F706C" fill-opacity="0.12"/>
+  <path d="M30 44H450" fill="none" stroke="#4F706C" stroke-width="1.5"/>
+  <path d="M21 14L29 20V252a11 11 0 0 0 11 11H440a11 11 0 0 0 11 -11V20L459 14" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Dissolved: 4 Ag+ and 4 I-, apart from one another. -->
+  <use href="#iodide" x="78" y="84"/>
+  <use href="#ag" x="170" y="72"/>
+  <use href="#iodide" x="262" y="92"/>
+  <use href="#ag" x="338" y="70"/>
+  <use href="#iodide" x="412" y="96"/>
+  <use href="#ag" x="160" y="132"/>
+  <use href="#iodide" x="226" y="146"/>
+  <use href="#ag" x="304" y="136"/>
+  <text x="103" y="90" fill="#26231F">I<tspan dy="-6">&#8722;</tspan></text>
+  <text x="188" y="78" fill="#26231F">Ag<tspan dy="-6">+</tspan></text>
+
+  <!-- Solid: top row Ag, I, Ag, I, Ag, I; bottom row I, Ag, I, Ag, I, Ag. -->
+  <use href="#ag" x="162.5" y="208"/>
+  <use href="#iodide" x="193.5" y="208"/>
+  <use href="#ag" x="224.5" y="208"/>
+  <use href="#iodide" x="255.5" y="208"/>
+  <use href="#ag" x="286.5" y="208"/>
+  <use href="#iodide" x="317.5" y="208"/>
+  <use href="#iodide" x="162.5" y="239"/>
+  <use href="#ag" x="193.5" y="239"/>
+  <use href="#iodide" x="224.5" y="239"/>
+  <use href="#ag" x="255.5" y="239"/>
+  <use href="#iodide" x="286.5" y="239"/>
+  <use href="#ag" x="317.5" y="239"/>
+
+  <!-- Two arrows of the same length, one on each side of the solid. -->
+  <text x="92" y="148" text-anchor="middle" fill="#26231F">dissolving</text>
+  <path d="M92 240V173" fill="none" stroke="#26231F" stroke-width="2.5"/>
+  <polygon points="92,160 85,174 99,174" fill="#26231F"/>
+  <text x="388" y="148" text-anchor="middle" fill="#26231F">precipitating</text>
+  <path d="M388 160V227" fill="none" stroke="#26231F" stroke-width="2.5"/>
+  <polygon points="388,240 381,226 395,226" fill="#26231F"/>
+
+  <text x="240" y="294" text-anchor="middle" fill="#6B655D">water molecules not drawn;</text>
+  <text x="240" y="318" text-anchor="middle" fill="#6B655D">far more ions drawn than really dissolve</text>
+</svg>

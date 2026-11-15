@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 348" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Plot runs from x=72 to x=462 across (time, no numbers), and from y=288 (0 M) to y=66 (0.30 M), 740 units per mol/L. NO2 is added at x=202, one third of the way along, and both curves are exactly flat again from x=332, two thirds of the way along. Between those, both curves follow one progress function, p = 1 - (1 - f)^3, computed at 66 points: [NO2] = 0.265 - 0.055p and [N2O4] = 0.0625 + 0.0275p, so the fall of NO2 is twice the rise of N2O4 at every point (the 2 : 1 coefficients) and 2[N2O4] + [NO2] stays 0.390 M. Levels: NO2 0.175 M (y=158.5), 0.265 M (y=91.9), 0.210 M (y=132.6); N2O4 0.0625 M (y=241.75), 0.0900 M (y=221.4). The shape of the curves between the two equilibria is illustrative. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="348" fill="#FDFCF9"/>
+
+  <path d="M72 66V288H462" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M72 288h-7M72 214h-7M72 140h-7M72 66h-7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M202 288v6M332 288v6" fill="none" stroke="#26231F" stroke-width="1.5"/>
+
+  <text x="58" y="294" text-anchor="end" fill="#6B655D">0</text>
+  <text x="58" y="220" text-anchor="end" fill="#6B655D">0.10</text>
+  <text x="58" y="146" text-anchor="end" fill="#6B655D">0.20</text>
+  <text x="58" y="72" text-anchor="end" fill="#6B655D">0.30</text>
+
+  <text x="267" y="340" text-anchor="middle" fill="#26231F">time</text>
+  <text x="16" y="177" text-anchor="middle" fill="#26231F" transform="rotate(-90 16 177)">concentration (M)</text>
+
+  <text x="137" y="316" text-anchor="middle" fill="#6B655D">first equilibrium</text>
+  <text x="267" y="316" text-anchor="middle" fill="#6B655D">shifting</text>
+  <text x="397" y="316" text-anchor="middle" fill="#6B655D">new equilibrium</text>
+
+  <text x="462" y="24" text-anchor="end" fill="#6B655D">rigid container, constant temperature</text>
+
+  <text x="202" y="50" text-anchor="middle" fill="#26231F">NO<tspan dy="4" font-size="14">2</tspan><tspan dy="-4"> added</tspan></text>
+  <!-- The guide line stops where the NO2 curve's own jump runs along it, so the dashed jump is not drawn over a second dashed line. -->
+  <path d="M202 60V91.9M202 158.5V288" fill="none" stroke="#6B655D" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- Line styles match the interactive diagram of lesson 7.10: N2O4 solid in ink, NO2 dashed in the accent color. -->
+  <path d="M72 241.75 H202 L204 240.83 L206 239.93 L208 239.06 L210 238.22 L212 237.41 L214 236.62 L216 235.86 L218 235.12 L220 234.41 L222 233.73 L224 233.07 L226 232.43 L228 231.82 L230 231.23 L232 230.66 L234 230.12 L236 229.59 L238 229.09 L240 228.61 L242 228.15 L244 227.71 L246 227.29 L248 226.89 L250 226.51 L252 226.14 L254 225.8 L256 225.47 L258 225.15 L260 224.86 L262 224.58 L264 224.31 L266 224.06 L268 223.83 L270 223.61 L272 223.4 L274 223.21 L276 223.03 L278 222.86 L280 222.7 L282 222.56 L284 222.42 L286 222.3 L288 222.19 L290 222.09 L292 221.99 L294 221.91 L296 221.83 L298 221.76 L300 221.7 L302 221.65 L304 221.6 L306 221.56 L308 221.53 L310 221.5 L312 221.47 L314 221.45 L316 221.44 L318 221.43 L320 221.42 L322 221.41 L324 221.4 L326 221.4 L328 221.4 L330 221.4 L332 221.4 H462" fill="none" stroke="#26231F" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M72 158.5 H202 V91.9 L204 93.75 L206 95.54 L208 97.28 L210 98.96 L212 100.59 L214 102.16 L216 103.68 L218 105.15 L220 106.57 L222 107.94 L224 109.26 L226 110.54 L228 111.76 L230 112.94 L232 114.07 L234 115.16 L236 116.21 L238 117.21 L240 118.17 L242 119.1 L244 119.98 L246 120.82 L248 121.62 L250 122.39 L252 123.12 L254 123.81 L256 124.47 L258 125.09 L260 125.69 L262 126.25 L264 126.78 L266 127.27 L268 127.74 L270 128.18 L272 128.6 L274 128.99 L276 129.35 L278 129.68 L280 130 L282 130.28 L284 130.55 L286 130.8 L288 131.02 L290 131.23 L292 131.41 L294 131.58 L296 131.74 L298 131.87 L300 131.99 L302 132.1 L304 132.19 L306 132.27 L308 132.34 L310 132.4 L312 132.45 L314 132.49 L316 132.52 L318 132.55 L320 132.57 L322 132.58 L324 132.59 L326 132.6 L328 132.6 L330 132.6 L332 132.6 H462" fill="none" stroke="#4F706C" stroke-width="3" stroke-dasharray="11 6" stroke-linejoin="round"/>
+
+  <text x="80" y="148.5" fill="#26231F">0.175 M</text>
+  <text x="212" y="87.9" fill="#26231F">0.265 M</text>
+  <text x="460" y="121.6" text-anchor="end" fill="#26231F">NO<tspan dy="4" font-size="14">2</tspan><tspan dy="-4"> 0.210 M</tspan></text>
+
+  <text x="80" y="231.75" fill="#26231F">0.0625 M</text>
+  <text x="460" y="210.4" text-anchor="end" fill="#26231F">N<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O</tspan><tspan dy="4" font-size="14">4</tspan><tspan dy="-4"> 0.0900 M</tspan></text>
+</svg>
