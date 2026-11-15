@@ -1,0 +1,512 @@
+---
+topic: "7.6"
+minutes: 12
+summary: "How K changes when a reaction is reversed, when its coefficients are multiplied and when reactions are added together, and why the same rules hold for Q."
+---
+
+Walk up to the currency booth at an airport. Say one euro buys 1.25 dollars. Then one dollar buys 0.80 euros:
+
+$$
+1 \div 1.25 = 0.80
+$$
+
+Going the other way, the rate turns upside down. Say one dollar also buys 150 yen. Then one euro buys 187.5 yen:
+
+$$
+1.25 \times 150 = 187.5
+$$
+
+Going through two exchanges, the rates multiply. Equilibrium constants behave like exchange rates.
+
+## K belongs to the equation as written
+
+One reaction can be written in more than one way. You can write it forward or backward. You can write it with coefficients of 2 and 1, or of 1 and ½. The chemistry in the flask is the same each time. But the $K$ expression is built from the equation (topic 7.3), so each way of writing the equation has its own $K$. A value of $K$ means nothing without the equation it goes with.
+
+Three rules link the different values. None of them is on the equation sheet, which gives the general expressions for $K_c$ and $K_p$ but none of these rules. You do not have to take them on trust, though. Each one follows from writing out the $K$ expression.
+
+## Reverse the reaction, and K turns upside down
+
+Topic 7.5 met carbon monoxide burning to carbon dioxide, and gave its constant at 25 °C as a $K_p$. So this section and the next one write every expression with partial pressures, and the constant is $K_p$ throughout.
+
+$$
+\ce{2CO(g) + O2(g) <=> 2CO2(g)}
+$$
+
+$$
+K_p = \frac{(P_{\ce{CO2}})^2}{(P_{\ce{CO}})^2(P_{\ce{O2}})}
+$$
+
+Now write the same reaction backward:
+
+$$
+\ce{2CO2(g) <=> 2CO(g) + O2(g)}
+$$
+
+The products and the reactants have swapped places, so the new expression is the first one upside down:
+
+$$
+\begin{aligned}
+K_{p,\text{reverse}} &= \frac{(P_{\ce{CO}})^2(P_{\ce{O2}})}{(P_{\ce{CO2}})^2} \\
+&= \frac{1}{K_p}
+\end{aligned}
+$$
+
+At 25 °C the first $K_p$ is about 10⁹⁰, so the second is about 10⁻⁹⁰:
+
+$$
+\frac{1}{10^{90}} = 10^{-90}
+$$
+
+Those are the two values in topic 7.5. A reaction that goes essentially to completion one way barely goes at all the other way.
+
+Reversing never makes $K$ negative. The reverse reaction has $1/K$, not $-K$.
+
+The rule is the same for a $K_c$ written with concentrations. The argument used only the shape of the expression: products on top, reactants underneath.
+
+## Multiply the coefficients, and K is raised to that power
+
+Go back to the first equation and halve every coefficient:
+
+$$
+\ce{CO(g) + 1/2 O2(g) <=> CO2(g)}
+$$
+
+A coefficient of ½ is allowed. It says half a mole of O₂ for each mole of CO. Every exponent in the expression is halved too:
+
+$$
+\begin{aligned}
+K_{p,\text{half}} &= \frac{P_{\ce{CO2}}}{(P_{\ce{CO}})(P_{\ce{O2}})^{1/2}} \\
+&= \sqrt{K_p}
+\end{aligned}
+$$
+
+Square that fraction and you get the first expression back, which is why it equals the square root of $K_p$. With $K_p$ about 10⁹⁰, the halved equation has a $K_p$ of about 10⁴⁵:
+
+$$
+\sqrt{10^{90}} = 10^{45}
+$$
+
+In general: multiply every coefficient by a number $n$, and $K$ is raised to the power $n$.
+
+- Doubling the coefficients squares $K$.
+- Tripling them cubes it.
+- Halving them takes its square root.
+
+For the doubled equation, with 4 CO and 2 O₂ making 4 CO₂, that gives a $K_p$ of about 10¹⁸⁰:
+
+$$
+(10^{90})^2 = 10^{180}
+$$
+
+The trap is to multiply $K$ by $n$. The coefficients are exponents in the expression, so a factor in the equation becomes a power of $K$.
+
+So far, one mixture has four ways of writing its reaction, and four values: 10⁹⁰, 10⁻⁹⁰, 10⁴⁵ and 10¹⁸⁰. All four say the same thing about the flask.
+
+<Check numeric="2.5e2">
+Hydrogen sulfide, the gas that gives rotten eggs their smell, breaks apart when it is heated strongly:
+
+$$
+\ce{2H2S(g) <=> 2H2(g) + S2(g)}
+$$
+
+At a certain temperature $K_c$ = 1.6 × 10⁻⁵ for this equation. What is $K_c$ at the same temperature for the equation below?
+
+$$
+\ce{H2(g) + 1/2 S2(g) <=> H2S(g)}
+$$
+
+<div slot="why">
+
+The second equation is the first one reversed, with every coefficient halved. Reversing gives $1/K$. Halving takes the square root.
+
+$$
+\begin{aligned}
+K_c &= \sqrt{\frac{1}{1.6 \times 10^{-5}}} \\
+&= \sqrt{6.25 \times 10^{4}} \\
+&= 2.5 \times 10^{2}
+\end{aligned}
+$$
+
+That is 250, written as 2.5 × 10² to show its two significant figures.
+
+If you got 62,500, you reversed the equation and did not halve it. If you got 4.0 × 10⁻³, you halved it and did not reverse it. If you got 3.1 × 10⁴, you divided $1/K$ by 2 where a square root was needed.
+
+</div>
+</Check>
+
+## Add reactions, and multiply their K values
+
+Many real processes happen in steps. Most of the world's hydrogen is made from natural gas and steam, in two steps. Here they are, each with its $K_c$ at a certain temperature, the same temperature for both.
+
+Step 1:
+
+$$
+\begin{aligned}
+&\ce{CH4(g) + H2O(g) <=>} \\
+&\quad \ce{CO(g) + 3H2(g)} \\[0.4em]
+&K_1 = 3.8 \times 10^{-3}
+\end{aligned}
+$$
+
+Step 2:
+
+$$
+\begin{aligned}
+&\ce{CO(g) + H2O(g) <=>} \\
+&\quad \ce{CO2(g) + H2(g)} \\[0.4em]
+&K_2 = 1.4
+\end{aligned}
+$$
+
+Add them the way you added the steps of a mechanism in topic 5.7. CO is made in step 1 and used up in step 2, so it cancels. Each step uses one H₂O, and the two steps make 3 H₂ and 1 H₂, which is 4 H₂ in all. Overall:
+
+$$
+\begin{aligned}
+&\ce{CH4(g) + 2H2O(g) <=>} \\
+&\quad \ce{CO2(g) + 4H2(g)}
+\end{aligned}
+$$
+
+Now multiply the two $K$ expressions:
+
+$$
+\begin{aligned}
+&K_1 \times K_2 \\[0.3em]
+&= \frac{[\ce{CO}][\ce{H2}]^3}{[\ce{CH4}][\ce{H2O}]} \times \frac{[\ce{CO2}][\ce{H2}]}{[\ce{CO}][\ce{H2O}]} \\[0.3em]
+&= \frac{[\ce{CO2}][\ce{H2}]^4}{[\ce{CH4}][\ce{H2O}]^2}
+\end{aligned}
+$$
+
+$[\ce{CO}]$ is on top of one fraction and on the bottom of the other, so it cancels, just as CO canceled from the equations. What is left is exactly the $K$ expression of the overall equation. So
+
+$$
+\begin{aligned}
+K_{\text{overall}} &= K_1 \times K_2 \\
+&= (3.8 \times 10^{-3})(1.4) \\
+&= 5.3 \times 10^{-3}
+\end{aligned}
+$$
+
+The rule: **when reactions are added, their $K$ values are multiplied.**
+
+It is easy to slip here, because adding equations suggests adding the constants. The constants multiply. And the values you multiply must all be for the same temperature, because $K$ changes with temperature.
+
+<Figure
+  src="/figures/7-6-adding-reactions.svg"
+  alt="Two reactions written one above the other and added. Step 1: methane plus water gives carbon monoxide plus three hydrogen, with K1 equal to 3.8 times 10 to the minus 3. Step 2: carbon monoxide plus water gives carbon dioxide plus hydrogen, with K2 equal to 1.4. Carbon monoxide is crossed out on both sides because it cancels. The sum is methane plus two water gives carbon dioxide plus four hydrogen, and its K is K1 times K2, 5.3 times 10 to the minus 3."
+  caption="Add the equations, multiply the constants. All the substances are gases, and both K values are for the same temperature."
+/>
+
+<KeyIdea>
+
+A $K$ belongs to its equation as written, and to one temperature. Reverse the equation, and $K$ becomes $1/K$. Multiply the coefficients by $n$, and $K$ becomes $K^n$. Add equations, and their $K$ values multiply.
+
+</KeyIdea>
+
+<Check answer={3}>
+Sulfur dioxide from a smokestack can end up as sulfuric acid in two steps. Step 1, with constant $K_1$:
+
+$$
+\ce{2SO2(g) + O2(g) <=> 2SO3(g)}
+$$
+
+Step 2, with constant $K_2$:
+
+$$
+\ce{SO3(g) + H2O(g) <=> H2SO4(g)}
+$$
+
+The overall reaction:
+
+$$
+\begin{aligned}
+&\ce{2SO2(g) + O2(g) + 2H2O(g)} \\
+&\quad \ce{<=> 2H2SO4(g)}
+\end{aligned}
+$$
+
+Which of these gives $K$ for the overall reaction?
+
+$$
+\begin{aligned}
+\textbf{A}\quad & K_1 + 2K_2 \\[1.4em]
+\textbf{B}\quad & K_1 \times 2K_2 \\[1.4em]
+\textbf{C}\quad & K_1 \times K_2^2 \\[1.4em]
+\textbf{D}\quad & K_1 \times K_2
+\end{aligned}
+$$
+
+- Expression A
+- Expression B
+- Expression C
+- Expression D
+
+<div slot="why">
+
+Step 1 makes 2 SO₃, so step 2 has to run twice to use them up:
+
+$$
+\begin{aligned}
+&\ce{2SO3(g) + 2H2O(g)} \\
+&\quad \ce{<=> 2H2SO4(g)}
+\end{aligned}
+$$
+
+Doubling step 2's coefficients squares its constant, which gives $K_2^2$. Then the equations are added, the 2 SO₃ cancel, and the constants multiply:
+
+$$
+K = K_1 \times K_2^2
+$$
+
+That is expression C.
+
+Constants are never added, so expression A is out. A factor of 2 in an equation becomes a power of 2, not a multiplier, so expression B is out. Expression D uses step 2 only once, which leaves one SO₃ that does not cancel.
+
+</div>
+</Check>
+
+<Worked title="Sulfur dioxide and hydrogen">
+
+Over a catalyst, sulfur dioxide reacts with hydrogen to give sulfur and steam:
+
+$$
+\begin{aligned}
+&\ce{SO2(g) + 2H2(g) <=>} \\
+&\quad \ce{S(l) + 2H2O(g)}
+\end{aligned}
+$$
+
+At the temperature of this example, sulfur is a liquid. Find $K_c$ for this reaction, the target, from two other reactions and their $K_c$ values at the same temperature. Every constant in this example is a $K_c$, and every expression is written with concentrations.
+
+Reaction 1:
+
+$$
+\begin{aligned}
+&\ce{H2(g) + 1/2 O2(g) <=> H2O(g)} \\[0.4em]
+&K_1 = 3.0 \times 10^{19}
+\end{aligned}
+$$
+
+Reaction 2:
+
+$$
+\begin{aligned}
+&\ce{S(l) + O2(g) <=> SO2(g)} \\[0.4em]
+&K_2 = 1.4 \times 10^{26}
+\end{aligned}
+$$
+
+1. **See what the target needs.** It has 2 H₂ on the left and 2 H₂O on the right. Reaction 1 has H₂ and H₂O on the correct sides, but only one of each. The target has SO₂ on the left and S on the right. Reaction 2 has them the other way round. And the target has no O₂ at all, so the O₂ must cancel.
+
+2. **Double reaction 1.**
+
+   $$
+   \ce{2H2(g) + O2(g) <=> 2H2O(g)}
+   $$
+
+   Doubling the coefficients squares the constant.
+
+   $$
+   \begin{aligned}
+   K_1^2 &= (3.0 \times 10^{19})^2 \\
+   &= 9.0 \times 10^{38}
+   \end{aligned}
+   $$
+
+3. **Reverse reaction 2.**
+
+   $$
+   \ce{SO2(g) <=> S(l) + O2(g)}
+   $$
+
+   Reversing inverts the constant.
+
+   $$
+   \begin{aligned}
+   \frac{1}{K_2} &= \frac{1}{1.4 \times 10^{26}} \\
+   &= 7.14 \times 10^{-27}
+   \end{aligned}
+   $$
+
+   Carry the extra digit and round at the end.
+
+4. **Add them and cancel.** The left sides together are 2 H₂ + O₂ + SO₂. The right sides together are 2 H₂O + S + O₂. One O₂ is on each side, so it cancels. What is left is the target:
+
+   $$
+   \begin{aligned}
+   &\ce{SO2(g) + 2H2(g) <=>} \\
+   &\quad \ce{S(l) + 2H2O(g)}
+   \end{aligned}
+   $$
+
+5. **Multiply the constants.**
+
+   $$
+   \begin{aligned}
+   K_c &= K_1^2 \times \frac{1}{K_2} \\
+   &= (9.0 \times 10^{38})(7.14 \times 10^{-27}) \\
+   &= 6.4 \times 10^{12}
+   \end{aligned}
+   $$
+
+   Two significant figures, as the given constants have.
+
+6. **Check with the expressions.** Sulfur is a pure liquid, so it is left out of every expression (topic 7.3).
+
+   $$
+   K_1 = \frac{[\ce{H2O}]}{[\ce{H2}][\ce{O2}]^{1/2}}
+   $$
+
+   $$
+   K_2 = \frac{[\ce{SO2}]}{[\ce{O2}]}
+   $$
+
+   Square the first and divide by the second:
+
+   $$
+   \begin{aligned}
+   \frac{K_1^2}{K_2} &= \frac{[\ce{H2O}]^2}{[\ce{H2}]^2[\ce{O2}]} \times \frac{[\ce{O2}]}{[\ce{SO2}]} \\[0.3em]
+   &= \frac{[\ce{H2O}]^2}{[\ce{SO2}][\ce{H2}]^2}
+   \end{aligned}
+   $$
+
+   That is the $K_c$ expression of the target.
+
+The result, 6.4 × 10¹², is very large, so this reaction too goes essentially to completion (topic 7.5). Yet it is far smaller than either of the two constants it was built from.
+
+</Worked>
+
+<Check numeric="4.5">
+X, Y, Z and W are made-up gases. At a certain temperature, reaction 1 has $K_c$ = 0.30. Call that constant $K_1$.
+
+$$
+\ce{X(g) + Y(g) <=> Z(g)}
+$$
+
+At the same temperature, reaction 2 has $K_c$ = 0.020. Call it $K_2$.
+
+$$
+\ce{2Y(g) <=> W(g)}
+$$
+
+What is $K_c$ at that temperature for the reaction below?
+
+$$
+\ce{2X(g) + W(g) <=> 2Z(g)}
+$$
+
+<div slot="why">
+
+The target needs 2 X on the left and 2 Z on the right, so double reaction 1:
+
+$$
+\ce{2X(g) + 2Y(g) <=> 2Z(g)}
+$$
+
+Doubling squares the constant.
+
+$$
+K_1^2 = (0.30)^2 = 0.090
+$$
+
+The target needs W on the left, so reverse reaction 2:
+
+$$
+\ce{W(g) <=> 2Y(g)}
+$$
+
+Reversing inverts the constant.
+
+$$
+\frac{1}{K_2} = \frac{1}{0.020} = 50
+$$
+
+Add the two new equations and the 2 Y cancel, leaving the target. The constants multiply.
+
+$$
+\begin{aligned}
+K_c &= K_1^2 \times \frac{1}{K_2} \\
+&= \frac{(0.30)^2}{0.020} \\
+&= 4.5
+\end{aligned}
+$$
+
+If you got 15, you forgot to square $K_1$. If you got 30, you doubled $K_1$ where you should have squared it. If you got 0.0018, you did not reverse reaction 2.
+
+</div>
+</Check>
+
+## The same rules work for Q
+
+$Q$ is built from the equation in exactly the same way as $K$ (topic 7.3). The only difference is that it takes the concentrations, or the pressures, at any moment. So every rule above holds for $Q$:
+
+- Reverse the equation, and $Q$ becomes $1/Q$.
+- Double the coefficients, and $Q$ is squared.
+- Add equations, and their $Q$ values multiply.
+
+One thing follows that matters in practice. When you compare $Q$ with $K$, both must belong to the same equation, written the same way. A $Q$ worked out for one way of writing the reaction cannot be compared with a $K$ quoted for another.
+
+<Check answer={4}>
+At a certain high temperature $K_c$ = 5.0 for this equation:
+
+$$
+\ce{C2H4(g) + H2(g) <=> C2H6(g)}
+$$
+
+A mixture of ethene (C₂H₄), hydrogen and ethane (C₂H₆) has $Q_c$ = 0.50 for this equation, so it is making ethane. A classmate writes the equation the other way round:
+
+$$
+\ce{C2H6(g) <=> C2H4(g) + H2(g)}
+$$
+
+What does the classmate find for the same mixture?
+
+- $Q_c$ = 0.50 and $K_c$ = 5.0, because the mixture has not changed
+- $Q_c$ = 2.0 and $K_c$ = 0.20, so the mixture is now making ethene and hydrogen
+- $Q_c$ = −0.50 and $K_c$ = −5.0, and the mixture is still making ethane
+- $Q_c$ = 2.0 and $K_c$ = 0.20, and the mixture is still making ethane
+
+<div slot="why">
+
+Reversing the equation inverts both numbers.
+
+$$
+Q_c = \frac{1}{0.50} = 2.0
+$$
+
+$$
+K_c = \frac{1}{5.0} = 0.20
+$$
+
+$Q$ always moves toward $K$ (topic 7.3), so here $Q_c$ has to fall from 2.0 to 0.20. For the equation as the classmate wrote it, $Q_c$ falls when its products, ethene and hydrogen, are used up and its reactant, ethane, is formed. The reaction as now written runs backward. So the mixture is still making ethane.
+
+Both ways of writing the equation describe the same change, as they must: the molecules do not know how the equation was written. And reversing never makes $Q$ or $K$ negative.
+
+</div>
+</Check>
+
+<Trap>
+
+Six mistakes come up again and again on this topic:
+
+- **Adding the constants when reactions are added.** The equations add. Their $K$ values multiply.
+- **Multiplying $K$ by the factor.** Doubling the coefficients squares $K$, and halving them takes its square root.
+- **Changing the sign of $K$ to reverse a reaction.** The reverse reaction has $1/K$. $K$ is never negative.
+- **Quoting a $K$ without its equation.** 10⁹⁰, 10⁻⁹⁰ and 10⁴⁵ all describe the same mixture of CO, O₂ and CO₂.
+- **Comparing a $Q$ for one way of writing the equation with a $K$ for another.** Both must belong to the same equation.
+- **Looking for these rules on the equation sheet.** They are not there.
+
+</Trap>
+
+<KeyPoints>
+
+- The value of $K$ belongs to the equation as it is written, and to one temperature. Always state the equation with it, and combine only $K$ values for the same temperature.
+- Reversing a reaction inverts its constant: $K$ becomes $1/K$.
+- Multiplying every coefficient by $n$ raises the constant to the power $n$. Doubling squares $K$, and halving takes its square root.
+- When reactions are added to give an overall reaction, the overall $K$ is the product of their $K$ values.
+- The same three rules hold for $Q$, and $Q$ can be compared with $K$ only when both are for the same written equation.
+- None of these rules is on the equation sheet.
+
+</KeyPoints>
+
+<PracticeNext />
