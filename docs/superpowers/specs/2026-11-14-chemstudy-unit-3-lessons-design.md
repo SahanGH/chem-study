@@ -186,8 +186,9 @@ The pipeline that made the Unit 2 lessons, with one step added:
 4. **One build and one test run**, by the controller.
 5. **A look at each lesson on a phone** at 412, 390, 360 and 320 px, with
    every answer open, and at each figure in the dark theme.
-6. **An independent fact-check** per lesson on Opus. It recomputes every
-   number and checks every claim against the framework.
+6. **An independent fact-check** per lesson on Fable 5.2 (the teacher's
+   decision, 2026-11-14; the briefs had been checked on Opus). It recomputes
+   every number and checks every claim against the framework.
 7. **An originality check** per group of lessons (Sonnet). It compares the
    worked examples and Checks with the matching chapters of both Tro books
    in `Tro_Reference`, and with the teacher's notes. A scenario that repeats

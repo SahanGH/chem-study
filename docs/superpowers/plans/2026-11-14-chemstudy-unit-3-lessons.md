@@ -52,6 +52,7 @@ Established on 2026-11-14.
 6. **The equation sheet** (effective 2025) gives R = 8.314 J/(mol·K) and 0.08206 L·atm/(mol·K), STP = 273.15 K and 1.0 atm, 22.4 L/mol, h = 6.626 × 10⁻³⁴ J·s, c = 2.998 × 10⁸ m/s, PV = nRT, the combined gas law, P_A = P_total × X_A, P_total = P_A + P_B + ..., n = m/M, D = m/V, KE = ½mv², M = n_solute/L_solution, A = εbc, E = hν and c = λν. It gives neither the root-mean-square speed nor the van der Waals equation.
 7. **Framework exclusions in Unit 3:** phase diagrams (3.3); colligative properties (3.8); molality, percent by mass and percent by volume calculations (3.8).
 8. **Topic 3.9 names distillation** as well as chromatography (its item ii; the extracted text loses it, the PDF page shows it: PDF page 75, printed page 68).
+   > **Found while carrying out Group B (2026-11-14):** the extracted text loses more than that. In topic 3.1 it drops 3.1.A.1 items i and ii (dispersion forces grow with contact area and polarizability; polarizability grows with electrons and cloud size and is enhanced by pi bonding) and 3.1.A.2 item i (dipole–induced dipole forces). It also drops every Greek letter from the equations of 3.12 and 3.13. Lesson 3.1's brief below was written without the pi-bonding and dipole–induced dipole items; its fact-checker noticed, and the lesson has both. All fifteen topic pages (PDF 65–79) were then compared with the text, page picture against text: nothing else is missing, so the other briefs stand.
 9. **`svelte-check` is not installed**, so `.svelte` files are exercised only by the build and the browser tests. Do not add it in this plan.
 10. **The AP framework** is `D:\AP_Chem_Prep\Reference\ap-chemistry-course-and-exam-description.pdf` (2024; Unit 3 is printed pages 56 to 72). Its text is in the session scratch folder (`scratchpad/ced/ced.txt`, lines 2671–3430). Never copy it, or its wording, into the repository.
 
@@ -71,7 +72,7 @@ Established on 2026-11-14.
 As for Unit 2. A code task (Tasks 4 and 12) is done first by a single implementer, because its lesson uses the block. Then one writer agent per lesson, in parallel, writing files only: no build, no git, because concurrent builds collide. Then the controller does the rest, in order:
 1. one build and test run;
 2. a look at each lesson on a phone;
-3. one independent fact-checker per lesson, on Opus (`model: "opus"`);
+3. one independent fact-checker per lesson, on Fable 5.2 (`model: "fable"`; the teacher's decision of 2026-11-14, after the briefs had been checked on Opus);
 4. **one originality check for the group** (Sonnet), new for Unit 3;
 5. one fixer per lesson for the accepted findings (Sonnet), then the build and tests again;
 6. a code review of any code;
@@ -141,7 +142,7 @@ Expected: every unit test and every browser test passes, and the build prints `c
 
 **Look at it.** Run `npm run build && npx astro preview --port 4400`. Measure the lesson at 412, 390, 360 and 320 px with every "Show answer" open: the page must not scroll sideways, and nothing may scroll inside its own box except a wide table. Read it at 1280 px and at 390 px, in the light and the dark theme. Tests do not see a formula that rendered but is wrong, a figure that is illegible in the dark theme, or a table that is too wide. Fix what you find. Stop the preview server afterward and confirm nothing still listens on port 4400.
 
-**Fact-check, independently.** Dispatch a fresh agent on Opus that has not seen this plan's brief. Give it the lesson file, the built page, and the path of the framework text. It must:
+**Fact-check, independently.** Dispatch a fresh agent on Fable 5.2 that has not seen this plan's brief. It is the same model as the writer, so its independence rests on the fresh context and on solving before reading. Give it the lesson file, the built page, and the path of the framework text. It must:
 
 1. Solve every check and every worked example itself **before** reading the lesson's answer, then compare.
 2. Recompute every number in the lesson, including the ones in prose, tables and figures.
@@ -187,6 +188,22 @@ tests/e2e/diagram-maxwell-boltzmann.spec.ts diagram-absorbance.spec.ts
 ## Group B: forces and solids (pull request B)
 
 Branch: `topic/unit-3-forces-and-solids`, from an up-to-date `main` after this plan's pull request merges. Tasks 1 to 3. The pull request title is "feat(lessons): Unit 3 lessons 3.1-3.3, forces and solids".
+
+> **As carried out (2026-11-14).** The lessons are newer than the three briefs below. Each lesson had two rounds of fact-checks on Fable 5.2 and two originality checks; no round found a wrong answer or number. What changed, and why:
+>
+> - **Lesson 3.1**
+>   - **Two framework ideas added** that the extracted text had lost (Fact 8): a section on dipole–induced dipole forces (noble gases dissolving in water, xenon about ten times as well as helium) and pi bonds adding to polarizability.
+>   - **The worked example** ranks butane, acetone, 1-propanol and octane. The brief's set had H₂S as the polar member, but lesson 2.1 treats a 0.4 electronegativity difference as nonpolar, so a student could not reach "polar"; the fluoromethane it had replaced matched a Tro example. A sentence now says the ranking does not always go to the larger molecule (hexane boils below 1-propanol).
+>   - **Checks:** SCl₂ among BCl₃, XeF₄ and SiH₄ for dipole–dipole forces; PH₃ as a distractor for hydrogen bonding; which of K⁺, Na⁺, Mg²⁺ and Br⁻ attracts water most strongly (the brief's Check was answered by the caption above it). Trimethylamine is the "hydrogens all on carbon" example.
+> - **Lesson 3.2**
+>   - **Tables slimmed for phones:** three columns for the kinds of solid; shorter cells in the worked example.
+>   - **Solid D is mannitol** (167 °C): urea begins to decompose near its melting point. The melting Check asks about iodine, not naphthalene, which the text above it had just answered.
+>   - **Figures redrawn after the fact-check:** every diamond atom shows four lines and every graphite atom three; the molecular panel's molecules are packed close, since particles in a solid touch.
+>   - **Step 1 and the Trap** name graphite as the one common network solid that conducts.
+> - **Lesson 3.3**
+>   - **The worked example** compares one mole of lead as a solid (18.3 mL) and as a liquid (19.4 mL) with a mole of gas (about 1300 times more room). The brief's liquid-nitrogen example matched a Tro exercise, and so would any "liquid evaporates, find the gas volume" calculation. The ice-and-water molar volumes matched Tro's table and are gone; one sentence says water is the unusual case.
+>   - **The last Check** gives the temperature (50 °C) and asks for the pressure at which water boils (92.5 torr).
+>   - **The liquid panel** of the three-phases figure was repacked so every particle touches at least two others.
 
 ### Task 1: Lesson 3.1, Intermolecular and Interparticle Forces
 
