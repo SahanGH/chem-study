@@ -75,7 +75,28 @@ export function shownAnswer({ answer, numeric, unit }: CheckAnswer): string {
         'Put the unit in the `unit` attribute.',
     );
   }
-  return unit ? `${numeric} ${unit}` : numeric;
+  const shown = asPowerOfTen(numeric);
+  return unit ? `${shown} ${unit}` : shown;
+}
+
+const SUPERSCRIPT_DIGITS = '⁰¹²³⁴⁵⁶⁷⁸⁹';
+
+/**
+ * A lesson writes a very large or very small answer in e-notation
+ * ("5.86e-20"), which is what the grader reads. Students write it as a power
+ * of ten, so that is how the answer line shows it: "5.86 × 10⁻²⁰". The digits
+ * before the e are left as written, so their significant figures survive.
+ */
+function asPowerOfTen(numeric: string): string {
+  const match = /^(.+)e([+-]?)0*(\d+)$/i.exec(numeric.trim());
+  if (!match) return numeric;
+  const [, mantissa, sign, digits] = match;
+  // Both groups are present whenever the pattern matches; this is for the type checker.
+  if (mantissa === undefined || digits === undefined) {
+    throw new Error(`Could not read the power of ten in the numeric answer ${JSON.stringify(numeric)}.`);
+  }
+  const exponent = [...digits].map((digit) => SUPERSCRIPT_DIGITS.charAt(Number(digit))).join('');
+  return `${mantissa} × 10${sign === '-' ? '⁻' : ''}${exponent}`;
 }
 
 export function gradeNumeric(text: string, answer: number): NumericGrade {

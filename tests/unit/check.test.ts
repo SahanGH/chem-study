@@ -118,6 +118,22 @@ describe('shownAnswer', () => {
     expect(() => shownAnswer(fromMdx as CheckAnswer)).toThrow('as text');
   });
 
+  it('shows a tiny answer written in e-notation as a power of ten', () => {
+    expect(shownAnswer({ numeric: '5.86e-20', unit: 'J' })).toBe('5.86 × 10⁻²⁰ J');
+  });
+
+  it('shows a large answer written in e-notation without a plus sign', () => {
+    expect(shownAnswer({ numeric: '5.12e21' })).toBe('5.12 × 10²¹');
+  });
+
+  it('accepts a capital E, an explicit plus and a padded exponent', () => {
+    expect(shownAnswer({ numeric: '2.998E+08', unit: 'm/s' })).toBe('2.998 × 10⁸ m/s');
+  });
+
+  it('leaves the digits before the e exactly as written', () => {
+    expect(shownAnswer({ numeric: '-1.60e-19', unit: 'C' })).toBe('-1.60 × 10⁻¹⁹ C');
+  });
+
   it('throws when a choice question is given a unit', () => {
     expect(() => shownAnswer({ answer: 3, unit: 'M' })).toThrow('cannot have a `unit`');
   });
