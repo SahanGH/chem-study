@@ -144,3 +144,38 @@ None expected. The practice kind `test`, the blocks and the build check
 - No salt has two K_sp values anywhere on the site.
 - Both pages fit a phone at 320 px with every answer open, and pass the
   browser tests' accessibility checks.
+
+## As built (Plan 11, 2026-11-15)
+
+Two pages, 41 questions, 209 points, in three pull requests (#41 the design
+and plan, #42 session 1, then session 2 with these notes).
+
+- **Session 1:** 20 questions, 98 points (A 22, B 23, C 27, D 26). Topics:
+  7.1 ×3, 7.2 ×4, 7.3 ×5, 7.4 ×5, 7.5 ×3, 7.6 ×2.
+- **Session 2:** 21 questions, 111 points (E 35, F 15, G 30, H 31). Topics:
+  7.7 ×6, 7.8 ×3, 7.9 ×6, 7.10 ×5, 7.11 ×3, 7.12 ×3.
+- **The avoid list and the pools worked for the textbooks and the exam:**
+  no question matched a Tro item or the closed exam. The two strong matches
+  the originality checks found were with the site's **own** lesson 7.11
+  (a worked example and a Check), which the pools had cleared only by salt,
+  not by kind of question. Both questions were rewritten. Two systems are
+  also in a textbook outside the sources (Zumdahl): PH₃BCl₃ and
+  H₂O + Cl₂O ⇌ 2 HOCl, each now with its own numbers and task.
+- **The fact-checks found two errors of real chemistry, no wrong
+  arithmetic:** nitryl chloride's K far too small for a reaction "when
+  heated" (session 1, question 12; new pressures), and solid CuO and Cu
+  set at equilibrium together, which cannot be (session 2, question 13;
+  now FeO + CO). Every other number in both sessions was right the first
+  time; the number checks (A 137 values, B 55, C 55, D 66, E 120, F 86,
+  G 100, H 75 after the fixes) are what the fact-checkers re-ran.
+- **Most findings were rubric lines** that a sound answer by another route
+  could not earn; each now names the routes it accepts.
+- **On a phone** a rubric line with a long expression in a sentence pushed
+  session 2's page sideways at 320 px (a browser test failed); it is now
+  words. The tables of initial, change and equilibrium values inside some
+  answers scroll their last column inside the answer box at 320 px only,
+  as lesson 7.4's table does.
+- **Writers and fact-checkers ran on Opus**, not Fable: Fable's usage limit
+  was reached when the writers had just started (2026-11-15).
+- No "Beyond the exam" label was needed. The quadratic formula is used once
+  (session 2, question 6).
