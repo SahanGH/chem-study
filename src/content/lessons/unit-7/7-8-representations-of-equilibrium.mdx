@@ -1,0 +1,301 @@
+---
+topic: "7.8"
+minutes: 9
+summary: "How to read a particle drawing of a reversible reaction, counting molecules to find Q or K, to tell which way the mixture will go and what it holds at equilibrium."
+---
+
+Freeze a flask of reacting gas for an instant. If you could see the molecules, you could count them: so many of this kind, so many of that. A particle drawing is that frozen instant. Exam questions hand you one and ask three things. Is this mixture at equilibrium? If not, which way will it go? And what is $K$? All three answers come from counting.
+
+## Counting gives Q
+
+A **particle drawing** shows a sample as its particles, as in topic 3.8: a circle for each atom, and joined circles for a molecule. Each shape is one particle. So count molecules, not atoms: two circles joined together are one molecule.
+
+This lesson uses a made-up reaction. X and Y are made-up elements, and their molecules X₂ and Y₂ trade partners to make XY:
+
+$$
+\ce{X2(g) + Y2(g) <=> 2XY(g)}
+$$
+
+Its reaction quotient (topic 7.3) is
+
+$$
+Q = \frac{[\ce{XY}]^2}{[\ce{X2}][\ce{Y2}]}
+$$
+
+$Q$ is built from concentrations, and a drawing gives counts. Here that is no obstacle. Every species shares the one box, so each concentration is its count divided by the same volume. On top, two concentrations are multiplied, because the concentration of XY is squared. Underneath, two are multiplied as well. The volume appears twice on top and twice underneath, so it divides out, and the counts can go straight into the expression. The exponent stays: the count of XY is squared.
+
+<Figure
+  src="/figures/7-8-before-and-at-equilibrium.svg"
+  alt="Two boxes of the same size showing the reaction of X2 and Y2 to make XY. The box labeled before holds 6 X2 molecules and 6 Y2 molecules and no XY, so Q is 0. The box labeled at equilibrium holds 2 X2 molecules, 2 Y2 molecules and 8 XY molecules, so Q is 8 squared divided by 2 times 2, which is 16, the value of K. Each box holds 12 X atoms and 12 Y atoms."
+  caption="The same sealed mixture before equilibrium and at equilibrium. Count the atoms: 12 X and 12 Y in both boxes. From the counts at equilibrium, K = 16."
+/>
+
+Read the two boxes:
+
+- **Before.** The box holds 6 X₂ and 6 Y₂ and no XY. The top of the fraction is zero, so $Q$ = 0. The reaction can only run forward.
+
+- **At equilibrium.** The box holds 2 X₂, 2 Y₂ and 8 XY.
+
+  $$
+  K = \frac{8^2}{(2)(2)} = 16
+  $$
+
+  So at this temperature $K$ = 16.
+
+- **The atoms are all still there.** The first box holds 12 X atoms and 12 Y atoms: 6 molecules of each, 2 atoms apiece. In the second box, each X₂ holds two X atoms and each XY holds one:
+
+  $$
+  2(2) + 8 = 12\ \text{X atoms}
+  $$
+
+  The Y atoms count the same way, and there are 12 of them again. A reaction rearranges atoms. It never makes or loses one. Any pair of drawings of the same sealed mixture has to pass this test.
+
+- **The drawing is a snapshot, not a stop.** A drawing made a minute later would show the same counts, 2, 2 and 8, but not the same molecules. X₂ and Y₂ are still turning into XY, and XY is still breaking up, at equal rates (topic 7.1).
+
+So there are two ways to tell that a drawing shows equilibrium. Its counts give a $Q$ equal to $K$. Or a later drawing of the same mixture shows the same counts.
+
+When $Q$ is not equal to $K$, the comparison gives the direction, as in topic 7.7. $Q$ moves toward $K$. If $Q$ is less than $K$, the mixture makes more product. If $Q$ is greater than $K$, product turns back into reactants.
+
+<KeyIdea>
+
+For a reaction like this one, with the same number of particles on each side of the equation, count the molecules of each species and put the counts into the $Q$ expression, exponents included. If $Q$ equals $K$, the drawing shows equilibrium. If not, comparing $Q$ with $K$ says which way the mixture goes.
+
+</KeyIdea>
+
+<Check answer={3}>
+At the temperature of the figure, $K$ = 16 for X₂(g) + Y₂(g) ⇌ 2 XY(g). Another box at that temperature holds 2 X₂, 2 Y₂ and 14 XY. What happens next?
+
+- Nothing happens, because XY already outnumbers the other molecules and the box is at equilibrium.
+- More XY forms, because $Q$ = 3.5 is less than $K$.
+- Some XY breaks up into X₂ and Y₂, because $Q$ = 49 is greater than $K$.
+- It cannot be decided without the volume of the box.
+
+<div slot="why">
+
+Put the counts into the expression, with the count of XY squared:
+
+$$
+Q = \frac{14^2}{(2)(2)} = 49
+$$
+
+That is greater than 16, so there is too much XY, and the reaction runs toward X₂ and Y₂. Suppose two XY molecules then turn back into one X₂ and one Y₂. The box holds 3 X₂, 3 Y₂ and 12 XY:
+
+$$
+Q = \frac{12^2}{(3)(3)} = 16
+$$
+
+The box is then at equilibrium.
+
+Forgetting to square the 14 gives 14/4 = 3.5 and the opposite, wrong, direction. The volume is not needed, because it cancels for this reaction. And having more product molecules than reactant molecules does not mean equilibrium. Only $Q = K$ does.
+
+</div>
+</Check>
+
+## From a starting box to the equilibrium box
+
+The skill runs the other way too: given a starting drawing and $K$, work out the equilibrium drawing. With a handful of whole molecules there is a simple way. Let the reaction happen one event at a time, recount, and work out $Q$ again, until $Q$ reaches $K$.
+
+For this reaction, one forward event turns one X₂ and one Y₂ into two XY. One reverse event turns two XY into one X₂ and one Y₂.
+
+<Worked title="Finding the equilibrium box">
+
+At the same temperature, where $K$ = 16, a box holds 3 X₂, 6 Y₂ and 4 XY. Is it at equilibrium? If not, what will it hold when it is?
+
+1. **Count.** 3 X₂, 6 Y₂ and 4 XY. Those are molecules, not atoms.
+
+2. **Find $Q$.**
+
+   $$
+   Q = \frac{4^2}{(3)(6)} = 0.89
+   $$
+
+3. **Compare.** 0.89 is less than 16, so the box is not at equilibrium, and the reaction runs forward: X₂ and Y₂ turn into XY.
+
+4. **Step forward, one event at a time.** Each event uses one X₂ and one Y₂ and makes two XY. Recount after each one and work out $Q$ again.
+
+   | | X₂ | Y₂ | XY | $Q$ |
+   |---|---|---|---|---|
+   | Start | 3 | 6 | 4 | 0.89 |
+   | After 1 event | 2 | 5 | 6 | 3.6 |
+   | After 2 events | 1 | 4 | 8 | 16 |
+
+5. **Stop when $Q = K$.** After two events,
+
+   $$
+   Q = \frac{8^2}{(1)(4)} = 16
+   $$
+
+   The equilibrium box holds 1 X₂, 4 Y₂ and 8 XY. (A third event would use up the last X₂ and overshoot.)
+
+6. **Check the atoms.** Each X₂ holds two X atoms and each XY holds one. At the start, and then at equilibrium:
+
+   $$
+   \begin{aligned}
+   2(3) + 4 &= 10\ \text{X atoms} \\
+   2(1) + 8 &= 10\ \text{X atoms}
+   \end{aligned}
+   $$
+
+   The Y atoms, counted the same way:
+
+   $$
+   \begin{aligned}
+   2(6) + 4 &= 16\ \text{Y atoms} \\
+   2(4) + 8 &= 16\ \text{Y atoms}
+   \end{aligned}
+   $$
+
+   Nothing made, nothing lost.
+
+</Worked>
+
+A real sample holds an enormous number of molecules, so its equilibrium does not have to land on whole numbers. Drawings are built so that it does. With real concentrations you would use the table with x from topic 7.7.
+
+<Check numeric="8" unit="molecules">
+At the same temperature, where $K$ = 16, a box starts with 12 XY molecules and nothing else. How many XY molecules does it hold at equilibrium?
+
+<div slot="why">
+
+With no X₂ or Y₂ in the box, the reaction can only run backward. Each reverse event turns two XY into one X₂ and one Y₂.
+
+After one event the box holds 1 X₂, 1 Y₂ and 10 XY:
+
+$$
+Q = \frac{10^2}{(1)(1)} = 100
+$$
+
+That is still above 16. After two events it holds 2 X₂, 2 Y₂ and 8 XY:
+
+$$
+Q = \frac{8^2}{(2)(2)} = 16
+$$
+
+Now $Q = K$, so 8 XY remain.
+
+This is the equilibrium box of the figure, which started from 6 X₂ and 6 Y₂. The same atoms, 12 X and 12 Y, in the same box at the same temperature reach the same equilibrium from either side (topic 7.1).
+
+If you answered 10, you stopped after one event. If you answered 6, you went one event too far: 3 X₂, 3 Y₂ and 6 XY give a $Q$ of 4, which is below $K$. If you answered 12, you left the box as it was, but a box with no X₂ or Y₂ cannot be at equilibrium.
+
+</div>
+</Check>
+
+## When the two sides have different numbers of particles
+
+Counts go straight into $Q$ only when the volume cancels, and it cancels only when the equation has the same number of particles on each side. Take a made-up reaction in which two particles join into one:
+
+$$
+\ce{2Z(g) <=> Z2(g)}
+$$
+
+$$
+Q = \frac{[\ce{Z2}]}{[\ce{Z}]^2}
+$$
+
+Now there is one concentration on top and two multiplied underneath. One volume is left over, so the size of the box matters. You must turn the counts into concentrations before you use them, and the drawing has to tell you how: with the amount each particle stands for and the volume of the box, or with a scale that gives the concentration for each particle. In this lesson the scale is: **each particle stands for 0.010 M**. Topic 3.8 used a scale in the same way.
+
+<Figure
+  src="/figures/7-8-unequal-particles.svg"
+  alt="One box, labeled at equilibrium, holding 10 separate Z atoms and 5 Z2 molecules, for the reaction in which two Z join to make Z2. Each particle stands for 0.010 molar, so the concentration of Z is 0.10 molar and the concentration of Z2 is 0.050 molar, and K c is 0.050 divided by 0.10 squared, which is 5.0."
+  caption="Two particles on one side of the equation and one on the other: the volume does not cancel, so the counts are turned into concentrations with the scale before K is worked out."
+/>
+
+The box is at equilibrium, and it holds 10 Z and 5 Z₂. Use the scale, with every value in M:
+
+$$
+\begin{aligned}
+[\ce{Z}] &= 10 \times 0.010 = 0.10 \\
+[\ce{Z2}] &= 5 \times 0.010 = 0.050
+\end{aligned}
+$$
+
+Those are the numbers that go into the expression:
+
+$$
+K_c = \frac{0.050}{(0.10)^2} = 5.0
+$$
+
+The bare counts would have given 5/10² = 0.050, a hundred times too small. That 0.050 only happens to match the number in [Z₂]. It is a wrong value of $K_c$, not a concentration.
+
+Here is the habit to build. Before you count, add up the coefficients on each side of the equation, for the species that appear in $Q$. (A pure solid or a pure liquid is not in $Q$, so it does not count.) For X₂ + Y₂ ⇌ 2 XY that is 2 on the left and 2 on the right. Equal: the counts are enough. For 2 Z ⇌ Z₂ it is 2 and 1. Unequal: change the counts to concentrations first.
+
+<Check numeric="50">
+The sample in the figure is cooled to a different temperature, in the same box, and comes to equilibrium again. Now the box holds 4 Z and 8 Z₂. Each particle still stands for 0.010 M. What is $K_c$ for 2 Z(g) ⇌ Z₂(g) at the new temperature?
+
+<div slot="why">
+
+The atoms are the same 20 as in the figure: 10 + 2(5) there, and 4 + 2(8) here. Use the scale to get the concentrations, in M:
+
+$$
+\begin{aligned}
+[\ce{Z}] &= 4 \times 0.010 = 0.040 \\
+[\ce{Z2}] &= 8 \times 0.010 = 0.080
+\end{aligned}
+$$
+
+$$
+K_c = \frac{0.080}{(0.040)^2} = 50
+$$
+
+If you got 0.50, you most likely put in the bare counts, 8 and 4, and your answer is a hundred times too small. If you got 2.0, you most likely left off the exponent. If you got 0.020, your fraction is upside down.
+
+</div>
+</Check>
+
+## Comparing two drawings
+
+$K$ is a ratio, so you cannot judge it by eye from how many product molecules a box holds. To compare two equilibrium drawings, work out $K$ for each. One reaction has one $K$ at one temperature. If two equilibrium drawings of the same reaction give different values, they were made at different temperatures.
+
+<Check answer={1}>
+Two boxes show X₂(g) + Y₂(g) ⇌ 2 XY(g) at equilibrium, at two different temperatures. Box 1 holds 1 X₂, 1 Y₂ and 6 XY. Box 2 holds 4 X₂, 4 Y₂ and 8 XY. Which box is at the temperature where $K$ is larger?
+
+- Box 1, because the counts give a larger ratio there.
+- Box 2, because it holds more XY molecules.
+- Neither, because one reaction has only one value of $K$.
+- It cannot be decided, because the boxes hold different numbers of atoms.
+
+<div slot="why">
+
+Work out $K$ for each box. Box 1:
+
+$$
+K = \frac{6^2}{(1)(1)} = 36
+$$
+
+Box 2:
+
+$$
+K = \frac{8^2}{(4)(4)} = 4
+$$
+
+Box 2 has more XY, but it also has far more X₂ and Y₂ left over, and $K$ is the ratio.
+
+A reaction has one $K$ at one temperature, and these boxes are at different temperatures. The boxes do not need the same number of atoms, because they are separate samples. They do not even need to be the same size, because the volume cancels for this equation.
+
+</div>
+</Check>
+
+<Trap>
+
+Six mistakes come up again and again in these drawings:
+
+- **Counting atoms instead of molecules.** Two joined circles are one molecule of X₂, not two particles.
+- **Leaving out the exponent.** The count of XY is squared, because its coefficient is 2.
+- **Putting bare counts into $Q$ when the two sides of the equation have different numbers of particles.** Use the scale, or the moles per particle and the volume, to get concentrations first.
+- **Judging $K$ by which box holds more product.** Work out the ratio.
+- **Drawing an equilibrium box whose atoms do not match the starting box.** Atoms are conserved: count them.
+- **Reading an equilibrium drawing as a reaction that has stopped.** The counts stay the same while both directions keep running.
+
+</Trap>
+
+<KeyPoints>
+
+- In a particle drawing, count the particles of each species (a molecule is one particle). All of them share one volume, so each concentration is proportional to its count.
+- When the equation has the same number of particles on both sides, as in X₂ + Y₂ ⇌ 2 XY, the counts go straight into the $Q$ expression, with the coefficients as exponents.
+- When the two sides differ, as in 2 Z ⇌ Z₂, change the counts to concentrations first: use the scale, or the moles per particle and the volume, that the drawing gives.
+- A drawing shows equilibrium when its $Q$ equals $K$. If $Q$ is less than $K$, the mixture goes toward products. If $Q$ is greater than $K$, it goes toward reactants.
+- A drawing before equilibrium and a drawing at equilibrium of the same sealed mixture hold the same atoms, rearranged.
+- $K$ read from an equilibrium drawing is a ratio, so more product molecules does not by itself mean a larger $K$.
+
+</KeyPoints>
+
+<PracticeNext />
