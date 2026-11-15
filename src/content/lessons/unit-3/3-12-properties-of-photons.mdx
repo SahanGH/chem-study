@@ -1,0 +1,263 @@
+---
+topic: "3.12"
+minutes: 12
+summary: "How a photon's wavelength, frequency and energy are linked by c = λν and E = hν, and why absorbing or emitting a photon changes an atom's energy by exactly the photon's energy."
+---
+
+Under a black light, a white T-shirt glows blue. The lamp gives out ultraviolet light, which you cannot see. The shirt gives back blue light, which you can. The fabric took in one kind of light and sent out another, and each photon it sent out carries less energy than each photon it took in. By the end of this lesson you can say how much less.
+
+## Wavelength and frequency
+
+Topic 3.11 introduced the **photon**: light arrives in packets of energy, and each packet is one photon.
+
+Light also behaves as a wave. Its **wavelength**, $\lambda$ (the Greek letter lambda), is the distance from one crest to the next, in meters. Its **frequency**, $\nu$ (the Greek letter nu, not the letter v), is how many waves pass a point each second. Frequency is measured in s⁻¹, also written Hz, for hertz. The equation sheet says so: 1 Hz = 1 s⁻¹.
+
+Every kind of electromagnetic radiation travels through a vacuum at the same speed, the speed of light, $c = 2.998 \times 10^{8}\ \text{m/s}$. In air the speed is almost exactly the same.
+
+Each wave is one wavelength long, and $\nu$ of them go by every second. So the distance light covers in a second is the wavelength times the frequency:
+
+$$
+c = \lambda\nu
+$$
+
+Because $c$ is fixed, wavelength and frequency are inversely proportional. Halve the wavelength and the frequency doubles.
+
+<Check numeric="0.122" unit="m">
+A microwave oven works at a frequency of 2.45 GHz. What is the wavelength of its microwaves, in meters?
+
+<div slot="why">
+
+Giga means 10⁹, as the list of prefixes on the equation sheet says, so the frequency is $2.45 \times 10^{9}\ \text{s}^{-1}$. Rearrange $c = \lambda\nu$ for the wavelength.
+
+$$
+\begin{aligned}
+\lambda &= \frac{c}{\nu} \\
+&= \frac{2.998 \times 10^{8}\ \text{m/s}}{2.45 \times 10^{9}\ \text{s}^{-1}} \\
+&= 0.122\ \text{m}
+\end{aligned}
+$$
+
+That is about 12 cm, inside the microwave region of topic 3.11 (about 1 m to 1 mm).
+
+</div>
+</Check>
+
+## The energy of one photon
+
+Planck's equation gives the energy of a single photon:
+
+$$
+E = h\nu
+$$
+
+Here $h$ is **Planck's constant**, $6.626 \times 10^{-34}\ \text{J·s}$. It is a tiny number, so one photon carries a tiny amount of energy. For visible light, photon energies come out at a few times 10⁻¹⁹ J.
+
+Most problems give you a wavelength, not a frequency. So chain the two equations: find the frequency from $\nu = c/\lambda$, then the energy from $E = h\nu$. Or put the two together and do it in one step:
+
+$$
+E = \frac{hc}{\lambda}
+$$
+
+The equation sheet gives $c = \lambda\nu$ and $E = h\nu$, with the values of $h$ and $c$. It does not give the combined form, so be ready to build it.
+
+Either way, the wavelength must be in meters. Remember that 1 nm = 10⁻⁹ m.
+
+The chain says it all: shorter wavelength, higher frequency, more energy.
+
+<KeyIdea>
+
+A photon's energy is set by its frequency: $E = h\nu$. Shorter wavelength means higher frequency and more energy. Put the wavelength in meters before you use $c = \lambda\nu$.
+
+</KeyIdea>
+
+<Worked title="The black light and the T-shirt">
+
+A black light gives out ultraviolet light of wavelength 365 nm. A dye in the fabric, called a brightener, absorbs it and gives out blue light of wavelength 445 nm. Find the energy of each photon, and how much of the absorbed energy each brightener molecule does not give back as light.
+
+1. **Convert the wavelength to meters.** Start with the ultraviolet photon.
+
+   $$
+   \begin{aligned}
+   &365\ \text{nm} \times \frac{10^{-9}\ \text{m}}{1\ \text{nm}} \\
+   &= 3.65 \times 10^{-7}\ \text{m}
+   \end{aligned}
+   $$
+
+2. **Find the frequency.** Rearrange $c = \lambda\nu$.
+
+   $$
+   \begin{aligned}
+   \nu &= \frac{c}{\lambda} \\
+   &= \frac{2.998 \times 10^{8}\ \text{m/s}}{3.65 \times 10^{-7}\ \text{m}} \\
+   &= 8.21 \times 10^{14}\ \text{s}^{-1}
+   \end{aligned}
+   $$
+
+3. **Find the energy.**
+
+   $$
+   \begin{aligned}
+   E &= h\nu \\
+   &= (6.626 \times 10^{-34}\ \text{J·s}) \\
+   &\quad \times (8.21 \times 10^{14}\ \text{s}^{-1}) \\
+   &= 5.44 \times 10^{-19}\ \text{J}
+   \end{aligned}
+   $$
+
+4. **Do the blue photon in one step.** Its wavelength, 445 nm, is $4.45 \times 10^{-7}\ \text{m}$. Use $E = hc/\lambda$, with $h$ in J·s, $c$ in m/s and $\lambda$ in meters.
+
+   $$
+   \begin{aligned}
+   E &= \frac{hc}{\lambda} \\
+   &= \frac{(6.626 \times 10^{-34})(2.998 \times 10^{8})}{4.45 \times 10^{-7}} \\
+   &= 4.46 \times 10^{-19}\ \text{J}
+   \end{aligned}
+   $$
+
+   The units cancel to leave joules:
+
+   $$
+   \frac{\text{J·s} \times \text{m/s}}{\text{m}} = \text{J}
+   $$
+
+5. **Compare.**
+
+   $$
+   \begin{aligned}
+   &5.44 \times 10^{-19}\ \text{J} - 4.46 \times 10^{-19}\ \text{J} \\
+   &= 0.98 \times 10^{-19}\ \text{J} \\
+   &= 9.8 \times 10^{-20}\ \text{J}
+   \end{aligned}
+   $$
+
+   Each molecule takes in $5.44 \times 10^{-19}\ \text{J}$ and gives back $4.46 \times 10^{-19}\ \text{J}$ as blue light. The other $9.8 \times 10^{-20}\ \text{J}$ goes to the neighboring molecules as heat. As expected, the photon with the longer wavelength carries less energy.
+
+</Worked>
+
+<Check numeric="3.45e-20" unit="J">
+A bond in a made-up molecule, Y, absorbs an infrared photon with a frequency of $5.20 \times 10^{13}\ \text{s}^{-1}$ and vibrates more. By how much does the molecule's energy go up? (To type a power of ten such as 2.5 × 10⁻³, write 2.5e-3 or 2.5 x 10^-3.)
+
+<div slot="why">
+
+The molecule's energy rises by exactly the photon's energy.
+
+$$
+\begin{aligned}
+E &= h\nu \\
+&= (6.626 \times 10^{-34}\ \text{J·s}) \\
+&\quad \times (5.20 \times 10^{13}\ \text{s}^{-1}) \\
+&= 3.45 \times 10^{-20}\ \text{J}
+\end{aligned}
+$$
+
+</div>
+</Check>
+
+<Check answer={3}>
+Photon A has a wavelength of 300 nm (ultraviolet). Photon B has a wavelength of 2400 nm (infrared). Which carries more energy, and how many times as much?
+
+- B, 8 times as much
+- A, 64 times as much
+- A, 8 times as much
+- They carry the same energy, because both travel at the speed of light.
+
+<div slot="why">
+
+Energy is inversely proportional to wavelength:
+
+$$
+E = \frac{hc}{\lambda}
+$$
+
+B's wavelength is longer by a factor of
+
+$$
+\frac{2400\ \text{nm}}{300\ \text{nm}} = 8
+$$
+
+so A carries 8 times the energy. The 64 is 8 squared, but energy goes as 1/λ, not as 1/λ². Both photons do travel at the speed of light. That sets only the link between wavelength and frequency, not the energy.
+
+</div>
+</Check>
+
+## Absorbing and emitting
+
+An atom or molecule has definite energy levels, the rungs of the ladder in topic 3.11. When it absorbs a photon, its energy goes up by exactly the photon's energy. When it emits a photon, its energy goes down by exactly the photon's energy. A photon cannot be partly absorbed: the atom takes all of it or none of it.
+
+So the gap between two levels, $\Delta E$, fixes the photon that goes with them:
+
+$$
+\Delta E = h\nu = \frac{hc}{\lambda}
+$$
+
+<Figure
+  src="/figures/3-12-absorb-emit.svg"
+  alt="Two energy levels, a lower one and a higher one, separated by an energy gap labeled delta E. On the left, absorption: a photon arrives and the atom moves up from the lower level to the higher one. On the right, emission: the atom drops from the higher level to the lower one and a photon leaves. In both cases the photon's energy equals delta E."
+  caption="The photon's energy always equals the gap: a photon in for a jump up, a photon out for a drop down."
+/>
+
+Now back to the T-shirt. The brightener's blue photon carries less energy than the ultraviolet photon it absorbed. That does not break the rule. Part of the absorbed energy went to the molecule's neighbors as heat along the way, so the drop that made the blue photon was a smaller one.
+
+<Check answer={1}>
+A molecule in its lowest energy level absorbs a photon carrying $3.1 \times 10^{-19}\ \text{J}$. It then drops straight back to its lowest level by giving out a single photon. What is the energy of that photon?
+
+- 3.1 × 10⁻¹⁹ J, the same as the photon absorbed
+- Less than 3.1 × 10⁻¹⁹ J, because some energy is always used up
+- More than 3.1 × 10⁻¹⁹ J
+- It depends on how bright the light was.
+
+<div slot="why">Absorbing raised the molecule's energy by exactly 3.1 × 10⁻¹⁹ J. Dropping straight back to the same level lowers it by the same amount, and the single photon carries all of it. The T-shirt's photon carried less energy, because that molecule lost part of its energy as heat along the way. This one did not.</div>
+</Check>
+
+<Check numeric="621" unit="nm">
+Two energy levels in an atom of element X are $3.20 \times 10^{-19}\ \text{J}$ apart. What wavelength of light, in nanometers, does the atom give out when it drops from the higher level to the lower one?
+
+<div slot="why">
+
+The photon carries exactly the gap, so its energy is $3.20 \times 10^{-19}\ \text{J}$. Rearrange $E = hc/\lambda$ for the wavelength, with $h$ in J·s, $c$ in m/s and $E$ in joules.
+
+$$
+\begin{aligned}
+\lambda &= \frac{hc}{E} \\
+&= \frac{(6.626 \times 10^{-34})(2.998 \times 10^{8})}{3.20 \times 10^{-19}} \\
+&= 6.21 \times 10^{-7}\ \text{m}
+\end{aligned}
+$$
+
+Then convert to nanometers.
+
+$$
+\begin{aligned}
+&6.21 \times 10^{-7}\ \text{m} \times \frac{1\ \text{nm}}{10^{-9}\ \text{m}} \\
+&= 621\ \text{nm}
+\end{aligned}
+$$
+
+That is orange-red visible light. Element X is made up for this question.
+
+</div>
+</Check>
+
+<Trap>
+
+Five mistakes come up again and again on this topic:
+
+- **Leaving the wavelength in nanometers.** Convert to meters first: multiply the number of nanometers by 10⁻⁹.
+- **Putting a wavelength into $E = h\nu$.** That equation needs the frequency. With a wavelength, find $\nu = c/\lambda$ first, or use $E = hc/\lambda$.
+- **Reading $\nu$ as v.** The Greek letter nu, $\nu$, is frequency. The $v$ on the equation sheet is the velocity in $KE = \frac{1}{2}mv^2$.
+- **Thinking brighter light has more energetic photons.** A brighter lamp of the same color sends out more photons each second. Each one carries the same energy, set by its frequency.
+- **Thinking an atom can keep part of a photon.** Absorbing a photon raises the atom's energy by exactly the photon's energy, never by part of it.
+
+</Trap>
+
+<KeyPoints>
+
+- Light comes as photons, each with a wavelength $\lambda$ and a frequency $\nu$ linked by $c = \lambda\nu$, where $c = 2.998 \times 10^{8}\ \text{m/s}$.
+- A photon's energy is $E = h\nu$, or $E = hc/\lambda$, with $h = 6.626 \times 10^{-34}\ \text{J·s}$ and the wavelength in meters.
+- Shorter wavelength means higher frequency and more energy per photon.
+- Absorbing a photon raises an atom's or molecule's energy by exactly the photon's energy, and emitting one lowers it by exactly that much.
+- So the gap between two energy levels sets the wavelength of the light absorbed or emitted between them.
+
+</KeyPoints>
+
+<PracticeNext />
