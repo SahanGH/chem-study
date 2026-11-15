@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 364" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Two beakers of the same size; each ion drawn stands for the same amount, and water is not drawn. Left, "in pure water": dissolved 2 Pb2+ and 2 SO4 2-; solid, 2 rows of 6 (6 Pb2+ and 6 SO4 2-). Right, "in sodium sulfate solution": dissolved 1 Pb2+, 4 SO4 2- and 6 Na+; solid, 2 rows of 7 (7 Pb2+ and 7 SO4 2-). Each beaker holds 8 Pb2+ in all. Dissolved charges add to zero: 2(+2) + 2(-2) = 0 and 1(+2) + 6(+1) + 4(-2) = 0. Dissolved Pb2+ times dissolved SO4 2- is 4 in both beakers. Pb2+: small dark circle (radius 10). SO4 2-: larger pale circle (radius 16). Na+: small open circle with a dashed outline (radius 9). In the solid the ions sit on a square grid 26 apart (10 + 16), so every ion touches only ions of the other kind. No dissolved ion touches another ion or the solid. Each kind of ion is labeled once. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <defs>
+    <g id="beaker">
+      <path d="M-107 78H107V281a10 10 0 0 1 -10 10H-97a10 10 0 0 1 -10 -10Z" fill="#4F706C" fill-opacity="0.12"/>
+      <path d="M-107 78H107" fill="none" stroke="#4F706C" stroke-width="1.5"/>
+      <path d="M-113 54L-108 60V281a11 11 0 0 0 11 11H97a11 11 0 0 0 11 -11V60L113 54" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+    </g>
+    <circle id="pb" r="10" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+    <circle id="so4" r="16" fill="#B7C4C1" stroke="#26231F" stroke-width="1.5"/>
+    <circle id="na" r="9" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5" stroke-dasharray="4 3.07"/>
+  </defs>
+  <rect width="480" height="364" fill="#FDFCF9"/>
+
+  <!-- Left beaker: pure water. -->
+  <text x="121" y="42" text-anchor="middle" fill="#26231F" font-weight="600">in pure water</text>
+  <g transform="translate(121 0)">
+    <use href="#beaker"/>
+    <!-- Dissolved: 2 Pb2+ and 2 SO4 2-. -->
+    <use href="#pb" x="-70" y="112"/>
+    <use href="#so4" x="58" y="116"/>
+    <use href="#so4" x="-52" y="180"/>
+    <use href="#pb" x="72" y="184"/>
+    <text x="-55" y="118" fill="#26231F">Pb<tspan dy="-7" font-size="14">2+</tspan></text>
+    <text x="-31" y="186" fill="#26231F">SO<tspan dy="4" font-size="14">4</tspan><tspan dy="-11" font-size="14">2&#8722;</tspan></text>
+    <!-- Solid: top row Pb, SO4, Pb, SO4, Pb, SO4; bottom row SO4, Pb, SO4, Pb, SO4, Pb. -->
+    <use href="#pb" x="-65" y="246"/>
+    <use href="#so4" x="-39" y="246"/>
+    <use href="#pb" x="-13" y="246"/>
+    <use href="#so4" x="13" y="246"/>
+    <use href="#pb" x="39" y="246"/>
+    <use href="#so4" x="65" y="246"/>
+    <use href="#so4" x="-65" y="272"/>
+    <use href="#pb" x="-39" y="272"/>
+    <use href="#so4" x="-13" y="272"/>
+    <use href="#pb" x="13" y="272"/>
+    <use href="#so4" x="39" y="272"/>
+    <use href="#pb" x="65" y="272"/>
+  </g>
+  <text x="121" y="320" text-anchor="middle" fill="#26231F">2 × 2 = 4</text>
+
+  <!-- Right beaker: sodium sulfate solution. -->
+  <text x="359" y="20" text-anchor="middle" fill="#26231F" font-weight="600">in sodium sulfate</text>
+  <text x="359" y="42" text-anchor="middle" fill="#26231F" font-weight="600">solution</text>
+  <g transform="translate(359 0)">
+    <use href="#beaker"/>
+    <!-- Dissolved: 1 Pb2+, 4 SO4 2- and 6 Na+. -->
+    <use href="#so4" x="-80" y="106"/>
+    <use href="#na" x="-36" y="100"/>
+    <use href="#so4" x="52" y="110"/>
+    <use href="#na" x="88" y="96"/>
+    <use href="#na" x="-88" y="152"/>
+    <use href="#pb" x="-40" y="156"/>
+    <use href="#so4" x="14" y="152"/>
+    <use href="#na" x="72" y="154"/>
+    <use href="#so4" x="-66" y="196"/>
+    <use href="#na" x="-12" y="200"/>
+    <use href="#na" x="46" y="196"/>
+    <text x="-22" y="106" fill="#26231F">Na<tspan dy="-7" font-size="14">+</tspan></text>
+    <!-- Solid: top row Pb, SO4, Pb, SO4, Pb, SO4, Pb; bottom row SO4, Pb, SO4, Pb, SO4, Pb, SO4. -->
+    <use href="#pb" x="-78" y="246"/>
+    <use href="#so4" x="-52" y="246"/>
+    <use href="#pb" x="-26" y="246"/>
+    <use href="#so4" x="0" y="246"/>
+    <use href="#pb" x="26" y="246"/>
+    <use href="#so4" x="52" y="246"/>
+    <use href="#pb" x="78" y="246"/>
+    <use href="#so4" x="-78" y="272"/>
+    <use href="#pb" x="-52" y="272"/>
+    <use href="#so4" x="-26" y="272"/>
+    <use href="#pb" x="0" y="272"/>
+    <use href="#so4" x="26" y="272"/>
+    <use href="#pb" x="52" y="272"/>
+    <use href="#so4" x="78" y="272"/>
+  </g>
+  <text x="359" y="320" text-anchor="middle" fill="#26231F">1 × 4 = 4</text>
+
+  <text x="240" y="350" text-anchor="middle" fill="#6B655D">water molecules not drawn</text>
+</svg>

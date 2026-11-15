@@ -1,0 +1,369 @@
+---
+topic: "7.12"
+minutes: 13
+summary: "Why a salt is less soluble in a solution that already holds one of its ions, how to calculate by how much, and how chemists use the effect in the lab."
+---
+
+A lab has to find out how much lead is dissolved in a sample of waste water. One way is to add sulfate ions. The lead comes out of the water as a white solid, lead(II) sulfate, which can be filtered off, dried and weighed. A solid that forms out of a solution like this is called a **precipitate** (topic 4.7).
+
+The chemist doing it adds more sulfate than the lead can use. That is not carelessness. The extra sulfate pushes lead out of the solution that would otherwise have stayed in it, and this lesson shows how.
+
+## An ion that is already there
+
+Take a saturated solution of lead(II) sulfate: water that holds as much of the dissolved salt as it can, with solid lying on the bottom (topic 7.11).
+
+$$
+\ce{PbSO4(s) <=> Pb^2+(aq) + SO4^2-(aq)}
+$$
+
+$$
+\begin{aligned}
+K_{sp} &= [\ce{Pb^2+}][\ce{SO4^2-}] \\
+&= 2.53 \times 10^{-8}
+\end{aligned}
+$$
+
+That value is for 25 °C, like every $K_{sp}$ in this lesson. In pure water each mole that dissolves gives one mole of each ion, so each ion's concentration is the molar solubility, $s$, and $K_{sp}$ is $s^2$ (topic 7.11). The calculated molar solubility is
+
+$$
+\begin{aligned}
+s &= \sqrt{2.53 \times 10^{-8}} \\
+&= 1.59 \times 10^{-4}\ \text{M}
+\end{aligned}
+$$
+
+Now dissolve the same solid in a solution of sodium sulfate instead of in pure water. The water already holds sulfate ions before any lead(II) sulfate has dissolved. Sulfate is a **common ion**: an ion that the dissolving salt and the solution have in common.
+
+The result: less lead(II) sulfate dissolves than in pure water. This drop in a salt's solubility, caused by an ion that is already in the solution, is the **common-ion effect**. It works for either ion. A solution of lead(II) nitrate, which supplies Pb²⁺, lowers the solubility of PbSO₄ too. A salt with no ion in common, such as sodium nitrate, does not have this effect.
+
+What has not changed is $K_{sp}$. It is a constant for the salt at that temperature, whatever else is in the water. Topic 7.11 called $K_{sp}$ a constant and solubility an amount that $K_{sp}$ fixes for pure water. Here the water is not pure, and the amount is different.
+
+<Figure
+  src="/figures/7-12-common-ion.svg"
+  alt="Two beakers of the same size, each with solid lead sulfate on the bottom. In the left beaker, pure water, 2 lead ions and 2 sulfate ions are dissolved. In the right beaker, sodium sulfate solution, 1 lead ion, 4 sulfate ions and 6 sodium ions are dissolved, and the block of solid on the bottom is larger. Under the left beaker it says 2 times 2 equals 4, and under the right beaker 1 times 4 equals 4."
+  caption="With sulfate already in the water, less lead(II) sulfate dissolves: one lead ion in solution, not two. The beakers hold the same volume of solution. The number of lead ions times the number of sulfate ions is the same in both beakers, because the solubility-product constant is the same."
+/>
+
+## Two ways to see why
+
+First, without numbers. A saturated solution with solid in it is an equilibrium, so Le Châtelier's principle (topic 7.9) applies. Sulfate is a product of the dissolving equation. Add a product and the equilibrium shifts toward reactants, and here the reactant is the solid: Pb²⁺ and SO₄²⁻ ions come out of solution as solid PbSO₄. Less lead is left dissolved, which is to say the salt is less soluble.
+
+Second, with numbers (topic 7.10). Take the saturated solution in pure water, where [Pb²⁺] and [SO₄²⁻] are both 1.59 × 10⁻⁴ M, and dissolve enough sodium sulfate in it to raise [SO₄²⁻] to 5.00 × 10⁻³ M. At that moment, before anything has reacted:
+
+$$
+\begin{aligned}
+Q &= [\ce{Pb^2+}][\ce{SO4^2-}] \\
+&= (1.59 \times 10^{-4})(5.00 \times 10^{-3}) \\
+&= 7.95 \times 10^{-7}
+\end{aligned}
+$$
+
+That is about 30 times $K_{sp}$ (2.53 × 10⁻⁸). $Q$ is greater than $K_{sp}$, so the reaction runs toward the solid: PbSO₄ precipitates, and [Pb²⁺] falls until $Q$ is back down to $K_{sp}$.
+
+The two explanations are one explanation told twice. The second gives a number.
+
+<KeyIdea>
+
+A common ion lowers a salt's solubility. It does not change $K_{sp}$. The ion concentrations, each raised to its coefficient, still multiply out to the same $K_{sp}$, so when one of them is large the other must be small.
+
+</KeyIdea>
+
+<Check answer={3}>
+A saturated solution of lead(II) iodide, PbI₂, is filtered. The clear solution still holds as much dissolved salt as it can, but no solid. Which addition makes yellow solid lead(II) iodide appear in it?
+
+- A little distilled water
+- A few crystals of potassium nitrate, KNO₃
+- A few crystals of potassium iodide, KI
+- More of the same filtered solution
+
+<div slot="why">
+
+Potassium iodide dissolves and adds I⁻, an ion that lead(II) iodide also gives.
+
+$$
+\ce{PbI2(s) <=> Pb^2+(aq) + 2I^-(aq)}
+$$
+
+$$
+Q = [\ce{Pb^2+}][\ce{I^-}]^2
+$$
+
+The filtered solution still holds as much dissolved salt as it can, so its $Q$ starts equal to $K_{sp}$. The added iodide raises $Q$ above $K_{sp}$, so the reaction runs toward the solid and lead(II) iodide precipitates.
+
+Potassium nitrate has no ion in common with lead(II) iodide. Water lowers both ion concentrations, so $Q$ falls below $K_{sp}$. More of the same solution has the same concentrations, so $Q$ does not change.
+
+</div>
+</Check>
+
+## How much less soluble?
+
+The calculation is the one from topic 7.11 with one difference: the common ion does not start at zero. Set it out as a table with a row for the start, a row for the change and a row for equilibrium, as in topic 7.7. The unknown is the molar solubility, so this lesson calls it $s$.
+
+One reminder from topic 7.7. When the amount that dissolves is tiny beside the number it is added to, leave it out of the sum and solve. Then check that it is under 5 percent of that number, and state the percentage.
+
+<Worked title="Calcium iodate in an iodate solution">
+
+Calculate the molar solubility of calcium iodate, Ca(IO₃)₂, in 0.200 M potassium iodate, KIO₃. For calcium iodate, $K_{sp}$ = 6.47 × 10⁻⁶.
+
+1. **Write the equation and the expression.**
+
+   $$
+   \begin{aligned}
+   &\ce{Ca(IO3)2(s) <=>} \\
+   &\quad \ce{Ca^2+(aq) + 2IO3^-(aq)}
+   \end{aligned}
+   $$
+
+   $$
+   K_{sp} = [\ce{Ca^2+}][\ce{IO3^-}]^2
+   $$
+
+2. **Set up the table.** Potassium iodate is soluble, like every potassium salt (topic 4.7), so before any calcium iodate dissolves [IO₃⁻] is 0.200 M and [Ca²⁺] is 0. Let $s$ be the molar solubility: $s$ mol/L of Ca(IO₃)₂ dissolves, giving $s$ of Ca²⁺ and $2s$ of IO₃⁻. Every value is in M. The rows are labeled I, C and E, for Initial, Change and Equilibrium, and the solid is not in the table:
+
+   | | [Ca²⁺] | [IO₃⁻] |
+   |---|---|---|
+   | I | 0 | 0.200 |
+   | C | +s | +2s |
+   | E | s | 0.200 + 2s |
+
+3. **Substitute.**
+
+   $$
+   \begin{aligned}
+   K_{sp} &= (s)(0.200 + 2s)^2 \\
+   &= 6.47 \times 10^{-6}
+   \end{aligned}
+   $$
+
+4. **Approximate.** The salt is only slightly soluble, and the iodate already there holds it back further, so $2s$ should be tiny beside 0.200. Leave it out of the sum.
+
+   $$
+   (s)(0.200)^2 = 6.47 \times 10^{-6}
+   $$
+
+   $$
+   \begin{aligned}
+   s &= \frac{6.47 \times 10^{-6}}{0.0400} \\
+   &= 1.62 \times 10^{-4}\ \text{M}
+   \end{aligned}
+   $$
+
+5. **Check the approximation.** What was left out is $2s$, which is 3.2 × 10⁻⁴ M.
+
+   $$
+   \frac{3.2 \times 10^{-4}}{0.200} \times 100\% = 0.16\%
+   $$
+
+   That is far under 5 percent, so the approximation holds.
+
+6. **Read the result.** By this calculation, a liter of this solution dissolves 1.62 × 10⁻⁴ mol of calcium iodate, about 0.063 g (its molar mass is 389.88 g/mol). The solution then holds 1.62 × 10⁻⁴ M Ca²⁺, and its iodate concentration is still 0.200 M to three significant figures: nearly every iodate ion in it came from the potassium iodate.
+
+   That iodate went in as 0.200 M, not 0.400 M. The 2 in the equation belongs to the iodate that comes from the calcium iodate (the $2s$), and the exponent 2 applies to the whole iodate concentration.
+
+</Worked>
+
+<Check numeric="8.50e-5" unit="M">
+Strontium fluoride, SrF₂, has $K_{sp}$ = 4.33 × 10⁻⁹ at 25 °C. Calculate its molar solubility in 0.150 M strontium nitrate, Sr(NO₃)₂.
+
+<div slot="why">
+
+$$
+\ce{SrF2(s) <=> Sr^2+(aq) + 2F^-(aq)}
+$$
+
+This time the common ion is the cation. Strontium nitrate is soluble, like every nitrate (topic 4.7), so [Sr²⁺] starts at 0.150 M and [F⁻] starts at 0. At equilibrium [Sr²⁺] is $0.150 + s$ and [F⁻] is $2s$.
+
+$$
+\begin{aligned}
+K_{sp} &= (0.150 + s)(2s)^2 \\
+&\approx (0.150)(4s^2)
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+s &= \sqrt{\frac{4.33 \times 10^{-9}}{4 \times 0.150}} \\
+&= 8.50 \times 10^{-5}\ \text{M}
+\end{aligned}
+$$
+
+Check the approximation. What was left out is $s$.
+
+$$
+\begin{aligned}
+&\frac{8.50 \times 10^{-5}}{0.150} \times 100\% \\
+&= 0.057\%
+\end{aligned}
+$$
+
+That is far under 5 percent.
+
+If you got 1.70 × 10⁻⁴ M, you left out the 4 by writing [F⁻] as $s$; that answer is twice too large. If you got 1.03 × 10⁻³ M, you ignored the strontium nitrate and set $K_{sp}$ equal to $4s^3$, which holds only in pure water.
+
+</div>
+</Check>
+
+The approximation is safe when the common ion is much more concentrated than the salt could ever make it. It is not safe when the common ion is very dilute. Try lead(II) sulfate ($K_{sp}$ = 2.53 × 10⁻⁸) in 1.00 × 10⁻⁴ M sodium sulfate. Leaving $s$ out of the sum gives
+
+$$
+\begin{aligned}
+s &= \frac{2.53 \times 10^{-8}}{1.00 \times 10^{-4}} \\
+&= 2.53 \times 10^{-4}\ \text{M}
+\end{aligned}
+$$
+
+which is 253 percent of the 1.00 × 10⁻⁴ M it was supposed to be small beside. It is also more than the 1.59 × 10⁻⁴ M calculated for pure water, which cannot be right: a common ion lowers the solubility. The check fails, so the full equation
+
+$$
+\begin{aligned}
+&s(1.00 \times 10^{-4} + s) \\
+&= 2.53 \times 10^{-8}
+\end{aligned}
+$$
+
+has to be solved with the quadratic formula, as in topic 7.7, which gives $s$ = 1.17 × 10⁻⁴ M. This case is rare on the exam, and the check is what tells you which case you are in.
+
+The table also runs the other way. If you are told how much of a salt dissolves in a solution that holds a common ion, fill in the equilibrium row with numbers and put them into the $K_{sp}$ expression.
+
+<Check numeric="3.17e-8">
+Suppose a measurement finds that the molar solubility of silver iodate, AgIO₃, at 25 °C in 0.0160 M potassium iodate, KIO₃, is 1.98 × 10⁻⁶ M. What value of $K_{sp}$ does that give?
+
+<div slot="why">
+
+$$
+\begin{aligned}
+&\ce{AgIO3(s) <=>} \\
+&\quad \ce{Ag+(aq) + IO3^-(aq)}
+\end{aligned}
+$$
+
+At equilibrium [Ag⁺] is 1.98 × 10⁻⁶ M, all of it from the silver iodate. The iodate is the 0.0160 M from the potassium iodate plus 1.98 × 10⁻⁶ M from the silver iodate, which is still 0.0160 M to three significant figures.
+
+$$
+\begin{aligned}
+K_{sp} &= [\ce{Ag+}][\ce{IO3^-}] \\
+&= (1.98 \times 10^{-6})(0.0160) \\
+&= 3.17 \times 10^{-8}
+\end{aligned}
+$$
+
+That is the $K_{sp}$ the salt has in pure water too: the common ion changed how much dissolves, not the constant.
+
+If you got 3.92 × 10⁻¹², you squared the given solubility, as if the water were pure.
+
+</div>
+</Check>
+
+## The common ion in the lab
+
+Back to the waste water of the opening. When an ion is to be collected as a solid and weighed, every bit of it that stays dissolved is an error in the result. The common-ion effect is the chemist's tool for leaving less behind: the other ion of the solid is added in excess, and the extra is a common ion.
+
+The question to be able to answer about any such procedure is the one the next example asks. If a step is changed, what happens to the result, and why?
+
+<Worked title="Just enough sulfate, or extra?">
+
+The waste-water sample of the opening holds 0.350 g of dissolved lead as Pb²⁺. The lead is precipitated as PbSO₄ ($K_{sp}$ = 2.53 × 10⁻⁸), and in each case the final volume of the mixture is 200.0 mL.
+
+Procedure A adds exactly as many moles of sulfate as there are moles of lead. Procedure B adds extra sodium sulfate, a little more than twice what the lead needs, so that [SO₄²⁻] is 0.0100 M once the solid has formed. How much lead is still dissolved, and so never reaches the balance, in each?
+
+1. **Procedure A: the concentration of lead left.** With equal moles of the two ions, whatever stays dissolved has [Pb²⁺] equal to [SO₄²⁻], just as in pure water.
+
+   $$
+   \begin{aligned}
+   [\ce{Pb^2+}] &= \sqrt{2.53 \times 10^{-8}} \\
+   &= 1.59 \times 10^{-4}\ \text{M}
+   \end{aligned}
+   $$
+
+2. **Procedure A: the mass of lead left.** The volume is 0.2000 L, and the molar mass of lead is 207.2 g/mol.
+
+   $$
+   \begin{aligned}
+   &(1.59 \times 10^{-4}\ \text{mol/L})(0.2000\ \text{L}) \\
+   &= 3.18 \times 10^{-5}\ \text{mol}
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   &(3.18 \times 10^{-5}\ \text{mol})(207.2\ \text{g/mol}) \\
+   &= 6.59 \times 10^{-3}\ \text{g}
+   \end{aligned}
+   $$
+
+   That is 6.59 mg.
+
+3. **Procedure B: the concentration of lead left.** The sulfate concentration at equilibrium is given, so no approximation is needed.
+
+   $$
+   \begin{aligned}
+   [\ce{Pb^2+}] &= \frac{K_{sp}}{[\ce{SO4^2-}]} \\
+   &= \frac{2.53 \times 10^{-8}}{0.0100} \\
+   &= 2.53 \times 10^{-6}\ \text{M}
+   \end{aligned}
+   $$
+
+4. **Procedure B: the mass of lead left.**
+
+   $$
+   \begin{aligned}
+   &(2.53 \times 10^{-6}\ \text{mol/L})(0.2000\ \text{L}) \\
+   &= 5.06 \times 10^{-7}\ \text{mol}
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   &(5.06 \times 10^{-7}\ \text{mol})(207.2\ \text{g/mol}) \\
+   &= 1.05 \times 10^{-4}\ \text{g}
+   \end{aligned}
+   $$
+
+   That is 0.105 mg.
+
+5. **Say what the change of procedure does to the result.** Lead that stays dissolved goes through the filter and is never weighed. Procedure A loses 6.59 mg of the 350 mg of lead, so the lead it reports is about 2 percent too low. Procedure B loses 0.105 mg, about one sixtieth as much, an error of 0.03 percent. Adding excess sulfate does not change $K_{sp}$. It changes how much lead $K_{sp}$ allows to stay dissolved.
+
+</Worked>
+
+<Check answer={2}>
+The procedure says to rinse the lead(II) sulfate on the filter with cold, dilute sulfuric acid, H₂SO₄(aq), a solution that holds sulfate ions. A student rinses it with the same volume of distilled water instead, then dries and weighs the solid. Compared with following the procedure, the mass of lead the student reports is:
+
+- Higher, because the water leaves sulfate ions behind on the solid, which add to its mass
+- Lower, because more of the solid dissolves in water than in the acid
+- The same, because $K_{sp}$ has the same value in water and in the acid
+- The same, because a precipitate cannot dissolve again once it has formed
+
+<div slot="why">
+
+A solid on a filter is rinsed to wash away the solution clinging to it, and every rinse dissolves a little of the solid as well. Dilute sulfuric acid, H₂SO₄(aq), holds sulfate ions, SO₄²⁻, a common ion, so very little PbSO₄ dissolves in it. Distilled water has no common ion, so each rinse carries more of the solid through the filter. The solid left to weigh is lighter, and the lead reported is lower.
+
+$K_{sp}$ is indeed the same in both liquids; the solubility is not. And dissolving is reversible, so a precipitate in contact with fresh liquid always dissolves a little.
+
+</div>
+</Check>
+
+<Trap>
+
+Six mistakes come up again and again on this topic:
+
+- **Changing $K_{sp}$.** A common ion changes the solubility. $K_{sp}$ changes only with temperature.
+- **Using $s^2$ or $4s^3$ straight from topic 7.11.** Those hold only in pure water, where both ions come from the salt. With a common ion, build the equilibrium row again.
+- **Doubling the common ion's concentration.** In 0.200 M KIO₃ the iodate starts at 0.200 M, whatever the coefficient in the dissolving equation. The coefficient gives the $+2s$ and the exponent.
+- **Skipping the 5 percent check.** State the percentage. If it fails, the approximation was not allowed.
+- **Expecting any dissolved salt to lower the solubility.** Only a salt that shares an ion does.
+- **Saying the salt becomes insoluble.** It becomes less soluble. Some always dissolves.
+
+</Trap>
+
+<KeyPoints>
+
+- A salt is less soluble in a solution that already holds one of its ions than in pure water. This is the common-ion effect.
+- By Le Châtelier's principle, the common ion is an added product of the dissolving equation, so the equilibrium between the solid and its ions shifts toward the solid.
+- By $Q$: adding the common ion to a saturated solution makes $Q$ greater than $K_{sp}$, so solid precipitates until $Q$ equals $K_{sp}$ again.
+- A common ion does not change $K_{sp}$. Only the solubility changes.
+- To calculate the solubility, start the common ion at its given concentration, add what the salt supplies, leave that small amount out of the sum, solve, and check that it is under 5 percent.
+- In the lab, an excess of the precipitating ion and a rinse that holds a common ion both keep a precipitate from being lost. Leaving either out makes the measured mass too low.
+
+</KeyPoints>
+
+<PracticeNext />
