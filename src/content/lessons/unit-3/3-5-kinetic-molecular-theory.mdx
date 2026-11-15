@@ -1,0 +1,228 @@
+---
+topic: "3.5"
+minutes: 13
+summary: "How the motion of gas particles explains pressure and temperature, why every gas at one temperature has the same average kinetic energy, and how to read a Maxwell–Boltzmann curve."
+---
+
+The nitrogen molecules in the air around you right now move at about 475 m/s on average. That is nearly twice the cruising speed of an airliner (about 250 m/s). Yet you feel no hail of tiny impacts, only a steady, even push. That push is air pressure, and this lesson's model explains it.
+
+## The model
+
+You cannot watch a single gas particle. But you can picture what the particles are doing, and then test the picture against what a gas does. The **kinetic molecular theory** pictures a gas this way:
+
+1. The particles are in constant, random, straight-line motion. They change direction only when they collide, with each other or with a wall.
+2. The particles are tiny compared with the distances between them. Their own volume is negligible, so the gas is mostly empty space.
+3. The particles neither attract nor repel each other, except during collisions.
+4. Collisions are **elastic**: no kinetic energy is lost when particles bounce off each other or off a wall.
+5. The kelvin temperature measures how much kinetic energy the particles have on average. The two are proportional.
+
+A gas that fits this model exactly is the ideal gas of topic 3.4. No real gas fits it perfectly. Topic 3.6 shows where assumptions 2 and 3 break down.
+
+Constant, random motion is not only for gases. The particles of a liquid move past one another, and the particles of a solid vibrate about fixed positions. All the particles in any sample of matter are moving, all the time.
+
+## Pressure, one collision at a time
+
+One particle hitting a wall gives it a tiny push. A gas has so many particles that the pushes never stop. The pressure of a gas is the push of countless particles striking the wall, spread over the wall's area.
+
+That one idea explains every relationship from topic 3.4:
+
+- **A hotter gas in a rigid container.** Faster particles reach the walls more often and strike them harder, so the pressure rises.
+- **The same gas in less room.** At the same temperature the particles move at the same speeds, but each part of the wall is now hit more often. Halve the volume and the hits on each part of the wall double, so the pressure doubles.
+- **More gas in the same container.** At the same temperature, more particles make more hits, so the pressure is higher.
+- **A hotter gas in a container that can stretch.** The gas expands. It keeps expanding until the particles are far enough apart that each part of the wall is hit less often, by just enough to make up for the harder hits. The pressure ends where it began.
+
+The picture shows the second case.
+
+<Figure
+  src="/figures/3-5-pressure-particles.svg"
+  alt="Two boxes of gas, each holding the same ten particles moving at the same speeds. The right box has half the volume of the left one. On a wall of the same size, the particles in the right box make four hits for every two in the left box, so its pressure is twice as high."
+  caption="Same particles, same speeds, half the space: twice as many hits on each part of the wall."
+/>
+
+<KeyIdea>
+
+Pressure comes from particles hitting the walls. Anything that makes the hits more frequent or harder raises the pressure.
+
+</KeyIdea>
+
+<Check answer={3}>
+A gas in a cylinder is squeezed to one third of its volume. Its temperature does not change. What happens to the pressure, and why?
+
+- It triples, because each particle now hits the wall three times as hard.
+- It rises to nine times its value, because the hits are both harder and more frequent.
+- It triples, because each part of the wall is hit three times as often, by particles moving at the same speeds.
+- It stays the same, because the temperature has not changed.
+
+<div slot="why">The temperature is unchanged, so the particles move at the same speeds and hit just as hard. But the same particles now share a third of the space, so each part of the wall is hit three times as often. Three times the hits at the same strength is three times the pressure.</div>
+</Check>
+
+## Temperature measures kinetic energy
+
+A moving particle has kinetic energy, the energy of motion. For a particle of mass $m$ moving at speed $v$, it is:
+
+$$
+\mathit{KE} = \tfrac{1}{2}mv^2
+$$
+
+Temperature measures this motion. The kelvin temperature of a sample is proportional to the average kinetic energy of its particles. Double the kelvin temperature and the average kinetic energy doubles.
+
+That works only on the kelvin scale. Zero on the Celsius scale is just where water freezes. Particles at 0 °C still have plenty of kinetic energy.
+
+Here is a consequence that surprises people. At the same temperature, every gas has the same average kinetic energy, whatever its particles are. A heavy molecule and a light atom in the same room carry the same kinetic energy on average.
+
+Now look at the equation again. If the kinetic energy is the same and the mass is smaller, the speed has to be greater. A lighter particle must move faster to carry the same energy. So at one temperature, lighter gases move faster on average.
+
+<Check numeric="1.25">
+A gas is warmed from 25 °C to 100 °C. By what factor does the average kinetic energy of its particles increase?
+
+<div slot="why">
+
+Average kinetic energy is proportional to kelvin temperature. On the kelvin scale, 25 °C is 298 K and 100 °C is 373 K.
+
+$$
+\frac{373\ \text{K}}{298\ \text{K}} = 1.25
+$$
+
+Dividing the Celsius temperatures would give 4, which is wrong.
+
+</div>
+</Check>
+
+<Worked title="Helium against sulfur hexafluoride">
+
+Sulfur hexafluoride, SF₆, is a dense gas used to insulate high-voltage electrical equipment. Suppose a sealed vessel holds a mixture of helium and SF₆ at 25 °C. Which particles move faster on average, and by what factor?
+
+1. **Same temperature, same average kinetic energy.** Both gases are at 25 °C, so a helium atom and an SF₆ molecule have the same kinetic energy on average.
+
+2. **Set the kinetic energies equal.** Write $v$ for a typical speed of each kind of particle.
+
+   $$
+   \tfrac{1}{2}m_{\ce{He}}v_{\ce{He}}^2 = \tfrac{1}{2}m_{\ce{SF6}}v_{\ce{SF6}}^2
+   $$
+
+   The halves cancel. Rearrange for the ratio of the speeds.
+
+   $$
+   \frac{v_{\ce{He}}}{v_{\ce{SF6}}} = \sqrt{\frac{m_{\ce{SF6}}}{m_{\ce{He}}}}
+   $$
+
+   The masses of the particles are in the same ratio as the molar masses: 146.06 g/mol for SF₆ and 4.003 g/mol for helium.
+
+3. **Calculate.** The units cancel, so the answer is a plain number.
+
+   $$
+   \sqrt{\frac{146.06}{4.003}} = \sqrt{36.49} = 6.04
+   $$
+
+4. **Interpret.** Helium atoms move about six times as fast as SF₆ molecules: 6.04 times. An SF₆ molecule is about 36.5 times as massive as a helium atom. To carry the same kinetic energy, its speed must be smaller by the square root of 36.5, which is 6.04.
+
+The heavy molecules carry the same kinetic energy at a much lower speed. The ratio is the same for any typical speed you compare. For scale: at 25 °C, helium atoms average about 1260 m/s, and SF₆ molecules about 208 m/s.
+
+</Worked>
+
+<Check answer={2}>
+Helium and carbon dioxide are both at 300 K. How do their particles compare?
+
+- CO₂ molecules have the greater average kinetic energy, and helium atoms move faster.
+- Both have the same average kinetic energy, and helium atoms move faster.
+- Both have the same average kinetic energy and the same average speed.
+- Helium atoms have the greater average kinetic energy and move faster.
+
+<div slot="why">The same temperature means the same average kinetic energy. A helium atom is much lighter than a CO₂ molecule, so to carry the same energy it must move faster.</div>
+</Check>
+
+**Beyond the exam:** the speed of a particle that has exactly the average kinetic energy is called the root-mean-square speed:
+
+$$
+u_{\text{rms}} = \sqrt{\frac{3RT}{M}}
+$$
+
+Here R is 8.314 J/(mol·K) and M is the molar mass in kg/mol. This speed is a little higher than the average speed. The equation sheet does not give it, and the exam does not ask you to calculate it.
+
+## A spread of speeds
+
+So far "average" has done a lot of work. Here is why it has to. The particles of a gas collide constantly, and in every collision they trade energy: one speeds up, the other slows down. So at any moment their speeds are spread out. Some particles crawl, a few race, and most are somewhere in between.
+
+The **Maxwell–Boltzmann distribution** is the curve of that spread. Speed runs across the bottom. Up the side is the fraction of the particles at each speed. The curve starts at zero, because almost no particle is nearly still. It rises to a peak, then trails off in a long tail toward high speeds.
+
+Read areas on this graph, not just heights. The area under the whole curve stands for all the particles. The area between two speeds is the fraction of the particles with speeds in that range.
+
+The peak is the **most probable speed**: the speed that more particles have than any other. It is not the average speed. The long tail pulls the average to the right of the peak. For nitrogen at 300 K, the peak is at about 422 m/s and the average is about 476 m/s. The peak is not the top speed either. The tail thins out with no sharp end.
+
+Two things change the curve:
+
+- **Warmer.** The peak moves to a higher speed, and the curve flattens and stretches toward high speeds. The total area is unchanged, since it still stands for the same particles. The figure below shows it for nitrogen.
+- **A heavier gas at the same temperature.** The curve is narrower and taller, with its peak at a lower speed. A lighter gas does the reverse.
+
+You can also draw the curve against kinetic energy instead of speed. Then it depends only on the temperature. At one temperature, every gas gives the same energy curve, whatever its molar mass. That is the "same average kinetic energy" idea as a picture. Topic 5.5 uses the energy curve to explain why reactions speed up when they are warmed.
+
+<Figure
+  src="/figures/3-5-speed-distributions.svg"
+  alt="Two curves of the fraction of nitrogen molecules against speed. At 300 kelvin the curve is tall and narrow, with its peak at 422 meters per second. At 900 kelvin the curve is lower and broader, with its peak at 731 meters per second and a tail reaching much higher speeds. The areas under the two curves are equal."
+  caption="Warmer nitrogen gives a lower, broader curve with its peak moved right. The area, which stands for the number of molecules, stays the same."
+/>
+
+Pick a gas and a temperature, and compare the curve with nitrogen at 300 K.
+
+<MaxwellBoltzmann />
+
+<Check answer={2}>
+What does the peak of a Maxwell–Boltzmann speed curve show?
+
+- The average speed of the molecules
+- The most probable speed
+- The highest speed any molecule has
+- The total number of molecules
+
+<div slot="why">At the peak speed more molecules are found than at any other speed. The long tail drags the average to the right of the peak, the curve has no sharp upper limit, and the number of molecules is the area under the curve, not a height.</div>
+</Check>
+
+<Check numeric="3.73">
+H₂ and N₂ are at the same temperature. How many times as fast is the speed at the peak of H₂'s curve as the speed at the peak of N₂'s? (Molar masses: H₂ 2.016 g/mol, N₂ 28.02 g/mol.)
+
+<div slot="why">
+
+At one temperature both gases have the same average kinetic energy. So their typical speeds, the peak speeds included, are related as in the worked example.
+
+$$
+\tfrac{1}{2}m_{\ce{N2}}v_{\ce{N2}}^2 = \tfrac{1}{2}m_{\ce{H2}}v_{\ce{H2}}^2
+$$
+
+Rearrange for the ratio of the speeds, and use the molar masses for the masses.
+
+$$
+\begin{aligned}
+\frac{v_{\ce{H2}}}{v_{\ce{N2}}} &= \sqrt{\frac{28.02}{2.016}} \\
+&= \sqrt{13.90} = 3.73
+\end{aligned}
+$$
+
+The peak of H₂'s curve sits at 3.73 times the speed of N₂'s. The same temperature gives the same energy curve, not the same speed curve.
+
+</div>
+</Check>
+
+<Trap>
+
+Five mistakes come up again and again on this topic:
+
+- **Treating one temperature as one speed.** What gases at the same temperature share is their average kinetic energy. The lighter particles are quicker.
+- **Reading the peak as the average or the top speed.** The peak marks the most probable speed. The average lies a little to its right, and the curve has no top speed.
+- **Reading the curve's height as a number of molecules.** A lower peak for a warmer gas does not mean fewer molecules. The count is the area under the curve, and warming leaves it unchanged.
+- **Using Celsius in a proportion.** Warming a gas from 25 °C to 100 °C raises the average kinetic energy by a factor of 1.25, not 4.
+- **Saying particles get bigger when heated.** They move faster. A heated gas expands because its faster particles push the walls outward, not because the particles swell.
+
+</Trap>
+
+<KeyPoints>
+
+- The kinetic molecular theory pictures a gas as tiny particles in constant random motion, with negligible volume, no attractions and elastic collisions.
+- Gas pressure comes from particles hitting the walls, so anything that makes the hits more frequent or harder raises it.
+- The kelvin temperature is proportional to the average kinetic energy of the particles, and a particle's kinetic energy is KE = ½mv².
+- At the same temperature every gas has the same average kinetic energy, so lighter particles move faster.
+- On a Maxwell–Boltzmann curve the peak is the most probable speed, and the area stands for all the particles.
+- Warming makes the curve lower and broader with its peak moved right, while a heavier gas at the same temperature gives a narrower, taller curve with its peak to the left.
+
+</KeyPoints>
+
+<PracticeNext />

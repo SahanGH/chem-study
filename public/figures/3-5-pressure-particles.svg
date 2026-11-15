@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 244" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Two boxes of the same height; the left one (268 wide) has twice the volume of the right one (134 wide). Each holds 10 particles (r 7), every one with an arrow 20 long: same particles, same speeds. Marks outside each right-hand wall show hits in the same short time: 2 on the left box, 4 on the right box. -->
+  <defs>
+    <circle id="p" r="7" fill="#4F706C"/>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#26231F"/>
+    </marker>
+  </defs>
+  <rect width="480" height="244" fill="#FDFCF9"/>
+
+  <rect x="8" y="34" width="268" height="150" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <rect x="312" y="34" width="134" height="150" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+
+  <!-- Left box: 10 particles. The first two head for the right-hand wall from close enough to reach it. -->
+  <use href="#p" x="236" y="74"/>
+  <use href="#p" x="230" y="146"/>
+  <use href="#p" x="180.1" y="109.6"/>
+  <use href="#p" x="89.8" y="145.4"/>
+  <use href="#p" x="44" y="97.7"/>
+  <use href="#p" x="133.3" y="65.3"/>
+  <use href="#p" x="32.8" y="50.7"/>
+  <use href="#p" x="163.1" y="154.7"/>
+  <use href="#p" x="45.8" y="163.6"/>
+  <use href="#p" x="186.9" y="52.1"/>
+  <path d="M245.9 75.4L265.7 78.2" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M239.8 143.9L259.3 139.8" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M173 116.7L158.9 130.8" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M94.8 136.7L104.8 119.4" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M52.7 102.7L70 112.7" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M126.2 58.2L112.1 44.1" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M35.4 60.4L40.6 79.7" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M153.1 154.7L133.1 154.7" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M55.4 161.1L74.7 155.9" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M184.3 61.8L179.1 81.1" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Left box: 2 hits on the right-hand wall. -->
+  <path d="M280 79.6H290M280 75.6L288 69.6M280 83.6L288 89.6" fill="none" stroke="#4F706C" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M280 136.2H290M280 132.2L288 126.2M280 140.2L288 146.2" fill="none" stroke="#4F706C" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Right box: 10 particles. The first four head for the right-hand wall from close enough to reach it. -->
+  <use href="#p" x="412" y="62"/>
+  <use href="#p" x="411" y="134"/>
+  <use href="#p" x="398" y="98"/>
+  <use href="#p" x="397" y="168"/>
+  <use href="#p" x="349.2" y="102.8"/>
+  <use href="#p" x="368.9" y="128.6"/>
+  <use href="#p" x="375.4" y="58.4"/>
+  <use href="#p" x="342.3" y="64.1"/>
+  <use href="#p" x="352.4" y="168"/>
+  <use href="#p" x="333.1" y="141.6"/>
+  <path d="M421.9 63.4L441.7 66.2" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M420.8 131.9L440.3 127.8" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M408 98L428 98" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M406.9 167L426.8 164.9" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M342.2 95.7L328 81.6" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M371.5 138.3L376.6 157.6" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M370.4 67L360.4 84.4" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M349.4 57L363.5 42.9" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M362.1 170.6L381.4 175.7" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M333.1 131.6L333.1 111.6" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Right box: 4 hits on the right-hand wall. -->
+  <path d="M450 66.8H460M450 62.8L458 56.8M450 70.8L458 76.8" fill="none" stroke="#4F706C" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M450 98H460M450 94L458 88M450 102L458 108" fill="none" stroke="#4F706C" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M450 126.6H460M450 122.6L458 116.6M450 130.6L458 136.6" fill="none" stroke="#4F706C" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M450 162.8H460M450 158.8L458 152.8M450 166.8L458 172.8" fill="none" stroke="#4F706C" stroke-width="2.5" stroke-linecap="round"/>
+
+  <text x="290" y="24" text-anchor="end" fill="#26231F">2 hits</text>
+  <text x="460" y="24" text-anchor="end" fill="#26231F">4 hits</text>
+
+  <text x="142" y="208" text-anchor="middle" fill="#26231F">volume V</text>
+  <text x="142" y="230" text-anchor="middle" fill="#26231F">pressure P</text>
+  <text x="379" y="208" text-anchor="middle" fill="#26231F">volume ½V</text>
+  <text x="379" y="230" text-anchor="middle" fill="#26231F">pressure 2P</text>
+</svg>
