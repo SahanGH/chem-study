@@ -9,9 +9,9 @@
 
   <!-- Ions. -->
   <circle cx="120" cy="120" r="22" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
-  <circle cx="360" cy="120" r="30" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="360" cy="120" r="30" fill="#4F706C" fill-opacity="0.4" stroke="#26231F" stroke-width="1.5"/>
   <text x="118" y="126.5" text-anchor="middle" fill="#FDFCF9">Na<tspan dy="-7" font-size="14">+</tspan></text>
-  <text x="358" y="126.5" text-anchor="middle" fill="#FDFCF9">Cl<tspan dy="-7" font-size="14">&#8722;</tspan></text>
+  <text x="358" y="126.5" text-anchor="middle" fill="#26231F">Cl<tspan dy="-7" font-size="14">&#8722;</tspan></text>
 
   <!-- Oxygen atoms. -->
   <g fill="#E3EAE9" stroke="#26231F" stroke-width="1.5">

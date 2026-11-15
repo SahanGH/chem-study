@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 332" font-family="system-ui, sans-serif" font-size="18">
+  <!-- A simple distillation. Boiling flask: bulb center (88, 192), radius 46, neck x=77 to x=99. The side arm and the condenser's inner tube are one straight tube, 10 wide, whose axis runs from (99, 92) on the neck down to (392, 206) over the receiving flask (slope 0.389). The thermometer bulb is centered at y=92, level with the side arm. The water jacket, 30 wide, covers the axis from 75 to 250 units along it. Cold water enters at the jacket's lower end and leaves at its upper end. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#4F706C"/>
+    </marker>
+    <path id="drop" d="M0 -6C4 0 3.5 4 0 4C-3.5 4 -4 0 0 -6z" fill="#4F706C" fill-opacity="0.45" stroke="#26231F" stroke-width="1"/>
+  </defs>
+  <rect width="480" height="332" fill="#FDFCF9"/>
+
+  <!-- Hot plate -->
+  <!-- The plate's top edge (outer edge at y=239) meets the outer edge of the bulb's lowest point, so the flask rests on it. -->
+  <rect x="40" y="239.75" width="96" height="14" rx="2" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/>
+  <text x="88" y="279" text-anchor="middle" fill="#26231F">hot plate</text>
+
+  <!-- Boiling flask: liquid, bubbles, then the glass -->
+  <path d="M43.6 180A46 46 0 1 0 132.4 180z" fill="#4F706C" fill-opacity="0.35"/>
+  <path d="M43.6 180H132.4" fill="none" stroke="#26231F" stroke-width="1"/>
+  <circle cx="66" cy="204" r="3" fill="#FDFCF9" stroke="#26231F" stroke-width="1"/>
+  <circle cx="84" cy="222" r="3" fill="#FDFCF9" stroke="#26231F" stroke-width="1"/>
+  <circle cx="92" cy="196" r="3" fill="#FDFCF9" stroke="#26231F" stroke-width="1"/>
+  <circle cx="104" cy="214" r="3" fill="#FDFCF9" stroke="#26231F" stroke-width="1"/>
+  <path d="M77 60V147.3A46 46 0 1 0 99 147.3V97.4M99 86.6V60" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Water jacket of the condenser, with its two side tubes -->
+  <path d="M174.3 105.2L337.4 168.7L326.5 196.6L163.5 133.2z" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M188 113L198 117V97H188z" fill="#E3EAE9"/>
+  <path d="M188 110.5V97M198 114.4V97" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M301 184L311 188V204H301z" fill="#E3EAE9"/>
+  <path d="M301 186.7V204M311 190.6V204" fill="none" stroke="#26231F" stroke-width="1.5"/>
+
+  <!-- Side arm and inner tube: one straight tube from the neck to the receiving flask -->
+  <path d="M99 86.6L393.8 201.3L390.2 210.7L99 97.4z" fill="#FDFCF9"/>
+  <path d="M99 86.6L393.8 201.3M99 97.4L390.2 210.7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+
+  <!-- Stopper and thermometer -->
+  <path d="M74 48H102L98 64H78z" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5" stroke-linejoin="round"/>
+  <rect x="85.5" y="14" width="5" height="74" rx="2.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.2"/>
+  <path d="M88 40V88" fill="none" stroke="#4F706C" stroke-width="1.5"/>
+  <ellipse cx="88" cy="92" rx="4" ry="6" fill="#4F706C" stroke="#26231F" stroke-width="1.2"/>
+  <path d="M93 24H108" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="112" y="30" fill="#26231F">thermometer</text>
+
+  <!-- Cooling water -->
+  <path d="M193 93V63" fill="none" stroke="#4F706C" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="202" y="74" fill="#26231F">water out</text>
+  <path d="M306 246V209" fill="none" stroke="#4F706C" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="292" y="268" text-anchor="middle" fill="#26231F">cold water in</text>
+
+  <path d="M324 131L318 158.5" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="296" y="124" fill="#26231F">condenser</text>
+
+  <path d="M148 205L122 201" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="152" y="212" fill="#26231F">boiling mixture</text>
+
+  <!-- Receiving flask: liquid, drops, then the glass -->
+  <path d="M359 278H423L431 296H351z" fill="#4F706C" fill-opacity="0.35"/>
+  <path d="M359 278H423" fill="none" stroke="#26231F" stroke-width="1"/>
+  <use href="#drop" x="391.5" y="226"/>
+  <use href="#drop" x="391.5" y="254"/>
+  <path d="M376 214V240L351 296H431L406 240V214" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+  <text x="391" y="322" text-anchor="middle" fill="#26231F">distillate</text>
+</svg>

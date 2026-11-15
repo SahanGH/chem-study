@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Each flask is a circle of radius 44 (center y=165) cut flat at y=203, with a neck 16 wide from y=32 that meets the circle at y=121.7. The etched line is at y=65. In panel 2 the liquid surface is at y=148, two-thirds of the way up the bulb (203 to 121.7). In panel 3 the surface is a curve whose lowest point is at y=65, on the line. The enlarged view repeats that: line at y=78, curve from y=64 at the walls down to y=78 at the center. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <defs>
+    <clipPath id="lens">
+      <circle cx="430" cy="72" r="38"/>
+    </clipPath>
+  </defs>
+  <rect width="480" height="260" fill="#FDFCF9"/>
+
+  <!-- 1 Weigh: a balance with a dish of white solid -->
+  <rect x="25" y="166" width="100" height="37" rx="6" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="37" y="176" width="46" height="17" rx="2" fill="#FDFCF9" stroke="#6B655D" stroke-width="1.5"/>
+  <circle cx="98" cy="184.5" r="4" fill="#6B655D"/>
+  <circle cx="111" cy="184.5" r="4" fill="#6B655D"/>
+  <path d="M75 156V166" fill="none" stroke="#26231F" stroke-width="5"/>
+  <rect x="33" y="150" width="84" height="6" rx="3" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M59 148Q63 134 75 132Q87 134 91 148Z" fill="#FFFFFF" stroke="#6B655D" stroke-width="1.5" stroke-linejoin="round"/>
+  <circle cx="70" cy="142" r="1.2" fill="#6B655D"/>
+  <circle cx="78" cy="139" r="1.2" fill="#6B655D"/>
+  <circle cx="83" cy="145" r="1.2" fill="#6B655D"/>
+  <circle cx="66" cy="146" r="1.2" fill="#6B655D"/>
+  <path d="M49 130L57 150H93L101 130" fill="none" stroke="#26231F" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="75" y="238" text-anchor="middle" fill="#26231F"><tspan font-weight="600">1</tspan> Weigh</text>
+
+  <!-- 2 Dissolve: the flask filled partway, with a curved arrow for swirling -->
+  <path d="M174.42 148A44 44 0 0 0 192.82 203H237.18A44 44 0 0 0 255.58 148Z" fill="#4F706C" fill-opacity="0.3"/>
+  <path d="M174.42 148H255.58" fill="none" stroke="#4F706C" stroke-width="2"/>
+  <circle cx="204" cy="197" r="2.5" fill="#FFFFFF" stroke="#6B655D" stroke-width="1"/>
+  <circle cx="215" cy="198" r="2.5" fill="#FFFFFF" stroke="#6B655D" stroke-width="1"/>
+  <circle cx="226" cy="197" r="2.5" fill="#FFFFFF" stroke="#6B655D" stroke-width="1"/>
+  <circle cx="210" cy="190" r="2.5" fill="#FFFFFF" stroke="#6B655D" stroke-width="1"/>
+  <path d="M207 32V121.73A44 44 0 0 0 192.82 203H237.18A44 44 0 0 0 223 121.73V32" fill="none" stroke="#26231F" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M203 32H207M223 32H227" fill="none" stroke="#26231F" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M207 65H223" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M260.87 132.88A56 56 0 0 1 263.17 193.84" fill="none" stroke="#6B655D" stroke-width="2" stroke-linecap="round"/>
+  <path d="M257.43 202.03L267.27 196.71L259.07 190.97Z" fill="#6B655D"/>
+  <text x="215" y="238" text-anchor="middle" fill="#26231F"><tspan font-weight="600">2</tspan> Dissolve</text>
+
+  <!-- 3 Fill to the line: liquid up into the neck, its curved surface resting on the line -->
+  <path d="M347 63V121.73A44 44 0 0 0 332.82 203H377.18A44 44 0 0 0 363 121.73V63Q355 67 347 63Z" fill="#4F706C" fill-opacity="0.3"/>
+  <path d="M347 32V121.73A44 44 0 0 0 332.82 203H377.18A44 44 0 0 0 363 121.73V32" fill="none" stroke="#26231F" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M343 32H347M363 32H367" fill="none" stroke="#26231F" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M347 65H363" fill="none" stroke="#26231F" stroke-width="2"/>
+  <circle cx="355" cy="65" r="13" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <path d="M368 65L392.5 66" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+
+  <!-- The enlarged view of the neck at the line -->
+  <circle cx="430" cy="72" r="38" fill="#FDFCF9"/>
+  <g clip-path="url(#lens)">
+    <path d="M405 64Q430 92 455 64V112H405Z" fill="#4F706C" fill-opacity="0.3"/>
+    <path d="M405 64Q430 92 455 64" fill="none" stroke="#4F706C" stroke-width="2"/>
+    <path d="M405 78H455" fill="none" stroke="#26231F" stroke-width="2.5"/>
+    <path d="M405 30V114M455 30V114" fill="none" stroke="#26231F" stroke-width="2"/>
+  </g>
+  <circle cx="430" cy="72" r="38" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="390" y="238" text-anchor="middle" fill="#26231F"><tspan font-weight="600">3</tspan> Fill to the line</text>
+</svg>

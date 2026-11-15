@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="system-ui, sans-serif" font-size="18">
+  <!-- One box of MgCl2 solution: 1 Mg2+ at (240,94) and 2 Cl- at (124,204) and (356,204); the charges add to zero. Mg2+ (radius 20, oxygen centers 43 away) is drawn smaller than Na+ in 3-1-ion-dipole.svg (radius 22, oxygens 46 away), with its water closer; Cl- is the size it is there (radius 30). Water atoms are drawn as in that figure (O radius 18, H radius 11, bent at 105 degrees), but the O-H bonds are 40 long here, not 44, so that three hydrated ions fit the width. Around Mg2+ each O faces the ion and both H point away. Around each Cl- one H of each water points straight at the ion. Each charge is written outside its circle at the upper right, as in 3-8-concentration-boxes.svg. -->
+  <rect width="480" height="360" fill="#FDFCF9"/>
+  <rect x="5" y="5" width="470" height="317" rx="14" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+
+  <!-- Covalent O-H bonds, drawn under the atoms. -->
+  <path d="M240 51L271.7 26.6M240 51L208.3 26.6M283 94L307.4 125.7M283 94L307.4 62.3M240 137L208.3 161.4M240 137L271.7 161.4M197 94L172.6 62.3M197 94L172.6 125.7" fill="none" stroke="#26231F" stroke-width="2.5"/>
+  <path d="M124 118L124 158M124 118L85.4 107.6M210 204L170 204M210 204L220.4 242.6M124 290L124 250M124 290L162.6 300.4M38 204L78 204M38 204L27.6 242.6" fill="none" stroke="#26231F" stroke-width="2.5"/>
+  <path d="M356 118L356 158M356 118L394.6 107.6M442 204L402 204M442 204L452.4 165.4M356 290L356 250M356 290L317.4 300.4M270 204L310 204M270 204L259.6 242.6" fill="none" stroke="#26231F" stroke-width="2.5"/>
+
+  <!-- Ions: the small dark cation, the larger, paler anions. -->
+  <circle cx="240" cy="94" r="20" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="124" cy="204" r="30" fill="#4F706C" fill-opacity="0.4" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="356" cy="204" r="30" fill="#4F706C" fill-opacity="0.4" stroke="#26231F" stroke-width="1.5"/>
+  <text x="240" y="100.5" text-anchor="middle" fill="#FDFCF9">Mg</text>
+  <text x="261" y="71" fill="#26231F">2+</text>
+  <text x="124" y="210.5" text-anchor="middle" fill="#26231F">Cl</text>
+  <text x="149" y="184" fill="#26231F">&#8722;</text>
+  <text x="356" y="210.5" text-anchor="middle" fill="#26231F">Cl</text>
+  <text x="381" y="184" fill="#26231F">&#8722;</text>
+
+  <!-- Oxygen atoms. -->
+  <g fill="#E3EAE9" stroke="#26231F" stroke-width="1.5">
+    <circle cx="240" cy="51" r="18"/>
+    <circle cx="283" cy="94" r="18"/>
+    <circle cx="240" cy="137" r="18"/>
+    <circle cx="197" cy="94" r="18"/>
+    <circle cx="124" cy="118" r="18"/>
+    <circle cx="210" cy="204" r="18"/>
+    <circle cx="124" cy="290" r="18"/>
+    <circle cx="38" cy="204" r="18"/>
+    <circle cx="356" cy="118" r="18"/>
+    <circle cx="442" cy="204" r="18"/>
+    <circle cx="356" cy="290" r="18"/>
+    <circle cx="270" cy="204" r="18"/>
+  </g>
+  <!-- Hydrogen atoms. -->
+  <g fill="#FDFCF9" stroke="#26231F" stroke-width="1.5">
+    <circle cx="271.7" cy="26.6" r="11"/>
+    <circle cx="208.3" cy="26.6" r="11"/>
+    <circle cx="307.4" cy="125.7" r="11"/>
+    <circle cx="307.4" cy="62.3" r="11"/>
+    <circle cx="208.3" cy="161.4" r="11"/>
+    <circle cx="271.7" cy="161.4" r="11"/>
+    <circle cx="172.6" cy="62.3" r="11"/>
+    <circle cx="172.6" cy="125.7" r="11"/>
+    <circle cx="124" cy="158" r="11"/>
+    <circle cx="85.4" cy="107.6" r="11"/>
+    <circle cx="170" cy="204" r="11"/>
+    <circle cx="220.4" cy="242.6" r="11"/>
+    <circle cx="124" cy="250" r="11"/>
+    <circle cx="162.6" cy="300.4" r="11"/>
+    <circle cx="78" cy="204" r="11"/>
+    <circle cx="27.6" cy="242.6" r="11"/>
+    <circle cx="356" cy="158" r="11"/>
+    <circle cx="394.6" cy="107.6" r="11"/>
+    <circle cx="402" cy="204" r="11"/>
+    <circle cx="452.4" cy="165.4" r="11"/>
+    <circle cx="356" cy="250" r="11"/>
+    <circle cx="317.4" cy="300.4" r="11"/>
+    <circle cx="310" cy="204" r="11"/>
+    <circle cx="259.6" cy="242.6" r="11"/>
+  </g>
+
+  <g fill="#26231F" text-anchor="middle">
+    <text x="240" y="57.5">O</text>
+    <text x="283" y="100.5">O</text>
+    <text x="240" y="143.5">O</text>
+    <text x="197" y="100.5">O</text>
+    <text x="124" y="124.5">O</text>
+    <text x="210" y="210.5">O</text>
+    <text x="124" y="296.5">O</text>
+    <text x="38" y="210.5">O</text>
+    <text x="356" y="124.5">O</text>
+    <text x="442" y="210.5">O</text>
+    <text x="356" y="296.5">O</text>
+    <text x="270" y="210.5">O</text>
+    <text x="271.7" y="33.1">H</text>
+    <text x="208.3" y="33.1">H</text>
+    <text x="307.4" y="132.2">H</text>
+    <text x="307.4" y="68.8">H</text>
+    <text x="208.3" y="167.9">H</text>
+    <text x="271.7" y="167.9">H</text>
+    <text x="172.6" y="68.8">H</text>
+    <text x="172.6" y="132.2">H</text>
+    <text x="124" y="164.5">H</text>
+    <text x="85.4" y="114.1">H</text>
+    <text x="170" y="210.5">H</text>
+    <text x="220.4" y="249.1">H</text>
+    <text x="124" y="256.5">H</text>
+    <text x="162.6" y="306.9">H</text>
+    <text x="78" y="210.5">H</text>
+    <text x="27.6" y="249.1">H</text>
+    <text x="356" y="164.5">H</text>
+    <text x="394.6" y="114.1">H</text>
+    <text x="402" y="210.5">H</text>
+    <text x="452.4" y="171.9">H</text>
+    <text x="356" y="256.5">H</text>
+    <text x="317.4" y="306.9">H</text>
+    <text x="310" y="210.5">H</text>
+    <text x="259.6" y="249.1">H</text>
+  </g>
+
+  <!-- Partial charges: between two oxygens beside the cation, and under one hydrogen that points at an anion. -->
+  <g fill="#26231F" text-anchor="middle">
+    <text x="208" y="129">&#948;&#8722;</text>
+    <text x="404" y="234">&#948;+</text>
+  </g>
+
+  <text x="240" y="347" text-anchor="middle" fill="#26231F">other water molecules not drawn</text>
+</svg>

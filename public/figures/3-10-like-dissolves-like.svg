@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 207" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Left box: 4 oil chains over 10 water molecules. Right box: 4 molecules of 2-propanol among 8 water molecules. -->
+  <!-- Water: O of radius 12, two H of radius 7, 15 from the O's center, 104.5 degrees apart. 2-propanol: a three-carbon ribbon 8 wide with the O on the middle carbon and one H on the O. The chains' hydrogen atoms are not drawn. -->
+  <!-- Positions come from a placement script (scratch: fig-3-10/place.cjs, assemble.cjs, check.cjs), which keeps these rules. Every molecule touches a neighbor: O against O, an H resting sideways against an O, or a carbon chain against anything. An H points at another molecule's O only where a hydrogen bond is drawn: there the H sits 13 from the O, in a straight line with its own O-H bond, with three dots in the gap. No H touches another H, and no two 2-propanol molecules touch. -->
+  <!-- Drawn hydrogen bonds: 4 between water molecules on the left; on the right one for each 2-propanol (two give their H to a water's O, two receive a water's H on their O). -->
+  <!-- Oil chains: zigzags on one grid (12 across, 5 up per segment), 8.67 apart measured straight down, so each ribbon touches the next along its straight parts. -->
+  <defs>
+    <g id="water">
+      <circle r="12" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="9.2" cy="11.9" r="7" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="9.2" cy="-11.9" r="7" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    </g>
+    <g id="propanol">
+      <path d="M-16 10L0 0L16 10" fill="none" stroke="#26231F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M-16 10L0 0L16 10" fill="none" stroke="#4F706C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cy="-14" r="12" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="14.5" cy="-17.9" r="7" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    </g>
+    <path id="oil-chains" d="M72 72.5L84 67.5L96 72.5L108 67.5L120 72.5L132 67.5L144 72.5L156 67.5L168 72.5L180 67.5L192 72.5L204 67.5L216 72.5L228 67.5L240 72.5M84 58.8L96 63.8L108 58.8L120 63.8L132 58.8L144 63.8L156 58.8L168 63.8L180 58.8L192 63.8L204 58.8L216 63.8L228 58.8L240 63.8L252 58.8M72 55.2L84 50.2L96 55.2L108 50.2L120 55.2L132 50.2L144 55.2L156 50.2L168 55.2L180 50.2L192 55.2L204 50.2L216 55.2L228 50.2M96 46.5L108 41.5L120 46.5L132 41.5L144 46.5L156 41.5L168 46.5L180 41.5L192 46.5L204 41.5L216 46.5L228 41.5L240 46.5L252 41.5"/>
+  </defs>
+  <rect width="480" height="207" fill="#FDFCF9"/>
+
+  <text x="163" y="24" text-anchor="middle" fill="#26231F" font-weight="600">oil and water</text>
+  <text x="373" y="24" text-anchor="middle" fill="#26231F" font-weight="600">2-propanol and water</text>
+  <rect x="63" y="35" width="200" height="131" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <rect x="273" y="35" width="200" height="131" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <!-- The boundary between the two layers. -->
+  <path d="M63 78H263" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+
+  <!-- Oil: four chains, each drawn as a dark outline with a lighter core. -->
+  <use href="#oil-chains" fill="none" stroke="#26231F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <use href="#oil-chains" fill="none" stroke="#4F706C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Left box: ten water molecules. -->
+  <use href="#water" transform="translate(85 149.4) rotate(328)"/>
+  <use href="#water" transform="translate(89.7 102.6) rotate(257.3)"/>
+  <use href="#water" transform="translate(104.4 127.6) rotate(328)"/>
+  <use href="#water" transform="translate(148.5 143.9) rotate(3.3)"/>
+  <use href="#water" transform="translate(174.2 143.1) rotate(325)"/>
+  <use href="#water" transform="translate(176.4 96.1) rotate(272)"/>
+  <use href="#water" transform="translate(205.5 96.2) rotate(16)"/>
+  <use href="#water" transform="translate(222.9 139.9) rotate(54.8)"/>
+  <use href="#water" transform="translate(123.7 105.9) rotate(339)"/>
+  <use href="#water" transform="translate(237.1 120.6) rotate(339)"/>
+  <!-- Four hydrogen bonds, each three dots from an H to the O of the next molecule. -->
+  <path d="M87.4 125.6L88.3 116.4M126.9 135.9L135.5 139.1M175.3 119.2L175.8 110M214.4 118.4L217.8 127" fill="none" stroke="#26231F" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="0.1 4.4"/>
+
+  <!-- Right box: four 2-propanol and eight water molecules. -->
+  <use href="#propanol" transform="translate(311.8 109.4) rotate(295)"/>
+  <use href="#water" transform="translate(307.3 57.2) rotate(271.5)"/>
+  <use href="#water" transform="translate(325.1 73.3) rotate(24)"/>
+  <use href="#propanol" transform="translate(359.2 129.9) rotate(293)"/>
+  <use href="#water" transform="translate(304.2 145.3) rotate(281.4)"/>
+  <use href="#water" transform="translate(371.2 93.1) rotate(139)"/>
+  <use href="#propanol" transform="translate(386.2 64) rotate(105)"/>
+  <use href="#water" transform="translate(399.8 114.6) rotate(107.6)"/>
+  <use href="#water" transform="translate(387 139.9) rotate(123)"/>
+  <use href="#propanol" transform="translate(428.8 108.4) rotate(49)"/>
+  <use href="#water" transform="translate(421 55.9) rotate(14.7)"/>
+  <use href="#water" transform="translate(435.9 149.3) rotate(232)"/>
+  <!-- Four hydrogen bonds, one for each 2-propanol. -->
+  <path d="M303.3 79.9L304.9 70.8M325.6 134.7L333.9 130.6M399.8 91.5L399.8 100.7M430.4 77.9L434 86.4" fill="none" stroke="#26231F" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="0.1 4.4"/>
+
+  <text x="57" y="63" text-anchor="end" fill="#26231F">oil</text>
+  <text x="57" y="128.5" text-anchor="end" fill="#26231F">water</text>
+  <path d="M329.8 174V136.1" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="336" y="194" text-anchor="middle" fill="#26231F">hydrogen bond</text>
+</svg>
