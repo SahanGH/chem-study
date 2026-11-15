@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Central O at (240,120). O-H bonds are 52 long at a bent angle of 105 degrees; each hydrogen bond (dotted) runs 40 from an H circle to an O circle along one straight line. -->
+  <rect width="480" height="340" fill="#FDFCF9"/>
+
+  <!-- Covalent O-H bonds, drawn under the atoms. -->
+  <path d="M240 120L198.7 151.7M240 120L281.3 151.7M142.4 194.9L142.4 246.9M142.4 194.9L92.2 181.4M337.6 194.9L337.6 246.9M337.6 194.9L387.8 181.4M142.4 45.1L183.7 76.8M142.4 45.1L101.1 76.8M337.6 45.1L296.3 76.8M337.6 45.1L378.9 76.8" fill="none" stroke="#26231F" stroke-width="2.5"/>
+
+  <!-- Hydrogen bonds, H to O. -->
+  <path d="M190 158.4L158.3 182.7M290 158.4L321.7 182.7M192.4 83.5L224.1 107.8M287.6 83.5L255.9 107.8" fill="none" stroke="#4F706C" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.5 7"/>
+
+  <!-- Oxygen atoms. -->
+  <g fill="#E3EAE9" stroke="#26231F" stroke-width="1.5">
+    <circle cx="240" cy="120" r="20"/>
+    <circle cx="142.4" cy="194.9" r="20"/>
+    <circle cx="337.6" cy="194.9" r="20"/>
+    <circle cx="142.4" cy="45.1" r="20"/>
+    <circle cx="337.6" cy="45.1" r="20"/>
+  </g>
+  <!-- Hydrogen atoms. -->
+  <g fill="#FDFCF9" stroke="#26231F" stroke-width="1.5">
+    <circle cx="198.7" cy="151.7" r="11"/>
+    <circle cx="281.3" cy="151.7" r="11"/>
+    <circle cx="142.4" cy="246.9" r="11"/>
+    <circle cx="92.2" cy="181.4" r="11"/>
+    <circle cx="337.6" cy="246.9" r="11"/>
+    <circle cx="387.8" cy="181.4" r="11"/>
+    <circle cx="183.7" cy="76.8" r="11"/>
+    <circle cx="101.1" cy="76.8" r="11"/>
+    <circle cx="296.3" cy="76.8" r="11"/>
+    <circle cx="378.9" cy="76.8" r="11"/>
+  </g>
+
+  <g fill="#26231F" text-anchor="middle">
+    <text x="240" y="126.5">O</text>
+    <text x="142.4" y="201.4">O</text>
+    <text x="337.6" y="201.4">O</text>
+    <text x="142.4" y="51.6">O</text>
+    <text x="337.6" y="51.6">O</text>
+    <text x="198.7" y="158.2">H</text>
+    <text x="281.3" y="158.2">H</text>
+    <text x="142.4" y="253.4">H</text>
+    <text x="92.2" y="187.9">H</text>
+    <text x="337.6" y="253.4">H</text>
+    <text x="387.8" y="187.9">H</text>
+    <text x="183.7" y="83.3">H</text>
+    <text x="101.1" y="83.3">H</text>
+    <text x="296.3" y="83.3">H</text>
+    <text x="378.9" y="83.3">H</text>
+  </g>
+
+  <!-- Partial charges on the central molecule only. -->
+  <g fill="#26231F" text-anchor="middle">
+    <text x="240" y="92">&#948;&#8722;</text>
+    <text x="204" y="186">&#948;+</text>
+    <text x="276" y="186">&#948;+</text>
+  </g>
+
+  <!-- Direct labels with leader lines. -->
+  <path d="M112.9 187L72 282" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="16" y="302" fill="#26231F">covalent bond</text>
+  <text x="16" y="324" fill="#6B655D">(inside a molecule)</text>
+
+  <path d="M306 171V282" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="296" y="302" fill="#26231F">hydrogen bond</text>
+  <text x="296" y="324" fill="#6B655D">(between molecules)</text>
+</svg>
