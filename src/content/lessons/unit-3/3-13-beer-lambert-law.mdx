@@ -1,0 +1,306 @@
+---
+topic: "3.13"
+minutes: 14
+summary: "How absorbance depends on concentration, path length and molar absorptivity, how a calibration line gives an unknown concentration, and which lab errors push the result up or down."
+---
+
+Pour grape juice into a tall glass. Look through it from the side: deep purple, but some light gets through. Now look down through it from the top, through the whole height of the juice: almost black. Mix half a glass of juice with the same amount of water and look from the side again: paler. Two things decide how much light a colored solution takes out: how far the light travels through it, and how much of the colored substance it meets on the way.
+
+## Measuring absorbance
+
+Your eye can tell pale from dark. To put a number on it, you need an instrument. A **spectrophotometer** sends light of one chosen wavelength through a sample and measures how much light comes out the other side.
+
+The sample sits in a **cuvette**, a small clear container, usually 1.00 cm across. It is also called a cell.
+
+The instrument reports the **absorbance**, $A$, a number that says how much of the light the sample took out. The more light the sample takes out, the larger $A$. Absorbance has no unit.
+
+Before you measure anything, you **blank** the instrument: you put in a cuvette of the solvent alone and set the reading to zero. From then on, a reading counts only the light absorbed by the dissolved substance, not the light lost to the solvent or to the cuvette's walls.
+
+<Figure
+  src="/figures/3-13-spectrophotometer.svg"
+  alt="A spectrophotometer drawn as a row: a light source, a part that picks one wavelength, a cuvette holding the sample with its width marked b, the path length, and a detector. The beam leaving the sample is thinner than the beam entering it, because the sample absorbs part of the light."
+  caption="The detector measures how much light gets through the sample, and the instrument reports it as absorbance."
+/>
+
+**Beyond the exam:** absorbance is a logarithmic scale. At an absorbance of 1.00, a tenth of the light gets through. At 2.00, a hundredth. The exam works with $A$ itself.
+
+## A = εbc
+
+What sets the size of the absorbance? Three things, and one short equation holds them all. It is the **Beer–Lambert law**, and it is on the equation sheet:
+
+$$
+A = \varepsilon b c
+$$
+
+- $\varepsilon$, the Greek letter epsilon, is the **molar absorptivity**: how strongly the substance absorbs light of one particular wavelength. Its unit is M⁻¹ cm⁻¹. You will also see it written L/(mol·cm), which is the same unit.
+- $b$ is the **path length**: how far the light travels through the solution, in cm. In the figure it is the width of the cuvette.
+- $c$ is the concentration, in M. Here $c$ is not the speed of light, which topic 3.12 writes with the same letter.
+
+Multiply the three units together and they cancel. That is why $A$ has no unit.
+
+$\varepsilon$ belongs to the substance and to the wavelength. The same substance has a large $\varepsilon$ at a wavelength it absorbs strongly, and a small one at a wavelength it hardly absorbs.
+
+$b$ and $c$ count particles. Double the path length, and the beam passes twice as many absorbing particles. Double the concentration, and the same is true. That is the grape juice again: looking down the tall glass gave the light a longer path, and adding water lowered the concentration.
+
+The particles can be molecules or ions. Cu²⁺ ions in water, for example, absorb red light, which is why their solutions look blue.
+
+<KeyIdea>
+
+Absorbance is proportional to the number of absorbing particles in the light's path, which $b$ and $c$ set, and to how strongly each one absorbs at that wavelength, $\varepsilon$. Double $b$ or double $c$, and $A$ doubles.
+
+</KeyIdea>
+
+<Check answer={3}>
+A dye solution has an absorbance of 0.270 in a 1.00 cm cuvette. The same solution is poured into a 2.00 cm cuvette and measured at the same wavelength. What does it read?
+
+- 0.135
+- 0.270
+- 0.540
+- 1.08
+
+<div slot="why">
+
+$\varepsilon$ and $c$ have not changed, and $A$ is proportional to $b$. Twice the path length puts twice as many absorbing particles in the beam, so $A$ doubles.
+
+$$
+2 \times 0.270 = 0.540
+$$
+
+</div>
+</Check>
+
+<Check numeric="835" unit="M⁻¹ cm⁻¹">
+A 4.00 × 10⁻⁴ M solution of substance Z has an absorbance of 0.668 in a 2.00 cm cuvette, measured at the wavelength that Z absorbs most strongly. What is the molar absorptivity of Z at that wavelength?
+
+<div slot="why">
+
+Rearrange $A = \varepsilon bc$ for $\varepsilon$, then put in $b$ in cm and $c$ in M.
+
+$$
+\begin{aligned}
+\varepsilon &= \frac{A}{bc} \\
+&= \frac{0.668}{(2.00)(4.00 \times 10^{-4})} \\
+&= 835\ \text{M}^{-1}\,\text{cm}^{-1}
+\end{aligned}
+$$
+
+Forgetting the path length gives 1670, twice too large. Substance Z is made up.
+
+</div>
+</Check>
+
+## Choosing the wavelength
+
+One solution absorbs some wavelengths strongly and others hardly at all. An **absorption spectrum** is a graph of one solution's absorbance against wavelength.
+
+The spectrum rises to a peak at the **wavelength of maximum absorbance**, the wavelength the substance absorbs most strongly. It is written $\lambda_{\text{max}}$.
+
+A solution looks the color of the light it lets through. So it absorbs most strongly the colors you do not see. A blue solution absorbs mostly orange and red light.
+
+Which wavelength should the instrument use? Start from the equation. In almost every experiment the cuvette and the wavelength stay the same from one reading to the next. Then neither $b$ nor $\varepsilon$ changes, and their product is a single constant:
+
+$$
+A = (\varepsilon b)\,c
+$$
+
+That is the equation of a straight line through the origin, like $y = mx$. $A$ takes the place of $y$, $c$ the place of $x$, and the constant $\varepsilon b$ is the slope.
+
+You do not look that constant up. You measure it. Read the absorbance of a few **standards**, solutions of the same substance whose concentrations you already know, and the line through their points has $\varepsilon b$ as its slope.
+
+That line is a **calibration line**: once you have it, it turns any absorbance reading into a concentration.
+
+At $\lambda_{\text{max}}$, $\varepsilon$ is at its largest, so the line is at its steepest. A small change in concentration then gives the largest change in absorbance. That is the most sensitive measurement, and it is why the instrument is set to $\lambda_{\text{max}}$.
+
+There is a second, smaller reason. At the top of the peak the spectrum is nearly flat. If the wavelength setting is slightly off, the absorbance hardly changes.
+
+Move the wavelength across this made-up dye's spectrum and watch its calibration line: it is steepest at the peak, at 520 nm.
+
+<AbsorbanceExplorer />
+
+<Check answer={2}>
+Substance Q absorbs most strongly at 610 nm. At 560 nm its molar absorptivity is half as large. A chemist makes the calibration line at 560 nm instead of 610 nm, in the same cuvette. Compared with a line made at 610 nm, the line at 560 nm is:
+
+- twice as steep, so the measurement is more sensitive
+- half as steep, so the same change in concentration gives half the change in absorbance
+- just as steep, because the standards are the same
+- curved instead of straight
+
+<div slot="why">The slope is $\varepsilon b$. Halve $\varepsilon$ and the slope halves, so the measurement is less sensitive. Measuring the standards and the unknown at 560 nm still gives a correct concentration in principle. It is just harder to tell close concentrations apart. That is why chemists use $\lambda_{\text{max}}$. Substance Q is made up.</div>
+</Check>
+
+## Finding an unknown concentration
+
+To find a concentration you do not know, start from ones you do:
+
+1. Make several standards of the substance.
+2. Blank the instrument. Then measure each standard at $\lambda_{\text{max}}$, all in the same cuvette.
+3. Plot each reading against its concentration and draw the line through the points. Its slope is the constant $\varepsilon b$.
+4. Measure the unknown the same way, and divide its absorbance by the slope.
+
+$$
+c = \frac{A}{\text{slope}}
+$$
+
+The unknown's absorbance should fall within the range of the standards' readings. Then the result comes from the part of the line you measured.
+
+The graph below belongs to the worked example that follows it.
+
+<Figure
+  src="/figures/3-13-calibration-line.svg"
+  alt="Calibration graph of absorbance against concentration in micromolar. Four standards at 1.50, 3.00, 4.50 and 6.00 micromolar read 0.195, 0.390, 0.585 and 0.780. They lie on a straight line through the origin with a slope of 0.130 per micromolar. Dashed guide lines show the drink's absorbance of 0.455 meeting the line at 3.50 micromolar."
+  caption="Read across from the unknown's absorbance to the line, then down to its concentration."
+/>
+
+<Worked title="Blue dye in a sports drink">
+
+A student wants to know the concentration of the blue dye in a sports drink. She makes four standards of the dye. After blanking with water, she measures each one at 630 nm, the dye's $\lambda_{\text{max}}$, in a 1.00 cm cuvette. The readings are made up for this example.
+
+| Concentration (µM) | Absorbance |
+|---|---|
+| 1.50 | 0.195 |
+| 3.00 | 0.390 |
+| 4.50 | 0.585 |
+| 6.00 | 0.780 |
+
+The drink, measured the same way, reads 0.455. Find the dye's molar absorptivity at 630 nm and its concentration in the drink.
+
+The concentrations are in µM, micromolar. 1 µM is 10⁻⁶ M, and the prefix micro is on the equation sheet.
+
+1. **Plot the standards.** The four points lie on a straight line through the origin, as $A = \varepsilon bc$ predicts.
+
+2. **Find the slope.** Use the origin and the last standard.
+
+   $$
+   \begin{aligned}
+   \text{slope} &= \frac{0.780}{6.00\ \mu\text{M}} \\
+   &= 0.130\ \mu\text{M}^{-1}
+   \end{aligned}
+   $$
+
+   Any standard gives the same slope. The first one:
+
+   $$
+   \frac{0.195}{1.50\ \mu\text{M}} = 0.130\ \mu\text{M}^{-1}
+   $$
+
+   Real readings scatter a little, so you would draw the best straight line through all the points.
+
+3. **Read the slope as $\varepsilon b$.** Divide the slope by the path length to get $\varepsilon$.
+
+   $$
+   \begin{aligned}
+   \varepsilon &= \frac{\text{slope}}{b} \\
+   &= \frac{0.130\ \mu\text{M}^{-1}}{1.00\ \text{cm}} \\
+   &= 0.130\ \mu\text{M}^{-1}\,\text{cm}^{-1}
+   \end{aligned}
+   $$
+
+   Since 1 µM is 10⁻⁶ M, 1 µM⁻¹ is 10⁶ M⁻¹.
+
+   $$
+   \varepsilon = 1.30 \times 10^{5}\ \text{M}^{-1}\,\text{cm}^{-1}
+   $$
+
+4. **Find the unknown.** The slope is not a concentration. Divide the drink's absorbance by it to get one.
+
+   $$
+   \begin{aligned}
+   c &= \frac{A}{\text{slope}} \\
+   &= \frac{0.455}{0.130\ \mu\text{M}^{-1}} \\
+   &= 3.50\ \mu\text{M}
+   \end{aligned}
+   $$
+
+   That is 3.50 × 10⁻⁶ M.
+
+5. **Check it.** The drink's 0.455 lies between the readings of the 3.00 µM and 4.50 µM standards, 0.390 and 0.585. And 3.50 µM lies between those two concentrations.
+
+</Worked>
+
+<Check numeric="2.40" unit="µM">
+Using the same calibration line, a second blue drink reads 0.312 at 630 nm in the same cuvette. What is its dye concentration, in µM?
+
+<div slot="why">
+
+Divide the absorbance by the slope of the calibration line.
+
+$$
+\begin{aligned}
+c &= \frac{A}{\text{slope}} \\
+&= \frac{0.312}{0.130\ \mu\text{M}^{-1}} \\
+&= 2.40\ \mu\text{M}
+\end{aligned}
+$$
+
+It lies between the 1.50 µM and 3.00 µM standards, as its absorbance lies between theirs, 0.195 and 0.390.
+
+</div>
+</Check>
+
+## When the result is wrong
+
+A concentration is only as good as the reading behind it. The lab skill here is spotting what can go wrong, and which way it pushes the answer.
+
+One line of reasoning covers every case in the table. The concentration is the absorbance divided by the slope. So whatever makes the unknown's absorbance read too high makes the concentration come out too high, and the other way round.
+
+In each case the mistake happens only when the unknown is measured; the standards were measured properly.
+
+| What went wrong | Absorbance reads | Concentration comes out |
+|---|---|---|
+| Fingerprints or smudges on the cuvette for the unknown | Too high | Too high |
+| Air bubbles in the light path | Too high | Too high |
+| Cuvette still wet with water, not rinsed with the solution first | Too low | Too low |
+| Unknown read at a wavelength off the peak, standards at the peak | Too low | Too low |
+| Instrument re-zeroed with an empty holder, not a cuvette of solvent, before the unknown | Too high | Too high |
+
+Here is why.
+
+Fingerprints, smudges and bubbles scatter or block light. The instrument cannot tell light that was scattered from light that was absorbed, so it counts it all as absorbed.
+
+Leftover water dilutes the sample. Fewer absorbing particles sit in the beam.
+
+Off the peak, $\varepsilon$ is smaller. The peak is the highest point of the spectrum, so moving the wavelength either way lowers the absorbance.
+
+Without a proper blank, the light lost to the cuvette's walls and to the solvent is counted as absorbance by the dissolved substance.
+
+A mistake that makes the standards read too high works the other way. It makes the line steeper, so the same absorbance now points to a lower concentration, and the unknown comes out too low.
+
+Two more cases are worth knowing. Suppose every reading, the standards and the unknown alike, was taken without a proper blank. Then every reading carries the same extra absorbance, and the calibration line crosses the absorbance axis above zero instead of passing through the origin. That is a sign to blank again.
+
+And if everything, standards and unknown alike, is measured at the same wrong wavelength, the result is not pushed either way. The measurement is just less sensitive.
+
+<Check answer={1}>
+A student leaves the unknown sitting uncovered in its cuvette, and some of the water evaporates before the reading is taken. Is the concentration the student calculates for the unknown too high, too low, or unaffected?
+
+- Too high
+- Too low
+- Unaffected, because the amount of dye in the cuvette has not changed
+- Unaffected, because the standards were measured correctly
+
+<div slot="why">The dye stays behind while water leaves. The solution becomes more concentrated, so more absorbing particles sit in each cubic centimeter of the beam, and the absorbance rises. The concentration is the absorbance divided by the slope, so it comes out too high for the solution as it was before the water left. It is true that the amount of dye is unchanged. But the calibration line relates absorbance to the concentration in the cuvette at the time of the reading. And correct standards do not protect the unknown's reading.</div>
+</Check>
+
+<Trap>
+
+Five mistakes come up again and again on this topic:
+
+- **Reporting the slope as the answer.** A slope of 0.130 µM⁻¹ is not a concentration of 0.130 µM. It says how much the absorbance rises for each µM of dye. The answer is the unknown's own reading divided by it.
+- **Forgetting $b$ when finding $\varepsilon$.** $\varepsilon$ is the slope divided by $b$, or $A$ divided by $bc$. With a 1.00 cm cuvette the number is the same, but the unit is not.
+- **Mixing µM and M.** 1 µM is 10⁻⁶ M. Keep one unit all the way through.
+- **Thinking every error gives a high result.** Anything that scatters or blocks light when the unknown is read makes $A$, and so $c$, too high. Anything that dilutes the unknown, or lowers $\varepsilon$ for its reading alone, makes them too low.
+- **Thinking any wavelength will do.** The standards and the unknown must be measured at the same wavelength, and $\lambda_{\text{max}}$ gives the most sensitive line.
+
+</Trap>
+
+<KeyPoints>
+
+- The Beer–Lambert law is $A = \varepsilon bc$: $\varepsilon$, the molar absorptivity, is how strongly the species absorbs at that wavelength, $b$ is the path length and $c$ is the concentration.
+- Path length and concentration together set how many absorbing particles are in the light's path.
+- With the path length and the wavelength fixed, absorbance is proportional to concentration, so a plot of $A$ against $c$ is a straight line through the origin with slope $\varepsilon b$.
+- The wavelength of maximum absorbance, $\lambda_{\text{max}}$, is chosen because $\varepsilon$ is largest there, which gives the steepest line and the most sensitive measurement.
+- An unknown's concentration is its absorbance divided by the slope of the calibration line.
+- Fingerprints or bubbles in the light path when the unknown is read make the result too high, and so does a blank taken without a solvent-filled cuvette before the unknown. An unknown diluted by leftover water, or read off the peak when the standards were read at it, comes out too low.
+
+</KeyPoints>
+
+<PracticeNext />

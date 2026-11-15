@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 348" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Plot runs from x=72 (0 µM) to x=444 (6 µM), 62 units per µM, and from y=280 (absorbance 0) to y=40 (0.8), 300 units per absorbance unit. Standards: (1.50, 0.195) at (165, 221.5); (3.00, 0.390) at (258, 163); (4.50, 0.585) at (351, 104.5); (6.00, 0.780) at (444, 46). The line A = 0.130c runs from the origin (72, 280) to the last standard (444, 46). The drink, (3.50, 0.455), is at (289, 143.5). Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="348" fill="#FDFCF9"/>
+
+  <path d="M72 40V280H444" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M72 280v7M196 280v7M320 280v7M444 280v7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M72 280h-7M72 220h-7M72 160h-7M72 100h-7M72 40h-7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+
+  <text x="72" y="306" text-anchor="middle" fill="#6B655D">0</text>
+  <text x="196" y="306" text-anchor="middle" fill="#6B655D">2</text>
+  <text x="320" y="306" text-anchor="middle" fill="#6B655D">4</text>
+  <text x="444" y="306" text-anchor="middle" fill="#6B655D">6</text>
+
+  <text x="58" y="286" text-anchor="end" fill="#6B655D">0</text>
+  <text x="58" y="226" text-anchor="end" fill="#6B655D">0.2</text>
+  <text x="58" y="166" text-anchor="end" fill="#6B655D">0.4</text>
+  <text x="58" y="106" text-anchor="end" fill="#6B655D">0.6</text>
+  <text x="58" y="46" text-anchor="end" fill="#6B655D">0.8</text>
+
+  <text x="258" y="336" text-anchor="middle" fill="#26231F">concentration (µM)</text>
+  <text x="18" y="160" text-anchor="middle" fill="#26231F" transform="rotate(-90 18 160)">absorbance</text>
+
+  <!-- Guides for the drink: across from 0.455 to the line, then down to 3.50 µM. They stop at the diamond's corners. -->
+  <path d="M72 143.5H281M289 151.5V280" fill="none" stroke="#6B655D" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <path d="M72 280L444 46" fill="none" stroke="#26231F" stroke-width="2.5" stroke-linecap="round"/>
+
+  <circle cx="165" cy="221.5" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="258" cy="163" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="351" cy="104.5" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="444" cy="46" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+
+  <path d="M289 135.5L297 143.5L289 151.5L281 143.5Z" fill="#FDFCF9" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+
+  <text x="400" y="50" text-anchor="end" fill="#26231F">slope = 0.130 per µM</text>
+  <text x="303" y="166" fill="#26231F">drink</text>
+  <text x="80" y="136" fill="#26231F">0.455</text>
+  <text x="297" y="270" fill="#26231F">3.50</text>
+</svg>
