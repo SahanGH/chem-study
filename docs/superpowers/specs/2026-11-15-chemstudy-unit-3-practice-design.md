@@ -195,3 +195,21 @@ fact-checked, with the deploy watched.
 - Each document has been fact-checked and every accepted finding fixed.
 - Every constant agrees with the lessons.
 - No page scrolls sideways at 412, 390, 360 or 320 px with every answer open.
+
+## As built (Plan 12, 2026-11-15)
+
+Seven documents in three pull requests:
+- #44: the design and plan.
+- #45: the worksheets. Five worksheets, 29 questions, one of them scored (10 points).
+- The third: the ladders and the free-response set. Fourteen ladders with 56 parts; a free-response set of 5 questions, 16 parts and 32 points.
+
+- **Models.** Every document was fact-checked twice on Opus, not Fable: Fable's usage limit ran until 2026-11-17. Each check was by a fresh agent that solved every question before reading its answer. Fixers ran on Sonnet.
+- **Few final answers were wrong.** Worksheet 3's 15.96 g was 16.0 g, and Ladder 14(b)'s 0.300 needed a three-figure concentration. Most of what the checks found was in the originals' data and explanations. Each pull request lists them for the teacher:
+  - **Data:** ammonia's boiling point; the molar mass and mass of CuSO₄; significant figures in Ladders 7 and 14.
+  - **Explanations:** absorbance defined as transmittance; Ladder 2's "compare force type first", which lesson 3.1 calls a trap; "only" claims that left out a force.
+- **Section 4 went as designed**, with three additions:
+  - Worksheet 1's question 6 uses pentane for hexane, since real hexane breaks the vapor-pressure rule.
+  - The free-response set tests 3.2 and not 3.7, so its topics say so.
+  - Ladder 13(b)'s intermediate value moved from 7.83 to 7.82 with the new c. The design said no answer changes, which holds for every final answer.
+- **"Only" is a word to check.** Five findings across the documents were a list called complete that was not, or a rule stated as "only". Fact-check briefs for later units should ask for this by name.
+- **No code changed** (section 5).
