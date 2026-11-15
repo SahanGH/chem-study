@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 308" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Diamond: ten carbon atoms (an adamantane-shaped piece of the lattice) in an oblique view, all one fill; atoms nearer the viewer are slightly larger. Every atom shows four lines: bonds inside the piece, and short open-ended stubs for bonds to atoms outside it. Where two bonds cross, the one behind is broken. Graphite: one honeycomb sheet of 22 atoms in oblique view, used three times. Every atom shows three lines, with stubs on the edge atoms. -->
+  <defs>
+    <g id="sheet">
+      <path d="M280 87L288 76M280 87L293.3 92.5M288 76L309.3 70.5M285.3 103.5L293.3 92.5M285.3 103.5L298.6 109M293.3 92.5L314.6 87M309.3 70.5L322.6 76M298.6 109L320 103.5M314.6 87L322.6 76M314.6 87L328 92.5M322.6 76L344 70.5M320 103.5L328 92.5M320 103.5L333.3 109M328 92.5L349.3 87M344 70.5L357.3 76M333.3 109L354.6 103.5M349.3 87L357.3 76M349.3 87L362.6 92.5M357.3 76L378.6 70.5M354.6 103.5L362.6 92.5M354.6 103.5L367.9 109M362.6 92.5L383.9 87M378.6 70.5L391.9 76M367.9 109L389.2 103.5M383.9 87L391.9 76M383.9 87L397.2 92.5M389.2 103.5L397.2 92.5M280 87L271.3 89.2M288 76L279.7 72.6M285.3 103.5L276.6 105.7M309.3 70.5L314.6 63.2M298.6 109L293.3 116.3M344 70.5L349.3 63.2M333.3 109L328 116.3M378.6 70.5L383.9 63.2M367.9 109L362.6 116.3M391.9 76L400.6 73.8M389.2 103.5L397.6 106.9M397.2 92.5L406 90.3" fill="none" stroke="#26231F" stroke-width="2" stroke-linecap="round"/>
+      <g fill="#4F706C" stroke="#26231F" stroke-width="1">
+        <circle cx="280" cy="87" r="3.5"/>
+        <circle cx="288" cy="76" r="3.5"/>
+        <circle cx="285.3" cy="103.5" r="3.5"/>
+        <circle cx="293.3" cy="92.5" r="3.5"/>
+        <circle cx="309.3" cy="70.5" r="3.5"/>
+        <circle cx="298.6" cy="109" r="3.5"/>
+        <circle cx="314.6" cy="87" r="3.5"/>
+        <circle cx="322.6" cy="76" r="3.5"/>
+        <circle cx="320" cy="103.5" r="3.5"/>
+        <circle cx="328" cy="92.5" r="3.5"/>
+        <circle cx="344" cy="70.5" r="3.5"/>
+        <circle cx="333.3" cy="109" r="3.5"/>
+        <circle cx="349.3" cy="87" r="3.5"/>
+        <circle cx="357.3" cy="76" r="3.5"/>
+        <circle cx="354.6" cy="103.5" r="3.5"/>
+        <circle cx="362.6" cy="92.5" r="3.5"/>
+        <circle cx="378.6" cy="70.5" r="3.5"/>
+        <circle cx="367.9" cy="109" r="3.5"/>
+        <circle cx="383.9" cy="87" r="3.5"/>
+        <circle cx="391.9" cy="76" r="3.5"/>
+        <circle cx="389.2" cy="103.5" r="3.5"/>
+        <circle cx="397.2" cy="92.5" r="3.5"/>
+      </g>
+    </g>
+  </defs>
+  <rect width="480" height="308" fill="#FDFCF9"/>
+  <path d="M240 18V296" fill="none" stroke="#6B655D" stroke-width="1" stroke-opacity="0.35"/>
+
+  <text x="120" y="28" text-anchor="middle" fill="#26231F" font-weight="600">Diamond</text>
+  <g fill="none" stroke="#26231F" stroke-width="2.5" stroke-linecap="round">
+    <path d="M120 125L102.4 137.4"/>
+    <path d="M120 125L133.6 108.4"/>
+    <path d="M160.5 174.6L120 125"/>
+    <path d="M160.5 174.6L178.3 187.2"/>
+    <path d="M79.5 96.4L120 125"/>
+    <path d="M160.5 174.6L120 224.2"/>
+    <path d="M79.5 96.4L65.6 79.4"/>
+    <path d="M120 224.2L102 237"/>
+    <path d="M160.5 174.6L201 146"/>
+    <path d="M120 224.2L133.9 241.3"/>
+    <path d="M79.5 96.4L39 146"/>
+    <path d="M39 146L20.8 158.8"/>
+    <path d="M201 146L215.1 128.8"/>
+    <path d="M79.5 96.4L120 67.8"/>
+    <path d="M79.5 195.6L120 224.2"/>
+    <path d="M201 146L215.1 163.2"/>
+    <path d="M39 146L20.8 133.2"/>
+    <path d="M79.5 195.6L39 146"/>
+    <path d="M120 67.8L134.2 50.4"/>
+    <path d="M160.5 117.4L201 146"/>
+    <path d="M120 67.8L101.7 54.8"/>
+    <path d="M79.5 195.6L65.3 213"/>
+    <path d="M160.5 117.4L120 67.8"/>
+    <path d="M79.5 195.6L120 167"/>
+    <path d="M160.5 117.4L179.1 104.2"/>
+    <path d="M160.5 117.4L120 167"/>
+    <path d="M120 167L134.5 184.8"/>
+    <path d="M120 167L101.2 153.7"/>
+  </g>
+  <path d="M140.3 142.1L134 149.9" fill="none" stroke="#FDFCF9" stroke-width="8"/>
+  <path d="M141.2 141L133 151" fill="none" stroke="#26231F" stroke-width="2.5"/>
+  <g fill="#4F706C" stroke="#26231F" stroke-width="1.5">
+    <circle cx="120" cy="125" r="8.5"/>
+    <circle cx="160.5" cy="174.6" r="8.8"/>
+    <circle cx="79.5" cy="96.4" r="9"/>
+    <circle cx="120" cy="224.2" r="9"/>
+    <circle cx="39" cy="146" r="9.2"/>
+    <circle cx="201" cy="146" r="9.2"/>
+    <circle cx="120" cy="67.8" r="9.5"/>
+    <circle cx="79.5" cy="195.6" r="9.5"/>
+    <circle cx="160.5" cy="117.4" r="9.7"/>
+    <circle cx="120" cy="167" r="10"/>
+  </g>
+  <text x="120" y="278" text-anchor="middle" fill="#26231F">each C bonded to 4</text>
+
+  <text x="360" y="28" text-anchor="middle" fill="#26231F" font-weight="600">Graphite</text>
+  <text x="262" y="52" fill="#26231F">sheets slide</text>
+  <path d="M370 46H430" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M428 40L440 46L428 52Z" fill="#26231F"/>
+  <use href="#sheet"/>
+  <use href="#sheet" y="68"/>
+  <use href="#sheet" y="136"/>
+  <path d="M408 106H415V142H408" fill="none" stroke="#26231F" stroke-width="3" stroke-dasharray="0.1 5" stroke-linecap="round"/>
+  <text x="421" y="120" fill="#26231F">weak</text>
+  <text x="421" y="141" fill="#26231F">forces</text>
+  <text x="330" y="278" text-anchor="middle" fill="#26231F">each C bonded to 3,</text>
+  <text x="330" y="300" text-anchor="middle" fill="#26231F">in sheets</text>
+</svg>

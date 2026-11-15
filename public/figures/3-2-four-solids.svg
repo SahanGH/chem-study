@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 456" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Four 180 x 180 panels. Ionic: 8 anions and 8 cations. Metallic: 16 ions with charge +1 and 16 electrons. Covalent network: 16 atoms. Molecular: 6 two-atom molecules packed 8 units apart; the two atoms of each molecule overlap, so each pair reads as one molecule, and one dotted line marks a weak attraction between two neighboring molecules. -->
+  <defs>
+    <g id="anion">
+      <circle r="25" fill="#E3EAE9" stroke="#6B655D" stroke-width="1.5"/>
+      <text y="6" text-anchor="middle" fill="#26231F">&#8722;</text>
+    </g>
+    <g id="cation">
+      <circle r="17" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+      <text y="6" text-anchor="middle" fill="#FDFCF9">+</text>
+    </g>
+    <g id="metal-ion">
+      <circle r="17" fill="#E3EAE9" stroke="#6B655D" stroke-width="1.5"/>
+      <text y="6" text-anchor="middle" fill="#26231F">+</text>
+    </g>
+    <circle id="electron" r="3.5" fill="#26231F"/>
+    <circle id="network-atom" r="9" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+    <g id="molecule">
+      <circle cy="-10" r="14" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cy="10" r="14" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+    </g>
+    <clipPath id="network-panel">
+      <rect x="30" y="264" width="180" height="180"/>
+    </clipPath>
+  </defs>
+  <rect width="480" height="456" fill="#FDFCF9"/>
+  <g fill="none" stroke="#6B655D" stroke-width="1" stroke-opacity="0.35">
+    <rect x="30" y="40" width="180" height="180"/>
+    <rect x="270" y="40" width="180" height="180"/>
+    <rect x="30" y="264" width="180" height="180"/>
+    <rect x="270" y="264" width="180" height="180"/>
+  </g>
+
+  <text x="120" y="30" text-anchor="middle" fill="#26231F" font-weight="600">Ionic</text>
+  <use href="#anion" x="57" y="67"/>
+  <use href="#cation" x="99" y="67"/>
+  <use href="#anion" x="141" y="67"/>
+  <use href="#cation" x="183" y="67"/>
+  <use href="#cation" x="57" y="109"/>
+  <use href="#anion" x="99" y="109"/>
+  <use href="#cation" x="141" y="109"/>
+  <use href="#anion" x="183" y="109"/>
+  <use href="#anion" x="57" y="151"/>
+  <use href="#cation" x="99" y="151"/>
+  <use href="#anion" x="141" y="151"/>
+  <use href="#cation" x="183" y="151"/>
+  <use href="#cation" x="57" y="193"/>
+  <use href="#anion" x="99" y="193"/>
+  <use href="#cation" x="141" y="193"/>
+  <use href="#anion" x="183" y="193"/>
+
+  <text x="360" y="30" text-anchor="middle" fill="#26231F" font-weight="600">Metallic</text>
+  <use href="#metal-ion" x="297" y="67"/>
+  <use href="#metal-ion" x="339" y="67"/>
+  <use href="#metal-ion" x="381" y="67"/>
+  <use href="#metal-ion" x="423" y="67"/>
+  <use href="#metal-ion" x="297" y="109"/>
+  <use href="#metal-ion" x="339" y="109"/>
+  <use href="#metal-ion" x="381" y="109"/>
+  <use href="#metal-ion" x="423" y="109"/>
+  <use href="#metal-ion" x="297" y="151"/>
+  <use href="#metal-ion" x="339" y="151"/>
+  <use href="#metal-ion" x="381" y="151"/>
+  <use href="#metal-ion" x="423" y="151"/>
+  <use href="#metal-ion" x="297" y="193"/>
+  <use href="#metal-ion" x="339" y="193"/>
+  <use href="#metal-ion" x="381" y="193"/>
+  <use href="#metal-ion" x="423" y="193"/>
+  <use href="#electron" x="318" y="50"/>
+  <use href="#electron" x="402" y="50"/>
+  <use href="#electron" x="281" y="130"/>
+  <use href="#electron" x="439" y="88"/>
+  <use href="#electron" x="439" y="172"/>
+  <use href="#electron" x="318" y="210"/>
+  <use href="#electron" x="402" y="210"/>
+  <use href="#electron" x="316" y="90"/>
+  <use href="#electron" x="362" y="86"/>
+  <use href="#electron" x="400" y="90"/>
+  <use href="#electron" x="320" y="128"/>
+  <use href="#electron" x="358" y="132"/>
+  <use href="#electron" x="404" y="128"/>
+  <use href="#electron" x="316" y="170"/>
+  <use href="#electron" x="362" y="174"/>
+  <use href="#electron" x="400" y="170"/>
+
+  <text x="120" y="254" text-anchor="middle" fill="#26231F" font-weight="600">Covalent network</text>
+  <g clip-path="url(#network-panel)" fill="none" stroke="#26231F" stroke-width="2.5">
+    <path d="M30 288H210M30 332H210M30 376H210M30 420H210"/>
+    <path d="M54 264V444M98 264V444M142 264V444M186 264V444"/>
+  </g>
+  <use href="#network-atom" x="54" y="288"/>
+  <use href="#network-atom" x="98" y="288"/>
+  <use href="#network-atom" x="142" y="288"/>
+  <use href="#network-atom" x="186" y="288"/>
+  <use href="#network-atom" x="54" y="332"/>
+  <use href="#network-atom" x="98" y="332"/>
+  <use href="#network-atom" x="142" y="332"/>
+  <use href="#network-atom" x="186" y="332"/>
+  <use href="#network-atom" x="54" y="376"/>
+  <use href="#network-atom" x="98" y="376"/>
+  <use href="#network-atom" x="142" y="376"/>
+  <use href="#network-atom" x="186" y="376"/>
+  <use href="#network-atom" x="54" y="420"/>
+  <use href="#network-atom" x="98" y="420"/>
+  <use href="#network-atom" x="142" y="420"/>
+  <use href="#network-atom" x="186" y="420"/>
+
+  <text x="360" y="254" text-anchor="middle" fill="#26231F" font-weight="600">Molecular</text>
+  <use href="#molecule" x="324" y="300"/>
+  <use href="#molecule" x="360" y="300"/>
+  <use href="#molecule" x="396" y="300"/>
+  <use href="#molecule" x="324" y="356"/>
+  <use href="#molecule" x="360" y="356"/>
+  <use href="#molecule" x="396" y="356"/>
+  <path d="M360 366H396" fill="none" stroke="#26231F" stroke-width="3" stroke-dasharray="0.1 5.9" stroke-linecap="round"/>
+  <path d="M378 372V419" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="360" y="436" text-anchor="middle" fill="#26231F">weak attraction</text>
+</svg>
