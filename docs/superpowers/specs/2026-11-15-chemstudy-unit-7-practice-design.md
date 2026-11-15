@@ -166,3 +166,39 @@ fact-checked, with the deploy watched.
 - Each document has been fact-checked and every accepted finding fixed.
 - Every salt has one K_sp across the lessons and the practice.
 - No page scrolls sideways at 412, 390, 360 or 320 px with every answer open.
+
+## As built (Plan 10, 2026-11-15)
+
+Seven documents in three pull requests (#38 the design and plan, #39 the
+worksheets, then the ladders and the free-response set): 12 ladders with 48
+parts; five worksheets with 39 questions, one of them scored (10 points); a
+free-response set of 5 questions, 14 parts and 32 points.
+
+- **Every document was fact-checked twice on Fable 5.2**, each time by a
+  fresh agent that solved every question before reading its answer. No
+  "Your turn" answer, final number or direction was wrong. What the checks
+  found was in the originals' explanations: wrong statements (Worksheet 3's
+  5(c) and question 8; a check printed as 50.2 for 50.3 in Worksheets 3 and
+  5; four in the ladders, Ladder 11's two sentences on lead(II) iodide among
+  them; one topic tag in the free-response set), and a longer list of
+  answers that said more than the lessons do. Each pull request lists them
+  for the teacher.
+- **One K_sp per salt (section 4.1) went as designed**, with one change:
+  ratios are given to the figures on which rounded and unrounded values
+  agree ("about 19", "about 7000", "nearly 4000"), not from rounded values
+  alone, and the division is shown. A student who keeps calculator digits
+  gets 7500 where the rounded values give 7200.
+- **"Shift" is kept for a system that was at equilibrium.** Answers in four
+  of the documents said a mixture as made "shifts"; they now say the
+  reaction runs or proceeds toward products or reactants, as lessons 7.7 and
+  7.10 do.
+- **Topics lists name only what a document tests.** The free-response set
+  leaves out 7.4, 7.6 and 7.8 and the ladders leave out 7.8, so those
+  lessons' "Practice next" does not send a student to a page with nothing on
+  the topic. Section 1's table gave both documents all twelve.
+- **Rubrics say how another valid route scores.** Four lines of the
+  free-response set and one of Worksheet 5 were reworded so that a student
+  scoring their own work can tell what an answer by Q, or by a calculation,
+  earns. The point values are unchanged.
+- **No code changed** (section 5).
+

@@ -213,6 +213,16 @@ Every intermediate line of each worked answer changes with its value; the fixer 
 - [ ] **Step 3:** A fresh fact-checker (Fable) recomputes every changed answer from the question alone.
 - [ ] **Step 4:** Audit again. Record each changed number in `expected/worksheet-5-....json` with the reason "corrected: K_sp moved to the site's value, <old> to <new>".
 
+> **As carried out (2026-11-15), Tasks 1 to 4.** Five Fable writers converted the worksheets in parallel; the first audits needed only the entries this plan foresaw, plus one for a reaction split over two lines. Then:
+>
+> - **The first fact-checks** found no wrong final answer. Worksheets 1, 2 and 4 had no error; Worksheet 3 had two wrong clauses (5(c) "smaller still", and question 8's sentence on a negative root); Worksheet 5 had 50.2 printed for 50.3. All three were in the source. The accuracy findings were of a few kinds: "shifts" said of a mixture that was never at equilibrium; a rule stated without its condition; a stem that never said the products start at zero; a unit missing.
+> - **Fixes were applied by one Sonnet fixer per worksheet** from a decided list, each fixer also bringing its `expected` file back to `0 unexplained, 0 stale`. Worksheet 5's fixer applied the K_sp pass (Task 3) in the same run, with every number given to it: the script's values, not its own arithmetic.
+> - **The table in Task 3 changed in three places.** Ratios are given to the figures that rounded and unrounded values agree on: "about 19" (as planned), "about 7000" (7200 from the rounded values, 7500 unrounded) and "nearly 4000" (3750 and 3680). 3(c) and 4(b) show the division. s³ for CaF₂ is printed as 8.8 × 10⁻¹².
+> - **A second check on Fable** recomputed every answer of Worksheet 5 from its own table and re-read every changed passage on the other four: no error, five accuracy points, three of them in wording the first fixes had introduced (1(d) of Worksheet 2, 8(c) of Worksheet 4, the ratio above).
+> - **Phones:** the dissolving equations added to Worksheet 5's question 1 scrolled inside their boxes from 412 px down, so each is split over two lines, as lesson 7.11 splits silver chromate's.
+> - **Labels:** Worksheet 1's question 8 is tagged 7.3 (where the framework and the lesson put the conversion), not 7.4, and its stem gives R, which had left the introduction with the formula.
+> - **A shell lesson:** a multi-line script passed to the shell in a heredoc was refused by a safety check before it ran. Fix scripts go in a file made with the Write tool.
+
 ### Task 4: Open pull request B
 
 - [ ] **Decide each fact-check finding; one fixer per worksheet for the accepted ones; build, test and audit again; a second fact-check of what changed.**
@@ -310,6 +320,14 @@ With all seven documents in place, check by hand: each Unit 7 lesson's "Practice
 git add src/content/practice/unit-7
 git commit -m "feat(practice): add the Unit 7 skill ladders and free-response set"
 ```
+
+> **As carried out (2026-11-15), Tasks 5 and 6.** Both documents were written as drafts in the scratch folder while the worksheets were checked, and were fact-checked, fixed and checked a second time there before they were copied in.
+>
+> - **Skill ladders:** no "Your turn" answer was wrong. Four statements in the source's text were: Ladder 11's "has the smaller K_sp" and the key to 11(d), which leaned on the same pair (it now uses silver chromate against silver chloride, both already on the page); Ladder 4's diamond to graphite as a reaction "with K = 10¹⁰"; and Ladder 2(b)'s K written with a concentration called "the vapor pressure". Ladder 12's ratio is "about 7000", as Worksheet 5's.
+> - **Free-response set:** no wrong answer or number. Question 3's tag (7.6) became "7.3, 7.9". The 5 percent line carries one more digit (0.1027) so that it computes to the 20.5 percent it prints. Question 4(b) now asks for what its rubric scores.
+> - **Topics lists** name only what a document tests: the free-response set leaves out 7.4, 7.6 and 7.8, and the ladders leave out 7.8. So the hand check below reads "each lesson's Practice next lists the documents that have a question on its topic".
+> - **Rubrics** in the free-response set say how an answer by another valid route scores (1(b), 1(d), 2(d), 3(b), 5(a)); the points are unchanged. They are listed in the pull request for the teacher.
+> - **The word "dissolution"** is on no page of the site; the ladders used it five times and now say "dissolving", as the lessons do.
 
 ### Task 7: Close out
 
