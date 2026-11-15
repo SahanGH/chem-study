@@ -1,0 +1,360 @@
+---
+topic: "7.10"
+minutes: 15
+summary: "Why a disturbed equilibrium shifts, shown with numbers. A disturbance makes Q differ from K, and the reaction runs until the two are equal again."
+---
+
+Seal the tip of a syringe full of brown gas and push the plunger halfway in. The brown darkens at once, then fades a little while you watch. Topic 7.9 gave a rule that predicts the fading: the equilibrium shifts toward the side with fewer moles of gas. But a rule is not a reason. The reason is a number that the push knocked out of place, and this lesson finds it.
+
+## A disturbance makes Q differ from K
+
+Two reminders first.
+
+- From topic 7.3: $Q$ has the same form as $K$, but it takes the concentrations the mixture has right now, whatever they are.
+- From topic 7.7: if $Q$ is less than $K$, the reaction runs toward products. If $Q$ is greater than $K$, it runs toward reactants. If $Q$ equals $K$, the mixture is at equilibrium.
+
+Now put the two together. A mixture at equilibrium has $Q$ equal to $K$. A disturbance changes one of the two numbers. Now they differ, so the mixture is not at equilibrium any more, and it reacts in whichever direction closes the gap. When $Q$ equals $K$ again, the concentrations stop changing: that is the new equilibrium. Le Châtelier's principle describes what happens. $Q$ and $K$ explain it.
+
+This lesson follows one gas mixture all the way through, the colorless N₂O₄ and brown NO₂ of topic 7.9:
+
+$$
+\ce{N2O4(g) <=> 2NO2(g)}
+$$
+
+Its reaction quotient has NO₂ on top, squared because its coefficient is 2:
+
+$$
+Q_c = \frac{[\ce{NO2}]^2}{[\ce{N2O4}]}
+$$
+
+At a certain temperature $K_c$ = 0.490, and a mixture at equilibrium holds 0.0625 M N₂O₄ and 0.175 M NO₂. (The mixtures in this lesson are made up for practice, with numbers chosen so that the arithmetic comes out even.) This mixture is hot and under pressure, so from here on it is in a cylinder with a piston, not a syringe.
+
+<KeyIdea>
+
+A system shifts because a disturbance has made $Q$ differ from $K$. It reacts in the direction that brings $Q$ back to $K$, and it is at equilibrium again when the two are equal.
+
+</KeyIdea>
+
+<Worked title="Extra NO₂ goes in">
+
+The mixture above is in the cylinder with its piston locked, so the volume is fixed, and the temperature is held constant. NO₂ is injected, which raises [NO₂] from 0.175 M to 0.265 M. Which way does the reaction run?
+
+1. **Confirm the start.** Put the equilibrium concentrations into $Q$.
+
+   $$
+   \begin{aligned}
+   Q_c &= \frac{(0.175)^2}{0.0625} \\
+   &= 0.490
+   \end{aligned}
+   $$
+
+   $Q$ equals $K$: the mixture was at equilibrium.
+
+2. **Find $Q$ just after the disturbance.** Nothing has reacted yet, so [N₂O₄] is still 0.0625 M. Only [NO₂] is new.
+
+   $$
+   \begin{aligned}
+   Q_c &= \frac{(0.265)^2}{0.0625} \\
+   &= 1.12
+   \end{aligned}
+   $$
+
+   The calculator shows 1.1236. The data have three significant figures, so $Q$ is 1.12.
+
+3. **Compare.** 1.12 is greater than 0.490, so $Q$ is greater than $K$. There is too much product for the amount of reactant. The reaction runs toward reactants: NO₂ turns into N₂O₄. That makes the top of the fraction smaller and the bottom larger, so $Q$ falls.
+
+4. **Check the new equilibrium.** When the concentrations stop changing, the mixture holds 0.0900 M N₂O₄ and 0.210 M NO₂.
+
+   $$
+   \begin{aligned}
+   Q_c &= \frac{(0.210)^2}{0.0900} \\
+   &= 0.490
+   \end{aligned}
+   $$
+
+   $Q$ is back at $K$.
+
+5. **Look at what changed and what did not.** NO₂ fell by 0.265 − 0.210 = 0.055 M. N₂O₄ rose by 0.0900 − 0.0625 = 0.0275 M, half as much, as the coefficients 2 and 1 require. Neither concentration went back to its old value. Only the fraction did: it is 0.490 again. (Topic 7.9 drew this disturbance as a graph.)
+
+</Worked>
+
+<Check numeric="87.5">
+Iron(III) ions and thiocyanate ions join to make a red ion:
+
+$$
+\begin{aligned}
+&\ce{Fe^3+(aq) + SCN^-(aq) <=>} \\
+&\quad \ce{FeSCN^2+(aq)}
+\end{aligned}
+$$
+
+At a certain temperature $K_c$ = 140. A solution at equilibrium holds 4.00 × 10⁻³ M Fe³⁺, 1.25 × 10⁻³ M SCN⁻ and 7.00 × 10⁻⁴ M FeSCN²⁺. A few crystals of potassium thiocyanate, KSCN, are dissolved in it, which raises [SCN⁻] to 2.00 × 10⁻³ M before anything reacts. The volume does not change. What is $Q$ at that moment?
+
+<div slot="why">
+
+The crystals add SCN⁻, and their potassium ions take no part. So only [SCN⁻] is new, and the other two concentrations are what they were.
+
+$$
+\begin{aligned}
+Q_c &= \frac{[\ce{FeSCN^2+}]}{[\ce{Fe^3+}][\ce{SCN^-}]} \\
+&= \frac{7.00 \times 10^{-4}}{(4.00 \times 10^{-3})(2.00 \times 10^{-3})} \\
+&= 87.5
+\end{aligned}
+$$
+
+Since 87.5 is less than 140, $Q$ is less than $K$. The reaction runs toward products and the red deepens, as topic 7.9 predicted for an added reactant.
+
+Before the crystals went in, the solution was at equilibrium:
+
+$$
+\begin{aligned}
+Q_c &= \frac{7.00 \times 10^{-4}}{(4.00 \times 10^{-3})(1.25 \times 10^{-3})} \\
+&= 140
+\end{aligned}
+$$
+
+If you got 140, you used the old [SCN⁻]. If you got 0.0114, your fraction was upside down.
+
+</div>
+</Check>
+
+## Changing the volume: the exponents decide
+
+Unlock the piston and push it in until the gas has half its volume. The same moles are now in half the liters, so every concentration doubles at once (molarity is moles per liter, topic 3.7). What that does to $Q$ depends on the exponents in $Q$.
+
+<Worked title="The piston is pushed halfway in">
+
+The same starting mixture, 0.0625 M N₂O₄ and 0.175 M NO₂ with $K_c$ = 0.490, is squeezed to half its volume at constant temperature. Which way does the reaction run, and what would you see?
+
+1. **Double every concentration.** N₂O₄ goes to 2 × 0.0625 = 0.125 M, and NO₂ goes to 2 × 0.175 = 0.350 M.
+
+2. **Find $Q$.**
+
+   $$
+   \begin{aligned}
+   Q_c &= \frac{(0.350)^2}{0.125} \\
+   &= 0.980
+   \end{aligned}
+   $$
+
+3. **See why $Q$ changed.** [NO₂] is squared, so doubling it multiplies the top of the fraction by 2², which is 4. The bottom is multiplied by 2. So $Q$ is multiplied by 4 ÷ 2 = 2: it is now twice $K$.
+
+4. **Compare.** 0.980 is greater than 0.490, so $Q$ is greater than $K$, and the reaction runs toward reactants, toward N₂O₄. That is the side with fewer moles of gas, the direction topic 7.9 predicted.
+
+5. **Check the new equilibrium.** When the concentrations stop changing, the mixture holds 0.160 M N₂O₄ and 0.280 M NO₂.
+
+   $$
+   \begin{aligned}
+   Q_c &= \frac{(0.280)^2}{0.160} \\
+   &= 0.490
+   \end{aligned}
+   $$
+
+6. **Read the color.** [NO₂] went from 0.175 M to 0.350 M at the push, then fell to 0.280 M. Seen through a window in the side of the cylinder, the brown deepens at the push and then fades a little. It ends deeper than it began: the shift only partly undoes the squeeze.
+
+</Worked>
+
+The syringe in the opening did the same thing, for the same reason: darker at the push, then a little paler as $Q$ fell back to $K$.
+
+The reasoning works for any reaction. When the volume changes, every concentration is multiplied by the same factor: 2 when the volume is halved, one half when it is doubled. The coefficients are the exponents in $Q$. So $Q$ picks that factor up once for each mole of gas or dissolved particles on the product side of the equation, and loses it once for each mole on the reactant side.
+
+- If the two sides of the equation have the same number of moles of gas, or of dissolved particles, the factors cancel. $Q$ does not change, and nothing shifts.
+- Solids and pure liquids are not in $Q$, which is why topic 7.9 did not count them.
+- The same holds for $Q_p$ when the volume changes at constant temperature: halving the volume doubles every partial pressure.
+
+<Check answer={1}>
+At a very high temperature, steam is partly split into its elements:
+
+$$
+\ce{2H2O(g) <=> 2H2(g) + O2(g)}
+$$
+
+A mixture at equilibrium is allowed to expand to twice its volume, at constant temperature. What happens to $Q$ at that moment, and which way does the reaction then run?
+
+- $Q$ is halved, so the reaction runs toward products
+- $Q$ is doubled, so the reaction runs toward reactants
+- $Q$ is unchanged, so nothing shifts
+- $Q$ falls to one eighth, so the reaction runs toward products
+
+<div slot="why">
+
+$$
+Q_c = \frac{[\ce{H2}]^2[\ce{O2}]}{[\ce{H2O}]^2}
+$$
+
+Every concentration is halved. Follow the factor of one half through the top of the fraction, then the bottom, then $Q$:
+
+$$
+\begin{aligned}
+\text{top:}\quad & \left(\frac{1}{2}\right)^2 \times \frac{1}{2} = \frac{1}{8} \\[0.8em]
+\text{bottom:}\quad & \left(\frac{1}{2}\right)^2 = \frac{1}{4} \\[0.8em]
+Q\text{:}\quad & \frac{1}{8} \div \frac{1}{4} = \frac{1}{2}
+\end{aligned}
+$$
+
+Now $Q$ is less than $K$, and the reaction runs toward products, the side with more moles of gas (3 against 2).
+
+One eighth is what the top alone does; the bottom changes too. Doubling is what a squeeze to half the volume would do. And $Q$ stays unchanged only when both sides have the same number of moles of gas.
+
+</div>
+</Check>
+
+The same arithmetic covers a solution. Add water until the volume has doubled, and every dissolved concentration is halved. Take the iron and thiocyanate equilibrium, in which Fe³⁺ and SCN⁻ join to make red FeSCN²⁺:
+
+$$
+Q_c = \frac{[\ce{FeSCN^2+}]}{[\ce{Fe^3+}][\ce{SCN^-}]}
+$$
+
+$Q$ has one concentration on top and two underneath. The top is halved once and the bottom twice, so $Q$ doubles. Now $Q$ is greater than $K$, and the reaction runs toward reactants, the side with more dissolved particles, as topic 7.9 said. Liquid water is not in $Q$, so it brings no factor of its own.
+
+<Check numeric="16">
+A violet solution holds two kinds of cobalt ion at equilibrium. Co(H₂O)₆²⁺ is pink and CoCl₄²⁻ is blue:
+
+$$
+\begin{aligned}
+&\ce{Co(H2O)6^2+(aq) + 4Cl^-(aq) <=>} \\
+&\quad \ce{CoCl4^2-(aq) + 6H2O(l)}
+\end{aligned}
+$$
+
+Water is added until the volume of the solution has doubled. By what factor is $Q$ multiplied at that moment?
+
+<div slot="why">
+
+The water in the equation is the liquid solvent, so it is left out (topic 7.3):
+
+$$
+Q_c = \frac{[\ce{CoCl4^2-}]}{[\ce{Co(H2O)6^2+}][\ce{Cl^-}]^4}
+$$
+
+Every concentration is halved.
+
+$$
+\begin{aligned}
+\text{top:}\quad & \frac{1}{2} \\[0.8em]
+\text{bottom:}\quad & \frac{1}{2} \times \left(\frac{1}{2}\right)^4 = \frac{1}{32} \\[0.8em]
+Q\text{:}\quad & \frac{1}{2} \div \frac{1}{32} = 16
+\end{aligned}
+$$
+
+$Q$ is now 16 times $K$, so the reaction runs toward reactants and the solution turns pink.
+
+If you got 2, you left out the exponent 4. If you got 1/16, your fraction was upside down.
+
+</div>
+</Check>
+
+## Temperature changes K, not Q
+
+Go back to the starting mixture, 0.0625 M N₂O₄ and 0.175 M NO₂. Lock the piston, so the container is rigid, and warm the cylinder. Nothing has been added, removed or squeezed. The same moles of each gas are in the same volume, so every concentration is what it was, and $Q_c$ is still 0.490.
+
+What has changed is $K$. An endothermic reaction takes energy in, and an exothermic one releases it (topic 7.9). Topic 7.9 said that $K$ rises with temperature when the forward reaction is endothermic, and this one is.
+
+Suppose that at the new, higher temperature $K_c$ = 0.867. Now $Q$ is less than $K$, 0.490 against 0.867, not because $Q$ moved but because $K$ did. The reaction runs toward products, and the gas darkens. At the new equilibrium the cylinder holds 0.0480 M N₂O₄, down from 0.0625 M, and 0.204 M NO₂, up from 0.175 M:
+
+$$
+\begin{aligned}
+Q_c &= \frac{(0.204)^2}{0.0480} \\
+&= 0.867
+\end{aligned}
+$$
+
+That is the new $K$.
+
+Here is every kind of disturbance, with what it does to each number:
+
+| Disturbance | $Q$ just afterward | $K$ |
+|---|---|---|
+| A substance is added or removed | Changes | Same |
+| The volume of a gas mixture changes, or a solution is diluted | Changes, unless the factors cancel | Same |
+| The temperature changes, in a rigid container | $Q_c$ is the same: no concentration has changed | Changes |
+| A catalyst, an unreactive gas at constant volume, or more of a pure solid or liquid is added | Same | Same |
+
+The last row is why those three shift nothing: neither number moves, so $Q$ still equals $K$.
+
+<Check answer={3}>
+A red solution of FeSCN²⁺ is at equilibrium, with $K_c$ = 140:
+
+$$
+\begin{aligned}
+&\ce{Fe^3+(aq) + SCN^-(aq) <=>} \\
+&\quad \ce{FeSCN^2+(aq)}
+\end{aligned}
+$$
+
+The forward reaction is exothermic: it releases energy. The test tube is stood in ice, and at the lower temperature $K_c$ = 165. Just after the solution has cooled, before anything has reacted, which statement is right?
+
+- $Q$ = 165 and $K$ = 165, so nothing happens
+- $Q$ = 140 and $K$ = 140, because cooling changes neither
+- $Q$ = 140 and $K$ = 165, so the reaction runs toward products and the red deepens
+- $Q$ = 140 and $K$ = 165, so the reaction runs toward reactants and the red turns paler
+
+<div slot="why">
+
+Nothing was added or removed, and the volume of the solution is, for this purpose, the same. So no concentration changed, and $Q$ is still 140, the old $K$. The new $K$ is 165.
+
+$Q$ is less than $K$, so the reaction runs toward products: more FeSCN²⁺, and a deeper red. This agrees with topic 7.9. Cooling shifts an equilibrium in the exothermic direction, which here is forward.
+
+</div>
+</Check>
+
+Now disturb the mixture yourself: add a gas, change the volume or warm it, and compare $Q$ with $K$ before, just after and at the new equilibrium. The diagram opens on the first worked example, with NO₂ added.
+
+<EquilibriumShift />
+
+The path between the two equilibria is drawn as a smooth curve for illustration. The concentrations at the start and at the new equilibrium are exact.
+
+"Add N₂O₄" and "Add NO₂" end at the same mixture, and that is not a fault. The diagram raises [N₂O₄] by 0.0450 M or [NO₂] by 0.0900 M. One N₂O₄ molecule is made of the same atoms as two NO₂ molecules, so the two additions bring the same atoms into the same volume at the same temperature. The same atoms settle at the same equilibrium, whichever form they arrive in (topic 7.1).
+
+## Q works where Le Châtelier's principle cannot
+
+Suppose two things change at once: extra N₂O₄ and extra NO₂ are both injected into the cylinder. Le Châtelier's principle speaks about a system that was at equilibrium and then received a disturbance. Here there are two disturbances at once, and it gives two answers. The added N₂O₄ pushes the reaction toward products. The added NO₂ pushes it toward reactants. The principle offers no way to weigh one push against the other.
+
+$Q$ settles it. The principle reasons from what was done to the mixture. $Q$ needs only the concentrations as they now stand, whatever happened before. Put them into the fraction, compare the result with $K$, and you have the direction. Topic 7.7 did exactly that for a mixture that had only just been made. So when the principle cannot decide, calculate.
+
+<Check numeric="0.460">
+The N₂O₄ and NO₂ mixture of this lesson is at equilibrium, with $K_c$ = 0.490. Both gases are injected at the same moment, with the volume unchanged, which brings [N₂O₄] to 0.110 M and [NO₂] to 0.225 M. What is $Q$ at that moment?
+
+<div slot="why">
+
+$$
+\begin{aligned}
+Q_c &= \frac{(0.225)^2}{0.110} \\
+&= 0.460
+\end{aligned}
+$$
+
+Since 0.460 is less than 0.490, $Q$ is less than $K$, and the reaction runs toward products: a little N₂O₄ breaks up.
+
+Le Châtelier's principle could not settle this one, because the two additions push in opposite directions. The calculation shows that here the added N₂O₄ wins.
+
+If you got 2.05, you left out the exponent. If you got 2.17, your fraction was upside down. Either one would send the reaction the wrong way.
+
+</div>
+</Check>
+
+<Trap>
+
+Six mistakes come up again and again on this topic:
+
+- **Losing the exponent when the volume changes.** Double [NO₂] and [NO₂]² is multiplied by 4, not 2.
+- **Using the old concentrations for $Q$.** $Q$ just after a disturbance takes the concentrations just after it. A species that was not touched keeps its old value.
+- **Reading the comparison backward.** $Q$ greater than $K$ means too much product, so the reaction runs toward reactants.
+- **Saying a change of concentration or volume changes $K$.** Those change $Q$. Only temperature changes $K$.
+- **Saying a change of temperature changes $Q_c$.** In a rigid container the concentrations are what they were. It is $K$ that moves.
+- **Expecting the old concentrations back.** The ratio returns to $K$. The individual concentrations settle at new values.
+
+</Trap>
+
+<KeyPoints>
+
+- At equilibrium $Q$ equals $K$. A disturbance makes them differ, and the system is then no longer at equilibrium.
+- The system reacts in the direction that brings $Q$ back to $K$: toward products if $Q$ is less than $K$, toward reactants if $Q$ is greater than $K$.
+- Adding or removing a substance, changing the volume and diluting a solution change $Q$ and leave $K$ alone.
+- A change of temperature changes $K$. In a rigid container it leaves every concentration, and so $Q_c$, where it was at that moment.
+- When the volume changes, every concentration is multiplied by the same factor, and the exponents in $Q$ decide whether $Q$ rises, falls or stays the same.
+- Le Châtelier's principle applies to a system that was at equilibrium and was then disturbed. Comparing $Q$ with $K$ needs only the concentrations as they now stand, so it also settles what the principle cannot, such as two changes that pull in opposite directions.
+
+</KeyPoints>
+
+<PracticeNext />
