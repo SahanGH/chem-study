@@ -164,6 +164,11 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   align-items: center;
   gap: 0.25rem 1rem;
 }
+/* A row of choices across every column of the controls, so that its options
+   stay on one line wherever the diagram is wide enough for them. */
+.diagram-choice.is-wide {
+  grid-column: 1 / -1;
+}
 .diagram-choice legend {
   padding: 0;
   float: left;
@@ -259,6 +264,30 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
 }
 .shape-pair-dot {
   fill: var(--ink);
+}
+
+/* The Maxwell–Boltzmann explorer. Its drawing is 320 units wide, so text at
+   12px is 12 px when the drawing itself is shown 320 px wide: the ratio of
+   the site's figures (18 on 480). Shown narrower, it is smaller in proportion. */
+.distribution .diagram-label {
+  font-size: 12px;
+}
+/* The molecules beyond the threshold: the area under the chosen curve. */
+.distribution-shade {
+  fill: var(--u-ink);
+  fill-opacity: 0.3;
+}
+.distribution-threshold {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+/* The comparison curve can pass behind the peak's label. An outline in the
+   card's color keeps the label readable where it does. */
+.distribution-peak-label {
+  paint-order: stroke;
+  stroke: var(--card);
+  stroke-width: 3px;
+  stroke-linejoin: round;
 }
 
 @media print {

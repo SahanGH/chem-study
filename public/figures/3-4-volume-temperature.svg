@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 436" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Plot runs from x=64 (0 K) to x=448 (400 K), 0.96 units per kelvin, and from y=350 (0 L) to y=30 (4 L), 80 units per liter. The line is V = 0.010 T: dashed from 0 K to 100 K, solid from 100 K to 400 K. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="436" fill="#FDFCF9"/>
+
+  <path d="M64 30V350H448" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M64 350v7M160 350v7M256 350v7M352 350v7M448 350v7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M64 350h-7M64 270h-7M64 190h-7M64 110h-7M64 30h-7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+
+  <text x="64" y="376" text-anchor="middle" fill="#6B655D">0</text>
+  <text x="160" y="376" text-anchor="middle" fill="#6B655D">100</text>
+  <text x="256" y="376" text-anchor="middle" fill="#6B655D">200</text>
+  <text x="352" y="376" text-anchor="middle" fill="#6B655D">300</text>
+  <text x="448" y="376" text-anchor="middle" fill="#6B655D">400</text>
+
+  <text x="50" y="356" text-anchor="end" fill="#6B655D">0</text>
+  <text x="50" y="276" text-anchor="end" fill="#6B655D">1</text>
+  <text x="50" y="196" text-anchor="end" fill="#6B655D">2</text>
+  <text x="50" y="116" text-anchor="end" fill="#6B655D">3</text>
+  <text x="50" y="36" text-anchor="end" fill="#6B655D">4</text>
+
+  <text x="18" y="400" fill="#6B655D">0 K = &#8722;273.15 &#176;C</text>
+  <text x="256" y="426" text-anchor="middle" fill="#26231F">temperature (K)</text>
+  <text x="20" y="190" text-anchor="middle" fill="#26231F" transform="rotate(-90 20 190)">volume (L)</text>
+
+  <path d="M64 190H256V350M64 30H448V350" fill="none" stroke="#6B655D" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <path d="M64 350L160 270" fill="none" stroke="#26231F" stroke-width="3" stroke-dasharray="9 7"/>
+  <path d="M160 270L448 30" fill="none" stroke="#26231F" stroke-width="3" stroke-linecap="round"/>
+
+  <circle cx="256" cy="190" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="448" cy="30" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+
+  <text x="78" y="62" fill="#26231F">fixed <tspan font-style="italic">n</tspan> and <tspan font-style="italic">P</tspan></text>
+
+  <text x="78" y="118" fill="#26231F">double the kelvin temperature,</text>
+  <text x="78" y="140" fill="#26231F">double the volume</text>
+
+  <text x="248" y="294" text-anchor="end" fill="#26231F">extended:</text>
+  <text x="248" y="316" text-anchor="end" fill="#26231F">a real gas</text>
+  <text x="248" y="338" text-anchor="end" fill="#26231F">condenses first</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 352" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Plot runs from x=64 (0 L) to x=464 (8 L), 50 units per liter, and from y=290 (0 atm) to y=30 (4 atm), 65 units per atm. The curve is P = 4.0/V, computed every 0.05 L from 1.0 L to 8.0 L. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="352" fill="#FDFCF9"/>
+
+  <path d="M64 30V290H464" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M64 290v7M164 290v7M264 290v7M364 290v7M464 290v7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M64 290h-7M64 225h-7M64 160h-7M64 95h-7M64 30h-7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+
+  <text x="64" y="316" text-anchor="middle" fill="#6B655D">0</text>
+  <text x="164" y="316" text-anchor="middle" fill="#6B655D">2</text>
+  <text x="264" y="316" text-anchor="middle" fill="#6B655D">4</text>
+  <text x="364" y="316" text-anchor="middle" fill="#6B655D">6</text>
+  <text x="464" y="316" text-anchor="middle" fill="#6B655D">8</text>
+
+  <text x="50" y="296" text-anchor="end" fill="#6B655D">0</text>
+  <text x="50" y="231" text-anchor="end" fill="#6B655D">1</text>
+  <text x="50" y="166" text-anchor="end" fill="#6B655D">2</text>
+  <text x="50" y="101" text-anchor="end" fill="#6B655D">3</text>
+  <text x="50" y="36" text-anchor="end" fill="#6B655D">4</text>
+
+  <text x="264" y="342" text-anchor="middle" fill="#26231F">volume (L)</text>
+  <text x="20" y="160" text-anchor="middle" fill="#26231F" transform="rotate(-90 20 160)">pressure (atm)</text>
+
+  <path d="M64 160H164V290M64 225H264V290" fill="none" stroke="#6B655D" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <path d="M114.0 30.0 L116.5 42.4 L119.0 53.6 L121.5 63.9 L124.0 73.3 L126.5 82.0 L129.0 90.0 L131.5 97.4 L134.0 104.3 L136.5 110.7 L139.0 116.7 L141.5 122.3 L144.0 127.5 L146.5 132.4 L149.0 137.1 L151.5 141.4 L154.0 145.6 L156.5 149.5 L159.0 153.2 L161.5 156.7 L164.0 160.0 L166.5 163.2 L169.0 166.2 L171.5 169.1 L174.0 171.8 L176.5 174.4 L179.0 177.0 L181.5 179.4 L184.0 181.7 L186.5 183.9 L189.0 186.0 L191.5 188.0 L194.0 190.0 L196.5 191.9 L199.0 193.7 L201.5 195.5 L204.0 197.1 L206.5 198.8 L209.0 200.3 L211.5 201.9 L214.0 203.3 L216.5 204.8 L219.0 206.1 L221.5 207.5 L224.0 208.8 L226.5 210.0 L229.0 211.2 L231.5 212.4 L234.0 213.5 L236.5 214.6 L239.0 215.7 L241.5 216.8 L244.0 217.8 L246.5 218.8 L249.0 219.7 L251.5 220.7 L254.0 221.6 L256.5 222.5 L259.0 223.3 L261.5 224.2 L264.0 225.0 L266.5 225.8 L269.0 226.6 L271.5 227.3 L274.0 228.1 L276.5 228.8 L279.0 229.5 L281.5 230.2 L284.0 230.9 L286.5 231.6 L289.0 232.2 L291.5 232.9 L294.0 233.5 L296.5 234.1 L299.0 234.7 L301.5 235.3 L304.0 235.8 L306.5 236.4 L309.0 236.9 L311.5 237.5 L314.0 238.0 L316.5 238.5 L319.0 239.0 L321.5 239.5 L324.0 240.0 L326.5 240.5 L329.0 240.9 L331.5 241.4 L334.0 241.9 L336.5 242.3 L339.0 242.7 L341.5 243.2 L344.0 243.6 L346.5 244.0 L349.0 244.4 L351.5 244.8 L354.0 245.2 L356.5 245.6 L359.0 245.9 L361.5 246.3 L364.0 246.7 L366.5 247.0 L369.0 247.4 L371.5 247.7 L374.0 248.1 L376.5 248.4 L379.0 248.7 L381.5 249.1 L384.0 249.4 L386.5 249.7 L389.0 250.0 L391.5 250.3 L394.0 250.6 L396.5 250.9 L399.0 251.2 L401.5 251.5 L404.0 251.8 L406.5 252.0 L409.0 252.3 L411.5 252.6 L414.0 252.9 L416.5 253.1 L419.0 253.4 L421.5 253.6 L424.0 253.9 L426.5 254.1 L429.0 254.4 L431.5 254.6 L434.0 254.9 L436.5 255.1 L439.0 255.3 L441.5 255.6 L444.0 255.8 L446.5 256.0 L449.0 256.2 L451.5 256.5 L454.0 256.7 L456.5 256.9 L459.0 257.1 L461.5 257.3 L464.0 257.5" fill="none" stroke="#26231F" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <circle cx="164" cy="160" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="264" cy="225" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+
+  <text x="206" y="152" fill="#26231F">double the volume,</text>
+  <text x="206" y="174" fill="#26231F">half the pressure</text>
+
+  <text x="460" y="52" text-anchor="end" fill="#26231F">fixed <tspan font-style="italic">n</tspan> and <tspan font-style="italic">T</tspan></text>
+</svg>

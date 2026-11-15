@@ -1,0 +1,177 @@
+---
+topic: "3.6"
+minutes: 9
+summary: "Why real gases stray from PV = nRT: attractions near condensation, the particles' own volume at very high pressure, and when a gas behaves almost ideally."
+---
+
+Look inside a carbon dioxide fire extinguisher and you would find that most of the CO₂ is a liquid, even at room temperature. It is held under about 57 atm, the vapor pressure of CO₂ at 20 °C. $PV = nRT$ never predicts a liquid. It says a gas squeezed harder just gets smaller and smaller. But squeeze real molecules close together, and their attractions hold them as a liquid. The ideal gas model leaves those attractions out.
+
+## What the ideal model leaves out
+
+Two assumptions of the kinetic molecular theory (topic 3.5) are not quite true. The model says gas particles do not attract each other, and that they take up no room of their own. Real particles do attract each other: those are the intermolecular forces of topic 3.1. And real particles do take up space.
+
+Most of the time neither matters much. Near room temperature and 1 atm, most gases follow $PV = nRT$ to within about 1 percent. Nitrogen and oxygen follow it to within about 0.1 percent.
+
+To see how far a gas strays, compare its measured $PV$ with $nRT$. Divide one by the other:
+
+$$
+\frac{PV}{nRT}
+$$
+
+For an ideal gas this ratio is exactly 1. Below 1, the gas has less $PV$ than predicted. Above 1, it has more.
+
+## Attractions: close to condensing
+
+Picture a particle about to hit the wall of its container. The particles behind it tug it back, so it hits a little more softly. With every collision softened, the measured pressure is lower than $PV = nRT$ predicts. So $PV/nRT$ is less than 1.
+
+The tug matters most when the particles are slow and close together. Slow means a low temperature. Close together means a higher pressure. Those are conditions close to the ones where the gas would condense.
+
+Argon shows it. Argon boils at 87 K at 1 atm. At 90 K and 1 atm, just above that, it deviates noticeably from ideal behavior: its $PV$ is about 3 percent below $nRT$. At 400 K and 1 atm it is very nearly ideal.
+
+The stronger the forces between the particles, the bigger the deviation. Polar molecules, molecules that hydrogen-bond and molecules with many electrons deviate more.
+
+<Check answer={1}>
+A real gas at a moderate pressure has $PV/nRT = 0.85$. What is the best explanation?
+
+- Attractions between the molecules pull them back from the walls, so the pressure is lower than predicted.
+- The molecules take up space, so the volume is larger than predicted.
+- The molecules move faster than the kinetic molecular theory predicts.
+- Some of the molecules break apart.
+
+<div slot="why">A ratio below 1 means less $PV$ than an ideal gas would have. Attractions soften the collisions with the walls and lower the pressure. Particle volume, the subject of the next section, works the other way and pushes the ratio above 1.</div>
+</Check>
+
+<Worked title="Testing a gas against PV = nRT">
+
+A 2.00 L container holds 0.500 mol of gas X at 255 K, and the measured pressure is 4.95 atm. (Gas X is made up for this example.) How far is it from ideal, and why?
+
+1. **Ideal pressure.** Find the pressure an ideal gas would have, using R = 0.08206 L·atm/(mol·K).
+
+   $$
+   \begin{aligned}
+   P &= \frac{nRT}{V} \\
+   &= \frac{(0.500)(0.08206)(255)}{2.00} \\
+   &= 5.23\ \text{atm}
+   \end{aligned}
+   $$
+
+2. **The ratio.** Divide the measured $PV$ by $nRT$.
+
+   $$
+   \begin{aligned}
+   \frac{PV}{nRT} &= \frac{(4.95)(2.00)}{(0.500)(0.08206)(255)} \\
+   &= \frac{9.90}{10.46} \\
+   &= 0.946
+   \end{aligned}
+   $$
+
+   The measured pressure divided by the ideal pressure gives the same number.
+
+   $$
+   \frac{4.95\ \text{atm}}{5.23\ \text{atm}} = 0.946
+   $$
+
+3. **Read it.** The ratio is below 1. The gas pushes about 5 percent less than an ideal gas would.
+
+4. **Explain it.** Attractions between the particles are softening their collisions with the walls. So gas X is probably cool enough to be fairly close to condensing.
+
+</Worked>
+
+## Particle volume: very high pressure
+
+At extremely high pressure the particles are packed so tightly that their own volume is a real share of the container. The space they actually move in is less than $V$. So the gas cannot be squeezed as far as $PV = nRT$ predicts. Its volume is larger than ideal, and $PV/nRT$ is more than 1.
+
+Both effects are always present. At moderate pressures attractions usually win, and the ratio dips below 1. At very high pressures particle volume wins, and the ratio climbs above 1. In between, the ratio passes through 1. There the two effects happen to cancel; the gas is not ideal.
+
+<Figure
+  src="/figures/3-6-real-gas-ratio.svg"
+  alt="Graph of PV over nRT against pressure for a real gas at two temperatures, with a horizontal line at 1 for an ideal gas. At the lower temperature the curve dips well below 1 at moderate pressures, where attractions win, then rises above 1 at very high pressures, where the particles' own volume wins. At the higher temperature the curve dips only slightly and rises above 1 sooner. The lower-temperature curve crosses above it near the right-hand end, at a ratio of about 1.2, and ends higher, at about 1.5 against 1.3."
+  caption="An illustrative real gas. Attractions pull the ratio below 1; at very high pressure, particle volume pushes it above 1. Warmer, the gas stays closer to ideal over most of the range."
+/>
+
+<Check numeric="1.45">
+1.00 mol of gas Y at 315 K and 585 atm occupies 0.0640 L. What is $PV/nRT$ for this sample?
+
+<div slot="why">
+
+$$
+\begin{aligned}
+\frac{PV}{nRT} &= \frac{(585)(0.0640)}{(1.00)(0.08206)(315)} \\
+&= \frac{37.4}{25.8} \\
+&= 1.45
+\end{aligned}
+$$
+
+The ratio is above 1. The gas takes up more room than an ideal gas would (0.0442 L), because at this enormous pressure the particles' own volume is a real part of the container. (Gas Y is made up.)
+
+</div>
+</Check>
+
+## When a gas behaves ideally
+
+Two conditions bring a real gas close to ideal.
+
+At **high temperature** the particles move so fast that attractions barely slow their collisions.
+
+At **low pressure** the particles are far apart. Their attractions are weak, and their own volume is a tiny share of the container.
+
+The gas itself matters too. The gases closest to ideal have weak forces and small particles, such as helium and hydrogen. The gases that deviate most have strong forces and large particles: polar molecules, molecules that hydrogen-bond, and molecules with many electrons.
+
+<KeyIdea>
+
+A real gas behaves most like an ideal gas at high temperature and low pressure. It deviates most at low temperature, where attractions matter, and at high pressure, where attractions and then the particles' own volume matter.
+
+</KeyIdea>
+
+<Check answer={2}>
+Four samples of carbon dioxide gas are kept under different conditions. In which one does the gas deviate most from $PV = nRT$?
+
+- 500 K and 1 atm
+- 250 K and 15 atm
+- 500 K and 15 atm
+- 250 K and 1 atm
+
+<div slot="why">The colder sample has slower molecules, which feel their attractions more. The higher pressure crowds them together, where the attractions act most strongly. At 250 K and 15 atm, carbon dioxide is close to condensing. At 500 K and 1 atm it is very nearly ideal.</div>
+</Check>
+
+<Check answer={1}>
+At 400 K and 2 atm, which of these gases behaves most nearly like an ideal gas?
+
+- Helium, He
+- Chlorine, Cl₂
+- Butane, C₄H₁₀
+- Methanol, CH₃OH
+
+<div slot="why">A helium atom is tiny and has only 2 electrons, so its London dispersion forces are very weak and it takes up little room. Cl₂ and butane each have 34 electrons and larger particles, so their London forces are much stronger. Methanol molecules hydrogen-bond.</div>
+</Check>
+
+**Beyond the exam:** chemists sometimes correct $PV = nRT$ with the van der Waals equation:
+
+$$
+\left(P + \dfrac{an^2}{V^2}\right)(V - nb) = nRT
+$$
+
+Each correction mends one thing the ideal model leaves out. The term with $a$ adds back the pressure lost to attractions, and $a$ is larger for gases with stronger intermolecular forces. The term with $b$ subtracts the space the particles themselves fill, and $b$ is larger for bigger particles. The equation sheet does not give this equation, and the exam does not ask you to use it.
+
+<Trap>
+
+Four mistakes come up again and again on this topic:
+
+- **Swapping the two effects.** Attractions make $PV/nRT$ less than 1. Particle volume makes it more than 1.
+- **Thinking high temperature causes deviations.** High temperature makes a gas behave more ideally.
+- **Forgetting that gas particles attract each other at all.** Every real gas has at least London dispersion forces (topic 3.1).
+- **Blaming particle volume at ordinary pressures.** At around 1 atm the particles fill a tiny share of the container. Their volume matters only at very high pressure.
+
+</Trap>
+
+<KeyPoints>
+
+- The ideal gas law ignores the attractions between particles and the particles' own volume, so real gases deviate from it.
+- Attractions make $PV/nRT$ less than 1, and they matter most close to condensation, at low temperature.
+- The particles' own volume makes $PV/nRT$ more than 1, and it matters at very high pressure.
+- Real gases behave most ideally at high temperature and low pressure.
+- Gases with strong intermolecular forces and large particles deviate most, and small, nonpolar gases with few electrons, such as helium, come closest to ideal.
+
+</KeyPoints>
+
+<PracticeNext />
