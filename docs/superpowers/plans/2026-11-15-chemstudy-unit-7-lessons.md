@@ -514,6 +514,28 @@ Also, over all 297 states (3 pairs × 3 starts × 33 times): `a` + `b` = 100; on
 
 Branch: `topic/unit-7-using-k`, from `main` after pull request B merges. Tasks 6 to 9. The pull request title is "feat(lessons): Unit 7 lessons 7.5-7.8".
 
+> **As carried out (2026-11-15).** The lessons are newer than the four briefs below. Each lesson was fact-checked on Fable 5.2 (no wrong answer, number or figure count in any) and the group was checked for originality (no strong match). What changed, and why:
+>
+> - **Lesson 7.5.**
+>   - The worked example no longer sets its K_c beside the 10⁹⁰ of 25 °C, which the lesson gives as a K_p: it says only that the constant is far smaller in the hot chamber and still enormous. The methane Check's constant is labeled K_c.
+>   - The opening asks whether any of the carbon dioxide in a breath falls apart, and answers with the number of CO molecules per liter. The brief's "luckily it is tiny, or it would be a poison" was the move a Tro passage makes with another reaction.
+>   - The ethene Check's explanation refers to topic 5.11, which uses the same reaction on platinum: a deliberate callback.
+>   - Check 1's correct option does not repeat the key idea's "plenty of both".
+> - **Lesson 7.6.**
+>   - **The worked example's second constant is 1.4 × 10²⁶, not 3.4 × 10²⁶, and its answer is 6.4 × 10¹².** Two independent checkers estimated that 3.0 × 10¹⁹ is the K_c of H₂ + ½ O₂ ⇌ H₂O(g) at 600 K and that S(l) + O₂ ⇌ SO₂ has about 1.4 × 10²⁶ there. The two now belong to one temperature.
+>   - The lettered Check and the ethene Check label their constants K_c and Q_c. The Check on K₁ × K₂² lists its four expressions lettered A to D.
+>   - "Four ways of writing its reaction, and four values", since the doubled equation makes a fourth.
+> - **Lesson 7.7.**
+>   - Tables have rows I, C and E, as lesson 7.4 settled.
+>   - The hotter reactor's constant is written 0.0120: with two figures, the shortcut's 0.125 atm and the exact 0.119 atm both rounded to 0.12 and the failure disappeared.
+>   - "Small K means small x" carries its condition (the mixture starts as reactants), and "the larger the starting amount beside K, the smaller the share that reacts" is limited to a reaction where one particle becomes two.
+>   - The quadratic formula is named in one sentence only.
+> - **Lesson 7.8.**
+>   - The key idea states its condition (the same number of particles on each side). Without it, the box said to put counts straight into Q, which the lesson's own second half shows to be wrong for 2 Z ⇌ Z₂.
+>   - "With the volume of the box" became "with the amount each particle stands for and the volume of the box, or with a scale".
+>   - The second figure is labeled "At equilibrium" and gives K_c, not K.
+> - **Kept, after the originality check:** the perfect-square example of lesson 7.7 starts at 0.220 M, which happens to be an answer in the old notes' example of the same kind (another reaction, another role); the propane example passes its check and then, hotter, fails it, the order the notes use with made-up species.
+
 ### Task 6: Lesson 7.5, Magnitude of the Equilibrium Constant
 
 **Files:**
