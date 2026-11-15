@@ -1,0 +1,1210 @@
+---
+title: "Skill ladders"
+kind: ladders
+order: 1
+topics: ["7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "7.7", "7.9", "7.10", "7.11", "7.12"]
+summary: Twelve skills, one at a time. Each has a worked example, then four questions of the same kind to try on your own. Start here, before the worksheets.
+---
+
+There are twelve ladders here, one for each skill. Each ladder is a worked example, then four questions of the same kind: same skill, new numbers, no help. Work alone, and work all four before you check any of them.
+
+**The distinction this whole unit rests on.** $K$ is a **constant** at a given temperature; $Q$ is the **same expression evaluated right now**, at whatever concentrations happen to exist. Comparing the two tells you which way the reaction will move. Every Le Châtelier question is really a $Q$-versus-$K$ question underneath.
+
+**The habit that decides this unit.** Only *temperature* changes the value of $K$. Adding reactant, removing product or changing the volume all leave $K$ exactly where it was: they move the system along a fixed $K$, they do not move $K$. A catalyst changes neither $K$ nor the equilibrium mixture.
+
+**One scope note.** Converting between $K_c$ and $K_p$ is not on the AP exam, and nothing here asks for it.
+
+## Ladder 1: What equilibrium is
+
+Equilibrium is *dynamic*: both reactions continue, at equal rates. Concentrations stop changing; the molecules do not stop reacting.
+
+<Worked title="What stops and what does not">
+
+Describe what is happening at equilibrium, macroscopically and at the particle level.
+
+**Macroscopically: nothing changes.** Concentrations, color and pressure are all constant. On a concentration-versus-time graph, every curve has flattened.
+
+**At the particle level: everything continues.** The forward reaction is still converting reactants to products, and the reverse is still converting them back, at exactly the *same rate*. Every molecule consumed one way is replaced by one made the other way.
+
+**Why the graph cannot prove this.** If the reaction had simply stopped, the curves would also flatten. The evidence for dynamic behavior comes from experiments such as isotopic labeling, where a labeled molecule placed on one side later appears on both.
+
+**Also note: reactants are still present.** A reaction at equilibrium has not gone to completion, and never will, which is why the arrow is drawn both ways.
+
+</Worked>
+
+<Question number={1} label="Your turn" topic="7.1, 7.2">
+
+<Part label="a">
+
+At equilibrium, what is true of the forward and reverse rates?
+
+<Answer>
+
+Equal.
+
+They are **equal**. That equality is what makes the concentrations constant.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Are reactants still present at equilibrium?
+
+<Answer>
+
+Yes.
+
+**Yes.** Equilibrium is not completion; both reactants and products are present in fixed amounts.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+What does a concentration-time graph look like once equilibrium is reached?
+
+<Answer>
+
+Horizontal lines at nonzero values.
+
+All curves become **horizontal** at nonzero concentrations: constant, but not zero.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Why does that graph not prove the process is dynamic?
+
+<Answer>
+
+A stopped reaction would look identical.
+
+Because a reaction that had genuinely *stopped* would produce exactly the same flat lines. The graph shows only that nothing is changing macroscopically. Distinguishing the two requires evidence at the molecular level, such as isotopic labeling.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 2: Writing equilibrium expressions
+
+Products over reactants, each raised to its coefficient. Pure solids and pure liquids are omitted.
+
+<Worked title="Two expressions, one omission">
+
+Write $K$ for each of these equilibria:
+
+$$
+\ce{N2(g) + 3H2(g) <=> 2NH3(g)}
+$$
+
+$$
+\ce{CaCO3(s) <=> CaO(s) + CO2(g)}
+$$
+
+**First:** all three are gases, so all appear, each raised to its coefficient.
+
+$$
+K = \frac{[\ce{NH3}]^2}{[\ce{N2}][\ce{H2}]^3}
+$$
+
+**Second:** both $\ce{CaCO3}$ and $\ce{CaO}$ are **pure solids** and are omitted.
+
+$$
+K = [\ce{CO2}]
+$$
+
+**Why solids drop out.** A pure solid has a fixed density and composition, so its "concentration" does not change no matter how much is present. Adding more solid cannot shift the equilibrium, so it is absorbed into the constant rather than written.
+
+**The consequence worth noticing:** in the second reaction, the pressure of $\ce{CO2}$ above the solid at a given temperature is fixed by $K$ alone, however much or little $\ce{CaCO3}$ is in the flask.
+
+</Worked>
+
+<Question number={2} label="Your turn" topic="7.3">
+
+<Part label="a">
+
+Write $K$ for this equilibrium:
+
+$$
+\ce{2SO2(g) + O2(g) <=> 2SO3(g)}
+$$
+
+<Answer>
+
+$[\ce{SO3}]^2/([\ce{SO2}]^2[\ce{O2}])$
+
+$$
+K = \frac{[\ce{SO3}]^2}{[\ce{SO2}]^2[\ce{O2}]}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Write $K$ for this equilibrium:
+
+$$
+\ce{H2O(l) <=> H2O(g)}
+$$
+
+<Answer>
+
+$K = [\ce{H2O}\text{(g)}]$
+
+$$
+K = [\ce{H2O}\text{(g)}]
+$$
+
+The liquid is omitted, so $K$ is just the concentration of the vapor. Written with a pressure instead, it is $K_p = P_{\ce{H2O}}$: the vapor pressure of water at that temperature.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Write $K$ for this equilibrium:
+
+$$
+\begin{aligned}
+&\ce{Fe3O4(s) + 4H2(g)} \\
+&\qquad \ce{<=> 3Fe(s) + 4H2O(g)}
+\end{aligned}
+$$
+
+<Answer>
+
+$[\ce{H2O}]^4/[\ce{H2}]^4$
+
+$$
+K = \frac{[\ce{H2O}]^4}{[\ce{H2}]^4}
+$$
+
+Both solids are omitted.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Why does adding more solid not shift such an equilibrium?
+
+<Answer>
+
+Its concentration is constant.
+
+Because a pure solid's concentration is fixed by its density and does not appear in $K$. Adding more increases the *amount* but not the concentration, so there is nothing for the system to respond to.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 3: Calculating K from equilibrium concentrations
+
+If you are handed the equilibrium concentrations, substitute them straight in. The only difficulty is remembering the exponents.
+
+<Worked title="Substitution">
+
+At equilibrium, $\ce{H2 + I2 <=> 2HI}$ has $[\ce{HI}] = 0.50\ \text{M}$ and $[\ce{H2}] = [\ce{I2}] = 0.10\ \text{M}$. Find $K$.
+
+$$
+\begin{aligned}
+K &= \frac{[\ce{HI}]^2}{[\ce{H2}][\ce{I2}]} \\
+&= \frac{(0.50)^2}{(0.10)(0.10)} \\
+&= \frac{0.25}{0.010} = \mathbf{25}
+\end{aligned}
+$$
+
+**The exponent is the whole difficulty.** Forgetting to square $\ce{HI}$ gives 50: exactly double, and a common wrong answer.
+
+**Sense check:** $K = 25$ is comfortably greater than 1, so products should dominate at equilibrium. Indeed: 0.50 M of $\ce{HI}$ against 0.10 M of each reactant. ✓
+
+**$K$ has no unit.** Report it as a bare number.
+
+</Worked>
+
+<Question number={3} label="Your turn" topic="7.4, 7.6">
+
+<Part label="a">
+
+For this reaction, $[\ce{NH3}] = 0.40\ \text{M}$, $[\ce{N2}] = 0.20\ \text{M}$ and $[\ce{H2}] = 0.20\ \text{M}$:
+
+$$
+\ce{N2 + 3H2 <=> 2NH3}
+$$
+
+Find $K$.
+
+<Answer>
+
+100
+
+$$
+\begin{aligned}
+K &= \frac{(0.40)^2}{(0.20)(0.20)^3} \\
+&= \frac{0.16}{0.0016} = \mathbf{100}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+For $\ce{2NO2 <=> N2O4}$ with $[\ce{N2O4}] = 0.60\ \text{M}$ and $[\ce{NO2}] = 0.20\ \text{M}$, find $K$.
+
+<Answer>
+
+15
+
+$$
+\begin{aligned}
+K &= \frac{0.60}{(0.20)^2} \\
+&= \frac{0.60}{0.040} = \mathbf{15}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+If $K$ for a reaction is 4, what is $K$ for its reverse?
+
+<Answer>
+
+$1/4 = 0.25$
+
+$\mathbf{0.25}$. Reversing a reaction inverts $K$, since numerator and denominator swap.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Why is the coefficient used as an exponent rather than a multiplier?
+
+<Answer>
+
+$K$ derives from a product of concentrations.
+
+Because the equilibrium expression comes from a *product* of concentration terms, one for each particle taking part. Two $\ce{NO2}$ molecules contribute $[\ce{NO2}] \times [\ce{NO2}]$, which is $[\ce{NO2}]^2$: multiplication, not addition.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 4: What the magnitude of K tells you
+
+$K$ measures *extent*, how far the reaction proceeds, and nothing else. It says nothing about rate.
+
+<Worked title="Reading three values">
+
+Interpret $K = 1 \times 10^{10}$, $K = 1$ and $K = 1 \times 10^{-8}$.
+
+**$K = 10^{10}$:** equilibrium lies far to the **right**. At equilibrium the mixture is essentially all products, with only traces of reactant. Such a reaction is often said to "go to completion", though strictly a little reactant always remains.
+
+**$K = 1$:** neither side dominates. Comparable amounts of both are present.
+
+**$K = 10^{-8}$:** far to the **left**. Almost nothing reacts; the mixture is essentially all reactant.
+
+**What none of these tells you: the rate.** A reaction with $K = 10^{10}$ may be immeasurably slow if its activation energy is large. Diamond turning into graphite is the classic case: graphite is the favored form of carbon at room temperature and pressure, yet the change is far too slow to see. Extent and rate are independent properties.
+
+</Worked>
+
+<Question number={4} label="Your turn" topic="7.5, 7.6">
+
+<Part label="a">
+
+$K = 5 \times 10^{6}$. Which side is favored?
+
+<Answer>
+
+Products.
+
+**Products**: $K \gg 1$.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$K = 3 \times 10^{-5}$. Which side?
+
+<Answer>
+
+Reactants.
+
+**Reactants**: $K \ll 1$.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Does a large $K$ mean a fast reaction?
+
+<Answer>
+
+No.
+
+**No.** $K$ describes only how far the reaction goes, not how quickly. Rate depends on activation energy, which is entirely separate.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Two reactions have $K = 100$ and $K = 0.01$ at the same temperature. How could they be related?
+
+<Answer>
+
+They could be the reverse of each other.
+
+They could be **reverses** of one another:
+
+$$
+0.01 = 1/100
+$$
+
+Reversing a reaction inverts its equilibrium constant.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 5: Q versus K
+
+$Q$ has exactly the same form as $K$ but is evaluated at the *current* concentrations. Comparing them predicts the direction of change.
+
+<Worked title="Predicting the direction">
+
+For $\ce{H2 + I2 <=> 2HI}$ with $K = 25$, a mixture holds $[\ce{HI}] = 0.20\ \text{M}$, $[\ce{H2}] = 0.30\ \text{M}$ and $[\ce{I2}] = 0.30\ \text{M}$. Which way does it move?
+
+$$
+\begin{aligned}
+Q &= \frac{(0.20)^2}{(0.30)(0.30)} \\
+&= \frac{0.040}{0.090} = \mathbf{0.44}
+\end{aligned}
+$$
+
+**Compare:** $Q = 0.44$ is much less than $K = 25$. There is too little product relative to equilibrium, so the reaction proceeds **forward**, to the right, making more $\ce{HI}$ until $Q$ climbs to 25.
+
+**The three cases, once and for all:**
+
+- $Q < K$: the reaction runs right (makes products).
+- $Q = K$: already at equilibrium, no net change.
+- $Q > K$: the reaction runs left (makes reactants).
+
+**Why this is the master tool:** every Le Châtelier prediction is this comparison in disguise. Adding a reactant lowers $Q$; the system responds by moving right. Nothing else is going on.
+
+</Worked>
+
+<Question number={5} label="Your turn" topic="7.3, 7.7, 7.10">
+
+<Part label="a">
+
+$Q = 0.5$, $K = 2.0$. Which way?
+
+<Answer>
+
+Right.
+
+**Right**: $Q < K$, too little product.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$Q = 150$, $K = 25$. Which way?
+
+<Answer>
+
+Left.
+
+**Left**: $Q > K$, too much product.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+$Q = K$. What happens?
+
+<Answer>
+
+No net change: already at equilibrium.
+
+**No net change.** The system is already at equilibrium.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Adding more reactant to a mixture at equilibrium: what happens to $Q$, and then to the system?
+
+<Answer>
+
+$Q$ falls; the system shifts right.
+
+Reactant appears in the *denominator* of $Q$, so increasing it makes $Q$ **smaller**. Now $Q < K$, and the system shifts **right** to consume some of the added reactant and restore $Q = K$.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 6: ICE tables
+
+Initial, Change, Equilibrium. The change row carries the **coefficients** as multipliers of $x$. That is where most errors enter.
+
+<Worked title="Setting one up correctly">
+
+$\ce{PCl5}$ at 0.500 M is placed in a flask and dissociates:
+
+$$
+\ce{PCl5 <=> PCl3 + Cl2}
+$$
+
+Build the ICE table.
+
+Every value is in M. The rows are labeled I, C and E, for Initial, Change and Equilibrium:
+
+| | $\ce{PCl5}$ | $\ce{PCl3}$ | $\ce{Cl2}$ |
+|---|---|---|---|
+| I | 0.500 | 0 | 0 |
+| C | −x | +x | +x |
+| E | 0.500 − x | x | x |
+
+**Here every coefficient is 1**, so every change is $\pm x$.
+
+**But if the equation were $\ce{H2 + I2 <=> 2HI}$**, the change row would read $-x$, $-x$, $+\mathbf{2}x$: the coefficient 2 multiplies. Writing $+x$ for $\ce{HI}$ is the single most common ICE error and corrupts every later line.
+
+**Reading the table:** the equilibrium row is what goes into $K$. Nothing else does.
+
+</Worked>
+
+<Question number={6} label="Your turn" topic="7.7">
+
+<Part label="a">
+
+This reaction starts from 1.0 M of each reactant:
+
+$$
+\ce{N2 + 3H2 <=> 2NH3}
+$$
+
+Write the change row.
+
+<Answer>
+
+$-x$, $-3x$, $+2x$
+
+$-x$, $-3x$, $+2x$.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+For $\ce{2NO2 <=> N2O4}$ starting from 0.80 M $\ce{NO2}$, write the equilibrium row.
+
+<Answer>
+
+$0.80 - 2x$ and $x$
+
+$\ce{NO2}$: $0.80 - 2x$; $\ce{N2O4}$: $x$.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Which row is substituted into the $K$ expression?
+
+<Answer>
+
+The equilibrium row.
+
+The **equilibrium** row.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Why must coefficients appear in the change row?
+
+<Answer>
+
+Species react in fixed proportions.
+
+Because the balanced equation fixes the proportions in which species are consumed and produced. If $x$ moles of $\ce{N2}$ react, exactly $3x$ of $\ce{H2}$ must go with it and $2x$ of $\ce{NH3}$ must appear. Using $x$ everywhere would describe a reaction with different stoichiometry.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 7: The 5 percent approximation
+
+When $K$ is very small, $x$ is tiny compared with the initial concentration and the subtraction can be dropped. **Always test the assumption afterward.**
+
+<Worked title="Assume, solve, then check">
+
+For $\ce{A <=> B + C}$ with $K = 1.0 \times 10^{-5}$ and $[\ce{A}]_0 = 0.100\ \text{M}$, find $x$.
+
+**Set up:**
+
+$$
+\frac{x^2}{0.100 - x} = 1.0 \times 10^{-5}
+$$
+
+**Assume $x \ll 0.100$**, so the denominator is about 0.100:
+
+$$
+\begin{aligned}
+x &= \sqrt{(1.0 \times 10^{-5})(0.100)} \\
+&= \mathbf{1.0 \times 10^{-3}}
+\end{aligned}
+$$
+
+**Now test it.** As a fraction of the initial concentration:
+
+$$
+\frac{1.0 \times 10^{-3}}{0.100} = 1.0\%
+$$
+
+That is comfortably below the 5 percent threshold, so the assumption is **valid** and no quadratic is needed.
+
+**What "valid" means:** solving the quadratic properly gives $x = 9.95 \times 10^{-4}$, differing by 0.5 percent: far less than the precision of the data.
+
+**When it fails,** as it can whenever $K$ is not small compared with the starting concentration, you must use the quadratic. Testing takes ten seconds; skipping the test is what costs points.
+
+</Worked>
+
+<Question number={7} label="Your turn" topic="7.7">
+
+<Part label="a">
+
+What is the usual threshold for accepting the approximation?
+
+<Answer>
+
+5 percent.
+
+What was left out ($x$, or $2x$ when the coefficient is 2) must be under **5 percent** of the starting concentration it was left out of.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$x = 0.004\ \text{M}$ from an initial 0.200 M. Is it valid?
+
+<Answer>
+
+Yes: 2 percent.
+
+$$
+\frac{0.004}{0.200} = 2.0\%
+$$
+
+**Valid.**
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+$x = 0.03\ \text{M}$ from an initial 0.10 M. Is it valid?
+
+<Answer>
+
+No: 30 percent.
+
+$$
+\frac{0.03}{0.10} = 30\%
+$$
+
+**Not valid**; the quadratic is required.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+For which kind of $K$ is the approximation generally safe?
+
+<Answer>
+
+Very small $K$, compared with the starting concentration.
+
+When $K$ is **very small** compared with the starting concentration. Then the reaction barely proceeds, so $x$ stays tiny beside what was there at the start. When $K$ is large, or the starting concentration is itself very small, $x$ is a big fraction of the starting amount and the approximation fails. Only the check tells you.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 8: Le Châtelier: concentration
+
+Add something and the system consumes some of it; remove something and the system replaces some of it. $K$ does not change.
+
+<Worked title="Four changes to one equilibrium">
+
+State the effect of each of four changes on this equilibrium:
+
+$$
+\ce{N2 + 3H2 <=> 2NH3}
+$$
+
+The changes: adding $\ce{N2}$; removing $\ce{NH3}$; adding $\ce{NH3}$; adding argon at constant volume.
+
+**Adding $\ce{N2}$:** shifts **right**. The system consumes some of the added reactant. ($Q$ falls below $K$.)
+
+**Removing $\ce{NH3}$:** shifts **right**. The system replaces some of what was taken. ($Q$ falls.)
+
+**Adding $\ce{NH3}$:** shifts **left**. ($Q$ rises above $K$.)
+
+**Adding argon at constant volume:** **no shift**. Argon takes no part in the reaction and does not change the concentration of anything that does. The total pressure rises, but every partial pressure that matters is unchanged, so $Q$ is unchanged.
+
+**Throughout, $K$ is constant.** Only the position along it moved.
+
+</Worked>
+
+<Question number={8} label="Your turn" topic="7.9, 7.10">
+
+<Part label="a">
+
+Effect of adding $\ce{O2}$ to this equilibrium?
+
+$$
+\ce{2SO2 + O2 <=> 2SO3}
+$$
+
+<Answer>
+
+Right.
+
+Shifts **right**, consuming some of the added oxygen.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Effect of removing $\ce{SO3}$?
+
+<Answer>
+
+Right.
+
+Shifts **right**, replacing some of the removed product.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Effect of adding helium at constant volume?
+
+<Answer>
+
+No shift.
+
+**No shift.** Helium is inert and, at constant volume, does not change the concentration or partial pressure of any participating species.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Does adding a reactant change $K$?
+
+<Answer>
+
+No.
+
+**No.** $K$ depends only on temperature. Adding a reactant moves the system to a new position along the *same* $K$.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 9: Le Châtelier: volume and pressure
+
+Compressing a gaseous equilibrium shifts it toward the side with *fewer* moles of gas. Count the gas coefficients on each side. Solids and liquids do not count.
+
+<Worked title="Counting moles of gas">
+
+Predict the effect of halving the volume for each of these:
+
+$$
+\begin{aligned}
+\text{(i)}\quad &\ce{N2(g) + 3H2(g) <=> 2NH3(g)} \\
+\text{(ii)}\quad &\ce{H2(g) + I2(g) <=> 2HI(g)}
+\end{aligned}
+$$
+
+**(i)** Left has $1 + 3 = 4$ moles of gas; right has 2. Compressing raises all pressures, and the system eases that by moving to the side with fewer particles: **shifts right**.
+
+**(ii)** Left has $1 + 1 = 2$; right has 2. **Equal**, so compression has **no effect** on the position: there is no side with fewer moles to move toward.
+
+**The rule in one line:** equal moles of gas on both sides means a volume change causes no shift.
+
+**And note what a volume change never does:** it does not alter $K$. Only temperature does that.
+
+</Worked>
+
+<Question number={9} label="Your turn" topic="7.9, 7.10">
+
+<Part label="a">
+
+Effect of compressing this equilibrium?
+
+$$
+\ce{2NO2(g) <=> N2O4(g)}
+$$
+
+<Answer>
+
+Right, toward 1 mole.
+
+Shifts **right**: 2 moles of gas become 1, so the shift toward product eases the pressure.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Effect of expanding that same system?
+
+<Answer>
+
+Left.
+
+Shifts **left**, toward the side with *more* gas.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Effect of compressing this equilibrium?
+
+$$
+\begin{aligned}
+&\ce{CO(g) + H2O(g)} \\
+&\qquad \ce{<=> CO2(g) + H2(g)}
+\end{aligned}
+$$
+
+<Answer>
+
+No shift: 2 vs 2.
+
+**No shift**: two moles of gas on each side.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+In this equilibrium, how many moles of gas are on each side?
+
+$$
+\ce{CaCO3(s) <=> CaO(s) + CO2(g)}
+$$
+
+<Answer>
+
+0 left, 1 right.
+
+**Zero** on the left ($\ce{CaCO3}$ is a solid) and **one** on the right. Compressing therefore shifts it left, toward solid $\ce{CaCO3}$. Solids are excluded from the count for exactly the same reason they are excluded from $K$.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 10: Le Châtelier: temperature and catalysts
+
+Temperature is the *only* change that alters $K$. A catalyst alters neither $K$ nor the position.
+
+<Worked title="Heat as a participant">
+
+This reaction is exothermic, $\Delta H < 0$:
+
+$$
+\ce{2SO2 + O2 <=> 2SO3}
+$$
+
+State the effect of raising the temperature, and of adding a catalyst.
+
+**Treat heat as a product** for an exothermic reaction:
+
+$$
+\ce{2SO2 + O2 <=> 2SO3 + heat}
+$$
+
+**Raising the temperature** adds heat, so the system shifts in the direction that uses some of it up: to the **left**. Less $\ce{SO3}$ at equilibrium.
+
+**And $K$ itself decreases.** This is the one case where the constant genuinely changes value, because $K$ is defined at a temperature.
+
+**Adding a catalyst: nothing changes.** It lowers the activation energy of the forward and reverse reactions equally, so both rates rise in the same proportion. Equilibrium arrives sooner and lies in exactly the same place.
+
+**The industrial tension this creates:** a lower temperature would give more $\ce{SO3}$, but too slowly to be useful. The Contact process compromises: moderate temperature plus a catalyst to make that temperature fast enough.
+
+</Worked>
+
+<Question number={10} label="Your turn" topic="7.9">
+
+<Part label="a">
+
+For an endothermic reaction, effect of raising the temperature?
+
+<Answer>
+
+Shifts right; $K$ increases.
+
+Shifts **right**. For an endothermic reaction heat behaves as a *reactant*, so supplying it drives the reaction forward, and $K$ **increases**.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Which change alters the value of $K$?
+
+<Answer>
+
+Temperature only.
+
+**Temperature**, and only temperature.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Effect of a catalyst on the equilibrium yield?
+
+<Answer>
+
+None.
+
+**None.** The yield at equilibrium is unchanged; only the time taken to reach it is shorter.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Why does a catalyst not shift the position?
+
+<Answer>
+
+It speeds both directions equally.
+
+Because it lowers the activation energy for the forward and reverse reactions by the *same* amount: both directions cross the same transition state. Both rates rise in the same proportion, so the point at which they become equal is exactly where it was.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 11: The solubility-product constant
+
+$K_{sp}$, the solubility-product constant, is just an equilibrium constant for a dissolving solid. The solid is omitted, and the stoichiometric coefficients become exponents, and multipliers of $s$.
+
+<Worked title="Two different stoichiometries">
+
+Find the molar solubility of $\ce{AgCl}$ ($K_{sp} = 1.8 \times 10^{-10}$) and of $\ce{PbI2}$ ($K_{sp} = 9.8 \times 10^{-9}$).
+
+**$\ce{AgCl}$:**
+
+$$
+\begin{aligned}
+&\ce{AgCl(s) <=>} \\
+&\quad \ce{Ag+(aq) + Cl-(aq)}
+\end{aligned}
+$$
+
+Each formula unit gives one of each ion, so $[\ce{Ag+}] = [\ce{Cl-}] = s$.
+
+$$
+\begin{aligned}
+K_{sp} &= s^2 \\
+\Rightarrow\; s &= \sqrt{1.8 \times 10^{-10}} \\
+&= \mathbf{1.3 \times 10^{-5}}\ \text{M}
+\end{aligned}
+$$
+
+**$\ce{PbI2}$:**
+
+$$
+\begin{aligned}
+&\ce{PbI2(s) <=>} \\
+&\quad \ce{Pb^2+(aq) + 2I-(aq)}
+\end{aligned}
+$$
+
+So $[\ce{Pb^2+}] = s$ but $[\ce{I-}] = \mathbf{2}s$.
+
+$$
+\begin{aligned}
+K_{sp} &= (s)(2s)^2 = 4s^3 \\
+&= 9.8 \times 10^{-9}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+s^3 &= 2.45 \times 10^{-9} \\
+\Rightarrow\; s &= \mathbf{1.3 \times 10^{-3}}\ \text{M}
+\end{aligned}
+$$
+
+**The factor of 2 is the entire difficulty.** Writing $K_{sp} = s^3$ instead of $4s^3$ gives $2.1 \times 10^{-3}$ M: wrong, and a very common answer.
+
+**A warning about comparing:** the $K_{sp}$ of $\ce{PbI2}$ is about 54 times that of $\ce{AgCl}$, yet by these calculations $\ce{PbI2}$ is about 100 times as soluble. The two ratios do not match, because one $K_{sp}$ is $s^2$ and the other is $4s^3$. $K_{sp}$ values may only be compared directly between salts that give the same number of ions. For any other pair, calculate $s$ for each and compare those.
+
+</Worked>
+
+<Question number={11} label="Your turn" topic="7.11">
+
+<Part label="a">
+
+Write the $K_{sp}$ expression for $\ce{Ag2CrO4}$.
+
+<Answer>
+
+$[\ce{Ag+}]^2[\ce{CrO4^2-}]$
+
+$$
+K_{sp} = [\ce{Ag+}]^2[\ce{CrO4^2-}]
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Its $K_{sp}$ is $1.1 \times 10^{-12}$. Find its molar solubility.
+
+<Answer>
+
+$6.5 \times 10^{-5}\ \text{M}$
+
+$[\ce{Ag+}] = 2s$ and $[\ce{CrO4^2-}] = s$, so:
+
+$$
+\begin{aligned}
+K_{sp} &= (2s)^2(s) = 4s^3 \\
+&= 1.1 \times 10^{-12}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+s^3 &= 2.75 \times 10^{-13} \\
+s &= \mathbf{6.5 \times 10^{-5}}\ \text{M}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+In that saturated solution, what is $[\ce{Ag+}]$?
+
+<Answer>
+
+$1.3 \times 10^{-4}\ \text{M}$
+
+$$
+2s = \mathbf{1.3 \times 10^{-4}}\ \text{M}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Why can $K_{sp}$ values not always be compared directly?
+
+<Answer>
+
+Different stoichiometries.
+
+Because the relationship between $K_{sp}$ and solubility depends on how many ions the salt gives. For an $\ce{MX}$ salt $K_{sp} = s^2$, for $\ce{MX2}$ or $\ce{M2X}$ it is $4s^3$. A smaller $K_{sp}$ of a different type can still correspond to a larger solubility. $\ce{Ag2CrO4}$ shows it: its $K_{sp}$ is about 160 times smaller than that of $\ce{AgCl}$ ($1.8 \times 10^{-10}$), yet its molar solubility from part (b), $6.5 \times 10^{-5}$ M, is about 5 times that of $\ce{AgCl}$, $1.3 \times 10^{-5}$ M.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 12: The common-ion effect
+
+Adding an ion that already appears in the equilibrium pushes it backward. It is Le Châtelier applied to dissolving.
+
+<Worked title="How much less soluble?">
+
+$\ce{AgCl}$ has $K_{sp} = 1.8 \times 10^{-10}$. Compare its solubility in pure water with that in 0.10 M $\ce{NaCl}$.
+
+**In pure water:**
+
+$$
+\begin{aligned}
+s &= \sqrt{1.8 \times 10^{-10}} \\
+&= 1.3 \times 10^{-5}\ \text{M}
+\end{aligned}
+$$
+
+**In 0.10 M $\ce{NaCl}$:** chloride is already present at 0.10 M, overwhelmingly more than the dissolving salt could supply, so $[\ce{Cl-}] \approx 0.10\ \text{M}$.
+
+$$
+\begin{aligned}
+K_{sp} &= [\ce{Ag+}](0.10) \\
+\Rightarrow\; [\ce{Ag+}] &= s \\
+&= \frac{1.8 \times 10^{-10}}{0.10} \\
+&= \mathbf{1.8 \times 10^{-9}}\ \text{M}
+\end{aligned}
+$$
+
+Check: what was left out is $s$, $1.8 \times 10^{-9}$ M. That is about 0.000002 percent of 0.10 M, far under 5 percent.
+
+**In pure water it is about 7000 times as soluble:**
+
+$$
+\frac{1.3 \times 10^{-5}}{1.8 \times 10^{-9}} \approx 7000
+$$
+
+With chloride already in the water, far less silver chloride dissolves.
+
+**And $K_{sp}$ is unchanged throughout.** What changed is how the fixed product of concentrations is distributed between the two ions: much more chloride, so far less silver.
+
+</Worked>
+
+<Question number={12} label="Your turn" topic="7.12">
+
+<Part label="a">
+
+Is $\ce{AgCl}$ more or less soluble in 0.10 M $\ce{AgNO3}$ than in water?
+
+<Answer>
+
+Less soluble.
+
+**Less soluble.** $\ce{Ag+}$ is a common ion, so the equilibrium is pushed back toward the solid.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Does $K_{sp}$ change when a common ion is added?
+
+<Answer>
+
+No.
+
+**No.** $K_{sp}$ depends only on temperature.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+When a common ion is added to a saturated solution, which direction does the dissolving equilibrium shift?
+
+<Answer>
+
+Left.
+
+To the **left**, toward undissolved solid.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Would adding $\ce{NaNO3}$ change $\ce{AgCl}$'s solubility?
+
+<Answer>
+
+No: neither ion is common.
+
+**No** (to a first approximation). Neither $\ce{Na+}$ nor $\ce{NO3-}$ appears in the $\ce{AgCl}$ dissolving equilibrium, so neither is a common ion and $Q$ is unaffected. Only an ion that is in the equilibrium expression, or one that reacts with an ion that is, can shift it.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## If you missed some
+
+Score yourself honestly. Count a ladder only if all four of its questions were right the first time.
+
+- **12 of 12:** move on to this unit's worksheets and the free-response set.
+- **9 to 11:** solid. Redo the missed ladders another day, from scratch and without looking back.
+- **8 or fewer:** the recurring root causes here are exactly three: (1) forgetting the coefficient as a multiplier of $x$ in an ICE table, (2) claiming $K$ changed when only the position moved, and (3) writing $K_{sp} = s^n$ without the factor that the stoichiometry demands. Fix those three and most of these ladders fall together.

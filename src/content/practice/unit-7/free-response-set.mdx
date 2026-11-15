@@ -1,0 +1,359 @@
+---
+title: "Free-response set"
+kind: free-response
+order: 7
+topics: ["7.1", "7.2", "7.3", "7.5", "7.7", "7.9", "7.10", "7.11", "7.12"]
+summary: Five free-response questions on most of Unit 7, two long and three short, each with a worked answer and its scoring rubric.
+points: 32
+minutes: 50
+---
+
+This set covers most of equilibrium: topics 7.1 to 7.3, 7.5, 7.7 and 7.9 to 7.12. The unit is 7% to 9% of the exam.
+
+There are 5 questions worth 32 points. Give yourself about 50 minutes. You may use a calculator. Write out each answer in full before you open the worked answer and the scoring rubric.
+
+Converting between $K_c$ and $K_p$ is not on the AP exam, and nothing here asks for it.
+
+## Questions
+
+<Question number={1} title="An ICE table where the approximation fails" topic="7.3, 7.7, 7.9" points={10}>
+
+At a certain temperature $K_c = 0.0211$ for this reaction:
+
+$$
+\ce{PCl5(g) <=> PCl3(g) + Cl2(g)}
+$$
+
+A vessel is filled with 0.500 M $\ce{PCl5}$ and nothing else.
+
+<Part label="a">
+
+Write the equilibrium expression and construct an ICE table.
+
+<Answer>
+
+$$
+K_c = \frac{[\ce{PCl3}][\ce{Cl2}]}{[\ce{PCl5}]}
+$$
+
+Every value is in M. The rows are labeled I, C and E, for Initial, Change and Equilibrium:
+
+| | PCl₅ | PCl₃ | Cl₂ |
+|---|---|---|---|
+| I | 0.500 | 0 | 0 |
+| C | −x | +x | +x |
+| E | 0.500 − x | x | x |
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Show that the approximation $0.500 - x \approx 0.500$ is *not* valid here.
+
+<Answer>
+
+Test it first. Assuming it holds:
+
+$$
+\begin{aligned}
+x &\approx \sqrt{(0.0211)(0.500)} \\
+&= 0.1027
+\end{aligned}
+$$
+
+As a fraction of the initial concentration, that is:
+
+$$
+\frac{0.1027}{0.500} \times 100\% = 20.5\%
+$$
+
+That is far above the 5 percent threshold. Dropping $x$ would change the denominator by a fifth, so the approximation must be **rejected** and the quadratic solved properly.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate the equilibrium concentration of each species.
+
+<Answer>
+
+$$
+\begin{aligned}
+&\frac{x^2}{0.500 - x} = 0.0211 \\
+&x^2 + 0.0211x - 0.01055 = 0
+\end{aligned}
+$$
+
+By the quadratic formula, the quantity under the square root is:
+
+$$
+\begin{aligned}
+&(0.0211)^2 + 4(0.01055) \\
+&\quad = 0.04265
+\end{aligned}
+$$
+
+Keep the positive root:
+
+$$
+\begin{aligned}
+x &= \frac{-0.0211 + \sqrt{0.04265}}{2} \\
+&= \frac{-0.0211 + 0.2065}{2} \\
+&= 0.0927
+\end{aligned}
+$$
+
+$$
+[\ce{PCl3}] = [\ce{Cl2}] = \mathbf{0.0927}\ \text{M}
+$$
+
+$$
+\begin{aligned}
+[\ce{PCl5}] &= 0.500 - 0.0927 \\
+&= \mathbf{0.407}\ \text{M}
+\end{aligned}
+$$
+
+Check:
+
+$$
+\frac{(0.0927)^2}{0.407} = 0.0211\ \checkmark
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+The volume of the vessel is doubled at constant temperature. State the direction of the shift and justify.
+
+<Answer>
+
+The equilibrium shifts **right**. Doubling the volume lowers every partial pressure, and the system responds by moving toward the side with *more* moles of gas: one on the left, two on the right.
+
+With $Q$: every concentration is halved, so the top of $Q$ falls to a quarter and the bottom to a half. $Q$ is half of $K$, so the reaction runs toward products.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the expression; 1 point for a correct ICE table.</RubricLine>
+<RubricLine part="b" points={3}>1 point for computing the approximate $x$; 1 point for expressing it as a percentage of the initial concentration; 1 point for comparing with the 5 percent rule and rejecting. A student who never tests the approximation earns 0 points for part (b), even if part (c) is right. The same three points can be earned with the exact $x$ from part (c): 0.0927 is 18.5 percent of 0.500.</RubricLine>
+<RubricLine part="c" points={3}>1 point for the quadratic set up correctly; 1 point for $x = 0.0927$; 1 point for all three concentrations.</RubricLine>
+<RubricLine part="d" points={2}>1 point for a shift right; 1 point for moving toward more moles of gas, with the 1-versus-2 count (or for showing that $Q$ falls to half of $K$).</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={2} title="Q, Le Châtelier and solubility" topic="7.5, 7.9, 7.10, 7.11, 7.12" points={10}>
+
+<Part label="a">
+
+For the reaction in question 1,
+
+$$
+\ce{PCl5(g) <=> PCl3(g) + Cl2(g)}
+$$
+
+with $K_c = 0.0211$, a mixture is found to contain $[\ce{PCl5}]$ = 0.10 M, $[\ce{PCl3}]$ = 0.20 M and $[\ce{Cl2}]$ = 0.20 M. Determine the direction of net change.
+
+<Answer>
+
+$$
+Q = \frac{(0.20)(0.20)}{0.10} = \mathbf{0.40}
+$$
+
+$Q > K$ (0.40 against 0.0211), so there is too much product. The reaction runs **toward reactants** (to the left), consuming $\ce{PCl3}$ and $\ce{Cl2}$, until $Q$ falls to $K$.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+State what the magnitude of $K_c = 0.0211$ tells you about the equilibrium mixture.
+
+<Answer>
+
+$K$ is less than 1, so at concentrations like those in question 1 the equilibrium favors the **reactant**: there, about four fifths of the $\ce{PCl5}$ is still there at equilibrium (0.407 M of 0.500 M). But 0.0211 is not very small, so a noticeable amount of $\ce{PCl3}$ and $\ce{Cl2}$ forms too.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A student claims that because $K$ is small, the reaction must be slow. Evaluate.
+
+<Answer>
+
+The claim is **wrong**. $K$ describes only the *position* of equilibrium, how far the reaction proceeds, and says nothing about how quickly it gets there. Rate is governed by activation energy, an entirely separate quantity. A reaction with a tiny $K$ may reach that equilibrium almost instantly.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Calcium fluoride has $K_{sp} = 3.5 \times 10^{-11}$. Calculate its molar solubility in pure water, then state and justify the effect of dissolving it in 0.10 M $\ce{NaF}$ instead.
+
+<Answer>
+
+$$
+\begin{aligned}
+&\ce{CaF2(s) <=>} \\
+&\quad \ce{Ca^2+(aq) + 2F-(aq)}
+\end{aligned}
+$$
+
+So $[\ce{Ca^2+}] = s$ and $[\ce{F-}] = \mathbf{2}s$:
+
+$$
+\begin{aligned}
+K_{sp} &= (s)(2s)^2 = 4s^3 \\
+&= 3.5 \times 10^{-11}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+s^3 &= 8.75 \times 10^{-12} \\
+s &= \mathbf{2.1 \times 10^{-4}}\ \text{M}
+\end{aligned}
+$$
+
+In 0.10 M $\ce{NaF}$ the solubility **falls sharply**. Fluoride is a **common ion** and a product of the dissolving equation, so adding it shifts the equilibrium left and less solid dissolves. $K_{sp}$ itself is unchanged: it depends only on temperature.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $Q = 0.40$; 1 point for a net reaction toward reactants (to the left) because $Q > K$.</RubricLine>
+<RubricLine part="b" points={2}>1 point for saying that $K$ is less than 1; 1 point for saying that the equilibrium favors the reactant.</RubricLine>
+<RubricLine part="c" points={2}>1 point for saying that the claim is wrong; 1 point for saying that $K$ gives extent, not rate.</RubricLine>
+<RubricLine part="d" points={4}>1 point for $[\ce{F-}] = 2s$; 1 point for the $4s^3$ form and $s = 2.1 \times 10^{-4}\ \text{M}$; 1 point for saying that the solubility decreases; 1 point for the justification: the common-ion shift, $Q$ greater than $K_{sp}$, or a calculated solubility in the $\ce{NaF}$ solution ($3.5 \times 10^{-9}$ M). Writing $K_{sp} = s^3$ loses the second point; claiming that $K_{sp}$ falls loses the fourth.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={3} title="An equilibrium with a solid" topic="7.3, 7.9" points={4}>
+
+<Part label="a">
+
+Write the equilibrium expression for this reaction:
+
+$$
+\ce{NH4HS(s) <=> NH3(g) + H2S(g)}
+$$
+
+<Answer>
+
+$$
+K = [\ce{NH3}][\ce{H2S}]
+$$
+
+The solid is omitted. With partial pressures, $K_p = (P_{\ce{NH3}})(P_{\ce{H2S}})$.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Adding more solid $\ce{NH4HS}$ to the sealed container does not change the pressure of $\ce{NH3}$. Explain.
+
+<Answer>
+
+A pure solid has a fixed density and composition, so its "concentration" does not change with how much is present. It therefore does not appear in $K$, and adding more cannot shift the equilibrium. As long as *some* solid is present, the mixture still fits $K$, so the gas pressures stay as they were.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>2 points for an expression with both gases and no solid ($K_c$ with concentrations or $K_p$ with partial pressures). An expression that includes the solid earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for saying that a pure solid has constant concentration (or that it is not in $Q$ or $K$); 1 point for concluding that its amount cannot shift the equilibrium.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={4} title="The dynamic nature of equilibrium" topic="7.1, 7.2" points={4}>
+
+<Part label="a">
+
+A sealed flask holds $\ce{H2O(l)}$ in equilibrium with $\ce{H2O(g)}$. A few molecules of the liquid are replaced with water containing the heavy isotope $\ce{^{18}O}$. After some time the heavy isotope is found in *both* phases. Explain what this shows.
+
+<Answer>
+
+It shows the equilibrium is **dynamic**. Evaporation and condensation have not stopped; they continue at equal rates, so molecules keep crossing between phases even though the amount of liquid and vapor stays constant. If the process had genuinely halted, the labeled molecules would have stayed where they were put.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+State what you would observe during this time, and say whether that observation alone could show that the equilibrium is dynamic.
+
+<Answer>
+
+Nothing changes: the volume of liquid, the vapor pressure and the temperature all stay constant. What you can observe cannot by itself distinguish a dynamic equilibrium from a process that has stopped, which is exactly why the isotope experiment matters.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for saying that both processes continue; 1 point for saying that they continue at equal rates.</RubricLine>
+<RubricLine part="b" points={2}>1 point for no observable change; 1 point for recognizing that what can be observed cannot by itself show that the process is dynamic.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={5} title="Le Châtelier with a temperature change" topic="7.9, 7.10" points={4}>
+
+Consider this exothermic equilibrium, for which $\Delta H < 0$:
+
+$$
+\ce{2SO2(g) + O2(g) <=> 2SO3(g)}
+$$
+
+<Part label="a">
+
+State and justify the effect of raising the temperature on the amount of $\ce{SO3}$ and on the value of $K$.
+
+<Answer>
+
+The amount of $\ce{SO3}$ **decreases**. The forward reaction is exothermic, so heat behaves as a product; adding heat shifts the system in the endothermic direction, to the left.
+
+$K$ also **decreases**: the new equilibrium mixture holds less $\ce{SO3}$ and more $\ce{SO2}$ and $\ce{O2}$, so the ratio of products to reactants in the $K$ expression is smaller. Temperature is the only change that alters the value of $K$ itself.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+State the effect of adding a catalyst on the amount of $\ce{SO3}$.
+
+<Answer>
+
+**No change.** A catalyst speeds the forward and reverse reactions equally, so equilibrium arrives sooner but lies in the same place.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for saying that $\ce{SO3}$ decreases; 1 point for the reason: heat treated as a product of an exothermic reaction, a shift in the endothermic direction, or $Q$ greater than the new, smaller $K$; 1 point for saying that $K$ decreases.</RubricLine>
+<RubricLine part="b" points={1}>No change, with the reason.</RubricLine>
+</Rubric>
+
+</Question>
