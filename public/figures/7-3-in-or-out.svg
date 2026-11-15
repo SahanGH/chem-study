@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 442" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Four boxes of the same size. Top row, in the expression: gas (g), 5 particles far apart; dissolved (aq), 5 particles in a shaded box that stands for the water. Bottom row, left out: pure solid (s), 12 particles touching in 3 rows of 4; pure liquid (l), 12 particles touching in no regular order. Liquid positions come from scratchpad/unit7/w73/liquid.py (seed 3): no two overlap and each touches a neighbor. -->
+  <rect width="480" height="442" fill="#FDFCF9"/>
+
+  <text x="240" y="26" text-anchor="middle" fill="#26231F" font-weight="600">In the expression</text>
+
+  <text x="120" y="52" text-anchor="middle" fill="#26231F">gas (g)</text>
+  <rect x="66" y="62" width="108" height="108" rx="8" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <g fill="#4F706C" stroke="#26231F" stroke-width="1.5">
+    <circle cx="86" cy="92" r="10"/>
+    <circle cx="128" cy="80" r="10"/>
+    <circle cx="156" cy="120" r="10"/>
+    <circle cx="106" cy="132" r="10"/>
+    <circle cx="140" cy="156" r="10"/>
+  </g>
+  <text x="120" y="194" text-anchor="middle" fill="#6B655D">concentration can change</text>
+
+  <text x="360" y="52" text-anchor="middle" fill="#26231F">dissolved (aq)</text>
+  <rect x="306" y="62" width="108" height="108" rx="8" fill="#E3EAE9" stroke="#6B655D" stroke-width="1.5"/>
+  <g fill="#4F706C" stroke="#26231F" stroke-width="1.5">
+    <circle cx="340" cy="84" r="10"/>
+    <circle cx="394" cy="102" r="10"/>
+    <circle cx="322" cy="118" r="10"/>
+    <circle cx="364" cy="128" r="10"/>
+    <circle cx="336" cy="156" r="10"/>
+  </g>
+  <text x="360" y="194" text-anchor="middle" fill="#6B655D">concentration can change</text>
+
+  <line x1="24" y1="212" x2="456" y2="212" stroke="#6B655D" stroke-width="1" stroke-opacity="0.45"/>
+
+  <text x="240" y="240" text-anchor="middle" fill="#26231F" font-weight="600">Left out</text>
+
+  <text x="120" y="266" text-anchor="middle" fill="#26231F">pure solid (s)</text>
+  <rect x="66" y="276" width="108" height="108" rx="8" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <g fill="#4F706C" stroke="#26231F" stroke-width="1.5">
+    <circle cx="89.1" cy="329.8" r="10"/>
+    <circle cx="109.7" cy="329.8" r="10"/>
+    <circle cx="130.3" cy="329.8" r="10"/>
+    <circle cx="150.9" cy="329.8" r="10"/>
+    <circle cx="89.1" cy="350.4" r="10"/>
+    <circle cx="109.7" cy="350.4" r="10"/>
+    <circle cx="130.3" cy="350.4" r="10"/>
+    <circle cx="150.9" cy="350.4" r="10"/>
+    <circle cx="89.1" cy="371" r="10"/>
+    <circle cx="109.7" cy="371" r="10"/>
+    <circle cx="130.3" cy="371" r="10"/>
+    <circle cx="150.9" cy="371" r="10"/>
+  </g>
+  <text x="120" y="408" text-anchor="middle" fill="#6B655D">same concentration,</text>
+  <text x="120" y="430" text-anchor="middle" fill="#6B655D">whatever the amount</text>
+
+  <text x="360" y="266" text-anchor="middle" fill="#26231F">pure liquid (l)</text>
+  <rect x="306" y="276" width="108" height="108" rx="8" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <g fill="#4F706C" stroke="#26231F" stroke-width="1.5">
+    <circle cx="338.5" cy="371" r="10"/>
+    <circle cx="363.6" cy="371" r="10"/>
+    <circle cx="384.3" cy="371" r="10"/>
+    <circle cx="319.1" cy="364.2" r="10"/>
+    <circle cx="401" cy="358.9" r="10"/>
+    <circle cx="351" cy="354.6" r="10"/>
+    <circle cx="374" cy="353.2" r="10"/>
+    <circle cx="331.6" cy="347.8" r="10"/>
+    <circle cx="390.6" cy="341" r="10"/>
+    <circle cx="360.2" cy="336.2" r="10"/>
+    <circle cx="319" cy="331.5" r="10"/>
+    <circle cx="340.7" cy="329.3" r="10"/>
+  </g>
+  <text x="360" y="408" text-anchor="middle" fill="#6B655D">same concentration,</text>
+  <text x="360" y="430" text-anchor="middle" fill="#6B655D">whatever the amount</text>
+</svg>
