@@ -1,0 +1,465 @@
+---
+topic: "3.4"
+minutes: 15
+summary: "How PV = nRT ties together the pressure, volume, temperature and amount of a gas, how to handle changing conditions and mixtures, and what the gas-law graphs look like."
+---
+
+Pump up a basketball in a warm gym, then carry it out to a freezing parking lot. Within minutes it feels soft. No air leaked out. The same air, now colder, pushes less hard on the inside of the ball. One equation tells you by how much.
+
+## Four quantities, one equation
+
+You can describe a sample of gas with four quantities:
+
+- **Pressure**, $P$: the push of the gas on each bit of its container's wall. It is measured in atm, or in mm Hg or torr. 1 atm = 760 mm Hg = 760 torr.
+- **Volume**, $V$, in liters.
+- **Temperature**, $T$, in kelvin.
+- **Amount**, $n$, in moles.
+
+For an ideal gas, one equation ties all four together. It is the **ideal gas law**:
+
+$$
+PV = nRT
+$$
+
+An ideal gas is the simple model of a gas that this unit uses. Real gases follow it closely under everyday conditions, and topic 3.6 looks at when they stop.
+
+$R$ is the **gas constant**, 0.08206 L·atm/(mol·K). Its units decide all the others. With this $R$, pressure goes in atm, volume in liters, amount in moles and temperature in kelvin. (The equation sheet gives a second value, 8.314 J/(mol·K). It is the same constant in energy units, and this lesson does not need it.)
+
+To turn a Celsius temperature into kelvin, add 273.15: K = °C + 273.15.
+
+Why kelvin and not Celsius? Zero on the kelvin scale is a true zero, called absolute zero. A gas's volume at constant pressure, and its pressure at constant volume, are proportional to its kelvin temperature. Zero on the Celsius scale is only the temperature where water freezes. Air at 0 °C still has plenty of pressure.
+
+One result is worth knowing, and the equation sheet gives it too. **STP**, standard temperature and pressure, means 273.15 K and 1.0 atm. At STP, one mole of any ideal gas fills 22.4 L. Put the numbers in, with $n$ in moles, $T$ in kelvin and $P$ in atm:
+
+$$
+\begin{aligned}
+V &= \frac{nRT}{P} \\
+&= \frac{(1)(0.08206)(273.15)}{1.0} \\
+&= 22.4\ \text{L}
+\end{aligned}
+$$
+
+The same calculation at 25 °C, which is 298.15 K, gives 24.5 L. That is the figure topic 3.3 used for a gas at room conditions.
+
+Look at what is missing from $PV = nRT$: the identity of the gas. A mole of helium and a mole of oxygen fill the same volume under the same conditions.
+
+<KeyIdea>
+
+In every gas calculation, temperature goes in kelvin. Add 273.15 to a Celsius temperature before it goes anywhere near an equation.
+
+</KeyIdea>
+
+<Check answer={2}>
+A gas is held in a cylinder with a freely sliding piston, which keeps its pressure constant. It is warmed from 20 °C to 40 °C. What happens to its volume?
+
+- It doubles.
+- It grows by about 7 percent.
+- It stays the same.
+- It halves.
+
+<div slot="why">
+
+At constant pressure, volume is proportional to kelvin temperature. 20 °C is 293 K and 40 °C is 313 K.
+
+$$
+\frac{313\ \text{K}}{293\ \text{K}} = 1.07
+$$
+
+The volume is about 7 percent larger. Doubling the Celsius number does not double the kelvin temperature.
+
+</div>
+</Check>
+
+<Worked title="The pressure in a sealed flask">
+
+A sealed 1.50 L flask holds 2.80 g of nitrogen gas, $\ce{N2}$, at 18 °C. What is the pressure inside?
+
+1. **Moles.** The molar mass of $\ce{N2}$ is twice nitrogen's atomic mass.
+
+   $$
+   2(14.01) = 28.02\ \text{g/mol}
+   $$
+
+   $$
+   \begin{aligned}
+   n &= \frac{2.80\ \text{g}}{28.02\ \text{g/mol}} \\
+   &= 0.09993\ \text{mol}
+   \end{aligned}
+   $$
+
+   That is 0.0999 mol to three significant figures. Carry the extra digit and round at the end.
+
+2. **Kelvin.** The temperature is given to the ones place, so the kelvin temperature is too.
+
+   $$
+   T = 18 + 273.15 = 291\ \text{K}
+   $$
+
+3. **Rearrange.** You want the pressure, so divide both sides of $PV = nRT$ by $V$.
+
+   $$
+   P = \frac{nRT}{V}
+   $$
+
+4. **Substitute.** Here $n$ is in moles, $T$ in kelvin and $V$ in liters, to match the units of $R$.
+
+   $$
+   \begin{aligned}
+   P &= \frac{(0.09993)(0.08206)(291)}{1.50} \\
+   &= 1.59\ \text{atm}
+   \end{aligned}
+   $$
+
+   The units cancel to leave atm:
+
+   $$
+   \text{mol} \times \frac{\text{L·atm}}{\text{mol·K}} \times \text{K} \div \text{L} = \text{atm}
+   $$
+
+5. **In mm Hg,** if the question asks for it.
+
+   $$
+   \begin{aligned}
+   &1.59\ \text{atm} \times \frac{760\ \text{mm Hg}}{1\ \text{atm}} \\
+   &= 1.21 \times 10^{3}\ \text{mm Hg}
+   \end{aligned}
+   $$
+
+</Worked>
+
+## When conditions change
+
+Often one sample of gas goes from one set of conditions to another, and no gas gets in or out. Then $n$ is fixed. So is $R$, which means $PV/T$ has the same value before and after. The equation sheet gives this combined form:
+
+$$
+\frac{P_1V_1}{T_1} = \frac{P_2V_2}{T_2}
+$$
+
+The 1s are the starting conditions and the 2s are the final ones. Whatever is held constant cancels from both sides:
+
+- **Constant temperature:** $P_1V_1 = P_2V_2$. Pressure and volume are inversely proportional. Halve the volume, and the pressure doubles.
+- **Constant pressure:** $V_1/T_1 = V_2/T_2$. Volume is proportional to kelvin temperature.
+- **Constant volume:** $P_1/T_1 = P_2/T_2$. Pressure is proportional to kelvin temperature.
+
+One more comes straight from $PV = nRT$. At constant temperature and pressure, volume is proportional to $n$. Twice the gas, twice the volume.
+
+You often do not need to substitute every number. Reason in proportions instead. Say what changes, by what factor, and what that does to the other variable. Triple the kelvin temperature of the gas in a rigid tank, and its pressure triples. Let a gas expand to three times its volume at a steady temperature, and its pressure falls to a third.
+
+These relationships are sometimes named after the scientists who found them. The exam asks for the relationships, not the names.
+
+In the combined form, pressure and volume can be in any unit, as long as both sides use the same one, because the units cancel. Temperature must always be in kelvin. A ratio of two Celsius temperatures means nothing.
+
+Back to the basketball. Its volume barely changes, so the constant-volume form applies. The gym is at 22 °C, which is 295 K. The parking lot is at −5 °C, which is 268 K.
+
+$$
+\frac{P_2}{P_1} = \frac{T_2}{T_1} = \frac{268\ \text{K}}{295\ \text{K}} = 0.91
+$$
+
+The pressure inside falls to 0.91 of what it was. That is about 9 percent lower, with no leak at all.
+
+<Worked title="Squeezing and warming a syringe">
+
+A syringe holds 40.0 mL of air at 1.00 atm and 20.0 °C. Its tip is sealed. The plunger is pushed in to 25.0 mL, and the syringe is warmed in a hand to 37.0 °C. What is the new pressure?
+
+1. **What is fixed?** The tip is sealed, so $n$ is fixed. Use the combined form. Nothing else is constant: the pressure, the volume and the temperature all change.
+
+2. **Kelvin.**
+
+   $$
+   T_1 = 20.0 + 273.15 = 293.2\ \text{K}
+   $$
+
+   $$
+   T_2 = 37.0 + 273.15 = 310.2\ \text{K}
+   $$
+
+3. **Rearrange** the combined form for $P_2$.
+
+   $$
+   P_2 = P_1 \times \frac{V_1}{V_2} \times \frac{T_2}{T_1}
+   $$
+
+4. **Substitute.**
+
+   $$
+   \begin{aligned}
+   P_2 &= 1.00\ \text{atm} \times \frac{40.0\ \text{mL}}{25.0\ \text{mL}} \\
+   &\quad \times \frac{310.2\ \text{K}}{293.2\ \text{K}} \\
+   &= 1.00\ \text{atm} \times 1.600 \times 1.058 \\
+   &= 1.69\ \text{atm}
+   \end{aligned}
+   $$
+
+   The milliliters cancel, so there is no need to convert them to liters.
+
+5. **Does it make sense?** Squeezing the air to 25.0/40.0 of its volume would, by itself, raise the pressure 1.600 times. Warming raises it a little more. Now see what the Celsius temperatures would have done:
+
+   $$
+   \begin{aligned}
+   &1.00\ \text{atm} \times 1.600 \times \frac{37.0}{20.0} \\
+   &= 2.96\ \text{atm}
+   \end{aligned}
+   $$
+
+   That is far too high. The kelvin temperature rose by about 6 percent, not by 85 percent.
+
+</Worked>
+
+<Check numeric="0.856" unit="atm">
+A sealed, rigid bottle of air is at 1.00 atm and 25 °C. It is put in a freezer at −18 °C. The bottle does not change size. What is the pressure inside it once the air is as cold as the freezer?
+
+<div slot="why">
+
+The amount of air and the volume are fixed, so pressure is proportional to kelvin temperature.
+
+$$
+P_2 = P_1 \times \frac{T_2}{T_1}
+$$
+
+25 °C is 298 K, and −18 °C is 255 K.
+
+$$
+\begin{aligned}
+P_2 &= 1.00\ \text{atm} \times \frac{255\ \text{K}}{298\ \text{K}} \\
+&= 0.856\ \text{atm}
+\end{aligned}
+$$
+
+Using Celsius would give
+
+$$
+1.00\ \text{atm} \times \frac{-18}{25} = -0.72\ \text{atm}
+$$
+
+A negative pressure cannot be right.
+
+</div>
+</Check>
+
+## Gas laws as graphs
+
+A graph shows the same relationships at a glance. Each graph drawn here is for a fixed amount of gas.
+
+Plot pressure against volume at constant temperature, and you get a curve, not a straight line. It falls steeply at small volumes and flattens out at large ones. Every time the volume doubles, the pressure halves, so the product $PV$ stays the same.
+
+<Figure
+  src="/figures/3-4-pressure-volume.svg"
+  alt="Graph of pressure against volume for a fixed amount of gas at constant temperature. The curve falls steeply at small volumes and flattens out at large volumes. Two marked points show 2 liters at 2 atmospheres and 4 liters at 1 atmosphere: doubling the volume halves the pressure."
+  caption="At constant temperature, pressure and volume are inversely proportional. Their product stays the same."
+/>
+
+Plot volume against kelvin temperature at constant pressure, and you get a straight line through the origin. Extend the line toward 0 K and it reaches zero volume. A real gas condenses to a liquid long before that, so that part of the line is drawn dashed.
+
+<Figure
+  src="/figures/3-4-volume-temperature.svg"
+  alt="Graph of volume against kelvin temperature for a fixed amount of gas at constant pressure. The points lie on a straight line that, extended as a dashed line, passes through zero volume at zero kelvin, which is minus 273.15 degrees Celsius. Marked points show 2 liters at 200 kelvin and 4 liters at 400 kelvin: doubling the kelvin temperature doubles the volume."
+  caption="At constant pressure, volume is proportional to kelvin temperature. Only on the kelvin scale does the line pass through zero."
+/>
+
+On a Celsius axis the same line is still straight, but it reaches zero volume at −273.15 °C, not at 0 °C. That is why volume is not proportional to Celsius temperature.
+
+Two more graphs are straight lines through the origin: pressure against kelvin temperature at constant volume, and volume against moles at constant temperature and pressure.
+
+<Check answer={2}>
+For a fixed amount of gas, which graph is a straight line through the origin?
+
+- Pressure against volume, at constant temperature
+- Volume against kelvin temperature, at constant pressure
+- Volume against Celsius temperature, at constant pressure
+- Pressure against Celsius temperature, at constant volume
+
+<div slot="why">Volume is proportional to kelvin temperature, so that line passes through the origin. On a Celsius axis the lines are straight, but they reach zero at −273.15 °C, not at 0 °C. Pressure against volume is a curve.</div>
+</Check>
+
+## Mixtures of gases
+
+Air is a mixture, mostly N₂ and O₂. In an ideal gas the particles do not attract or repel one another, so each gas in a mixture hits the walls as if the others were not there. Its **partial pressure** is the pressure it would exert if it were alone in the same container at the same temperature:
+
+$$
+P_A = \frac{n_A RT}{V}
+$$
+
+The total pressure is the sum of the partial pressures:
+
+$$
+P_{\text{total}} = P_A + P_B + P_C + \cdots
+$$
+
+The total obeys the ideal gas law too, with the total moles in place of $n$. So divide $P_A$ by the total pressure. $R$, $T$ and $V$ cancel:
+
+$$
+\frac{P_A}{P_{\text{total}}} = \frac{n_A RT/V}{n_{\text{total}} RT/V} = \frac{n_A}{n_{\text{total}}}
+$$
+
+What is left is the **mole fraction** of A, written $X_A$: the moles of A divided by the total moles. So
+
+$$
+P_A = P_{\text{total}} \times X_A
+$$
+
+where
+
+$$
+X_A = \frac{\text{moles of A}}{\text{total moles}}
+$$
+
+The mole fractions of all the gases in a mixture add up to 1. And once again, what the gas is does not matter. Only how many moles of it there are.
+
+<Worked title="Shielding gas in a cylinder">
+
+A 5.00 L cylinder of welding shielding gas at 22.0 °C holds argon and carbon dioxide at a total pressure of 4.00 atm. The mole fraction of $\ce{CO2}$ is 0.250. Find the partial pressure of each gas, then the moles and the mass of the $\ce{CO2}$.
+
+1. **Partial pressure of $\ce{CO2}$.**
+
+   $$
+   \begin{aligned}
+   P_{\ce{CO2}} &= P_{\text{total}} \times X_{\ce{CO2}} \\
+   &= 4.00\ \text{atm} \times 0.250 \\
+   &= 1.00\ \text{atm}
+   \end{aligned}
+   $$
+
+2. **Partial pressure of argon.** The partial pressures add up to the total.
+
+   $$
+   \begin{aligned}
+   P_{\ce{Ar}} &= 4.00\ \text{atm} - 1.00\ \text{atm} \\
+   &= 3.00\ \text{atm}
+   \end{aligned}
+   $$
+
+   The mole fractions add up to 1, so argon's is 0.750. That gives the same answer:
+
+   $$
+   0.750 \times 4.00\ \text{atm} = 3.00\ \text{atm}
+   $$
+
+3. **Kelvin.**
+
+   $$
+   T = 22.0 + 273.15 = 295.2\ \text{K}
+   $$
+
+4. **Moles of $\ce{CO2}$.** Each gas fills the whole cylinder, so use the $\ce{CO2}$'s own partial pressure in $PV = nRT$, with $P$ in atm, $V$ in liters and $T$ in kelvin.
+
+   $$
+   \begin{aligned}
+   n &= \frac{PV}{RT} \\
+   &= \frac{(1.00)(5.00)}{(0.08206)(295.2)} \\
+   &= 0.2064\ \text{mol}
+   \end{aligned}
+   $$
+
+   That is 0.206 mol to three significant figures. Carry the extra digit.
+
+5. **Mass of $\ce{CO2}$.** First the molar mass.
+
+   $$
+   \begin{aligned}
+   M &= 12.01 + 2(16.00) \\
+   &= 44.01\ \text{g/mol}
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   m &= (0.2064\ \text{mol})(44.01\ \text{g/mol}) \\
+   &= 9.08\ \text{g}
+   \end{aligned}
+   $$
+
+6. **Check with the total.** Find the moles of all the gas together, from the total pressure.
+
+   $$
+   \begin{aligned}
+   n_{\text{total}} &= \frac{(4.00)(5.00)}{(0.08206)(295.2)} \\
+   &= 0.8256\ \text{mol}
+   \end{aligned}
+   $$
+
+   A quarter of that should be $\ce{CO2}$.
+
+   $$
+   \begin{aligned}
+   &0.250 \times 0.8256\ \text{mol} \\
+   &= 0.2064\ \text{mol}
+   \end{aligned}
+   $$
+
+   The same as step 4.
+
+</Worked>
+
+<Check numeric="1.08" unit="atm">
+A sample of natural gas at a total pressure of 1.20 atm contains 0.540 mol of methane, 0.045 mol of ethane and 0.015 mol of propane. What is the partial pressure of the methane?
+
+<div slot="why">
+
+Find the total moles, then methane's mole fraction.
+
+$$
+\begin{aligned}
+n_{\text{total}} &= 0.540 + 0.045 + 0.015 \\
+&= 0.600\ \text{mol}
+\end{aligned}
+$$
+
+$$
+X_{\text{methane}} = \frac{0.540\ \text{mol}}{0.600\ \text{mol}} = 0.900
+$$
+
+$$
+\begin{aligned}
+P_{\text{methane}} &= 0.900 \times 1.20\ \text{atm} \\
+&= 1.08\ \text{atm}
+\end{aligned}
+$$
+
+</div>
+</Check>
+
+<Check answer={3}>
+Helium is pumped into a rigid flask that holds oxygen, and the temperature does not change. What happens to the partial pressure of the oxygen?
+
+- It rises, because the total pressure rises.
+- It falls, because the oxygen's mole fraction falls.
+- It stays the same.
+- It depends on how heavy a helium atom is compared with an oxygen molecule.
+
+<div slot="why">
+
+The oxygen's partial pressure is
+
+$$
+P_{\ce{O2}} = \frac{n_{\ce{O2}} RT}{V}
+$$
+
+None of those changed. The oxygen's mole fraction does fall, but the total pressure rises by just enough that their product stays the same. In an ideal gas, what the other particles are, and how heavy they are, does not matter.
+
+</div>
+</Check>
+
+<Trap>
+
+Five mistakes come up again and again on this topic:
+
+- **Using Celsius.** Always kelvin. With Celsius, the syringe came out at 2.96 atm instead of 1.69 atm.
+- **Mixing units with $R$.** With $R$ = 0.08206 L·atm/(mol·K), pressure goes in atm and volume in liters. Divide mm Hg by 760 and mL by 1000.
+- **Using the combined form when gas is added or lost.** It needs a fixed amount of gas. When $n$ changes, use $PV = nRT$ for each state.
+- **Reading volume as proportional to Celsius temperature.** Only the kelvin line passes through the origin.
+- **Giving a heavier gas a larger partial pressure.** Partial pressure depends on moles, not on what the gas is.
+
+</Trap>
+
+<KeyPoints>
+
+- $PV = nRT$, with $R$ = 0.08206 L·atm/(mol·K), $P$ in atm, $V$ in liters, $n$ in moles and $T$ in kelvin.
+- Temperature always goes in kelvin: K = °C + 273.15.
+- For a fixed amount of gas, $P_1V_1/T_1 = P_2V_2/T_2$, and whatever is held constant cancels.
+- At constant temperature, pressure and volume are inversely proportional. At constant pressure, volume is proportional to kelvin temperature.
+- In a mixture, each gas exerts its own partial pressure, $P_A = P_{\text{total}} \times X_A$, and the partial pressures add up to the total.
+- At STP (273.15 K and 1.0 atm), one mole of any ideal gas fills 22.4 L.
+
+</KeyPoints>
+
+<PracticeNext />
