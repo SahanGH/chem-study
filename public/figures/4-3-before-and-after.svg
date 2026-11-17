@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 342" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Ethene burning: C2H4 + 3 O2 -> 2 CO2 + 2 H2O. Before: 2 C2H4 and 7 O2. After: 4 CO2, 4 H2O and 1 O2 left over. Each box holds 4 C, 8 H and 14 O. Carbon atoms are dark, oxygen atoms pale with an accent outline, hydrogen atoms small and open. No molecule touches another. Coordinates from scratchpad/unit4/tools/fig-4-3.cjs. -->
+  <defs>
+    <g id="c2h4">
+      <circle cx="-16" cy="-12.1" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="-16" cy="12.1" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="16" cy="-12.1" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="16" cy="12.1" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="-9" cy="0" r="10" fill="#26231F" stroke="#FDFCF9" stroke-width="1"/>
+      <circle cx="9" cy="0" r="10" fill="#26231F" stroke="#FDFCF9" stroke-width="1"/>
+    </g>
+    <g id="o2">
+      <circle cx="-8.5" cy="0" r="10" fill="#E3EAE9" stroke="#4F706C" stroke-width="1.5"/>
+      <circle cx="8.5" cy="0" r="10" fill="#E3EAE9" stroke="#4F706C" stroke-width="1.5"/>
+    </g>
+    <g id="co2">
+      <circle cx="-17" cy="0" r="10" fill="#E3EAE9" stroke="#4F706C" stroke-width="1.5"/>
+      <circle cx="17" cy="0" r="10" fill="#E3EAE9" stroke="#4F706C" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="10" fill="#26231F" stroke="#FDFCF9" stroke-width="1"/>
+    </g>
+    <g id="h2o">
+      <circle cx="-11.1" cy="8.6" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="11.1" cy="8.6" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="10" fill="#E3EAE9" stroke="#4F706C" stroke-width="1.5"/>
+    </g>
+  </defs>
+  <rect width="480" height="342" fill="#FDFCF9"/>
+
+  <!-- Key. -->
+  <use href="#c2h4" transform="translate(53.4 30)"/>
+  <text x="82.4" y="36.5" fill="#26231F">C<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">H</tspan><tspan dy="4" font-size="14">4</tspan></text>
+  <use href="#o2" transform="translate(171.3 30)"/>
+  <text x="196.8" y="36.5" fill="#26231F">O<tspan dy="4" font-size="14">2</tspan></text>
+  <use href="#co2" transform="translate(276.2 30)"/>
+  <text x="310.2" y="36.5" fill="#26231F">CO<tspan dy="4" font-size="14">2</tspan></text>
+  <use href="#h2o" transform="translate(390.6 26)"/>
+  <text x="414.6" y="36.5" fill="#26231F">H<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O</tspan></text>
+
+  <text x="116" y="68" fill="#26231F" text-anchor="middle" font-weight="600">Before</text>
+  <rect x="8" y="80" width="216" height="196" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <g id="before">
+    <use href="#o2" transform="translate(140.1 110.2) rotate(201)"/>
+    <use href="#c2h4" transform="translate(92.5 121) rotate(69)"/>
+    <use href="#o2" transform="translate(169.5 149.7) rotate(257)"/>
+    <use href="#o2" transform="translate(43.6 174.1) rotate(247)"/>
+    <use href="#o2" transform="translate(125.5 179.3) rotate(261)"/>
+    <use href="#o2" transform="translate(191.7 191.2) rotate(136)"/>
+    <use href="#o2" transform="translate(124.6 234.7) rotate(255)"/>
+    <use href="#c2h4" transform="translate(68 242.9) rotate(180)"/>
+    <use href="#o2" transform="translate(174.5 248.4) rotate(172)"/>
+  </g>
+  <text x="116" y="302" fill="#26231F" text-anchor="middle">2 C<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">H</tspan><tspan dy="4" font-size="14">4</tspan><tspan dy="-4">, 7 O</tspan><tspan dy="4" font-size="14">2</tspan></text>
+
+  <path d="M229 178H245" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M243 171.5L252 178L243 184.5Z" fill="#26231F"/>
+
+  <text x="364" y="68" fill="#26231F" text-anchor="middle" font-weight="600">After</text>
+  <rect x="256" y="80" width="216" height="196" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <g id="after">
+    <use href="#co2" transform="translate(346.2 128.7) rotate(282)"/>
+    <use href="#co2" transform="translate(395.9 129.3) rotate(34)"/>
+    <use href="#h2o" transform="translate(289.9 149.6) rotate(203)"/>
+    <use href="#h2o" transform="translate(371.8 171.2) rotate(211)"/>
+    <use href="#h2o" transform="translate(430.4 177) rotate(12)"/>
+    <use href="#o2" transform="translate(309.6 188.6) rotate(291)"/>
+    <use href="#co2" transform="translate(361 219.4) rotate(242)"/>
+    <use href="#co2" transform="translate(415.1 232.9) rotate(240)"/>
+    <use href="#h2o" transform="translate(329.1 233) rotate(59)"/>
+  </g>
+  <text x="364" y="302" fill="#26231F" text-anchor="middle">4 CO<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">, 4 H</tspan><tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O, 1 O</tspan><tspan dy="4" font-size="14">2</tspan></text>
+
+  <text x="240" y="330" fill="#26231F" text-anchor="middle">4 C, 8 H and 14 O in each box</text>
+</svg>
