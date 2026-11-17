@@ -411,6 +411,12 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
 .diagram-peak-label {
   fill: var(--ink);
   font-weight: 600;
+  /* A compared atom's dashed peak can stand where this label is. A halo in
+     the card's color, as on .diagram-curve-name, keeps the label readable. */
+  paint-order: stroke;
+  stroke: var(--card);
+  stroke-width: 3px;
+  stroke-linejoin: round;
 }
 
 @media print {

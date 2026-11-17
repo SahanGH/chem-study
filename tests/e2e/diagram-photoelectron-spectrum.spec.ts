@@ -1,5 +1,5 @@
 import AxeBuilder from '@axe-core/playwright';
-import { expect, test, type Locator } from '@playwright/test';
+import { expect, test, type Locator, type Page } from '@playwright/test';
 import { expectStaticDiagram, openDiagram } from './diagram';
 
 const PAGE = '/unit-1-atomic-structure/1-6-photoelectron-spectroscopy/';
@@ -8,6 +8,22 @@ const NAME = 'photoelectron-spectrum';
 const START =
   'Silicon, 1s² 2s² 2p⁶ 3s² 3p²: five peaks. The 1s electrons are held most strongly, at 178 MJ/mol. ' +
   'The 3p electrons are the easiest to remove, at 0.79 MJ/mol.';
+
+/**
+ * Opens the diagram and waits for the fonts: a text box measured before they
+ * load is the box of a fallback font.
+ */
+async function open(page: Page): Promise<Locator> {
+  const diagram = await openDiagram(page, PAGE, NAME);
+  await page.evaluate(() => document.fonts.ready);
+  return diagram;
+}
+
+/** How many peaks each atom has, written out from the plan's table (H to Ca). */
+const PEAK_COUNTS: Record<string, number> = {
+  H: 1, He: 1, Li: 2, Be: 2, B: 3, C: 3, N: 3, O: 3, F: 3, Ne: 3, Na: 4, Mg: 4,
+  Al: 5, Si: 5, P: 5, S: 5, Cl: 5, Ar: 5, K: 6, Ca: 6,
+};
 
 const panel = (diagram: Locator) => diagram.locator('[data-panel="spectrum"]');
 const peaks = (diagram: Locator) => panel(diagram).locator('[data-peak]');
@@ -64,12 +80,20 @@ async function axesOf(diagram: Locator) {
 
 const rowsOf = (diagram: Locator) => table(diagram).locator('tbody tr');
 
+/** The text of each cell as a sighted reader has it: what is hidden for screen readers is left out. */
 async function cellTexts(row: Locator): Promise<string[]> {
-  return (await row.locator('th, td').allInnerTexts()).map((text) => text.trim());
+  return row.locator('th, td').evaluateAll((cells) =>
+    cells.map((cell) => {
+      const copy = cell.cloneNode(true);
+      if (!(copy instanceof Element)) throw new Error('A cell is not an element.');
+      for (const hidden of copy.querySelectorAll('.visually-hidden')) hidden.remove();
+      return (copy.textContent ?? '').trim();
+    }),
+  );
 }
 
 test('the diagram starts with silicon, compared with nothing: its readout and its five peaks', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
 
   await expect(status(diagram)).toHaveText(START);
   await expect(peaks(diagram)).toHaveCount(5);
@@ -78,7 +102,7 @@ test('the diagram starts with silicon, compared with nothing: its readout and it
 });
 
 test('the horizontal axis is binding energy in MJ/mol on a log scale, larger values at the left', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
 
   const ticks = panel(diagram).locator('[data-tick-x]');
   await expect(ticks).toHaveCount(5);
@@ -98,9 +122,9 @@ test('the horizontal axis is binding energy in MJ/mol on a log scale, larger val
 });
 
 test('the vertical axis is the relative number of electrons, with light lines at 2, 4 and 6', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
 
-  await expect(panel(diagram).locator('[data-axis-label="y"]')).toHaveText('Relative number of electrons');
+  await expect(panel(diagram).locator('[data-axis-label="y"]')).toHaveText('relative number of electrons');
   const lines = panel(diagram).locator('[data-gridline]');
   await expect(lines).toHaveCount(3);
   expect(await lines.evaluateAll((nodes) => nodes.map((node) => node.getAttribute('data-gridline')))).toEqual(['2', '4', '6']);
@@ -112,7 +136,7 @@ test('the vertical axis is the relative number of electrons, with light lines at
 });
 
 test('each peak sits at its binding energy and is as tall as its electrons', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
   const axes = await axesOf(diagram);
   // Silicon: subshell, electrons, binding energy in MJ/mol, written out from the plan's table.
   const expected = [
@@ -139,7 +163,7 @@ test('each peak sits at its binding energy and is as tall as its electrons', asy
 });
 
 test('every peak has one width, narrower than the gap between neighboring peaks', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
 
   const boxes = await boxesOf(peaks(diagram), 'data-peak');
 
@@ -153,11 +177,13 @@ test('every peak has one width, narrower than the gap between neighboring peaks'
 });
 
 test("each label is the peak's subshell, above its peak", async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
 
   const labels = await boxesOf(peakLabels(diagram), 'data-peak-label');
   const boxes = await boxesOf(peaks(diagram), 'data-peak');
 
+  expect(labels, 'five labels').toHaveLength(5);
+  expect(boxes, 'five peaks').toHaveLength(5);
   labels.forEach((label, index) => {
     const peak = boxes[index];
     if (!peak) throw new Error('Missing a peak.');
@@ -173,7 +199,7 @@ test("each label is the peak's subshell, above its peak", async ({ page }) => {
 });
 
 test('the drawing has a name that says what it shows', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
 
   await expect(panel(diagram).getByRole('img')).toHaveAccessibleName(
     'Photoelectron spectrum of silicon: five peaks, 1s, 2s, 2p, 3s and 3p, from the highest binding energy at the left to the lowest at the right. ' +
@@ -184,7 +210,7 @@ test('the drawing has a name that says what it shows', async ({ page }) => {
 test("under the graph, a table gives the subshell, electrons and binding energy of each of the chosen atom's peaks", async ({
   page,
 }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
 
   await expect(table(diagram).locator('thead th')).toHaveText(['Subshell', 'Electrons', 'Binding energy (MJ/mol)']);
   await expect(rowsOf(diagram)).toHaveCount(5);
@@ -199,13 +225,41 @@ test("under the graph, a table gives the subshell, electrons and binding energy 
   ]);
 });
 
-test('the wrapper says where the values come from and that the widths are drawn, not measured', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+test('the wrapper says where the values come from, how the heights are drawn and that the widths are not measured', async ({ page }) => {
+  const diagram = await open(page);
 
   await expect(page.locator('[data-part="diagram"]', { has: diagram }).locator('figcaption').last()).toHaveText(
-    "Binding energies are the values of the table used to teach photoelectron spectroscopy; those of inner electrons are approximate. The peaks' heights are exact; their widths are drawn, not measured.",
+    "Binding energies are the values of the table used to teach photoelectron spectroscopy; those of inner electrons are approximate. The peaks' heights are drawn in exact proportion to the number of electrons; their widths are drawn, not measured.",
   );
 });
+
+const legend = (diagram: Locator, which: 'chosen' | 'compared') => panel(diagram).locator(`[data-legend="${which}"]`);
+const comparedPeaks = (diagram: Locator) => panel(diagram).locator('[data-compared-peak]');
+
+/**
+ * Chooses an atom, and waits for the drawing to change: a menu has its new
+ * value before the drawing is updated, so the value alone proves nothing.
+ */
+async function choose(diagram: Locator, symbol: string) {
+  const label = await elementSelect(diagram).locator(`option[value="${symbol}"]`).innerText();
+  const name = label.split(', ')[1];
+  if (name === undefined) throw new Error(`The option for ${symbol} reads "${label}", not like "14 Si, silicon".`);
+  const count = PEAK_COUNTS[symbol];
+  if (count === undefined) throw new Error(`The test has no peak count for ${symbol}.`);
+  await elementSelect(diagram).selectOption(symbol);
+  await expect(status(diagram)).toContainText(`${name.charAt(0).toUpperCase()}${name.slice(1)}, `);
+  await expect(peaks(diagram)).toHaveCount(count);
+  await expect(peakLabels(diagram)).toHaveCount(count);
+}
+
+/** Chooses the atom to compare with, and waits for its dashed peaks. */
+async function compareWith(diagram: Locator, symbol: string) {
+  const count = PEAK_COUNTS[symbol];
+  if (count === undefined) throw new Error(`The test has no peak count for ${symbol}.`);
+  await compareSelect(diagram).selectOption(symbol);
+  await expect(legend(diagram, 'compared')).toContainText(`(${symbol})`);
+  await expect(comparedPeaks(diagram)).toHaveCount(count);
+}
 
 const elementSelect = (diagram: Locator) => diagram.getByRole('combobox', { name: 'Element' });
 const compareSelect = (diagram: Locator) => diagram.getByRole('combobox', { name: 'Compare with' });
@@ -215,7 +269,7 @@ const CALCIUM =
   'The 4s electrons are the easiest to remove, at 0.59 MJ/mol.';
 
 test('"Element" is a menu of the twenty atoms, silicon chosen', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
 
   const options = elementSelect(diagram).locator('option');
 
@@ -227,7 +281,7 @@ test('"Element" is a menu of the twenty atoms, silicon chosen', async ({ page })
 });
 
 test('choosing calcium from the keyboard gives six peaks and its readout', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
 
   await elementSelect(diagram).focus();
   await page.keyboard.press('End');
@@ -242,7 +296,7 @@ test('choosing calcium from the keyboard gives six peaks and its readout', async
 });
 
 test('choosing hydrogen from the keyboard gives the one-peak sentence', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
 
   await elementSelect(diagram).focus();
   await page.keyboard.press('Home');
@@ -255,7 +309,7 @@ test('choosing hydrogen from the keyboard gives the one-peak sentence', async ({
 });
 
 test('the peaks of each atom stand where its binding energies put them, whichever atom is chosen', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
   const axes = await axesOf(diagram);
   // Written out from the plan's table: for each atom, its last peak's energy and electrons.
   const outermost = [
@@ -267,7 +321,7 @@ test('the peaks of each atom stand where its binding energies put them, whicheve
   ] as const;
 
   for (const [symbol, subshell, electrons, energy] of outermost) {
-    await elementSelect(diagram).selectOption(symbol);
+    await choose(diagram, symbol);
     const box = (await boxesOf(panel(diagram).locator(`[data-peak="${subshell}"]`), 'data-peak'))[0];
     if (!box) throw new Error(`No ${subshell} peak for ${symbol}.`);
 
@@ -286,15 +340,18 @@ const overlap = (a: Box, b: Box, margin: number) =>
   a.left < b.right + margin && b.left < a.right + margin && a.top < b.bottom + margin && b.top < a.bottom + margin;
 
 test('for every atom, no label meets another label or any peak but its own, and none is cut off', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
   const symbols = await elementSelect(diagram).locator('option').evaluateAll((options) => options.map((option) => option.getAttribute('value') ?? ''));
 
   expect(symbols, 'the menu offers all twenty atoms').toHaveLength(20);
 
   for (const symbol of symbols) {
-    await elementSelect(diagram).selectOption(symbol);
-    await expect(elementSelect(diagram)).toHaveValue(symbol);
+    await choose(diagram, symbol);
     const { labels, peaks: drawn } = await labelsAndPeaks(diagram);
+
+    // The loops below would pass on an empty drawing: say how many there must be.
+    expect(labels, `${symbol}: one label for each peak`).toHaveLength(PEAK_COUNTS[symbol] ?? -1);
+    expect(drawn, `${symbol}: one peak for each subshell`).toHaveLength(PEAK_COUNTS[symbol] ?? -1);
 
     labels.forEach((label, index) => {
       labels.slice(index + 1).forEach((other) => {
@@ -317,9 +374,6 @@ test('for every atom, no label meets another label or any peak but its own, and 
   }
 });
 
-const legend = (diagram: Locator, which: 'chosen' | 'compared') => panel(diagram).locator(`[data-legend="${which}"]`);
-const comparedPeaks = (diagram: Locator) => panel(diagram).locator('[data-compared-peak]');
-
 async function tableRows(diagram: Locator): Promise<string[][]> {
   const rows: string[][] = [];
   for (const row of await rowsOf(diagram).all()) rows.push(await cellTexts(row));
@@ -327,7 +381,7 @@ async function tableRows(diagram: Locator): Promise<string[][]> {
 }
 
 test('"Compare with" offers "Nothing", chosen to begin with, and the other nineteen atoms', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
 
   const options = compareSelect(diagram).locator('option');
 
@@ -341,17 +395,27 @@ test('"Compare with" offers "Nothing", chosen to begin with, and the other ninet
 });
 
 test('comparing oxygen with nitrogen gives the mixed sentence, a second column and dashed peaks behind', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
-  await elementSelect(diagram).selectOption('O');
+  const diagram = await open(page);
+  await choose(diagram, 'O');
 
-  await compareSelect(diagram).selectOption('N');
+  await compareWith(diagram, 'N');
 
-  await expect(status(diagram)).toContainText(
-    "Oxygen has 8 protons to nitrogen's 7, and its 1s and 2s peaks lie at higher binding energies. " +
+  // The opening and the comparison, and no more: the two sentences about
+  // the atom's strongest and weakest peaks would repeat the table.
+  await expect(status(diagram)).toHaveText(
+    'Oxygen, 1s² 2s² 2p⁴: three peaks. ' +
+      "Oxygen has 8 protons to nitrogen's 7, and its 1s and 2s peaks lie at higher binding energies. " +
       'Its 2p peak is lower, 1.31 against 1.40 MJ/mol: topic 1.7 explains why.',
   );
-  await expect(status(diagram)).toContainText('Oxygen, 1s² 2s² 2p⁴: three peaks.');
-  await expect(table(diagram).locator('thead th')).toHaveText(['Subshell', 'Electrons', 'O (oxygen, MJ/mol)', 'N (nitrogen, MJ/mol)']);
+  await expect(table(diagram).locator('thead th')).toHaveText([
+    'Subshell',
+    'Electrons (O)',
+    'O (oxygen, MJ/mol)',
+    'N (nitrogen, MJ/mol)',
+  ]);
+  await expect(table(diagram).locator('caption')).toHaveText(
+    "Oxygen (O) and nitrogen (N), binding energies in MJ/mol. The electron counts are oxygen's; nitrogen's configuration is 1s² 2s² 2p³.",
+  );
   expect(await tableRows(diagram)).toEqual([
     ['1s', '2', '52.6', '39.6'],
     ['2s', '2', '3.12', '2.45'],
@@ -362,17 +426,17 @@ test('comparing oxygen with nitrogen gives the mixed sentence, a second column a
   await expect(legend(diagram, 'chosen')).toHaveText('Oxygen (O)');
   await expect(legend(diagram, 'compared')).toHaveText('Nitrogen (N)');
   await expect(panel(diagram).getByRole('img')).toHaveAccessibleName(
-    /Dashed outlines behind the peaks show nitrogen's peaks, for comparison\.$/,
+    /Dashed outlines behind the peaks show nitrogen's peaks, for comparison\. Nitrogen's configuration is 1s² 2s² 2p³\.$/,
   );
 });
 
 test("a compared atom's peaks are dashed outlines, drawn behind the chosen atom's filled peaks and without labels", async ({
   page,
 }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
   const axes = await axesOf(diagram);
 
-  await compareSelect(diagram).selectOption('Al');
+  await compareWith(diagram, 'Al');
 
   const outlines = await boxesOf(comparedPeaks(diagram), 'data-compared-peak');
   expect(outlines.map((box) => box.name)).toEqual(['1s', '2s', '2p', '3s', '3p']);
@@ -410,10 +474,10 @@ test("a compared atom's peaks are dashed outlines, drawn behind the chosen atom'
 });
 
 test('a subshell the compared atom lacks has a dash in its column', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
-  await elementSelect(diagram).selectOption('Na');
+  const diagram = await open(page);
+  await choose(diagram, 'Na');
 
-  await compareSelect(diagram).selectOption('Ne');
+  await compareWith(diagram, 'Ne');
 
   expect((await tableRows(diagram)).slice(0, 3)).toEqual([
     ['1s', '2', '104', '84.0'],
@@ -429,12 +493,168 @@ test('a subshell the compared atom lacks has a dash in its column', async ({ pag
   await expect(comparedPeaks(diagram)).toHaveCount(3);
 });
 
+// Hydrogen against calcium draws five peaks that hydrogen does not have, so the table says what they are.
+test('while comparing, the table lists every subshell either atom has, with a dash where one of them lacks it', async ({
+  page,
+}) => {
+  const diagram = await open(page);
+  await choose(diagram, 'H');
+
+  await compareWith(diagram, 'Ca');
+
+  await expect(table(diagram).locator('thead th')).toHaveText([
+    'Subshell',
+    'Electrons (H)',
+    'H (hydrogen, MJ/mol)',
+    'Ca (calcium, MJ/mol)',
+  ]);
+  expect(await tableRows(diagram)).toEqual([
+    ['1s', '1', '1.31', '390'],
+    ['2s', '—', '—', '42.7'],
+    ['2p', '—', '—', '34.0'],
+    ['3s', '—', '—', '4.65'],
+    ['3p', '—', '—', '2.90'],
+    ['4s', '—', '—', '0.59'],
+  ]);
+  const [, electrons, energy, other] = await rowsOf(diagram).nth(1).locator('th, td').all();
+  await expect(electrons).toContainText('no 2s peak');
+  await expect(energy).toContainText('no 2s peak');
+  await expect(other).not.toContainText('no 2s peak');
+  await expect(table(diagram).locator('caption')).toContainText("calcium's configuration is 1s² 2s² 2p⁶ 3s² 3p⁶ 4s².");
+  await expect(panel(diagram).getByRole('img')).toHaveAccessibleName(/Calcium's configuration is 1s² 2s² 2p⁶ 3s² 3p⁶ 4s²\.$/);
+});
+
+test("while comparing, a subshell only the compared atom lacks has a dash in that atom's column: calcium against hydrogen", async ({
+  page,
+}) => {
+  const diagram = await open(page);
+  await choose(diagram, 'Ca');
+
+  await compareWith(diagram, 'H');
+
+  expect(await tableRows(diagram)).toEqual([
+    ['1s', '2', '390', '1.31'],
+    ['2s', '2', '42.7', '—'],
+    ['2p', '6', '34.0', '—'],
+    ['3s', '2', '4.65', '—'],
+    ['3p', '6', '2.90', '—'],
+    ['4s', '2', '0.59', '—'],
+  ]);
+});
+
+// The readout is longer while comparing, and the menus used to sit under it,
+// so choosing an atom to compare moved the menu just used. They sit above
+// the readout instead: this differs from the other explorers, whose
+// readouts hardly change length.
+test('the menus sit under the drawing and above the readout and the table, and do not move when a comparison is chosen', async ({
+  page,
+}) => {
+  const diagram = await open(page);
+  const top = async (locator: Locator) => (await locator.boundingBox())?.y ?? Number.NaN;
+  const bottom = async (locator: Locator) => {
+    const box = await locator.boundingBox();
+    return box ? box.y + box.height : Number.NaN;
+  };
+
+  const drawingBottom = await bottom(panel(diagram).locator('svg'));
+  const menusTop = await top(diagram.locator('.diagram-controls'));
+  const menusBottom = await bottom(diagram.locator('.diagram-controls'));
+  const readoutTop = await top(status(diagram));
+  const tableTop = await top(table(diagram));
+
+  expect(drawingBottom, 'the menus are under the drawing').toBeLessThanOrEqual(menusTop);
+  expect(menusBottom, 'the readout is under the menus').toBeLessThanOrEqual(readoutTop);
+  expect(readoutTop, 'the table is under the readout').toBeLessThanOrEqual(tableTop);
+
+  await choose(diagram, 'O');
+  await compareWith(diagram, 'N');
+
+  expect(Math.abs((await top(diagram.locator('.diagram-controls'))) - menusTop), 'the menus did not move').toBeLessThanOrEqual(0.5);
+});
+
+// A compared atom's peak can stand where one of the chosen atom's labels is:
+// hydrogen's 1s and oxygen's 2p are both at 1.31 MJ/mol. The dashed line
+// would strike through the label, so each label has a halo in the card's color.
+for (const [chosen, compared] of [
+  ['H', 'O'],
+  ['He', 'Ne'],
+  ['Li', 'Mg'],
+] as const) {
+  test(`${chosen} against ${compared}: a compared peak crosses a label of the chosen atom, and every label has a halo`, async ({
+    page,
+  }) => {
+    const diagram = await open(page);
+    await choose(diagram, chosen);
+    await compareWith(diagram, compared);
+
+    const labels = await boxesOf(peakLabels(diagram), 'data-peak-label');
+    const outlines = await boxesOf(comparedPeaks(diagram), 'data-compared-peak');
+    const crossed = labels.filter((label) => outlines.some((outline) => overlap(label, outline, 0)));
+    const halos = await peakLabels(diagram).evaluateAll((nodes) =>
+      nodes.map((node) => {
+        const style = getComputedStyle(node);
+        return { name: node.textContent, paintOrder: style.paintOrder, stroke: style.stroke, width: style.strokeWidth };
+      }),
+    );
+    const card = await diagram.evaluate((body) => {
+      const frame = body.closest('.diagram');
+      if (!frame) throw new Error('The diagram is not inside a .diagram figure.');
+      return getComputedStyle(frame).backgroundColor;
+    });
+
+    // The test is about a real crossing: this pair has one.
+    expect(crossed.map((label) => label.name), `${chosen}/${compared} has a label a compared peak crosses`).not.toEqual([]);
+    expect(halos).toHaveLength(PEAK_COUNTS[chosen] ?? -1);
+    for (const halo of halos) {
+      expect(halo.paintOrder, `${halo.name} is painted stroke first`).toMatch(/^stroke/);
+      expect(halo.stroke, `${halo.name}'s halo is the card's color`).toBe(card);
+      expect(halo.width, `${halo.name}'s halo is 3px`).toBe('3px');
+    }
+  });
+}
+
+test('the two legend entries do not meet, with the longest names, at 320 px', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 800 });
+  const diagram = await open(page);
+  await choose(diagram, 'P');
+
+  await compareWith(diagram, 'Mg');
+
+  const [chosen, compared] = await boxesOf(panel(diagram).locator('[data-legend]'), 'data-legend');
+  if (!chosen || !compared) throw new Error('The legend does not have two entries.');
+  expect(chosen.name).toBe('chosen');
+  expect(compared.name).toBe('compared');
+  expect(chosen.right, 'a gap between the entries').toBeLessThan(compared.left - 4);
+  const width = await panel(diagram).locator('svg').evaluate((svg) => {
+    if (!(svg instanceof SVGSVGElement)) throw new Error('The drawing is not an SVG.');
+    return svg.viewBox.baseVal.width;
+  });
+  expect(compared.right, 'inside the drawing').toBeLessThanOrEqual(width);
+});
+
+test('under the axis title, a cue says that larger binding energies are held more tightly, clear of the legend', async ({
+  page,
+}) => {
+  const diagram = await open(page);
+
+  const [title, cue, key] = [
+    (await boxesOf(panel(diagram).locator('[data-axis-label="x"]'), 'data-axis-label'))[0],
+    (await boxesOf(panel(diagram).locator('[data-axis-cue]'), 'data-axis-cue'))[0],
+    (await boxesOf(panel(diagram).locator('[data-legend="chosen"]'), 'data-legend'))[0],
+  ];
+  if (!title || !cue || !key) throw new Error('The title, the cue or the legend is missing.');
+
+  await expect(panel(diagram).locator('[data-axis-cue]')).toHaveText('← held more tightly');
+  expect(cue.top, 'under the title').toBeGreaterThanOrEqual(title.bottom);
+  expect(cue.bottom, 'above the legend').toBeLessThanOrEqual(key.top);
+});
+
 test('choosing "Nothing" takes away the second column, the dashed peaks, the legend entry and the comparison', async ({
   page,
 }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
-  await elementSelect(diagram).selectOption('O');
-  await compareSelect(diagram).selectOption('N');
+  const diagram = await open(page);
+  await choose(diagram, 'O');
+  await compareWith(diagram, 'N');
   await expect(comparedPeaks(diagram)).toHaveCount(3);
 
   await compareSelect(diagram).selectOption({ label: 'Nothing' });
@@ -449,12 +669,12 @@ test('choosing "Nothing" takes away the second column, the dashed peaks, the leg
 });
 
 test('choosing the atom that is being compared with ends the comparison, and the menu follows', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
-  await elementSelect(diagram).selectOption('O');
-  await compareSelect(diagram).selectOption('N');
+  const diagram = await open(page);
+  await choose(diagram, 'O');
+  await compareWith(diagram, 'N');
   await expect(comparedPeaks(diagram)).toHaveCount(3);
 
-  await elementSelect(diagram).selectOption('N');
+  await choose(diagram, 'N');
 
   await expect(compareSelect(diagram)).toHaveValue('');
   await expect(comparedPeaks(diagram)).toHaveCount(0);
@@ -465,10 +685,10 @@ test('choosing the atom that is being compared with ends the comparison, and the
 });
 
 test('the comparison stays when another atom is chosen, as long as it is a different one', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
-  await compareSelect(diagram).selectOption('Al');
+  const diagram = await open(page);
+  await compareWith(diagram, 'Al');
 
-  await elementSelect(diagram).selectOption('P');
+  await choose(diagram, 'P');
 
   await expect(compareSelect(diagram)).toHaveValue('Al');
   await expect(status(diagram)).toContainText(
@@ -480,7 +700,7 @@ test('the comparison stays when another atom is chosen, as long as it is a diffe
 test('both menus can be reached with Tab, in the order shown, and the comparison can be chosen from the keyboard', async ({
   page,
 }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
 
   await elementSelect(diagram).focus();
   await page.keyboard.press('Tab');
@@ -498,8 +718,8 @@ test('both menus can be reached with Tab, in the order shown, and the comparison
 test("the drawing's text is 12 px or more when the drawing itself is shown 320 px wide, the ratio of the site's figures", async ({
   page,
 }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
-  await compareSelect(diagram).selectOption('Al');
+  const diagram = await open(page);
+  await compareWith(diagram, 'Al');
 
   const sizes = await panel(diagram).locator('svg').evaluate((svg) => {
     if (!(svg instanceof SVGSVGElement)) throw new Error('The drawing is not an SVG.');
@@ -519,8 +739,8 @@ test("the drawing's text is 12 px or more when the drawing itself is shown 320 p
 for (const width of [1280, 412]) {
   test(`on a ${width} px screen every piece of text in the diagram is drawn 12 px or larger`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
-    const diagram = await openDiagram(page, PAGE, NAME);
-    await compareSelect(diagram).selectOption('Al');
+    const diagram = await open(page);
+    await compareWith(diagram, 'Al');
     await page.evaluate(() => document.fonts.ready);
 
     const drawn = await panel(diagram).locator('svg').evaluate((svg) => {
@@ -550,7 +770,7 @@ for (const width of [1280, 412]) {
 
 test('on a wide screen the drawing stops at 22rem wide and sits in the middle of the diagram', async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 900 });
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
 
   const measured = await diagram.evaluate((body) => {
     const frame = body.getBoundingClientRect();
@@ -574,10 +794,10 @@ for (const width of [1280, 412, 390, 360, 320]) {
     page,
   }) => {
     await page.setViewportSize({ width, height: 800 });
-    const diagram = await openDiagram(page, PAGE, NAME);
+    const diagram = await open(page);
     // The longest readout (a mixed comparison, after the atom's own) and a four-column table.
-    await elementSelect(diagram).selectOption('S');
-    await compareSelect(diagram).selectOption('P');
+    await choose(diagram, 'S');
+    await compareWith(diagram, 'P');
     await expect(status(diagram)).toContainText('topic 1.7 explains why.');
     await page.evaluate(() => document.fonts.ready);
     const figure = page.locator('[data-part="diagram"]', { has: diagram });
@@ -610,7 +830,7 @@ for (const width of [1280, 412, 390, 360, 320]) {
 for (const theme of ['light', 'dark'] as const) {
   test(`the diagram has no accessibility violations in the ${theme} theme, at the start and while comparing`, async ({ page }) => {
     await page.addInitScript((value) => localStorage.setItem('chemstudy:theme', value), theme);
-    const diagram = await openDiagram(page, PAGE, NAME);
+    const diagram = await open(page);
     await expect(page.locator('html')).toHaveAttribute('data-theme', theme);
     const violations = async () => {
       const results = await new AxeBuilder({ page })
@@ -621,8 +841,8 @@ for (const theme of ['light', 'dark'] as const) {
     };
 
     expect(await violations(), 'at the start').toEqual([]);
-    await elementSelect(diagram).selectOption('Na');
-    await compareSelect(diagram).selectOption('Ne');
+    await choose(diagram, 'Na');
+    await compareWith(diagram, 'Ne');
     await expect(status(diagram)).toContainText("whose nucleus has 11 protons to neon's 10.");
 
     expect(await violations(), 'while comparing sodium with neon').toEqual([]);
@@ -630,7 +850,7 @@ for (const theme of ['light', 'dark'] as const) {
 }
 
 test('in print the controls are gone and the drawing, the readout and the table stay', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
+  const diagram = await open(page);
   await page.emulateMedia({ media: 'print' });
 
   await expect(diagram.locator('.diagram-controls')).toBeHidden();

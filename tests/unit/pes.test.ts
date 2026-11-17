@@ -11,7 +11,9 @@ import {
   energyTable,
   heightFraction,
   labelAnchor,
+  opening,
   readout,
+  tableCaption,
 } from '../../src/lib/pes';
 
 const NOT_NUMBERS = [Number.NaN, Number.POSITIVE_INFINITY];
@@ -459,32 +461,147 @@ describe('layout', () => {
 });
 
 describe('energyTable', () => {
-  it('lists the subshell, the electrons and the energy of each peak of the chosen atom', () => {
-    expect(energyTable('Si')).toEqual([
-      { subshell: '1s', electrons: 2, energy: '178', other: undefined },
-      { subshell: '2s', electrons: 2, energy: '15.1', other: undefined },
-      { subshell: '2p', electrons: 6, energy: '10.3', other: undefined },
-      { subshell: '3s', electrons: 2, energy: '1.46', other: undefined },
-      { subshell: '3p', electrons: 2, energy: '0.79', other: undefined },
+  const FILLING_ORDER = ['1s', '2s', '2p', '3s', '3p', '4s'];
+
+  it('lists the subshell, the electrons and the energy of each peak of the chosen atom, tagged as not compared', () => {
+    const table = energyTable('Si');
+
+    expect(table.compared).toBe(false);
+    expect(table.rows).toEqual([
+      { subshell: '1s', electrons: 2, energy: '178' },
+      { subshell: '2s', electrons: 2, energy: '15.1' },
+      { subshell: '2p', electrons: 6, energy: '10.3' },
+      { subshell: '3s', electrons: 2, energy: '1.46' },
+      { subshell: '3p', electrons: 2, energy: '0.79' },
     ]);
   });
 
-  it('adds the other atom, with null for a subshell it lacks', () => {
-    expect(energyTable('Na', 'Ne')).toEqual([
+  it('has no "other" field at all in a table that is not compared', () => {
+    for (const row of energyTable('Si').rows) expect(Object.hasOwn(row, 'other'), row.subshell).toBe(false);
+  });
+
+  it('adds the other atom, tagged as compared, with undefined for a subshell it lacks', () => {
+    const table = energyTable('Na', 'Ne');
+
+    expect(table.compared).toBe(true);
+    expect(table.rows).toEqual([
       { subshell: '1s', electrons: 2, energy: '104', other: '84.0' },
       { subshell: '2s', electrons: 2, energy: '6.84', other: '4.68' },
       { subshell: '2p', electrons: 6, energy: '3.67', other: '2.08' },
-      { subshell: '3s', electrons: 1, energy: '0.50', other: null },
+      { subshell: '3s', electrons: 1, energy: '0.50', other: undefined },
+    ]);
+    const last = table.rows[3];
+    expect(Object.hasOwn(last ?? {}, 'other'), 'the field is there, with no value').toBe(true);
+  });
+
+  // Hydrogen against calcium: five of calcium's six peaks are drawn, so the table lists them.
+  it('lists every subshell either atom has: hydrogen against calcium has six rows', () => {
+    const table = energyTable('H', 'Ca');
+
+    expect(table.rows).toEqual([
+      { subshell: '1s', electrons: 1, energy: '1.31', other: '390' },
+      { subshell: '2s', electrons: undefined, energy: undefined, other: '42.7' },
+      { subshell: '2p', electrons: undefined, energy: undefined, other: '34.0' },
+      { subshell: '3s', electrons: undefined, energy: undefined, other: '4.65' },
+      { subshell: '3p', electrons: undefined, energy: undefined, other: '2.90' },
+      { subshell: '4s', electrons: undefined, energy: undefined, other: '0.59' },
+    ]);
+    for (const row of table.rows.slice(1)) {
+      expect(Object.hasOwn(row, 'electrons'), row.subshell).toBe(true);
+      expect(Object.hasOwn(row, 'energy'), row.subshell).toBe(true);
+    }
+  });
+
+  it('lists every subshell either atom has: calcium against hydrogen has six rows, the other atom lacking five', () => {
+    expect(energyTable('Ca', 'H').rows).toEqual([
+      { subshell: '1s', electrons: 2, energy: '390', other: '1.31' },
+      { subshell: '2s', electrons: 2, energy: '42.7', other: undefined },
+      { subshell: '2p', electrons: 6, energy: '34.0', other: undefined },
+      { subshell: '3s', electrons: 2, energy: '4.65', other: undefined },
+      { subshell: '3p', electrons: 6, energy: '2.90', other: undefined },
+      { subshell: '4s', electrons: 2, energy: '0.59', other: undefined },
     ]);
   });
 
-  it('has one row for each peak, for every atom', () => {
-    for (const element of PES_ELEMENTS) expect(energyTable(element.symbol), element.symbol).toHaveLength(element.peaks.length);
+  it('lists oxygen against nitrogen as three rows with both energies', () => {
+    expect(energyTable('O', 'N').rows).toEqual([
+      { subshell: '1s', electrons: 2, energy: '52.6', other: '39.6' },
+      { subshell: '2s', electrons: 2, energy: '3.12', other: '2.45' },
+      { subshell: '2p', electrons: 4, energy: '1.31', other: '1.40' },
+    ]);
+  });
+
+  it('has one row for each peak of an atom that is not compared, for every atom', () => {
+    for (const element of PES_ELEMENTS) expect(energyTable(element.symbol).rows, element.symbol).toHaveLength(element.peaks.length);
+  });
+
+  it('has, for every pair, one row for each subshell either has, in filling order, each with some energy', () => {
+    for (const a of PES_ELEMENTS) {
+      for (const b of PES_ELEMENTS) {
+        if (a === b) continue;
+        const wanted = FILLING_ORDER.filter((name) => [...a.peaks, ...b.peaks].some((peak) => peak.subshell === name));
+
+        const rows = energyTable(a.symbol, b.symbol).rows;
+
+        expect(rows.map((row) => row.subshell), `${a.symbol}/${b.symbol}`).toEqual(wanted);
+        for (const row of rows) {
+          const compared = row as { energy?: string; other?: string };
+          expect(compared.energy !== undefined || compared.other !== undefined, `${a.symbol}/${b.symbol} ${row.subshell}`).toBe(true);
+        }
+      }
+    }
   });
 
   it('rejects a symbol that is not one of the twenty, naming it', () => {
     expect(() => energyTable('Xx')).toThrow('"Xx"');
     expect(() => energyTable('Si', 'Zz')).toThrow('"Zz"');
+  });
+
+  it('rejects comparing an atom with itself', () => {
+    expect(() => energyTable('Si', 'Si')).toThrow('different');
+  });
+});
+
+describe('opening', () => {
+  it('is the first sentence of the readout: the atom, its configuration and the number of peaks', () => {
+    expect(opening('O')).toBe('Oxygen, 1s² 2s² 2p⁴: three peaks.');
+    expect(opening('Si')).toBe('Silicon, 1s² 2s² 2p⁶ 3s² 3p²: five peaks.');
+    expect(opening('Ca')).toBe('Calcium, 1s² 2s² 2p⁶ 3s² 3p⁶ 4s²: six peaks.');
+  });
+
+  it('says "one peak" for hydrogen and helium', () => {
+    expect(opening('H')).toBe('Hydrogen, 1s¹: one peak.');
+    expect(opening('He')).toBe('Helium, 1s²: one peak.');
+  });
+
+  it('begins the readout of every atom with more than one peak', () => {
+    for (const element of PES_ELEMENTS) {
+      if (element.peaks.length > 1) expect(readout(element.symbol).startsWith(opening(element.symbol)), element.symbol).toBe(true);
+    }
+  });
+
+  it('rejects a symbol that is not one of the twenty, naming it', () => {
+    expect(() => opening('Xx')).toThrow('"Xx"');
+  });
+});
+
+describe('tableCaption', () => {
+  it('names the atom when nothing is compared', () => {
+    expect(tableCaption('Si')).toBe('Silicon: the electrons in each subshell and their binding energies');
+  });
+
+  // The compared atom's electron counts are in no column, so the caption gives its configuration.
+  it('names both atoms and gives the compared atom\'s configuration', () => {
+    expect(tableCaption('O', 'N')).toBe(
+      "Oxygen (O) and nitrogen (N), binding energies in MJ/mol. The electron counts are oxygen's; nitrogen's configuration is 1s² 2s² 2p³.",
+    );
+    expect(tableCaption('H', 'Ca')).toContain("calcium's configuration is 1s² 2s² 2p⁶ 3s² 3p⁶ 4s².");
+  });
+
+  it('rejects a symbol that is not one of the twenty, and an atom compared with itself', () => {
+    expect(() => tableCaption('Xx')).toThrow('"Xx"');
+    expect(() => tableCaption('Si', 'Zz')).toThrow('"Zz"');
+    expect(() => tableCaption('Si', 'Si')).toThrow('different');
   });
 });
 
@@ -502,10 +619,12 @@ describe('describeSpectrum', () => {
     );
   });
 
-  it('adds the dashed outlines of the atom compared with', () => {
+  // Its heights are drawn but described nowhere else, so the configuration carries them.
+  it("adds the dashed outlines of the atom compared with, and that atom's configuration", () => {
     expect(describeSpectrum('O', 'N')).toContain(
-      "Dashed outlines behind the peaks show nitrogen's peaks, for comparison.",
+      "Dashed outlines behind the peaks show nitrogen's peaks, for comparison. Nitrogen's configuration is 1s² 2s² 2p³.",
     );
+    expect(describeSpectrum('H', 'Ca')).toContain("Calcium's configuration is 1s² 2s² 2p⁶ 3s² 3p⁶ 4s².");
     expect(describeSpectrum('O')).not.toContain('Dashed');
   });
 

@@ -9,14 +9,16 @@
     energyTable,
     heightFraction,
     labelAnchor,
+    opening,
     readout,
+    tableCaption,
     type PesElement,
   } from '../../lib/pes';
 
   // Drawing units. The drawing is 320 wide and its text is 12, so the text is
   // 12 px when the drawing itself is shown 320 px wide: the ratio of the
   // site's figures (18 on 480). Shown narrower, it is smaller in proportion.
-  const VIEW = { width: 320, height: 244 };
+  const VIEW = { width: 320, height: 262 };
   // A peak of six electrons, the tallest, reaches the top of the plot; its
   // label sits in the room above.
   const PLOT = { left: 46, right: 306, top: 30, bottom: 180 };
@@ -27,8 +29,10 @@
   const LABEL_GAP = 5;
   const ENERGY_TICKS = ['1000', '100', '10', '1', '0.1'] as const;
   const ELECTRON_TICKS = [2, 4, 6] as const;
-  // The legend sits under the energy axis: the chosen atom, then the compared one.
-  const LEGEND = { y: PLOT.bottom + 58, chosenX: PLOT.left, comparedX: PLOT.left + 130, swatch: { width: 16, height: 10 } };
+  // Under the axis title: which way the electrons are held more tightly.
+  const CUE_Y = PLOT.bottom + 53;
+  // The legend sits under that: the chosen atom, then the compared one.
+  const LEGEND = { y: PLOT.bottom + 76, chosenX: PLOT.left, comparedX: PLOT.left + 130, swatch: { width: 16, height: 10 } };
 
   let symbol = $state('Si');
   // The empty string is "nothing": no atom is compared.
@@ -39,9 +43,11 @@
   const other = $derived(otherSymbol === '' ? undefined : elementOf(otherSymbol));
   // The menu leaves out the chosen atom: it is never compared with itself.
   const comparable = $derived(PES_ELEMENTS.filter((atom) => atom.symbol !== symbol));
-  const rows = $derived(energyTable(symbol, other ? otherSymbol : undefined));
+  const table = $derived(energyTable(symbol, other?.symbol));
+  // The opening of the atom's own readout, then the comparison: the two
+  // sentences about its strongest and weakest peaks would repeat the table.
   const readoutText = $derived(
-    other ? `${readout(symbol)} ${comparisonReadout(symbol, otherSymbol)}` : readout(symbol),
+    other ? `${opening(symbol)} ${comparisonReadout(symbol, other.symbol)}` : readout(symbol),
   );
 
   const f = (value: number) => value.toFixed(1);
@@ -85,11 +91,16 @@
   });
 </script>
 
+<!-- A table cell for an atom that has no such subshell: a dash for the eye, words for a screen reader. -->
+{#snippet missing(subshell: string)}
+  <span aria-hidden="true">—</span><span class="visually-hidden">no {subshell} peak</span>
+{/snippet}
+
 <div class="diagram-body" data-diagram="photoelectron-spectrum" data-hydrated={hydrated ? 'true' : undefined}>
   <div class="diagram-panels">
     <figure class="diagram-plot" data-panel="spectrum">
       <figcaption class="diagram-panel-title">Photoelectron spectrum</figcaption>
-      <svg viewBox={`0 0 ${VIEW.width} ${VIEW.height}`} role="img" aria-label={describeSpectrum(symbol, other ? otherSymbol : undefined)}>
+      <svg viewBox={`0 0 ${VIEW.width} ${VIEW.height}`} role="img" aria-label={describeSpectrum(symbol, other?.symbol)}>
         {#each ELECTRON_TICKS as tick (tick)}
           <line class="diagram-gridline" data-gridline={tick} x1={PLOT.left} y1={f(yFor(tick))} x2={PLOT.right} y2={f(yFor(tick))} />
           <text class="diagram-label" data-tick-label-y x={PLOT.left - 7} y={f(yFor(tick))} dy="0.35em" text-anchor="end">{tick}</text>
@@ -102,6 +113,7 @@
         <text class="diagram-label" data-axis-label="x" x={(PLOT.left + PLOT.right) / 2} y={PLOT.bottom + 35} text-anchor="middle"
           >binding energy (MJ/mol)</text
         >
+        <text class="diagram-label" data-axis-cue x={PLOT.left} y={CUE_Y}>← held more tightly</text>
         <!-- Two lines: on one line the name is longer than the axis is tall. -->
         <text
           class="diagram-label"
@@ -110,7 +122,7 @@
           y="0"
           text-anchor="middle"
           transform={`translate(12 ${(PLOT.top + PLOT.bottom) / 2}) rotate(-90)`}
-          ><tspan x="0">Relative number{' '}</tspan><tspan x="0" dy="14">of electrons</tspan></text
+          ><tspan x="0">relative number{' '}</tspan><tspan x="0" dy="14">of electrons</tspan></text
         >
 
         {#if other}
@@ -151,7 +163,9 @@
     </figure>
   </div>
 
-  <p class="diagram-readout" role="status">{readoutText}</p>
+  <!-- The menus come before the readout, unlike the other explorers: this
+       readout is much longer while comparing, and under it the menu the
+       student has just used would move. -->
   <div class="diagram-controls">
     <label class="diagram-select">
       <span>Element</span>
@@ -172,46 +186,44 @@
     </label>
   </div>
 
+  <p class="diagram-readout" role="status">{readoutText}</p>
+
   <table class="diagram-table" data-table="peaks">
-    <caption>
-      {#if other}
-        Electrons in each subshell of {element.name.toLowerCase()}, and the binding energies of {element.name.toLowerCase()}
-        ({element.symbol}) and {other.name.toLowerCase()} ({other.symbol}), in MJ/mol
-      {:else}
-        {element.name}: the electrons in each subshell and their binding energies
-      {/if}
-    </caption>
+    <caption>{tableCaption(symbol, other?.symbol)}</caption>
     <thead>
       <tr>
         <th scope="col">Subshell</th>
-        <th scope="col">Electrons</th>
-        {#if other}
+        {#if table.compared && other}
+          <th scope="col">Electrons ({element.symbol})</th>
           <!-- Symbols, not names: at 320 px four columns with "Phosphorus" and
                "Magnesium" are wider than the diagram. The caption and the legend give the names. -->
           <th scope="col">{element.symbol}<span class="visually-hidden">{' '}({element.name.toLowerCase()}, MJ/mol)</span></th>
           <th scope="col">{other.symbol}<span class="visually-hidden">{' '}({other.name.toLowerCase()}, MJ/mol)</span></th>
         {:else}
+          <th scope="col">Electrons</th>
           <th scope="col">Binding energy (MJ/mol)</th>
         {/if}
       </tr>
     </thead>
     <tbody>
-      {#each rows as row (row.subshell)}
-        <tr data-row={row.subshell}>
-          <th scope="row">{row.subshell}</th>
-          <td>{row.electrons}</td>
-          <td>{row.energy}</td>
-          {#if other}
-            <td>
-              {#if row.other}
-                {row.other}
-              {:else}
-                <span aria-hidden="true">—</span><span class="visually-hidden">no {row.subshell} peak</span>
-              {/if}
-            </td>
-          {/if}
-        </tr>
-      {/each}
+      {#if table.compared}
+        {#each table.rows as row (row.subshell)}
+          <tr data-row={row.subshell}>
+            <th scope="row">{row.subshell}</th>
+            <td>{#if row.electrons !== undefined}{row.electrons}{:else}{@render missing(row.subshell)}{/if}</td>
+            <td>{#if row.energy !== undefined}{row.energy}{:else}{@render missing(row.subshell)}{/if}</td>
+            <td>{#if row.other !== undefined}{row.other}{:else}{@render missing(row.subshell)}{/if}</td>
+          </tr>
+        {/each}
+      {:else}
+        {#each table.rows as row (row.subshell)}
+          <tr data-row={row.subshell}>
+            <th scope="row">{row.subshell}</th>
+            <td>{row.electrons}</td>
+            <td>{row.energy}</td>
+          </tr>
+        {/each}
+      {/if}
     </tbody>
   </table>
 </div>

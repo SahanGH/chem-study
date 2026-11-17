@@ -90,6 +90,9 @@ const MOST_ELECTRONS = 6;
 // than this can have labels that meet.
 const LABEL_CLEARANCE = 0.06;
 
+/** The subshells in the order they fill, which is the order of their peaks from the highest binding energy to the lowest. */
+const FILLING_ORDER: readonly Subshell[] = ['1s', '2s', '2p', '3s', '3p', '4s'];
+
 const COUNT_WORDS = ['one', 'two', 'three', 'four', 'five', 'six'] as const;
 
 /** The data for one of the twenty atoms. */
@@ -111,7 +114,7 @@ function pairOf(symbol: string, otherSymbol: string): { first: PesElement; secon
   return { first, second };
 }
 
-function peakOf(element: PesElement, subshell: string): Peak | undefined {
+function peakOf(element: PesElement, subshell: Subshell): Peak | undefined {
   return element.peaks.find((peak) => peak.subshell === subshell);
 }
 
@@ -173,7 +176,7 @@ export function configuration(symbol: string): string {
  * lower-energy side, and 'start's there when the neighbor is on the
  * higher-energy side.
  */
-export function labelAnchor(symbol: string, subshell: string): 'start' | 'middle' | 'end' {
+export function labelAnchor(symbol: string, subshell: Subshell): 'start' | 'middle' | 'end' {
   const element = elementOf(symbol);
   const peak = peakOf(element, subshell);
   if (!peak) {
@@ -194,25 +197,34 @@ export function labelAnchor(symbol: string, subshell: string): 'start' | 'middle
 
 export interface Comparison {
   /** Subshells both atoms have, at a higher binding energy in the first atom. */
-  readonly higher: string[];
-  readonly lower: string[];
-  readonly same: string[];
+  readonly higher: readonly Subshell[];
+  readonly lower: readonly Subshell[];
+  readonly same: readonly Subshell[];
 }
 
 /** For the subshells both atoms have: which lie at a higher binding energy in the first atom, which lower, which the same. */
 export function compare(symbol: string, otherSymbol: string): Comparison {
   const first = elementOf(symbol);
   const second = elementOf(otherSymbol);
-  const result: Comparison = { higher: [], lower: [], same: [] };
+  const higher: Subshell[] = [];
+  const lower: Subshell[] = [];
+  const same: Subshell[] = [];
   for (const peak of first.peaks) {
     const match = peakOf(second, peak.subshell);
     if (!match) continue;
     const difference = Number(peak.energy) - Number(match.energy);
-    if (difference > 0) result.higher.push(peak.subshell);
-    else if (difference < 0) result.lower.push(peak.subshell);
-    else result.same.push(peak.subshell);
+    if (difference > 0) higher.push(peak.subshell);
+    else if (difference < 0) lower.push(peak.subshell);
+    else same.push(peak.subshell);
   }
-  return result;
+  return { higher, lower, same };
+}
+
+/** The first sentence of the readout: the atom, its configuration and how many peaks it has. */
+export function opening(symbol: string): string {
+  const element = elementOf(symbol);
+  const count = element.peaks.length;
+  return `${element.name}, ${configuration(symbol)}: ${countWord(count)} peak${count === 1 ? '' : 's'}.`;
 }
 
 /** What the diagram says about one atom: its configuration and its two extreme peaks. */
@@ -222,12 +234,13 @@ export function readout(symbol: string): string {
   const innermost = peaks[0];
   const outermost = peaks[peaks.length - 1];
   if (!innermost || !outermost) throw new Error(`${element.name} has no peaks in the data.`);
-  const opening = `${element.name}, ${configuration(symbol)}: `;
-  if (peaks.length === 1) return `${opening}${countWord(1)} peak, at ${innermost.energy} MJ/mol.`;
+  if (peaks.length === 1) {
+    return `${element.name}, ${configuration(symbol)}: ${countWord(1)} peak, at ${innermost.energy} MJ/mol.`;
+  }
   // The innermost subshell of an atom with more than one peak is a full 1s.
   const outer = outermost.electrons === 1 ? 'electron is' : 'electrons are';
   return (
-    `${opening}${countWord(peaks.length)} peaks. ` +
+    `${opening(symbol)} ` +
     `The ${innermost.subshell} electrons are held most strongly, at ${innermost.energy} MJ/mol. ` +
     `The ${outermost.subshell} ${outer} the easiest to remove, at ${outermost.energy} MJ/mol.`
   );
@@ -273,26 +286,60 @@ export function comparisonReadout(symbol: string, otherSymbol: string): string {
   );
 }
 
-export interface TableRow {
+/** A row of the table of one atom: each of its peaks. */
+export interface PeakRow {
   readonly subshell: Subshell;
   readonly electrons: number;
   readonly energy: string;
-  /**
-   * The other atom's binding energy for this subshell. Left out when no atom
-   * is compared with; null when one is and it has no such subshell.
-   */
-  readonly other?: string | null;
 }
 
-/** The table under the graph: one row for each peak of the chosen atom, with a column for the compared atom if there is one. */
-export function energyTable(symbol: string, otherSymbol?: string): TableRow[] {
+/**
+ * A row of the table of two atoms: every subshell either has. The chosen
+ * atom's electrons and energy, and the other atom's energy, are undefined
+ * where that atom has no such subshell. The fields are always present.
+ */
+export interface ComparedRow {
+  readonly subshell: Subshell;
+  readonly electrons: number | undefined;
+  readonly energy: string | undefined;
+  readonly other: string | undefined;
+}
+
+/** Tagged, so that a reader never has to infer from a missing field whether two atoms are compared. */
+export type EnergyTable =
+  | { readonly compared: false; readonly rows: readonly PeakRow[] }
+  | { readonly compared: true; readonly rows: readonly ComparedRow[] };
+
+/** The table under the graph: one row for each peak of the chosen atom, or, with another atom, for each subshell either has. */
+export function energyTable(symbol: string, otherSymbol?: string): EnergyTable {
   const element = elementOf(symbol);
-  const second = otherSymbol === undefined ? undefined : pairOf(symbol, otherSymbol).second;
-  return element.peaks.map((peak) => {
-    const row = { subshell: peak.subshell, electrons: peak.electrons, energy: peak.energy };
-    if (!second) return row;
-    return { ...row, other: peakOf(second, peak.subshell)?.energy ?? null };
-  });
+  if (otherSymbol === undefined) {
+    return {
+      compared: false,
+      rows: element.peaks.map((peak) => ({ subshell: peak.subshell, electrons: peak.electrons, energy: peak.energy })),
+    };
+  }
+  const { second } = pairOf(symbol, otherSymbol);
+  const rows = FILLING_ORDER.filter((subshell) => peakOf(element, subshell) ?? peakOf(second, subshell)).map(
+    (subshell) => ({
+      subshell,
+      electrons: peakOf(element, subshell)?.electrons,
+      energy: peakOf(element, subshell)?.energy,
+      other: peakOf(second, subshell)?.energy,
+    }),
+  );
+  return { compared: true, rows };
+}
+
+/** The caption of the table. With a second atom it also gives that atom's configuration, whose electron counts no column shows. */
+export function tableCaption(symbol: string, otherSymbol?: string): string {
+  const element = elementOf(symbol);
+  if (otherSymbol === undefined) return `${element.name}: the electrons in each subshell and their binding energies`;
+  const { second } = pairOf(symbol, otherSymbol);
+  return (
+    `${element.name} (${element.symbol}) and ${lowerName(second)} (${second.symbol}), binding energies in MJ/mol. ` +
+    `The electron counts are ${lowerName(element)}'s; ${lowerName(second)}'s configuration is ${configuration(second.symbol)}.`
+  );
 }
 
 /** The graph in words, for its accessible name. The table under the graph gives the energies. */
@@ -311,5 +358,8 @@ export function describeSpectrum(symbol: string, otherSymbol?: string): string {
         'from the highest binding energy at the left to the lowest at the right. ' +
         `The height of each peak is its number of electrons: ${heights}.`;
   if (!second) return spectrum;
-  return `${spectrum} Dashed outlines behind the peaks show ${lowerName(second)}'s peaks, for comparison.`;
+  return (
+    `${spectrum} Dashed outlines behind the peaks show ${lowerName(second)}'s peaks, for comparison. ` +
+    `${second.name}'s configuration is ${configuration(second.symbol)}.`
+  );
 }
