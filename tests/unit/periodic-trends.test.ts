@@ -5,10 +5,13 @@ import {
   GROUPS,
   PERIODS,
   PROPERTIES,
+  PROPERTY_NAMES,
   TREND_ELEMENTS,
   describeSeries,
   elementOf,
   orderTitle,
+  parseDirection,
+  parseProperty,
   readout,
   series,
   seriesHeading,
@@ -439,13 +442,32 @@ describe('seriesHeading and describeSeries', () => {
 });
 
 describe('orderTitle', () => {
-  it('names the order the graph runs in, in lowercase, as an axis title', () => {
-    expect(orderTitle('period')).toBe('in order of group');
-    expect(orderTitle('group')).toBe('in order of period');
+  it('says which way the symbols run in the table, in lowercase, as an axis title', () => {
+    expect(orderTitle('period')).toBe('left to right in the table');
+    expect(orderTitle('group')).toBe('top to bottom in the table');
   });
 
   it('throws, naming the direction, for an unknown one', () => {
     // @ts-expect-error a direction the module does not have
     expect(() => orderTitle('diagonal')).toThrowError(/"diagonal"/);
+  });
+});
+
+describe('parseProperty and parseDirection', () => {
+  it('give back each name the module offers', () => {
+    expect(PROPERTY_NAMES).toEqual(['radius', 'ie1', 'en']);
+    for (const name of PROPERTY_NAMES) expect(parseProperty(name)).toBe(name);
+    for (const name of DIRECTIONS) expect(parseDirection(name)).toBe(name);
+  });
+
+  it('throw, naming the value and the names to give instead, for one that is not offered', () => {
+    expect(() => parseProperty('mass')).toThrowError('There is no property "mass": give one of radius, ie1, en.');
+    expect(() => parseProperty('')).toThrowError('There is no property "": give one of radius, ie1, en.');
+    expect(() => parseDirection('diagonal')).toThrowError('There is no direction "diagonal": give one of period, group.');
+  });
+
+  it('do not take an inherited property name for a property', () => {
+    expect(() => parseProperty('toString')).toThrowError(/"toString"/);
+    expect(() => parseDirection('constructor')).toThrowError(/"constructor"/);
   });
 });

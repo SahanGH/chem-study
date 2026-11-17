@@ -16,8 +16,11 @@
  */
 import { elementBySymbol } from '../data/elements';
 
-export type TrendProperty = 'radius' | 'ie1' | 'en';
-export type TrendDirection = 'period' | 'group';
+export const PROPERTY_NAMES = ['radius', 'ie1', 'en'] as const;
+export const DIRECTIONS = ['period', 'group'] as const;
+
+export type TrendProperty = (typeof PROPERTY_NAMES)[number];
+export type TrendDirection = (typeof DIRECTIONS)[number];
 
 export interface TrendElement {
   readonly z: number;
@@ -98,9 +101,6 @@ export const GROUPS: readonly number[] = [1, 2, 13, 14, 15, 16, 17, 18];
 /** The rows of the table. */
 export const PERIODS: readonly number[] = [1, 2, 3, 4, 5];
 
-export const PROPERTY_NAMES: readonly TrendProperty[] = ['radius', 'ie1', 'en'];
-export const DIRECTIONS: readonly TrendDirection[] = ['period', 'group'];
-
 interface PropertyInfo {
   readonly label: string;
   /** Null where the property has no unit. */
@@ -136,16 +136,22 @@ export const PROPERTIES: Readonly<Record<TrendProperty, PropertyInfo>> = {
   },
 };
 
-function assertProperty(property: TrendProperty): void {
-  if (!PROPERTY_NAMES.includes(property)) {
-    throw new Error(`There is no property "${String(property)}": give one of ${PROPERTY_NAMES.join(', ')}.`);
+/** A value from a control, or from anywhere untyped, as a property: it throws for one the module does not have. */
+export function parseProperty(value: string): TrendProperty {
+  const found = PROPERTY_NAMES.find((name) => name === value);
+  if (found === undefined) {
+    throw new Error(`There is no property "${value}": give one of ${PROPERTY_NAMES.join(', ')}.`);
   }
+  return found;
 }
 
-function assertDirection(direction: TrendDirection): void {
-  if (!DIRECTIONS.includes(direction)) {
-    throw new Error(`There is no direction "${String(direction)}": give one of ${DIRECTIONS.join(', ')}.`);
+/** A value from a control, or from anywhere untyped, as a direction: it throws for one the module does not have. */
+export function parseDirection(value: string): TrendDirection {
+  const found = DIRECTIONS.find((name) => name === value);
+  if (found === undefined) {
+    throw new Error(`There is no direction "${value}": give one of ${DIRECTIONS.join(', ')}.`);
   }
+  return found;
 }
 
 /** The data for one of the 34 elements. */
@@ -159,7 +165,7 @@ export function elementOf(symbol: string): TrendElement {
 
 /** The value as text without its unit, or null where none is shown. */
 export function valueText(symbol: string, property: TrendProperty): string | null {
-  assertProperty(property);
+  parseProperty(property);
   const element = elementOf(symbol);
   if (property === 'en') return element.en;
   const value = property === 'radius' ? element.radius : element.ie1;
@@ -220,8 +226,8 @@ export interface SeriesPoint {
  * period. An element with no value is left out.
  */
 export function series(symbol: string, property: TrendProperty, direction: TrendDirection): readonly SeriesPoint[] {
-  assertProperty(property);
-  assertDirection(direction);
+  parseProperty(property);
+  parseDirection(direction);
   const start = elementOf(symbol);
   return TREND_ELEMENTS.filter((element) =>
     direction === 'period' ? element.period === start.period : element.group === start.group,
@@ -247,8 +253,8 @@ export function readout(symbol: string): string {
 
 /** "First ionization energy across period 3", "Atomic radius down group 16". */
 export function seriesHeading(symbol: string, property: TrendProperty, direction: TrendDirection): string {
-  assertProperty(property);
-  assertDirection(direction);
+  parseProperty(property);
+  parseDirection(direction);
   const element = elementOf(symbol);
   const where = direction === 'period' ? `across period ${element.period}` : `down group ${element.group}`;
   return `${PROPERTIES[property].label} ${where}`;
@@ -256,8 +262,8 @@ export function seriesHeading(symbol: string, property: TrendProperty, direction
 
 /** The title of the graph's horizontal axis, in lowercase. */
 export function orderTitle(direction: TrendDirection): string {
-  assertDirection(direction);
-  return direction === 'period' ? 'in order of group' : 'in order of period';
+  parseDirection(direction);
+  return direction === 'period' ? 'left to right in the table' : 'top to bottom in the table';
 }
 
 /** The graph in words, for its accessible name: every plotted value, in order. */
