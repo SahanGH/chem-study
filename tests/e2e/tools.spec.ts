@@ -380,3 +380,77 @@ test.describe('the equations and constants page', () => {
     await expect(page.locator('.pagefind-ui__result-link[href*="/tools/equations/"]').first()).toBeVisible();
   });
 });
+
+test.describe('the links to the reference pages', () => {
+  const PERIODIC_TABLE = '/tools/periodic-table/';
+  const EQUATIONS = '/tools/equations/';
+  const FROM = [
+    ['the home page', '/'],
+    ['a lesson page', '/unit-5-kinetics/5-2-rate-law/'],
+    ['a practice page', '/unit-5-kinetics/practice/worksheet-1-rates-and-rate-laws/'],
+  ] as const;
+
+  for (const [name, from] of FROM) {
+    test(`the footer of ${name} links both pages, and the links open them`, async ({ page }) => {
+      await page.goto(from);
+      const footer = page.locator('footer.site-footer');
+
+      await expect(footer.getByRole('link', { name: 'Periodic table' })).toHaveAttribute('href', PERIODIC_TABLE);
+      await expect(footer.getByRole('link', { name: 'Equations and constants' })).toHaveAttribute('href', EQUATIONS);
+
+      await footer.getByRole('link', { name: 'Periodic table' }).click();
+      await expect(page).toHaveURL(new RegExp(`${PERIODIC_TABLE}$`));
+      await expect(page.getByRole('heading', { level: 1, name: 'Periodic table' })).toBeVisible();
+
+      await page.goto(from);
+      await page.locator('footer.site-footer').getByRole('link', { name: 'Equations and constants' }).click();
+      await expect(page).toHaveURL(new RegExp(`${EQUATIONS}$`));
+      await expect(page.getByRole('heading', { level: 1, name: 'Equations and constants' })).toBeVisible();
+    });
+  }
+
+  test('the footer puts the two links on a first line, before the license line', async ({ page }) => {
+    await page.goto('/about/');
+    const lines = page.locator('footer.site-footer p');
+
+    await expect(lines.first()).toHaveText('Periodic table · Equations and constants');
+    await expect(lines.nth(1)).toContainText('CC BY-NC-SA 4.0');
+  });
+
+  test('the home page has a Reference section after the units, with both links', async ({ page }) => {
+    await page.goto('/');
+    const section = page.locator('main section', { has: page.getByRole('heading', { level: 2, name: 'Reference' }) });
+
+    await expect(section).toContainText(
+      'The periodic table and the equations the AP exam gives you, to keep open while you work.',
+    );
+    await expect(section.getByRole('link', { name: 'periodic table' })).toHaveAttribute('href', PERIODIC_TABLE);
+    await expect(section.getByRole('link', { name: 'equations' })).toHaveAttribute('href', EQUATIONS);
+    const unitsBefore = await page.evaluate(() => {
+      const units = document.querySelector('#units');
+      const heading = [...document.querySelectorAll('h2')].find((h) => h.textContent === 'Reference');
+      if (!units || !heading) throw new Error('The units list or the Reference heading is missing.');
+      return Boolean(units.compareDocumentPosition(heading) & Node.DOCUMENT_POSITION_FOLLOWING);
+    });
+    expect(unitsBefore).toBe(true);
+  });
+
+  for (const width of WIDTHS) {
+    test(`the home page still fits ${width}px without scrolling sideways`, async ({ page }) => {
+      await page.setViewportSize({ width, height: 800 });
+      await page.goto('/');
+      await expect(page.getByRole('heading', { level: 2, name: 'Reference' })).toBeVisible();
+
+      expect(await pageOverflow(page)).toBeLessThanOrEqual(0);
+    });
+  }
+
+  test('the footer fits a phone too, on a page of every kind', async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 800 });
+    for (const [, from] of FROM) {
+      await page.goto(from);
+      await expect(page.locator('footer.site-footer').getByRole('link', { name: 'Periodic table' })).toBeVisible();
+      expect(await pageOverflow(page), from).toBeLessThanOrEqual(0);
+    }
+  });
+});
