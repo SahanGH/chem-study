@@ -1,6 +1,6 @@
 ---
-import { topicByCode } from '../data/units';
 import { lessonPath, lessonsByTopic } from '../lib/lessons';
+import { topicLabel } from '../lib/topic-ref';
 
 interface Props {
   /** AP topic code, for example "3.4". */
@@ -8,12 +8,7 @@ interface Props {
 }
 const { code } = Astro.props;
 
-const found = topicByCode(code);
-if (!found) {
-  throw new Error(`<TopicRef code=${JSON.stringify(code)} /> is not an AP topic. Use a code from src/data/units.ts, such as "3.4".`);
-}
-const lesson = (await lessonsByTopic()).get(code);
-const label = `Topic ${code}, ${found.topic.title}`;
+const { unit, label, lesson } = topicLabel(code, await lessonsByTopic());
 ---
 
-{lesson ? <a href={lessonPath(found.unit.slug, lesson)}>{label}</a> : <span>{label}</span>}
+{lesson ? <a href={lessonPath(unit.slug, lesson)}>{label}</a> : <span>{label}</span>}
