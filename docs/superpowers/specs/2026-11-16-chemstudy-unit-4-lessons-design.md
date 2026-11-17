@@ -209,10 +209,13 @@ Written into every brief, as for Unit 1:
 **Limiting reactant explorer (lesson 4.5).**
 
 - One real reaction of two reactants with unequal coefficients, chosen clear
-  of the sources when the briefs are checked.
+  of the sources when the briefs were checked: nitrogen monoxide with
+  fluorine, 2 NO + F₂ → 2 NOF. With fluorine in excess a few percent of the
+  nitrosyl fluoride can react further; the diagram leaves that out and says
+  so, and nothing calls nitrosyl fluoride the only product.
 - The student chooses how many particles of each reactant go in, in steps
   that can react completely.
-- Two boxes of particles, before and after: the products, and whatever is
+- Two boxes of particles, before and after: the product, and whatever is
   left of the reactant in excess.
 - Under them, a table of the amounts before, the change and the amounts
   after, and a sentence naming the limiting reactant and why: it would be
@@ -225,13 +228,20 @@ Written into every brief, as for Unit 1:
 
 - A flask of an acid of known volume and a buret of a base of known
   concentration. The student chooses one of two acids, one that gives up one
-  proton per molecule and one that gives up two, at the same concentration.
+  proton per molecule (lactic acid) and one that gives up two (tartaric
+  acid), at the same concentration.
 - A slider adds titrant.
-- One graph: the amount of acid left and the amount of base in excess, in
-  millimoles, against the volume added. The equivalence point is where the
-  first reaches zero.
-- A drawn flask whose indicator turns at the first drop past the
-  equivalence point: the endpoint.
+- One graph: the amount of acidic protons still to be neutralized and the
+  amount of hydroxide in excess, in millimoles, against the volume added.
+  The equivalence point is where the first reaches zero. Acidic protons,
+  not "acid left": partway through, molecules of the acid with two protons
+  have lost none, one or both.
+- A drawn flask with its indicator, bromothymol blue: yellow before the
+  equivalence point, blue at it and past it. The real indicator begins to
+  shade toward green a few drops early (a calculation of the pH near each
+  equivalence point shows it); the slider's steps are wider than that, and
+  the lesson says that the endpoint is where the color change is seen, close
+  to the equivalence point but not the same thing.
 - The readout says where the titration stands (before, at or past the
   equivalence point), with the amounts.
 - What it shows: the equivalence point is set by amounts and by the ratio in
