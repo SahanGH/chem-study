@@ -92,7 +92,8 @@ const LABEL_CLEARANCE = 0.06;
 
 const COUNT_WORDS = ['one', 'two', 'three', 'four', 'five', 'six'] as const;
 
-function elementOf(symbol: string): PesElement {
+/** The data for one of the twenty atoms. */
+export function elementOf(symbol: string): PesElement {
   const found = PES_ELEMENTS.find((element) => element.symbol === symbol);
   if (!found) {
     throw new Error(`There is no photoelectron data for "${symbol}": give a symbol from H to Ca, such as "Si".`);

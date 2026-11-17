@@ -389,6 +389,30 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   }
 }
 
+/* The photoelectron spectrum explorer. A light solid line at each count of
+   electrons, apart from the dashed guides; and the peaks, filled for the
+   chosen atom and dashed outlines for the one compared with, so they differ
+   by more than color. */
+.diagram-gridline {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.diagram-peak {
+  fill: var(--u-ink);
+  stroke: none;
+}
+.diagram-peak.is-compared {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 2;
+}
+.diagram-peak-label {
+  fill: var(--ink);
+  font-weight: 600;
+}
+
 @media print {
   .diagram-controls {
     display: none;
