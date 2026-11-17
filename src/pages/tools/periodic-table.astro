@@ -16,16 +16,19 @@ const byName = [...elements].sort((a, b) => a.name.localeCompare(b.name, 'en'));
     <div class="prose">
       <h1>Periodic table</h1>
       <p>
-        This is the table the AP exam gives you, with each element's atomic number, symbol and atomic mass.
-        The exam's table prints no names, so learn the symbols you use most.
+        This is the table the AP exam gives you. It shows the atomic number and symbol of every element, and
+        the atomic mass wherever the exam's table prints one. The exam's table prints no element names, so learn the
+        symbols you use most.
       </p>
     </div>
 
     <div class="ptable-scroll" role="region" aria-label="Periodic table of the elements" tabindex="0">
       <ol class="ptable">
-        {GROUPS.map((group) => <span class="ptable-group" style={`--group: ${group}`} aria-hidden="true">{group}</span>)}
-        <span class="ptable-placeholder" style="grid-row: 6; grid-column: 3" aria-hidden="true">57–71</span>
-        <span class="ptable-placeholder" style="grid-row: 7; grid-column: 3" aria-hidden="true">89–103</span>
+        {GROUPS.map((group) => <li class="ptable-group" style={`--group: ${group}`} aria-hidden="true">{group}</li>)}
+        <li class="ptable-placeholder" style="grid-row: 6; grid-column: 3" aria-hidden="true">57–71 *</li>
+        <li class="ptable-placeholder" style="grid-row: 7; grid-column: 3" aria-hidden="true">89–103 †</li>
+        <li class="ptable-series-label" style="grid-row: 9; grid-column: 1 / 4">*Lanthanoids</li>
+        <li class="ptable-series-label" style="grid-row: 10; grid-column: 1 / 4">†Actinoids</li>
         {
           cells.map(({ element, row, column }) => (
             <li class={`block-${element.block}`} data-symbol={element.symbol} style={`grid-row: ${row}; grid-column: ${column}`}>
@@ -47,14 +50,19 @@ const byName = [...elements].sort((a, b) => a.name.localeCompare(b.name, 'en'));
       <li><span class="ptable-swatch block-s" aria-hidden="true"></span>s block: groups 1 and 2, and helium</li>
       <li><span class="ptable-swatch block-p" aria-hidden="true"></span>p block: groups 13 to 18, except helium</li>
       <li><span class="ptable-swatch block-d" aria-hidden="true"></span>d block: groups 3 to 12</li>
-      <li><span class="ptable-swatch block-f" aria-hidden="true"></span>f block: the two rows below. Each of those rows also holds one element of the d block</li>
+      <li><span class="ptable-swatch block-f" aria-hidden="true"></span>f block: the two rows below the table</li>
     </ul>
+    <p class="ptable-key-note">
+      Each of those rows has fifteen boxes, one more than the f block is wide, so one element in each belongs to the
+      d block. Sources differ on which one, so all fifteen are tinted alike here.
+    </p>
 
     <div class="prose">
       <p>
         The masses are the ones the exam's table prints, to the figures it prints them: two decimal places,
-        except hydrogen and lead. It prints no mass for 34 radioactive elements, so those cells show none.
-        The exam's table has no names and no key to the blocks; the names and the colors here are added to help you.
+        except hydrogen and lead. It prints no mass for 34 elements, so those cells show none. All 34 are
+        radioactive, though a few radioactive elements, such as uranium, do have a mass in the table. The exam's
+        table has no element names and no key to the blocks; the names and the colors here are added to help you.
       </p>
 
       <h2 id="elements-by-name">Elements by name</h2>

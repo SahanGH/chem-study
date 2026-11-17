@@ -103,8 +103,86 @@ test.describe('the periodic table page', () => {
       's block: groups 1 and 2, and helium',
       'p block: groups 13 to 18, except helium',
       'd block: groups 3 to 12',
-      'f block: the two rows below. Each of those rows also holds one element of the d block',
+      'f block: the two rows below the table',
     ]);
+  });
+
+  test('explains under the key why the f block tint covers fifteen boxes', async ({ page }) => {
+    await page.goto(PATH);
+
+    await expect(page.locator('.ptable-key-note')).toHaveText(
+      'Each of those rows has fifteen boxes, one more than the f block is wide, so one element in each belongs to the d block. Sources differ on which one, so all fifteen are tinted alike here.',
+    );
+  });
+
+  test('puts the two lower rows in columns 4 to 18, flush with the right edge, as the exam does', async ({ page }) => {
+    await page.goto(PATH);
+
+    await expect(cell(page, 'La')).toHaveCSS('grid-column-start', '4');
+    await expect(cell(page, 'Lu')).toHaveCSS('grid-column-start', '18');
+    await expect(cell(page, 'Ac')).toHaveCSS('grid-column-start', '4');
+    await expect(cell(page, 'Lr')).toHaveCSS('grid-column-start', '18');
+  });
+
+  test('marks the placeholders with * and † and labels each lower row, as the exam does', async ({ page }) => {
+    await page.goto(PATH);
+
+    await expect(page.locator('.ptable-placeholder', { hasText: '57–71' })).toHaveText('57–71 *');
+    await expect(page.locator('.ptable-placeholder', { hasText: '89–103' })).toHaveText('89–103 †');
+    const rowCenter = async (locator: ReturnType<Page['locator']>) => {
+      const box = await locator.boundingBox();
+      if (!box) throw new Error('The element has no box on the page.');
+      return box.y + box.height / 2;
+    };
+    const lanthanoids = page.locator('.ptable-series-label', { hasText: 'Lanthanoids' });
+    const actinoids = page.locator('.ptable-series-label', { hasText: 'Actinoids' });
+    await expect(lanthanoids).toHaveText('*Lanthanoids');
+    await expect(actinoids).toHaveText('†Actinoids');
+    // Real text, not hidden: it is the only place the page names the two series.
+    await expect(lanthanoids).not.toHaveAttribute('aria-hidden');
+    expect(Math.abs((await rowCenter(lanthanoids)) - (await rowCenter(cell(page, 'La'))))).toBeLessThan(4);
+    expect(Math.abs((await rowCenter(actinoids)) - (await rowCenter(cell(page, 'Ac'))))).toBeLessThan(4);
+  });
+
+  test('keeps only list items directly inside the list', async ({ page }) => {
+    await page.goto(PATH);
+
+    const others = await page.locator('ol.ptable > :not(li)').count();
+    expect(others).toBe(0);
+  });
+
+  test('puts each group number above the column of its elements', async ({ page }) => {
+    await page.goto(PATH);
+    const centerX = async (locator: ReturnType<Page['locator']>) => {
+      const box = await locator.boundingBox();
+      if (!box) throw new Error('The element has no box on the page.');
+      return box.x + box.width / 2;
+    };
+    const groupLabel = (n: number) => page.locator('.ptable .ptable-group', { hasText: new RegExp(`^${n}$`) });
+
+    for (const [group, symbol] of [[1, 'H'], [2, 'Be'], [13, 'B'], [18, 'He']] as const) {
+      const label = await centerX(groupLabel(group));
+      const element = await centerX(cell(page, symbol));
+      expect(Math.abs(label - element), `group ${group} over ${symbol}`).toBeLessThan(2);
+    }
+  });
+
+  test('really hides an element name, which is for a screen reader only', async ({ page }) => {
+    await page.goto(PATH);
+
+    const box = await cell(page, 'H').getByText('Hydrogen').boundingBox();
+    expect(box?.width ?? 0).toBeLessThanOrEqual(1);
+  });
+
+  test('states what the exam table prints, and what it does not', async ({ page }) => {
+    await page.goto(PATH);
+    const text = await page.locator('article').innerText();
+
+    expect(text).toContain("the atomic mass wherever the exam's table prints one");
+    expect(text).toContain('It prints no mass for 34 elements');
+    expect(text).toContain('a few radioactive elements, such as uranium, do have a mass');
+    expect(text).toContain('no element names');
+    expect(text).not.toContain('34 radioactive elements');
   });
 
   test('tints each block differently, so a block can be told from a neighbor', async ({ page }) => {

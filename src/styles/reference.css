@@ -55,7 +55,18 @@
   white-space: nowrap;
 }
 
-.ptable li {
+/* The exam's labels for the two lower rows, in the free columns beside them. */
+.ptable .ptable-series-label {
+  display: grid;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* Element cells only: the group numbers, placeholders and labels are list
+   items too, and must not pick up a cell's border and minimum height. */
+.ptable li[data-symbol] {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -69,7 +80,7 @@
   line-height: 1.15;
   text-align: center;
 }
-.ptable li > span {
+.ptable li[data-symbol] > span {
   white-space: nowrap;
 }
 .ptable-z,
@@ -98,6 +109,13 @@
   align-items: baseline;
   gap: 0.5rem;
   max-width: 100%;
+}
+.reference-table .ptable-key-note {
+  margin-top: 0.6rem;
+  max-width: 44rem;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--muted);
 }
 .ptable-swatch {
   flex: none;
@@ -137,7 +155,7 @@
     min-width: 0;
     grid-template-columns: repeat(18, minmax(0, 1fr));
   }
-  .ptable li {
+  .ptable li[data-symbol] {
     min-height: 0;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
@@ -145,7 +163,8 @@
   .ptable-z,
   .ptable-mass,
   .ptable .ptable-group,
-  .ptable .ptable-placeholder {
+  .ptable .ptable-placeholder,
+  .ptable .ptable-series-label {
     font-size: 6pt;
   }
   .ptable-symbol {
