@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 288" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Three boxes of the same size. Box 1, liquid H2: 6 H2 molecules (12 atom circles) packed into the lowest 78 units of the box, at different angles; atoms of different molecules are at least 21.5 apart, center to center. Box 2, H2 gas: the same 6 molecules (12 circles) spread through the box, at least 35.6 apart. Box 3: 12 separate H atoms, at least 28.5 apart. Each box holds 12 H atoms. An atom is an open circle of radius 8 with an accent outline; a molecule is two such circles touching (centers 16 apart). Coordinates come from scratchpad/unit4/tools/fig-4-4.cjs. -->
+  <rect width="480" height="288" fill="#FDFCF9"/>
+
+  <g text-anchor="middle" fill="#26231F" font-weight="600">
+    <text x="47" y="30">Liquid H<tspan dy="4" font-size="14">2</tspan></text>
+    <text x="240" y="30">H<tspan dy="4" font-size="14">2</tspan><tspan dy="-4"> gas</tspan></text>
+    <text x="433" y="30">H atoms</text>
+  </g>
+  <g fill="none" stroke="#6B655D" stroke-width="1.5">
+    <rect x="8" y="42" width="78" height="170" rx="10"/>
+    <rect x="201" y="42" width="78" height="170" rx="10"/>
+    <rect x="394" y="42" width="78" height="170" rx="10"/>
+  </g>
+
+  <!-- Box 1: 6 H2 molecules, close together at the bottom. -->
+  <g fill="#FDFCF9" stroke="#4F706C" stroke-width="2">
+    <circle cx="57.7" cy="149.9" r="8"/>
+    <circle cx="72.6" cy="155.8" r="8"/>
+    <circle cx="34.7" cy="189.3" r="8"/>
+    <circle cx="21.9" cy="198.9" r="8"/>
+    <circle cx="57.1" cy="174.3" r="8"/>
+    <circle cx="72.8" cy="177.3" r="8"/>
+    <circle cx="54" cy="198.9" r="8"/>
+    <circle cx="70" cy="198.9" r="8"/>
+    <circle cx="21" cy="172.4" r="8"/>
+    <circle cx="36.4" cy="167.8" r="8"/>
+    <circle cx="36.5" cy="142" r="8"/>
+    <circle cx="22.2" cy="149.2" r="8"/>
+  </g>
+  <!-- Box 2: 6 H2 molecules, far apart. -->
+  <g fill="#FDFCF9" stroke="#4F706C" stroke-width="2">
+    <circle cx="254.7" cy="125.5" r="8"/>
+    <circle cx="265.7" cy="137.1" r="8"/>
+    <circle cx="253" cy="55.9" r="8"/>
+    <circle cx="237.1" cy="58" r="8"/>
+    <circle cx="214.1" cy="188" r="8"/>
+    <circle cx="229.7" cy="191.7" r="8"/>
+    <circle cx="216.6" cy="129.6" r="8"/>
+    <circle cx="219.6" cy="145.3" r="8"/>
+    <circle cx="218.8" cy="92.8" r="8"/>
+    <circle cx="234.6" cy="95.4" r="8"/>
+    <circle cx="260.6" cy="174" r="8"/>
+    <circle cx="265.7" cy="189.2" r="8"/>
+  </g>
+  <!-- Box 3: 12 separate H atoms. -->
+  <g fill="#FDFCF9" stroke="#4F706C" stroke-width="2">
+    <circle cx="432.9" cy="104.3" r="8"/>
+    <circle cx="446.1" cy="198.5" r="8"/>
+    <circle cx="410.2" cy="153.6" r="8"/>
+    <circle cx="407.6" cy="56.2" r="8"/>
+    <circle cx="458.6" cy="56.1" r="8"/>
+    <circle cx="459" cy="149.5" r="8"/>
+    <circle cx="410.2" cy="197.1" r="8"/>
+    <circle cx="407.7" cy="87.4" r="8"/>
+    <circle cx="436.2" cy="169.9" r="8"/>
+    <circle cx="457.6" cy="85.3" r="8"/>
+    <circle cx="456.9" cy="119.6" r="8"/>
+    <circle cx="408.6" cy="124.6" r="8"/>
+  </g>
+
+  <!-- Arrows between the boxes, each with its name above and its energy below. -->
+  <path d="M95 127H183" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M192 127L181 121.5V132.5Z" fill="#26231F"/>
+  <path d="M288 127H376" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M385 127L374 121.5V132.5Z" fill="#26231F"/>
+  <g text-anchor="middle" fill="#26231F">
+    <text x="143.5" y="116">boil</text>
+    <text x="143.5" y="152">0.90 kJ/mol</text>
+    <text x="336.5" y="116">break bonds</text>
+    <text x="336.5" y="152">436 kJ/mol</text>
+  </g>
+
+  <g text-anchor="middle" fill="#26231F">
+    <text x="240" y="244">boiling: the molecules move apart</text>
+    <text x="240" y="270">bond breaking: the atoms come apart</text>
+  </g>
+</svg>
