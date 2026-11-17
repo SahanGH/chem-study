@@ -477,18 +477,42 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
 
 /* The titration explorer: a flask beside a graph. The graph is drawn 320 units
    wide, so it keeps 12 px text only when it is shown about 320 px wide or
-   more; the two sit side by side only where both fit (40rem), and are stacked
-   below that. The flask drawing is 160 units wide and stops at 12rem, so its
-   text is never under 12 px either. */
+   more; the two sit side by side only where both fit (42rem, which leaves the
+   graph its 320 px beside a 12rem flask column even with a classic scrollbar),
+   and are stacked below that. The flask drawing holds no text, so it is small
+   (6.5rem), with its color word beside it in HTML. */
 .diagram-panels .diagram-plot.is-flask {
   max-width: 12rem;
 }
-@media (min-width: 40rem) {
+@media (min-width: 42rem) {
   .diagram-panels.is-beside {
     grid-template-columns: 12rem minmax(0, 22rem);
     justify-content: center;
     align-items: center;
   }
+}
+.diagram .titration-flask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.diagram .titration-flask svg {
+  flex: none;
+  width: 6.5rem;
+}
+.diagram .titration-flask-word {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: 700;
+  color: var(--u-ink);
+}
+/* A card-colored rectangle behind a line's name, drawn before the name, so that
+   the chosen-volume line that moves behind it is broken cleanly. */
+.diagram-name-backing {
+  fill: var(--card);
+  stroke: none;
 }
 .titration-glass {
   fill: var(--card);

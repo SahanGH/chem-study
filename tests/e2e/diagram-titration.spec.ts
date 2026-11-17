@@ -1,5 +1,5 @@
 import AxeBuilder from '@axe-core/playwright';
-import { expect, test, type Locator } from '@playwright/test';
+import { expect, test, type Locator, type Page } from '@playwright/test';
 import { expectStaticDiagram, openDiagram } from './diagram';
 
 const PAGE = '/unit-4-chemical-reactions/4-6-introduction-to-titration/';
@@ -45,6 +45,16 @@ const status = (diagram: Locator) => diagram.getByRole('status');
 const slider = (diagram: Locator) => diagram.getByRole('slider', { name: 'Base added', exact: true });
 const acidGroup = (diagram: Locator) => diagram.getByRole('group', { name: 'Acid in the flask' });
 const acidRadio = (diagram: Locator, acid: AcidKey) => acidGroup(diagram).getByRole('radio', { name: RADIO[acid] });
+const ACID_NAME: Record<AcidKey, string> = { lactic: 'lactic acid', tartaric: 'tartaric acid' };
+
+/**
+ * Chooses an acid and waits until the drawing has changed to it. A radio is checked the moment it is
+ * clicked, before the redraw, so its own state proves nothing: the flask's name says what is drawn.
+ */
+async function chooseAcid(diagram: Locator, acid: AcidKey) {
+  await acidRadio(diagram, acid).check();
+  await expect(flaskPanel(diagram).getByRole('img')).toHaveAccessibleName(new RegExp(`A flask of ${ACID_NAME[acid]} solution`));
+}
 
 const NUMBER = String.raw`(-?\d+(?:\.\d+)?)`;
 const POINT = new RegExp(`[ML]${NUMBER} ${NUMBER}`, 'g');
@@ -114,7 +124,7 @@ async function expectMarkerAt(diagram: Locator, volume: number, protons: number,
   expectNear(await numberOf(dotExcess, 'cy'), y(excess), `excess dot y at ${volume} mL`);
 }
 
-async function pressTimes(page: import('@playwright/test').Page, key: string, times: number) {
+async function pressTimes(page: Page, key: string, times: number) {
   for (let i = 0; i < times; i++) await page.keyboard.press(key);
 }
 
@@ -180,7 +190,7 @@ test('the liquid in the flask changes its shading with its label', async ({ page
 test('tartaric acid at 15.0 mL is still yellow with 3.00 mmol left, and reaches its equivalence point at 30.0 mL', async ({ page }) => {
   const diagram = await openDiagram(page, PAGE, NAME);
 
-  await acidRadio(diagram, 'tartaric').check();
+  await chooseAcid(diagram, 'tartaric');
   await slider(diagram).fill('15');
   await expect(status(diagram)).toHaveText(TARTARIC_15);
   await expect(flaskLabel(diagram)).toHaveText('yellow');
@@ -197,7 +207,7 @@ test('with no base added, the readout says how many acidic protons there are to 
   await page.keyboard.press('Home');
   await expect(status(diagram)).toHaveText('No base added yet: 3.00 mmol of acidic protons to neutralize. The flask is yellow.');
 
-  await acidRadio(diagram, 'tartaric').check();
+  await chooseAcid(diagram, 'tartaric');
   await expect(status(diagram)).toHaveText(
     'No base added yet: 6.00 mmol of acidic protons to neutralize, two from each molecule of acid. The flask is yellow.',
   );
@@ -211,7 +221,7 @@ test('at 40.0 mL lactic acid shows 5.00 mmol of OH⁻ in excess and tartaric aci
   await expect(slider(diagram)).toHaveAttribute('aria-valuetext', '40.0 mL');
   await expect(status(diagram)).toHaveText(LACTIC_40);
 
-  await acidRadio(diagram, 'tartaric').check();
+  await chooseAcid(diagram, 'tartaric');
   await expect(status(diagram)).toHaveText(TARTARIC_40);
 });
 
@@ -229,8 +239,7 @@ test('both axes are labeled with their units and ticked from 0 to 6 mmol and 0 t
 for (const acid of ['lactic', 'tartaric'] as const) {
   test(`the ${acid} acid lines are drawn from the model, with the equivalence line where they meet`, async ({ page }) => {
     const diagram = await openDiagram(page, PAGE, NAME);
-    await acidRadio(diagram, acid).check();
-    await expect(acidRadio(diagram, acid)).toBeChecked();
+    await chooseAcid(diagram, acid);
 
     await expectLinesFor(diagram, acid);
   });
@@ -260,7 +269,7 @@ test('the marker sits on both lines at the chosen volume, for each acid', async 
   let checked = 0;
 
   for (const acid of ['lactic', 'tartaric'] as const) {
-    await acidRadio(diagram, acid).check();
+    await chooseAcid(diagram, acid);
     for (const [volume, protons, excess] of cases[acid]) {
       await slider(diagram).fill(String(volume));
       await expect(slider(diagram)).toHaveAttribute('aria-valuetext', `${volume.toFixed(1)} mL`);
@@ -330,8 +339,7 @@ for (const acid of ['lactic', 'tartaric'] as const) {
   test(`with ${acid} acid no label is cut off or touches a line, the equivalence line or another label`, async ({ page }) => {
     const diagram = await openDiagram(page, PAGE, NAME);
     await page.evaluate(() => document.fonts.ready);
-    await acidRadio(diagram, acid).check();
-    await expect(acidRadio(diagram, acid)).toBeChecked();
+    await chooseAcid(diagram, acid);
 
     const cutOff = await graph(diagram)
       .locator('svg')
@@ -379,7 +387,7 @@ test("each drawing's name says what is drawn now", async ({ page }) => {
   await expect(graph(diagram).getByRole('img')).toHaveAccessibleName(/^Graph of amount in millimoles against volume of base added, from 0 to 40 mL\./);
   await expect(graph(diagram).getByRole('img')).toHaveAccessibleName(/A marker at 10\.0 mL shows 1\.00 mmol of acidic protons left and 0\.00 mmol of OH⁻ in excess\.$/);
 
-  await acidRadio(diagram, 'tartaric').check();
+  await chooseAcid(diagram, 'tartaric');
   await slider(diagram).fill('36');
   await expect(flaskPanel(diagram).getByRole('img')).toHaveAccessibleName(
     'A flask of tartaric acid solution under the tip of a buret. The liquid is blue. 36.0 mL of base has been added.',
@@ -390,11 +398,12 @@ test("each drawing's name says what is drawn now", async ({ page }) => {
 // A nominal size, not a rendered one: the font size in drawing units, times 320, over the
 // drawing's width in units. That is the size of the text when the drawing is shown 320 px
 // wide, the ratio of the site's figures (18 on 480).
-test("each drawing's text is 12 px or more when the drawing itself is shown 320 px wide", async ({ page }) => {
+test("the graph's text is 12 px or more when the drawing itself is shown 320 px wide", async ({ page }) => {
   const diagram = await openDiagram(page, PAGE, NAME);
 
-  for (const panel of [flaskPanel(diagram), graph(diagram)]) {
-    const sizes = await panel.locator('svg').evaluate((svg) => {
+  const sizes = await graph(diagram)
+    .locator('svg')
+    .evaluate((svg) => {
       if (!(svg instanceof SVGSVGElement)) throw new Error('The drawing is not an SVG.');
       const unitsWide = svg.viewBox.baseVal.width;
       return [...svg.querySelectorAll('text, tspan')].map((text) => ({
@@ -402,21 +411,21 @@ test("each drawing's text is 12 px or more when the drawing itself is shown 320 
         pxAt320: (Number.parseFloat(getComputedStyle(text).fontSize) * 320) / unitsWide,
       }));
     });
-    expect(sizes.length).toBeGreaterThanOrEqual(2);
-    for (const size of sizes) expect(size.pxAt320, `"${size.text}"`).toBeGreaterThanOrEqual(12);
-  }
+  expect(sizes.length).toBeGreaterThanOrEqual(12);
+  for (const size of sizes) expect(size.pxAt320, `"${size.text}"`).toBeGreaterThanOrEqual(12);
 });
 
 // The text as drawn on the screen: its size in drawing units, scaled by how wide the drawing is shown.
-for (const width of [1280, 412]) {
+// 660 and 680 px are just below and just above the width where the two drawings go side by side.
+for (const width of [1280, 680, 660, 412]) {
   test(`on a ${width} px screen the drawn text is 12 px or larger`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     const diagram = await openDiagram(page, PAGE, NAME);
     await page.evaluate(() => document.fonts.ready);
 
-    let total = 0;
-    for (const panel of [flaskPanel(diagram), graph(diagram)]) {
-      const sizes = await panel.locator('svg').evaluate((svg) => {
+    const sizes = await graph(diagram)
+      .locator('svg')
+      .evaluate((svg) => {
         if (!(svg instanceof SVGSVGElement)) throw new Error('The drawing is not an SVG.');
         const scale = svg.getBoundingClientRect().width / svg.viewBox.baseVal.width;
         return [...svg.querySelectorAll('text, tspan')].map((text) => ({
@@ -424,10 +433,13 @@ for (const width of [1280, 412]) {
           px: Number.parseFloat(getComputedStyle(text).fontSize) * scale,
         }));
       });
-      total += sizes.length;
-      for (const size of sizes) expect(size.px, `"${size.text}"`).toBeGreaterThanOrEqual(12);
-    }
-    expect(total).toBeGreaterThanOrEqual(12);
+    expect(sizes.length).toBeGreaterThanOrEqual(12);
+    for (const size of sizes) expect(size.px, `"${size.text}"`).toBeGreaterThanOrEqual(12);
+
+    // The flask holds no drawn text: its color word is HTML, and is 12 px or more.
+    await expect(flaskPanel(diagram).locator('svg text')).toHaveCount(0);
+    const wordSize = await flaskLabel(diagram).evaluate((word) => Number.parseFloat(getComputedStyle(word).fontSize));
+    expect(wordSize, 'the color word').toBeGreaterThanOrEqual(12);
   });
 }
 
@@ -435,6 +447,8 @@ for (const width of [1280, 412]) {
 // 320 units wide, so it needs about 320 px of its own.
 for (const { width, sideBySide } of [
   { width: 1280, sideBySide: true },
+  { width: 680, sideBySide: true },
+  { width: 660, sideBySide: false },
   { width: 412, sideBySide: false },
   { width: 320, sideBySide: false },
 ]) {
@@ -454,24 +468,216 @@ for (const { width, sideBySide } of [
   });
 }
 
-test('the graph is no wider than 22rem and the readout is under both drawings', async ({ page }) => {
+test('the graph is no wider than 22rem', async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 900 });
   const diagram = await openDiagram(page, PAGE, NAME);
 
   const plot = await graph(diagram).boundingBox();
-  const flask = await flaskPanel(diagram).boundingBox();
-  const readout = await status(diagram).boundingBox();
-  if (!plot || !flask || !readout) throw new Error('A part has no bounding box.');
+  if (!plot) throw new Error('The graph has no bounding box.');
   expect(plot.width).toBeLessThanOrEqual(22 * 16 + 1);
-  expect(readout.y).toBeGreaterThanOrEqual(Math.max(plot.y + plot.height, flask.y + flask.height));
 });
 
-for (const width of [1280, 412, 390, 360, 320]) {
+test('the order is the flask and the graph, the choice of acid and the slider, then the readout', async ({ page }) => {
+  const diagram = await openDiagram(page, PAGE, NAME);
+
+  const parts = await Promise.all([flaskPanel(diagram), graph(diagram), acidGroup(diagram), slider(diagram), status(diagram)].map((part) => part.boundingBox()));
+  const [flask, plot, acids, base, readout] = parts;
+  if (!flask || !plot || !acids || !base || !readout) throw new Error('A part of the diagram has no box.');
+
+  const drawingsBottom = Math.max(flask.y + flask.height, plot.y + plot.height);
+  expect(acids.y, 'the choice of acid is under the drawings').toBeGreaterThanOrEqual(drawingsBottom);
+  expect(base.y, 'the slider is under the drawings').toBeGreaterThanOrEqual(drawingsBottom);
+  expect(readout.y, 'the readout is under the controls').toBeGreaterThanOrEqual(Math.max(acids.y + acids.height, base.y + base.height));
+});
+
+// A student moves the slider and watches the flask change color. On a small phone the drawings and
+// the slider must be on the screen together, with the diagram scrolled so that its drawing is at the top.
+test('at 320 × 568 the flask, the graph and the slider are on the screen together', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 568 });
+  const diagram = await openDiagram(page, PAGE, NAME);
+  await flaskPanel(diagram).evaluate((element) => {
+    window.scrollTo(0, element.getBoundingClientRect().top + window.scrollY - 8);
+  });
+
+  const parts = {
+    flask: await flaskPanel(diagram).boundingBox(),
+    graph: await graph(diagram).boundingBox(),
+    slider: await slider(diagram).boundingBox(),
+  };
+  for (const [name, part] of Object.entries(parts)) {
+    if (!part) throw new Error(`The ${name} has no bounding box.`);
+    expect(part.y, `the ${name} starts on the screen`).toBeGreaterThanOrEqual(0);
+    expect(part.y + part.height, `the ${name} ends on the screen`).toBeLessThanOrEqual(568);
+  }
+});
+
+test('the flask is drawn 6 to 7 rem wide, with its color word beside it in HTML', async ({ page }) => {
+  await page.setViewportSize({ width: 412, height: 900 });
+  const diagram = await openDiagram(page, PAGE, NAME);
+
+  const drawing = await flaskPanel(diagram).locator('svg').boundingBox();
+  const word = await flaskLabel(diagram).boundingBox();
+  if (!drawing || !word) throw new Error('The flask or its word has no bounding box.');
+  expect(drawing.width, 'the flask is at least 6 rem wide').toBeGreaterThanOrEqual(6 * 16 - 0.5);
+  expect(drawing.width, 'the flask is at most 7 rem wide').toBeLessThanOrEqual(7 * 16 + 0.5);
+  expect(await flaskLabel(diagram).evaluate((element) => element.closest('svg')), 'the word is outside the drawing').toBeNull();
+  expect(word.x, 'the word is beside the flask').toBeGreaterThanOrEqual(drawing.x + drawing.width - 0.5);
+  expect(word.y, 'the word is level with the flask').toBeLessThan(drawing.y + drawing.height);
+  expect(word.y + word.height, 'the word is level with the flask').toBeGreaterThan(drawing.y);
+});
+
+test('the liquid is clipped by the glass outline itself, not drawn from a copy of its corners', async ({ page }) => {
+  const diagram = await openDiagram(page, PAGE, NAME);
+
+  expect(await liquid(diagram).evaluate((element) => element.tagName.toLowerCase()), 'the liquid is a plain rectangle').toBe('rect');
+  const reference = await liquid(diagram).getAttribute('clip-path');
+  const id = /^url\(#([^)]+)\)$/.exec(reference ?? '')?.[1];
+  if (!id) throw new Error(`The liquid has no clip path: ${reference}`);
+  const clipOutline = await flaskPanel(diagram).locator(`clipPath[id="${id}"] path`).getAttribute('d');
+  const glassOutline = await flaskPanel(diagram).locator('[data-glass-outline]').getAttribute('d');
+  expect(clipOutline, 'the clip path and the glass share one outline').toBe(glassOutline);
+  expect(glassOutline).not.toBeNull();
+});
+
+// The marker line and both dots move over the whole graph, and the two line names stay where they
+// are. The names come last in the drawing, each with a card-colored backing and an outline in the
+// same color, so that the marker line is broken cleanly where it would cross a name; and no dot,
+// with its stroke, may come into a name's glyph box or its backing at any volume.
+test('the names come after the marker and the dots, each with a backing and a halo, and no dot touches one at any volume', async ({
+  page,
+}) => {
+  const diagram = await openDiagram(page, PAGE, NAME);
+  await page.evaluate(() => document.fonts.ready);
+  let states = 0;
+
+  for (const acid of ['lactic', 'tartaric'] as const) {
+    await chooseAcid(diagram, acid);
+
+    const structure = await graph(diagram)
+      .locator('svg')
+      .evaluate((svg) => {
+        const card = getComputedStyle(svg.closest('.diagram') ?? document.body).backgroundColor;
+        const follows = (earlier: Element | null, later: Element | null) =>
+          earlier !== null && later !== null && Boolean(earlier.compareDocumentPosition(later) & Node.DOCUMENT_POSITION_FOLLOWING);
+        const chosen = svg.querySelector('[data-chosen]');
+        const dots = [svg.querySelector('[data-dot="protons"]'), svg.querySelector('[data-dot="excess"]')];
+        return ['protons', 'excess'].map((kind) => {
+          const text = svg.querySelector(`[data-line-name="${kind}"]`);
+          const backing = svg.querySelector(`[data-name-backing="${kind}"]`);
+          if (!text || !backing) throw new Error(`The ${kind} name has no text or no backing.`);
+          const halo = getComputedStyle(text);
+          return {
+            kind,
+            afterMarkerLine: follows(chosen, text),
+            afterDots: dots.every((dot) => follows(dot, text)),
+            backingBeforeName: backing.nextElementSibling === text,
+            backingAfterMarkerLine: follows(chosen, backing),
+            backingAfterDots: dots.every((dot) => follows(dot, backing)),
+            backingFill: getComputedStyle(backing).fill,
+            haloStroke: halo.stroke,
+            haloWidth: Number.parseFloat(halo.strokeWidth),
+            haloOrder: halo.paintOrder,
+            card,
+          };
+        });
+      });
+    expect(structure, `${acid}: both names`).toHaveLength(2);
+    for (const name of structure) {
+      const what = `${acid} ${name.kind} name`;
+      expect(name.afterMarkerLine, `${what} comes after the marker line`).toBe(true);
+      expect(name.afterDots, `${what} comes after both dots`).toBe(true);
+      expect(name.backingBeforeName, `${what} has its backing right before it`).toBe(true);
+      expect(name.backingAfterMarkerLine, `${what} backing comes after the marker line`).toBe(true);
+      expect(name.backingAfterDots, `${what} backing comes after both dots`).toBe(true);
+      expect(name.backingFill, `${what} backing is card-colored`).toBe(name.card);
+      expect(name.haloStroke, `${what} halo is card-colored`).toBe(name.card);
+      expect(name.haloWidth, `${what} halo is 3 px`).toBeGreaterThanOrEqual(3);
+      expect(name.haloOrder.startsWith('stroke'), `${what} halo is painted under the glyphs`).toBe(true);
+    }
+
+    const lineHits = [
+      ...finePoints(await pointsOf(graph(diagram).locator('[data-line="protons"]'))),
+      ...finePoints(await pointsOf(graph(diagram).locator('[data-line="excess"]'))),
+    ];
+    const equivalenceX = await numberOf(graph(diagram).locator('[data-equivalence]'), 'x1');
+
+    for (let halves = 0; halves <= 80; halves++) {
+      const volume = halves / 2;
+      await slider(diagram).fill(String(volume));
+      await expect(slider(diagram)).toHaveAttribute('aria-valuetext', `${volume.toFixed(1)} mL`);
+
+      const measured = await graph(diagram)
+        .locator('svg')
+        .evaluate((svg) => {
+          const rectOf = (element: Element) => {
+            const [x, y, width, height] = ['x', 'y', 'width', 'height'].map((name) => Number(element.getAttribute(name)));
+            return { left: x ?? 0, top: y ?? 0, right: (x ?? 0) + (width ?? 0), bottom: (y ?? 0) + (height ?? 0) };
+          };
+          const names = Object.fromEntries(
+            ['protons', 'excess'].map((kind) => {
+              const text = svg.querySelector(`[data-line-name="${kind}"]`);
+              const tspan = text?.querySelector('tspan');
+              const backing = svg.querySelector(`[data-name-backing="${kind}"]`);
+              if (!(text instanceof SVGGraphicsElement) || !tspan || !backing) throw new Error(`The ${kind} name is incomplete.`);
+              const size = Number.parseFloat(getComputedStyle(text).fontSize);
+              const advance = text.getBBox();
+              const first = Number(text.getAttribute('y'));
+              const second = first + Number(tspan.getAttribute('dy'));
+              // The glyphs, not the line box: the capitals reach 0.73 em above a baseline and the
+              // descenders 0.21 em below the last one.
+              const glyphs = { left: advance.x, right: advance.x + advance.width, top: first - 0.73 * size, bottom: second + 0.21 * size };
+              return [kind, { glyphs, backing: rectOf(backing) }];
+            }),
+          );
+          const dots = Object.fromEntries(
+            ['protons', 'excess'].map((kind) => {
+              const dot = svg.querySelector(`[data-dot="${kind}"]`);
+              if (!dot) throw new Error(`The ${kind} dot is missing.`);
+              const reach = Number(dot.getAttribute('r')) + Number.parseFloat(getComputedStyle(dot).strokeWidth) / 2;
+              return [kind, { x: Number(dot.getAttribute('cx')), y: Number(dot.getAttribute('cy')), reach }];
+            }),
+          );
+          return { names, dots };
+        });
+
+      const distance = (dot: { x: number; y: number }, box: { left: number; right: number; top: number; bottom: number }) =>
+        Math.hypot(Math.max(box.left - dot.x, 0, dot.x - box.right), Math.max(box.top - dot.y, 0, dot.y - box.bottom));
+      for (const [kindOfName, name] of Object.entries(measured.names)) {
+        for (const [kindOfDot, dot] of Object.entries(measured.dots)) {
+          const where = `${acid} at ${volume} mL: the ${kindOfDot} dot and the ${kindOfName} name`;
+          expect(distance(dot, name.glyphs), `${where}: the dot enters the glyph box`).toBeGreaterThanOrEqual(dot.reach);
+          expect(distance(dot, name.backing), `${where}: the dot enters the backing`).toBeGreaterThanOrEqual(dot.reach);
+        }
+      }
+      if (halves === 0) {
+        // Once per acid: the backing hides no drawn line and not the equivalence line.
+        for (const [kind, name] of Object.entries(measured.names)) {
+          const covered = lineHits.filter(
+            (p) => p.x >= name.backing.left && p.x <= name.backing.right && p.y >= name.backing.top && p.y <= name.backing.bottom,
+          );
+          expect(covered, `${acid}: the ${kind} backing hides a line`).toEqual([]);
+          expect(
+            equivalenceX < name.backing.left || equivalenceX > name.backing.right,
+            `${acid}: the ${kind} backing hides the equivalence line`,
+          ).toBe(true);
+          expect(name.backing.left, `${acid}: the ${kind} backing covers its glyphs`).toBeLessThanOrEqual(name.glyphs.left);
+          expect(name.backing.right, `${acid}: the ${kind} backing covers its glyphs`).toBeGreaterThanOrEqual(name.glyphs.right);
+          expect(name.backing.top, `${acid}: the ${kind} backing covers its glyphs`).toBeLessThanOrEqual(name.glyphs.top);
+          expect(name.backing.bottom, `${acid}: the ${kind} backing covers its glyphs`).toBeGreaterThanOrEqual(name.glyphs.bottom);
+        }
+      }
+      states += 1;
+    }
+  }
+  expect(states, 'both acids at all 81 volumes').toBe(162);
+});
+
+for (const width of [1280, 680, 660, 412, 390, 360, 320]) {
   test(`on a ${width} px screen nothing scrolls sideways and the controls stay inside the diagram`, async ({ page }) => {
     await page.setViewportSize({ width, height: 800 });
     const diagram = await openDiagram(page, PAGE, NAME);
     // The longest readout: tartaric acid's equivalence point.
-    await acidRadio(diagram, 'tartaric').check();
+    await chooseAcid(diagram, 'tartaric');
     await slider(diagram).fill('30');
     await expect(status(diagram)).toHaveText(TARTARIC_AT);
     await page.evaluate(() => document.fonts.ready);
@@ -518,7 +724,7 @@ for (const theme of ['light', 'dark'] as const) {
     };
 
     expect(await violations(), 'at the start').toEqual([]);
-    await acidRadio(diagram, 'tartaric').check();
+    await chooseAcid(diagram, 'tartaric');
     await slider(diagram).fill('36');
     await expect(flaskLabel(diagram)).toHaveText('blue');
     await expect(status(diagram)).toHaveText(

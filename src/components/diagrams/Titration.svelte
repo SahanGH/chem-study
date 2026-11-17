@@ -1,8 +1,10 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import {
+    ACID_IDS,
     ACIDS,
     AXES,
+    MICROMOLES_PER_MILLIMOLE,
     VOLUME,
     describeFlask,
     describeGraph,
@@ -10,26 +12,24 @@
     linePoints,
     readout,
     shownVolume,
+    // Imported under another name: a variable called `state` makes Svelte read
+    // the `$state` rune as a store subscription to it.
     state as titrationState,
     volumeText,
     type AcidId,
     type GraphPoint,
   } from '../../lib/titration';
 
-  // The module's `state` is imported under another name: a variable called
-  // `state` makes Svelte read the `$state` rune as a store subscription to it.
-  const ACID_IDS: readonly AcidId[] = ['lactic', 'tartaric'];
-
   // The graph is drawn 320 units wide and its text is 12, so the text is
   // 12 px when the drawing itself is shown 320 px wide: the ratio of the
   // site's figures (18 on 480). Shown narrower, it is smaller in proportion.
-  const GRAPH = { width: 320, height: 216 };
+  const GRAPH = { width: 320, height: 222 };
   // The room above the plot holds the equivalence point's label and, for
-  // tartaric acid, the first line of the protons line's name.
-  const PLOT = { left: 46, right: 306, top: 30, bottom: 172 };
+  // tartaric acid, the first line of the protons line's name, with the
+  // glyphs' height to spare.
+  const PLOT = { left: 46, right: 306, top: 36, bottom: 178 };
   const MILLIMOLE_TICKS = [0, 1, 2, 3, 4, 5, 6];
   const VOLUME_TICKS = [0, 10, 20, 30, 40];
-  const MICROMOLES_PER_MILLIMOLE = 1000;
 
   // Each line is named where it cannot meet the other lines, the dotted line
   // at the equivalence point or the other name, for both acids:
@@ -37,16 +37,42 @@
   //   two lines, left of the equivalence line even for lactic acid (15 mL);
   // - "OH⁻ in excess" sits above the end of the dashed line, in two lines,
   //   right of the equivalence line even for tartaric acid (30 mL).
-  // A browser test measures that for both acids.
+  // The marker's dot is clear of both names at every volume: that is why the
+  // protons name is 12 units above its line, not fewer. A browser test sweeps
+  // both acids over all 81 volumes to check it.
+  const PROTONS_NAME = ['acidic', 'protons left'] as const;
+  const EXCESS_NAME = ['OH⁻', 'in excess'] as const;
   const LINE_HEIGHT = 13;
-  const NAME_GAP = 8;
+  const NAME_GAP = 12;
   const PROTONS_NAME_INSET = 8;
-  const EXCESS_NAME_INSET = 6;
+  const EXCESS_NAME_INSET = 3;
   const EXCESS_NAME_ABOVE_END = 2 * LINE_HEIGHT;
   const EQUIVALENCE_LABEL_ABOVE_PLOT = 10;
 
-  // The flask drawing, in its own units (160 wide, with its text at 12).
-  const FLASK = { width: 160, height: 240, center: 80, labelY: 232 };
+  // Each name has a card-colored backing behind it, so that the marker line is
+  // broken cleanly where it crosses a name; the name's own outline stays too.
+  // The backing is sized from the longer line and from the glyphs' height
+  // (capitals 0.73 em, descenders 0.21 em of 12). Inter bold at 12 measures
+  // 5.7 to 6.1 per character here ("protons left" 68.3, "in excess" 54.9), so
+  // 6.2 covers it; it cannot be more generous, or the excess name's backing
+  // would reach tartaric acid's equivalence line.
+  const BACKING = { charWidth: 6.2, ascent: 9, descent: 3, padX: 2, padY: 1 };
+  const backingFor = (lines: readonly [string, string], left: number, firstBaseline: number, anchor: 'start' | 'end') => {
+    const longest = Math.max(...lines.map((line) => line.length)) * BACKING.charWidth;
+    return {
+      x: (anchor === 'start' ? left : left - longest) - BACKING.padX,
+      y: firstBaseline - BACKING.ascent - BACKING.padY,
+      width: longest + 2 * BACKING.padX,
+      height: BACKING.ascent + LINE_HEIGHT + BACKING.descent + 2 * BACKING.padY,
+    };
+  };
+
+  // The flask drawing, in its own units. It holds no text: its color word is
+  // HTML beside it, so that the drawing can be small. The liquid is a plain
+  // rectangle clipped by the glass's own outline, so the two cannot drift apart.
+  const FLASK_DRAWING = { width: 160, height: 216, liquidTop: 170 };
+  const GLASS_OUTLINE = 'M66 100 V130 L20 200 Q15 210 30 210 H130 Q145 210 140 200 L94 130 V100';
+  const CLIP_ID = 'titration-flask-clip';
 
   let acidId = $state<AcidId>('lactic');
   let volume = $state<number>(VOLUME.start);
@@ -64,11 +90,15 @@
 
   // Where the solid line is, in micromoles, a few units in from its start.
   const protonsLineAtName = $derived.by(() => {
-    const mL = ((PROTONS_NAME_INSET / (PLOT.right - PLOT.left)) * AXES.volumeMax);
-    return current.start * (1 - mL / equivalence);
+    const mL = (PROTONS_NAME_INSET / (PLOT.right - PLOT.left)) * AXES.volumeMax;
+    return lines.protonsLeft[0].micromoles * (1 - mL / equivalence);
   });
-  const protonsNameY = $derived(yFor(protonsLineAtName) - NAME_GAP);
-  const excessNameY = $derived(yFor(titrationState(acidId, VOLUME.max).excess) - EXCESS_NAME_ABOVE_END);
+  const protonsFirstBaseline = $derived(yFor(protonsLineAtName) - NAME_GAP - LINE_HEIGHT);
+  const excessFirstBaseline = $derived(yFor(lines.excess[2].micromoles) - EXCESS_NAME_ABOVE_END);
+  const protonsX = PLOT.left + PROTONS_NAME_INSET;
+  const excessX = PLOT.right - EXCESS_NAME_INSET;
+  const protonsBacking = $derived(backingFor(PROTONS_NAME, protonsX, protonsFirstBaseline, 'start'));
+  const excessBacking = $derived(backingFor(EXCESS_NAME, excessX, excessFirstBaseline, 'end'));
 
   onMount(() => {
     hydrated = true;
@@ -78,34 +108,38 @@
 <div class="diagram-body" data-diagram="titration" data-hydrated={hydrated ? 'true' : undefined}>
   <div class="diagram-panels is-beside">
     <figure class="diagram-plot is-flask" data-panel="flask">
-      <figcaption class="diagram-panel-title">Flask</figcaption>
-      <svg
-        viewBox={`0 0 ${FLASK.width} ${FLASK.height}`}
-        role="img"
-        aria-label={describeFlask(acidId, volume)}
-      >
-        <!-- The buret: a tube, a stopcock and a tip over the flask. -->
-        <rect class="titration-glass" x="71" y="4" width="18" height="62" rx="2" />
-        <rect class="titration-glass" x="66" y="62" width="28" height="5" rx="1" />
-        <path class="titration-glass" d="M76 67 L84 67 L81 80 L79 80 Z" />
-        <text class="diagram-label" x="96" y="36">buret</text>
-        <path
-          class={`titration-liquid is-${current.flask}`}
-          data-liquid
-          data-color={current.flask}
-          d="M39.7 170 L120.3 170 L140 200 Q145 210 130 210 L30 210 Q15 210 20 200 Z"
-        />
-        <path class="titration-glass is-open" d="M66 100 V130 L20 200 Q15 210 30 210 H130 Q145 210 140 200 L94 130 V100" />
-        <path class="titration-glass is-open" d="M60 100 H100" />
-        <!-- The word is drawn under the flask, so that the shade alone never carries the color. -->
-        <text class="diagram-label is-selected" data-flask-label x={FLASK.center} y={FLASK.labelY} text-anchor="middle"
-          >{current.flask}</text
+      <div class="titration-flask">
+        <svg
+          viewBox={`0 0 ${FLASK_DRAWING.width} ${FLASK_DRAWING.height}`}
+          role="img"
+          aria-label={describeFlask(acidId, volume)}
         >
-      </svg>
+          <defs>
+            <clipPath id={CLIP_ID}><path d={GLASS_OUTLINE} /></clipPath>
+          </defs>
+          <!-- The buret: a tube, a stopcock and a tip over the flask. -->
+          <rect class="titration-glass" x="71" y="4" width="18" height="62" rx="2" />
+          <rect class="titration-glass" x="66" y="62" width="28" height="5" rx="1" />
+          <path class="titration-glass" d="M76 67 L84 67 L81 80 L79 80 Z" />
+          <rect
+            class={`titration-liquid is-${current.flask}`}
+            data-liquid
+            data-color={current.flask}
+            x="0"
+            y={FLASK_DRAWING.liquidTop}
+            width={FLASK_DRAWING.width}
+            height={FLASK_DRAWING.height - FLASK_DRAWING.liquidTop}
+            clip-path={`url(#${CLIP_ID})`}
+          />
+          <path class="titration-glass is-open" data-glass-outline d={GLASS_OUTLINE} />
+          <path class="titration-glass is-open" d="M60 100 H100" />
+        </svg>
+        <!-- The word beside the flask, so that the shade never carries the color alone. -->
+        <p class="titration-flask-word" data-flask-label>{current.flask}</p>
+      </div>
     </figure>
 
     <figure class="diagram-plot" data-panel="graph">
-      <figcaption class="diagram-panel-title">Amounts</figcaption>
       <svg viewBox={`0 0 ${GRAPH.width} ${GRAPH.height}`} role="img" aria-label={describeGraph(acidId, volume)}>
         <path class="diagram-axis" d={`M${PLOT.left} ${PLOT.top}V${PLOT.bottom}H${PLOT.right}`} />
         {#each MILLIMOLE_TICKS as tick (tick)}
@@ -147,6 +181,7 @@
         >
         <path class="diagram-curve is-accent" data-line="protons" d={pathOf(lines.protonsLeft)} />
         <path class="diagram-curve is-dashed" data-line="excess" d={pathOf(lines.excess)} />
+
         <line
           class="diagram-chosen"
           data-chosen
@@ -157,27 +192,45 @@
         />
         <circle class="diagram-marker is-ink" data-dot="excess" cx={f(xFor(volume))} cy={f(yFor(current.excess))} r="4" />
         <circle class="diagram-marker" data-dot="protons" cx={f(xFor(volume))} cy={f(yFor(current.protonsLeft))} r="4" />
-        <!-- Drawn last, so that the outline around each name hides the marker line where it crosses one. -->
+        <!-- The names come last, each over its card-colored backing, so that the marker
+             line is broken cleanly where it crosses one. -->
+        <rect
+          class="diagram-name-backing"
+          data-name-backing="protons"
+          x={f(protonsBacking.x)}
+          y={f(protonsBacking.y)}
+          width={f(protonsBacking.width)}
+          height={f(protonsBacking.height)}
+        />
         <text
           class="diagram-label diagram-curve-name is-selected"
           data-line-name="protons"
-          x={PLOT.left + PROTONS_NAME_INSET}
-          y={f(protonsNameY - LINE_HEIGHT)}
-          >acidic <tspan x={PLOT.left + PROTONS_NAME_INSET} dy={LINE_HEIGHT}>protons left</tspan></text
+          x={protonsX}
+          y={f(protonsFirstBaseline)}
+          >{PROTONS_NAME[0]} <tspan x={protonsX} dy={LINE_HEIGHT}>{PROTONS_NAME[1]}</tspan></text
         >
+        <rect
+          class="diagram-name-backing"
+          data-name-backing="excess"
+          x={f(excessBacking.x)}
+          y={f(excessBacking.y)}
+          width={f(excessBacking.width)}
+          height={f(excessBacking.height)}
+        />
         <text
           class="diagram-label diagram-curve-name is-ink"
           data-line-name="excess"
-          x={PLOT.right - EXCESS_NAME_INSET}
-          y={f(excessNameY)}
+          x={excessX}
+          y={f(excessFirstBaseline)}
           text-anchor="end"
-          >OH⁻ <tspan x={PLOT.right - EXCESS_NAME_INSET} dy={LINE_HEIGHT}>in excess</tspan></text
+          >{EXCESS_NAME[0]} <tspan x={excessX} dy={LINE_HEIGHT}>{EXCESS_NAME[1]}</tspan></text
         >
       </svg>
     </figure>
   </div>
 
-  <p class="diagram-readout" role="status">{readout(acidId, volume)}</p>
+  <!-- The controls sit right under the drawings they change, above the readout,
+       whose length changes: the student sees the flask change while the slider is moved. -->
   <div class="diagram-controls">
     <fieldset class="diagram-choice is-wide">
       <legend>Acid in the flask</legend>
@@ -200,4 +253,6 @@
       />
     </label>
   </div>
+
+  <p class="diagram-readout" role="status">{readout(acidId, volume)}</p>
 </div>
