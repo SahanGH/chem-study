@@ -1,0 +1,94 @@
+---
+import Base from '../../layouts/Base.astro';
+import '../../styles/reference.css';
+import { elements, tablePosition } from '../../data/elements';
+
+const GROUPS = Array.from({ length: 18 }, (_, index) => index + 1);
+const cells = elements.map((element) => ({ element, ...tablePosition(element) }));
+const byName = [...elements].sort((a, b) => a.name.localeCompare(b.name, 'en'));
+---
+
+<Base
+  title="Periodic table: ChemStudy"
+  description="The periodic table with the atomic masses the AP Chemistry exam provides, and a list of all 118 elements by name."
+>
+  <article class="reference reference-table" data-pagefind-body>
+    <div class="prose">
+      <h1>Periodic table</h1>
+      <p>
+        This is the table the AP exam gives you, with each element's atomic number, symbol and atomic mass.
+        The exam's table prints no names, so learn the symbols you use most.
+      </p>
+    </div>
+
+    <div class="ptable-scroll" role="region" aria-label="Periodic table of the elements" tabindex="0">
+      <ol class="ptable">
+        {GROUPS.map((group) => <span class="ptable-group" style={`--group: ${group}`} aria-hidden="true">{group}</span>)}
+        <span class="ptable-placeholder" style="grid-row: 6; grid-column: 3" aria-hidden="true">57–71</span>
+        <span class="ptable-placeholder" style="grid-row: 7; grid-column: 3" aria-hidden="true">89–103</span>
+        {
+          cells.map(({ element, row, column }) => (
+            <li class={`block-${element.block}`} data-symbol={element.symbol} style={`grid-row: ${row}; grid-column: ${column}`}>
+              <span class="visually-hidden">{element.name},</span>{' '}
+              <span class="ptable-z">{element.z}</span>{' '}
+              <span class="ptable-symbol">{element.symbol}</span>{' '}
+              {element.mass === null ? (
+                <span class="visually-hidden">no mass given</span>
+              ) : (
+                <span class="ptable-mass">{element.mass}</span>
+              )}
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+
+    <ul class="ptable-key" aria-label="Key to the blocks">
+      <li><span class="ptable-swatch block-s" aria-hidden="true"></span>s block: groups 1 and 2, and helium</li>
+      <li><span class="ptable-swatch block-p" aria-hidden="true"></span>p block: groups 13 to 18, except helium</li>
+      <li><span class="ptable-swatch block-d" aria-hidden="true"></span>d block: groups 3 to 12</li>
+      <li><span class="ptable-swatch block-f" aria-hidden="true"></span>f block: the two rows below. Each of those rows also holds one element of the d block</li>
+    </ul>
+
+    <div class="prose">
+      <p>
+        The masses are the ones the exam's table prints, to the figures it prints them: two decimal places,
+        except hydrogen and lead. It prints no mass for 34 radioactive elements, so those cells show none.
+        The exam's table has no names and no key to the blocks; the names and the colors here are added to help you.
+      </p>
+
+      <h2 id="elements-by-name">Elements by name</h2>
+      <table class="elements-by-name">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Symbol</th>
+            <th scope="col">Atomic number</th>
+            <th scope="col">Atomic mass</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            byName.map((element) => (
+              <tr>
+                <th scope="row">{element.name}</th>
+                <td>{element.symbol}</td>
+                <td>{element.z}</td>
+                <td>
+                  {element.mass === null ? (
+                    <>
+                      <span aria-hidden="true">—</span>
+                      <span class="visually-hidden">no mass given</span>
+                    </>
+                  ) : (
+                    element.mass
+                  )}
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </article>
+</Base>

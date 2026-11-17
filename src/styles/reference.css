@@ -1,0 +1,158 @@
+/* The reference pages under /tools/: the periodic table and the equations. */
+
+.block-s { background: var(--block-s); }
+.block-p { background: var(--block-p); }
+.block-d { background: var(--block-d); }
+.block-f { background: var(--block-f); }
+
+.reference-table > * + * {
+  margin-top: 1.25rem;
+}
+
+/* The table is at least 18 cells of 2.75rem wide. On a screen narrower than
+   that it scrolls sideways in this box and the page never does. The box has
+   a tabindex so the arrow keys reach it (WCAG 2.1.1). */
+.ptable-scroll {
+  overflow-x: auto;
+}
+
+.ptable {
+  --ptable-cell: 2.75rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(18, minmax(var(--ptable-cell), 1fr));
+  /* Rows 1-7 are the main table, row 8 is the gap, rows 9 and 10 are the
+     lanthanoids and the actinoids that the exam's table sets below it. */
+  grid-template-rows: repeat(7, auto) 0.75rem repeat(2, auto);
+  min-width: calc(18 * var(--ptable-cell));
+  list-style: none;
+  margin: 0;
+  /* Room for the group numbers, which sit above row 1. */
+  padding: 1.5rem 0 0;
+  font-family: var(--font-ui);
+}
+
+/* Group numbers are laid over the padding rather than placed in a grid row,
+   so that every element keeps the row number the data gives it. The columns
+   are equal, so a column's left edge is its number's share of the width. */
+.ptable .ptable-group {
+  position: absolute;
+  top: 0;
+  left: calc((var(--group) - 1) * 100% / 18);
+  width: calc(100% / 18);
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.ptable .ptable-placeholder {
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.ptable li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.4rem;
+  /* The paper-colored border is the gap between cells: a real gap would add
+     to the table's minimum width. */
+  border: 1px solid var(--paper);
+  color: var(--ink);
+  line-height: 1.15;
+  text-align: center;
+}
+.ptable li > span {
+  white-space: nowrap;
+}
+.ptable-z,
+.ptable-mass {
+  font-size: 0.75rem;
+}
+.ptable-mass {
+  letter-spacing: -0.02em;
+}
+.ptable-symbol {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.ptable-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+  list-style: none;
+  padding: 0;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+}
+.ptable-key li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  max-width: 100%;
+}
+.ptable-swatch {
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+
+/* prose.css leaves 0.5rem either side of a cell on a phone; four columns,
+   with "Praseodymium" in the first, need a little less to fit 320px. */
+@media (max-width: 30rem) {
+  .prose .elements-by-name th,
+  .prose .elements-by-name td {
+    padding-inline: 0.35rem;
+  }
+}
+.elements-by-name tbody th {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+@media print {
+  /* Paper is white, so the tints are the light ones whatever the screen theme.
+     Doubling :root beats [data-theme='dark'], as in print.css. */
+  :root:root {
+    --block-s: #f6e4df;
+    --block-p: #e0ebf4;
+    --block-d: #e5eed9;
+    --block-f: #f3ebd0;
+  }
+  /* Nothing is clipped, and the table shrinks to the page instead. */
+  .ptable-scroll {
+    overflow: visible;
+  }
+  .ptable {
+    min-width: 0;
+    grid-template-columns: repeat(18, minmax(0, 1fr));
+  }
+  .ptable li {
+    min-height: 0;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .ptable-z,
+  .ptable-mass,
+  .ptable .ptable-group,
+  .ptable .ptable-placeholder {
+    font-size: 6pt;
+  }
+  .ptable-symbol {
+    font-size: 9pt;
+  }
+  .ptable-swatch {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
