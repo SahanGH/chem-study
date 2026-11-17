@@ -1137,6 +1137,53 @@ Electrons per subshell follow the filling order: 1s 2, 2s 2, 2p up to 6, 3s 2, 3
 
 Branch: `topic/unit-1-trends-and-ions`, from `topic/unit-1-electrons-and-pes`. Tasks 12 to 15. The pull request title is "feat(lessons): Unit 1 lessons 1.7 and 1.8 and the periodic trends explorer".
 
+> **As carried out (2026-11-17).** The repository is newer than Tasks 12 to 14 below. The explorer was built test-first and reviewed twice (TypeScript and general); both lessons were fact-checked twice by fresh agents that solved every Check before reading its answer and compared every ionization energy, radius, electronegativity and electron affinity with the data files and with reference values, and were checked once for originality. **No fact-check found a wrong answer, value, charge or formula.** What differs from the tasks as printed, and why:
+>
+> **The explorer (Task 12)**
+>
+> - **One sentence of the contract is wrong.** The browser-test line says that choosing argon with electronegativity gives an empty graph. That is true only "down its group". Across its period the graph shows seven points (sodium to chlorine), none marked, and the readout says why. The module follows the unit-test table (`series('Ar', 'en', 'group')` is empty), and both cases are tested.
+> - **The order of the parts** is the property choice, the table, the readout, the element menu and the trend choice, the graph, the caption. As first built to the contract (controls, then readout) a student on a 320 px phone who pressed a cell found the sentence about it two screens below. The readout's box reserves room for its longest sentence, so nothing below it moves.
+> - **More exports than the contract lists**: `GROUPS`, `PERIODS`, `PROPERTY_NAMES` and `DIRECTIONS` (as `as const` lists, with the types derived from them), `elementOf`, `valueText`, `seriesHeading`, `describeSeries`, `orderTitle`, `parseProperty` and `parseDirection` (one message each), and `ticks` and `axisTitle` on `PROPERTIES`. `null` is the only "no value", everywhere.
+> - **Cells.** No visible row labels (a ninth column would squeeze four-digit values at 320 px). Below 30rem the table is 1.5rem wider than the diagram's text; at 360 px and below the values are 11 px with proportional digits, and neighbors are at least 7 px apart (tested for every pair). The cells are `tabindex="-1"` and `disabled` until the diagram wakes; the element menu is the keyboard's way in. The chosen cell's heavy border grows outward.
+> - **Shades.** Five steps, `color-mix` of the unit's color into the card's at 6, 20, 34, 48 and 62 percent, with text contrast of at least 4.5 : 1 in both themes. A larger value is deeper in color: darker in the light theme, lighter in the dark theme, so the caption says "deeper", not "darker". A cell with no value has the paper background and a dashed border.
+> - **The graph.** Its y-axis title is one horizontal line; its x-axis title reads "left to right in the table" or "top to bottom in the table"; "No values to plot" is drawn when a series is empty. The caption adds what a dash means, what the depth of color means, and that the d block, groups 3 to 12, is left out.
+> - **Each radio legend sits above its options**, for this diagram only.
+> - **Shared rules in `diagram.css`**: `.diagram-point-label` shares the halo of `.diagram-peak-label`. `expectStaticDiagram` in `tests/e2e/diagram.ts` now checks every `.diagram-controls` block.
+> - **The data** in `src/lib/periodic-trends.ts` were compared by script with this plan's table and with `scratchpad/unit1/data/trends.json`: 34 elements, every value, every rounding of an electronegativity, every shade level, all 204 series and all 34 readouts, with no difference.
+> - **Carbon's covalent radius is 76 pm** in the explorer, so lesson 2.4 and question 17 of the Unit 2 test's first session now say 76 pm too (the question's ratio becomes 76/126 = 0.60).
+>
+> **Lesson 1.7 (Task 13)**
+>
+> - **Statements narrowed, because the data do not support them as briefed:**
+>   - "Neighbors in the same column are the safer guide" became "use both": a column estimate can be far off when one neighbor is in period 2, a row estimate at the two breaks or beside the d block.
+>   - "Every periodic trend is the same three questions" became "nearly every": the second break rests on the repulsion between two electrons in one orbital.
+>   - "A drop" (phosphorus to sulfur, 12 kJ/mol) against "nearly level" (calcium to gallium, 11 kJ/mol) rested on 1 kJ/mol. The lesson gives the numbers: the second break is 88, 12 and 3 kJ/mol in periods 2, 3 and 4; both breaks are small drops in period 4 and small rises in period 5.
+>   - "The largest drop is from the second period to the third" holds for groups 13 to 17 only, and is said of one group.
+>   - "Nearly twice as wide" (a rubidium atom against a bromine atom) became "about 1.8 times".
+> - **Check 2** (tin to iodine; the brief's numbers and answer) asks which statement fits the numbers. As briefed it repeated the worked example, and its wrong options fell at sight. The sentence above it that gave period 5's answer is gone.
+> - **Check 4** compares nitrogen (3.0) with sulfur (2.6), where the two causes pull opposite ways. The brief's nitrogen against phosphorus was answered by the line above it; oxygen against chlorine, tried next, is both Tro books' example. Its explanation says that so rough a weighing settles a clear case, not a close one.
+> - **The Trap names the two electronegativity reversals** in the lesson's own table (aluminum 1.6 to gallium 1.8, silicon 1.9 to germanium 2.0), with their cause.
+> - **Wording that followed the teacher's notes, answer key or a textbook**, rebuilt: two Trap items; the explanation of the second break; the paragraph on anions (now built from 120 and 196 pm and 35 protons holding 36 electrons); every "earns nothing" and "no credit".
+> - **Added:** definitions of period and group (lessons 1.5 and 1.6 say "row" and "column"); the chlorine estimate from its column and from its row; why nitrogen, beryllium and magnesium form no stable anion.
+> - **The trend-directions figure** has the table's real stepped outline, and its dotted arrow is labeled "as far as group 17".
+> - **Reading time is 25 minutes** (5,676 words; the brief had 15). It is the longest lesson on the site.
+>
+> **Lesson 1.8 (Task 14)**
+>
+> - **The jump rule.** As briefed ("the first rise that stands out from the steps beside it") it gave three valence electrons on nitrogen's own numbers. The lesson says: the first rise that is several times the size of the rises before it, judged by the rise in kJ/mol and not by a multiple. It adds the rule's limit: the jump is plainest in periods 2 and 3 and for the s-block metals; for gallium, indium and the elements to their right it can be as little as two to three times the earlier rises, and the group number is the safer guide.
+> - **Charges from the group number** leave out hydrogen (group 1) and boron (group 13), and "group number minus 18" is limited to the nonmetals of groups 15 to 17. Metals, nonmetals and metalloids are defined by their place in the table where the lesson first leans on them.
+> - **Check 2** asks for the largest rise from the first ionization energy to the second (the brief asked for the largest multiple); its values are a table.
+> - **Check 3** is indium with oxygen, In₂O₃ (the brief had sulfur: InS is a real compound). **Check 4** and the third balancing case use strontium phosphide, Sr₃P₂: barium nitride's formula is not settled, and magnesium phosphide, tried for one round, is one symbol from a worked example in the teacher's practice.
+> - **One sentence answers the opening's question** (why not Sr⁺): the second electron is cheap, and the stronger attraction of a 2+ ion more than pays for it (topic 2.2).
+> - **Wording that followed a source**, rebuilt: the second section's heading; Check 1's stem; the sentence that reaches the formula in the third balancing case.
+> - **Reading time is 16 minutes** (3,576 words; the brief had 9). `scratchpad/unit1/checks/1-8.py` follows the lesson; `checks/1-7.py` describes the brief's Check 4 and wording, not the lesson's.
+>
+> **For the units to come**
+>
+> - **A rule taken from the teacher's notes can be untrue as worded** ("the safer guide", "the largest drop", "stands out from the steps beside it"). The fact-checkers catch it when they are asked to apply each rule, as worded, to every element in the lesson's own tables.
+> - **A replacement written into a fix list needs the same checks as the lesson.** Three replacements in this group were themselves a match or untrue (oxygen against chlorine; magnesium phosphide; "darker cells have larger values"). The originality checker now clears a replacement before it is sent, and writers are told not to apply an item they believe is wrong.
+> - **A Check is answered by the sentence above it more often than by anything else.** After each round of fixes, read the twenty lines above every Check.
+
 ### Task 12: The periodic trends explorer
 
 **Files:**
