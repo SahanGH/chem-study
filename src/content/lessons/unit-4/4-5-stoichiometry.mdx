@@ -1,0 +1,661 @@
+---
+topic: "4.5"
+minutes: 20
+summary: "How the coefficients of a balanced equation turn an amount of one substance into an amount of another, for masses, gases and solutions, and how to find the limiting reactant."
+---
+
+An aluminum smelter takes in a white powder, aluminum oxide, along with carbon, and taps off liquid aluminum. Before the smelter's buyers order a shipload of the powder, which the trade calls alumina, they have one question to answer: how many tons of it must come in through the gate for every ton of metal that goes out? They do not find out by trial and error. The answer is read off a balanced equation, and this lesson shows how.
+
+## What the coefficients say
+
+Here is the smelter's overall reaction:
+
+$$
+\begin{aligned}
+&\ce{2Al2O3(s) + 3C(s) ->} \\
+&\quad \ce{4Al(l) + 3CO2(g)}
+\end{aligned}
+$$
+
+Electricity drives this reaction, which is a matter for topic 9.8. The amounts follow the equation all the same.
+
+Read the equation at the level of particles. 2 formula units of Al₂O₃ and 3 carbon atoms give 4 aluminum atoms and 3 CO₂ molecules. Count the atoms: 4 Al, 6 O and 3 C on the left, and the same on the right. Nothing is made and nothing is lost, and that is why the amounts are tied to one another.
+
+Single atoms are far too small to count out. So scale every number up by the same factor, 6.022 × 10²³, the number of particles in a mole (topic 1.1). The equation now reads: 2 mol of Al₂O₃ and 3 mol of C give 4 mol of Al and 3 mol of CO₂.
+
+**The coefficients are a ratio of moles.** They are not a ratio of grams, because a mole of one substance does not weigh what a mole of another does.
+
+| Substance | Particles | Moles | Grams |
+|---|---|---|---|
+| Al₂O₃ | 2 | 2 | 203.92 |
+| C | 3 | 3 | 36.03 |
+| Al | 4 | 4 | 107.92 |
+| CO₂ | 3 | 3 | 132.03 |
+
+The Grams column comes from the molar masses: 101.96 g/mol for Al₂O₃, 12.01 for C, 26.98 for Al and 44.01 for CO₂. Read down it, and the masses look nothing like 2 : 3 : 4 : 3. But add them up. The two reactants, in the first two rows, weigh 203.92 + 36.03 = 239.95 g, and the two products, in the last two rows, weigh 107.92 + 132.03 = 239.95 g. Mass is conserved, because the atoms are.
+
+Any two entries of the Moles column make a conversion factor called a **mole ratio**: 4 mol Al for every 2 mol Al₂O₃, or 3 mol C for every 4 mol Al. And the amounts are proportional. Twice the alumina gives twice the aluminum, as long as there is carbon enough for it.
+
+<KeyIdea>
+
+The coefficients of a balanced equation compare moles (and particles), not grams. The way from an amount of one substance to an amount of another runs through moles.
+
+</KeyIdea>
+
+<Check answer={3}>
+Oil refineries strip poisonous hydrogen sulfide, H₂S, out of their fuels and turn it into sulfur by reacting it with sulfur dioxide:
+
+$$
+\begin{aligned}
+&\ce{2H2S(g) + SO2(g) ->} \\
+&\quad \ce{3S(l) + 2H2O(g)}
+\end{aligned}
+$$
+
+Which statement does this equation support?
+
+- Every 2 g of H₂S that reacts uses up 1 g of SO₂
+- The total number of moles of substances is the same before and after the reaction
+- For every 1 mol of SO₂ that reacts, 3 mol of sulfur atoms form
+- H₂S and SO₂ molecules are used up in equal numbers
+
+<div slot="why">
+
+The coefficients count particles, and so they count moles: 2 mol of H₂S reacts with 1 mol of SO₂ and gives 3 mol of S and 2 mol of H₂O. So the molecules of the two gases are used up two to one, not in equal numbers.
+
+In grams, 2 mol of H₂S is 4(1.008) + 2(32.06) = 68.15 g, and 1 mol of SO₂ is 64.06 g. Those are nearly equal masses, nothing like 2 to 1.
+
+Moles of substances are not conserved either: 3 mol goes in and 5 mol comes out. What is conserved is atoms: 3 S, 4 H and 2 O on each side.
+
+</div>
+</Check>
+
+## The route through moles
+
+The smelter's question, and every one like it, is answered in three steps.
+
+1. Turn the amount you are given into moles.
+2. Cross from that substance to the one you want, with the mole ratio from the coefficients.
+3. Turn those moles into the kind of amount the question asks for.
+
+Only the first and last steps change from problem to problem. These are the three ways into and out of moles that you will use most:
+
+- a mass, through the molar mass, $n = m/M$ (topic 1.1);
+- a gas, through $PV = nRT$ (topic 3.4);
+- a solution, through its molarity (topic 3.7).
+
+The middle step works the same way every time, and it is the only one that uses the equation.
+
+The route runs both ways. You can go from a reactant to a product, or back from the product you want to the reactant you need. Either way, it starts from a **balanced** equation (topic 4.2). A ratio taken from an unbalanced equation cannot be trusted.
+
+<Figure
+  src="/figures/4-5-route-through-moles.svg"
+  alt="A flow chart read from top to bottom. Three boxes at the top, mass of A, volume of gas A and volume of solution A, each lead down to one box, moles of A: the mass by dividing by the molar mass, the volume of gas through n equals P V over R T, the volume of solution by multiplying by the molarity. One heavy arrow, labeled times the ratio from the coefficients, leads from moles of A to moles of B. From moles of B three arrows lead down to mass of B, by multiplying by the molar mass, to volume of gas B, through V equals n R T over P, and to volume of solution B, by dividing by the molarity."
+  caption="In each worked example of this lesson the middle step is the same: moles of one substance to moles of another, by the ratio of the coefficients. Only the first and last steps change, and the two mass arrows are the ones topic 1.1 taught."
+/>
+
+<Worked title="Alumina for a kilogram of aluminum">
+
+How many kilograms of aluminum oxide does the smelter need for each 1.00 kg of aluminum it makes?
+
+$$
+\begin{aligned}
+&\ce{2Al2O3(s) + 3C(s) ->} \\
+&\quad \ce{4Al(l) + 3CO2(g)}
+\end{aligned}
+$$
+
+This one runs backward along the route: from the product wanted to the reactant needed.
+
+1. **Into moles.** 1.00 kg is 1.00 × 10³ g.
+
+   $$
+   \begin{aligned}
+   n &= \frac{1.00 \times 10^{3}\ \text{g}}{26.98\ \text{g/mol}} \\
+   &= 37.06\ \text{mol Al}
+   \end{aligned}
+   $$
+
+2. **Across by the ratio.** The equation has 2 mol Al₂O₃ for every 4 mol Al. Put the substance you want on top, so that the unit "mol Al" cancels.
+
+   $$
+   \begin{aligned}
+   &37.06\ \text{mol Al} \times \frac{2\ \text{mol}\ \ce{Al2O3}}{4\ \text{mol Al}} \\
+   &= 18.53\ \text{mol}\ \ce{Al2O3}
+   \end{aligned}
+   $$
+
+3. **Out of moles.** The molar mass of Al₂O₃ is 2(26.98) + 3(16.00) = 101.96 g/mol.
+
+   $$
+   \begin{aligned}
+   m &= (18.53\ \text{mol})(101.96\ \text{g/mol}) \\
+   &= 1.89 \times 10^{3}\ \text{g} \\
+   &= 1.89\ \text{kg}
+   \end{aligned}
+   $$
+
+4. **Does it make sense?** That is nearly 2 kg of powder for each kilogram of metal. The rest of the powder's mass is oxygen, which leaves as CO₂. And it answers the buyers' question. Real smelters do use about 1.9 tons of alumina for each ton of aluminum.
+
+5. **What the slips would give.** A 1 : 1 ratio gives 3.78 kg, twice too much. The ratio upside down, 4 over 2, gives 7.56 kg.
+
+</Worked>
+
+<Check numeric="9.08" unit="g">
+Tungsten is the metal of lamp filaments and, as its carbide, of drill bits. It is made by heating tungsten(VI) oxide, a yellow powder, in a stream of hydrogen gas:
+
+$$
+\begin{aligned}
+&\ce{WO3(s) + 3H2(g) ->} \\
+&\quad \ce{W(s) + 3H2O(g)}
+\end{aligned}
+$$
+
+What mass of hydrogen reacts with 348 g of WO₃?
+
+<div slot="why">
+
+Into moles first. The molar mass of WO₃ is 183.84 + 3(16.00) = 231.84 g/mol.
+
+$$
+\begin{aligned}
+n &= \frac{348\ \text{g}}{231.84\ \text{g/mol}} \\
+&= 1.501\ \text{mol}\ \ce{WO3}
+\end{aligned}
+$$
+
+Each mole of WO₃ takes 3 mol of H₂.
+
+$$
+\begin{aligned}
+&3 \times 1.501\ \text{mol} \\
+&= 4.503\ \text{mol}\ \ce{H2}
+\end{aligned}
+$$
+
+Hydrogen gas is H₂, so its molar mass is 2(1.008) = 2.016 g/mol.
+
+$$
+\begin{aligned}
+m &= (4.503\ \text{mol})(2.016\ \text{g/mol}) \\
+&= 9.08\ \text{g}
+\end{aligned}
+$$
+
+This time the route ran from one reactant to another. It works the same way.
+
+Here is what the common slips give. A 1 : 1 ratio gives 3.03 g. The atomic mass of H, 1.008, in place of the molar mass of H₂ gives 4.54 g. The ratio upside down gives 1.01 g. The molar mass of W in place of that of WO₃ gives 11.4 g.
+
+</div>
+</Check>
+
+## When a gas is involved
+
+For a gas, the way into or out of moles is the ideal gas law. Going in:
+
+$$
+n = \frac{PV}{RT}
+$$
+
+Coming out:
+
+$$
+V = \frac{nRT}{P}
+$$
+
+Topic 3.4 has the law, $R$ = 0.08206 L·atm/(mol·K), with the units that go with it, and STP (273.15 K and 1.0 atm) with the 22.4 L/mol that goes with it. Away from STP, 22.4 L/mol does not apply.
+
+The mole ratio is used exactly as before.
+
+<Worked title="Chlorine from salt water">
+
+A chemical plant passes electricity through brine, a concentrated solution of sodium chloride, and gets three products at once:
+
+$$
+\begin{aligned}
+&\ce{2NaCl(aq) + 2H2O(l) ->} \\
+&\quad \ce{2NaOH(aq) + H2(g) + Cl2(g)}
+\end{aligned}
+$$
+
+Sodium hydroxide, NaOH, is a strong base (topic 4.2), and it stays dissolved. Like the smelter's reaction, this one is driven by electricity, and the amounts follow the equation all the same.
+
+What volume of chlorine gas, measured at 25.0 °C and 1.00 atm, comes from 142 g of NaCl?
+
+1. **Into moles.** The molar mass of NaCl is 22.99 + 35.45 = 58.44 g/mol.
+
+   $$
+   \begin{aligned}
+   n &= \frac{142\ \text{g}}{58.44\ \text{g/mol}} \\
+   &= 2.430\ \text{mol NaCl}
+   \end{aligned}
+   $$
+
+2. **Across by the ratio.** The equation has 1 mol Cl₂ for every 2 mol NaCl.
+
+   $$
+   \begin{aligned}
+   &2.430\ \text{mol NaCl} \times \frac{1\ \text{mol}\ \ce{Cl2}}{2\ \text{mol NaCl}} \\
+   &= 1.215\ \text{mol}\ \ce{Cl2}
+   \end{aligned}
+   $$
+
+3. **Kelvin.**
+
+   $$
+   T = 25.0 + 273.15 = 298.2\ \text{K}
+   $$
+
+4. **Out of moles, by the gas law.** Here $n$ is in moles, $T$ in kelvin and $P$ in atm, to match the units of $R$.
+
+   $$
+   \begin{aligned}
+   V &= \frac{nRT}{P} \\
+   &= \frac{(1.215)(0.08206)(298.2)}{1.00} \\
+   &= 29.7\ \text{L}
+   \end{aligned}
+   $$
+
+5. **Two things to notice.** The gas is not at STP, so 22.4 L/mol does not apply. It would have given 27.2 L. And the equation makes one H₂ for every Cl₂, so the plant makes 29.7 L of hydrogen as well, measured at the same temperature and pressure: equal moles of two ideal gases fill equal volumes under the same conditions (topic 3.4).
+
+   Two more slips: a 1 : 1 ratio gives about 59 L, and 25.0 in place of 298.2 gives 2.49 L.
+
+</Worked>
+
+## When a solution is involved
+
+For a dissolved substance, the way into moles is the molarity (topic 3.7): moles = molarity × volume, **with the volume in liters**.
+
+$$
+n = M \times V
+$$
+
+Here $M$ stands for the molarity, in mol/L, not for a molar mass. So for a solution the amount comes from two measurements, a volume and a concentration, and once you have the moles nothing else changes. Going out the other way, divide: volume = moles ÷ molarity.
+
+<Worked title="Zinc out of the rinse water">
+
+A plating shop coats steel with zinc from a bath of zinc sulfate, ZnSO₄, and its rinse water ends up holding some of that zinc sulfate. Before the water is let go, the zinc is taken out of it. Sodium hydroxide, a strong base, is added, and the zinc leaves the solution as a solid. At the dose used here, two OH⁻ for every Zn²⁺, the solid is zinc hydroxide, which is insoluble:
+
+$$
+\begin{aligned}
+&\ce{ZnSO4(aq) + 2NaOH(aq) ->} \\
+&\quad \ce{Zn(OH)2(s) + Na2SO4(aq)}
+\end{aligned}
+$$
+
+Sodium sulfate stays dissolved: treat every sodium salt as soluble (topic 4.7).
+
+A technician treats a sample of the rinse water with 50.0 mL of 0.240 M NaOH, a dose matched to the zinc in the sample: two OH⁻ for every Zn²⁺. What mass of zinc does this dose take out of the water?
+
+1. **Into moles.** 50.0 mL is 0.0500 L.
+
+   $$
+   \begin{aligned}
+   n &= (0.240\ \text{mol/L})(0.0500\ \text{L}) \\
+   &= 0.0120\ \text{mol NaOH}
+   \end{aligned}
+   $$
+
+2. **Across by the ratio.** Each NaOH supplies one OH⁻, and the equation uses 2 mol of NaOH for every 1 mol of ZnSO₄, which holds 1 mol of Zn²⁺.
+
+   $$
+   \begin{aligned}
+   &0.0120\ \text{mol NaOH} \times \frac{1\ \text{mol}\ \ce{Zn^2+}}{2\ \text{mol NaOH}} \\
+   &= 6.00 \times 10^{-3}\ \text{mol}\ \ce{Zn^2+}
+   \end{aligned}
+   $$
+
+3. **Out of moles.** The molar mass of zinc is 65.38 g/mol.
+
+   $$
+   \begin{aligned}
+   m &= (6.00 \times 10^{-3}\ \text{mol})(65.38\ \text{g/mol}) \\
+   &= 0.392\ \text{g}
+   \end{aligned}
+   $$
+
+   The dose takes 0.392 g of zinc out of the water.
+
+4. **What the slips would give.** A 1 : 1 ratio gives 0.785 g, twice too much. The ratio upside down gives 1.57 g. Leaving the volume as 50.0 in place of 0.0500 gives 12.0 mol of NaOH and 392 g of zinc from a few spoonfuls of solution. An answer that size is a sign that milliliters went in as liters.
+
+</Worked>
+
+Here the dose was matched to the zinc, so the amount of zinc sulfate never entered the calculation. The next section is about what happens when the two amounts do not match.
+
+<Check numeric="0.900" unit="L">
+Neodymium is the metal in the strong magnets of earphones and electric motors. A refinery takes it out of solution by adding oxalic acid, H₂C₂O₄, a weak acid. Neodymium oxalate is insoluble:
+
+$$
+\begin{aligned}
+&\ce{2NdCl3(aq) + 3H2C2O4(aq) ->} \\
+&\quad \ce{Nd2(C2O4)3(s) + 6HCl(aq)}
+\end{aligned}
+$$
+
+By this equation, what volume of 0.500 M oxalic acid reacts with all the neodymium in 2.00 L of 0.150 M NdCl₃?
+
+<div slot="why">
+
+Into moles, with the volume in liters:
+
+$$
+\begin{aligned}
+n &= (0.150\ \text{mol/L})(2.00\ \text{L}) \\
+&= 0.300\ \text{mol}\ \ce{NdCl3}
+\end{aligned}
+$$
+
+The equation uses 3 mol of oxalic acid for every 2 mol of NdCl₃.
+
+$$
+\begin{aligned}
+&0.300\ \text{mol} \times \frac{3}{2} \\
+&= 0.450\ \text{mol}\ \ce{H2C2O4}
+\end{aligned}
+$$
+
+Out of moles, by dividing by the molarity:
+
+$$
+\begin{aligned}
+V &= \frac{0.450\ \text{mol}}{0.500\ \text{mol/L}} \\
+&= 0.900\ \text{L}
+\end{aligned}
+$$
+
+Here is what the common slips give. A 1 : 1 ratio gives 0.600 L. The ratio upside down gives 0.400 L. Multiplying by the molarity at the end, where you should divide, gives 0.225. And 2.00 L is the volume of the other solution.
+
+The HCl that forms is a strong acid, and it stays in solution. The refinery adds about a fifth more oxalic acid than this, to bring more of the neodymium out of solution.
+
+</div>
+</Check>
+
+## The limiting reactant
+
+So far only one amount mattered. The other reactant was plentiful, or it was matched to the first. Usually both amounts are fixed, and they are almost never in exactly the ratio the equation uses. Then one reactant is used up while some of the other is still there.
+
+The reactant that would be used up first is the **limiting reactant**. When it is gone the reaction stops, so it alone decides how much product can form. The other is the reactant **in excess**, and some of it is left over.
+
+Start with particles. Here is the refinery's reaction again:
+
+$$
+\begin{aligned}
+&\ce{2H2S(g) + SO2(g) ->} \\
+&\quad \ce{3S(l) + 2H2O(g)}
+\end{aligned}
+$$
+
+<Figure
+  src="/figures/4-5-limiting-reactant-particles.svg"
+  alt="Two boxes showing hydrogen sulfide reacting with sulfur dioxide. The box labeled before holds 6 hydrogen sulfide molecules and 4 sulfur dioxide molecules. The box labeled after holds 9 separate sulfur atoms, 6 water molecules and 1 sulfur dioxide molecule that did not react. No hydrogen sulfide is left. Each box holds 12 hydrogen atoms, 10 sulfur atoms and 8 oxygen atoms."
+  caption="The hydrogen sulfide runs out first, although the box started with more of it: every SO₂ takes two H₂S. One SO₂ is left over. Sulfur is drawn as single atoms, the way the equation writes it."
+/>
+
+Read the two boxes. The first holds 6 H₂S and 4 SO₂. Every 2 H₂S take 1 SO₂, so the 6 H₂S take 3 SO₂. There are 4, so the H₂S runs out first and 1 SO₂ is left, with 9 S and 6 H₂O. (Liquid sulfur is really mostly rings of eight atoms. The figure draws single atoms to keep the count plain.)
+
+Notice which one ran out. It was H₂S, though the box held more H₂S molecules than SO₂ molecules. To use up 4 SO₂ would have taken 8 H₂S.
+
+**Which reactant runs out depends on how many of each the equation uses. So the one there is more of can still be the one that runs out, as H₂S is in the drawing.**
+
+With real amounts, you find it by a routine:
+
+1. Turn both amounts into moles.
+2. Suppose all of one reactant reacts. From the mole ratio, work out how many moles of the other reactant that uses.
+3. See whether the other reactant can supply that many. If it can, with some to spare, the reactant you supposed used up is the limiting one. If it cannot, the other is. (If it can supply exactly that many, the two run out together.)
+4. Calculate the product from the limiting reactant, by the usual route.
+5. For the leftover, subtract what the limiting reactant used from what was there.
+
+Never compare grams with grams. That is the classic slip of this topic, and the course's own description of this unit names it among the things students get wrong. The equation sheet has nothing on the limiting reactant. The routine has to be known.
+
+<Worked title="Which gas runs out?">
+
+A working sulfur unit holds its two gases at 2 mol of H₂S to 1 mol of SO₂, so that neither is wasted. On a test run, the unit takes in 70.0 kg of H₂S and 79.5 kg of SO₂ each hour. Which gas is limiting? What mass of sulfur can form each hour, and how much of the other gas is left?
+
+$$
+\begin{aligned}
+&\ce{2H2S(g) + SO2(g) ->} \\
+&\quad \ce{3S(l) + 2H2O(g)}
+\end{aligned}
+$$
+
+1. **Both into moles.** The molar masses are 2(1.008) + 32.06 = 34.08 g/mol for H₂S and 32.06 + 2(16.00) = 64.06 g/mol for SO₂.
+
+   $$
+   \begin{aligned}
+   n_{\ce{H2S}} &= \frac{7.00 \times 10^{4}\ \text{g}}{34.08\ \text{g/mol}} \\
+   &= 2054\ \text{mol}
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   n_{\ce{SO2}} &= \frac{7.95 \times 10^{4}\ \text{g}}{64.06\ \text{g/mol}} \\
+   &= 1241\ \text{mol}
+   \end{aligned}
+   $$
+
+2. **Suppose all the H₂S reacts.** The equation uses 1 mol SO₂ for every 2 mol H₂S.
+
+   $$
+   \begin{aligned}
+   &2054\ \text{mol}\ \ce{H2S} \times \frac{1\ \text{mol}\ \ce{SO2}}{2\ \text{mol}\ \ce{H2S}} \\
+   &= 1027\ \text{mol}\ \ce{SO2}
+   \end{aligned}
+   $$
+
+3. **Is that much SO₂ there?** Yes. The unit took in 1241 mol of SO₂, and the H₂S uses 1027 mol of it. So the H₂S is gone while some SO₂ remains: **H₂S is the limiting reactant**, and SO₂ is in excess. Supposing that all the SO₂ reacts gives the same verdict: 1241 mol of SO₂ uses 2482 mol of H₂S, more than the 2054 mol that came in.
+
+4. **Product, from the limiting reactant.** The equation has 3 mol S for every 2 mol H₂S.
+
+   $$
+   \begin{aligned}
+   &2054\ \text{mol} \times \frac{3}{2} \\
+   &= 3081\ \text{mol S}
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   m &= (3081\ \text{mol})(32.06\ \text{g/mol}) \\
+   &= 9.88 \times 10^{4}\ \text{g} \\
+   &= 98.8\ \text{kg}
+   \end{aligned}
+   $$
+
+5. **Leftover.** The SO₂ left is what was there minus what the H₂S used: 1241 − 1027 = 214 mol.
+
+   $$
+   \begin{aligned}
+   m &= (214\ \text{mol})(64.06\ \text{g/mol}) \\
+   &= 1.37 \times 10^{4}\ \text{g} \\
+   &= 13.7\ \text{kg}
+   \end{aligned}
+   $$
+
+6. **Why not just pick the smaller amount?** Go by kilograms, and H₂S is the smaller: 70.0 kg against 79.5 kg. Go by moles, and SO₂ is: 1241 mol against 2054 mol. The two disagree, so the size of an amount settles nothing by itself. What settled it was steps 2 and 3, where the moles were set against the coefficients.
+
+7. **Check the books.** The equation has 2 mol H₂O for every 2 mol H₂S, so 2054 mol of water forms. Its molar mass is 2(1.008) + 16.00 = 18.02 g/mol.
+
+   $$
+   \begin{aligned}
+   m &= (2054\ \text{mol})(18.02\ \text{g/mol}) \\
+   &= 3.70 \times 10^{4}\ \text{g} \\
+   &= 37.0\ \text{kg}
+   \end{aligned}
+   $$
+
+   Sulfur, water and leftover SO₂ come out:
+
+   $$
+   98.8 + 37.0 + 13.7 = 149.5\ \text{kg}
+   $$
+
+   And the two gases went in:
+
+   $$
+   70.0 + 79.5 = 149.5\ \text{kg}
+   $$
+
+</Worked>
+
+Try other amounts yourself: nitrogen monoxide and fluorine combine into nitrosyl fluoride, 2 NO for every F₂. The diagram starts with 6 NO and 2 F₂, and there the reactant that runs out is fluorine, the one with the coefficient of 1, so do not expect the reactant with the 2 to run out every time.
+
+<LimitingReactant />
+
+<Check numeric="69.6" unit="kg">
+In a lead smelter, part of the ore, lead(II) sulfide, PbS, is first burned to lead(II) oxide, PbO. Then the two react in the furnace and give the metal:
+
+$$
+\begin{aligned}
+&\ce{2PbO(s) + PbS(s) ->} \\
+&\quad \ce{3Pb(l) + SO2(g)}
+\end{aligned}
+$$
+
+A furnace charge holds 50.0 kg of PbO and 40.0 kg of PbS. What is the greatest mass of lead it can give by this reaction?
+
+<div slot="why">
+
+Both into moles. The molar masses are 207.2 + 16.00 = 223.2 g/mol for PbO and 207.2 + 32.06 = 239.3 g/mol for PbS.
+
+$$
+\begin{aligned}
+n_{\ce{PbO}} &= \frac{5.00 \times 10^{4}\ \text{g}}{223.2\ \text{g/mol}} \\
+&= 224.0\ \text{mol}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+n_{\ce{PbS}} &= \frac{4.00 \times 10^{4}\ \text{g}}{239.3\ \text{g/mol}} \\
+&= 167.2\ \text{mol}
+\end{aligned}
+$$
+
+The equation uses 1 mol PbS for every 2 mol PbO, so 224.0 mol of PbO needs 112.0 mol of PbS. There is 167.2 mol, more than enough. PbO is the limiting reactant.
+
+Lead forms 3 mol for every 2 mol of PbO.
+
+$$
+\begin{aligned}
+&224.0\ \text{mol} \times \frac{3}{2} \\
+&= 336.0\ \text{mol Pb}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+m &= (336.0\ \text{mol})(207.2\ \text{g/mol}) \\
+&= 6.96 \times 10^{4}\ \text{g} \\
+&= 69.6\ \text{kg}
+\end{aligned}
+$$
+
+The charge held more grams of PbO than of PbS, and more moles of it too. The PbO still ran out first, because the reaction uses two of it for each PbS.
+
+Here is what the common slips give. Taking PbS as limiting gives 104 kg, and that is where comparing grams, or comparing moles without the coefficients, both lead. The right limiting reactant with a 1 : 1 ratio gives 46.4 kg, and with the ratio upside down, 30.9 kg. Applying the coefficients to kilograms, 50.0 kg × 3/2, gives 75.0 kg. Counting all the lead in the charge, from both compounds, gives 81.1 kg. Adding the two masses gives 90.0 kg.
+
+About 55 mol of PbS is left over. The question does not ask for it.
+
+</div>
+</Check>
+
+## Percent yield
+
+The amount of product that the limiting reactant allows is the **theoretical yield**. It comes from a calculation. What is actually collected is the **actual yield**. It comes from weighing the product. The **percent yield** compares the two:
+
+$$
+\begin{aligned}
+&\text{percent yield} \\
+&= \frac{\text{actual yield}}{\text{theoretical yield}} \times 100
+\end{aligned}
+$$
+
+Both yields must be in the same unit.
+
+Real yields usually fall short, for ordinary reasons. Some of the limiting reactant can be left unreacted (topic 7.1 says why), and some of the product never reaches the balance.
+
+No reaction gives more than its theoretical yield. So a result above 100 percent usually means that what was weighed is not all product, or that the arithmetic is the wrong way up.
+
+The refinery's sulfur unit is an example. The calculation above promises 98.8 kg of sulfur an hour. A unit of this kind might deliver 95.5 kg:
+
+$$
+\frac{95.5\ \text{kg}}{98.8\ \text{kg}} \times 100 = 96.7\%
+$$
+
+Real sulfur units recover between about 94 and 98 percent, depending on how many catalyst beds they have.
+
+The equation sheet does not give the formula for percent yield, and the course's description of this unit does not name percent yield. Laboratory questions use it all the same.
+
+<Check numeric="94.3" unit="%">
+A tray holding 2.50 kg of tungsten(VI) oxide, WO₃, goes through the hydrogen furnace you met earlier, in a large excess of hydrogen:
+
+$$
+\begin{aligned}
+&\ce{WO3(s) + 3H2(g) ->} \\
+&\quad \ce{W(s) + 3H2O(g)}
+\end{aligned}
+$$
+
+The plant collects 1.87 kg of tungsten powder from the tray. What is the percent yield?
+
+<div slot="why">
+
+Hydrogen is in excess, so WO₃ is the limiting reactant, and it sets the theoretical yield.
+
+$$
+\begin{aligned}
+n &= \frac{2.50 \times 10^{3}\ \text{g}}{231.84\ \text{g/mol}} \\
+&= 10.78\ \text{mol}\ \ce{WO3}
+\end{aligned}
+$$
+
+The equation gives 1 mol of W for each mole of WO₃, so 10.78 mol of W can form.
+
+$$
+\begin{aligned}
+m &= (10.78\ \text{mol})(183.84\ \text{g/mol}) \\
+&= 1982\ \text{g} \\
+&= 1.982\ \text{kg}
+\end{aligned}
+$$
+
+That is 1.98 kg to three significant figures. Carry the extra digit and round at the end.
+
+$$
+\frac{1.87\ \text{kg}}{1.982\ \text{kg}} \times 100 = 94.3\%
+$$
+
+Rounding the theoretical yield to 1.98 kg first gives 94.4%, which lands close enough that this page marks it correct.
+
+Two slips land far off. Dividing by the mass of WO₃ that went in gives 74.8%. The fraction upside down gives 106%.
+
+</div>
+</Check>
+
+<Trap>
+
+Seven mistakes cost marks on this topic:
+
+- **Comparing grams.** The coefficients compare moles. 2 mol of H₂S and 1 mol of SO₂ weigh almost the same.
+- **Assuming a 1 : 1 ratio, or turning the ratio upside down.** Put the substance you want on top: 1 mol Zn²⁺ for every 2 mol OH⁻.
+- **Judging the limiting reactant from the two amounts alone.** The amounts have to be set against how many of each the equation uses. The lead smelter's PbO was the larger amount, in grams and in moles, and it still ran out first.
+- **Calculating the product from the reactant in excess.** Only the limiting reactant sets the amount of product.
+- **Putting milliliters into molarity.** 50.0 mL is 0.0500 L.
+- **Using 22.4 L/mol for a gas that is not at STP.** At 25.0 °C and 1.00 atm the chlorine filled 29.7 L, not 27.2 L.
+- **Using an atomic mass for a diatomic gas.** Hydrogen gas is H₂, 2.016 g/mol.
+
+</Trap>
+
+<KeyPoints>
+
+- The coefficients of a balanced equation give the ratio of moles, and of particles, in which substances react and form. They do not give the ratio of grams.
+- A stoichiometry calculation follows one route: the amount given, to moles, across by the mole ratio, to moles of the substance wanted, to the amount asked for. It runs from products back to reactants just as well.
+- A mass goes into or out of moles through the molar mass, a gas through $PV = nRT$ (22.4 L/mol at STP only), and a solution through molarity times volume in liters.
+- The limiting reactant is the one that would be used up first. It is found by comparing moles through the coefficients, and it alone sets the amount of product.
+- Some of the reactant in excess is left over: the amount there was, minus the amount the limiting reactant used.
+- Percent yield is the actual yield divided by the theoretical yield, times 100.
+
+</KeyPoints>
+
+<PracticeNext />
