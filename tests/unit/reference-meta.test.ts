@@ -10,7 +10,9 @@ describe('requireReferenceMeta', () => {
   });
 
   it('ignores other front matter', () => {
-    const meta = requireReferenceMeta({ title: 'T', description: 'D', layout: '../layouts/x.astro' });
+    // A page's front matter always carries more than these two fields.
+    const frontmatter = { title: 'T', description: 'D', layout: '../layouts/x.astro' };
+    const meta = requireReferenceMeta(frontmatter);
 
     expect(meta).toEqual({ title: 'T', description: 'D' });
   });
