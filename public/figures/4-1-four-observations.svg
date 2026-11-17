@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 380" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Four panels, two by two, each a drawing of a beaker with a label under it. Every beaker is open at the top with a small lip. Panels 1 to 3 hold a beaker 100 wide and 100 tall; panel 4 holds two beakers 76 wide and 84 tall with an arrow between them. Solids are gray, bubbles are open circles, and the two liquids of panel 4 differ in hatching as well as in shade. Coordinates come from scratchpad/unit4/tools/fig-4-1.cjs. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <defs>
+    <clipPath id="dark-liquid"><path d="M392 276V328Q392 336 400 336H460Q468 336 468 328V276Z"/></clipPath>
+  </defs>
+  <rect width="480" height="380" fill="#FDFCF9"/>
+
+  <!-- 1 Heat or light is given off: three wavy lines above the beaker, six short rays around its mouth -->
+  <path d="M70 100V156Q70 164 78 164H162Q170 164 170 156V100Z" fill="#E3EAE9"/>
+  <path d="M70 100H170" fill="none" stroke="#4F706C" stroke-width="1.5"/>
+  <path d="M66 64L70 68V156Q70 164 78 164H162Q170 164 170 156V68L174 64" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M96 54q-7 -5 0 -10q7 -5 0 -10q-7 -5 0 -10q7 -5 0 -10" fill="none" stroke="#4F706C" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M120 54q-7 -5 0 -10q7 -5 0 -10q-7 -5 0 -10q7 -5 0 -10" fill="none" stroke="#4F706C" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M144 54q-7 -5 0 -10q7 -5 0 -10q-7 -5 0 -10q7 -5 0 -10" fill="none" stroke="#4F706C" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M57 60.9L41.2 58.1M64.6 40L50.7 32M78.9 23L68.6 10.7M183 60.9L198.8 58.1M175.4 40L189.3 32M161.1 23L171.4 10.7" fill="none" stroke="#26231F" stroke-width="2" stroke-linecap="round"/>
+  <text x="120" y="192" text-anchor="middle" fill="#26231F">Heat or light is given off</text>
+
+  <!-- 2 A gas forms: a lump of solid on the bottom, eight open circles rising from it through the liquid -->
+  <path d="M310 88V156Q310 164 318 164H402Q410 164 410 156V88Z" fill="#E3EAE9"/>
+  <path d="M310 88H410" fill="none" stroke="#4F706C" stroke-width="1.5"/>
+  <path d="M342 162.5L345 152L353 147L362 149L370 146L377 153L379 162.5Z" fill="#6B655D" fill-opacity="0.6" stroke="#26231F" stroke-width="1.5" stroke-linejoin="round"/>
+  <circle cx="352" cy="141" r="3" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="368" cy="139" r="3" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="360" cy="129" r="3.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="347" cy="119" r="4" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="371" cy="117" r="4" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="358" cy="107" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="345" cy="98" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="372" cy="98" r="5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M306 64L310 68V156Q310 164 318 164H402Q410 164 410 156V68L414 64" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="360" y="192" text-anchor="middle" fill="#26231F">A gas forms</text>
+
+  <!-- 3 A precipitate forms: the liquid dotted (cloudy), a layer of solid along the bottom -->
+  <path d="M70 262V328Q70 336 78 336H162Q170 336 170 328V262Z" fill="#E3EAE9"/>
+  <path d="M70 262H170" fill="none" stroke="#4F706C" stroke-width="1.5"/>
+  <path d="M74.9 271.8a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M84.4 271.5a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M93.5 269.5a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M104 269.4a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M111.9 270.3a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M123 271.4a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M129.8 268.9a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M141.3 270.9a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M146.9 268.4a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M156.7 268.3a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M80.9 279a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M89.7 278.6a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M99.3 279.4a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M109.5 278.2a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M115.8 276.4a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M126.7 277.6a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M136.4 278.1a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M144.5 276.6a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M153.6 277.5a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M77 284.3a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M86.4 284.6a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M93.9 286.8a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M104.6 285.1a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M112.1 287.4a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M121.1 285.1a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M131.3 285.4a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M139.3 285.7a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M148.2 284.9a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M157.7 286.4a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M81.2 294.8a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M88.4 293.1a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M99.6 295.6a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M108.7 293.2a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M115.8 293.8a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M126.4 295.8a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M135.5 294.2a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M143 292.4a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M153.8 292.8a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M78.3 303a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M85.1 301.1a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M92.7 303.5a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M103.2 302.1a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M113.6 302.6a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M122.1 302.6a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M131.6 302.3a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M140.5 301.5a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M149.1 301.5a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M156.8 301.8a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M81.1 308.7a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M89.4 311a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M100.6 311a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M108.4 309.3a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M115.9 310.7a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M125.2 309.9a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M136.2 309.2a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M143.7 309.5a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0M151.3 310.7a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" fill="#6B655D"/>
+  <path d="M70 324Q82 319 95 322Q108 325 120 321Q133 318 146 322Q158 325 170 323V328Q170 336 162 336H78Q70 336 70 328Z" fill="#6B655D" fill-opacity="0.6" stroke="#26231F" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M66 236L70 240V328Q70 336 78 336H162Q170 336 170 328V240L174 236" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="120" y="364" text-anchor="middle" fill="#26231F">A precipitate forms</text>
+
+  <!-- 4 The color changes: plain pale liquid, an arrow, then darker liquid hatched with diagonal lines -->
+  <path d="M252 276V328Q252 336 260 336H320Q328 336 328 328V276Z" fill="#E3EAE9"/>
+  <path d="M252 276H328" fill="none" stroke="#4F706C" stroke-width="1.5"/>
+  <path d="M248 252L252 256V328Q252 336 260 336H320Q328 336 328 328V256L332 252" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M340 294H373" fill="none" stroke="#26231F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M372 287.5L383 294L372 300.5Z" fill="#26231F"/>
+  <path d="M392 276V328Q392 336 400 336H460Q468 336 468 328V276Z" fill="#4F706C" fill-opacity="0.55"/>
+  <path d="M332 336L392 276M341 336L401 276M350 336L410 276M359 336L419 276M368 336L428 276M377 336L437 276M386 336L446 276M395 336L455 276M404 336L464 276M413 336L473 276M422 336L482 276M431 336L491 276M440 336L500 276M449 336L509 276M458 336L518 276M467 336L527 276" fill="none" stroke="#26231F" stroke-width="1.2" clip-path="url(#dark-liquid)"/>
+  <path d="M392 276H468" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M388 252L392 256V328Q392 336 400 336H460Q468 336 468 328V256L472 252" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="360" y="364" text-anchor="middle" fill="#26231F">The color changes</text>
+</svg>
