@@ -419,6 +419,107 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   stroke-linejoin: round;
 }
 
+/* The periodic trends explorer. The value over each point of its graph can
+   sit where the line, or a neighboring point, passes; a halo in the card's
+   color, as on .diagram-peak-label, keeps it readable. */
+.diagram-point-label {
+  fill: var(--ink);
+  font-weight: 600;
+  paint-order: stroke;
+  stroke: var(--card);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+/* Its table of elements: eight columns that must fit a 320 px phone, where a
+   four-digit value at 12px is about 29 px wide. Two classes, to outrank
+   ".prose table", which scrolls sideways. Below 30rem the table is also wider
+   than the diagram's text, by the width of the diagram's padding less a
+   little, so that its cells fit their numbers. */
+.diagram .trend-table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+  border-collapse: collapse;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  line-height: 1.25;
+  font-variant-numeric: tabular-nums;
+}
+.diagram .trend-table th,
+.diagram .trend-table td {
+  padding: 0;
+  border: 0;
+  text-align: center;
+}
+.diagram .trend-table thead th {
+  padding-bottom: 0.2rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+@media (max-width: 30rem) {
+  /* A title can wrap to a second line on a phone; two lines are kept for it
+     whatever it says, so that the controls below never move. */
+  .diagram-plot .trend-title {
+    min-height: 2lh;
+  }
+  .diagram-panels .trend-panel {
+    width: calc(100% + 1.5rem);
+    max-width: none;
+    margin-inline: -0.75rem;
+  }
+}
+/* A cell is a button that chooses its element. The chosen one's heavy border
+   grows outward over its neighbors, so that its number keeps the room it had. */
+.trend-cell {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 2.5rem;
+  padding: 0.15rem 0;
+  font: inherit;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--line);
+  cursor: pointer;
+}
+.trend-cell[aria-current='true'] {
+  z-index: 1;
+  width: calc(100% + 4px);
+  margin: -2px;
+  border: 3px solid var(--ink);
+}
+.diagram-body:not([data-hydrated]) .trend-cell {
+  cursor: default;
+  pointer-events: none;
+}
+.trend-symbol {
+  display: block;
+  font-weight: 600;
+}
+.trend-value {
+  display: block;
+}
+/* Five steps of the unit's color. The number in each cell carries the
+   information; the darkest step still leaves the text above 4.5 to 1 in both
+   themes (the dark theme's card is near black, so its steps stay as dark). */
+.trend-shade-0 {
+  background: color-mix(in srgb, var(--u) 6%, var(--card));
+}
+.trend-shade-1 {
+  background: color-mix(in srgb, var(--u) 20%, var(--card));
+}
+.trend-shade-2 {
+  background: color-mix(in srgb, var(--u) 34%, var(--card));
+}
+.trend-shade-3 {
+  background: color-mix(in srgb, var(--u) 48%, var(--card));
+}
+.trend-shade-4 {
+  background: color-mix(in srgb, var(--u) 62%, var(--card));
+}
+
 @media print {
   .diagram-controls {
     display: none;
