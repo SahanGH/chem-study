@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 498" font-family="system-ui, sans-serif" font-size="18">
+  <!-- MnSO4(aq) + Na2CO3(aq) -> MnCO3(s) + Na2SO4(aq). Top left: 3 Mn2+ and 3 SO4 2-. Top right: 4 Na+ and 2 CO3 2-. After mixing: a solid of 2 Mn2+ and 2 CO3 2- on the floor of the box, unlike ions touching and like ions apart, with 1 Mn2+, 3 SO4 2- and 4 Na+ dissolved above it. Every box is neutral. Cations dark, anions pale; carbonate has a dashed outline. Water is not drawn. Coordinates from scratchpad/unit4/tools/fig-4-3.cjs. -->
+  <defs>
+    <g id="mn">
+      <circle r="17" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+      <text y="6.5" text-anchor="middle" fill="#FDFCF9">Mn</text>
+    </g>
+    <g id="na">
+      <circle r="17" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+      <text y="6.5" text-anchor="middle" fill="#FDFCF9">Na</text>
+    </g>
+    <g id="so4">
+      <circle r="22" fill="#4F706C" fill-opacity="0.4" stroke="#26231F" stroke-width="1.5"/>
+      <text y="6.5" text-anchor="middle" fill="#26231F">SO<tspan dy="4" font-size="14">4</tspan></text>
+    </g>
+    <g id="co3">
+      <circle r="22" fill="#4F706C" fill-opacity="0.4" stroke="#26231F" stroke-width="2" stroke-dasharray="5 4"/>
+      <text y="6.5" text-anchor="middle" fill="#26231F">CO<tspan dy="4" font-size="14">3</tspan></text>
+    </g>
+  </defs>
+  <rect width="480" height="498" fill="#FDFCF9"/>
+
+  <!-- Key. -->
+  <use href="#mn" x="42.2" y="28"/>
+  <text x="65.2" y="34.5" fill="#26231F">Mn<tspan dy="-7" font-size="14">2+</tspan></text>
+  <use href="#na" x="150.4" y="28"/>
+  <text x="173.4" y="34.5" fill="#26231F">Na<tspan dy="-7" font-size="14">+</tspan></text>
+  <use href="#so4" x="253.6" y="28"/>
+  <text x="281.6" y="34.5" fill="#26231F">SO<tspan dy="4" font-size="14">4</tspan><tspan dy="-11" font-size="14">2&#8722;</tspan></text>
+  <use href="#co3" x="376.8" y="28"/>
+  <text x="404.8" y="34.5" fill="#26231F">CO<tspan dy="4" font-size="14">3</tspan><tspan dy="-11" font-size="14">2&#8722;</tspan></text>
+
+  <text x="121" y="76" fill="#26231F" text-anchor="middle" font-weight="600">MnSO<tspan dy="4" font-size="14">4</tspan><tspan dy="-4">(aq)</tspan></text>
+  <rect x="8" y="86" width="226" height="140" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <g id="manganese-sulfate">
+    <use href="#mn" x="90.4" y="118.8"/>
+    <use href="#so4" x="194.9" y="125.8"/>
+    <use href="#so4" x="138.8" y="145.5"/>
+    <use href="#so4" x="53.9" y="164.8"/>
+    <use href="#mn" x="193.3" y="182.1"/>
+    <use href="#mn" x="112.2" y="193.6"/>
+  </g>
+
+  <text x="359" y="76" fill="#26231F" text-anchor="middle" font-weight="600">Na<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">CO</tspan><tspan dy="4" font-size="14">3</tspan><tspan dy="-4">(aq)</tspan></text>
+  <rect x="246" y="86" width="226" height="140" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <g id="sodium-carbonate">
+    <use href="#na" x="383.1" y="125.1"/>
+    <use href="#na" x="437.4" y="126.6"/>
+    <use href="#co3" x="323.4" y="128"/>
+    <use href="#co3" x="290" y="179.8"/>
+    <use href="#na" x="420.1" y="185.5"/>
+    <use href="#na" x="361.5" y="193.6"/>
+  </g>
+
+  <path d="M121 232V257" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M114.5 255L121 264L127.5 255Z" fill="#26231F"/>
+  <path d="M359 232V257" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M352.5 255L359 264L365.5 255Z" fill="#26231F"/>
+  <text x="240" y="254" fill="#26231F" text-anchor="middle" font-weight="600">After mixing</text>
+
+  <rect x="8" y="270" width="464" height="216" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <g id="after-mixing-dissolved">
+    <use href="#na" x="328.9" y="305.9"/>
+    <use href="#so4" x="431.1" y="311.7"/>
+    <use href="#so4" x="136.7" y="328.3"/>
+    <use href="#so4" x="249.8" y="329.2"/>
+    <use href="#mn" x="52.7" y="331"/>
+    <use href="#na" x="193.7" y="359.4"/>
+    <use href="#na" x="372" y="359.7"/>
+    <use href="#na" x="300.5" y="364.8"/>
+  </g>
+  <g id="after-mixing-solid">
+    <use href="#mn" x="212.5" y="420"/>
+    <use href="#co3" x="251.5" y="420"/>
+    <use href="#co3" x="212.5" y="459"/>
+    <use href="#mn" x="251.5" y="459"/>
+  </g>
+  <text x="283.5" y="450" fill="#26231F">MnCO<tspan dy="4" font-size="14">3</tspan><tspan dy="-4">(s)</tspan></text>
+</svg>

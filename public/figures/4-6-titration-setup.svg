@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 420" font-family="system-ui, sans-serif" font-size="18">
+  <!-- A titration set up. Stand: rod x=37 to 43, base top at y=396. Buret: axis x=130, tube 16 wide from y=18 to y=246, narrowing to a 6-wide tube that ends at y=292; liquid level at y=74; scale marks every 10 units from y=30 to y=240, every fifth one longer; tap barrel y=263 to 273. Drop at (130, 304). Flask: mouth y=314, neck x=116 to 144 down to y=338, base x=70 to 190 at y=395; liquid surface at y=379, where the walls are at x=82.9 and 177.1. Labels start at x=248; each leader runs from x=242 to its part and crosses nothing. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <defs>
+    <path id="drop" d="M0 -6C4 0 3.5 4 0 4C-3.5 4 -4 0 0 -6z" fill="#4F706C" fill-opacity="0.45" stroke="#26231F" stroke-width="1"/>
+  </defs>
+  <rect width="480" height="420" fill="#FDFCF9"/>
+
+  <!-- Everything is moved 12 units right, so the drawing and its labels sit centered: they span x=30 to about x=450. -->
+  <g transform="translate(12 0)">
+
+  <!-- Stand: rod, base, clamp -->
+  <rect x="37" y="24" width="6" height="373" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="18" y="396.75" width="186" height="12" rx="2" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="48" y="115" width="66" height="8" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="32" y="110" width="16" height="18" rx="2" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="112" y="110" width="36" height="18" rx="3" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/>
+
+  <!-- Buret: glass, titrant, scale marks, outline -->
+  <path d="M122 18V246L127 256V292H133V256L138 246V18z" fill="#FDFCF9"/>
+  <path d="M122 74H138V246L133 256V292H127V256L122 246z" fill="#4F706C" fill-opacity="0.35"/>
+  <path d="M122 74H138" fill="none" stroke="#26231F" stroke-width="1"/>
+  <path d="M122 40H127M122 50H127M122 60H127M122 70H127M122 90H127M122 100H127M122 110H127M122 120H127M122 140H127M122 150H127M122 160H127M122 170H127M122 190H127M122 200H127M122 210H127M122 220H127M122 240H127" fill="none" stroke="#26231F" stroke-width="1"/>
+  <path d="M122 30H131M122 80H131M122 130H131M122 180H131M122 230H131" fill="none" stroke="#26231F" stroke-width="1"/>
+  <path d="M122 18V246L127 256V292M138 18V246L133 256V292" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Tap: handle and barrel across the narrow tube -->
+  <rect x="104" y="259" width="14" height="18" rx="3" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="118" y="263" width="24" height="10" rx="2" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/>
+
+  <!-- A drop of titrant falling into the flask -->
+  <use href="#drop" x="130" y="304"/>
+
+  <!-- Flask: the analyte, then the glass -->
+  <path d="M82.9 379H177.1L190 395H70z" fill="#4F706C" fill-opacity="0.18"/>
+  <path d="M82.9 379H177.1" fill="none" stroke="#26231F" stroke-width="1"/>
+  <path d="M116 314V338L70 395H190L144 338V314" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Leaders -->
+  <g fill="none" stroke="#6B655D" stroke-width="1.5">
+    <path d="M242 74H139"/>
+    <path d="M242 162H139"/>
+    <path d="M242 268H143"/>
+    <path d="M242 314L156 350"/>
+  </g>
+
+  <!-- Labels -->
+  <g fill="#26231F">
+    <text x="248" y="80">read the volume here</text>
+
+    <text x="248" y="168">buret</text>
+    <text x="248" y="190">titrant: NaOH(aq)</text>
+    <text x="248" y="212">concentration known</text>
+
+    <text x="248" y="274">tap</text>
+
+    <text x="248" y="320">flask</text>
+    <text x="248" y="342">analyte: the acid</text>
+    <text x="248" y="364">in the sample</text>
+    <text x="248" y="386">volume known</text>
+    <text x="248" y="408">a few drops of indicator</text>
+  </g>
+
+  </g>
+</svg>

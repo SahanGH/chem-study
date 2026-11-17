@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 326" font-family="system-ui, sans-serif" font-size="18">
+  <!-- 2 H2S + SO2 -> 3 S + 2 H2O with hydrogen sulfide limiting. Before: 6 H2S and 4 SO2 (10 molecules), none touching another. After: 9 separate S atoms gathered on the floor of the box, close together and none touching another, with 6 H2O and 1 SO2 left over scattered above them (16 particles). Each box holds 12 H, 10 S and 8 O. Oxygen atoms are pale with an accent outline (radius 10) and hydrogen atoms small and open (radius 6), exactly as in 4-3-before-and-after.svg; sulfur atoms are larger (radius 13) with a mid-tone fill and an ink outline, a look no other atom on the site has. Coordinates from scratchpad/unit4/tools/fig-4-5.cjs, which asserts the counts. -->
+  <defs>
+    <g id="h2s">
+      <circle cx="-12.2" cy="11.8" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="12.2" cy="11.8" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="13" fill="#93AAA6" stroke="#26231F" stroke-width="1.5"/>
+    </g>
+    <g id="so2">
+      <circle cx="-18.1" cy="10.7" r="10" fill="#E3EAE9" stroke="#4F706C" stroke-width="1.5"/>
+      <circle cx="18.1" cy="10.7" r="10" fill="#E3EAE9" stroke="#4F706C" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="13" fill="#93AAA6" stroke="#26231F" stroke-width="1.5"/>
+    </g>
+    <g id="s">
+      <circle cx="0" cy="0" r="13" fill="#93AAA6" stroke="#26231F" stroke-width="1.5"/>
+    </g>
+    <g id="h2o">
+      <circle cx="-11.1" cy="8.6" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="11.1" cy="8.6" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="10" fill="#E3EAE9" stroke="#4F706C" stroke-width="1.5"/>
+    </g>
+  </defs>
+  <rect width="480" height="326" fill="#FDFCF9"/>
+
+  <!-- Key. -->
+  <use href="#h2s" transform="translate(55.9 27.6)"/>
+  <text x="81.1" y="36.5" fill="#26231F">H<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">S</tspan></text>
+  <use href="#so2" transform="translate(180.8 26.2)"/>
+  <text x="215.9" y="36.5" fill="#26231F">SO<tspan dy="4" font-size="14">2</tspan></text>
+  <use href="#s" transform="translate(298.6 30)"/>
+  <text x="318.6" y="36.5" fill="#26231F">S</text>
+  <use href="#h2o" transform="translate(384.3 27.7)"/>
+  <text x="408.4" y="36.5" fill="#26231F">H<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O</tspan></text>
+
+  <text x="116" y="68" fill="#26231F" text-anchor="middle" font-weight="600">Before</text>
+  <rect x="8" y="80" width="216" height="206" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <g id="before">
+    <use href="#h2s" transform="translate(47.1 114.1) rotate(101)"/>
+    <use href="#so2" transform="translate(177.5 116.1) rotate(32)"/>
+    <use href="#so2" transform="translate(111.4 127.7) rotate(75)"/>
+    <use href="#h2s" transform="translate(60.8 153.8) rotate(77)"/>
+    <use href="#h2s" transform="translate(187.7 172.7) rotate(341)"/>
+    <use href="#h2s" transform="translate(145.3 185.2) rotate(165)"/>
+    <use href="#h2s" transform="translate(101.3 194.3) rotate(106)"/>
+    <use href="#so2" transform="translate(158.6 229.4) rotate(31)"/>
+    <use href="#so2" transform="translate(66.3 231.2) rotate(82)"/>
+    <use href="#h2s" transform="translate(103.9 249.5) rotate(236)"/>
+  </g>
+  <text x="116" y="312" fill="#26231F" text-anchor="middle">6 H<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">S, 4 SO</tspan><tspan dy="4" font-size="14">2</tspan></text>
+
+  <path d="M229 183H245" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M243 176.5L252 183L243 189.5Z" fill="#26231F"/>
+
+  <text x="364" y="68" fill="#26231F" text-anchor="middle" font-weight="600">After</text>
+  <rect x="256" y="80" width="216" height="206" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <g id="after-sulfur">
+    <use href="#s" transform="translate(346.9 231.1)"/>
+    <use href="#s" transform="translate(381.9 231.2)"/>
+    <use href="#s" transform="translate(312.9 231.5)"/>
+    <use href="#s" transform="translate(414.4 231.5)"/>
+    <use href="#s" transform="translate(364.6 262.4)"/>
+    <use href="#s" transform="translate(297 262.7)"/>
+    <use href="#s" transform="translate(329.8 263.4)"/>
+    <use href="#s" transform="translate(432.5 263.6)"/>
+    <use href="#s" transform="translate(398.7 263.7)"/>
+  </g>
+  <g id="after-above">
+    <use href="#h2o" transform="translate(334.2 111.5) rotate(47)"/>
+    <use href="#h2o" transform="translate(430.6 114.7) rotate(260)"/>
+    <use href="#h2o" transform="translate(384.4 131.6) rotate(17)"/>
+    <use href="#so2" transform="translate(301.5 132.3) rotate(101)"/>
+    <use href="#h2o" transform="translate(429.2 156.3) rotate(349)"/>
+    <use href="#h2o" transform="translate(324.4 162.4) rotate(289)"/>
+    <use href="#h2o" transform="translate(387.9 171.8) rotate(62)"/>
+  </g>
+  <text x="364" y="312" fill="#26231F" text-anchor="middle">9 S, 6 H<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O, 1 SO</tspan><tspan dy="4" font-size="14">2</tspan><tspan dy="-4"> left</tspan></text>
+</svg>

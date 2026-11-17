@@ -217,6 +217,21 @@ Branch: `topic/unit-4-change-and-equations`, from this plan's branch (`topic/uni
 
 No code. Four writers in parallel, then the steps of "How a group is carried out".
 
+> **As carried out (2026-11-17).** The four lessons are newer than the briefs of Tasks 1 to 4 below. Each was fact-checked twice by a fresh agent that solved every Check and worked example before reading its answer, balanced every equation in atoms and in charge, counted every particle drawing from the SVG and from the picture, and looked up whether each reaction and scene is real. **Neither round found a wrong answer, equation, count or number.** The first round found one factual error, in a scene; the prose was checked for originality twice. What changed from the briefs, and why:
+>
+> - **Lesson 4.4's opening was wrong about the launch pad.** The brief had white plumes pouring from the vents of a rocket being filled with liquid hydrogen. Boiled-off hydrogen is piped away to be burned; the plumes are the oxygen's. The opening now says only that the liquid boils the whole time and the gas is piped away.
+> - **Lesson 4.3's last Check changed twice.** The brief's liquid ammonia in an ice rink's refrigeration plant repeats a question of the site's Unit 3 test. Liquefied natural gas in a storage tank was clear of every source but sat too close to lesson 4.4 (a liquefied gas in a tank, the same right and wrong answers); frost is a textbook's example, and dew is in lessons 4.1 and 4.2. The Check is now **two gases mixing**: 4 CH₄ in one bulb and 4 CO₂ in another, a valve opened, and which drawing shows the bulbs a long time later. That is the framework's other kind of physical change (making a mixture). The Trap's last item and the last key point follow it. `scratchpad/unit4/checks/4-3.py` follows the lesson (149 values).
+> - **State symbols (lesson 4.2).** The brief said state symbols are part of the answer on the exam. Exam scoring does not normally require them unless the question asks, so the lesson says to write them whenever you can, and the Trap's item is "Leaving off the states when a question asks for them". Every equation in the lesson, and the figure's complete ionic band, now carries a state symbol on every term; several equations take one more line for it.
+> - **"Is written whole", not "stays whole"** (4.2, six places): a weak acid is written whole in an ionic equation, which is a rule of notation; "stays whole" is untrue of citric acid, about a quarter of which is ionized in dilute solution.
+> - **Check 4 of lesson 4.2** gives the strengths of its acids and bases in the stem, not in the options, where the only pair tagged "strong ... strong" gave the answer away.
+> - **Statements that said more than is true**, reworded: a precipitate on mixing as "the strongest single sign" (4.1; the framework ranks none of the four); "the case is made when more than one sign appears together and you can name the new substance" (4.1; the lesson's own Checks make a case from one sign); "a change rearranges atoms" (4.2; dew rearranges none); "a polyatomic ion stays in one piece" without its condition (4.3); a first key point that gave a necessary condition as sufficient (4.3); "each cation next to anions", which cannot be read literally for barium phosphate (4.3: every ion touches ions of the opposite charge, and no two cations or two anions touch); color "depends on which atoms are bonded to which" beside a Check in which chlorine changes color on boiling (4.4: "mostly", and the Check's explanation says why the gas is paler).
+> - **The dissolving question (4.4).** The two arguments now have two points and the same length each. The Trap's item no longer calls dissolving an exception to the rule (which implied a verdict); it says the rule does not settle every case. A sentence in lesson 4.1 that said a solid comes back out of a solution "with nothing new formed" now says "the same solid as before".
+> - **The worked example of 4.1** rules out a dissolved gas because the frothing goes on after the pouring stops and neither jar held a fizzy liquid. A reason added in the first round of fixes (both solutions at the same temperature) did not hold: pouring and added solids drive a dissolved gas out too.
+> - **Originality.** Every reaction, substance and number was clear of both Tro books and of the teacher's notes and practice. Wording that followed the teacher's notes was rebuilt from the lessons' own scenes: the KeyIdea of 4.1; the look-alikes for bubbles and for a paler color (4.1); "four kinds of ion" and "takes nerve" (4.2); the rules for a particle drawing and four Trap items (4.3, which now gives the rules in the order its worked example uses them and points back to topic 3.8 for the three items that lesson already has); "how dramatic a change looks" (4.4). One rule in 4.2 was worded as a textbook words it (clearing a fraction).
+> - **Figures.** In `4-3-wrong-and-right.svg` the loose carbon and oxygen atoms are farther apart and the numbered marks are small squares, so that neither reads as a particle. The sizes of the ions are said not to be to scale. The salt figure of 4.4 says in its caption that its water molecules are drawn as in topic 3.8.
+> - **Reading times** are 11, 18, 13 and 11 minutes, from each lesson's length at the rate of the Unit 7 lessons; the briefs had 8, 15, 9 and 8.
+> - **Measured on phones** at 412, 390, 360 and 320 px with every answer open: no lesson scrolls sideways and no equation scrolls in its box.
+
 ### Task 1: Lesson 4.1, Introduction for Reactions
 
 **Files:**
@@ -599,6 +614,40 @@ No code. Four writers in parallel, then the steps of "How a group is carried out
 ## Group C: amounts (pull request C)
 
 Branch: `topic/unit-4-amounts`, from `topic/unit-4-change-and-equations`. Tasks 5 to 8. The pull request title is "feat(lessons): Unit 4 lessons 4.5 and 4.6, the limiting reactant explorer and the titration explorer".
+
+> **As carried out (2026-11-17).** The repository is newer than Tasks 5 to 8 below. Both explorers were built test-first and reviewed twice (TypeScript and general); both lessons were fact-checked twice by fresh agents that solved every Check and worked example before reading its answer, balanced every equation, recomputed every number from the exam table's masses, found every limiting reactant two ways and looked up each industrial and laboratory scene, and were checked once for originality. **No fact-check found a wrong answer, equation, number or limiting reactant.** What differs from the tasks as printed, and why:
+>
+> **The two explorers (Tasks 5 and 6)**
+>
+> - **The controls sit directly under the drawings.** As first built to the contracts, the sliders came after the key, the table and the readout: on a 320 px phone they were a screen and a half below the boxes or the flask they change, and the readout above them changed length and moved them. Now: boxes, sliders, readout, table, key (limiting reactant); flask and graph, choice of acid and slider, readout (titration). Browser tests hold both drawings and a slider in one 320 × 568 screen.
+> - **The atoms are drawn as the lesson's own figure draws them** (limiting reactant): oxygen pale with an accent outline, in boxes with no tint; fluorine a heavy accent ring with a center dot, a look no other atom on the site has. As first built, fluorine was a small hollow circle, which is the figures' hydrogen.
+> - **The flask holds no drawn text and is 6.5rem wide** (titration); its color word is HTML beside it. The liquid is clipped by the glass's own outline.
+> - **The flask and the graph sit side by side only from 42rem.** The contract asked for side by side above 412 px and for no drawn text under 12 px from 412 px up; both cannot hold.
+> - **The graph's two line names have a card-colored backing and stand clear of the moving marker's dots**; a browser test sweeps both acids over all 81 volumes.
+> - **More exports than the contracts list** (the vocabulary the components and tests share, the drawings' accessible descriptions, the slider text); `linePoints` returns exactly three points; the component imports `state` as `titrationState`, because an import named `state` makes Svelte read `$state` as a store.
+> - **Every shown number was compared with exact arithmetic** for every slider position (both acids at 81 volumes; all 36 pairs of molecules), with no difference.
+> - **Shared rules added to `diagram.css`**: `.diagram-panels.is-paired`, `.is-beside`, `.is-flask`, `.diagram-slider-head`, `.diagram-slider-value`, and the `molecule-` and `titration-` classes. The indicator's yellow and blue are real colors, with the word beside them.
+>
+> **Lesson 4.5 (Task 7)**
+>
+> - **The particle figure draws oxygen and water as lesson 4.3 does**, and gives sulfur a look of its own. As briefed, sulfur had the look 4.3 gives oxygen, so hydrogen sulfide looked like 4.3's water.
+> - **The route figure** labels its gas arrows "n = PV/RT" and "V = nRT/P" (the brief had "PV = nRT" on both) and names the volume in its gas and solution boxes.
+> - **Statements narrowed:** "you must pass through moles" and "every stoichiometry calculation" (the lesson's own brine example goes from one gas volume to another); "three ways into and out of moles" (a fourth, counting particles, is in the lesson's table); what a yield above 100 percent means ("usually"); the zinc example says the solid is zinc hydroxide "at the dose used here".
+> - **The limiting-reactant routine, the reasons a yield falls short, the sentence on what is new for a solution and the gas section** followed the teacher's notes, the site's Unit 3 material or a textbook in wording; they are rebuilt, and the gas section now points to topic 3.4 for the law and its conditions. "Bridge" and "road" are gone.
+> - **A sentence beside the diagram** says that it opens with 6 NO and 2 F₂, where fluorine, the reactant with coefficient 1, runs out: in all three of the lesson's own cases the limiting reactant has the coefficient 2.
+> - **Small corrections to numbers as printed:** 68.15 g for 2 mol of H₂S (the brief's 68.16 rounded the molar mass first); "about 59 L" for the brine example's 1 : 1 slip.
+>
+> **Lesson 4.6 (Task 8)**
+>
+> - **The endpoint is pinned as the turn to blue**, not the first tinge of green: a calculation for both acids puts the first green six or seven drops early for tartaric acid and the full blue within a hundredth of a milliliter of the equivalence point.
+> - **The volume that has run out** is said to be the reading at the end less the reading at the start.
+> - **Topics 8.5 and 8.7** (the brief said 8.5 for both the change in acidity and the choice of indicator).
+> - **16.0 mL** in the first Check's explanation (the brief printed 16.00 from three-figure data); "a little of the sample splashes out" (the brief's "a few drops" did not match the 0.40 mL of the explanation).
+> - **Wording that followed the teacher's notes**, rebuilt: why overshooting gives a high result; why the equation is written first; the sentence on how close the endpoint falls; the four steps' labels.
+>
+> **For Group D:** lesson 4.7's opening (a mine's water treatment plant taking cadmium out of water as its sulfide) is the same kind of scene as lesson 4.5's zinc example (a plating shop's rinse water). Change the setting of 4.7's opening when it is written.
+>
+> **Reading times** are 20 and 13 minutes, from each lesson's length; the briefs had 15 and 9. **Measured on phones** at 412, 390, 360 and 320 px with every answer open.
 
 ### Task 5: The limiting reactant explorer
 

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 510" font-family="system-ui, sans-serif" font-size="18">
+  <!-- The route of every stoichiometry calculation, read from top to bottom. Three boxes (mass of A, volume of gas A, volume of solution A) each lead by a thin arrow down into one wide box, moles of A (dividing by the molar mass, n = PV/RT, multiplying by the molarity); one heavy arrow in the accent color, the only heavy one, leads to a second wide box, moles of B; three thin arrows lead from it down to mass of B, volume of gas B and volume of solution B (multiplying by the molar mass, V = nRT/P, dividing by the molarity). Every arrow has its label on its right, and no line of text is longer than 16 characters. Font size 18 keeps the text at 12 px when the figure is 320 px wide. Coordinates from scratchpad/unit4/tools/fig-4-5.cjs. -->
+  <rect width="480" height="510" fill="#FDFCF9"/>
+
+  <!-- Top row: three kinds of amount of A. -->
+  <rect x="8" y="10" width="144" height="56" rx="8" fill="#FDFCF9" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="80" y="44.5" fill="#26231F" text-anchor="middle">mass of A</text>
+  <rect x="168" y="10" width="144" height="56" rx="8" fill="#FDFCF9" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="240" y="33.5" fill="#26231F" text-anchor="middle">volume of</text>
+  <text x="240" y="55.5" fill="#26231F" text-anchor="middle">gas A</text>
+  <rect x="328" y="10" width="144" height="56" rx="8" fill="#FDFCF9" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="400" y="33.5" fill="#26231F" text-anchor="middle">volume of</text>
+  <text x="400" y="55.5" fill="#26231F" text-anchor="middle">solution A</text>
+
+  <!-- Three thin arrows into moles of A, each labeled on its right. -->
+  <path d="M38 70V149" fill="none" stroke="#26231F" stroke-width="1.7"/>
+  <path d="M32 147L38 156L44 147Z" fill="#26231F"/>
+  <text x="50" y="119.5" fill="#26231F">÷ molar mass</text>
+  <path d="M198 70V149" fill="none" stroke="#26231F" stroke-width="1.7"/>
+  <path d="M192 147L198 156L204 147Z" fill="#26231F"/>
+  <text x="210" y="119.5" fill="#26231F">n = PV/RT</text>
+  <path d="M358 70V149" fill="none" stroke="#26231F" stroke-width="1.7"/>
+  <path d="M352 147L358 156L364 147Z" fill="#26231F"/>
+  <text x="370" y="119.5" fill="#26231F">× molarity</text>
+
+  <rect x="8" y="160" width="464" height="44" rx="8" fill="#E3EAE9" stroke="#4F706C" stroke-width="1.5"/>
+  <text x="240" y="188.5" fill="#26231F" text-anchor="middle" font-weight="600">moles of A</text>
+
+  <!-- The one heavy arrow: moles of A to moles of B. -->
+  <path d="M240 208V292" fill="none" stroke="#4F706C" stroke-width="6"/>
+  <path d="M227 288L240 306L253 288Z" fill="#4F706C"/>
+  <text x="262" y="252.5" fill="#26231F" font-weight="600">× ratio from</text>
+  <text x="262" y="274.5" fill="#26231F" font-weight="600">the coefficients</text>
+
+  <rect x="8" y="310" width="464" height="44" rx="8" fill="#E3EAE9" stroke="#4F706C" stroke-width="1.5"/>
+  <text x="240" y="338.5" fill="#26231F" text-anchor="middle" font-weight="600">moles of B</text>
+
+  <!-- Three thin arrows out of moles of B, each labeled on its right. -->
+  <path d="M38 358V433" fill="none" stroke="#26231F" stroke-width="1.7"/>
+  <path d="M32 431L38 440L44 431Z" fill="#26231F"/>
+  <text x="50" y="405.5" fill="#26231F">× molar mass</text>
+  <path d="M198 358V433" fill="none" stroke="#26231F" stroke-width="1.7"/>
+  <path d="M192 431L198 440L204 431Z" fill="#26231F"/>
+  <text x="210" y="405.5" fill="#26231F">V = nRT/P</text>
+  <path d="M358 358V433" fill="none" stroke="#26231F" stroke-width="1.7"/>
+  <path d="M352 431L358 440L364 431Z" fill="#26231F"/>
+  <text x="370" y="405.5" fill="#26231F">÷ molarity</text>
+
+  <!-- Bottom row: three kinds of amount of B. -->
+  <rect x="8" y="444" width="144" height="56" rx="8" fill="#FDFCF9" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="80" y="478.5" fill="#26231F" text-anchor="middle">mass of B</text>
+  <rect x="168" y="444" width="144" height="56" rx="8" fill="#FDFCF9" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="240" y="467.5" fill="#26231F" text-anchor="middle">volume of</text>
+  <text x="240" y="489.5" fill="#26231F" text-anchor="middle">gas B</text>
+  <rect x="328" y="444" width="144" height="56" rx="8" fill="#FDFCF9" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="400" y="467.5" fill="#26231F" text-anchor="middle">volume of</text>
+  <text x="400" y="489.5" fill="#26231F" text-anchor="middle">solution B</text>
+</svg>
