@@ -458,6 +458,44 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   color: var(--u-ink);
 }
 
+/* The titration explorer: a flask beside a graph. The graph is drawn 320 units
+   wide, so it keeps 12 px text only when it is shown about 320 px wide or
+   more; the two sit side by side only where both fit (40rem), and are stacked
+   below that. The flask drawing is 160 units wide and stops at 12rem, so its
+   text is never under 12 px either. */
+.diagram-panels .diagram-plot.is-flask {
+  max-width: 12rem;
+}
+@media (min-width: 40rem) {
+  .diagram-panels.is-beside {
+    grid-template-columns: 12rem minmax(0, 22rem);
+    justify-content: center;
+    align-items: center;
+  }
+}
+.titration-glass {
+  fill: var(--card);
+  stroke: var(--ink);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+/* The flask's outline and its rim are open lines, not shapes to fill. */
+.titration-glass.is-open {
+  fill: none;
+}
+/* The indicator's own colors, not the unit's: bromothymol blue is yellow in
+   the acid and blue past the equivalence point. The word under the flask
+   says the same, so the shade is never alone. */
+.titration-liquid {
+  stroke: none;
+}
+.titration-liquid.is-yellow {
+  fill: #e6c845;
+}
+.titration-liquid.is-blue {
+  fill: #5b86d6;
+}
+
 @media print {
   .diagram-controls {
     display: none;
