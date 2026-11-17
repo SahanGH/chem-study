@@ -10,6 +10,13 @@
   --no: #9a4a3f;
   --no-bg: #faf0ee;
 
+  /* Faint tints for the four blocks of the periodic table. Text on each is
+     --ink, which keeps well over 4.5:1 on all four, in both themes. */
+  --block-s: #f6e4df;
+  --block-p: #e0ebf4;
+  --block-d: #e5eed9;
+  --block-f: #f3ebd0;
+
   /* Unit accent. Neutral until an element carries data-unit. */
   --u: #6b655d;
   --u-ink: #26231f;
@@ -41,6 +48,10 @@
   --ok-bg: #232b21;
   --no: #e3a69c;
   --no-bg: #2e211f;
+  --block-s: #44302c;
+  --block-p: #243543;
+  --block-d: #2d3a26;
+  --block-f: #433b24;
   --u: #a8a196;
   --u-ink: #ede8df;
   --u-tint: #24211d;

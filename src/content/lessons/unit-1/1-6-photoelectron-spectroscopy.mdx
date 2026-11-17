@@ -1,0 +1,310 @@
+---
+topic: "1.6"
+minutes: 19
+summary: "How to read a photoelectron spectrum, where a peak's position is the energy to remove an electron and its height is the number of electrons, and how Coulomb's law explains where the peaks fall."
+---
+
+How firmly is a tent peg held? You find out by pulling it. One in loose sand near the surface comes out with two fingers. One driven deep into clay takes both hands.
+
+Chemists test the electrons of an atom the same way: pull one out and measure how much energy it took. Do that for every kind of electron in the atom and you have a photoelectron spectrum, the most direct look at an atom's electrons that this course offers.
+
+## What the experiment measures
+
+In **photoelectron spectroscopy**, PES for short, a sample of an element is hit with light of one known, high energy: ultraviolet light or X-rays. The light knocks electrons out of the atoms, and the instrument measures the energy each one flies off with.
+
+The light brings the same fixed amount of energy to every electron it knocks out. Part of that energy goes into pulling the electron free of its atom, and what is left over is the energy the electron leaves with. So the more firmly an electron was held, the less it has left. The difference between what the light brought and what the instrument measures is the energy it took to free that electron. That energy is the electron's **binding energy**.
+
+(Light arrives in packets called photons, and topic 3.12 deals with their energy. Nothing is calculated here.)
+
+Binding energy is ionization energy (topic 1.5) under another name, for whichever electron was removed. It is reported in MJ/mol, megajoules for a mole of electrons removed. 1 MJ is 1000 kJ.
+
+One point prevents a common misreading. In the picture used here, each atom that is hit loses one electron. One atom loses a 1s electron, another loses a 3p electron, and the spectrum gathers the results from an enormous number of atoms. So it shows the energy needed to remove an electron from each subshell of the **neutral atom**. It is not a record of stripping one atom electron after electron (that is topic 1.8).
+
+## Reading a spectrum
+
+A photoelectron spectrum is a graph. Binding energy runs across. The relative number of electrons runs up. Here is the spectrum of silicon, whose configuration (topic 1.5) is 1s² 2s² 2p⁶ 3s² 3p².
+
+<Figure
+  src="/figures/1-6-spectrum-parts.svg"
+  alt="The photoelectron spectrum of silicon. The horizontal axis is binding energy in megajoules per mole on a logarithmic scale, with larger values at the left. The vertical axis is the relative number of electrons. There are five peaks. From left to right: the 1s peak at 178, height 2 electrons; the 2s peak at 15.1, height 2; the 2p peak at 10.3, height 6; the 3s peak at 1.46, height 2; and the 3p peak at 0.79, height 2. Labels point out that a peak's position is the energy needed to remove an electron and its height is the number of electrons, and an arrow under the axis, pointing left, is labeled held more tightly."
+  caption="The photoelectron spectrum of silicon, 1s² 2s² 2p⁶ 3s² 3p². Five subshells give five peaks. The energy axis is logarithmic, with larger binding energies at the left."
+/>
+
+These are silicon's values:
+
+| Subshell | Binding energy (MJ/mol) | Electrons |
+|---|---|---|
+| 1s | 178 | 2 |
+| 2s | 15.1 | 2 |
+| 2p | 10.3 | 6 |
+| 3s | 1.46 | 2 |
+| 3p | 0.79 | 2 |
+
+Three rules turn the graph into information:
+
+1. **One peak for each occupied subshell.** Silicon has electrons in five subshells, so its spectrum has five peaks.
+2. **A peak's position is the binding energy** of the electrons in that subshell: how much energy it takes to remove one. Silicon's 1s electrons are at 178 MJ/mol and its 3p electrons at 0.79 MJ/mol.
+3. **A peak's height is the number of electrons** in that subshell, relative to the other peaks. Silicon's 2p peak is three times as tall as each of the others: 6 electrons to their 2.
+
+**Read the axis first.** On this site, and usually on the exam, binding energy increases to the left, so the innermost electrons are at the left and the valence electrons at the right. Some spectra are drawn the other way round. The numbers on the axis tell you which. Wherever it is drawn, the 1s peak is the one at the highest binding energy.
+
+**The axis is squeezed.** Silicon's largest binding energy is more than 200 times its smallest, so on an ordinary axis four of the five peaks would be crowded into one end. The axis is logarithmic: neighboring marks differ by a factor of ten.
+
+**A ruler for heights.** In every element after hydrogen the 1s subshell holds 2 electrons. So in a complete spectrum the peak at the highest binding energy stands for 2 electrons, and every other height can be measured against it.
+
+**Two checks on a reading.** The heights add up to the number of electrons: 2 + 2 + 6 + 2 + 2 = 14, silicon's atomic number. And the peak at the lowest binding energy belongs to the electrons that are easiest to remove, so its position is the first ionization energy: 0.79 MJ/mol is the 787 kJ/mol of topic 1.5, rounded.
+
+Measured spectra follow the electron counts only roughly. The spectra you will be asked to read are drawn to the ideal, with heights in exact proportion.
+
+<KeyIdea>
+
+Each peak is one subshell. Its position says how much energy it takes to remove an electron from that subshell. Its height says how many electrons the subshell holds.
+
+</KeyIdea>
+
+<Check answer={2}>
+Part of the photoelectron spectrum of oxygen shows a peak at 3.12 MJ/mol and, beside it, a peak at 1.31 MJ/mol that is twice as tall. What do these two peaks tell you?
+
+- The electrons at 1.31 MJ/mol are held twice as strongly, because their peak is twice as tall.
+- The electrons at 1.31 MJ/mol are the easier ones to remove, and there are twice as many of them.
+- The electrons at 3.12 MJ/mol are the easier ones to remove, because their peak is the shorter one.
+- The sample is a mixture of two elements, one for each peak.
+
+<div slot="why">
+
+Position and height answer different questions.
+
+Position is energy: 1.31 MJ/mol is less than 3.12 MJ/mol, so the electrons of the peak at 1.31 MJ/mol take less energy to remove.
+
+Height is a count: twice as tall means twice as many electrons. These are oxygen's 2s² and 2p⁴ electrons: two electrons at 3.12 MJ/mol, four at 1.31 MJ/mol.
+
+Height says nothing about how strongly an electron is held. And two peaks do not mean two elements: a single element gives one peak for each of its occupied subshells.
+
+</div>
+</Check>
+
+Pick any element from hydrogen to calcium to see its spectrum, then add a second element with "Compare with" and watch the peaks they share.
+
+<PhotoelectronSpectrum />
+
+## From a spectrum to an element
+
+A spectrum hands you the configuration, and the configuration names the element. Count subshells from the peaks, electrons from the heights, and add them up.
+
+<Figure
+  src="/figures/1-6-unknown-spectrum.svg"
+  alt="The photoelectron spectrum of an unnamed element. The horizontal axis is binding energy in megajoules per mole on a logarithmic scale, with larger values at the left. The vertical axis is the relative number of electrons and has no numbers. Six peaks are lettered A to F from left to right, at 390, 42.7, 34.0, 4.65, 2.90 and 0.59 megajoules per mole. Peaks A, B, D and F have the same height. Peaks C and E are three times as tall."
+  caption="The spectrum of an element to be named. The table under the figure gives each peak's binding energy and its height compared with peak A."
+/>
+
+| Peak | Binding energy (MJ/mol) | Height (peak A = 1) |
+|---|---|---|
+| A | 390 | 1 |
+| B | 42.7 | 1 |
+| C | 34.0 | 3 |
+| D | 4.65 | 1 |
+| E | 2.90 | 3 |
+| F | 0.59 | 1 |
+
+<Worked title="Naming an element from its spectrum">
+
+The figure above shows the photoelectron spectrum of an element. Its vertical axis has no numbers, as on many exam questions. Which element is it?
+
+1. **Read the axis.** Binding energy increases to the left, so peak A, at 390 MJ/mol, belongs to the electrons held most tightly. That is 1s.
+
+2. **Set the scale for the heights.** A 1s subshell holds 2 electrons, so a peak as tall as A stands for 2 electrons and a peak three times as tall stands for 6. The six peaks stand for 2, 2, 6, 2, 6 and 2 electrons.
+
+3. **Name the subshells.** Take the peaks in order from the highest binding energy and name them in order of shell, s before p within a shell (this order holds for the first twenty elements): A is 1s², B is 2s², C is 2p⁶, D is 3s², E is 3p⁶ and F is 4s². The heights fit: no s peak stands for more than 2 electrons and no p peak for more than 6.
+
+4. **Write the configuration.** 1s² 2s² 2p⁶ 3s² 3p⁶ 4s².
+
+5. **Count the electrons.** 2 + 2 + 6 + 2 + 6 + 2 = 20. The atom is neutral, so it has 20 protons: the element is calcium.
+
+6. **Check against the periodic table.** Calcium is in row 4, the second box of the s block, which is where a configuration ending in 4s² belongs.
+
+</Worked>
+
+<Check answer={4}>
+A photoelectron spectrum is drawn with binding energy increasing from left to right. Reading across, its three peaks are at 1.40, 2.45 and 39.6 MJ/mol. The peaks at 2.45 and 39.6 MJ/mol are equally tall, and the peak at 1.40 MJ/mol is one and a half times as tall as they are. Which element is it?
+
+- Lithium
+- Phosphorus
+- Sodium
+- Nitrogen
+
+<div slot="why">
+
+Read the axis first. Here the highest binding energy is at the right, so the peak at 39.6 MJ/mol is 1s and stands for 2 electrons.
+
+The peak at 2.45 MJ/mol is as tall, so it is 2s². The peak at 1.40 MJ/mol is one and a half times as tall, so it stands for 3 electrons: 2p³.
+
+The configuration is 1s² 2s² 2p³, with 2 + 2 + 3 = 7 electrons, so the element is nitrogen.
+
+Three peaks do not mean three electrons (lithium) or three shells (sodium): each peak is a subshell, and the heights count the electrons. Phosphorus also ends in a p subshell with 3 electrons, but its configuration has five subshells, so its spectrum has five peaks.
+
+</div>
+</Check>
+
+## From a configuration to a spectrum
+
+The reading runs the other way too. Write the configuration from the element's place in the periodic table. Each subshell gives one peak, each superscript gives a height, and the peaks come in the order of the shells, 1s at the highest binding energy.
+
+Silicon, 1s² 2s² 2p⁶ 3s² 3p², must give five peaks standing for 2, 2, 6, 2 and 2 electrons, which is the first figure.
+
+What the configuration alone cannot tell you is the number on the axis under each peak. Those come from tables of published values. Coulomb's law says which way they move from one atom to the next, and that is the next section.
+
+<Check answer={1}>
+The spectrum of argon has five peaks. From the highest binding energy to the lowest they stand for 2, 2, 6, 2 and 6 electrons. Potassium has one more proton and one more electron than argon. How does potassium's spectrum compare?
+
+- It has six peaks, and the new one, for 1 electron, has the lowest binding energy of all.
+- It has six peaks, and the new one, for 1 electron, has the highest binding energy of all.
+- It has five peaks, and the last one now stands for 7 electrons.
+- It has five peaks with the same heights as argon's, each at a higher binding energy.
+
+<div slot="why">
+
+Argon's last peak is its 3p subshell, and it is full: a p subshell holds 6. Potassium's nineteenth electron starts a new subshell, 4s, so the spectrum gains a sixth peak, half as tall as the 1s peak.
+
+That electron is in the fourth shell, farther from the nucleus than any other and shielded by all 18 electrons inside it, so it takes the least energy to remove: the lowest binding energy.
+
+A p peak can never stand for 7 electrons. Potassium's other five peaks do sit at higher binding energies than argon's, but that leaves out the nineteenth electron.
+
+</div>
+</Check>
+
+## Why the peaks are where they are
+
+Here are the two spectra of that question, argon's and potassium's, drawn with their measured binding energies.
+
+<Figure
+  src="/figures/1-6-argon-and-potassium.svg"
+  alt="Two photoelectron spectra on the same logarithmic energy axis, with larger binding energies at the left. The upper one is argon, with five peaks: 1s at 309 megajoules per mole, height 2 electrons; 2s at 31.5, height 2; 2p at 24.1, height 6; 3s at 2.82, height 2; and 3p at 1.52, height 6. The lower one is potassium, with six peaks: 1s at 347, height 2; 2s at 37.1, height 2; 2p at 29.1, height 6; 3s at 3.93, height 2; 3p at 2.38, height 6; and a new 4s peak at 0.42, height 1. Dashed lines from argon's peaks, in short dashes from its s peaks and long dashes from its p peaks, show that each of potassium's first five peaks lies to the left of the line of the same name, at a higher binding energy. Potassium's 2p peak stands just to the right of the line from argon's 2s peak."
+  caption="Argon above, potassium below. Potassium's extra proton moves every peak it shares with argon to a higher binding energy, and the nineteenth electron appears as a new peak at the far right. Potassium's 2p peak lands almost on argon's 2s line, so compare each peak with the line of the same name. Short dashes come from argon's s peaks, long dashes from its p peaks."
+/>
+
+| Subshell | Argon (MJ/mol) | Potassium (MJ/mol) |
+|---|---|---|
+| 1s | 309 | 347 |
+| 2s | 31.5 | 37.1 |
+| 2p | 24.1 | 29.1 |
+| 3s | 2.82 | 3.93 |
+| 3p | 1.52 | 2.38 |
+| 4s | none | 0.42 |
+
+Every position reflects how strongly the nucleus holds an electron. So the three levers of topic 1.5 explain each one: the nuclear charge, the distance (which shell) and the shielding by the electrons inside.
+
+**Across one spectrum.** Read argon's from the left. The 1s electrons, at 309 MJ/mol, are in the shell closest to the nucleus, with nothing inside them to shield its 18 protons. The 2s and 2p electrons, at 31.5 and 24.1 MJ/mol, are in the second shell: farther out, and shielded by the two 1s electrons. The 3s and 3p electrons, at 2.82 and 1.52 MJ/mol, are farther out again and shielded by ten. Each step out to the next shell cuts the binding energy roughly tenfold. Within a shell, the s peak is at a somewhat higher binding energy than the p peak, because an s electron spends more of its time close to the nucleus (topic 1.5).
+
+**From one element to the next.** Potassium has 19 protons where argon has 18. Every peak the two spectra share is at a higher binding energy in potassium. The electrons are in the same shells, with the same electrons inside them, and one more proton is pulling.
+
+**How general this is.** Among the first twenty elements, every peak that belongs to an inner subshell moves to a higher binding energy each time a proton is added. The peak of the outermost subshell usually moves the same way. Twice among these twenty elements it slips back slightly, both times when a p subshell takes its fourth electron, and topic 1.7 explains why. When an element starts a new subshell, its lowest peak is a new peak, not an old one that moved.
+
+<Worked title="Explaining where a peak is">
+
+The 3p peak is at 1.52 MJ/mol in argon and at 2.38 MJ/mol in potassium. Potassium also has a peak at 0.42 MJ/mol, lower than any peak of argon. Explain both observations with Coulomb's law.
+
+1. **Say what the positions mean.** A higher binding energy means more energy to remove the electron. So potassium holds its 3p electrons more tightly than argon holds its own, and the electron at 0.42 MJ/mol is the most loosely held electron in either atom.
+
+2. **Compare the 3p electrons, lever by lever.** Distance: third shell in both atoms. Shielding: the same ten electrons, 1s² 2s² 2p⁶, lie inside the third shell in both. Nuclear charge: 19 protons in potassium, 18 in argon.
+
+3. **Give the reason.** Same shell, same shielding, one more proton: the effective nuclear charge on a 3p electron is estimated as about 19 − 10 = +9 in potassium and about 18 − 10 = +8 in argon. By Coulomb's law the larger charge attracts the electron more strongly, so it takes more energy to remove.
+
+4. **Turn to the new peak.** Potassium's configuration ends in 4s¹. That electron is in the fourth shell, farther from the nucleus than the third. All 18 of the other electrons lie inside it, so its effective nuclear charge is about 19 − 18 = +1. A small charge at a large distance is a weak attraction, and a weak attraction is a small binding energy.
+
+5. **Write the answer.** "Potassium's 3p peak is at a higher binding energy than argon's because potassium's nucleus has 19 protons to argon's 18, while the 3p electrons of both atoms are in the same shell and are shielded by the same 10 inner electrons. The greater effective nuclear charge attracts them more strongly, so more energy is needed to remove one. Potassium's peak at 0.42 MJ/mol is its 4s electron. It is in a shell farther from the nucleus and is shielded by 18 core electrons, so it is attracted weakly and takes little energy to remove."
+
+</Worked>
+
+<Check answer={3}>
+With both spectra drawn to the same scale, the peak at the lowest binding energy is at 0.42 MJ/mol in the spectrum of potassium and at 0.59 MJ/mol in the spectrum of calcium, the next element, where it is twice as tall. What do the height and the position of calcium's peak show, and why?
+
+- Twice as many 4s electrons, each held twice as tightly, because the peak is twice as tall.
+- Twice as many 4s electrons, each easier to remove, because two electrons in a subshell repel.
+- Twice as many 4s electrons, each held more tightly: one more proton and the same shielding.
+- More tightly held 4s electrons, shown by the height, and more of them, shown by the position.
+
+<div slot="why">
+
+The two readings answer different questions, and this peak changes in both.
+
+Height is a count: twice as tall means twice as many electrons, 4s² in calcium against 4s¹ in potassium.
+
+Position is energy: 0.59 MJ/mol is more than 0.42 MJ/mol, so each of calcium's 4s electrons takes more energy to remove than potassium's one.
+
+The reason is Coulomb's law. In both atoms the 4s electrons are in the fourth shell, with the same eighteen electrons inside to shield them. Calcium's nucleus has 20 protons to potassium's 19, so the effective nuclear charge is about 20 − 18 = +2 against about 19 − 18 = +1, and a larger charge acting on the same shell attracts more strongly.
+
+Calcium's two 4s electrons do repel each other, but here that repulsion is much smaller than the pull of the extra proton.
+
+And the peak is twice as tall without being at twice the binding energy:
+
+$$
+\frac{0.59}{0.42} = 1.4
+$$
+
+A height never measures how tightly electrons are held.
+
+</div>
+</Check>
+
+## What a spectrum says about the model
+
+The shells and subshells of topic 1.5 are not just a bookkeeping scheme. Spectra are the evidence for them, in three ways.
+
+- **Heights stop at 2 and at 6.** Follow the spectra from hydrogen to calcium (the interactive diagram above has all twenty) and no peak stands for more than 6 electrons. Some peaks stop growing at 2 electrons and the others at 6, and once a peak has reached its limit the next electron starts a new peak. Those limits are the capacities of an s subshell and a p subshell.
+- **The energies fall into groups.** Set calcium's six binding energies out as one line: 390, then 42.7 and 34.0, then 4.65 and 2.90, then 0.59. From the last peak of one group to the first peak of the next, the binding energy drops by a factor of about 5 to 9. Electrons come with a few distinct ranges of energy, not with every energy. The model reads those four ranges as shells 1, 2, 3 and 4, each farther from the nucleus, on average, than the one before.
+- **A group can hold two peaks.** Calcium's second group has two peaks, and so has its third. Within a group the two differ by less than a factor of 2, against the factor of about 5 to 9 from the last peak of one group to the first peak of the next. If the eight electrons of the second shell were all alike, the spectrum would show one peak there, standing for 8 electrons. It shows two, standing for 2 and 6. So a shell is split into subshells that differ a little in energy.
+
+The number of peaks, their heights and the order of their positions are what the configuration predicts. That is the sense in which the model is consistent with the measurements.
+
+## The spectrum of an ion
+
+An ion has a photoelectron spectrum of its own, and it is read the same way: write the ion's configuration (topic 1.5), and each subshell gives a peak. A fluoride ion, F⁻, is 1s² 2s² 2p⁶: one more 2p electron than a fluorine atom, so its last peak stands for 6 electrons where the atom's stands for 5.
+
+<Check answer={2}>
+The worked example's element, calcium, forms the ion Ca²⁺. How does the photoelectron spectrum of Ca²⁺ differ from the spectrum of a calcium atom?
+
+- The peak at the highest binding energy is gone, because the electrons nearest the nucleus are removed first.
+- The peak at the lowest binding energy is gone, and the other five keep their heights.
+- All six peaks are still there, and the two tallest now stand for 5 electrons each.
+- All six peaks are still there with the same heights, each at a lower binding energy.
+
+<div slot="why">
+
+Start from the atom, 1s² 2s² 2p⁶ 3s² 3p⁶ 4s². The ion has lost two electrons from its highest shell, the two 4s electrons, which leaves 1s² 2s² 2p⁶ 3s² 3p⁶: 18 electrons in five subshells.
+
+So the spectrum has five peaks, standing for 2, 2, 6, 2 and 6 electrons, and the 4s peak, the one at the lowest binding energy, has no electrons left to make it.
+
+The five peaks that remain are not where they were. Twenty protons now hold 18 electrons, which repel one another less than 20 did, so each is held more tightly and each peak is at a higher binding energy than in the atom.
+
+An argon atom has the same configuration and the same five heights, but only 18 protons, so its peaks lie at lower binding energies than those of Ca²⁺.
+
+</div>
+</Check>
+
+The positions change as well as the heights. In a cation the same protons hold fewer electrons, so every remaining peak is at a higher binding energy than in the atom. In an anion the same protons hold more electrons, which repel one another more, and every peak is at a lower binding energy.
+
+<Trap>
+
+Six misreadings to watch for:
+
+- **Taking a tall peak for a tightly held one.** How far a peak stands toward the high end of the energy axis tells how tightly its electrons are held. How tall it is tells only how many of them there are.
+- **Reading this graph like the mass spectrum of topic 1.2.** There the horizontal axis was mass, and a height was a share of the atoms. Here the horizontal axis is energy, and a height is a count of the electrons in one subshell of an atom.
+- **Assuming which way the axis runs.** Read its numbers. The 1s peak is the one at the highest binding energy, whichever side that is.
+- **Counting peaks as electrons, or as shells.** A peak is a subshell. Calcium's six peaks are 20 electrons in four shells.
+- **Thinking the peaks are one atom losing its electrons one after another.** Each peak's position is the energy to remove one electron from an atom or ion that still has all its others.
+- **Explaining a shift without a cause.** To say why a peak is where it is, or why it moved, name what acts on the electron: the number of protons, the shell the electron is in, or the shielding by the electrons inside it. A sentence that names none of the three has not explained the shift.
+
+</Trap>
+
+<KeyPoints>
+
+- Photoelectron spectroscopy measures the energy needed to remove an electron from each subshell of an atom. That energy is the binding energy, reported in MJ/mol.
+- A spectrum has one peak for each occupied subshell. A peak's position is the binding energy, and its height is the number of electrons in the subshell.
+- The energy axis can run either way, so read it. In a complete spectrum the peak at the highest binding energy is 1s, and it stands for 2 electrons in every element after hydrogen.
+- The heights give the configuration, their sum gives the number of electrons, and for a neutral atom that names the element.
+- A peak is at a higher binding energy when its electrons feel a larger effective nuclear charge or are in a shell closer to the nucleus. So 1s is highest, and adding a proton moves the peaks of the inner subshells to higher energies.
+- Peaks in separate groups are the evidence for shells, and close pairs of peaks standing for 2 and 6 electrons are the evidence for subshells.
+
+</KeyPoints>
+
+<PracticeNext />

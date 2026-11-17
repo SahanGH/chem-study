@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Eight subshells in filling order, lowest at the bottom; 1s top 368, 2s top 304, 2p top 268, 3s top 204, 3p top 168, 4s top 118, 3d top 82, 4p top 46. Each box is 30 square: 1 for s, 3 for p, 5 for d. Big steps (64) after 1s and 2p, a middle step (50) after 3p, close steps (36) elsewhere. Built by gen-figs.cjs. -->
+  <rect width="480" height="440" fill="#FDFCF9"/>
+
+  <!-- The arrow: fills first at its foot, fills later at its head. -->
+  <path d="M84 398V58" fill="none" stroke="#26231F" stroke-width="2.5"/>
+  <path d="M76 60H92L84 46Z" fill="#26231F"/>
+  <text x="84" y="32" text-anchor="middle" fill="#26231F">fills later</text>
+  <text x="84" y="424" text-anchor="middle" fill="#26231F">fills first</text>
+
+  <g>
+    <rect x="182" y="368" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <text x="170" y="389.5" text-anchor="end" fill="#26231F" font-weight="600">1s</text>
+    <text x="226" y="389.5" fill="#6B655D">holds 2</text>
+    <rect x="182" y="304" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <text x="170" y="325.5" text-anchor="end" fill="#26231F" font-weight="600">2s</text>
+    <text x="226" y="325.5" fill="#6B655D">holds 2</text>
+    <rect x="182" y="268" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <rect x="212" y="268" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <rect x="242" y="268" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <text x="170" y="289.5" text-anchor="end" fill="#26231F" font-weight="600">2p</text>
+    <text x="286" y="289.5" fill="#6B655D">holds 6</text>
+    <rect x="182" y="204" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <text x="170" y="225.5" text-anchor="end" fill="#26231F" font-weight="600">3s</text>
+    <text x="226" y="225.5" fill="#6B655D">holds 2</text>
+    <rect x="182" y="168" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <rect x="212" y="168" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <rect x="242" y="168" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <text x="170" y="189.5" text-anchor="end" fill="#26231F" font-weight="600">3p</text>
+    <text x="286" y="189.5" fill="#6B655D">holds 6</text>
+    <rect x="182" y="118" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <text x="170" y="139.5" text-anchor="end" fill="#26231F" font-weight="600">4s</text>
+    <text x="226" y="139.5" fill="#6B655D">holds 2</text>
+    <rect x="182" y="82" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <rect x="212" y="82" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <rect x="242" y="82" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <rect x="272" y="82" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <rect x="302" y="82" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <text x="170" y="103.5" text-anchor="end" fill="#26231F" font-weight="600">3d</text>
+    <text x="346" y="103.5" fill="#6B655D">holds 10</text>
+    <rect x="182" y="46" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <rect x="212" y="46" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <rect x="242" y="46" width="30" height="30" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <text x="170" y="67.5" text-anchor="end" fill="#26231F" font-weight="600">4p</text>
+    <text x="286" y="67.5" fill="#6B655D">holds 6</text>
+  </g>
+</svg>

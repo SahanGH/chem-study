@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 296" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Three boxes of the same size. Filled circles are atoms of one element; smaller open circles are atoms of a second element. Element: 9 separate filled atoms. Compound: 6 identical three-atom molecules (one filled atom, two open atoms). Mixture: 4 of those three-atom molecules and 5 two-atom molecules (one filled atom, one open atom), a second compound of the same two elements. No particle touches another or the wall. Positions were computed with a script, not placed by eye. -->
+  <defs>
+    <circle id="atom" r="12" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+    <g id="m3">
+      <circle cx="10.9" cy="15.6" r="8" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="10.9" cy="-15.6" r="8" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+      <circle r="12" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+    </g>
+    <g id="m2">
+      <circle cx="19" cy="0" r="8" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+      <circle r="12" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+    </g>
+  </defs>
+  <rect width="480" height="296" fill="#FDFCF9"/>
+
+  <text x="82" y="28" text-anchor="middle" fill="#26231F" font-weight="600">Element</text>
+  <rect x="8" y="40" width="148" height="212" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <use href="#atom" x="38" y="63"/>
+  <use href="#atom" x="84" y="73"/>
+  <use href="#atom" x="132" y="73"/>
+  <use href="#atom" x="36" y="110"/>
+  <use href="#atom" x="128" y="126"/>
+  <use href="#atom" x="81" y="137"/>
+  <use href="#atom" x="35" y="163"/>
+  <use href="#atom" x="118" y="194"/>
+  <use href="#atom" x="63" y="206"/>
+  <text x="82" y="280" text-anchor="middle" fill="#26231F">one pile</text>
+
+  <text x="240" y="28" text-anchor="middle" fill="#26231F" font-weight="600">Compound</text>
+  <rect x="166" y="40" width="148" height="212" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <use href="#m3" transform="translate(249 69) rotate(140)"/>
+  <use href="#m3" transform="translate(202 106) rotate(180)"/>
+  <use href="#m3" transform="translate(278 130) rotate(0)"/>
+  <use href="#m3" transform="translate(231 169) rotate(320)"/>
+  <use href="#m3" transform="translate(276 219) rotate(90)"/>
+  <use href="#m3" transform="translate(194 224) rotate(315)"/>
+  <text x="240" y="280" text-anchor="middle" fill="#26231F">one pile</text>
+
+  <text x="398" y="28" text-anchor="middle" fill="#26231F" font-weight="600">Mixture</text>
+  <rect x="324" y="40" width="148" height="212" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <use href="#m2" transform="translate(448 64) rotate(80)"/>
+  <use href="#m3" transform="translate(346 66) rotate(30)"/>
+  <use href="#m2" transform="translate(401 71) rotate(135)"/>
+  <use href="#m3" transform="translate(425 127) rotate(300)"/>
+  <use href="#m2" transform="translate(350 136) rotate(100)"/>
+  <use href="#m2" transform="translate(446 167) rotate(80)"/>
+  <use href="#m2" transform="translate(385 176) rotate(280)"/>
+  <use href="#m3" transform="translate(361 220) rotate(90)"/>
+  <use href="#m3" transform="translate(430 227) rotate(295)"/>
+  <text x="398" y="280" text-anchor="middle" fill="#26231F">two piles</text>
+</svg>

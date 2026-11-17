@@ -1,0 +1,591 @@
+{"H": {
+"z": 1,
+"row": 1,
+"column": 1
+},
+"He": {
+"z": 2,
+"row": 1,
+"column": 18
+},
+"Li": {
+"z": 3,
+"row": 2,
+"column": 1
+},
+"Be": {
+"z": 4,
+"row": 2,
+"column": 2
+},
+"B": {
+"z": 5,
+"row": 2,
+"column": 13
+},
+"C": {
+"z": 6,
+"row": 2,
+"column": 14
+},
+"N": {
+"z": 7,
+"row": 2,
+"column": 15
+},
+"O": {
+"z": 8,
+"row": 2,
+"column": 16
+},
+"F": {
+"z": 9,
+"row": 2,
+"column": 17
+},
+"Ne": {
+"z": 10,
+"row": 2,
+"column": 18
+},
+"Na": {
+"z": 11,
+"row": 3,
+"column": 1
+},
+"Mg": {
+"z": 12,
+"row": 3,
+"column": 2
+},
+"Al": {
+"z": 13,
+"row": 3,
+"column": 13
+},
+"Si": {
+"z": 14,
+"row": 3,
+"column": 14
+},
+"P": {
+"z": 15,
+"row": 3,
+"column": 15
+},
+"S": {
+"z": 16,
+"row": 3,
+"column": 16
+},
+"Cl": {
+"z": 17,
+"row": 3,
+"column": 17
+},
+"Ar": {
+"z": 18,
+"row": 3,
+"column": 18
+},
+"K": {
+"z": 19,
+"row": 4,
+"column": 1
+},
+"Ca": {
+"z": 20,
+"row": 4,
+"column": 2
+},
+"Sc": {
+"z": 21,
+"row": 4,
+"column": 3
+},
+"Ti": {
+"z": 22,
+"row": 4,
+"column": 4
+},
+"V": {
+"z": 23,
+"row": 4,
+"column": 5
+},
+"Cr": {
+"z": 24,
+"row": 4,
+"column": 6
+},
+"Mn": {
+"z": 25,
+"row": 4,
+"column": 7
+},
+"Fe": {
+"z": 26,
+"row": 4,
+"column": 8
+},
+"Co": {
+"z": 27,
+"row": 4,
+"column": 9
+},
+"Ni": {
+"z": 28,
+"row": 4,
+"column": 10
+},
+"Cu": {
+"z": 29,
+"row": 4,
+"column": 11
+},
+"Zn": {
+"z": 30,
+"row": 4,
+"column": 12
+},
+"Ga": {
+"z": 31,
+"row": 4,
+"column": 13
+},
+"Ge": {
+"z": 32,
+"row": 4,
+"column": 14
+},
+"As": {
+"z": 33,
+"row": 4,
+"column": 15
+},
+"Se": {
+"z": 34,
+"row": 4,
+"column": 16
+},
+"Br": {
+"z": 35,
+"row": 4,
+"column": 17
+},
+"Kr": {
+"z": 36,
+"row": 4,
+"column": 18
+},
+"Rb": {
+"z": 37,
+"row": 5,
+"column": 1
+},
+"Sr": {
+"z": 38,
+"row": 5,
+"column": 2
+},
+"Y": {
+"z": 39,
+"row": 5,
+"column": 3
+},
+"Zr": {
+"z": 40,
+"row": 5,
+"column": 4
+},
+"Nb": {
+"z": 41,
+"row": 5,
+"column": 5
+},
+"Mo": {
+"z": 42,
+"row": 5,
+"column": 6
+},
+"Tc": {
+"z": 43,
+"row": 5,
+"column": 7
+},
+"Ru": {
+"z": 44,
+"row": 5,
+"column": 8
+},
+"Rh": {
+"z": 45,
+"row": 5,
+"column": 9
+},
+"Pd": {
+"z": 46,
+"row": 5,
+"column": 10
+},
+"Ag": {
+"z": 47,
+"row": 5,
+"column": 11
+},
+"Cd": {
+"z": 48,
+"row": 5,
+"column": 12
+},
+"In": {
+"z": 49,
+"row": 5,
+"column": 13
+},
+"Sn": {
+"z": 50,
+"row": 5,
+"column": 14
+},
+"Sb": {
+"z": 51,
+"row": 5,
+"column": 15
+},
+"Te": {
+"z": 52,
+"row": 5,
+"column": 16
+},
+"I": {
+"z": 53,
+"row": 5,
+"column": 17
+},
+"Xe": {
+"z": 54,
+"row": 5,
+"column": 18
+},
+"Cs": {
+"z": 55,
+"row": 6,
+"column": 1
+},
+"Ba": {
+"z": 56,
+"row": 6,
+"column": 2
+},
+"La": {
+"z": 57,
+"row": 9,
+"column": 4
+},
+"Ce": {
+"z": 58,
+"row": 9,
+"column": 5
+},
+"Pr": {
+"z": 59,
+"row": 9,
+"column": 6
+},
+"Nd": {
+"z": 60,
+"row": 9,
+"column": 7
+},
+"Pm": {
+"z": 61,
+"row": 9,
+"column": 8
+},
+"Sm": {
+"z": 62,
+"row": 9,
+"column": 9
+},
+"Eu": {
+"z": 63,
+"row": 9,
+"column": 10
+},
+"Gd": {
+"z": 64,
+"row": 9,
+"column": 11
+},
+"Tb": {
+"z": 65,
+"row": 9,
+"column": 12
+},
+"Dy": {
+"z": 66,
+"row": 9,
+"column": 13
+},
+"Ho": {
+"z": 67,
+"row": 9,
+"column": 14
+},
+"Er": {
+"z": 68,
+"row": 9,
+"column": 15
+},
+"Tm": {
+"z": 69,
+"row": 9,
+"column": 16
+},
+"Yb": {
+"z": 70,
+"row": 9,
+"column": 17
+},
+"Lu": {
+"z": 71,
+"row": 9,
+"column": 18
+},
+"Hf": {
+"z": 72,
+"row": 6,
+"column": 4
+},
+"Ta": {
+"z": 73,
+"row": 6,
+"column": 5
+},
+"W": {
+"z": 74,
+"row": 6,
+"column": 6
+},
+"Re": {
+"z": 75,
+"row": 6,
+"column": 7
+},
+"Os": {
+"z": 76,
+"row": 6,
+"column": 8
+},
+"Ir": {
+"z": 77,
+"row": 6,
+"column": 9
+},
+"Pt": {
+"z": 78,
+"row": 6,
+"column": 10
+},
+"Au": {
+"z": 79,
+"row": 6,
+"column": 11
+},
+"Hg": {
+"z": 80,
+"row": 6,
+"column": 12
+},
+"Tl": {
+"z": 81,
+"row": 6,
+"column": 13
+},
+"Pb": {
+"z": 82,
+"row": 6,
+"column": 14
+},
+"Bi": {
+"z": 83,
+"row": 6,
+"column": 15
+},
+"Po": {
+"z": 84,
+"row": 6,
+"column": 16
+},
+"At": {
+"z": 85,
+"row": 6,
+"column": 17
+},
+"Rn": {
+"z": 86,
+"row": 6,
+"column": 18
+},
+"Fr": {
+"z": 87,
+"row": 7,
+"column": 1
+},
+"Ra": {
+"z": 88,
+"row": 7,
+"column": 2
+},
+"Ac": {
+"z": 89,
+"row": 10,
+"column": 4
+},
+"Th": {
+"z": 90,
+"row": 10,
+"column": 5
+},
+"Pa": {
+"z": 91,
+"row": 10,
+"column": 6
+},
+"U": {
+"z": 92,
+"row": 10,
+"column": 7
+},
+"Np": {
+"z": 93,
+"row": 10,
+"column": 8
+},
+"Pu": {
+"z": 94,
+"row": 10,
+"column": 9
+},
+"Am": {
+"z": 95,
+"row": 10,
+"column": 10
+},
+"Cm": {
+"z": 96,
+"row": 10,
+"column": 11
+},
+"Bk": {
+"z": 97,
+"row": 10,
+"column": 12
+},
+"Cf": {
+"z": 98,
+"row": 10,
+"column": 13
+},
+"Es": {
+"z": 99,
+"row": 10,
+"column": 14
+},
+"Fm": {
+"z": 100,
+"row": 10,
+"column": 15
+},
+"Md": {
+"z": 101,
+"row": 10,
+"column": 16
+},
+"No": {
+"z": 102,
+"row": 10,
+"column": 17
+},
+"Lr": {
+"z": 103,
+"row": 10,
+"column": 18
+},
+"Rf": {
+"z": 104,
+"row": 7,
+"column": 4
+},
+"Db": {
+"z": 105,
+"row": 7,
+"column": 5
+},
+"Sg": {
+"z": 106,
+"row": 7,
+"column": 6
+},
+"Bh": {
+"z": 107,
+"row": 7,
+"column": 7
+},
+"Hs": {
+"z": 108,
+"row": 7,
+"column": 8
+},
+"Mt": {
+"z": 109,
+"row": 7,
+"column": 9
+},
+"Ds": {
+"z": 110,
+"row": 7,
+"column": 10
+},
+"Rg": {
+"z": 111,
+"row": 7,
+"column": 11
+},
+"Cn": {
+"z": 112,
+"row": 7,
+"column": 12
+},
+"Nh": {
+"z": 113,
+"row": 7,
+"column": 13
+},
+"Fl": {
+"z": 114,
+"row": 7,
+"column": 14
+},
+"Mc": {
+"z": 115,
+"row": 7,
+"column": 15
+},
+"Lv": {
+"z": 116,
+"row": 7,
+"column": 16
+},
+"Ts": {
+"z": 117,
+"row": 7,
+"column": 17
+},
+"Og": {
+"z": 118,
+"row": 7,
+"column": 18
+}
+}
