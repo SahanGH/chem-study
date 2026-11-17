@@ -1,0 +1,24 @@
+---
+import Base from './Base.astro';
+import '../styles/reference.css';
+
+// An MDX page under src/pages/ that names this file as its `layout` receives
+// its front matter as a prop.
+interface Props {
+  frontmatter: { title?: unknown; description?: unknown };
+}
+const { frontmatter } = Astro.props;
+const { title, description } = frontmatter;
+if (typeof title !== 'string' || title === '' || typeof description !== 'string' || description === '') {
+  throw new Error(
+    'A reference page needs a title and a description in its front matter, both as non-empty text. ' +
+      `Got title ${JSON.stringify(title)} and description ${JSON.stringify(description)}.`,
+  );
+}
+---
+
+<Base title={title} description={description}>
+  <article class="prose reference" data-pagefind-body>
+    <slot />
+  </article>
+</Base>

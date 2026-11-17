@@ -266,3 +266,117 @@ test.describe('the periodic table page', () => {
     });
   });
 });
+
+test.describe('the equations and constants page', () => {
+  const PATH = '/tools/equations/';
+  const SECTIONS = [
+    'Atoms and moles',
+    'Light',
+    'Gases',
+    'Solutions and light absorbed',
+    'Kinetics',
+    'Equilibrium',
+    'Acids and bases',
+    'Heat and enthalpy',
+    'Entropy and free energy',
+    'Electrochemistry',
+    'Units and prefixes',
+    'Not on the sheet',
+  ];
+
+  test('has a heading, a title and a description', async ({ page }) => {
+    await page.goto(PATH);
+
+    await expect(page.getByRole('heading', { level: 1, name: 'Equations and constants' })).toBeVisible();
+    await expect(page).toHaveTitle('Equations and constants: ChemStudy');
+    await expect(page.locator('meta[name="description"]')).toHaveAttribute(
+      'content',
+      'Every equation and constant the AP Chemistry exam gives you, what each symbol means, and the topic that teaches it.',
+    );
+  });
+
+  test('shows the twelve sections in order', async ({ page }) => {
+    await page.goto(PATH);
+
+    await expect(page.locator('article h2')).toHaveText(SECTIONS);
+  });
+
+  test('renders its math: many equations, no TeX source left, no KaTeX error', async ({ page }) => {
+    await page.goto(PATH);
+
+    expect(await page.locator('.katex-display').count()).toBeGreaterThan(30);
+    await expect(page.locator('.katex-error')).toHaveCount(0);
+    const text = await page.locator('main').innerText();
+    expect(text).not.toMatch(/\\|\$/);
+  });
+
+  for (const value of ['6.022', '6.626', '2.998', '0.08206', '8.314', '22.4', '0.693', '96,485']) {
+    test(`shows the value ${value}`, async ({ page }) => {
+      await page.goto(PATH);
+
+      await expect(page.locator('article')).toContainText(value);
+    });
+  }
+
+  test('links "Topic 3.4, Ideal Gas Law" to its lesson', async ({ page }) => {
+    await page.goto(PATH);
+    const link = page.getByRole('link', { name: 'Topic 3.4, Ideal Gas Law' }).first();
+
+    await expect(link).toHaveAttribute('href', '/unit-3-substances-and-mixtures/3-4-ideal-gas-law/');
+  });
+
+  test('leaves a topic with no lesson yet as plain text', async ({ page }) => {
+    await page.goto(PATH);
+
+    await expect(page.getByRole('link', { name: /Topic 8\.9/ })).toHaveCount(0);
+    await expect(page.getByText('Topic 8.9, Henderson–Hasselbalch Equation').first()).toBeVisible();
+  });
+
+  test('lists the eight metric prefixes the exam gives, with their symbols and factors', async ({ page }) => {
+    await page.goto(PATH);
+    const rows = page.locator('article table tbody tr');
+
+    await expect(rows).toHaveCount(8);
+    await expect(rows.first().locator('th, td')).toHaveText(['giga', 'G', '10⁹']);
+    await expect(rows.last().locator('th, td')).toHaveText(['pico', 'p', '10⁻¹²']);
+  });
+
+  test('says in "Not on the sheet" where K_sp and the rate law are taught', async ({ page }) => {
+    await page.goto(PATH);
+    const notOnSheet = page.locator('section, article').filter({ has: page.getByRole('heading', { name: 'Not on the sheet' }) }).last();
+
+    await expect(page.getByRole('link', { name: /Topic 7\.11, / }).last()).toHaveAttribute('href', /\/7-11-/);
+    await expect(notOnSheet).toContainText('rate law');
+  });
+
+  for (const width of WIDTHS) {
+    test(`at ${width}px the page does not scroll sideways and no equation or table scrolls in its box`, async ({ page }) => {
+      await page.setViewportSize({ width, height: 800 });
+      await page.goto(PATH);
+      await expect(page.getByRole('heading', { level: 1, name: 'Equations and constants' })).toBeVisible();
+      await page.evaluate(() => document.fonts.ready);
+
+      expect(await pageOverflow(page)).toBeLessThanOrEqual(0);
+      const equations = page.locator('.katex-display');
+      expect(await equations.count()).toBeGreaterThan(30);
+      const scrolling = await page.locator('.katex-display, article table').evaluateAll((boxes) =>
+        boxes.flatMap((box, index) => (box.scrollWidth > box.clientWidth ? [`${index}: ${box.textContent?.slice(0, 40)}`] : [])),
+      );
+      expect(scrolling).toEqual([]);
+    });
+  }
+
+  for (const theme of ['light', 'dark'] as const) {
+    test(`has no accessibility violations in the ${theme} theme`, async ({ page }) => {
+      await expectNoViolations(page, theme, PATH, 'Equations and constants');
+    });
+  }
+
+  test('is found by searching the site for "Faraday"', async ({ page }) => {
+    await page.goto('/');
+    await page.getByRole('button', { name: 'Search' }).click();
+    await page.locator('.pagefind-ui__search-input').fill('Faraday');
+
+    await expect(page.locator('.pagefind-ui__result-link[href*="/tools/equations/"]').first()).toBeVisible();
+  });
+});
