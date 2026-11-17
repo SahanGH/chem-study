@@ -403,11 +403,84 @@ test.describe('the equations and constants page', () => {
     await expect(link).toHaveAttribute('href', '/unit-3-substances-and-mixtures/3-4-ideal-gas-law/');
   });
 
-  test('leaves a topic with no lesson yet as plain text', async ({ page }) => {
+  // The line under an equation, found by a piece of the equation's own TeX. A
+  // pair of equations is captioned under the second, so name the second.
+  const captionOf = (page: Page, tex: string) =>
+    page
+      .locator('article .katex-display', { has: page.locator('annotation', { hasText: tex }) })
+      .first()
+      .locator('xpath=following-sibling::p[1]');
+
+  test('gives the pK_a and pK_b lines topic 8.3, where the framework prints them', async ({ page }) => {
     await page.goto(PATH);
 
-    await expect(page.getByRole('link', { name: /Topic 8\.9/ })).toHaveCount(0);
-    await expect(page.getByText('Topic 8.9, Henderson–Hasselbalch Equation').first()).toBeVisible();
+    await expect(captionOf(page, String.raw`\text{p}K_b = -\log K_b`)).toContainText('Topic 8.3');
+  });
+
+  test('gives the pH and pOH definitions topic 8.1, and cites neither 8.2 nor 8.7', async ({ page }) => {
+    await page.goto(PATH);
+
+    await expect(captionOf(page, String.raw`\text{pOH} = -\log[\ce{OH-}]`)).toContainText('Topic 8.1');
+    const text = await page.locator('article').innerText();
+    expect(text).not.toContain('Topic 8.2');
+    expect(text).not.toContain('Topic 8.7');
+  });
+
+  test('gives density no topic, and says it is used throughout the course', async ({ page }) => {
+    await page.goto(PATH);
+    const caption = captionOf(page, String.raw`D = \dfrac{m}{V}`);
+
+    await expect(caption).toContainText('used throughout the course');
+    await expect(caption).not.toContainText('Topic');
+  });
+
+  test('promises a topic only where one topic teaches the equation', async ({ page }) => {
+    await page.goto(PATH);
+
+    await expect(page.locator('article > p').first()).toContainText('the topic that teaches it, where one topic does');
+  });
+
+  test('says what the symbols stand for in each free energy and cell potential line', async ({ page }) => {
+    await page.goto(PATH);
+
+    await expect(captionOf(page, String.raw`\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ`)).toContainText(
+      'standard free energy, enthalpy and entropy changes',
+    );
+    const fromK = captionOf(page, String.raw`\Delta G^\circ = -RT\ln K`);
+    await expect(fromK).toContainText('equilibrium constant');
+    await expect(fromK).toContainText('8.314');
+    const fromCell = captionOf(page, String.raw`\Delta G^\circ = -nFE^\circ`);
+    await expect(fromCell).toContainText('moles of electrons transferred');
+    await expect(fromCell).toContainText(/Faraday.s constant/);
+    await expect(fromCell).toContainText('standard cell potential');
+    const nernst = captionOf(page, String.raw`\ln Q`);
+    await expect(nernst).toContainText('reaction quotient');
+    await expect(nernst).toContainText('moles of electrons transferred');
+    await expect(nernst).toContainText('standard cell potential');
+  });
+
+  test('names the units the conversions use, and says the sheet lists fourteen unit symbols', async ({ page }) => {
+    await page.goto(PATH);
+    const text = await page.locator('article').innerText();
+
+    expect(text).toContain('1 hertz (Hz) = 1 s⁻¹');
+    expect(text).toContain('1 volt (V) = 1 joule per coulomb (J/C)');
+    expect(text).toContain('1 ampere (A) = 1 coulomb per second (C/s)');
+    expect(text).toContain('The sheet also lists the symbols of fourteen units, which this page does not repeat.');
+  });
+
+  test('says the sheet does not state that the half-life equation is for first order only', async ({ page }) => {
+    await page.goto(PATH);
+
+    await expect(captionOf(page, String.raw`t_{1/2} = \dfrac{0.693}{k}`)).toContainText(
+      'first-order reaction only (the sheet does not say so)',
+    );
+  });
+
+  test('says q is charge in some places and heat in another', async ({ page }) => {
+    await page.goto(PATH);
+
+    await expect(page.locator('article > p').last()).toContainText('charge in some places and heat in another');
   });
 
   test('lists the eight metric prefixes the exam gives, with their symbols and factors', async ({ page }) => {
@@ -419,12 +492,34 @@ test.describe('the equations and constants page', () => {
     await expect(rows.last().locator('th, td')).toHaveText(['pico', 'p', '10⁻¹²']);
   });
 
+  // The list that follows the "Not on the sheet" heading, and nothing else.
+  const notOnSheetList = (page: Page) =>
+    page.locator('xpath=//h2[normalize-space()="Not on the sheet"]/following-sibling::ul[1]');
+
   test('says in "Not on the sheet" where K_sp and the rate law are taught', async ({ page }) => {
     await page.goto(PATH);
-    const notOnSheet = page.locator('section, article').filter({ has: page.getByRole('heading', { name: 'Not on the sheet' }) }).last();
+    const list = notOnSheetList(page);
 
-    await expect(page.getByRole('link', { name: /Topic 7\.11, / }).last()).toHaveAttribute('href', /\/7-11-/);
-    await expect(notOnSheet).toContainText('rate law');
+    await expect(list.getByRole('listitem')).toHaveCount(6);
+    await expect(list.getByRole('link', { name: /Topic 7\.11, / })).toHaveAttribute('href', /\/7-11-/);
+    await expect(list.getByRole('listitem').filter({ hasText: 'rate law' })).toContainText('Topic 5.2');
+  });
+
+  test('says in "Not on the sheet" that Q is on the sheet but not how to write it', async ({ page }) => {
+    await page.goto(PATH);
+    const item = notOnSheetList(page).getByRole('listitem').filter({ hasText: 'reaction quotient' });
+
+    // Inline math is in the text three times (rendered, MathML, TeX), so read
+    // each formula once, as its TeX source.
+    const sentence = await item.evaluate((element) => {
+      const copy = element.cloneNode(true);
+      if (!(copy instanceof Element)) throw new Error('The list item did not clone to an element.');
+      for (const math of copy.querySelectorAll('.katex')) math.replaceWith(math.querySelector('annotation')?.textContent ?? '');
+      return copy.textContent ?? '';
+    });
+    expect(sentence).toContain(
+      'The expression for the reaction quotient Q. The sheet uses Q in the cell-potential equation but does not say how to write it.',
+    );
   });
 
   for (const width of WIDTHS) {

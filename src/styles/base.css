@@ -433,7 +433,7 @@ a.unit-title:hover {
 .home-reference {
   margin-top: calc(var(--space) * 1.5);
 }
-.home-reference p:not(.eyebrow) {
+.home-reference p {
   margin: 0.8rem 0 0;
   max-width: 36rem;
   font-family: var(--font-ui);
