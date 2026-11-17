@@ -1,6 +1,8 @@
 export type Block = 's' | 'p' | 'd' | 'f';
 
-export interface Element {
+// Named ChemicalElement so that it does not shadow the DOM's Element in the
+// files that import it.
+export type ChemicalElement = {
   /** Atomic number. */
   readonly z: number;
   readonly symbol: string;
@@ -13,13 +15,16 @@ export interface Element {
   /** 1 to 7. */
   readonly period: number;
   readonly block: Block;
-}
+};
 
 // The 118 elements as the AP exam's periodic table gives them, generated from
-// a reading of the table's picture and checked cell by cell against a second,
-// independent reading (tests/unit/fixtures/ap-atomic-masses.json). The exam
-// prints no mass for 34 of them.
-export const elements: readonly Element[] = [
+// a reading of the table's picture. Two other readings of that picture are
+// held as fixtures, and tests/unit/elements.test.ts compares the data with
+// them: the masses (ap-atomic-masses.json, from a second reading) and where
+// each cell sits (ap-table-layout.json, from a third). Names, blocks and
+// periods are not cross-read that way; the periodic table page was checked
+// against the picture by hand. The exam prints no mass for 34 of the elements.
+export const elements: readonly ChemicalElement[] = [
   { z: 1, symbol: 'H', name: 'Hydrogen', mass: '1.008', group: 1, period: 1, block: 's' },
   { z: 2, symbol: 'He', name: 'Helium', mass: '4.00', group: 18, period: 1, block: 's' },
   { z: 3, symbol: 'Li', name: 'Lithium', mass: '6.94', group: 1, period: 2, block: 's' },
@@ -140,20 +145,22 @@ export const elements: readonly Element[] = [
   { z: 118, symbol: 'Og', name: 'Oganesson', mass: null, group: 18, period: 7, block: 'p' },
 ];
 
-const bySymbol: ReadonlyMap<string, Element> = new Map(elements.map((element) => [element.symbol, element]));
+const bySymbol: ReadonlyMap<string, ChemicalElement> = new Map(elements.map((element) => [element.symbol, element]));
 
-export function elementBySymbol(symbol: string): Element | undefined {
+export function elementBySymbol(symbol: string): ChemicalElement | undefined {
   return bySymbol.get(symbol);
 }
 
 // The exam's table sets the lanthanoids and actinoids in two rows below the
-// main table, in columns 3 to 17 (fifteen boxes each), with a gap row between.
+// main table, in columns 4 to 18 (fifteen boxes each, flush with the table's
+// right edge: La and Ac under group 4, Lu and Lr under group 18), with a gap
+// row between.
 const LANTHANOIDS = { first: 57, last: 71, row: 9 } as const;
 const ACTINOIDS = { first: 89, last: 103, row: 10 } as const;
-const SERIES_FIRST_COLUMN = 3;
+const SERIES_FIRST_COLUMN = 4;
 
 /** Where the element sits in the exam's layout: rows 1 to 7 for the main table, rows 9 and 10 for the two series below it; columns 1 to 18. */
-export function tablePosition(element: Element): { row: number; column: number } {
+export function tablePosition(element: ChemicalElement): { row: number; column: number } {
   if (element.group !== null) return { row: element.period, column: element.group };
   for (const series of [LANTHANOIDS, ACTINOIDS]) {
     if (element.z >= series.first && element.z <= series.last) {
@@ -161,6 +168,6 @@ export function tablePosition(element: Element): { row: number; column: number }
     }
   }
   throw new Error(
-    `${element.name} (${element.symbol}, Z = ${element.z}) has no group and is not a lanthanoid (57-71) or an actinoid (89-103), so it has no place in the table.`,
+    `${element.name} (${element.symbol}, Z = ${element.z}) has no group and is not a lanthanoid (57-71) or an actinoid (89-103), so it has no place in the table. Give the element a group, or add its atomic number to a series in tablePosition.`,
   );
 }

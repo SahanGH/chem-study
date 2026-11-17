@@ -1,12 +1,17 @@
 import { describe, expect, it } from 'vitest';
+import apLayout from './fixtures/ap-table-layout.json';
 import apMasses from './fixtures/ap-atomic-masses.json';
-import { elementBySymbol, elements, tablePosition, type Element } from '../../src/data/elements';
+import { elementBySymbol, elements, tablePosition, type ChemicalElement } from '../../src/data/elements';
 
 // A second reader's list of the exam's 118 cells, made without looking at the
 // module's own source data, so a misread cell shows up as a difference.
 const apMassBySymbol = new Map<string, string | null>(Object.entries(apMasses));
 
-function requireElement(symbol: string): Element {
+// A third reading, of where each cell sits in the picture (row and column, the
+// two lower rows numbered 9 and 10 as the page numbers them).
+const layoutBySymbol = new Map<string, { z: number; row: number; column: number }>(Object.entries(apLayout));
+
+function requireElement(symbol: string): ChemicalElement {
   const found = elementBySymbol(symbol);
   if (!found) throw new Error(`Test setup: no element ${symbol}`);
   return found;
@@ -134,12 +139,24 @@ describe('tablePosition', () => {
     ['Sc', 4, 3],
     ['Hf', 6, 4],
     ['Og', 7, 18],
-    ['La', 9, 3],
-    ['Lu', 9, 17],
-    ['Ac', 10, 3],
-    ['Lr', 10, 17],
+    // The exam's two lower rows span columns 4 to 18: La and Ac under group 4,
+    // Lu and Lr under group 18, flush with the table's right edge.
+    ['La', 9, 4],
+    ['Lu', 9, 18],
+    ['Ac', 10, 4],
+    ['Lr', 10, 18],
   ])('puts %s at row %i, column %i', (symbol, row, column) => {
     expect(tablePosition(requireElement(symbol))).toEqual({ row, column });
+  });
+
+  it('puts every element where a third, independent reading of the exam table sets it', () => {
+    expect(layoutBySymbol.size).toBe(118);
+    for (const e of elements) {
+      const expected = layoutBySymbol.get(e.symbol);
+      expect(expected, `${e.symbol} is in the layout fixture`).toBeDefined();
+      expect(e.z, `${e.symbol}'s atomic number`).toBe(expected?.z);
+      expect(tablePosition(e), e.symbol).toEqual({ row: expected?.row, column: expected?.column });
+    }
   });
 
   it('gives all 118 elements different positions', () => {
@@ -155,7 +172,7 @@ describe('tablePosition', () => {
 
   it('keeps every element inside rows 1-7 and 9-10 and columns 1-18, never in row 8', () => {
     for (const p of elements.map(tablePosition)) {
-      expect(p.row === 8 || p.row < 1 || p.row > 10).toBe(false);
+      expect([1, 2, 3, 4, 5, 6, 7, 9, 10]).toContain(p.row);
       expect(p.column).toBeGreaterThanOrEqual(1);
       expect(p.column).toBeLessThanOrEqual(18);
     }
@@ -168,9 +185,15 @@ describe('tablePosition', () => {
     ['just above the actinoids', 104],
     ['the first element', 1],
   ])('throws, naming the element, for an element with no group %s (Z = %i)', (_where, z) => {
-    const stray: Element = { z, symbol: 'Xx', name: 'Strayium', mass: null, group: null, period: 6, block: 'f' };
+    const stray: ChemicalElement = { z, symbol: 'Xx', name: 'Strayium', mass: null, group: null, period: 6, block: 'f' };
 
     expect(() => tablePosition(stray)).toThrow(/Strayium/);
+  });
+
+  it('says what to do when it throws: give the element a group, or add it to a series', () => {
+    const stray: ChemicalElement = { z: 72, symbol: 'Xx', name: 'Strayium', mass: null, group: null, period: 6, block: 'f' };
+
+    expect(() => tablePosition(stray)).toThrow(/give the element a group, or add its atomic number to a series/i);
   });
 });
 
