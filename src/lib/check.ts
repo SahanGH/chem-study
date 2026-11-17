@@ -84,7 +84,9 @@ export function shownAnswer({ answer, numeric, unit }: CheckAnswer): string {
     );
   }
   const shown = asPowerOfTen(numeric);
-  return unit ? `${shown} ${unit}` : shown;
+  if (!unit) return shown;
+  // A percent sign is set against its number in US usage; every other unit takes a space.
+  return unit === '%' ? `${shown}%` : `${shown} ${unit}`;
 }
 
 /**

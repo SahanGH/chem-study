@@ -256,3 +256,9 @@ cs-check > .check-body {
 .check-why > * + * {
   margin-top: 0.5em;
 }
+/* The explanation arrives wrapped in one <div>, so the rule above never
+   reaches its paragraphs and lists. Equations are left out: .katex-display
+   sets its own, larger, space. */
+.check-why > div > * + :where(p, ul, ol) {
+  margin-top: 0.5em;
+}

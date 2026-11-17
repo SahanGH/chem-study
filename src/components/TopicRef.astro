@@ -1,0 +1,14 @@
+---
+import { lessonPath, lessonsByTopic } from '../lib/lessons';
+import { topicLabel } from '../lib/topic-ref';
+
+interface Props {
+  /** AP topic code, for example "3.4". */
+  code: string;
+}
+const { code } = Astro.props;
+
+const { unit, label, lesson } = topicLabel(code, await lessonsByTopic());
+---
+
+{lesson ? <a href={lessonPath(unit.slug, lesson)}>{label}</a> : <span>{label}</span>}
