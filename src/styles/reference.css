@@ -52,7 +52,9 @@
   font-size: 0.75rem;
   text-align: center;
   color: var(--muted);
-  white-space: nowrap;
+  /* "89–103 †" is wider than a 2.75rem cell; the mark wraps under the range
+     rather than hiding behind the next cell. */
+  line-height: 1.15;
 }
 
 /* The exam's labels for the two lower rows, in the free columns beside them. */

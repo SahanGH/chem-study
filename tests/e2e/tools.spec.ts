@@ -284,6 +284,20 @@ test.describe('the periodic table page', () => {
     expect(spilling).toEqual([]);
   });
 
+  test('at 320px the series placeholders and labels fit their cells, so no mark is hidden behind a neighbor', async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 800 });
+    await page.goto(PATH);
+    await expect(page.locator('.ptable li[data-symbol]')).toHaveCount(118);
+    await page.evaluate(() => document.fonts.ready);
+
+    const spilling = await page
+      .locator('.ptable-placeholder, .ptable-series-label')
+      .evaluateAll((items) =>
+        items.flatMap((el) => (el.scrollWidth > el.clientWidth ? [`${el.textContent}: ${el.scrollWidth} > ${el.clientWidth}`] : [])),
+      );
+    expect(spilling).toEqual([]);
+  });
+
   test('keeps cell text at 12px or larger', async ({ page }) => {
     await page.goto(PATH);
 
