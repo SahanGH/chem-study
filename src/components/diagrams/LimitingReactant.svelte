@@ -1,29 +1,37 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import {
+    ATOMS,
+    BOXES,
     GRID,
+    MOLECULES,
     RANGE,
     START,
+    controlLabel,
     countText,
     describeBox,
     particles,
     readout,
     table,
-    type BoxName,
     type Particle,
   } from '../../lib/limiting-reactant';
 
   // Drawing units. Each box is a fixed grid of five columns and three rows,
-  // and holds no text: the boxes are named in HTML above them and the atoms
-  // in the key below, so no drawn text can fall under 12 px on a phone.
+  // inset from the frame so that no molecule touches it, and holds no text:
+  // the boxes are named in HTML above them and the atoms in the key, so no
+  // drawn text can fall under 12 px on a phone.
   const CELL = { width: 44, height: 38 };
-  const VIEW = { width: GRID.columns * CELL.width, height: GRID.rows * CELL.height };
+  const INSET = 6;
+  const VIEW = { width: GRID.columns * CELL.width + 2 * INSET, height: GRID.rows * CELL.height + 2 * INSET };
   const FRAME_INSET = 0.75;
 
   // One size for each atom everywhere, so that atoms can be counted across the
   // boxes: nitrogen is the largest, then oxygen, then fluorine, as their
   // covalent radii run. Touching circles are drawn exactly a radius sum apart.
   const RADIUS = { N: 8, O: 7, F: 6 } as const;
+  type Element = keyof typeof RADIUS;
+  // The dot at the center of a fluorine atom, which the key shows too.
+  const FLUORINE_DOT_RADIUS = 2;
   // The bond angle in nitrosyl fluoride is about 110 degrees, so each outer
   // atom sits 55 degrees from straight up. Nitrogen is lowered by 4 so that
   // the bent molecule is centered in its cell.
@@ -31,12 +39,12 @@
   const NOF_NITROGEN_DROP = 4;
 
   interface DrawnAtom {
-    readonly element: keyof typeof RADIUS;
+    readonly element: Element;
     readonly x: number;
     readonly y: number;
   }
 
-  const apart = (one: keyof typeof RADIUS, other: keyof typeof RADIUS) => RADIUS[one] + RADIUS[other];
+  const apart = (one: Element, other: Element) => RADIUS[one] + RADIUS[other];
   const NOF_ATOMS: readonly DrawnAtom[] = [
     {
       element: 'O',
@@ -51,7 +59,7 @@
     },
   ];
   // Each molecule's atoms, relative to the middle of its cell, in drawing order.
-  const ATOMS: Record<Particle, readonly DrawnAtom[]> = {
+  const DRAWN_ATOMS: Record<Particle, readonly DrawnAtom[]> = {
     NO: [
       { element: 'N', x: -apart('N', 'O') / 2, y: 0 },
       { element: 'O', x: apart('N', 'O') / 2, y: 0 },
@@ -63,22 +71,6 @@
     NOF: NOF_ATOMS,
   };
 
-  const BOXES: readonly { readonly name: BoxName; readonly title: string }[] = [
-    { name: 'before', title: 'Before' },
-    { name: 'after', title: 'After' },
-  ];
-
-  const KEY_ATOMS = [
-    { element: 'N', name: 'nitrogen' },
-    { element: 'O', name: 'oxygen' },
-    { element: 'F', name: 'fluorine' },
-  ] as const;
-  const KEY_PARTICLES = [
-    { kind: 'NO', formula: 'NO', name: 'nitrogen monoxide' },
-    { kind: 'F2', formula: 'F₂', name: 'fluorine' },
-    { kind: 'NOF', formula: 'NOF', name: 'nitrosyl fluoride' },
-  ] as const;
-
   let no = $state<number>(START.no);
   let f2 = $state<number>(START.f2);
   let hydrated = $state(false);
@@ -89,8 +81,8 @@
   const f = (value: number) => value.toFixed(2);
   const columnOf = (index: number) => index % GRID.columns;
   const rowOf = (index: number) => Math.floor(index / GRID.columns);
-  const centerX = (index: number) => columnOf(index) * CELL.width + CELL.width / 2;
-  const centerY = (index: number) => rowOf(index) * CELL.height + CELL.height / 2;
+  const centerX = (index: number) => INSET + columnOf(index) * CELL.width + CELL.width / 2;
+  const centerY = (index: number) => INSET + rowOf(index) * CELL.height + CELL.height / 2;
 
   onMount(() => {
     hydrated = true;
@@ -99,7 +91,7 @@
 
 <!-- One molecule's atoms, around the point (0, 0). -->
 {#snippet molecule(kind: Particle)}
-  {#each ATOMS[kind] as atom, index (index)}
+  {#each DRAWN_ATOMS[kind] as atom, index (index)}
     <circle
       class={`molecule-atom is-${atom.element.toLowerCase()}`}
       data-atom={atom.element}
@@ -107,6 +99,9 @@
       cy={f(atom.y)}
       r={RADIUS[atom.element]}
     />
+    {#if atom.element === 'F'}
+      <circle class="molecule-atom-dot" data-atom-dot="F" cx={f(atom.x)} cy={f(atom.y)} r={FLUORINE_DOT_RADIUS} />
+    {/if}
   {/each}
 {/snippet}
 
@@ -117,12 +112,12 @@
         <figcaption class="diagram-panel-title">{box.title}</figcaption>
         <svg viewBox={`0 0 ${VIEW.width} ${VIEW.height}`} role="img" aria-label={describeBox(box.name, no, f2)}>
           <rect
-            class="diagram-track"
+            class="molecule-box"
             x={FRAME_INSET}
             y={FRAME_INSET}
             width={VIEW.width - 2 * FRAME_INSET}
             height={VIEW.height - 2 * FRAME_INSET}
-            rx="6"
+            rx="10"
           />
           {#each drawn[box.name] as kind, index (index)}
             <g
@@ -139,43 +134,49 @@
     {/each}
   </div>
 
-  <div class="molecule-key" data-part="key">
-    <ul>
-      {#each KEY_ATOMS as atom (atom.element)}
-        <li data-key-atom>
-          <svg viewBox="-10 -10 20 20" aria-hidden="true">
-            <circle
-              class={`molecule-atom is-${atom.element.toLowerCase()}`}
-              data-atom={atom.element}
-              cx="0"
-              cy="0"
-              r={RADIUS[atom.element]}
-            />
-          </svg>
-          <span>{atom.element} {atom.name}</span>
-        </li>
-      {/each}
-    </ul>
-    <ul>
-      {#each KEY_PARTICLES as particle (particle.kind)}
-        <li data-key-particle>
-          <svg viewBox="-24 -14 48 28" aria-hidden="true">
-            {@render molecule(particle.kind)}
-          </svg>
-          <span>{particle.formula} {particle.name}</span>
-        </li>
-      {/each}
-    </ul>
+  <!-- The sliders sit right under the boxes they change, above the readout, whose
+       length changes from one line to three: nothing under the boxes moves. -->
+  <div class="diagram-controls">
+    <label class="diagram-slider">
+      <span class="diagram-slider-head">
+        <span>{controlLabel('no')}</span>
+        <span class="diagram-slider-value" aria-hidden="true">{no}</span>
+      </span>
+      <input
+        type="range"
+        min={RANGE.no.min}
+        max={RANGE.no.max}
+        step={RANGE.no.step}
+        aria-valuetext={countText('no', no)}
+        bind:value={no}
+      />
+    </label>
+    <label class="diagram-slider">
+      <span class="diagram-slider-head">
+        <span>{controlLabel('f2')}</span>
+        <span class="diagram-slider-value" aria-hidden="true">{f2}</span>
+      </span>
+      <input
+        type="range"
+        min={RANGE.f2.min}
+        max={RANGE.f2.max}
+        step={RANGE.f2.step}
+        aria-valuetext={countText('f2', f2)}
+        bind:value={f2}
+      />
+    </label>
   </div>
+
+  <p class="diagram-readout" role="status">{readout(no, f2)}</p>
 
   <table class="diagram-table" data-table="amounts">
     <caption>Number of molecules</caption>
     <thead>
       <tr>
         <th scope="col"><span class="visually-hidden">Stage</span></th>
-        <th scope="col">NO</th>
-        <th scope="col">F₂</th>
-        <th scope="col">NOF</th>
+        {#each MOLECULES as column (column.kind)}
+          <th scope="col">{column.formula}</th>
+        {/each}
       </tr>
     </thead>
     <tbody>
@@ -190,35 +191,35 @@
     </tbody>
   </table>
 
-  <p class="diagram-readout" role="status">{readout(no, f2)}</p>
-  <div class="diagram-controls">
-    <label class="diagram-slider">
-      <span class="diagram-slider-head">
-        <span>Nitrogen monoxide, NO</span>
-        <span class="diagram-slider-value" aria-hidden="true">{no}</span>
-      </span>
-      <input
-        type="range"
-        min={RANGE.no.min}
-        max={RANGE.no.max}
-        step={RANGE.no.step}
-        aria-valuetext={countText('no', no)}
-        bind:value={no}
-      />
-    </label>
-    <label class="diagram-slider">
-      <span class="diagram-slider-head">
-        <span>Fluorine, F₂</span>
-        <span class="diagram-slider-value" aria-hidden="true">{f2}</span>
-      </span>
-      <input
-        type="range"
-        min={RANGE.f2.min}
-        max={RANGE.f2.max}
-        step={RANGE.f2.step}
-        aria-valuetext={countText('f2', f2)}
-        bind:value={f2}
-      />
-    </label>
+  <div class="molecule-key" data-part="key">
+    <ul>
+      {#each ATOMS as atom (atom.element)}
+        <li data-key-atom>
+          <svg viewBox="-10 -10 20 20" aria-hidden="true">
+            <circle
+              class={`molecule-atom is-${atom.element.toLowerCase()}`}
+              data-atom={atom.element}
+              cx="0"
+              cy="0"
+              r={RADIUS[atom.element]}
+            />
+            {#if atom.element === 'F'}
+              <circle class="molecule-atom-dot" data-atom-dot="F" cx="0" cy="0" r={FLUORINE_DOT_RADIUS} />
+            {/if}
+          </svg>
+          <span>{atom.element} {atom.name}</span>
+        </li>
+      {/each}
+    </ul>
+    <ul>
+      {#each MOLECULES as particle (particle.kind)}
+        <li data-key-particle>
+          <svg viewBox="-24 -14 48 28" aria-hidden="true">
+            {@render molecule(particle.kind)}
+          </svg>
+          <span>{particle.formula} {particle.name}</span>
+        </li>
+      {/each}
+    </ul>
   </div>
 </div>

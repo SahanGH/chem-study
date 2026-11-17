@@ -397,20 +397,37 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-/* Three atoms told apart by size and by shading together: dark, the unit's
-   color, and hollow. The shading alone is also readable in grayscale. */
+/* The boxes and the atoms are drawn as the lesson figures draw them (lessons
+   4.3 and 4.5): a box with no fill and a muted outline, oxygen pale with the
+   unit's accent outline, nitrogen dark. Fluorine has a look no other atom of
+   those figures has: a hollow circle with a heavy accent outline and a dot at
+   its center. It is not hydrogen's small ink-outlined circle, not oxygen's
+   thin accent outline, and not sulfur's mid-tone with an ink outline. The
+   three are told apart by size, by shading and by outline, in grayscale too. */
+.molecule-box {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 1.5;
+}
 .molecule-atom {
-  stroke: var(--ink);
   stroke-width: 1.5;
 }
 .molecule-atom.is-n {
   fill: var(--ink);
+  stroke: var(--ink);
 }
 .molecule-atom.is-o {
-  fill: var(--u);
+  fill: var(--u-tint);
+  stroke: var(--u-ink);
 }
 .molecule-atom.is-f {
   fill: var(--card);
+  stroke: var(--u-ink);
+  stroke-width: 3;
+}
+.molecule-atom-dot {
+  fill: var(--u-ink);
+  stroke: none;
 }
 /* The key under the boxes. Its swatches are drawn at the boxes' own scale
    (one pixel to a drawing unit), and keep their size inside ".diagram svg". */

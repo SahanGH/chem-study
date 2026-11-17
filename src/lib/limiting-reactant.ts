@@ -48,6 +48,34 @@ const REACTANT_NAMES: Record<Reactant, { readonly plain: string; readonly formul
   f2: { plain: 'fluorine', formula: 'F₂' },
 };
 
+/** The two boxes, in drawing order. */
+export const BOXES = [
+  { name: 'before', title: 'Before' },
+  { name: 'after', title: 'After' },
+] as const satisfies readonly { name: BoxName; title: string }[];
+
+/** The atoms the key names. */
+export const ATOMS = [
+  { element: 'N', name: 'nitrogen' },
+  { element: 'O', name: 'oxygen' },
+  { element: 'F', name: 'fluorine' },
+] as const;
+
+// F₂ is "fluorine molecule" here, so that the key's two rows, "F fluorine" for
+// the atom and this one, differ in words as well as in the drawing.
+/** The molecules the key names, which are also the table's columns. */
+export const MOLECULES = [
+  { kind: 'NO', formula: 'NO', name: 'nitrogen monoxide' },
+  { kind: 'F2', formula: 'F₂', name: 'fluorine molecule' },
+  { kind: 'NOF', formula: 'NOF', name: 'nitrosyl fluoride' },
+] as const satisfies readonly { kind: Particle; formula: string; name: string }[];
+
+/** A slider's name: "Nitrogen monoxide, NO". */
+export function controlLabel(reactant: Reactant): string {
+  const { plain, formula } = REACTANT_NAMES[reactant];
+  return `${plain.charAt(0).toUpperCase()}${plain.slice(1)}, ${formula}`;
+}
+
 export type Limiting = 'no' | 'f2' | 'neither' | 'none';
 
 export interface Outcome {
@@ -186,18 +214,18 @@ export function countText(reactant: Reactant, amount: number): string {
   return `${amount} ${REACTANT_NAMES[reactant].formula} ${amount === 1 ? 'molecule' : 'molecules'}`;
 }
 
-const BOX_TITLES: Record<BoxName, string> = { before: 'Before', after: 'After' };
-const PARTICLE_NAMES: Record<Particle, string> = { NO: 'NO', F2: 'F₂', NOF: 'NOF' };
-
 /** One box in words, for its accessible name. */
 export function describeBox(box: BoxName, no: number, f2: number): string {
   const drawn = particles(no, f2)[box];
+  const title = BOXES.find((entry) => entry.name === box)?.title;
+  if (title === undefined) throw new RangeError(`The box must be before or after, not "${box}".`);
   // Each kind in the order it is drawn: the NOF first in the After box.
-  const kinds: readonly Particle[] = box === 'before' ? ['NO', 'F2'] : ['NOF', 'NO', 'F2'];
-  const present = kinds
-    .map((kind) => ({ kind, amount: drawn.filter((particle) => particle === kind).length }))
-    .filter(({ amount }) => amount > 0)
-    .map(({ kind, amount }) => `${amount} ${PARTICLE_NAMES[kind]} ${amount === 1 ? 'molecule' : 'molecules'}`);
-  if (present.length === 0) return `The ${BOX_TITLES[box]} box is empty.`;
-  return `The ${BOX_TITLES[box]} box holds ${present.join(' and ')}.`;
+  const order: readonly Particle[] = box === 'before' ? ['NO', 'F2'] : ['NOF', 'NO', 'F2'];
+  const present = order.flatMap((kind) => {
+    const amount = drawn.filter((particle) => particle === kind).length;
+    const formula = MOLECULES.find((molecule) => molecule.kind === kind)?.formula;
+    return amount > 0 ? [`${amount} ${formula} ${amount === 1 ? 'molecule' : 'molecules'}`] : [];
+  });
+  if (present.length === 0) return `The ${title} box is empty.`;
+  return `The ${title} box holds ${present.join(' and ')}.`;
 }

@@ -1,8 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import {
+  ATOMS,
+  BOXES,
   GRID,
+  MOLECULES,
   RANGE,
   START,
+  controlLabel,
   countText,
   describeBox,
   outcome,
@@ -32,6 +36,36 @@ describe('the ranges and the starting state', () => {
 
   it('has a grid of five columns and three rows', () => {
     expect(GRID).toEqual({ columns: 5, rows: 3 });
+  });
+});
+
+describe('the words the diagram shows', () => {
+  it('names the two boxes, Before then After', () => {
+    expect(BOXES).toEqual([
+      { name: 'before', title: 'Before' },
+      { name: 'after', title: 'After' },
+    ]);
+  });
+
+  it('names the three atoms of the key', () => {
+    expect(ATOMS).toEqual([
+      { element: 'N', name: 'nitrogen' },
+      { element: 'O', name: 'oxygen' },
+      { element: 'F', name: 'fluorine' },
+    ]);
+  });
+
+  it('names the three molecules of the key, with F₂ told from the atom F in words', () => {
+    expect(MOLECULES).toEqual([
+      { kind: 'NO', formula: 'NO', name: 'nitrogen monoxide' },
+      { kind: 'F2', formula: 'F₂', name: 'fluorine molecule' },
+      { kind: 'NOF', formula: 'NOF', name: 'nitrosyl fluoride' },
+    ]);
+  });
+
+  it('labels the two sliders', () => {
+    expect(controlLabel('no')).toBe('Nitrogen monoxide, NO');
+    expect(controlLabel('f2')).toBe('Fluorine, F₂');
   });
 });
 

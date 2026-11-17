@@ -192,37 +192,132 @@ test('particles sit on a grid of five columns and three rows, one to a place', a
   expect(Math.max(...rows)).toBe(2);
 });
 
-test('each atom has one size and one shading in both boxes and in the key, and the three differ', async ({ page }) => {
-  const diagram = await openDiagram(page, PAGE, NAME);
-  // A state with every kind of particle in the After box: 6 NO and 5 F₂ leaves F₂ and makes NOF.
-  await noSlider(diagram).fill('6');
-  await f2Slider(diagram).fill('5');
-  await expect(particlesIn(diagram, 'after', 'F2')).not.toHaveCount(0);
-  await expect(particlesIn(diagram, 'after', 'NOF')).not.toHaveCount(0);
+for (const theme of ['light', 'dark'] as const) {
+  test(`in the ${theme} theme each atom has one size and one look everywhere: N dark, O pale with the unit outline, F a heavy ring with a dot`, async ({
+    page,
+  }) => {
+    await page.addInitScript((value) => localStorage.setItem('chemstudy:theme', value), theme);
+    const diagram = await openDiagram(page, PAGE, NAME);
+    await expect(page.locator('html')).toHaveAttribute('data-theme', theme);
+    // A state with every kind of particle in the After box: 6 NO and 5 F₂ leaves F₂ and makes NOF.
+    await noSlider(diagram).fill('6');
+    await f2Slider(diagram).fill('5');
+    await expect(particlesIn(diagram, 'after', 'F2')).not.toHaveCount(0);
+    await expect(particlesIn(diagram, 'after', 'NOF')).not.toHaveCount(0);
 
-  const looks: Record<string, Set<string>> = { N: new Set(), O: new Set(), F: new Set() };
-  const radii: Record<string, number> = {};
-  for (const element of Object.keys(looks)) {
-    const atoms = diagram.locator(`[data-atom="${element}"]`);
-    const total = await atoms.count();
-    // At least one in each box and one in the key.
-    expect(total, `atoms of ${element}`).toBeGreaterThanOrEqual(3);
-    const styles = await atoms.evaluateAll((all) =>
-      all.map((atom) => {
-        const style = getComputedStyle(atom);
-        return { r: atom.getAttribute('r'), fill: style.fill, stroke: style.stroke };
-      }),
-    );
-    for (const style of styles) {
-      looks[element]?.add(`${style.fill}|${style.stroke}`);
-      radii[element] = Number(style.r);
-      expect(Number(style.r), `radius of ${element}`).toBe(Number(styles[0]?.r));
+    // The colors the page means by its tokens, as the browser computes them.
+    const token = (name: string) =>
+      diagram.evaluate((root, tokenName) => {
+        const probe = document.createElement('span');
+        probe.style.color = `var(${tokenName})`;
+        root.append(probe);
+        const color = getComputedStyle(probe).color;
+        probe.remove();
+        return color;
+      }, name);
+
+    const looks: Record<string, { r: number; fill: string; stroke: string; width: number }> = {};
+    for (const element of ['N', 'O', 'F']) {
+      const atoms = diagram.locator(`[data-atom="${element}"]`);
+      // At least one in each box and one in the key.
+      expect(await atoms.count(), `atoms of ${element}`).toBeGreaterThanOrEqual(3);
+      const styles = await atoms.evaluateAll((all) =>
+        all.map((atom) => {
+          const style = getComputedStyle(atom);
+          return {
+            r: Number(atom.getAttribute('r')),
+            fill: style.fill,
+            stroke: style.stroke,
+            width: Number.parseFloat(style.strokeWidth),
+          };
+        }),
+      );
+      const [first] = styles;
+      if (!first) throw new Error(`No atoms of ${element}.`);
+      for (const style of styles) expect(style, `${element} is drawn in more than one way`).toEqual(first);
+      looks[element] = first;
     }
-    expect(looks[element]?.size, `${element} has more than one look`).toBe(1);
+    const { N: n, O: o, F: f } = looks;
+    if (!n || !o || !f) throw new Error('An atom has no look.');
+
+    expect(n.fill, 'nitrogen is dark').toBe(await token('--ink'));
+    expect(n.stroke).toBe(await token('--ink'));
+    expect(o.fill, 'oxygen is pale').toBe(await token('--u-tint'));
+    expect(o.stroke, 'the outline of oxygen is the unit accent').toBe(await token('--u-ink'));
+    // Fluorine is none of the lesson figures' looks: not hollow with an ink outline (hydrogen),
+    // not pale with a thin accent outline (oxygen), not dark (nitrogen).
+    expect(f.stroke, 'fluorine does not have an ink outline').not.toBe(await token('--ink'));
+    expect(f.width, 'the outline of fluorine is heavier than the others').toBeGreaterThan(Math.max(n.width, o.width));
+    expect(f.fill, 'fluorine is not dark').not.toBe(n.fill);
+    expect(f.fill, 'fluorine is not pale').not.toBe(o.fill);
+
+    const dots = diagram.locator('[data-atom-dot="F"]');
+    expect(await dots.count(), 'a center dot on every fluorine atom').toBe(await diagram.locator('[data-atom="F"]').count());
+    const dotFill = await dots.first().evaluate((dot) => getComputedStyle(dot).fill);
+    expect(dotFill, 'the dot is drawn in the outline color of fluorine').toBe(f.stroke);
+
+    expect(new Set([n.r, o.r, f.r]).size, 'the three atoms share a size').toBe(3);
+    expect(new Set([n, o, f].map((look) => `${look.fill}|${look.stroke}|${look.width}`)).size, 'two atoms share a look').toBe(3);
+  });
+}
+
+test('the boxes are drawn as the lesson figures draw them: no tinted fill, a muted outline', async ({ page }) => {
+  const diagram = await openDiagram(page, PAGE, NAME);
+
+  for (const which of ['before', 'after'] as const) {
+    const frame = box(diagram, which).locator('svg > rect').first();
+    const style = await frame.evaluate((element) => {
+      const computed = getComputedStyle(element);
+      const probe = document.createElement('span');
+      probe.style.color = 'var(--muted)';
+      document.body.append(probe);
+      const muted = getComputedStyle(probe).color;
+      probe.remove();
+      return { fill: computed.fill, stroke: computed.stroke, muted };
+    });
+    expect(style.fill, `the ${which} box has no fill`).toBe('none');
+    expect(style.stroke, `the ${which} box outline is muted`).toBe(style.muted);
   }
-  const shadings = Object.values(looks).map((set) => [...set][0]);
-  expect(new Set(shadings).size, 'the three atoms share a shading').toBe(3);
-  expect(new Set(Object.values(radii)).size, 'the three atoms share a size').toBe(3);
+});
+
+test('no particle touches the frame of its box, even in the first and last columns', async ({ page }) => {
+  await page.setViewportSize({ width: 412, height: 900 });
+  const diagram = await openDiagram(page, PAGE, NAME);
+  // 10 NO and 5 F₂: the Before box is full, so the corners are used.
+  await noSlider(diagram).fill('10');
+  await f2Slider(diagram).fill('5');
+  await expect(particlesIn(diagram, 'before')).toHaveCount(15);
+
+  for (const which of ['before', 'after'] as const) {
+    const gaps = await box(diagram, which)
+      .locator('svg')
+      .evaluate((svg) => {
+        if (!(svg instanceof SVGSVGElement)) throw new Error('The box is not an SVG.');
+        const view = svg.viewBox.baseVal;
+        const frame = svg.querySelector('rect');
+        if (!frame) throw new Error('The box has no frame.');
+        const inset = Number(frame.getAttribute('x'));
+        const half = 1.5;
+        return [...svg.querySelectorAll('[data-particle]')].map((particle) => {
+          const edges = [...particle.querySelectorAll('[data-atom]')].map((atom) => {
+            const [x, y] = [Number(atom.getAttribute('cx')), Number(atom.getAttribute('cy'))];
+            const r = Number(atom.getAttribute('r')) + half;
+            return { left: x - r, right: x + r, top: y - r, bottom: y + r };
+          });
+          const transform = particle.getAttribute('transform') ?? '';
+          const match = /translate\((-?[\d.]+) (-?[\d.]+)\)/.exec(transform);
+          if (!match) throw new Error(`A particle has no translation: ${transform}`);
+          const [dx, dy] = [Number(match[1]), Number(match[2])];
+          const left = dx + Math.min(...edges.map((edge) => edge.left));
+          const right = dx + Math.max(...edges.map((edge) => edge.right));
+          const top = dy + Math.min(...edges.map((edge) => edge.top));
+          const bottom = dy + Math.max(...edges.map((edge) => edge.bottom));
+          return Math.min(left - inset, view.width - inset - right, top - inset, view.height - inset - bottom);
+        });
+      });
+    expect(gaps.length, `${which} particles`).toBeGreaterThanOrEqual(10);
+    for (const gap of gaps) expect(gap, `${which}: a particle is too close to the frame`).toBeGreaterThanOrEqual(4);
+  }
 });
 
 test('NO and F₂ are two touching circles and NOF a bent row of three with nitrogen in the middle', async ({ page }) => {
@@ -263,7 +358,7 @@ test('the key names the three shadings and the three particles', async ({ page }
   await expect(key(diagram).locator('[data-key-atom]')).toHaveText(['N nitrogen', 'O oxygen', 'F fluorine']);
   await expect(key(diagram).locator('[data-key-particle]')).toHaveText([
     'NO nitrogen monoxide',
-    'F₂ fluorine',
+    'F₂ fluorine molecule',
     'NOF nitrosyl fluoride',
   ]);
 });
@@ -278,18 +373,74 @@ test('each box has a name that says what it holds now', async ({ page }) => {
   await expect(box(diagram, 'after').getByRole('img')).toHaveAccessibleName('The After box holds 6 NOF molecules.');
 });
 
-test('the table is under the boxes and the key, and the readout is under the table', async ({ page }) => {
+test('the order is the boxes, the sliders, the readout, the table, the key', async ({ page }) => {
   const diagram = await openDiagram(page, PAGE, NAME);
 
   const parts = await Promise.all(
-    [box(diagram, 'before'), box(diagram, 'after'), key(diagram), table(diagram), status(diagram)].map((part) => part.boundingBox()),
+    [
+      box(diagram, 'before'),
+      box(diagram, 'after'),
+      noSlider(diagram),
+      f2Slider(diagram),
+      status(diagram),
+      table(diagram),
+      key(diagram),
+    ].map((part) => part.boundingBox()),
   );
-  const [beforeBox, afterBox, keyBox, tableBox, statusBox] = parts;
-  if (!beforeBox || !afterBox || !keyBox || !tableBox || !statusBox) throw new Error('A part of the diagram has no box.');
+  const [beforeBox, afterBox, noBox, f2Box, statusBox, tableBox, keyBox] = parts;
+  if (!beforeBox || !afterBox || !noBox || !f2Box || !statusBox || !tableBox || !keyBox) {
+    throw new Error('A part of the diagram has no box.');
+  }
 
-  expect(keyBox.y).toBeGreaterThanOrEqual(Math.max(beforeBox.y + beforeBox.height, afterBox.y + afterBox.height));
-  expect(tableBox.y).toBeGreaterThanOrEqual(keyBox.y + keyBox.height);
-  expect(statusBox.y).toBeGreaterThanOrEqual(tableBox.y + tableBox.height);
+  const boxesBottom = Math.max(beforeBox.y + beforeBox.height, afterBox.y + afterBox.height);
+  // The two sliders sit in a row on a wide screen and one above the other on a phone.
+  expect(noBox.y, 'the NO slider is under the boxes').toBeGreaterThanOrEqual(boxesBottom);
+  expect(f2Box.y, 'the F₂ slider is under the boxes').toBeGreaterThanOrEqual(boxesBottom);
+  expect(statusBox.y, 'the readout is under both sliders').toBeGreaterThanOrEqual(
+    Math.max(noBox.y + noBox.height, f2Box.y + f2Box.height),
+  );
+  expect(tableBox.y, 'the table is under the readout').toBeGreaterThanOrEqual(statusBox.y + statusBox.height);
+  expect(keyBox.y, 'the key is under the table').toBeGreaterThanOrEqual(tableBox.y + tableBox.height);
+});
+
+// A student moves a slider and watches the boxes. On a small phone the boxes and the sliders
+// must be on the screen together, with the diagram scrolled so that its drawing is at the top.
+test('at 320 × 568 both boxes and both sliders are on the screen together', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 568 });
+  const diagram = await openDiagram(page, PAGE, NAME);
+  await box(diagram, 'before').evaluate((element) => {
+    window.scrollTo(0, element.getBoundingClientRect().top + window.scrollY - 8);
+  });
+
+  const parts = {
+    before: await box(diagram, 'before').boundingBox(),
+    after: await box(diagram, 'after').boundingBox(),
+    no: await noSlider(diagram).boundingBox(),
+    f2: await f2Slider(diagram).boundingBox(),
+  };
+  for (const [name, part] of Object.entries(parts)) {
+    if (!part) throw new Error(`The ${name} part has no bounding box.`);
+    expect(part.y, `${name} starts on the screen`).toBeGreaterThanOrEqual(0);
+    expect(part.y + part.height, `${name} ends on the screen`).toBeLessThanOrEqual(568);
+  }
+});
+
+test('the sliders do not move when the readout changes length', async ({ page }) => {
+  const diagram = await openDiagram(page, PAGE, NAME);
+  const position = async () => ({ no: await noSlider(diagram).boundingBox(), f2: await f2Slider(diagram).boundingBox() });
+
+  await noSlider(diagram).fill('0');
+  await f2Slider(diagram).fill('0');
+  await expect(status(diagram)).toHaveText('Nothing has been put in.');
+  const short = await position();
+  await noSlider(diagram).fill('4');
+  await f2Slider(diagram).fill('5');
+  await expect(status(diagram)).toHaveText(NO_LIMITING_READOUT);
+  const long = await position();
+
+  expect(short.no, 'the NO slider has a box').not.toBeNull();
+  expect(long.no?.y).toBe(short.no?.y);
+  expect(long.f2?.y).toBe(short.f2?.y);
 });
 
 // Side by side from a 412 px phone up, one above the other below that.
