@@ -1,7 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import {
-    DIRECTIONS,
     GROUPS,
     PERIODS,
     PROPERTIES,
@@ -10,6 +9,8 @@
     describeSeries,
     elementOf,
     orderTitle,
+    parseDirection,
+    parseProperty,
     readout,
     series,
     seriesHeading,
@@ -35,6 +36,13 @@
   // Under the axis: the symbols, then the title of the axis.
   const SYMBOL_Y = PLOT.bottom + 17;
   const ORDER_TITLE_Y = PLOT.bottom + 36;
+
+  // The readout has room for its longest sentence at any width, so that
+  // nothing below it moves when the sentence changes. The longest is a noble
+  // gas's; its copy is drawn, unseen, in the same box.
+  const LONGEST_READOUT = TREND_ELEMENTS.map((atom) => readout(atom.symbol)).reduce((longest, text) =>
+    text.length > longest.length ? text : longest,
+  );
 
   let property = $state<TrendProperty>('ie1');
   let symbol = $state('S');
@@ -67,31 +75,36 @@
     symbol = elementOf(value).symbol;
   }
 
-  function chooseProperty(value: string) {
-    const found = PROPERTY_NAMES.find((name) => name === value);
-    if (found === undefined) {
-      throw new Error(`There is no property "${value}": give one of ${PROPERTY_NAMES.join(', ')}.`);
-    }
-    property = found;
-  }
-
-  function chooseDirection(value: string) {
-    const found = DIRECTIONS.find((name) => name === value);
-    if (found === undefined) {
-      throw new Error(`There is no direction "${value}": give one of ${DIRECTIONS.join(', ')}.`);
-    }
-    direction = found;
-  }
-
   onMount(() => {
     hydrated = true;
   });
 </script>
 
 <div class="diagram-body" data-diagram="periodic-trends" data-hydrated={hydrated ? 'true' : undefined}>
-  <div class="diagram-panels">
+  <!-- The parts come in the order a student uses them on a phone: the choice
+       of property, the table it shades, and, directly under the table, the
+       sentence about the cell just pressed. The menu and the trend choice
+       follow it, then the graph they change. -->
+  <div class="diagram-controls" data-block="property">
+    <fieldset class="diagram-choice is-wide">
+      <legend>Property</legend>
+      {#each PROPERTY_NAMES as name (name)}
+        <label
+          ><input
+            type="radio"
+            name="periodic-trends-property"
+            value={name}
+            checked={property === name}
+            onchange={(event) => (property = parseProperty(event.currentTarget.value))}
+          />{PROPERTIES[name].label}</label
+        >
+      {/each}
+    </fieldset>
+  </div>
+
+  <div class="diagram-panels" data-block="table">
     <figure class="diagram-plot trend-panel" data-panel="table">
-      <figcaption class="diagram-panel-title trend-title" data-title="table">{tableTitle}</figcaption>
+      <figcaption class="diagram-panel-title" data-title="table">{tableTitle}</figcaption>
       <table class="trend-table" data-table="trends">
         <caption class="visually-hidden">
           {info.label} of the main-group elements of periods 1 to 5, set out as in the periodic table. Press an element to choose it.
@@ -112,10 +125,12 @@
                   {#if atom}
                     {@const text = valueText(atom.symbol, property)}
                     {@const level = shadeLevel(atom.symbol, property)}
-                    <!-- Out of the tab order: the menu is the keyboard's way to choose, and the two stay in step. -->
+                    <!-- Out of the tab order: the menu is the keyboard's way to choose, and the two stay in step.
+                         Disabled until the script has taken over: before that a press would do nothing. -->
                     <button
                       type="button"
                       tabindex="-1"
+                      disabled={!hydrated}
                       class={['trend-cell', level === null ? 'trend-no-value' : `trend-shade-${level}`]}
                       data-element={atom.symbol}
                       aria-current={atom.symbol === symbol ? 'true' : undefined}
@@ -134,8 +149,48 @@
         </tbody>
       </table>
     </figure>
+  </div>
 
+  <div class="trend-readout" data-block="readout">
+    <p class="diagram-readout" role="status">{readout(symbol)}</p>
+    <p class="diagram-readout trend-readout-sizer" aria-hidden="true">{LONGEST_READOUT}</p>
+  </div>
+
+  <div class="diagram-controls" data-block="choices">
+    <label class="diagram-select">
+      <span>Element</span>
+      <select value={symbol} onchange={(event) => chooseElement(event.currentTarget.value)}>
+        {#each TREND_ELEMENTS as option (option.symbol)}
+          <option value={option.symbol}>{elementLabel(option)}</option>
+        {/each}
+      </select>
+    </label>
+    <fieldset class="diagram-choice is-wide">
+      <legend>Show the trend</legend>
+      <label
+        ><input
+          type="radio"
+          name="periodic-trends-direction"
+          value="period"
+          checked={direction === 'period'}
+          onchange={(event) => (direction = parseDirection(event.currentTarget.value))}
+        />Across its period</label
+      >
+      <label
+        ><input
+          type="radio"
+          name="periodic-trends-direction"
+          value="group"
+          checked={direction === 'group'}
+          onchange={(event) => (direction = parseDirection(event.currentTarget.value))}
+        />Down its group</label
+      >
+    </fieldset>
+  </div>
+
+  <div class="diagram-panels" data-block="graph">
     <figure class="diagram-plot" data-panel="graph">
+      <!-- Two lines are kept for the title on a phone, and it breaks evenly. -->
       <figcaption class="diagram-panel-title trend-title" data-title="graph">{seriesHeading(symbol, property, direction)}</figcaption>
       <svg viewBox={`0 0 ${VIEW.width} ${VIEW.height}`} role="img" aria-label={describeSeries(symbol, property, direction)}>
         {#each info.ticks as tick (tick)}
@@ -189,54 +244,4 @@
       </svg>
     </figure>
   </div>
-
-  <!-- The menus sit directly under the drawings, above the readout, so that a
-       change of choice never moves the control the student has just used. -->
-  <div class="diagram-controls">
-    <fieldset class="diagram-choice is-wide">
-      <legend>Property</legend>
-      {#each PROPERTY_NAMES as name (name)}
-        <label
-          ><input
-            type="radio"
-            name="periodic-trends-property"
-            value={name}
-            checked={property === name}
-            onchange={(event) => chooseProperty(event.currentTarget.value)}
-          />{PROPERTIES[name].label}</label
-        >
-      {/each}
-    </fieldset>
-    <label class="diagram-select">
-      <span>Element</span>
-      <select value={symbol} onchange={(event) => chooseElement(event.currentTarget.value)}>
-        {#each TREND_ELEMENTS as option (option.symbol)}
-          <option value={option.symbol}>{elementLabel(option)}</option>
-        {/each}
-      </select>
-    </label>
-    <fieldset class="diagram-choice is-wide">
-      <legend>Show the trend</legend>
-      <label
-        ><input
-          type="radio"
-          name="periodic-trends-direction"
-          value="period"
-          checked={direction === 'period'}
-          onchange={(event) => chooseDirection(event.currentTarget.value)}
-        />Across its period</label
-      >
-      <label
-        ><input
-          type="radio"
-          name="periodic-trends-direction"
-          value="group"
-          checked={direction === 'group'}
-          onchange={(event) => chooseDirection(event.currentTarget.value)}
-        />Down its group</label
-      >
-    </fieldset>
-  </div>
-
-  <p class="diagram-readout" role="status">{readout(symbol)}</p>
 </div>

@@ -221,11 +221,16 @@ test('the diagram starts with first ionization energy, sulfur, across its period
   await expect(cells(diagram).locator('xpath=self::*[@aria-current="true"]')).toHaveCount(1);
 });
 
-test('the wrapper says what the radius is and that measured values wobble around the trend', async ({ page }) => {
+test('the wrapper says what the radius is, what a dash and a deeper color mean, and that the d block is left out', async ({
+  page,
+}) => {
   const diagram = await open(page);
 
   await expect(page.locator('[data-part="diagram"]', { has: diagram }).locator('figcaption').last()).toHaveText(
-    'Atomic radius here is the covalent radius, half the distance between two bonded atoms. Measured values wobble around the trend.',
+    'Atomic radius here is the covalent radius, half the distance between two bonded atoms. Measured values wobble around the trend. ' +
+      'A dash means no value is shown: the site gives no radius or electronegativity for a noble gas. ' +
+      'The deeper the color of a cell, the larger its value. ' +
+      'The d block, groups 3 to 12, is left out, so calcium is followed by gallium.',
   );
 });
 
@@ -244,39 +249,102 @@ test('"Property" offers the three properties and "Show the trend" the two direct
 });
 
 for (const width of [1280, 412, 320]) {
-  test(`on a ${width} px screen the controls sit directly under the drawings, above the readout, and no choice moves them`, async ({
+  test(`on a ${width} px screen the parts come in this order: the property, the table, the readout, the element and trend, the graph`, async ({
     page,
   }) => {
     await page.setViewportSize({ width, height: 900 });
     const diagram = await open(page);
-    const order = async () =>
-      diagram.evaluate((body) =>
-        [...body.children].map((child) =>
-          child.matches('.diagram-panels') ? 'drawings' : child.matches('.diagram-controls') ? 'controls' : child.matches('[role="status"]') ? 'readout' : 'other',
-        ),
-      );
+
+    const blocks = await diagram.evaluate((body) => [...body.children].map((child) => child.getAttribute('data-block')));
+    const tops = await diagram.evaluate((body) =>
+      [...body.children].map((child) => child.getBoundingClientRect().top),
+    );
+
+    expect(blocks).toEqual(['property', 'table', 'readout', 'choices', 'graph']);
+    expect(tops, 'each part is below the one before it').toEqual([...tops].sort((a, b) => a - b));
+    expect(new Set(tops).size, 'no two parts start at the same height').toBe(5);
+    // The readout is the part right under the table: it is the sentence about a cell the student has just pressed.
+    await expect(diagram.locator('[data-block="readout"]').getByRole('status')).toHaveText(START);
+    await expect(diagram.locator('[data-block="property"]').getByRole('group', { name: 'Property' })).toBeVisible();
+    await expect(diagram.locator('[data-block="choices"]').getByRole('combobox', { name: 'Element' })).toBeVisible();
+    await expect(diagram.locator('[data-block="choices"]').getByRole('group', { name: 'Show the trend' })).toBeVisible();
+  });
+
+  test(`on a ${width} px screen nothing below the readout moves, whatever the readout says or the table and graph show`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 900 });
+    const diagram = await open(page);
     // The page can scroll as the diagram's content changes size, so measure from the top of the diagram.
-    const offset = async () =>
+    const offsets = async () =>
       diagram.evaluate((body) => {
-        const controls = body.querySelector('.diagram-controls');
-        if (!controls) throw new Error('No controls.');
-        return controls.getBoundingClientRect().top - body.getBoundingClientRect().top;
+        const top = body.getBoundingClientRect().top;
+        const parts: Record<string, number> = {};
+        for (const part of body.children) {
+          parts[part.getAttribute('data-block') ?? '?'] = part.getBoundingClientRect().top - top;
+        }
+        return parts;
       });
 
-    expect(await order()).toEqual(['drawings', 'controls', 'readout']);
-    const before = await offset();
-    // A longer readout, a shorter and a longer title for the graph and the table, an empty graph.
-    await chooseElement(diagram, 'Ar');
-    expect(await offset(), 'a longer readout').toBe(before);
-    await chooseProperty(diagram, 'en');
-    expect(await offset(), 'electronegativity').toBe(before);
-    await chooseDirection(diagram, 'group');
-    expect(await offset(), 'an empty graph').toBe(before);
-    await chooseProperty(diagram, 'ie1');
-    await chooseElement(diagram, 'H');
-    expect(await offset(), 'two points, a longer title').toBe(before);
-    await chooseProperty(diagram, 'radius');
-    expect(await offset(), 'atomic radius').toBe(before);
+    const before = await offsets();
+    expect(Object.keys(before)).toEqual(['property', 'table', 'readout', 'choices', 'graph']);
+    // The shortest readouts first (sulfur, hydrogen), then the longest sentences (argon, krypton), an empty graph, a short title.
+    const states: [string, () => Promise<void>][] = [
+      ['argon', () => chooseElement(diagram, 'Ar')],
+      ['krypton, the longest name', () => chooseElement(diagram, 'Kr')],
+      ['electronegativity', () => chooseProperty(diagram, 'en')],
+      ['an empty graph', () => chooseDirection(diagram, 'group')],
+      ['hydrogen, two points', async () => {
+        await chooseDirection(diagram, 'period');
+        await chooseElement(diagram, 'H');
+      }],
+      ['atomic radius', () => chooseProperty(diagram, 'radius')],
+    ];
+    for (const [name, choose] of states) {
+      await choose();
+      const after = await offsets();
+      expect(after, name).toEqual(before);
+    }
+  });
+}
+
+test('at 320 by 568 the property choice, the whole table and the readout are in view together', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 568 });
+  const diagram = await open(page);
+  // The longest sentence, so that the readout has all the room it can ever need.
+  await chooseElement(diagram, 'Kr');
+  await diagram.locator('[data-block="property"]').evaluate((node) => {
+    // Scroll so that the Property choice is the first thing on the screen.
+    window.scrollTo(0, window.scrollY + node.getBoundingClientRect().top);
+  });
+
+  const inView = await diagram.evaluate((body) => {
+    const bottom = (block: string) => body.querySelector(`[data-block="${block}"]`)?.getBoundingClientRect().bottom ?? Number.NaN;
+    const top = (block: string) => body.querySelector(`[data-block="${block}"]`)?.getBoundingClientRect().top ?? Number.NaN;
+    return { propertyTop: top('property'), tableBottom: bottom('table'), readoutBottom: bottom('readout'), height: window.innerHeight };
+  });
+
+  expect(Math.abs(inView.propertyTop)).toBeLessThanOrEqual(1);
+  expect(inView.tableBottom, 'the table ends on the screen').toBeLessThanOrEqual(inView.height);
+  expect(inView.readoutBottom, 'the readout ends on the screen').toBeLessThanOrEqual(inView.height);
+});
+
+for (const width of [1280, 412, 320]) {
+  test(`on a ${width} px screen each radio group's legend is above its first option, not beside it`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    const diagram = await open(page);
+
+    const groups = await diagram.locator('fieldset.diagram-choice').evaluateAll((fieldsets) =>
+      fieldsets.map((fieldset) => {
+        const legend = fieldset.querySelector('legend')?.getBoundingClientRect();
+        const first = fieldset.querySelector('label')?.getBoundingClientRect();
+        if (!legend || !first) throw new Error('A radio group has no legend or no option.');
+        return { name: fieldset.querySelector('legend')?.textContent, legendBottom: legend.bottom, firstTop: first.top };
+      }),
+    );
+
+    expect(groups.map((group) => group.name)).toEqual(['Property', 'Show the trend']);
+    for (const group of groups) expect(group.legendBottom, group.name ?? '').toBeLessThanOrEqual(group.firstTop + 0.5);
   });
 }
 
@@ -467,16 +535,16 @@ for (const property of PROPERTY_NAMES) {
 
     await expect(graphPanel(diagram).locator('[data-tick-label-y]')).toHaveText(TICKS[property]);
     await expect(graphPanel(diagram).locator('[data-axis-label="y"]')).toHaveText(AXIS_TITLES[property]);
-    await expect(graphPanel(diagram).locator('[data-axis-label="x"]')).toHaveText('in order of group');
+    await expect(graphPanel(diagram).locator('[data-axis-label="x"]')).toHaveText('left to right in the table');
   });
 }
 
-test('the horizontal axis says what order the elements are in', async ({ page }) => {
+test('the horizontal axis says which way the symbols run in the table', async ({ page }) => {
   const diagram = await open(page);
 
   await chooseDirection(diagram, 'group');
 
-  await expect(graphPanel(diagram).locator('[data-axis-label="x"]')).toHaveText('in order of period');
+  await expect(graphPanel(diagram).locator('[data-axis-label="x"]')).toHaveText('top to bottom in the table');
 });
 
 test('choosing "Atomic radius" shows 105 in sulfur\'s cell, a dash in argon\'s and seven points', async ({ page }) => {
@@ -555,6 +623,8 @@ test('across its period, argon still has seven electronegativities to plot, none
   await chooseElement(diagram, 'Ar');
   await chooseProperty(diagram, 'en');
 
+  // No point is marked, and the readout, now under the table, says why.
+  await expect(status(diagram)).toHaveText(ARGON);
   await expect(points(diagram)).toHaveCount(7);
   await expect(graphPanel(diagram).locator('[data-no-values]')).toHaveCount(0);
   await expect(graphPanel(diagram).locator('[data-point][data-chosen="true"]')).toHaveCount(0);
@@ -607,17 +677,27 @@ test('the element menu works from the keyboard: End gives xenon, Home gives hydr
   await expect(symbolLabels(diagram)).toHaveText(['H', 'He']);
 });
 
-test('the radio buttons work from the keyboard, and Tab goes from the property to the menu to the trend, never to a cell', async ({
+test('the radio buttons work from the keyboard, and Tab and Shift+Tab pass over the cells, which lie between the property and the menu', async ({
   page,
 }) => {
   const diagram = await open(page);
+  const focusIsInTable = () => page.evaluate(() => document.activeElement?.closest('table') !== null && document.activeElement?.closest('table') !== undefined);
 
   await propertyRadio(diagram, 'ie1').focus();
   await page.keyboard.press('ArrowLeft');
   await expect(graphTitle(diagram)).toHaveText('Atomic radius across period 3');
   await expect(propertyRadio(diagram, 'radius')).toBeChecked();
+  // In the page the 34 cells come between the property radios and the menu: a forward Tab must step over them.
   await page.keyboard.press('Tab');
   await expect(elementSelect(diagram)).toBeFocused();
+  // And a backward Tab from the menu must step over them to the property radio that is checked.
+  await page.keyboard.press('Shift+Tab');
+  await expect(propertyRadio(diagram, 'radius')).toBeFocused();
+  expect(await focusIsInTable(), 'Shift+Tab from the menu').toBe(false);
+  await page.keyboard.press('Shift+Tab');
+  expect(await focusIsInTable(), 'Shift+Tab from the first control').toBe(false);
+  await propertyRadio(diagram, 'radius').focus();
+  await page.keyboard.press('Tab');
   await page.keyboard.press('Tab');
   await expect(trendRadio(diagram, 'period')).toBeFocused();
   await page.keyboard.press('ArrowRight');
@@ -767,7 +847,7 @@ test('for every property and series, no label meets another label or a mark that
 });
 
 /**
- * Every colour as it is drawn: a canvas turns any CSS colour into pixels, so
+ * Every color as it is drawn: a canvas turns any CSS color into pixels, so
  * the contrast is computed from what the eye gets and not from a format.
  */
 async function worstContrast(diagram: Locator): Promise<{ ratio: number; where: string }[]> {
@@ -821,24 +901,189 @@ for (const theme of ['light', 'dark'] as const) {
   });
 }
 
-test('the five shades are five different colors, in order, for each property', async ({ page }) => {
+/** The luminance of each CSS color given, as drawn: a canvas turns any CSS color into pixels. */
+async function luminances(page: Page, colors: readonly string[]): Promise<number[]> {
+  return page.evaluate((list) => {
+    const context = document.createElement('canvas').getContext('2d', { willReadFrequently: true });
+    if (!context) throw new Error('No canvas to read colors with.');
+    return list.map((css) => {
+      context.clearRect(0, 0, 1, 1);
+      context.fillStyle = '#000000';
+      context.fillStyle = css;
+      context.fillRect(0, 0, 1, 1);
+      const [r = 0, g = 0, b = 0] = context.getImageData(0, 0, 1, 1).data;
+      const [lr = 0, lg = 0, lb = 0] = [r, g, b].map((value) => {
+        const unit = value / 255;
+        return unit <= 0.03928 ? unit / 12.92 : ((unit + 0.055) / 1.055) ** 2.4;
+      });
+      return 0.2126 * lr + 0.7152 * lg + 0.0722 * lb;
+    });
+  }, colors);
+}
+
+for (const theme of ['light', 'dark'] as const) {
+  test(`in the ${theme} theme the five shades are five different colors that grow ${theme === 'light' ? 'darker' : 'lighter'} from shade 0 to shade 4, for each property`, async ({
+    page,
+  }) => {
+    await page.addInitScript((value) => localStorage.setItem('chemstudy:theme', value), theme);
+    const diagram = await open(page);
+    await expect(page.locator('html')).toHaveAttribute('data-theme', theme);
+
+    for (const property of PROPERTY_NAMES) {
+      await chooseProperty(diagram, property);
+      const drawn = await cells(diagram).evaluateAll((buttons) => {
+        const colors: Record<string, string> = {};
+        for (const button of buttons) {
+          const level = [...button.classList].find((name) => name.startsWith('trend-shade-'));
+          if (level) colors[level] = getComputedStyle(button).backgroundColor;
+        }
+        const card = getComputedStyle(buttons[0]?.closest('.diagram') ?? document.body).backgroundColor;
+        return { colors, card };
+      });
+      const names = ['trend-shade-0', 'trend-shade-1', 'trend-shade-2', 'trend-shade-3', 'trend-shade-4'];
+
+      expect(Object.keys(drawn.colors).sort(), property).toEqual(names);
+      expect(new Set(Object.values(drawn.colors)).size, `${property}: five distinct colors`).toBe(5);
+      const lums = await luminances(page, [...names.map((name) => drawn.colors[name] ?? ''), drawn.card]);
+      const card = lums[5] ?? Number.NaN;
+      const shades = lums.slice(0, 5);
+      // In the light theme more is darker than the card; in the dark theme the card is near black, so more is lighter.
+      shades.slice(1).forEach((value, index) => {
+        const before = shades[index] ?? Number.NaN;
+        if (theme === 'light') expect(value, `${property}: shade ${index + 1} is darker than shade ${index}`).toBeLessThan(before);
+        else expect(value, `${property}: shade ${index + 1} is lighter than shade ${index}`).toBeGreaterThan(before);
+      });
+      // And in both themes each step is farther from the card's color than the one before.
+      const distances = shades.map((value) => Math.abs(value - card));
+      distances.slice(1).forEach((value, index) => {
+        expect(value, `${property}: shade ${index + 1} is farther from the card than shade ${index}`).toBeGreaterThan(distances[index] ?? Number.NaN);
+      });
+    }
+  });
+
+  test(`in the ${theme} theme a cell with no value looks different from a cell with the lowest shade, apart from its dash`, async ({
+    page,
+  }) => {
+    await page.addInitScript((value) => localStorage.setItem('chemstudy:theme', value), theme);
+    const diagram = await open(page);
+    await chooseProperty(diagram, 'radius');
+
+    const lookOf = (symbol: string) =>
+      cell(diagram, symbol).evaluate((button) => {
+        const style = getComputedStyle(button);
+        return { borderStyle: style.borderTopStyle, background: style.backgroundColor, border: style.borderTopColor, className: button.className };
+      });
+    // Hydrogen has the smallest radius shown, so it has shade 0; neon has none.
+    const lowest = await lookOf('H');
+    const none = await lookOf('Ne');
+
+    expect(lowest.className).toContain('trend-shade-0');
+    expect(none.className).toContain('trend-no-value');
+    expect(none.borderStyle).toBe('dashed');
+    expect(lowest.borderStyle).toBe('solid');
+    expect(none.background, 'a dash cell has the paper, not a shade').not.toBe(lowest.background);
+  });
+}
+
+// The values are centered in their cells, so neighbors in a row never line up; what must hold is that the
+// ink of one number stays clear of the next. With four digits at 12px the boxes were 1.4 px apart at 320 px and
+// 6.3 px at 360 px; the fix gives 7.4 px at 320 px and 12.2 px at 360 px, so 7 separates the two.
+const MIN_VALUE_GAP = 7;
+
+for (const width of [412, 390, 360, 320]) {
+  test(`on a ${width} px screen the numbers of neighboring cells are at least ${MIN_VALUE_GAP} px apart, so that 1402 and 1314 read as two`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 900 });
+    const diagram = await open(page);
+    await page.evaluate(() => document.fonts.ready);
+
+    const gaps = await tablePanel(diagram).locator('tbody tr').evaluateAll((rows) =>
+      rows.flatMap((row) => {
+        const boxes = [...row.querySelectorAll('td')].map((td) => {
+          const value = td.querySelector('.trend-value');
+          if (!value) return null;
+          const range = document.createRange();
+          range.selectNodeContents(value);
+          const box = range.getBoundingClientRect();
+          return { text: (value.textContent ?? '').trim(), left: box.left, right: box.right };
+        });
+        return boxes.flatMap((box, index) => {
+          const before = boxes[index - 1];
+          return box && before ? [{ pair: `${before.text} ${box.text}`, gap: box.left - before.right }] : [];
+        });
+      }),
+    );
+
+    // Period 1 has no two cells side by side; periods 2 to 5 have seven pairs each.
+    expect(gaps).toHaveLength(28);
+    for (const { pair, gap } of gaps) expect(gap, pair).toBeGreaterThanOrEqual(MIN_VALUE_GAP);
+  });
+}
+
+test('the table title takes one line, with no room kept for a second, and the graph title keeps two and balances them', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 320, height: 900 });
   const diagram = await open(page);
 
-  for (const property of PROPERTY_NAMES) {
-    await chooseProperty(diagram, property);
-    const byLevel = await cells(diagram).evaluateAll((buttons) => {
-      const colors: Record<string, string> = {};
-      for (const button of buttons) {
-        const level = [...button.classList].find((name) => name.startsWith('trend-shade-'));
-        if (level) colors[level] = getComputedStyle(button).backgroundColor;
-      }
-      return colors;
-    });
+  const measured = await diagram.evaluate((body) => {
+    const measure = (name: string) => {
+      const title = body.querySelector(`[data-title="${name}"]`);
+      if (!title) throw new Error(`No ${name} title.`);
+      const style = getComputedStyle(title);
+      return {
+        height: title.getBoundingClientRect().height,
+        lineHeight: Number.parseFloat(style.lineHeight),
+        wrap: style.getPropertyValue('text-wrap-style'),
+      };
+    };
+    return { table: measure('table'), graph: measure('graph') };
+  });
 
-    expect(Object.keys(byLevel).sort(), property).toEqual(['trend-shade-0', 'trend-shade-1', 'trend-shade-2', 'trend-shade-3', 'trend-shade-4']);
-    expect(new Set(Object.values(byLevel)).size, `${property}: five distinct colors`).toBe(5);
-  }
+  expect(measured.table.height, 'one line').toBeLessThanOrEqual(measured.table.lineHeight * 1.2);
+  expect(measured.graph.height, 'two lines are kept').toBeGreaterThanOrEqual(measured.graph.lineHeight * 1.9);
+  expect(measured.graph.wrap).toBe('balance');
 });
+
+test('the cell buttons are disabled until the script has taken over, and enabled after, with the same look', async ({ page }) => {
+  const diagram = await open(page);
+
+  const state = await cells(diagram).evaluateAll((buttons) => buttons.map((button) => (button instanceof HTMLButtonElement ? button.disabled : null)));
+
+  expect(state).toHaveLength(34);
+  expect(state.every((disabled) => disabled === false)).toBe(true);
+});
+
+for (const width of [360, 320]) {
+  for (const symbol of ['Li', 'Ar', 'H', 'He']) {
+    test(`on a ${width} px screen the heavy border of ${symbol}'s cell, at the left or the right edge of the table, stays inside the diagram`, async ({
+      page,
+    }) => {
+      await page.setViewportSize({ width, height: 800 });
+      const diagram = await open(page);
+      await chooseElement(diagram, symbol);
+      await expect(cell(diagram, symbol)).toHaveAttribute('aria-current', 'true');
+      const figure = page.locator('[data-part="diagram"]', { has: diagram });
+
+      const measured = await figure.evaluate((frame, name) => {
+        const button = frame.querySelector(`[data-element="${name}"]`);
+        if (!button) throw new Error(`No cell for ${name}.`);
+        const box = button.getBoundingClientRect();
+        const outer = frame.getBoundingClientRect();
+        return {
+          insideLeft: box.left - outer.left,
+          insideRight: outer.right - box.right,
+          pageOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+        };
+      }, symbol);
+
+      expect(measured.insideLeft, 'room left of the cell').toBeGreaterThanOrEqual(0);
+      expect(measured.insideRight, 'room right of the cell').toBeGreaterThanOrEqual(0);
+      expect(measured.pageOverflow).toBeLessThanOrEqual(0);
+    });
+  }
+}
 
 // A nominal size, not a rendered one: the font size in drawing units, times
 // 320, over the drawing's width in units. That is the size of the text when
@@ -990,7 +1235,9 @@ test('in print the controls are gone and the table, the graph and the readout st
   const diagram = await open(page);
   await page.emulateMedia({ media: 'print' });
 
-  await expect(diagram.locator('.diagram-controls')).toBeHidden();
+  const blocks = await diagram.locator('.diagram-controls').all();
+  expect(blocks, 'the property block and the element and trend block').toHaveLength(2);
+  for (const block of blocks) await expect(block).toBeHidden();
   await expect(tablePanel(diagram).locator('table')).toBeVisible();
   await expect(graphPanel(diagram).locator('svg')).toBeVisible();
   await expect(status(diagram)).toBeVisible();
@@ -1011,5 +1258,19 @@ test.describe('with JavaScript off', () => {
     await expect(points(diagram)).toHaveCount(8);
     await expect(valueLabels(diagram)).toHaveText(['496', '738', '578', '787', '1012', '1000', '1251', '1521']);
     await expect(elementSelect(diagram)).toBeHidden();
+    // The cells do nothing until the script has taken over, so they are disabled; they keep their own look, not the browser's gray.
+    const cellState = await cells(diagram).evaluateAll((buttons) =>
+      buttons.map((button) => (button instanceof HTMLButtonElement ? button.disabled : null)),
+    );
+    expect(cellState).toHaveLength(34);
+    expect(cellState.every((disabled) => disabled === true)).toBe(true);
+    const colors = await diagram.evaluate((body) => {
+      const button = body.querySelector('[data-element="S"]');
+      const readout = body.querySelector('[role="status"]');
+      if (!button || !readout) throw new Error('The diagram has no cell for sulfur or no readout.');
+      return { cell: getComputedStyle(button).color, readout: getComputedStyle(readout).color, border: getComputedStyle(button).borderTopWidth };
+    });
+    expect(colors.cell).toBe(colors.readout);
+    expect(colors.border).toBe('3px');
   });
 });

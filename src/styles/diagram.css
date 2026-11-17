@@ -408,28 +408,20 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   stroke-width: 1.5;
   stroke-dasharray: 3 2;
 }
-.diagram-peak-label {
+.diagram-peak-label,
+.diagram-point-label {
   fill: var(--ink);
   font-weight: 600;
   /* A compared atom's dashed peak can stand where this label is. A halo in
-     the card's color, as on .diagram-curve-name, keeps the label readable. */
+     the card's color, as on .diagram-curve-name, keeps the label readable.
+     The periodic trends graph's labels, over its line, are the same. */
   paint-order: stroke;
   stroke: var(--card);
   stroke-width: 3px;
   stroke-linejoin: round;
 }
 
-/* The periodic trends explorer. The value over each point of its graph can
-   sit where the line, or a neighboring point, passes; a halo in the card's
-   color, as on .diagram-peak-label, keeps it readable. */
-.diagram-point-label {
-  fill: var(--ink);
-  font-weight: 600;
-  paint-order: stroke;
-  stroke: var(--card);
-  stroke-width: 3px;
-  stroke-linejoin: round;
-}
+/* The periodic trends explorer. */
 /* Its table of elements: eight columns that must fit a 320 px phone, where a
    four-digit value at 12px is about 29 px wide. Two classes, to outrank
    ".prose table", which scrolls sideways. Below 30rem the table is also wider
@@ -458,9 +450,13 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   font-weight: 600;
   color: var(--muted);
 }
+/* The graph's title breaks evenly, so that "period 3" is not split. */
+.diagram-plot .trend-title {
+  text-wrap: balance;
+}
 @media (max-width: 30rem) {
-  /* A title can wrap to a second line on a phone; two lines are kept for it
-     whatever it says, so that the controls below never move. */
+  /* The graph's title can wrap to a second line on a phone; two lines are kept
+     for it whatever it says, so that the graph below does not change height. */
   .diagram-plot .trend-title {
     min-height: 2lh;
   }
@@ -469,6 +465,24 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
     max-width: none;
     margin-inline: -0.75rem;
   }
+}
+/* The readout's box is as tall as its longest sentence, which is drawn in it
+   unseen, so that nothing below the readout moves when the sentence changes. */
+.trend-readout {
+  display: grid;
+}
+.trend-readout > .diagram-readout {
+  grid-area: 1 / 1;
+  margin: 0;
+}
+.trend-readout-sizer {
+  visibility: hidden;
+}
+/* The legend of each radio group sits on its own row above the options, so
+   that the options wrap beneath it instead of beside it. */
+.diagram-body[data-diagram='periodic-trends'] .diagram-choice legend {
+  float: none;
+  margin: 0 0 0.15rem;
 }
 /* A cell is a button that chooses its element. The chosen one's heavy border
    grows outward over its neighbors, so that its number keeps the room it had. */
@@ -492,7 +506,12 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
 }
 .diagram-body:not([data-hydrated]) .trend-cell {
   cursor: default;
-  pointer-events: none;
+}
+/* A cell with no value has the paper and a dashed border, so that it is not
+   taken for a cell with the lowest shade. */
+.trend-no-value {
+  background: var(--paper);
+  border: 1px dashed var(--muted);
 }
 .trend-symbol {
   display: block;
@@ -500,6 +519,16 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
 }
 .trend-value {
   display: block;
+}
+/* Four digits at 12px leave 1 to 2 px between neighboring cells' numbers at
+   320 px, so that 1402 and 1314 read as one. A smaller size, and digits of
+   their own widths (the cells are centered, so nothing needs to line up),
+   give them room. */
+@media (max-width: 22.5rem) {
+  .trend-value {
+    font-size: 11px;
+    font-variant-numeric: normal;
+  }
 }
 /* Five steps of the unit's color. The number in each cell carries the
    information; the darkest step still leaves the text above 4.5 to 1 in both
