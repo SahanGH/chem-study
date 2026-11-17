@@ -35,7 +35,7 @@ One per topic of the 2024 framework:
 
 | Topic | Lesson | What it carries |
 |---|---|---|
-| 1.1 | Moles and Molar Mass | Counting by weighing; Avogadro's number; why the mass of one particle in amu equals the molar mass in grams; $n = m/M$; every conversion runs through moles; atoms inside a formula unit |
+| 1.1 | Moles and Molar Mass | Counting by weighing; Avogadro's number; why the mass of one particle in amu equals the molar mass in grams; $n = m/M$; from grams to particles and back through moles; atoms inside a formula unit |
 | 1.2 | Mass Spectra of Elements | Isotopes; reading the spectrum of one element; the weighted average, estimated before it is calculated; naming the element from its spectrum |
 | 1.3 | Elemental Composition of Pure Substances | Molecules and formula units; the law of definite proportions; composition by mass; the empirical formula from masses or percents; the molecular formula from it and the molar mass |
 | 1.4 | Composition of Mixtures | A pure substance and a mixture at the particle level; a mixture's composition is measured, not fixed; the makeup of a mixture, and the purity of a sample, from elemental analysis |
@@ -82,11 +82,10 @@ essential knowledge. **No textbook is used.**
 the controller, not by the writers: the notes follow the Zumdahl textbook.
 Each brief carries what the notes stress:
 
-- count by weighing, and every conversion runs through moles: there is no
-  direct road from grams to particles;
+- count by weighing, and go from grams to particles through moles;
 - an average atomic mass is a weighted average, never the plain average of
-  the peak masses, and the answer is estimated first (it lies nearest the
-  most abundant isotope);
+  the peak masses, and the answer is estimated first (it is pulled toward
+  the most abundant isotope);
 - from percents to a formula: take 100 g, convert to moles, divide by the
   smallest, and multiply when a ratio ends near .33, .5 or .67 (never round
   those away);
@@ -104,8 +103,13 @@ Each brief carries what the notes stress:
 - oxygen's first ionization energy is below nitrogen's because of the
   repulsion between two electrons paired in one orbital, not because a
   half-filled subshell is "stable";
-- a large jump in successive ionization energies marks the end of the
-  valence electrons.
+- the first big jump in successive ionization energies marks the end of
+  the valence electrons.
+
+These are the notes' points, not their words. Where a point as the notes
+put it is not literally true ("every conversion runs through moles", "the
+average lies nearest the tallest peak", "the largest jump"), the lessons
+state the true version.
 
 The notes barely cover topics 1.4 and 1.8 and leave out electron affinity.
 Those parts rest on the framework alone.
