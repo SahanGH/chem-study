@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 410" font-family="system-ui, sans-serif" font-size="18">
+  <!-- One reaction, silver nitrate with sodium phosphate, written three ways in three bands: molecular, complete ionic, net ionic. Each band has its name in the accent color and its equation below; a line that continues an equation starts with its plus sign or its arrow. Every ion carries (aq), so the complete ionic equation takes three lines. In that band the four spectator terms (3 NO3-(aq) and 3 Na+(aq) on the left, 3 Na+(aq) and 3 NO3-(aq) on the right) are in the secondary color with a slanted line through each, and a note under the band says what the lines mean. The lines slant down to the right, from 12 units above the baseline to 5 below it, so that they pass under the charges and leave them readable. Every term is its own text element, centered on a computed x (widths measured in Chromium with scratchpad/unit4/tools/4-2-measure-terms.cjs; 8 units between a term and a plus sign, 10 beside an arrow), so a strike-out line stays over its term whatever font system-ui turns out to be. The arrows are drawn as paths. Font size 18 keeps the main text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="410" fill="#FDFCF9"/>
+
+  <!-- Rules between the bands -->
+  <g stroke="#6B655D" stroke-width="1" stroke-opacity="0.35">
+    <line x1="24" y1="124" x2="456" y2="124"/>
+    <line x1="24" y1="316" x2="456" y2="316"/>
+  </g>
+
+  <!-- Band 1: molecular -->
+  <text x="24" y="36" fill="#4F706C" font-weight="600">Molecular</text>
+  <g fill="#26231F" text-anchor="middle">
+    <text x="135" y="70">3 AgNO<tspan dy="4" font-size="14">3</tspan><tspan dy="-4">(aq)</tspan></text>
+    <text x="200.3" y="70">+</text>
+    <text x="260.4" y="70">Na<tspan dy="4" font-size="14">3</tspan><tspan dy="-4">PO</tspan><tspan dy="4" font-size="14">4</tspan><tspan dy="-4">(aq)</tspan></text>
+    <text x="159.8" y="102">Ag<tspan dy="4" font-size="14">3</tspan><tspan dy="-4">PO</tspan><tspan dy="4" font-size="14">4</tspan><tspan dy="-4">(s)</tspan></text>
+    <text x="213.7" y="102">+</text>
+    <text x="279" y="102">3 NaNO<tspan dy="4" font-size="14">3</tspan><tspan dy="-4">(aq)</tspan></text>
+  </g>
+  <path d="M84 96H110m-7 -5l7 5l-7 5" fill="none" stroke="#26231F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Band 2: complete ionic, on three lines. Terms that change, and the plus signs, in ink. -->
+  <text x="24" y="156" fill="#4F706C" font-weight="600">Complete ionic</text>
+  <g fill="#26231F" text-anchor="middle">
+    <text x="122.5" y="192">3 Ag<tspan dy="-7" font-size="14">+</tspan><tspan dy="7">(aq)</tspan></text>
+    <text x="175.2" y="192">+</text>
+    <text x="97" y="226">+</text>
+    <text x="211.7" y="226">+</text>
+    <text x="265.3" y="226">PO<tspan dy="4" font-size="14">4</tspan><tspan dy="-11" font-size="14">3−</tspan><tspan dy="7">(aq)</tspan></text>
+    <text x="159.8" y="260">Ag<tspan dy="4" font-size="14">3</tspan><tspan dy="-4">PO</tspan><tspan dy="4" font-size="14">4</tspan><tspan dy="-4">(s)</tspan></text>
+    <text x="213.7" y="260">+</text>
+    <text x="319.5" y="260">+</text>
+  </g>
+  <path d="M84 254H110m-7 -5l7 5l-7 5" fill="none" stroke="#26231F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- The four spectator terms, in the secondary color -->
+  <g fill="#6B655D" text-anchor="middle">
+    <text x="234" y="192">3 NO<tspan dy="4" font-size="14">3</tspan><tspan dy="-11" font-size="14">−</tspan><tspan dy="7">(aq)</tspan></text>
+    <text x="158.8" y="226">3 Na<tspan dy="-7" font-size="14">+</tspan><tspan dy="7">(aq)</tspan></text>
+    <text x="266.6" y="260">3 Na<tspan dy="-7" font-size="14">+</tspan><tspan dy="7">(aq)</tspan></text>
+    <text x="378.3" y="260">3 NO<tspan dy="4" font-size="14">3</tspan><tspan dy="-11" font-size="14">−</tspan><tspan dy="7">(aq)</tspan></text>
+  </g>
+  <!-- A slanted line through each spectator term, from 3 units left of it to 3 units right of it -->
+  <g stroke="#6B655D" stroke-width="2" stroke-linecap="round">
+    <line x1="186.3" y1="180" x2="281.7" y2="197"/>
+    <line x1="117" y1="214" x2="200.5" y2="231"/>
+    <line x1="224.8" y1="248" x2="308.3" y2="265"/>
+    <line x1="330.6" y1="248" x2="426" y2="265"/>
+  </g>
+  <text x="84" y="294" fill="#6B655D">struck out: spectator ions</text>
+
+  <!-- Band 3: net ionic -->
+  <text x="24" y="348" fill="#4F706C" font-weight="600">Net ionic</text>
+  <g fill="#26231F" text-anchor="middle">
+    <text x="122.5" y="384">3 Ag<tspan dy="-7" font-size="14">+</tspan><tspan dy="7">(aq)</tspan></text>
+    <text x="175.2" y="384">+</text>
+    <text x="228.8" y="384">PO<tspan dy="4" font-size="14">4</tspan><tspan dy="-11" font-size="14">3−</tspan><tspan dy="7">(aq)</tspan></text>
+    <text x="354" y="384">Ag<tspan dy="4" font-size="14">3</tspan><tspan dy="-4">PO</tspan><tspan dy="4" font-size="14">4</tspan><tspan dy="-4">(s)</tspan></text>
+  </g>
+  <path d="M278.3 378H304.3m-7 -5l7 5l-7 5" fill="none" stroke="#26231F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
