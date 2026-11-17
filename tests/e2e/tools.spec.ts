@@ -241,17 +241,22 @@ test.describe('the periodic table page', () => {
     });
   }
 
-  test('at 320px the name list fits its space, so its last column is not cut off', async ({ page }) => {
-    await page.setViewportSize({ width: 320, height: 800 });
-    await page.goto(PATH);
-    await expect(page.locator('table.elements-by-name tbody tr')).toHaveCount(118);
-    await page.evaluate(() => document.fonts.ready);
+  // 312px is not a phone: it leaves 8px to spare at 320px. Text runs a pixel or two
+  // wider on some systems (the Linux test runner among them), and with no room to
+  // spare the last column was cut off there while it fitted here.
+  for (const width of [320, 312]) {
+    test(`at ${width}px the name list fits its space, so its last column is not cut off`, async ({ page }) => {
+      await page.setViewportSize({ width, height: 800 });
+      await page.goto(PATH);
+      await expect(page.locator('table.elements-by-name tbody tr')).toHaveCount(118);
+      await page.evaluate(() => document.fonts.ready);
 
-    const sizes = await page
-      .locator('table.elements-by-name')
-      .evaluate((el) => ({ scroll: el.scrollWidth, client: el.clientWidth }));
-    expect(sizes.scroll).toBeLessThanOrEqual(sizes.client);
-  });
+      const sizes = await page
+        .locator('table.elements-by-name')
+        .evaluate((el) => ({ scroll: el.scrollWidth, client: el.clientWidth }));
+      expect(sizes.scroll).toBeLessThanOrEqual(sizes.client);
+    });
+  }
 
   test('at 320px the table scrolls inside its own box, which takes focus and the arrow keys', async ({ page }) => {
     await page.setViewportSize({ width: 320, height: 800 });
