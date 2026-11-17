@@ -128,11 +128,12 @@
 }
 
 /* prose.css leaves 0.5rem either side of a cell on a phone; four columns,
-   with "Praseodymium" in the first, need a little less to fit 320px. */
+   with "Praseodymium" in the first, need less to fit 320px with room to
+   spare: text runs a pixel or two wider on some systems. */
 @media (max-width: 30rem) {
   .prose .elements-by-name th,
   .prose .elements-by-name td {
-    padding-inline: 0.35rem;
+    padding-inline: 0.25rem;
   }
 }
 .elements-by-name tbody th {
