@@ -1,9 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import {
+  ACID_IDS,
   ACIDS,
   AXES,
   BASE_MICROMOLES_PER_ML,
   FLASK,
+  MICROMOLES_PER_MILLIMOLE,
   VOLUME,
   describeFlask,
   describeGraph,
@@ -15,13 +17,15 @@ import {
   state,
   volumeText,
   type AcidId,
+  type GraphPoint,
 } from '../../src/lib/titration';
 
-const ACID_IDS: AcidId[] = ['lactic', 'tartaric'];
-// Written out, not computed: the 81 volumes the slider must reach, exactly.
+const BOTH_ACIDS: AcidId[] = ['lactic', 'tartaric'];
+// Computed as halves of a mL: a whole number over 2 is exact in binary, so these are exactly the
+// 81 volumes the slider reaches, from 0 to 40 mL in steps of 0.5.
 const ALL_VOLUMES: number[] = Array.from({ length: 81 }, (_, i) => i / 2);
 
-const everyState = ACID_IDS.flatMap((acid) => ALL_VOLUMES.map((volume) => ({ acid, volume })));
+const everyState = BOTH_ACIDS.flatMap((acid) => ALL_VOLUMES.map((volume) => ({ acid, volume })));
 
 describe('the acids, the flask and the slider', () => {
   it('has lactic acid with one proton and tartaric acid with two', () => {
@@ -32,6 +36,14 @@ describe('the acids, the flask and the slider', () => {
   it('words the two radio buttons', () => {
     expect(ACIDS.lactic.label).toBe('Lactic acid (gives up one proton)');
     expect(ACIDS.tartaric.label).toBe('Tartaric acid (gives up two)');
+  });
+
+  it('lists the acids by id, in the order of the radio buttons', () => {
+    expect(ACID_IDS).toEqual(['lactic', 'tartaric']);
+  });
+
+  it('has 1000 micromoles in a millimole', () => {
+    expect(MICROMOLES_PER_MILLIMOLE).toBe(1000);
   });
 
   it('has 20 mL of acid holding 3000 micromoles, and 200 micromoles of OH⁻ in each mL of base', () => {
@@ -71,13 +83,13 @@ describe('state', () => {
     ['a volume below 0 mL', 'lactic', -0.5],
     ['NaN', 'lactic', Number.NaN],
     ['an infinite volume', 'tartaric', Number.POSITIVE_INFINITY],
-  ])('throws for %s', (_what, acid, volume) => {
-    expect(() => state(acid as AcidId, volume)).toThrow(RangeError);
+  ] as const)('throws for %s', (_what, acid, volume) => {
+    expect(() => state(acid, volume)).toThrow(RangeError);
   });
 
   it('throws for an unknown acid, and names it and the acids to give instead', () => {
-    // Cast: the point of the test is a value the type forbids.
-    expect(() => state('citric' as AcidId, 5)).toThrow(/lactic or tartaric.*"citric"/);
+    // @ts-expect-error -- an acid the type forbids, on purpose
+    expect(() => state('citric', 5)).toThrow(/lactic or tartaric.*"citric"/);
   });
 
   it('names the volume and the range in its message', () => {
@@ -93,7 +105,8 @@ describe('equivalenceVolume', () => {
   });
 
   it('throws for an unknown acid', () => {
-    expect(() => equivalenceVolume('citric' as AcidId)).toThrow(/citric/);
+    // @ts-expect-error -- an acid the type forbids, on purpose
+    expect(() => equivalenceVolume('citric')).toThrow(/citric/);
   });
 });
 
@@ -132,9 +145,8 @@ describe('linePoints', () => {
     for (const { acid, volume } of everyState) {
       const { protonsLeft, excess } = linePoints(acid);
       const { protonsLeft: left, excess: over } = state(acid, volume);
-      const at = (points: readonly { volume: number; micromoles: number }[]) => {
+      const at = (points: readonly [GraphPoint, GraphPoint, GraphPoint]) => {
         const [first, corner, last] = points;
-        if (!first || !corner || !last) throw new Error('A line needs three points.');
         const [from, to] = volume <= corner.volume ? [first, corner] : [corner, last];
         return from.micromoles + ((volume - from.volume) / (to.volume - from.volume)) * (to.micromoles - from.micromoles);
       };
@@ -198,7 +210,7 @@ describe('over all 162 states the controls reach', () => {
   });
 
   it('is at the equivalence point at exactly one volume for each acid', () => {
-    for (const acid of ACID_IDS) {
+    for (const acid of BOTH_ACIDS) {
       const volumes = ALL_VOLUMES.filter((volume) => state(acid, volume).stage === 'at');
       expect(volumes, acid).toEqual([equivalenceVolume(acid)]);
     }
@@ -238,6 +250,37 @@ describe('over all 162 states the controls reach', () => {
       if (stage === 'at') expect(sentence.endsWith('that is the endpoint.'), sentence).toBe(true);
       else expect(sentence.endsWith(`The flask is ${stage === 'before' && volume > 0 ? 'still ' : ''}${flask}.`), sentence).toBe(true);
     }
+  });
+});
+
+describe('the numbers in the readout, derived independently at every volume', () => {
+  // Hundredths of a millimole as text, by integer arithmetic only: 5 hundredths is "0.05".
+  const hundredthsText = (hundredths: number) => `${Math.floor(hundredths / 100)}.${String(hundredths % 100).padStart(2, '0')}`;
+
+  it('shows, in order, the amounts that the volume and the acid imply', () => {
+    let checked = 0;
+    for (const acid of BOTH_ACIDS) {
+      for (let halves = 0; halves <= 80; halves++) {
+        // Each half mL of 0.200 M base is 0.100 mmol of OH⁻: 10 hundredths of a millimole.
+        const added = 10 * halves;
+        const start = 300 * ACIDS[acid].protons;
+        const left = Math.max(start - added, 0);
+        const excess = Math.max(added - start, 0);
+        let expected: string[];
+        if (halves === 0) expected = [start];
+        else if (added < start) expected = [added, added, left];
+        else if (added === start) expected = [added, start];
+        else expected = [excess];
+
+        const sentence = readout(acid, halves / 2);
+        const numbers = [...sentence.matchAll(/(\d+\.\d\d) mmol/g)].map((match) => match[1]);
+        const label = `${acid} at ${halves / 2} mL: ${sentence}`;
+        expect(numbers, label).toEqual(expected.map((hundredths) => hundredthsText(hundredths)));
+        expect(sentence.startsWith(halves === 0 ? 'No base' : `${Math.floor(halves / 2)}.${halves % 2 === 0 ? 0 : 5} mL`), label).toBe(true);
+        checked += 1;
+      }
+    }
+    expect(checked).toBe(162);
   });
 });
 

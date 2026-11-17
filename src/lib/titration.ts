@@ -23,6 +23,11 @@ export const ACIDS = {
 
 export type AcidId = keyof typeof ACIDS;
 
+const isAcidId = (key: string): key is AcidId => Object.hasOwn(ACIDS, key);
+
+/** The acids by id, in the order the diagram offers them: read from ACIDS, so the two cannot drift apart. */
+export const ACID_IDS: readonly AcidId[] = Object.keys(ACIDS).filter(isAcidId);
+
 /** The flask: 20.0 mL of 0.150 M acid is 3.00 mmol of acid, in micromoles. */
 export const FLASK = { volumeMl: 20, acidMicromoles: 3000 } as const;
 
@@ -38,7 +43,7 @@ export const VOLUME = { min: 0, max: 40, step: 0.5, start: 10 } as const;
  */
 export const AXES = { volumeMax: VOLUME.max, micromolesMax: 6000 } as const;
 
-const MICROMOLES_PER_MILLIMOLE = 1000;
+export const MICROMOLES_PER_MILLIMOLE = 1000;
 /** Amounts are shown in hundredths of a millimole, which is 10 micromoles. */
 const MICROMOLES_PER_HUNDREDTH = 10;
 
@@ -120,7 +125,10 @@ export function state(acid: AcidId, volume: number): TitrationState {
  * the start down to zero at the equivalence point and on along zero; and the
  * OH⁻ in excess, along zero to the equivalence point and then rising.
  */
-export function linePoints(acid: AcidId): { readonly protonsLeft: readonly GraphPoint[]; readonly excess: readonly GraphPoint[] } {
+export function linePoints(acid: AcidId): {
+  readonly protonsLeft: readonly [GraphPoint, GraphPoint, GraphPoint];
+  readonly excess: readonly [GraphPoint, GraphPoint, GraphPoint];
+} {
   const equivalence = equivalenceVolume(acid);
   const atEnd = state(acid, VOLUME.max);
   return {
@@ -204,9 +212,8 @@ export function describeGraph(acid: AcidId, volume: number): string {
   const { protonsLeft, excess } = state(acid, volume);
   const { protonsLeft: solid, excess: dashed } = linePoints(acid);
   const equivalence = shownVolume(equivalenceVolume(acid));
-  const first = solid[0];
-  const last = dashed[2];
-  if (!first || !last) throw new Error('A line of the graph has fewer than three points.');
+  const [first] = solid;
+  const [, , last] = dashed;
   return (
     `Graph of amount in millimoles against volume of base added, from ${VOLUME.min} to ${VOLUME.max} mL. ` +
     `A solid line, acidic protons left, falls from ${shown(first.micromoles)} mmol at ${VOLUME.min} mL to ${shown(0)} mmol ` +
