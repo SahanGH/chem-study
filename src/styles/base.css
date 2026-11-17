@@ -429,6 +429,18 @@ a.unit-title:hover {
   }
 }
 
+/* The home page's last section, set apart from the unit list above it. */
+.home-reference {
+  margin-top: calc(var(--space) * 1.5);
+}
+.home-reference p {
+  margin: 0.8rem 0 0;
+  max-width: 36rem;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+
 .unit-page {
   max-width: 46rem;
 }

@@ -1,0 +1,293 @@
+---
+topic: "1.2"
+minutes: 12
+summary: "How a mass spectrum shows an element's isotopes and their abundances, and how the weighted average of the isotope masses gives the atomic mass on the periodic table."
+---
+
+The red of a firework comes from strontium. Look strontium up on the [periodic table](/tools/periodic-table/) and it says an atom has a mass of 87.62 amu. Yet sort strontium atoms one at a time and you find four masses, 83.91, 85.91, 86.91 and 87.91 amu, and not a single atom at 87.62.
+
+So where does 87.62 come from? This lesson is about the instrument that does the sorting, and about the arithmetic that turns its readout into the number on the table.
+
+## Isotopes
+
+An atom's nucleus is made of **protons**, which carry positive charge, and **neutrons**, which carry none. (Topic 1.5 has more on the parts of an atom.)
+
+The number of protons decides which element the atom is. Every strontium atom has 38, the whole number in strontium's box on the periodic table.
+
+The number of neutrons can differ. Atoms of one element with different numbers of neutrons are **isotopes** of that element. They behave almost identically in chemical reactions, but they do not have the same mass.
+
+An isotope is named by its **mass number**, the number of protons plus the number of neutrons. Strontium-88, also written ⁸⁸Sr, has 38 protons and 50 neutrons. Strontium-84 has 38 protons and 46 neutrons.
+
+An isotope's mass in amu is close to its mass number, and almost never exactly equal to it. Strontium-88 has a mass of 87.91 amu.
+
+## Reading a mass spectrum
+
+A **mass spectrometer** sorts atoms by mass. It knocks an electron, a negatively charged particle, off each atom, which makes an ion, a charged atom, with a 1+ charge. Then it sends the ions through an electric or magnetic field, which pushes lighter ions off course more than heavier ones, so each mass arrives at its own place.
+
+The readout is a **mass spectrum**: a graph with mass along the bottom and, going up, how many atoms were found at each mass. Each bar on the graph is called a peak. Here is the mass spectrum of thallium.
+
+<Figure
+  src="/figures/1-2-thallium-spectrum.svg"
+  alt="Mass spectrum of thallium, drawn as two narrow bars on a graph of percent of atoms against mass in atomic mass units. A bar at 202.97 atomic mass units reaches 29.52 percent. A taller bar at 204.97 atomic mass units reaches 70.48 percent. There are no other bars."
+  caption="The mass spectrum of thallium. Two peaks mean two isotopes. A peak's position is the isotope's mass, and its height is that isotope's share of the atoms."
+/>
+
+Read it one question at a time:
+
+- **How many peaks are there?** Two, so thallium has two isotopes. There is a peak for each isotope the element has in nature in a measurable amount.
+- **Where is each peak?** At the isotope's mass. One peak is just below 203 amu (202.97 amu, to two decimal places), which is thallium-203. The other is just below 205 amu (204.97 amu), which is thallium-205. Thallium has 81 protons, so these atoms have 122 and 124 neutrons.
+- **How tall is each peak?** The height says how common that isotope is. Of every 100 thallium atoms, on average 29.52 are thallium-203 and 70.48 are thallium-205. This share is the isotope's **relative abundance**.
+
+The vertical axis is not always in percent. Often the tallest peak is simply set to 100, and the others are drawn in proportion. Your question stays the same: what fraction of the atoms is each isotope? Every atom the instrument counted is in one of the peaks, so the heights added together stand for all the atoms. An isotope's fraction is its own height out of that total.
+
+<KeyIdea>
+
+A mass spectrum of an element answers three questions. How many peaks: how many isotopes. Where each peak is: that isotope's mass. How tall each peak is, compared with the others: that isotope's share of the atoms.
+
+</KeyIdea>
+
+<Check answer={4}>
+Rhenium is a metal used in the turbine blades of jet engines. Its mass spectrum has two peaks, near 185 amu and 187 amu. The vertical axis is relative: the peak at 187 is set to 100, and the peak at 185 comes to 59.7. Which statement do these data support?
+
+- Every rhenium atom has the same mass, 186.21 amu.
+- About 60 percent of rhenium atoms are the lighter isotope.
+- The sample must be a mixture of two elements.
+- About 63 percent of rhenium atoms are the heavier isotope.
+
+<div slot="why">
+
+Two peaks mean two isotopes of one element, rhenium-185 and rhenium-187. The atoms have the same number of protons and different numbers of neutrons.
+
+The heights are relative, so turn them into shares. For the peak at 187:
+
+$$
+\frac{100}{100 + 59.7} = 0.626
+$$
+
+About 63 percent of the atoms are rhenium-187, and the other 37 percent are rhenium-185. The 59.7 is a height on a scale where the tallest peak is 100. It is not a percent of the atoms. (The measured values are 37.40 percent rhenium-185 and 62.60 percent rhenium-187.)
+
+No rhenium atom in the sample has a mass of 186.21 amu: there is no peak there. That number, the one on the periodic table, is an average over both isotopes.
+
+</div>
+</Check>
+
+## The weighted average
+
+Back to the number on the periodic table. It is an average over all the atoms in a natural sample, so an isotope that makes up more of the atoms counts for more. An average like that is a **weighted average**: multiply each isotope's mass by the fraction of the atoms that have it, then add.
+
+$$
+\begin{aligned}
+&\text{average atomic mass} \\
+&= (\text{fraction}_1 \times \text{mass}_1) \\
+&\quad + (\text{fraction}_2 \times \text{mass}_2) \\
+&\quad + \cdots
+\end{aligned}
+$$
+
+A fraction is the percent divided by 100, and the fractions add up to 1. The equation sheet does not give this formula. You have to know it.
+
+For thallium, with the masses in amu:
+
+$$
+\begin{aligned}
+&(0.2952)(202.97) \\
+&\quad + (0.7048)(204.97) \\
+&= 59.92 + 144.46 \\
+&= 204.38\ \text{amu}
+\end{aligned}
+$$
+
+That is the value in thallium's box.
+
+Here is the mistake this replaces. Add the two masses and divide by 2, and you get 203.97 amu. That plain average treats every peak as equally common, and these two are not: about seven thallium atoms in ten are the heavier one.
+
+One link back to topic 1.1: this average, 204.38 amu per atom, is also the molar mass, 204.38 g/mol.
+
+## Where the balance point lies
+
+Picture the spectrum as a seesaw: a plank with the mass scale marked along it, and each bar standing on the plank at its own mass, as heavy as it is tall. The weighted average is the point where the plank balances.
+
+Two things follow, and they let you predict the answer before you touch a calculator:
+
+- The balance point has to lie between the lightest peak and the heaviest.
+- It is pulled toward the tallest bar, because that bar weighs the most.
+
+With only two isotopes, that settles a good deal: the balance point is nearer the taller peak. For thallium it lies between 203 and 205 and closer to 205, so above the midpoint, 204. The calculated 204.38 fits.
+
+With three or more peaks, the tallest bar shares the pull with the others, so the average need not be nearer the tallest peak than it is to the others. It still cannot leave the range of the peaks.
+
+So an answer outside that range is wrong, and for an element with two isotopes so is an answer on the shorter peak's side of the middle. A few seconds of this catches both.
+
+<Figure
+  src="/figures/1-2-strontium-spectrum.svg"
+  alt="Mass spectrum of strontium, drawn as four narrow bars on a graph of percent of atoms against mass in atomic mass units. The bars are at 83.91, 85.91, 86.91 and 87.91 atomic mass units, with heights of 0.56, 9.86, 7.00 and 82.58 percent. The bar at 87.91 is by far the tallest. The bar at 83.91 is too short to see at this scale, and its label, 0.56 percent, marks the place."
+  caption="The mass spectrum of strontium. Four isotopes, and more than four atoms in five are strontium-88. The peak at 83.91 amu is too short to show at this scale; its label marks the place."
+/>
+
+<Worked title="The average atomic mass of strontium">
+
+Use the spectrum in the figure to find strontium's average atomic mass.
+
+1. **Read the spectrum.** Four peaks, so four isotopes, though the peak at 83.91 amu is too short to show at this scale and its label marks the place. The graph shows each mass only roughly. The table below gives the masses to two decimal places.
+
+   | Isotope | Mass (amu) | Percent of atoms |
+   |---|---|---|
+   | strontium-84 | 83.91 | 0.56 |
+   | strontium-86 | 85.91 | 9.86 |
+   | strontium-87 | 86.91 | 7.00 |
+   | strontium-88 | 87.91 | 82.58 |
+
+2. **Estimate.** More than four atoms in five are at 87.91 amu, and every other isotope is lighter. So the average is a little under 88.
+
+3. **Turn the percents into fractions.** Divide each by 100: 0.0056, 0.0986, 0.0700 and 0.8258. They add up to 1.0000.
+
+4. **Multiply each mass by its fraction, and add.** The masses are in amu.
+
+   $$
+   \begin{aligned}
+   (0.0056)(83.91) &= 0.470 \\
+   (0.0986)(85.91) &= 8.471 \\
+   (0.0700)(86.91) &= 6.084 \\
+   (0.8258)(87.91) &= 72.596 \\
+   \text{sum} &= 87.621
+   \end{aligned}
+   $$
+
+   The average atomic mass is 87.62 amu.
+
+5. **Compare.** A little under 88, as estimated, and the same as the periodic table's 87.62. No strontium atom has this mass. It is the average over all of them.
+
+6. **What treating every peak as equally common would have said.**
+
+   $$
+   \begin{aligned}
+   &(83.91 + 85.91 \\
+   &\quad + 86.91 + 87.91) \div 4 \\
+   &= 86.16\ \text{amu}
+   \end{aligned}
+   $$
+
+   That is 1.46 amu too low. At 86.16 amu the plank could not balance. On the heavy side, 82.58 percent of the atoms sit 1.75 amu above that point. The atoms on the light side are far too few, and most of them too close, to hold that up.
+
+</Worked>
+
+<Check answer={3}>
+The mass spectrum of a certain metal has two peaks: 112.90 amu (4.29 percent of the atoms) and 114.90 amu (95.71 percent). Without calculating, which is the best estimate of the metal's average atomic mass?
+
+- 113.0 amu
+- 113.9 amu
+- 114.8 amu
+- 115.9 amu
+
+<div slot="why">
+
+The average lies between 112.90 and 114.90, so 115.9 is impossible.
+
+Nearly all the atoms, 95.71 percent, are at 114.90, so the balance point sits just below 114.90: 114.8. The few lighter atoms pull it down by about 0.09 amu, and no further.
+
+113.9 is halfway between the two masses, which would need the isotopes to be equally common. 113.0 would need most of the atoms to be the lighter isotope.
+
+The weighted average works out to 114.8 amu. The metal is indium, 114.82 on the periodic table. It is in the see-through conducting layer of a touch screen.
+
+</div>
+</Check>
+
+<Check numeric="65.38" unit="amu">
+The mass spectrum of a certain metal has five peaks:
+
+| Mass (amu) | Percent of atoms |
+|---|---|
+| 63.93 | 49.17 |
+| 65.93 | 27.73 |
+| 66.93 | 4.04 |
+| 67.92 | 18.45 |
+| 69.93 | 0.61 |
+
+What is the average atomic mass of this metal?
+
+<div slot="why">
+
+Find the balance point by eye first. About half the atoms are at 63.93 and all the rest are heavier, so the balance point is above 64. It is well below 70, because the heavy peaks are small.
+
+Then the weighted average. Divide each percent by 100, multiply by the mass in amu, and add:
+
+$$
+\begin{aligned}
+(0.4917)(63.93) &= 31.434 \\
+(0.2773)(65.93) &= 18.282 \\
+(0.0404)(66.93) &= 2.704 \\
+(0.1845)(67.92) &= 12.531 \\
+(0.0061)(69.93) &= 0.427 \\
+\text{sum} &= 65.378
+\end{aligned}
+$$
+
+The average atomic mass is 65.38 amu. That is the periodic table's value for zinc, the metal that coats galvanized steel.
+
+Notice that 65.38 is nearer the second-tallest peak, at 65.93, than the tallest, at 63.93. With five peaks, the tallest pulls the average toward itself but does not decide it alone.
+
+Some slips land close to the right answer. Leaving out the smallest peak without rescaling gives 64.95; the fractions then add up to 0.9939, not 1. Using whole-number masses (64, 66, 67, 68 and 70) gives 65.45. Averaging only the four largest peaks as if they were equally common gives 66.18. A close answer does not prove the method, so compare your working with the lines above.
+
+Here is what other common slips give:
+
+- Treating every peak as equally common, by adding the five masses and dividing by 5: 66.93 amu, which is 2.4 percent too high.
+- The mass of the tallest peak alone: 63.93 amu, which is 2.2 percent too low.
+- The midpoint of the lightest and heaviest peaks: 66.93 amu.
+- The percents used without dividing by 100: 6538.
+- Only the two tallest peaks, without rescaling: 49.72.
+
+</div>
+</Check>
+
+## Naming the element
+
+The same reading runs backward. Given the spectrum of an unknown element, estimate or calculate its average atomic mass, then find the element with that mass on the periodic table. The number of peaks does not matter for this: one element can have one isotope or ten.
+
+<Check answer={2}>
+The mass spectrum of a pure metal has five peaks: 57.94 amu (68.08 percent of the atoms), 59.93 amu (26.22 percent), 60.93 amu (1.14 percent), 61.93 amu (3.63 percent) and 63.93 amu (0.93 percent). Use the periodic table. Which metal is it?
+
+- Iron (Fe)
+- Nickel (Ni)
+- Copper (Cu)
+- Zinc (Zn)
+
+<div slot="why">
+
+Five peaks are five isotopes of one element.
+
+The average lies between 57.94 and 63.93, and close to the low end, because about two thirds of the atoms are at 57.94 and most of the rest are at 59.93. That puts it a little under 59. Of the choices, that is nickel, 58.69. Cobalt, 58.93, is close as well. The calculated average, 58.70, separates them: it is within 0.01 of nickel's 58.69 on the periodic table.
+
+Iron's 55.85 is below the lightest peak, so it cannot be the average. Copper's 63.55 would need nearly all the atoms to be near 64, and fewer than 1 in 100 are.
+
+The peak at 63.93 amu alone does not settle it. Zinc also has an isotope of mass 63.93 amu: it is the first peak in the question before this one. But zinc's 65.38 is above the heaviest peak here, so it cannot be the average either. The whole pattern of peaks names the element.
+
+</div>
+</Check>
+
+**Beyond the exam:** real spectra can be busier. A sample that holds several elements shows the isotopes of every one of them. Molecules give peaks at the mass of the whole molecule and at the masses of the pieces it breaks into. And an ion that has lost two electrons, not one, shows up at half its mass, because the instrument really sorts by mass divided by charge. The exam asks only about the spectrum of a single element, with every peak coming from single atoms that carry a 1+ charge.
+
+<Trap>
+
+Six mistakes come up again and again on this topic:
+
+- **Treating every peak as equally common.** Adding the peak masses and dividing by how many there are ignores abundance. For strontium it gives 86.16 amu, not 87.62. Weight each mass by its fraction.
+- **Using percents as they stand.** Divide by 100 first. The fractions must add up to 1.
+- **Reading a relative height as a percent.** When the tallest peak is set to 100, divide each height by the sum of the heights.
+- **Taking several peaks for several elements.** The peaks of one element's spectrum are its isotopes: same protons, different neutrons.
+- **Looking for an atom with the average mass.** No strontium atom has a mass of 87.62 amu.
+- **Calculating without a first look.** The average lies between the lightest peak and the heaviest, pulled toward the tallest. With two isotopes it is nearer the taller peak.
+
+</Trap>
+
+<KeyPoints>
+
+- Isotopes are atoms of one element with different numbers of neutrons, and so different masses.
+- In the mass spectrum of an element, the number of peaks is the number of isotopes, each peak's position is an isotope's mass, and its height, compared with the others, gives that isotope's relative abundance.
+- The average atomic mass on the periodic table is the weighted average of the isotope masses, each multiplied by its fraction of the atoms.
+- The weighted average lies between the lightest and heaviest isotopes, pulled toward the most abundant one, and with two isotopes it is nearer the more abundant. Find the balance point by eye before you calculate.
+- Treating every peak as equally common gives the wrong average whenever the isotopes are not equally abundant, except by coincidence.
+- An unknown element can be named by finding its average atomic mass on the periodic table.
+
+</KeyPoints>
+
+<PracticeNext />

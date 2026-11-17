@@ -238,6 +238,19 @@ tests/e2e/tools.spec.ts diagram-photoelectron-spectrum.spec.ts diagram-periodic-
 
 Branch: `topic/unit-1-reference-pages`, from this plan's branch (`topic/unit-1-lessons-design`). Tasks 1 to 4. The pull request title is "feat(tools): the periodic table and the equations page". One implementer builds the four tasks in order, test-first, then the controller runs the build, looks at both pages at four widths and in both themes, has the pages fact-checked and the code reviewed.
 
+> **As carried out (2026-11-16).** The repository is newer than Tasks 1 to 4 below. Both pages were fact-checked against pictures of the exam's table and sheet (every number, symbol, mass, equation and constant right), and two reviewers approved the code. What changed, and why:
+>
+> - **The group numbers are laid over the list's top padding,** not set in a first row. The plan asked for a first row of group numbers and also for every element to keep its row from `tablePosition` (hydrogen and helium are in row 1), which cannot both hold in one grid. The numbers are `aria-hidden` list items placed with `position: absolute`, and every direct child of the list is an `<li>`.
+> - **The two lower rows are in columns 4 to 18,** as the exam's table has them (La and Ac under group 4, Lu and Lr under group 18), not 3 to 17 as the plan said. A third reading of the picture is a fixture (`tests/unit/fixtures/ap-table-layout.json`) and a unit test compares all 118 positions with it. The page carries the exam's marks (`57–71 *`, `89–103 †`) and its two labels, "*Lanthanoids" and "†Actinoids", as real text.
+> - **The key's wording.** The p block line says "except helium". The f block line reads "f block: the two rows below the table", and a sentence under the key says each of those rows has fifteen boxes, so one element in each belongs to the d block, that sources differ on which, and that all fifteen are tinted alike. The plan's version told students to look for a d-colored cell that does not exist.
+> - **The page's prose** says the table prints no mass for 34 elements (all radioactive, though a few radioactive elements such as uranium do have a mass), and "no element names", because the exam's table does print "Lanthanoids" and "Actinoids".
+> - **Molar mass is bold in n = m/M,** as the sheet prints it (`\boldsymbol{M}`); the plan's table had a plain M.
+> - **The sheet's table of fourteen unit symbols is not on the equations page.** The plan's Units section lists only the conversions and the prefixes. A sentence says the sheet lists them, and the conversions name their units (hertz, volt, ampere, joule, coulomb).
+> - **The equations page after the fact-check.** pK_a and pK_b point to topic 8.3 and the pH and pOH definitions to 8.1, where the framework prints them; density has no topic and is said to be used throughout the course (the introduction promises a topic "where one topic does"). "Not on the sheet" no longer says Q is missing from the sheet: the sheet uses Q in the cell-potential equation and does not say how to write it. The free energy, cell potential and F lines say what their symbols stand for. The half-life line says the sheet does not state that it is for first order only, and q is "charge in some places and heat in another".
+> - **`ChemicalElement`, not `Element`.** The plan's contract printed `Element`, which shadows the DOM's type in every file that imports it. It is a `type`, as the project prefers for object shapes.
+> - **`topicLabel` and `requireReferenceMeta` live in `src/lib/`,** with unit tests of the link-or-plain-text choice and of both throws. `TopicRef.astro` and `ReferenceLayout.astro` only call them, because Vitest cannot load an `.astro` file.
+> - **Search and widths.** The "Elements by name" table has less cell padding on a phone, so its four columns fit 320 px without scrolling. The Faraday search test depends on the first batch of results; no Unit 9 lesson exists, and whoever writes one will see the failure and know where to look.
+
 ### Task 1: The element data
 
 **Files:**
@@ -470,6 +483,16 @@ Every value and every equation must equal the transcription's. The sheet gives n
 Branch: `topic/unit-1-moles-and-composition`, from `topic/unit-1-reference-pages`. Tasks 5 to 8. The pull request title is "feat(lessons): Unit 1 lessons 1.1-1.4".
 
 No code. Four writers in parallel, then the steps of "How a group is carried out".
+
+> **As carried out (2026-11-17).** The four lessons are newer than the briefs of Tasks 5 to 8 below. They were written into a scratch folder while the reference pages were being built, then copied in. Each was fact-checked twice by a fresh agent that solved every Check and worked example before reading its answer and recomputed every number from the exam table's masses: **neither round found a wrong answer, number, formula, isotope value or figure count.** The prose was checked for originality once. What changed from the briefs, and why:
+>
+> - **Lesson 1.4's rutile Check has new data**: 2.70 g of titanium in a 5.00 g sample (54.0 percent), answer 90.1 percent, where the brief has 2.85 g and 95.1. With the brief's numbers one slip (taking the shortfall in titanium off 100) gave 97.07, and rounded to 97 it fell inside the 2 percent the page accepts. With 54.0 every slip, as computed and rounded to two or three figures, is outside. (55.0 was tried first and rejected: its printed moles and its carried moles give masses that differ in the last digit.) `scratchpad/unit1/checks/1-4.py` follows the lesson and now also tests each slip rounded to two figures.
+> - **Statements that said more than is true** (first round): an average was justified by counting the atoms above it, which does not follow (lesson 1.2's worked example now argues from the balance point); "small peaks hardly move the balance point" (1.2: untrue of the number it was attached to); "the atoms of one element do not all have the same mass" (1.1: now "of most elements"); "the multiplier was wrong, so try the next" (1.3: the rule now says to try 2 to 6 in order, names sixths, and says what to do if none works).
+> - **Second round, wording only**: "the grader" is no longer mentioned (1.1 says a slip is "close enough that this page marks it correct"); bronze and the word "alloy" came before the lesson introduced them and settled a Check's option (1.4); a pointer to "the next section" led nowhere (1.3, which now shows the 3.71 to 1); a peak's height is its isotope's share only "compared with the others" (1.2's KeyIdea); a weak-looking option carried a reason the others lacked (1.2's naming Check).
+> - **Originality** (first round, prose only; every example was clear): one strong and eight moderate matches of wording with the teacher's notes or a textbook, each reworded with the idea kept (a heading and its sentence in 1.1; the four steps from composition to a formula in 1.3, which now give a reason for each step; a Trap sentence in 1.2; the "fixed for a compound, measured for a mixture" passage in 1.4). Four settings were already on the site and were changed: propane in a camping stove (lesson 3.1's opening; now a small cylinder for a portable grill), acetone as nail-polish remover (a Unit 2 test; now a laboratory solvent), hydrogen sulfide as the smell of rotten eggs (lesson 7.6; now sulfur springs), hydrazine as a rocket fuel (two tests; now named without a use).
+> - **Reading times** are set from each lesson's length at the rate of the Unit 7 lessons (about 230 words a minute, counting markup): 14, 12, 14 and 11 minutes, where the briefs had 13, 11, 14 and 8.
+> - **Two small code fixes found while looking at the built pages**, each test-first and in its own commit: a percent answer showed as "90.1 %" with a space (`shownAnswer` in `src/lib/check.ts`); and two paragraphs in a row, or a list after a paragraph, inside a Check's "Show answer" had no space between them, on 60 explanations across the site (a rule in `src/styles/prose.css`, with tests in `tests/e2e/lesson.spec.ts`).
+> - **Measured on phones** at 412, 390, 360 and 320 px with every answer open: no lesson scrolls sideways and no equation scrolls in its box.
 
 ### Task 5: Lesson 1.1, Moles and Molar Mass
 
@@ -745,6 +768,42 @@ No code. Four writers in parallel, then the steps of "How a group is carried out
 ## Group D: electrons, and the spectrum that shows them (pull request D)
 
 Branch: `topic/unit-1-electrons-and-pes`, from `topic/unit-1-moles-and-composition`. Tasks 9 to 11. The pull request title is "feat(lessons): Unit 1 lessons 1.5 and 1.6 and the photoelectron spectrum explorer".
+
+> **As carried out (2026-11-17).** The repository is newer than Tasks 9 to 11 below. The explorer was built test-first and reviewed twice (TypeScript and general); both lessons were fact-checked twice by fresh agents that solved every Check before reading its answer, counted the electrons of every configuration, compared every energy with the data files character for character and recovered every drawn peak from the SVG, and were checked once for originality. **No fact-check found a wrong answer, configuration, energy, ranking or peak.** What differs from the tasks as printed, and why:
+>
+> **The explorer (Task 9)**
+>
+> - **More exports than the contract lists**: `energyTable` (which returns a tagged result, `{ compared: false, rows }` or `{ compared: true, rows }`, with `undefined` for an energy an atom lacks), `tableCaption`, `describeSpectrum`, `opening`, `elementOf` and the types they use. The table, its caption and the drawing's accessible name all come from the module.
+> - **Four "mixed" comparisons, not one.** The contract printed the sentence for oxygen against nitrogen; the data also have N/O, P/S and S/P. The sentence is generalized, unit tests cover all 380 ordered pairs, and a comparison that fits no pattern throws.
+> - **While comparing**, the readout is the chosen atom's opening ("Oxygen, 1s² 2s² 2p⁴: three peaks.") followed by the comparison sentence; the table lists every subshell either atom has, with a dash for whichever lacks it, an "Electrons (O)" column for the chosen atom, and the compared atom's configuration in the caption. Without that, a compared atom's extra peaks had no text equivalent.
+> - **The two menus sit directly under the drawing**, above the readout, unlike the other explorers: the readout's length changes when a comparison is chosen, and it moved the menu the student had just used.
+> - **Peak labels carry a halo in the card's color.** A compared atom's taller dashed peak can stand exactly where a label is (oxygen's 2p over hydrogen's 1s); browser tests cover three such pairs.
+> - **A "held more tightly" arrow** sits under the axis title, as in the lesson's figure; both axis titles are lowercase, as in the other explorers.
+> - **Shared rules added to `diagram.css`**: `.diagram-gridline`, `.diagram-peak`, `.diagram-peak.is-compared`, `.diagram-peak-label`.
+> - **The data** in `src/lib/pes.ts` were compared with this plan's table by script: 20 elements, 74 values, no difference.
+>
+> **Lesson 1.5 (Task 10)**
+>
+> - **Core and valence electrons are introduced with sulfur**, not silicon, and the figure is `1-5-shells-sulfur.svg`. Both Tro books define the two terms with silicon's "four valence electrons and ten core electrons". Silicon is still the lesson's running example for energies, the ionization equation and the estimates of effective nuclear charge.
+> - **The caution on the three-question test was rewritten twice.** As briefed it was scoped by whether an ion holds d electrons, which passed Ti²⁺ written as [Ar] 4s² and shut out I⁻ and Te²⁻. It now says: question 3 works for neutral atoms and anions; for a cation, use the cation rule and compare.
+> - **"About twenty elements, chromium and copper among them"** depart from the filling order (twenty, by a reference list), where the brief said "a few".
+> - **Scenes taken out because the site already has them**: titanium in hip joints and aircraft (a Unit 2 test question), the sodium street lamp (a Unit 3 test question). **The gallium Check's stem** no longer shows gallium(III) oxide's formula, which gave lesson 1.8 an answer.
+> - **Wording that followed the teacher's notes or a textbook**, rebuilt: three Trap items; the walk across row 4 (without "the shell is the row number").
+> - **Check 5's explanation** gives a reason for every step of its order, and says the estimates are rough.
+> - **The block map** sets the two lower rows in columns 4 to 18, as the site's periodic table page does.
+> - **Reading time is 22 minutes** (5,232 words; the brief had 15). It is the longest lesson on the site.
+>
+> **Lesson 1.6 (Task 11)**
+>
+> - **The unknown spectrum and its table stand above the first worked example**, not inside it: inside the card the figure was 236 px wide on a 320 px phone and its axis text under 9 px.
+> - **"What the experiment measures"** is told through energy (what the light brings, what freeing the electron takes, what is left over), not through electrons leaving "slowly" or "fast", which was the notes' wording.
+> - **"What a spectrum says about the model"** leads with the capacities (heights stop at 2 and at 6) and gives calcium's factors as measured "from the last peak of one group to the first peak of the next".
+> - **The Trap** is rebuilt from the two axes; "stable" and "abundance" no longer appear.
+> - **0.59 / 0.42 = 1.4** (two figures), where the brief printed 1.40; `scratchpad/unit1/checks/1-6.py` follows.
+> - **The argon and potassium figure** draws the lines from argon's s peaks in short dashes and from its p peaks in long dashes, and its caption says that potassium's 2p peak lands almost on argon's 2s line.
+> - **Reading time is 19 minutes** (the brief had 12).
+>
+> **Testing two folders on one machine.** When the other unit's folder had a preview on port 4321, `astro preview --port 4321` took another port without failing and Playwright tested the other folder's site. Browser tests now run under a lock file (`scratchpad/e2e.lock`), one folder at a time.
 
 ### Task 9: The photoelectron spectrum explorer
 
@@ -1077,6 +1136,53 @@ Electrons per subshell follow the filling order: 1s 2, 2s 2, 2p up to 6, 3s 2, 3
 ## Group E: trends, and what they predict (pull request E)
 
 Branch: `topic/unit-1-trends-and-ions`, from `topic/unit-1-electrons-and-pes`. Tasks 12 to 15. The pull request title is "feat(lessons): Unit 1 lessons 1.7 and 1.8 and the periodic trends explorer".
+
+> **As carried out (2026-11-17).** The repository is newer than Tasks 12 to 14 below. The explorer was built test-first and reviewed twice (TypeScript and general); both lessons were fact-checked twice by fresh agents that solved every Check before reading its answer and compared every ionization energy, radius, electronegativity and electron affinity with the data files and with reference values, and were checked once for originality. **No fact-check found a wrong answer, value, charge or formula.** What differs from the tasks as printed, and why:
+>
+> **The explorer (Task 12)**
+>
+> - **One sentence of the contract is wrong.** The browser-test line says that choosing argon with electronegativity gives an empty graph. That is true only "down its group". Across its period the graph shows seven points (sodium to chlorine), none marked, and the readout says why. The module follows the unit-test table (`series('Ar', 'en', 'group')` is empty), and both cases are tested.
+> - **The order of the parts** is the property choice, the table, the readout, the element menu and the trend choice, the graph, the caption. As first built to the contract (controls, then readout) a student on a 320 px phone who pressed a cell found the sentence about it two screens below. The readout's box reserves room for its longest sentence, so nothing below it moves.
+> - **More exports than the contract lists**: `GROUPS`, `PERIODS`, `PROPERTY_NAMES` and `DIRECTIONS` (as `as const` lists, with the types derived from them), `elementOf`, `valueText`, `seriesHeading`, `describeSeries`, `orderTitle`, `parseProperty` and `parseDirection` (one message each), and `ticks` and `axisTitle` on `PROPERTIES`. `null` is the only "no value", everywhere.
+> - **Cells.** No visible row labels (a ninth column would squeeze four-digit values at 320 px). Below 30rem the table is 1.5rem wider than the diagram's text; at 360 px and below the values are 11 px with proportional digits, and neighbors are at least 7 px apart (tested for every pair). The cells are `tabindex="-1"` and `disabled` until the diagram wakes; the element menu is the keyboard's way in. The chosen cell's heavy border grows outward.
+> - **Shades.** Five steps, `color-mix` of the unit's color into the card's at 6, 20, 34, 48 and 62 percent, with text contrast of at least 4.5 : 1 in both themes. A larger value is deeper in color: darker in the light theme, lighter in the dark theme, so the caption says "deeper", not "darker". A cell with no value has the paper background and a dashed border.
+> - **The graph.** Its y-axis title is one horizontal line; its x-axis title reads "left to right in the table" or "top to bottom in the table"; "No values to plot" is drawn when a series is empty. The caption adds what a dash means, what the depth of color means, and that the d block, groups 3 to 12, is left out.
+> - **Each radio legend sits above its options**, for this diagram only.
+> - **Shared rules in `diagram.css`**: `.diagram-point-label` shares the halo of `.diagram-peak-label`. `expectStaticDiagram` in `tests/e2e/diagram.ts` now checks every `.diagram-controls` block.
+> - **The data** in `src/lib/periodic-trends.ts` were compared by script with this plan's table and with `scratchpad/unit1/data/trends.json`: 34 elements, every value, every rounding of an electronegativity, every shade level, all 204 series and all 34 readouts, with no difference.
+> - **Carbon's covalent radius is 76 pm** in the explorer, so lesson 2.4 and question 17 of the Unit 2 test's first session now say 76 pm too (the question's ratio becomes 76/126 = 0.60).
+>
+> **Lesson 1.7 (Task 13)**
+>
+> - **Statements narrowed, because the data do not support them as briefed:**
+>   - "Neighbors in the same column are the safer guide" became "use both": a column estimate can be far off when one neighbor is in period 2, a row estimate at the two breaks or beside the d block.
+>   - "Every periodic trend is the same three questions" became "nearly every": the second break rests on the repulsion between two electrons in one orbital.
+>   - "A drop" (phosphorus to sulfur, 12 kJ/mol) against "nearly level" (calcium to gallium, 11 kJ/mol) rested on 1 kJ/mol. The lesson gives the numbers: the second break is 88, 12 and 3 kJ/mol in periods 2, 3 and 4; both breaks are small drops in period 4 and small rises in period 5.
+>   - "The largest drop is from the second period to the third" holds for groups 13 to 17 only, and is said of one group.
+>   - "Nearly twice as wide" (a rubidium atom against a bromine atom) became "about 1.8 times".
+> - **Check 2** (tin to iodine; the brief's numbers and answer) asks which statement fits the numbers. As briefed it repeated the worked example, and its wrong options fell at sight. The sentence above it that gave period 5's answer is gone.
+> - **Check 4** compares nitrogen (3.0) with sulfur (2.6), where the two causes pull opposite ways. The brief's nitrogen against phosphorus was answered by the line above it; oxygen against chlorine, tried next, is both Tro books' example. Its explanation says that so rough a weighing settles a clear case, not a close one.
+> - **The Trap names the two electronegativity reversals** in the lesson's own table (aluminum 1.6 to gallium 1.8, silicon 1.9 to germanium 2.0), with their cause.
+> - **Wording that followed the teacher's notes, answer key or a textbook**, rebuilt: two Trap items; the explanation of the second break; the paragraph on anions (now built from 120 and 196 pm and 35 protons holding 36 electrons); every "earns nothing" and "no credit".
+> - **Added:** definitions of period and group (lessons 1.5 and 1.6 say "row" and "column"); the chlorine estimate from its column and from its row; why nitrogen, beryllium and magnesium form no stable anion.
+> - **The trend-directions figure** has the table's real stepped outline, and its dotted arrow is labeled "as far as group 17".
+> - **Reading time is 25 minutes** (5,676 words; the brief had 15). It is the longest lesson on the site.
+>
+> **Lesson 1.8 (Task 14)**
+>
+> - **The jump rule.** As briefed ("the first rise that stands out from the steps beside it") it gave three valence electrons on nitrogen's own numbers. The lesson says: the first rise that is several times the size of the rises before it, judged by the rise in kJ/mol and not by a multiple. It adds the rule's limit: the jump is plainest in periods 2 and 3 and for the s-block metals; for gallium, indium and the elements to their right it can be as little as two to three times the earlier rises, and the group number is the safer guide.
+> - **Charges from the group number** leave out hydrogen (group 1) and boron (group 13), and "group number minus 18" is limited to the nonmetals of groups 15 to 17. Metals, nonmetals and metalloids are defined by their place in the table where the lesson first leans on them.
+> - **Check 2** asks for the largest rise from the first ionization energy to the second (the brief asked for the largest multiple); its values are a table.
+> - **Check 3** is indium with oxygen, In₂O₃ (the brief had sulfur: InS is a real compound). **Check 4** and the third balancing case use strontium phosphide, Sr₃P₂: barium nitride's formula is not settled, and magnesium phosphide, tried for one round, is one symbol from a worked example in the teacher's practice.
+> - **One sentence answers the opening's question** (why not Sr⁺): the second electron is cheap, and the stronger attraction of a 2+ ion more than pays for it (topic 2.2).
+> - **Wording that followed a source**, rebuilt: the second section's heading; Check 1's stem; the sentence that reaches the formula in the third balancing case.
+> - **Reading time is 16 minutes** (3,576 words; the brief had 9). `scratchpad/unit1/checks/1-8.py` follows the lesson; `checks/1-7.py` describes the brief's Check 4 and wording, not the lesson's.
+>
+> **For the units to come**
+>
+> - **A rule taken from the teacher's notes can be untrue as worded** ("the safer guide", "the largest drop", "stands out from the steps beside it"). The fact-checkers catch it when they are asked to apply each rule, as worded, to every element in the lesson's own tables.
+> - **A replacement written into a fix list needs the same checks as the lesson.** Three replacements in this group were themselves a match or untrue (oxygen against chlorine; magnesium phosphide; "darker cells have larger values"). The originality checker now clears a replacement before it is sent, and writers are told not to apply an item they believe is wrong.
+> - **A Check is answered by the sentence above it more often than by anything else.** After each round of fixes, read the twenty lines above every Check.
 
 ### Task 12: The periodic trends explorer
 

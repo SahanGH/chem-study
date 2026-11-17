@@ -1,0 +1,10 @@
+---
+import Explorer from '../diagrams/PeriodicTrends.svelte';
+import Diagram from './Diagram.astro';
+---
+
+<Diagram
+  caption="Atomic radius here is the covalent radius, half the distance between two bonded atoms. Measured values wobble around the trend. A dash means no value is shown: the site gives no radius or electronegativity for a noble gas. The deeper the color of a cell, the larger its value. The d block, groups 3 to 12, is left out, so calcium is followed by gallium."
+>
+  <Explorer client:visible />
+</Diagram>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 348" font-family="system-ui, sans-serif" font-size="18">
+  <!-- The photoelectron spectrum of silicon. The horizontal axis is logarithmic: 1000 MJ/mol at x=72 and 0.1 MJ/mol at x=452, 95 units per decade, so a binding energy E is at x = 72 + 95 x (3 - log10 E). The vertical axis runs from y=250 (0 electrons) up, 30 units per electron; zero is the top edge of the horizontal axis line (centered at y=250.75). Peaks are 4 wide with a rounded top, centered on the binding energy. Peaks: 1s 178 MJ/mol, 2 electrons, x=143.21, height 60 (top at y=190); 2s 15.1 MJ/mol, 2 electrons, x=245, height 60 (top at y=190); 2p 10.3 MJ/mol, 6 electrons, x=260.78, height 180 (top at y=70); 3s 1.46 MJ/mol, 2 electrons, x=341.39, height 60 (top at y=190); 3p 0.79 MJ/mol, 2 electrons, x=366.73, height 60 (top at y=190). Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="348" fill="#FDFCF9"/>
+
+  <path d="M72 52V250.75H452" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M72 250.75v7M167 250.75v7M262 250.75v7M357 250.75v7M452 250.75v7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M72 190h-7M72 130h-7M72 70h-7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+
+  <text x="72" y="276" text-anchor="middle" fill="#6B655D">1000</text>
+  <text x="167" y="276" text-anchor="middle" fill="#6B655D">100</text>
+  <text x="262" y="276" text-anchor="middle" fill="#6B655D">10</text>
+  <text x="357" y="276" text-anchor="middle" fill="#6B655D">1</text>
+  <text x="452" y="276" text-anchor="middle" fill="#6B655D">0.1</text>
+
+  <text x="58" y="196" text-anchor="end" fill="#6B655D">2</text>
+  <text x="58" y="136" text-anchor="end" fill="#6B655D">4</text>
+  <text x="58" y="76" text-anchor="end" fill="#6B655D">6</text>
+
+  <text x="262" y="304" text-anchor="middle" fill="#26231F">Binding energy (MJ/mol)</text>
+  <text x="24" y="152" text-anchor="middle" fill="#26231F" transform="rotate(-90 24 152)">Relative number of electrons</text>
+
+  <!-- An arrow under the axis, pointing toward larger binding energies. -->
+  <path d="M236 326H141M151 320L140 326L151 332" fill="none" stroke="#26231F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="246" y="332" fill="#26231F">held more tightly</text>
+
+  <path d="M141.21 250V192A2 2 0 0 1 145.21 192V250Z" fill="#4F706C"/>
+  <path d="M243 250V192A2 2 0 0 1 247 192V250Z" fill="#4F706C"/>
+  <path d="M258.78 250V72A2 2 0 0 1 262.78 72V250Z" fill="#4F706C"/>
+  <path d="M339.39 250V192A2 2 0 0 1 343.39 192V250Z" fill="#4F706C"/>
+  <path d="M364.73 250V192A2 2 0 0 1 368.73 192V250Z" fill="#4F706C"/>
+
+  <text x="143.21" y="182" text-anchor="middle" fill="#26231F">1s</text>
+  <text x="247" y="182" text-anchor="end" fill="#26231F">2s</text>
+  <text x="260.78" y="61" text-anchor="middle" fill="#26231F">2p</text>
+  <text x="341.39" y="182" text-anchor="middle" fill="#26231F">3s</text>
+  <text x="366.73" y="182" text-anchor="middle" fill="#26231F">3p</text>
+
+  <!-- Callouts. The first leader ends at the left side of the 1s peak; the second ends at the top of the 2p peak. -->
+  <path d="M104 124L139.71 212" fill="none" stroke="#6B655D" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="82" y="92" fill="#26231F">position: energy</text>
+  <text x="82" y="114" fill="#26231F">to remove one</text>
+  <path d="M300 90L264.28 74" fill="none" stroke="#6B655D" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="304" y="96" fill="#26231F">height: how many</text>
+  <text x="304" y="118" fill="#26231F">electrons</text>
+</svg>

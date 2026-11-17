@@ -16,6 +16,9 @@ export async function expectStaticDiagram(page: Page, path: string, name: string
   const diagram = page.locator(`[data-diagram="${name}"]`);
   await expect(diagram.locator('svg').first()).toBeVisible();
   await expect(diagram.getByRole('status')).toHaveText(readout);
-  await expect(diagram.locator('.diagram-controls')).toBeHidden();
+  // A diagram may split its controls into more than one block; every one is hidden.
+  const controls = await diagram.locator('.diagram-controls').all();
+  expect(controls.length, 'the diagram has controls to hide').toBeGreaterThanOrEqual(1);
+  for (const block of controls) await expect(block).toBeHidden();
   await expect(page.locator('[data-part="diagram"]', { has: diagram }).locator('.diagram-note')).toBeVisible();
 }
