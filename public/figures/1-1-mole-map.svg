@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 404" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Three boxes in a column, each 320 wide and 76 tall, at y = 12, 164 and 316, with a 76-unit gap between them. In each gap a downward arrow at x = 196 with its label to the left, and an upward arrow at x = 284 with its label to the right. No arrow joins the top box to the bottom box. -->
+  <rect width="480" height="404" fill="#FDFCF9"/>
+
+  <!-- Boxes. The middle one, moles, is filled. -->
+  <rect x="80" y="12" width="320" height="76" rx="12" fill="#FDFCF9" stroke="#6B655D" stroke-width="1.5"/>
+  <rect x="80" y="164" width="320" height="76" rx="12" fill="#E3EAE9" stroke="#4F706C" stroke-width="2"/>
+  <rect x="80" y="316" width="320" height="76" rx="12" fill="#FDFCF9" stroke="#6B655D" stroke-width="1.5"/>
+
+  <g text-anchor="middle">
+    <text x="240" y="44" fill="#26231F" font-weight="600">Mass</text>
+    <text x="240" y="70" fill="#6B655D">grams (g)</text>
+    <text x="240" y="196" fill="#26231F" font-weight="600">Amount</text>
+    <text x="240" y="222" fill="#26231F">moles (mol)</text>
+    <text x="240" y="348" fill="#26231F" font-weight="600">Number of particles</text>
+    <text x="240" y="374" fill="#6B655D">atoms, molecules, formula units</text>
+  </g>
+
+  <!-- Arrow shafts. -->
+  <path d="M196 96V146M284 156V106M196 248V298M284 308V258" fill="none" stroke="#26231F" stroke-width="2.5"/>
+  <!-- Arrowheads: down on the left, up on the right. -->
+  <g fill="#26231F">
+    <path d="M188 144H204L196 157Z"/>
+    <path d="M276 108H292L284 95Z"/>
+    <path d="M188 296H204L196 309Z"/>
+    <path d="M276 260H292L284 247Z"/>
+  </g>
+
+  <!-- Arrow labels, each beside its own arrow. -->
+  <g fill="#26231F">
+    <text x="182" y="132" text-anchor="end">&#247; molar mass</text>
+    <text x="298" y="132">&#215; molar mass</text>
+    <text x="182" y="284" text-anchor="end">&#215; 6.022 &#215; 10<tspan dy="-7" font-size="14">23</tspan></text>
+    <text x="298" y="284">&#247; (6.022 &#215; 10<tspan dy="-7" font-size="14">23</tspan><tspan dy="7">)</tspan></text>
+  </g>
+</svg>

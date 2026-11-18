@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 330" font-family="system-ui, sans-serif" font-size="18">
+  <!-- An outline of the main body of the periodic table: columns 24 wide from x = 24, rows 22 tall from y = 56; column 1 from row 1, column 2 from row 2, columns 3 to 12 from row 4, columns 13 to 17 from row 2, column 18 from row 1. Solid arrow: lower left to upper right. Dashed arrow: parallel to it, 20 units away, upper right to lower left. Dotted arrow under the outline, its tip at x = 430, inside the column of group 17 (x = 408 to 432); its label, in two lines, says that it runs as far as group 17. Built by figures-1-7.cjs. -->
+  <rect width="480" height="330" fill="#FDFCF9"/>
+  <path d="M24 56L48 56L48 78L72 78L72 122L312 122L312 78L432 78L432 56L456 56L456 210L24 210Z" fill="#E3EAE9" stroke="#4F706C" stroke-width="1.5" stroke-linejoin="round"/>
+  <text x="456" y="22" text-anchor="end" fill="#26231F">First ionization energy: larger</text>
+  <text x="456" y="44" text-anchor="end" fill="#26231F">Electronegativity: larger</text>
+  <path d="M40 184L433.5 79.8" fill="none" stroke="#26231F" stroke-width="3"/>
+  <path d="M448 76L435.2 86.1L431.8 73.6Z" fill="#26231F"/>
+  <path d="M446 97.2L64.5 198.2" fill="none" stroke="#26231F" stroke-width="3" stroke-dasharray="10 7"/>
+  <path d="M50 202L62.8 191.9L66.2 204.5Z" fill="#26231F"/>
+  <text x="24" y="232" fill="#26231F">Atomic radius: larger</text>
+  <path d="M24 268L415 268" fill="none" stroke="#26231F" stroke-width="4" stroke-dasharray="0.1 8" stroke-linecap="round"/>
+  <path d="M430 268L415 274.5L415 261.5Z" fill="#26231F"/>
+  <text x="24" y="296" fill="#26231F">Electron affinity: more energy released,</text>
+  <text x="24" y="318" fill="#26231F">as far as group 17</text>
+</svg>

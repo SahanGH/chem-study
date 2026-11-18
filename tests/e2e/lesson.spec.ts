@@ -306,6 +306,23 @@ test.describe('lesson spacing', () => {
     expect(await marginTopOf(page, '.check-feedback')).toBeGreaterThan(0);
   });
 
+  // Lesson 5.2 has no explanation with two paragraphs in a row; lesson 7.1 has several.
+  test('a paragraph that follows a paragraph in a check explanation has space above it', async ({ page }) => {
+    await page.goto('/unit-7-equilibrium/7-1-introduction-to-equilibrium/');
+    expect(await marginTopOf(page, '.check-why > div > p + p')).toBeGreaterThan(0);
+  });
+
+  test('a list that follows a paragraph in a check explanation has space above it', async ({ page }) => {
+    await page.goto('/unit-1-atomic-structure/1-4-composition-of-mixtures/');
+    expect(await marginTopOf(page, '.check-why > div > p + ul')).toBeGreaterThan(0);
+  });
+
+  test('an equation in a check explanation keeps its own space above it', async ({ page }) => {
+    await page.goto('/unit-7-equilibrium/7-1-introduction-to-equilibrium/');
+    const text = await marginTopOf(page, '.check-why > div > p + p');
+    expect(await marginTopOf(page, '.check-why > div > p + .katex-display')).toBeGreaterThan(text);
+  });
+
   test('the question sits clear of its "Check yourself" label', async ({ page }) => {
     expect(await marginTopOf(page, 'cs-check > .check-body')).toBeGreaterThan(0);
   });

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 332" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Drawn by scratchpad/unit1/tools/figures-1-8.cjs. Four boxes 80 by 56, stacked from y=46, like one column of the periodic table. Each formula's baseline is 6 below the middle of its element's box, so the formula is level with the box. -->
+  <rect width="480" height="332" fill="#FDFCF9"/>
+
+  <g fill="#26231F" text-anchor="middle">
+    <text x="64" y="30">Group 16</text>
+    <text x="212" y="30">with lithium</text>
+    <text x="378" y="30">with strontium</text>
+  </g>
+
+  <g fill="#E3EAE9" stroke="#4F706C" stroke-width="1.5">
+    <rect x="24" y="46" width="80" height="56"/>
+    <rect x="24" y="102" width="80" height="56"/>
+    <rect x="24" y="158" width="80" height="56"/>
+    <rect x="24" y="214" width="80" height="56"/>
+  </g>
+
+  <g text-anchor="middle">
+    <text x="64" y="68" fill="#6B655D">8</text>
+    <text x="64" y="92" fill="#26231F" font-weight="600">O</text>
+    <text x="64" y="124" fill="#6B655D">16</text>
+    <text x="64" y="148" fill="#26231F" font-weight="600">S</text>
+    <text x="64" y="180" fill="#6B655D">34</text>
+    <text x="64" y="204" fill="#26231F" font-weight="600">Se</text>
+    <text x="64" y="236" fill="#6B655D">52</text>
+    <text x="64" y="260" fill="#26231F" font-weight="600">Te</text>
+  </g>
+
+  <g fill="#26231F" text-anchor="middle">
+    <text x="212" y="80">Li<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O</tspan></text>
+    <text x="378" y="80">SrO</text>
+    <text x="212" y="136">Li<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">S</tspan></text>
+    <text x="378" y="136">SrS</text>
+    <text x="212" y="192">Li<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">Se</tspan></text>
+    <text x="378" y="192">SrSe</text>
+    <text x="212" y="248">Li<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">Te</tspan></text>
+    <text x="378" y="248">SrTe</text>
+  </g>
+
+  <g fill="#6B655D" text-anchor="middle">
+    <text x="212" y="296">2 Li<tspan dy="-7" font-size="14">+</tspan><tspan dy="7"> </tspan>for</text>
+    <text x="212" y="319">each 2&#8722; ion</text>
+    <text x="378" y="296">1 Sr<tspan dy="-7" font-size="14">2+</tspan><tspan dy="7"> </tspan>for</text>
+    <text x="378" y="319">each 2&#8722; ion</text>
+  </g>
+</svg>

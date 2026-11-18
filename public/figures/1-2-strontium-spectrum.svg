@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 336" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Plot runs from x=72 (83 amu) to x=450 (89 amu), 63 units per amu, and from y=268 (0 percent) to y=28 (100 percent), 2.4 units per percent. Zero percent is the top edge of the horizontal axis line (the line is centered at y=268.75), so even the shortest bar shows its full height above the axis. Bars are 10 wide, centered on the isotope's mass: 83.91 amu at x=129.33, height 0.56 x 2.4 = 1.344 (top at y=266.656); 85.91 amu at x=255.33, height 9.86 x 2.4 = 23.664 (top at y=244.336); 86.91 amu at x=318.33, height 7.00 x 2.4 = 16.8 (top at y=251.2); 87.91 amu at x=381.33, height 82.58 x 2.4 = 198.192 (top at y=69.808). Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="336" fill="#FDFCF9"/>
+
+  <path d="M72 28V268.75H450" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M72 268.75v7M135 268.75v7M198 268.75v7M261 268.75v7M324 268.75v7M387 268.75v7M450 268.75v7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M72 268.75h-7M72 220h-7M72 172h-7M72 124h-7M72 76h-7M72 28h-7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+
+  <text x="72" y="296" text-anchor="middle" fill="#6B655D">83</text>
+  <text x="135" y="296" text-anchor="middle" fill="#6B655D">84</text>
+  <text x="198" y="296" text-anchor="middle" fill="#6B655D">85</text>
+  <text x="261" y="296" text-anchor="middle" fill="#6B655D">86</text>
+  <text x="324" y="296" text-anchor="middle" fill="#6B655D">87</text>
+  <text x="387" y="296" text-anchor="middle" fill="#6B655D">88</text>
+  <text x="450" y="296" text-anchor="middle" fill="#6B655D">89</text>
+
+  <text x="58" y="274" text-anchor="end" fill="#6B655D">0</text>
+  <text x="58" y="226" text-anchor="end" fill="#6B655D">20</text>
+  <text x="58" y="178" text-anchor="end" fill="#6B655D">40</text>
+  <text x="58" y="130" text-anchor="end" fill="#6B655D">60</text>
+  <text x="58" y="82" text-anchor="end" fill="#6B655D">80</text>
+  <text x="58" y="34" text-anchor="end" fill="#6B655D">100</text>
+
+  <text x="261" y="326" text-anchor="middle" fill="#26231F">Mass (amu)</text>
+  <text x="18" y="148" text-anchor="middle" fill="#26231F" transform="rotate(-90 18 148)">Percent of atoms</text>
+
+  <rect x="124.33" y="266.656" width="10" height="1.344" fill="#4F706C"/>
+  <rect x="250.33" y="244.336" width="10" height="23.664" fill="#4F706C"/>
+  <rect x="313.33" y="251.2" width="10" height="16.8" fill="#4F706C"/>
+  <rect x="376.33" y="69.808" width="10" height="198.192" fill="#4F706C"/>
+
+  <text x="129.33" y="258.7" text-anchor="middle" fill="#26231F">0.56%</text>
+  <text x="255.33" y="236.3" text-anchor="middle" fill="#26231F">9.86%</text>
+  <text x="318.33" y="243.2" text-anchor="middle" fill="#26231F">7.00%</text>
+  <text x="381.33" y="61.8" text-anchor="middle" fill="#26231F">82.58%</text>
+</svg>
