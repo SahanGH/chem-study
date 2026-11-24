@@ -153,9 +153,6 @@ reverse.
 
 - **Worksheet 1, question 5(c):** the key gives 0.2003 g of calcium in the
   tablet; the data give 0.2002 g.
-- **Ladder 3, the copper example:** the key adds rounded parts and reaches
-  63.55; carried unrounded, the two isotopes give 63.54 amu. The answer
-  shows 63.54 and says the table's 63.55 comes from more precise data.
 - **Worksheet 3, question 5:** the 1s binding energy of oxygen is printed as
   54.4 MJ/mol. The site's data (`src/lib/pes.ts`, the explorer of lesson
   1.6) have 52.6, and the question's reasoning needs only that it is far
