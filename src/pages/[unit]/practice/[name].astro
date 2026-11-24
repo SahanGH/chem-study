@@ -38,9 +38,10 @@ interface Props {
 }
 const { unit, doc } = Astro.props;
 const { Content, headings } = await render(doc);
-// Supplied to every practice document, so the files need no imports. Worked,
-// Lewis and Resonance are the lessons' blocks: the skill ladders use Worked,
-// and Unit 2's answers draw Lewis structures.
+// Supplied to every practice document, so the files need no imports. Figure,
+// Worked, Lewis and Resonance are the lessons' blocks: the skill ladders use
+// Worked, Unit 2's answers draw Lewis structures, and two Unit 1 worksheets
+// print a spectrum for the student to read.
 const blocks = { Answer, Blank, Figure, Lewis, Part, Question, Resonance, Rubric, RubricLine, Worked };
 ---
 
