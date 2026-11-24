@@ -62,7 +62,6 @@ Give every writer this section with Plan 3's guide.
 - Worksheet 4, 1(b): the peak at 1.00 MJ/mol gains two electrons, and every peak of the ion is at a lower binding energy than in the atom.
 - Ladder 5: drop the stray "= 2"; reword part (d)'s question from its key.
 - Ladder 10 and free-response question 5: "the attraction grows as the distance between the ions shrinks", never "varies as 1/d".
-- Free-response question 1(a): the answer is 10.8 amu; the rubric line accepts 10.8 or 10.81.
 - Free-response question 3: recompute the three mole amounts unrounded and print them to four figures; add to the stem that all of the sample's carbon ends up in the carbon dioxide and all of its hydrogen in the water.
 
 **The lessons' rules and terms.**
@@ -353,7 +352,7 @@ minutes: 50
 - Each question's `title` is the description in its `\frq{...}` line, in sentence case, without "Coulombic" (question 5: "Ionic compounds and the attraction between ions").
 - Question 3's single 4-point rubric line: look at how the key divides it; if the key names what earns each point, write one `RubricLine` per point and say so in the report.
 
-**Points to look at in the fact-check:** Ladder 1(b) and 2(a) with magnesium's 24.30; Ladder 1(d) (helium against iron, by moles); Ladder 3's copper (63.55, as the source has it: the two products carried unrounded give 63.546) and part (d) (no atom has the average mass); Ladder 5's worked example (the printed moles of carbon with 12.01) and part (d) as reworded; Ladder 6's percent of sodium in a mixture of two salts, and the sentence on topic 3.9; Ladder 7(d) (Al³⁺ against Mg²⁺: same electrons, more protons); Ladder 8(d) (the 1s peak for a larger nuclear charge); Ladder 9(c) (sulfur below phosphorus: the paired electron, not "half-filled stability") and 9(d) (sodium's second ionization energy); Ladder 10's opening rule, its formulas, the melting points 2852 and 993 °C and the distances 212 and 235 pm, and the sentence on topic 2.2; free-response 1(a) (10.8 or 10.81) and 1(e); 2(c) (magnesium 738 against aluminum 578, in the lesson's words); question 3's mole amounts and the added sentence in its stem; 4(b) (why the separation works) against lesson 3.9; 5(b) (CaO against KCl: charges first, then distance, with no formula).
+**Points to look at in the fact-check:** Ladder 1(b) and 2(a) with magnesium's 24.30; Ladder 1(d) (helium against iron, by moles); Ladder 3's copper (63.55, as the source has it: the two products carried unrounded give 63.546) and part (d) (no atom has the average mass); Ladder 5's worked example (the printed moles of carbon with 12.01) and part (d) as reworded; Ladder 6's percent of sodium in a mixture of two salts, and the sentence on topic 3.9; Ladder 7(d) (Al³⁺ against Mg²⁺: same electrons, more protons); Ladder 8(d) (the 1s peak for a larger nuclear charge); Ladder 9(c) (sulfur below phosphorus: the paired electron, not "half-filled stability") and 9(d) (sodium's second ionization energy); Ladder 10's opening rule, its formulas, the melting points 2852 and 993 °C and the distances 212 and 235 pm, and the sentence on topic 2.2; free-response 1(a) (10.81, as the source has it) and 1(e); 2(c) (magnesium 738 against aluminum 578, in the lesson's words); question 3's mole amounts and the added sentence in its stem; 4(b) (why the separation works) against lesson 3.9; 5(b) (CaO against KCl: charges first, then distance, with no formula).
 
 ### Task 6: Finish Group C
 
@@ -364,7 +363,7 @@ minutes: 50
 | Skill ladders | numbers of the tick table, only in the source; perhaps a wording line | "Where you stand" is left out |
 | Skill ladders | `24.31`, `95.21`, `5.57`, `12.011`, `4.003` only in the source; `24.30`, `95.20`, `5.58`, `12.01`, `4.00` only on the site | The exam table's masses |
 | Skill ladders, free-response set | the scope note's wording; the sentences on topics 2.2 and 3.9; the link to the periodic table | Section 4 of the design |
-| Free-response set | fourth figures of question 3's mole amounts; `10.8` only on the site | Corrections |
+| Free-response set | fourth figures of question 3's mole amounts | Corrections |
 
 With all six documents in place, check by hand: each Unit 1 lesson's "Practice next" lists the documents that have a question on its topic; the unit page lists the six in the order of the table "The six documents"; no molar mass has two values under `src/content/practice/unit-1` (`grep` for `24.31`, `12.011`, `4.003`); "amu" everywhere and no bare "u" as a unit.
 

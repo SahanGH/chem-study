@@ -167,9 +167,6 @@ reverse.
 - **Worksheet 4, question 1(b):** the key says one peak of the sulfide ion's
   spectrum "grows". Lesson 1.6 teaches that every peak of an anion also
   moves to a lower binding energy; the answer says both.
-- **Free-response question 1(a):** the rubric asks for 10.81 from abundances
-  given to three figures. The answer gives 10.8 amu and the rubric line
-  accepts 10.8 or 10.81.
 - **Free-response question 3:** the fourth figures of three mole amounts in
   the key are loose (0.01665 for 0.01666, and so on). The formulas do not
   change.
