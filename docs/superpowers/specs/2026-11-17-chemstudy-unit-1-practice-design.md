@@ -275,3 +275,63 @@ on #57. **Each waits for the teacher's word.**
   agrees with the lessons' data.
 - No page scrolls sideways at 412, 390, 360 or 320 px with every answer
   open.
+
+## As built (2026-11-24)
+
+Six documents in three pull requests: #58 (this design and its plan), #60
+(the figure block on practice pages, the two spectra and Worksheets 1 to 4)
+and the one that carries this note (the skill ladders and the free-response
+set).
+
+- **Counts.** Four worksheets with 19 questions, two of them scored (8
+  points); ten ladders with 40 parts; a free-response set of 5 questions, 14
+  parts and 32 points.
+- **Every document was audited to `0 unexplained, 0 stale`** and
+  **fact-checked twice on Fable 5.2** by fresh agents that recomputed every
+  number from the exam table's masses and compared each page with its key.
+  Fixers that applied each decided list ran on Sonnet.
+- **The conversions introduced no wrong answer.** What the checks found was
+  in the originals:
+  - Worksheet 1, 5(c): 0.2003 g for 0.2002 g. Worksheet 3, question 5:
+    oxygen's 1s energy as 54.4 MJ/mol (the measured value is near 52.6).
+  - The ladders: "protons are added to the same shell" (the electrons are);
+    "(+2)(−2) = 4" (the sizes of the charges multiply to 4); a larger
+    nuclear charge "at the same tiny distance" (the same shell).
+  - The free-response set: the same sign slip in 5(b), and loose fourth
+    figures in question 3's mole amounts.
+  - Most findings were answers that gave no reason, or a reason that says
+    more than is true: the tallest peak deciding an average of five peaks; a
+    trend rule stated without "generally"; "exactly three" causes of error.
+- **Two corrections proposed in section 4.4 were wrong, and were withdrawn.**
+  Ladder 3's copper is 63.55 amu, as the source has it (the two products
+  carried unrounded give 63.546), and free-response question 1(a) is 10.81
+  amu, as the source has it (each product is good to the hundredths place).
+  Both came from a research note whose arithmetic was not rechecked before
+  it went into the design. **A correction to a teacher's number is
+  recomputed by the controller, in a script, before it is written down.**
+- **What changed from this design:**
+  - **The two figures are drawn on a 400-unit canvas.** Inside a question's
+    card a figure is 236 px wide on a 320 px phone, and the lessons' 480-unit
+    canvas left its text under 9 px.
+  - **Worksheet 3's table gives heights with the shortest peaks as 1**, as
+    lesson 1.6 does, so that the student works out the electron counts.
+  - **Three questions were reworded**, each listed for the teacher:
+    Worksheet 4, 1(b) (its premise was false: no electrons are removed);
+    Worksheet 3, 4(d) (it named the answer to part (b)); free-response 1(e)
+    (its stem stated its answer).
+  - **The ladders give molar masses to two decimal places**, as lesson 1.1
+    keeps a sum, and hydrogen peroxide's is 34.02 g/mol by the exam's table.
+  - **Lattice energy is defined where a question uses it**, and the pointers
+    for dissolving name topics 3.2 and 3.10 as well as 3.9.
+  - **Percent signs** are left as each source has them; the site's practice
+    pages already mix "%" and "percent".
+- **For the units to come:**
+  - A calculation inside a part's answer has about 25 characters of width on
+    a phone. Four of the equations written into fix lists scrolled in their
+    boxes and were split after the pages were measured: measure after every
+    round of fixes, not only the first.
+  - The audit reads a spacing argument such as `[0.6em]` as a number.
+  - A scoring note copied from a source ("earns 0", "alone earns 1") can
+    leave a grader unable to decide what it applies to. Five such notes in
+    the free-response set are kept as the source has them and listed in the
+    pull request for the teacher.
