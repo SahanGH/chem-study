@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 308" font-family="system-ui, sans-serif" font-size="18">
+  <!-- The photoelectron spectrum of an element to be named. The horizontal axis is logarithmic: 1000 MJ/mol at x=72 and 0.1 MJ/mol at x=452, 95 units per decade, so a binding energy E is at x = 72 + 95 x (3 - log10 E). The vertical axis has no numbers; a peak is 30 units tall for each electron above y=232, the top edge of the horizontal axis line (centered at y=232.75), so the tallest peak is exactly 3 times as tall as the shortest. Peaks are 4 wide with a rounded top, centered on the binding energy, and each is labeled with its binding energy. Peaks: 126 MJ/mol, x=157.46, height 60 (top at y=172); 9.07 MJ/mol, x=266.03, height 60 (top at y=172); 5.31 MJ/mol, x=288.12, height 180 (top at y=52); 0.74 MJ/mol, x=369.42, height 60 (top at y=172). Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="308" fill="#FDFCF9"/>
+
+  <path d="M72 36V232.75H452" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M72 232.75v7M167 232.75v7M262 232.75v7M357 232.75v7M452 232.75v7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+
+  <text x="72" y="258" text-anchor="middle" fill="#6B655D">1000</text>
+  <text x="167" y="258" text-anchor="middle" fill="#6B655D">100</text>
+  <text x="262" y="258" text-anchor="middle" fill="#6B655D">10</text>
+  <text x="357" y="258" text-anchor="middle" fill="#6B655D">1</text>
+  <text x="452" y="258" text-anchor="middle" fill="#6B655D">0.1</text>
+
+  <text x="262" y="288" text-anchor="middle" fill="#26231F">Binding energy (MJ/mol)</text>
+  <text x="44" y="134" text-anchor="middle" fill="#26231F" transform="rotate(-90 44 134)">Relative number of electrons</text>
+
+  <path d="M155.46 232V174A2 2 0 0 1 159.46 174V232Z" fill="#4F706C"/>
+  <path d="M264.03 232V174A2 2 0 0 1 268.03 174V232Z" fill="#4F706C"/>
+  <path d="M286.12 232V54A2 2 0 0 1 290.12 54V232Z" fill="#4F706C"/>
+  <path d="M367.42 232V174A2 2 0 0 1 371.42 174V232Z" fill="#4F706C"/>
+
+  <text x="157.46" y="164" text-anchor="middle" fill="#26231F">126</text>
+  <text x="268.03" y="164" text-anchor="end" fill="#26231F">9.07</text>
+  <text x="288.12" y="44" text-anchor="middle" fill="#26231F">5.31</text>
+  <text x="369.42" y="164" text-anchor="middle" fill="#26231F">0.74</text>
+</svg>

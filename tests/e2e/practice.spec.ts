@@ -226,6 +226,38 @@ test('a Unit 2 lesson ends with a link to the practice for its topic', async ({ 
   await expect(page).toHaveURL(new RegExp(`${WORKSHEET_2_UNIT_2}$`));
 });
 
+test.describe('a figure on a practice page', () => {
+  const path = '/unit-1-atomic-structure/practice/worksheet-2-mass-spectra-and-mixtures/';
+  const spectrum = 'main figure img[src="/figures/1-practice-zirconium-spectrum.svg"]';
+
+  test('shows the drawn spectrum with a text alternative that names every peak', async ({ page }) => {
+    await page.goto(path);
+    const image = page.locator(spectrum);
+
+    await expect(image).toHaveCount(1);
+    const alt = (await image.getAttribute('alt')) ?? '';
+    for (const mass of ['90', '91', '92', '94', '96']) {
+      expect(alt).toContain(mass);
+    }
+    await image.scrollIntoViewIfNeeded();
+    await expect
+      .poll(() => image.evaluate((el: HTMLImageElement) => el.complete && el.naturalWidth > 0))
+      .toBe(true);
+  });
+
+  test('keeps the figure inside the page at 320px', async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 800 });
+    await page.goto(path);
+    const image = page.locator(spectrum);
+    await image.scrollIntoViewIfNeeded();
+    const box = await image.boundingBox();
+    if (!box) throw new Error('The zirconium spectrum has no box: it is not rendered.');
+
+    expect(box.x).toBeGreaterThanOrEqual(0);
+    expect(box.x + box.width).toBeLessThanOrEqual(320);
+  });
+});
+
 test.describe('without JavaScript', () => {
   test.use({ javaScriptEnabled: false });
 
