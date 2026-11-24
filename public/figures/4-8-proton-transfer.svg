@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 312" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Two panels, the second 156 units below the first. In each: two rounded shapes 110 x 40 centered at x = 129 and x = 351, a curved arrow from the left shape to the right one (a quadratic curve that starts and ends 12 units above the shapes' center line, clear of both outlines), and the equation under the shapes. Each shape's role, acid or base, is written beside it on its outer side, on the shape's own center line, so that it cannot be read as belonging to a term of the equation below. The water shape has the light accent fill and the accent outline in both panels; the other shape is plain. The equilibrium arrows are drawn, not typed, so that they do not depend on a font; each is centered at x = 229 so that the whole equation is centered on x = 240 (widths from scratchpad/unit4/tools/fig-4-8-widths.cjs). -->
+  <defs>
+    <marker id="head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#26231F"/>
+    </marker>
+    <g id="both-ways" fill="none" stroke="#26231F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-15 -3.5H15L8 -9.5"/>
+      <path d="M15 3.5H-15L-8 9.5"/>
+    </g>
+  </defs>
+  <rect width="480" height="312" fill="#FDFCF9"/>
+
+  <!-- Top panel: water takes a proton. -->
+  <text x="240" y="24" text-anchor="middle" fill="#26231F" font-weight="600">Water takes a proton</text>
+  <rect x="74" y="70" width="110" height="40" rx="20" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="296" y="70" width="110" height="40" rx="20" fill="#E3EAE9" stroke="#4F706C" stroke-width="2"/>
+  <text x="129" y="96.5" text-anchor="middle" fill="#26231F">HCN</text>
+  <text x="351" y="96.5" text-anchor="middle" fill="#26231F">H<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O</tspan></text>
+  <text x="64" y="96.5" text-anchor="end" fill="#6B655D">acid</text>
+  <text x="416" y="96.5" fill="#6B655D">base</text>
+  <path d="M187 78Q240 44 292 77" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#head)"/>
+  <text x="240" y="52" text-anchor="middle" fill="#26231F">H<tspan dy="-7" font-size="14">+</tspan></text>
+  <text x="205" y="142" text-anchor="end" fill="#26231F">HCN(aq) + H<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O(l)</tspan></text>
+  <use href="#both-ways" transform="translate(229 136)"/>
+  <text x="253" y="142" fill="#26231F">H<tspan dy="4" font-size="14">3</tspan><tspan dy="-4">O</tspan><tspan dy="-7" font-size="14">+</tspan><tspan dy="7">(aq) + CN</tspan><tspan dy="-7" font-size="14">&#8722;</tspan><tspan dy="7">(aq)</tspan></text>
+
+  <path d="M24 158H456" fill="none" stroke="#6B655D" stroke-width="1" stroke-opacity="0.35"/>
+
+  <!-- Bottom panel: water gives a proton. -->
+  <text x="240" y="180" text-anchor="middle" fill="#26231F" font-weight="600">Water gives a proton</text>
+  <rect x="74" y="226" width="110" height="40" rx="20" fill="#E3EAE9" stroke="#4F706C" stroke-width="2"/>
+  <rect x="296" y="226" width="110" height="40" rx="20" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <text x="129" y="252.5" text-anchor="middle" fill="#26231F">H<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O</tspan></text>
+  <text x="351" y="252.5" text-anchor="middle" fill="#26231F">OCl<tspan dy="-7" font-size="14">&#8722;</tspan></text>
+  <text x="64" y="252.5" text-anchor="end" fill="#6B655D">acid</text>
+  <text x="416" y="252.5" fill="#6B655D">base</text>
+  <path d="M187 234Q240 200 292 233" fill="none" stroke="#26231F" stroke-width="2" marker-end="url(#head)"/>
+  <text x="240" y="208" text-anchor="middle" fill="#26231F">H<tspan dy="-7" font-size="14">+</tspan></text>
+  <text x="205" y="298" text-anchor="end" fill="#26231F">OCl<tspan dy="-7" font-size="14">&#8722;</tspan><tspan dy="7">(aq) + H</tspan><tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O(l)</tspan></text>
+  <use href="#both-ways" transform="translate(229 292)"/>
+  <text x="253" y="298" fill="#26231F">HOCl(aq) + OH<tspan dy="-7" font-size="14">&#8722;</tspan><tspan dy="7">(aq)</tspan></text>
+</svg>
