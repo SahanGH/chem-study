@@ -976,6 +976,40 @@ Branch: `topic/unit-4-kinds-of-reaction`, from `topic/unit-4-amounts`. Tasks 9 t
 
 No code. Three writers in parallel, then the steps of "How a group is carried out".
 
+> **As carried out (2026-11-24).** The three lessons are newer than the briefs of Tasks 9 to 11 below. Each was fact-checked twice by a fresh agent that solved every Check and worked example before reading its answer, balanced every equation, half-reaction, unfinished step and wrong option in atoms and in charge, applied each rule as worded to every species in the lesson, and looked up acid strengths, reduction potentials and each real-world scene; the three were checked once for originality, and the replacement opening of lesson 4.7 was searched for in the sources before it was used. **No fact-check found a wrong answer, equation, oxidation number, electron count or reaction.** What changed from the briefs, and why:
+>
+> **Lesson 4.7 (Task 9)**
+>
+> - **The opening is black-and-white film**, not water from an old mine: the crystals of film made by precipitation, the developer handing electrons to silver ions, the stop bath giving protons to the basic developer. In words only, with no equation. The mine repeated three scenes already on the site: iron changed by air (lesson 4.9's well water), a mine (lesson 4.8's worked example), and a metal taken out of waste water as a solid (lesson 4.5's zinc, lesson 7.12's lead). Cadmium sulfide stays as the precipitation example, now two solutions mixed.
+> - **The watch battery is written Zn + Ag₂O → ZnO + 2 Ag.** By the lesson's own proton test the brief's form, with water and zinc hydroxide, is acid–base as well as oxidation–reduction.
+> - **Check 4's stem says that zinc carbonate holds Zn²⁺ and CO₃²⁻ ions.** The six rules alone give only that zinc and carbon add up to +6. Its explanation of the methylamine equation says that the rules cannot split carbon from nitrogen, and that the two total −5 before and after.
+> - **The six rules are as briefed.** The sentence on how their order is used is new ("once the rules you have used so far settle an atom's number, it stays"); the brief's was a textbook's, and a simpler rewording failed on OF₂. Rule 6 has a gloss: what a peroxide is, and to take oxygen as −2 unless told that a compound is one.
+> - **"Telling them apart" asks the three questions of one reaction** (cobalt in hydrochloric acid) in place of a three-row table, whose shape was the teacher's notes'. The four steps of "Using the rule" are reworded for the same reason.
+> - **Statements narrowed:** the four ions "usually" just share the water; "insoluble" means the solid comes out "at any ordinary concentration"; a combustion is "burning in oxygen gas"; the three kinds are "sorted by what moves", not "named for" it; a species may be an ionic compound; electrons shared by two atoms of one element are split evenly.
+> - **Added:** what a proton is, at its first use; a clause each on what "weak" and "strong" mean where nitrous acid, potassium hydroxide and hydrochloric acid appear.
+> - **The figure's** three equations carry state symbols, and its second panel's equation is in the order of its shapes (2 I⁻ + Br₂), as is the lesson's.
+>
+> **Lesson 4.8 (Task 10)**
+>
+> - **Statements about strong acids are made of molecules, not protons**: in a strong acid essentially every molecule gives a proton to water. As briefed ("gives essentially all of its protons") they were untrue of sulfuric acid's second proton. The spectator ions are named (ClO₄⁻, Cl⁻, NO₃⁻): HSO₄⁻ is the conjugate base of a strong acid and is no spectator.
+> - **What "favors" means is limited** to equal amounts mixed with no water among the four species, where the reaction goes more than halfway to the favored side. With water on either side there is too much of it for that count (iodic acid in water is mostly ionized though the rule favors the acid).
+> - **Why hydroxide takes every proton of a weak acid:** because it is a far stronger base than the acid's conjugate base, not only than water. The lesson says why some of its arrows are single and others double.
+> - **Wording that followed the teacher's ladders or a textbook**, rebuilt: the last section's heading, now a question; the strength rule, said once from the lesson's own table; the rule for writing a conjugate, built on the proton carrying its +1 charge.
+> - **Two Checks' options reworded** so that the correct one is neither the shortest nor the longest; no question or answer changed.
+> - **The proton-transfer figure** sets "acid" and "base" beside each shape, so that neither word stands over a term of the equation below.
+> - **Lesson 4.6 says "more dilute than its label"** of a titrant, where it said "weaker": lesson 4.8 gives "weak" its meaning (its own commit).
+>
+> **Lesson 4.9 (Task 11)**
+>
+> - **The numeric Check asks how many electrons pass** from tin to gold (6). As briefed it asked for tin's coefficient, 3, which was printed in its stem. `scratchpad/unit4/checks/4-9.py` still tests the brief's question.
+> - **"Add the half-reactions as first written"** now says "and cross out the electrons as if they matched": honest addition leaves an electron and balances.
+> - **The routine multiplies by "the smallest whole numbers"** that match the electrons; the last Trap item is about the lesson's own wrong sum (+3 against +4).
+> - **The four steps for a half-reaction with oxygen and hydrogen** keep their order and are worded by which side is short and what supplies it; as briefed they read as a textbook's.
+> - **Check 4's stem** says that hydrogen peroxide "is oxidized by" cerium(IV) ions, which keeps the idea of an oxidizing agent out of the unit.
+> - **Options and given half-reactions in Checks 3 and 4 are split at the arrow** to fit a 320 px phone; the answers are restated with state symbols.
+>
+> **Reading times** are 17, 16 and 13 minutes, from each lesson's length; the briefs had 15, 12 and 10. **Measured on phones** at 412, 390, 360 and 320 px with every answer open.
+
 ### Task 9: Lesson 4.7, Types of Chemical Reactions
 
 **Files:**
