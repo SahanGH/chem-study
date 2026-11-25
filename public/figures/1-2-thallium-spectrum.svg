@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 336" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Plot runs from x=72 (202 amu) to x=452 (206 amu), 95 units per amu, and from y=268 (0 percent) to y=28 (80 percent), 3.0 units per percent. Zero percent is the top edge of the horizontal axis line (the line is centered at y=268.75), so a bar's full height shows above the axis. Bars are 10 wide, centered on the isotope's mass: 202.97 amu at x=164.15, height 29.52 x 3.0 = 88.56 (top at y=179.44); 204.97 amu at x=354.15, height 70.48 x 3.0 = 211.44 (top at y=56.56). Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="336" fill="#FDFCF9"/>
+
+  <path d="M72 28V268.75H452" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M72 268.75v7M167 268.75v7M262 268.75v7M357 268.75v7M452 268.75v7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M72 268.75h-7M72 208h-7M72 148h-7M72 88h-7M72 28h-7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+
+  <text x="72" y="296" text-anchor="middle" fill="#6B655D">202</text>
+  <text x="167" y="296" text-anchor="middle" fill="#6B655D">203</text>
+  <text x="262" y="296" text-anchor="middle" fill="#6B655D">204</text>
+  <text x="357" y="296" text-anchor="middle" fill="#6B655D">205</text>
+  <text x="452" y="296" text-anchor="middle" fill="#6B655D">206</text>
+
+  <text x="58" y="274" text-anchor="end" fill="#6B655D">0</text>
+  <text x="58" y="214" text-anchor="end" fill="#6B655D">20</text>
+  <text x="58" y="154" text-anchor="end" fill="#6B655D">40</text>
+  <text x="58" y="94" text-anchor="end" fill="#6B655D">60</text>
+  <text x="58" y="34" text-anchor="end" fill="#6B655D">80</text>
+
+  <text x="262" y="326" text-anchor="middle" fill="#26231F">Mass (amu)</text>
+  <text x="18" y="148" text-anchor="middle" fill="#26231F" transform="rotate(-90 18 148)">Percent of atoms</text>
+
+  <rect x="159.15" y="179.44" width="10" height="88.56" fill="#4F706C"/>
+  <rect x="349.15" y="56.56" width="10" height="211.44" fill="#4F706C"/>
+
+  <text x="164.15" y="171.4" text-anchor="middle" fill="#26231F">29.52%</text>
+  <text x="354.15" y="48.6" text-anchor="middle" fill="#26231F">70.48%</text>
+</svg>
