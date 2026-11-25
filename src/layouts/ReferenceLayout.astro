@@ -1,0 +1,20 @@
+---
+import Base from './Base.astro';
+import '../styles/reference.css';
+import { requireReferenceMeta } from '../lib/reference-meta';
+
+// An MDX page under src/pages/ that names this file as its `layout` receives
+// its front matter, and the page's own file path, as props.
+interface Props {
+  frontmatter: { title?: unknown; description?: unknown };
+  file?: string;
+}
+const { frontmatter, file } = Astro.props;
+const { title, description } = requireReferenceMeta(frontmatter, file);
+---
+
+<Base title={title} description={description}>
+  <article class="prose" data-pagefind-body>
+    <slot />
+  </article>
+</Base>

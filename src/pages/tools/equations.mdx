@@ -1,0 +1,350 @@
+---
+layout: ../../layouts/ReferenceLayout.astro
+title: 'Equations and constants: ChemStudy'
+description: 'Every equation and constant the AP Chemistry exam gives you, what each symbol means, and the topic that teaches it.'
+---
+
+import TopicRef from '../../components/TopicRef.astro';
+
+# Equations and constants
+
+The exam hands you a sheet of equations and constants. These are the ones on it, grouped by unit, each with what its symbols stand for and the topic that teaches it, where one topic does. Knowing what an equation is for matters more than memorizing it, because the sheet will be in front of you.
+
+## Atoms and moles
+
+$$
+n = \dfrac{m}{\boldsymbol{M}}
+$$
+
+Moles $n$ from a mass $m$ and a molar mass $\boldsymbol{M}$. The sheet prints the molar mass in bold so that it is not mistaken for molarity. See <TopicRef code="1.1" />.
+
+$$
+6.022 \times 10^{23}\ \text{mol}^{-1}
+$$
+
+Avogadro's number: how many particles make one mole. The sheet gives the number with no symbol. See <TopicRef code="1.1" />.
+
+$$
+F_{\text{coulombic}} \propto \dfrac{q_1 q_2}{r^2}
+$$
+
+The force between two charges $q_1$ and $q_2$ a distance $r$ apart. It is a proportionality with no constant, so it is used to compare situations, not to calculate a force. See <TopicRef code="1.5" />.
+
+## Light
+
+$$
+E = h\nu
+$$
+
+The energy $E$ of a photon from its frequency $\nu$. See <TopicRef code="3.12" />.
+
+$$
+c = \lambda\nu
+$$
+
+Wavelength $\lambda$ times frequency $\nu$ is the speed of light. See <TopicRef code="3.12" />.
+
+$$
+h = 6.626 \times 10^{-34}\ \text{J}\cdot\text{s}
+$$
+
+Planck's constant. See <TopicRef code="3.12" />.
+
+$$
+c = 2.998 \times 10^{8}\ \text{m/s}
+$$
+
+The speed of light. See <TopicRef code="3.12" />.
+
+## Gases
+
+$$
+PV = nRT
+$$
+
+The ideal gas law: pressure $P$, volume $V$, moles $n$, the gas constant $R$ and the temperature $T$ in kelvin. See <TopicRef code="3.4" />.
+
+$$
+\dfrac{P_1V_1}{T_1} = \dfrac{P_2V_2}{T_2}
+$$
+
+One sample of gas under two sets of conditions. See <TopicRef code="3.4" />.
+
+$$
+P_\text{A} = P_\text{total} \times X_\text{A}
+$$
+
+$$
+X_\text{A} = \dfrac{\text{moles A}}{\text{total moles}}
+$$
+
+A gas's partial pressure from its mole fraction $X_\text{A}$ in the mixture. See <TopicRef code="3.4" />.
+
+$$
+P_\text{total} = P_\text{A} + P_\text{B} + P_\text{C} + \dots
+$$
+
+Partial pressures add up to the total pressure. See <TopicRef code="3.4" />.
+
+$$
+KE = \dfrac{1}{2}mv^2
+$$
+
+The kinetic energy of one particle of mass $m$ moving at speed $v$. See <TopicRef code="3.5" />.
+
+$$
+D = \dfrac{m}{V}
+$$
+
+Density $D$ from mass and volume. It is used throughout the course, not in one topic.
+
+$$
+R = 0.08206\ \mathrm{L \cdot atm/(mol \cdot K)}
+$$
+
+$$
+R = 8.314\ \mathrm{J/(mol \cdot K)}
+$$
+
+The gas constant, in the two sets of units the sheet gives. Pick the one that matches your pressure and volume (or energy) units. See <TopicRef code="3.4" />.
+
+$$
+\text{STP} = 273.15\ \text{K and}\ 1.0\ \text{atm}
+$$
+
+$$
+22.4\ \text{L/mol}
+$$
+
+Standard temperature and pressure, and the volume of one mole of an ideal gas at STP. See <TopicRef code="3.4" />.
+
+## Solutions and light absorbed
+
+$$
+M = \dfrac{n_\text{solute}}{\text{L}_\text{solution}}
+$$
+
+Molarity $M$: moles of solute in each liter of solution. See <TopicRef code="3.7" />.
+
+$$
+A = \varepsilon b c
+$$
+
+Absorbance $A$ from the molar absorptivity $\varepsilon$, the path length $b$ and the concentration $c$. See <TopicRef code="3.13" />.
+
+## Kinetics
+
+The sheet gives these three without saying which order each belongs to. Here $k$ is the rate constant, $t$ is time and $[\text{A}]_0$ is the starting concentration.
+
+$$
+[\text{A}]_t - [\text{A}]_0 = -kt
+$$
+
+Zero order. See <TopicRef code="5.3" />.
+
+$$
+\ln[\text{A}]_t - \ln[\text{A}]_0 = -kt
+$$
+
+First order. See <TopicRef code="5.3" />.
+
+$$
+\dfrac{1}{[\text{A}]_t} - \dfrac{1}{[\text{A}]_0} = kt
+$$
+
+Second order. See <TopicRef code="5.3" />.
+
+$$
+t_{1/2} = \dfrac{0.693}{k}
+$$
+
+The half-life $t_{1/2}$, for a first-order reaction only (the sheet does not say so). See <TopicRef code="5.3" />.
+
+## Equilibrium
+
+For a reaction written in general form:
+
+$$
+a\,\text{A} + b\,\text{B} \;\ce{<=>}\; c\,\text{C} + d\,\text{D}
+$$
+
+$$
+K_c = \dfrac{[\text{C}]^c[\text{D}]^d}{[\text{A}]^a[\text{B}]^b}
+$$
+
+The equilibrium constant from molar concentrations. See <TopicRef code="7.3" />.
+
+$$
+K_p = \dfrac{(P_\text{C})^c(P_\text{D})^d}{(P_\text{A})^a(P_\text{B})^b}
+$$
+
+The same expression written with partial pressures. See <TopicRef code="7.3" />.
+
+## Acids and bases
+
+$$
+K_w = [\ce{H3O+}][\ce{OH-}] = 1.0 \times 10^{-14}
+$$
+
+The product of the hydronium and hydroxide concentrations in water, at 25 °C. See <TopicRef code="8.1" />.
+
+$$
+\text{p}K_w = 14 = \text{pH} + \text{pOH}
+$$
+
+The same fact in logarithms, at 25 °C. See <TopicRef code="8.1" />.
+
+$$
+\text{pH} = -\log[\ce{H3O+}]
+$$
+
+$$
+\text{pOH} = -\log[\ce{OH-}]
+$$
+
+How pH and pOH come from concentrations. See <TopicRef code="8.1" />.
+
+$$
+K_a = \dfrac{[\ce{H3O+}][\ce{A-}]}{[\ce{HA}]}
+$$
+
+$$
+K_b = \dfrac{[\ce{OH-}][\ce{HB+}]}{[\ce{B}]}
+$$
+
+The equilibrium constant of a weak acid HA, and of a weak base B. See <TopicRef code="8.3" />.
+
+$$
+\text{p}K_a = -\log K_a
+$$
+
+$$
+\text{p}K_b = -\log K_b
+$$
+
+The same constants on the logarithmic scale. See <TopicRef code="8.3" />.
+
+$$
+K_w = K_a \times K_b
+$$
+
+$$
+\text{p}K_w = \text{p}K_a + \text{p}K_b
+$$
+
+For an acid and its conjugate base, the two constants multiply to $K_w$. See <TopicRef code="8.3" />.
+
+$$
+\text{pH} = \text{p}K_a + \log\dfrac{[\ce{A-}]}{[\ce{HA}]}
+$$
+
+The Henderson–Hasselbalch equation for a buffer. See <TopicRef code="8.9" />.
+
+## Heat and enthalpy
+
+$$
+q = mc\Delta T
+$$
+
+Heat $q$ from a mass $m$, a specific heat capacity $c$ and a temperature change $\Delta T$. See <TopicRef code="6.4" />.
+
+$$
+\begin{aligned}
+\Delta H^\circ_\text{reaction} &= \sum \Delta H^\circ_f(\text{products}) \\
+&\quad - \sum \Delta H^\circ_f(\text{reactants})
+\end{aligned}
+$$
+
+The enthalpy change of a reaction from the standard enthalpies of formation. See <TopicRef code="6.8" />.
+
+## Entropy and free energy
+
+$$
+\begin{aligned}
+\Delta S^\circ_\text{reaction} &= \sum S^\circ(\text{products}) \\
+&\quad - \sum S^\circ(\text{reactants})
+\end{aligned}
+$$
+
+The entropy change of a reaction from standard entropies. See <TopicRef code="9.2" />.
+
+$$
+\begin{aligned}
+\Delta G^\circ_\text{reaction} &= \sum \Delta G^\circ_f(\text{products}) \\
+&\quad - \sum \Delta G^\circ_f(\text{reactants})
+\end{aligned}
+$$
+
+The free energy change of a reaction from standard free energies of formation. See <TopicRef code="9.3" />.
+
+$$
+\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ
+$$
+
+Here $\Delta G^\circ$, $\Delta H^\circ$ and $\Delta S^\circ$ are the standard free energy, enthalpy and entropy changes of a reaction, and $T$ is the temperature in kelvin. See <TopicRef code="9.3" />.
+
+$$
+\Delta G^\circ = -RT\ln K
+$$
+
+Here $K$ is the equilibrium constant, $R$ is 8.314 J/(mol·K) and $T$ is in kelvin. See <TopicRef code="9.5" />.
+
+$$
+\Delta G^\circ = -nFE^\circ
+$$
+
+Here $n$ is the moles of electrons transferred, $F$ is Faraday's constant (given below) and $E^\circ$ is the standard cell potential. See <TopicRef code="9.9" />.
+
+## Electrochemistry
+
+$$
+E_\text{cell} = E^\circ_\text{cell} - \dfrac{RT}{nF}\ln Q
+$$
+
+The cell potential $E_\text{cell}$ away from standard conditions, where $E^\circ_\text{cell}$ is the standard cell potential, $Q$ is the reaction quotient and $n$ is the moles of electrons transferred. See <TopicRef code="9.10" />.
+
+$$
+I = \dfrac{q}{t}
+$$
+
+Current $I$ in amperes from charge $q$ in coulombs and time $t$ in seconds. See <TopicRef code="9.11" />.
+
+$$
+F = 96{,}485\ \text{C per mole of electrons}
+$$
+
+Faraday's constant. See <TopicRef code="9.11" />.
+
+## Units and prefixes
+
+- 1 atm = 760 mm Hg = 760 torr
+- K = °C + 273.15
+- 1 hertz (Hz) = 1 s⁻¹
+- 1 volt (V) = 1 joule per coulomb (J/C)
+- 1 ampere (A) = 1 coulomb per second (C/s)
+
+The sheet also lists the symbols of fourteen units, which this page does not repeat.
+
+| Prefix | Symbol | Factor |
+| --- | --- | --- |
+| giga | G | 10⁹ |
+| mega | M | 10⁶ |
+| kilo | k | 10³ |
+| centi | c | 10⁻² |
+| milli | m | 10⁻³ |
+| micro | μ | 10⁻⁶ |
+| nano | n | 10⁻⁹ |
+| pico | p | 10⁻¹² |
+
+## Not on the sheet
+
+Some things students use are left for you to know. Each has the topic that teaches it.
+
+- The number of particles in a sample, from its moles. See <TopicRef code="1.1" />.
+- The weighted average that gives an atomic mass. See <TopicRef code="1.2" />.
+- Mass percent, and the steps from percent composition to an empirical formula. See <TopicRef code="1.3" />.
+- The rate law, and which of the three kinetics equations belongs to which order. See <TopicRef code="5.2" /> and <TopicRef code="5.3" />.
+- The expression for the reaction quotient $Q$. The sheet uses $Q$ in the cell-potential equation but does not say how to write it. See <TopicRef code="7.3" />.
+- The solubility product $K_{sp}$. See <TopicRef code="7.11" />.
+
+The same letter means different things in different places on the sheet. The letter $c$ is the speed of light, a concentration and a specific heat capacity. The letter $M$ is molarity, and in bold it is molar mass. The letter $q$ is charge in some places and heat in another. Read what an equation is about before you use it.
