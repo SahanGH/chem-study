@@ -184,3 +184,99 @@ and the build check already exist. Up to four figures are added to
 - No value has two values anywhere on the site.
 - Both pages fit a phone at 320 px with every answer open, no equation
   scrolls in its box, and both pass the browser tests' accessibility checks.
+
+## As built (2026-11-24)
+
+Two pages in three pull requests: #63 (this design and its plan), #66
+(session 1) and the one that carries this note (session 2).
+
+- **Counts.** Session 1: 19 questions, 91 points (parts A to D: 23, 24, 24,
+  20). Session 2: 18 questions, 85 points (parts E to H: 24,
+  22, 19, 20). Thirty-seven questions and 176 points in all,
+  against the 38 and "about 180" of section 3. Three drawn spectra, not
+  four: two mass spectra in Part B and one photoelectron spectrum in Part F.
+- **Every number was recomputed by a script** for its part (A 149, B 209,
+  C 69, D 144, E 325, F 163, G 158, H 185 values), and
+  **every part was fact-checked twice on Fable 5.2** by fresh agents that
+  solved each question before reading its answer and scored their own
+  answers with the rubric. **No check found a wrong answer, number or
+  reference value in any part.** What they found: rubric lines that a sound
+  route or a last-figure rounding could not earn; general statements that
+  failed on another question of the same page; stems, tables and titles
+  that gave another part away.
+- **Section 4's part table did not survive, and that is the main lesson.**
+  It was written from the avoid list's "what is still free", and the avoid
+  list had indexed the lessons' questions but not their text, Traps and
+  worked passages.
+  - **Session 1:** three questions came out as the site's own (question 6
+    as Worksheet 2's zirconium question; question 17 as lesson 1.4's
+    quicklime Check; question 19 as its bronze paragraph) and were rebuilt
+    with a different task.
+  - **Session 2:** before any writer started, the originality checker
+    compared each of the table's 19 tasks with the lessons and practice
+    themselves. Seven would have rebuilt an existing passage, Check or
+    practice question, and nine shared a part with one. The writers worked
+    from a revised list (`scratchpad/unit1-test/session-2-tasks.md`, quoted
+    in the plan's notes). Even so, parts of seven questions were rebuilt
+    after the first originality check, and one question of Part G (a
+    missing value estimated two ways, then a run of unnamed elements) was
+    dropped: topic 1.7's lesson leaves no room for a fifth task that is not
+    its own.
+- **What the parts ask, as built:**
+  - A: a count of molecules to a mass, and one atom's mass to an element;
+    two students' setups, each slip named and sized; ions and atoms in a
+    mass of an ionic compound; four samples in four units ranked by atoms;
+    a mass and a count to a molar mass and a choice of formula.
+  - B: a drawn five-peak spectrum (the average, the element, what the
+    positions alone can and cannot decide, why whole-number masses give
+    another average); two abundances from an average; an enriched sample
+    and a one-isotope compound; three students' claims about one table; a
+    drawn spectrum of a made-up element with relative heights.
+  - C: four samples in one table; a metal heated in air, and a student who
+    stops early; two oxides of one metal; a percent and an empirical
+    formula; a proposed formula against two laboratories' ranges.
+  - D: which of three results fixes a two-compound mixture, and a pair no
+    shared element can tell apart; two oxides of one metal, by formula
+    units and by mass; a drum whose analysis matches a formula; an atom
+    ratio in solder and whether it could be a compound.
+  - E: species named from a configuration and a charge; seven ions and a
+    missing radius; a cation's entry classified; attraction against
+    repulsion by Coulomb's law; two shells of a krypton atom.
+  - F: three printouts on three scales and four names; a sketched spectrum
+    with mistakes; peak positions without heights; a spectrum with no
+    numbers on its axis; an inner peak and the lowest peak of two
+    elements.
+  - G: one copied radius that is wrong against a step that is level and
+    real; a rough estimate along a diagonal and where it fails; a claim
+    that only the nuclear charge matters; two ties in a table and three
+    anions ranked.
+  - H: four lists of ionization energies matched to four groups; a formula
+    read back to a group; two group 1 metals and one nonmetal, with an
+    experiment; three written formulas and a count of electrons.
+- **Values, as section 6 decided:** the exam table's masses; isotope masses
+  and abundances and successive ionization energies from NIST, each
+  confirmed by a fact-checker's own lookup; the site's binding energies,
+  radii, first ionization energies and electronegativities, compared by
+  each part's script with the data files; no binding energy for any ion.
+  One element is made up and says so (question 10).
+- **The figure script** was generalized to draw from a list of values
+  (`scratchpad/unit1-test/figures.cjs`). It reproduces the two published
+  practice figures byte for byte from their data, and a second script
+  recovers every stick and peak from each file.
+- **Tests:** three more figures are in `tests/e2e/practice.spec.ts` (each
+  is drawn with a text alternative that names every peak, and fits a 320 px
+  phone). No other code changed.
+- **For the tests to come:**
+  - **Pre-clear the part table against the pages themselves** (lessons'
+    text, worked examples, Checks and Traps; every practice question)
+    before the writers start, not only against an index of them.
+  - **A lesson's text counts.** A task that restates a worked passage or a
+    Trap comes back as a repeat, however new its frame.
+  - **No table may name a value that another question on the page gives
+    unnamed**, in any unit (a lowest binding energy in MJ/mol is a first
+    ionization energy in kJ/mol). Compare the whole page, not one part.
+  - **A table inside a part has about 190 px on a 320 px phone** (236 px in
+    a stem): three short columns at most. Fourteen tables were narrowed
+    after the first builds.
+  - **A topic whose lesson is long leaves little that is new.** Plan four
+    questions for it, not five.
