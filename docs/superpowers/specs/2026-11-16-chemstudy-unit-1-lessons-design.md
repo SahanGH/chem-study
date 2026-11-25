@@ -391,3 +391,73 @@ in order with merge commits, as Unit 2's did.
 - No lesson or page scrolls sideways at 320 px with every answer open.
 - Both interactive diagrams work by keyboard, and both show a drawn picture
   without JavaScript and in print.
+
+## As built (2026-11-17)
+
+Eight lessons with 36 Checks (8 of them numeric), 13 worked examples, 16
+drawn figures and two interactive diagrams, and two reference pages, in five
+pull requests: #50 (this design and its plan), #52 (the reference pages),
+#53 (lessons 1.1 to 1.4), #55 (lessons 1.5 and 1.6 and the photoelectron
+spectrum explorer) and the one that carries this note (lessons 1.7 and 1.8
+and the periodic trends explorer). The plan has an "As carried out" note
+under each group with the details.
+
+- **Every lesson was fact-checked twice on Fable 5.2** by fresh agents that
+  solved each Check and worked example before reading its answer. No round
+  found a wrong answer, number, formula, configuration, energy or count.
+  What they found were statements that said more than is true: a rule that
+  failed on the lesson's own table, an "every" with an exception, a Check
+  answered by the sentence above it.
+- **Both reference pages were checked against pictures of the exam's table
+  and equation sheet**, every mass, symbol, equation and constant. All 118
+  positions of the periodic table are compared with a third reading of the
+  picture by a unit test.
+- **Every group was checked for originality once on Sonnet**, and every
+  replacement example was searched for in the sources before it was used.
+  No lesson shares an example's numbers with a source. Wording that
+  followed the teacher's notes or a textbook was rebuilt; settings the site
+  already used were changed.
+- **What changed from this design:**
+  - **Reading times.** The lessons are longer than the briefs planned: 14,
+    12, 14, 11, 22, 19, 25 and 16 minutes, 133 in all. Lesson 1.8 is not
+    short, as section 2.1 expected: the evidence for valence electrons and
+    the limits of each rule take room. Lessons 1.5 and 1.7 are the longest
+    on the site; either can be split if the teacher prefers.
+  - **Sixteen figures, not fifteen.** Lesson 1.6 gained the spectrum of an
+    unknown element, set above its first worked example. Lesson 1.5 draws
+    core and valence electrons on sulfur, not silicon, which is both
+    textbooks' example.
+  - **The photoelectron spectrum explorer** puts its two menus directly
+    under the drawing, above the readout; while comparing, its table lists
+    every subshell either atom has.
+  - **The periodic trends explorer** is ordered for a phone: the property
+    choice, the table, the readout, the element menu and the trend choice,
+    the graph. A cell with no value is drawn with a dashed border, and the
+    caption says that a deeper color means a larger value and that the d
+    block is left out.
+  - **The equations page** does not say that Q is missing from the exam's
+    sheet (section 7.2 listed it): the sheet uses Q in the cell-potential
+    equation and does not say how to write it. The sheet's table of unit
+    symbols is not reproduced.
+  - **Carbon's covalent radius is 76 pm** across the site: the explorer,
+    lesson 2.4 and question 17 of the Unit 2 test's first session.
+- **Two small fixes to the whole site came out of looking at the built
+  pages** (both in #53): a percent answer showed as "90.1 %" with a space,
+  and paragraphs inside a Check's "Show answer" had no gap between them.
+- **Rules that hold for the units to come:**
+  - A figure goes above a worked example, not inside it: inside the card it
+    is 236 px wide on a 320 px phone and its text falls under 9 px.
+  - A numeric Check is tested against each likely slip as computed and
+    rounded to two figures: one slip in lesson 1.4 was outside the 2 percent
+    the page accepts until it was rounded.
+  - A diagram's controls sit directly under what they change, and its
+    readout reserves room for its longest sentence.
+  - A replacement example or sentence gets the same checks as the lesson it
+    goes into. Several replacements written into fix lists were themselves
+    a match with a source or untrue as worded; the writers are told not to
+    apply an item they believe is wrong, and say why.
+  - Two folders on one machine take turns at the browser tests, under a
+    lock file: a preview left running in one folder is silently tested by
+    the other.
+- **Not done here** (section 10): Unit 1's practice and its comprehensive
+  test, each with its own design and plan.

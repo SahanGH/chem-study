@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 330" font-family="system-ui, sans-serif" font-size="18">
+  <!-- First ionization energy (NIST, kJ/mol) of the sixteen elements from lithium to argon. Vertical axis: 0 at y = 280, 0.1 unit per kJ/mol, so 2200 is at y = 60. Period 2 points at x = 76 + 25i, period 3 at x = 286 + 25i. No line joins neon to sodium. B, O, Al and S, the points that follow a break, are open circles; the other twelve are filled. Built by figures-1-7.cjs from trends.json. -->
+  <rect width="480" height="330" fill="#FDFCF9"/>
+  <text x="8" y="24" fill="#26231F">First ionization energy (kJ/mol)</text>
+  <path d="M56 60V280H474" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M56 280h-7M56 230h-7M56 180h-7M56 130h-7M56 80h-7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <text x="44" y="286" text-anchor="end" fill="#6B655D">0</text>
+  <text x="44" y="236" text-anchor="end" fill="#6B655D">500</text>
+  <text x="44" y="186" text-anchor="end" fill="#6B655D">1000</text>
+  <text x="44" y="136" text-anchor="end" fill="#6B655D">1500</text>
+  <text x="44" y="86" text-anchor="end" fill="#6B655D">2000</text>
+  <path d="M66 288V296H261V288" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="163.5" y="318" text-anchor="middle" fill="#26231F">Period 2</text>
+  <path d="M276 288V296H471V288" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="373.5" y="318" text-anchor="middle" fill="#26231F">Period 3</text>
+  <path d="M76 228 L101 190 L126 199.9 L151 171.4 L176 139.8 L201 148.6 L226 111.9 L251 71.9" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M286 230.4 L311 206.2 L336 222.2 L361 201.3 L386 178.8 L411 180 L436 154.9 L461 127.9" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="76" cy="228" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="101" cy="190" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="126" cy="199.9" r="5.5" fill="#FDFCF9" stroke="#26231F" stroke-width="2"/>
+  <circle cx="151" cy="171.4" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="176" cy="139.8" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="201" cy="148.6" r="5.5" fill="#FDFCF9" stroke="#26231F" stroke-width="2"/>
+  <circle cx="226" cy="111.9" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="251" cy="71.9" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="286" cy="230.4" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="311" cy="206.2" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="336" cy="222.2" r="5.5" fill="#FDFCF9" stroke="#26231F" stroke-width="2"/>
+  <circle cx="361" cy="201.3" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="386" cy="178.8" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="411" cy="180" r="5.5" fill="#FDFCF9" stroke="#26231F" stroke-width="2"/>
+  <circle cx="436" cy="154.9" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="461" cy="127.9" r="5.5" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <text x="76" y="252" text-anchor="middle" fill="#26231F">Li</text>
+  <text x="101" y="179" text-anchor="middle" fill="#26231F">Be</text>
+  <text x="126" y="223.9" text-anchor="middle" fill="#26231F">B</text>
+  <text x="160" y="191.4" text-anchor="start" fill="#26231F">C</text>
+  <text x="176" y="128.8" text-anchor="middle" fill="#26231F">N</text>
+  <text x="201" y="172.6" text-anchor="middle" fill="#26231F">O</text>
+  <text x="235" y="131.9" text-anchor="start" fill="#26231F">F</text>
+  <text x="251" y="60.9" text-anchor="middle" fill="#26231F">Ne</text>
+  <text x="286" y="254.4" text-anchor="middle" fill="#26231F">Na</text>
+  <text x="311" y="195.2" text-anchor="middle" fill="#26231F">Mg</text>
+  <text x="336" y="246.2" text-anchor="middle" fill="#26231F">Al</text>
+  <text x="370" y="221.3" text-anchor="start" fill="#26231F">Si</text>
+  <text x="386" y="167.8" text-anchor="middle" fill="#26231F">P</text>
+  <text x="411" y="204" text-anchor="middle" fill="#26231F">S</text>
+  <text x="445" y="174.9" text-anchor="start" fill="#26231F">Cl</text>
+  <text x="461" y="116.9" text-anchor="middle" fill="#26231F">Ar</text>
+</svg>

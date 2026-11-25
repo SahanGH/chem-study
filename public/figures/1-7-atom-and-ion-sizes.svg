@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Four circles to one scale, 1 pm = 0.25 units. Top row: a rubidium atom, 220 pm (radius 55), and the ion Rb+, 152 pm (radius 38). Bottom row: a bromine atom, 120 pm (radius 30), and the ion Br-, 196 pm (radius 49). Atoms: light fill, accent outline. Cation: dark. Anion: pale. Covalent radii from trends.json; ionic radii are Shannon six-coordinate values. Built by figures-1-7.cjs. -->
+  <rect width="480" height="340" fill="#FDFCF9"/>
+  <circle cx="96" cy="65" r="55" fill="#E3EAE9" stroke="#4F706C" stroke-width="2"/>
+  <circle cx="384" cy="65" r="38" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M176 65H298" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M310 65l-13 -6v12z" fill="#26231F"/>
+  <text x="243" y="51" text-anchor="middle" fill="#26231F">loses 1 electron</text>
+  <text x="96" y="144" text-anchor="middle" fill="#26231F" font-weight="600">Rb</text>
+  <text x="96" y="166" text-anchor="middle" fill="#26231F">220 pm</text>
+  <text x="384" y="144" text-anchor="middle" fill="#26231F" font-weight="600">Rb<tspan dy="-7">+</tspan></text>
+  <text x="384" y="166" text-anchor="middle" fill="#26231F">152 pm</text>
+  <circle cx="96" cy="235" r="30" fill="#E3EAE9" stroke="#4F706C" stroke-width="2"/>
+  <circle cx="384" cy="235" r="49" fill="#4F706C" fill-opacity="0.4" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M176 235H298" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M310 235l-13 -6v12z" fill="#26231F"/>
+  <text x="243" y="221" text-anchor="middle" fill="#26231F">gains 1 electron</text>
+  <text x="96" y="308" text-anchor="middle" fill="#26231F" font-weight="600">Br</text>
+  <text x="96" y="330" text-anchor="middle" fill="#26231F">120 pm</text>
+  <text x="384" y="308" text-anchor="middle" fill="#26231F" font-weight="600">Br<tspan dy="-7">&#8722;</tspan></text>
+  <text x="384" y="330" text-anchor="middle" fill="#26231F">196 pm</text>
+</svg>
