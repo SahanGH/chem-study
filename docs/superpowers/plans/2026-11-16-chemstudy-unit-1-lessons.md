@@ -769,6 +769,42 @@ No code. Four writers in parallel, then the steps of "How a group is carried out
 
 Branch: `topic/unit-1-electrons-and-pes`, from `topic/unit-1-moles-and-composition`. Tasks 9 to 11. The pull request title is "feat(lessons): Unit 1 lessons 1.5 and 1.6 and the photoelectron spectrum explorer".
 
+> **As carried out (2026-11-17).** The repository is newer than Tasks 9 to 11 below. The explorer was built test-first and reviewed twice (TypeScript and general); both lessons were fact-checked twice by fresh agents that solved every Check before reading its answer, counted the electrons of every configuration, compared every energy with the data files character for character and recovered every drawn peak from the SVG, and were checked once for originality. **No fact-check found a wrong answer, configuration, energy, ranking or peak.** What differs from the tasks as printed, and why:
+>
+> **The explorer (Task 9)**
+>
+> - **More exports than the contract lists**: `energyTable` (which returns a tagged result, `{ compared: false, rows }` or `{ compared: true, rows }`, with `undefined` for an energy an atom lacks), `tableCaption`, `describeSpectrum`, `opening`, `elementOf` and the types they use. The table, its caption and the drawing's accessible name all come from the module.
+> - **Four "mixed" comparisons, not one.** The contract printed the sentence for oxygen against nitrogen; the data also have N/O, P/S and S/P. The sentence is generalized, unit tests cover all 380 ordered pairs, and a comparison that fits no pattern throws.
+> - **While comparing**, the readout is the chosen atom's opening ("Oxygen, 1s² 2s² 2p⁴: three peaks.") followed by the comparison sentence; the table lists every subshell either atom has, with a dash for whichever lacks it, an "Electrons (O)" column for the chosen atom, and the compared atom's configuration in the caption. Without that, a compared atom's extra peaks had no text equivalent.
+> - **The two menus sit directly under the drawing**, above the readout, unlike the other explorers: the readout's length changes when a comparison is chosen, and it moved the menu the student had just used.
+> - **Peak labels carry a halo in the card's color.** A compared atom's taller dashed peak can stand exactly where a label is (oxygen's 2p over hydrogen's 1s); browser tests cover three such pairs.
+> - **A "held more tightly" arrow** sits under the axis title, as in the lesson's figure; both axis titles are lowercase, as in the other explorers.
+> - **Shared rules added to `diagram.css`**: `.diagram-gridline`, `.diagram-peak`, `.diagram-peak.is-compared`, `.diagram-peak-label`.
+> - **The data** in `src/lib/pes.ts` were compared with this plan's table by script: 20 elements, 74 values, no difference.
+>
+> **Lesson 1.5 (Task 10)**
+>
+> - **Core and valence electrons are introduced with sulfur**, not silicon, and the figure is `1-5-shells-sulfur.svg`. Both Tro books define the two terms with silicon's "four valence electrons and ten core electrons". Silicon is still the lesson's running example for energies, the ionization equation and the estimates of effective nuclear charge.
+> - **The caution on the three-question test was rewritten twice.** As briefed it was scoped by whether an ion holds d electrons, which passed Ti²⁺ written as [Ar] 4s² and shut out I⁻ and Te²⁻. It now says: question 3 works for neutral atoms and anions; for a cation, use the cation rule and compare.
+> - **"About twenty elements, chromium and copper among them"** depart from the filling order (twenty, by a reference list), where the brief said "a few".
+> - **Scenes taken out because the site already has them**: titanium in hip joints and aircraft (a Unit 2 test question), the sodium street lamp (a Unit 3 test question). **The gallium Check's stem** no longer shows gallium(III) oxide's formula, which gave lesson 1.8 an answer.
+> - **Wording that followed the teacher's notes or a textbook**, rebuilt: three Trap items; the walk across row 4 (without "the shell is the row number").
+> - **Check 5's explanation** gives a reason for every step of its order, and says the estimates are rough.
+> - **The block map** sets the two lower rows in columns 4 to 18, as the site's periodic table page does.
+> - **Reading time is 22 minutes** (5,232 words; the brief had 15). It is the longest lesson on the site.
+>
+> **Lesson 1.6 (Task 11)**
+>
+> - **The unknown spectrum and its table stand above the first worked example**, not inside it: inside the card the figure was 236 px wide on a 320 px phone and its axis text under 9 px.
+> - **"What the experiment measures"** is told through energy (what the light brings, what freeing the electron takes, what is left over), not through electrons leaving "slowly" or "fast", which was the notes' wording.
+> - **"What a spectrum says about the model"** leads with the capacities (heights stop at 2 and at 6) and gives calcium's factors as measured "from the last peak of one group to the first peak of the next".
+> - **The Trap** is rebuilt from the two axes; "stable" and "abundance" no longer appear.
+> - **0.59 / 0.42 = 1.4** (two figures), where the brief printed 1.40; `scratchpad/unit1/checks/1-6.py` follows.
+> - **The argon and potassium figure** draws the lines from argon's s peaks in short dashes and from its p peaks in long dashes, and its caption says that potassium's 2p peak lands almost on argon's 2s line.
+> - **Reading time is 19 minutes** (the brief had 12).
+>
+> **Testing two folders on one machine.** When the other unit's folder had a preview on port 4321, `astro preview --port 4321` took another port without failing and Playwright tested the other folder's site. Browser tests now run under a lock file (`scratchpad/e2e.lock`), one folder at a time.
+
 ### Task 9: The photoelectron spectrum explorer
 
 **Files:**

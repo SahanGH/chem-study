@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 308" font-family="system-ui, sans-serif" font-size="18">
+  <!-- The photoelectron spectrum of an element to be named (the values are calcium's). The horizontal axis is logarithmic: 1000 MJ/mol at x=72 and 0.1 MJ/mol at x=452, 95 units per decade, so a binding energy E is at x = 72 + 95 x (3 - log10 E). The vertical axis has no numbers; a peak is 30 units tall for each electron above y=232, the top edge of the horizontal axis line (centered at y=232.75), so peaks C and E are exactly three times as tall as the others. Peaks are 4 wide with a rounded top, centered on the binding energy. Peaks: A 390 MJ/mol, x=110.85, height 60 (top at y=172); B 42.7 MJ/mol, x=202.11, height 60 (top at y=172); C 34.0 MJ/mol, x=211.51, height 180 (top at y=52); D 4.65 MJ/mol, x=293.59, height 60 (top at y=172); E 2.90 MJ/mol, x=313.07, height 180 (top at y=52); F 0.59 MJ/mol, x=378.77, height 60 (top at y=172). Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="308" fill="#FDFCF9"/>
+
+  <path d="M72 36V232.75H452" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M72 232.75v7M167 232.75v7M262 232.75v7M357 232.75v7M452 232.75v7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+
+  <text x="72" y="258" text-anchor="middle" fill="#6B655D">1000</text>
+  <text x="167" y="258" text-anchor="middle" fill="#6B655D">100</text>
+  <text x="262" y="258" text-anchor="middle" fill="#6B655D">10</text>
+  <text x="357" y="258" text-anchor="middle" fill="#6B655D">1</text>
+  <text x="452" y="258" text-anchor="middle" fill="#6B655D">0.1</text>
+
+  <text x="262" y="288" text-anchor="middle" fill="#26231F">Binding energy (MJ/mol)</text>
+  <text x="44" y="134" text-anchor="middle" fill="#26231F" transform="rotate(-90 44 134)">Relative number of electrons</text>
+
+  <path d="M108.85 232V174A2 2 0 0 1 112.85 174V232Z" fill="#4F706C"/>
+  <path d="M200.11 232V174A2 2 0 0 1 204.11 174V232Z" fill="#4F706C"/>
+  <path d="M209.51 232V54A2 2 0 0 1 213.51 54V232Z" fill="#4F706C"/>
+  <path d="M291.59 232V174A2 2 0 0 1 295.59 174V232Z" fill="#4F706C"/>
+  <path d="M311.07 232V54A2 2 0 0 1 315.07 54V232Z" fill="#4F706C"/>
+  <path d="M376.77 232V174A2 2 0 0 1 380.77 174V232Z" fill="#4F706C"/>
+
+  <text x="110.85" y="164" text-anchor="middle" fill="#26231F">A</text>
+  <text x="204.11" y="164" text-anchor="end" fill="#26231F">B</text>
+  <text x="211.51" y="44" text-anchor="middle" fill="#26231F">C</text>
+  <text x="293.59" y="164" text-anchor="middle" fill="#26231F">D</text>
+  <text x="313.07" y="44" text-anchor="middle" fill="#26231F">E</text>
+  <text x="378.77" y="164" text-anchor="middle" fill="#26231F">F</text>
+</svg>
