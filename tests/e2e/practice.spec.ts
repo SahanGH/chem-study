@@ -252,6 +252,12 @@ const PRACTICE_FIGURES = [
     src: '/figures/1-test-b-2.svg',
     peaks: ['108', '110', '114'],
   },
+  {
+    name: "the sketched photoelectron spectrum of the test's second session",
+    path: '/unit-1-atomic-structure/practice/comprehensive-test-session-2/',
+    src: '/figures/1-test-f-1.svg',
+    peaks: ['67.2', '3.88', '1.68'],
+  },
 ];
 
 test.describe('a figure on a practice page', () => {
