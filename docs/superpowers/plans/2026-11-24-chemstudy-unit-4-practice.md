@@ -209,6 +209,16 @@ Differences the audit is expected to print: the Quick review left out of each wo
 
 The body gives each document's questions and points, each audit's last line, what the fact-checks found, the labels, the models used, test and build output, and, set apart, **every change to the originals**, for the teacher to accept or reverse.
 
+> **As carried out (2026-11-24), Tasks 1 to 3.** Four writers converted the worksheets in parallel into the scratch folder; each audit was clean on the first pass (pull request #64).
+>
+> - **The first fact-checks** (one per worksheet) found no wrong number, equation or answer. One statement of the source's was wrong (Worksheet 1, 1(b): copper's green coating as a carbonate). The other findings were reasons given at the level of substances where the question asks for particles, two alternatives that did not fit their own stem (Worksheet 1, 3(b)), "which no physical process explains" (Worksheet 4, 1(f)), and stems that needed a solubility or "both protons".
+> - **Worksheet 2, question 6** became three parts, so that the label covers the older definition of a base only.
+> - **One Sonnet fixer per worksheet** applied each decided list and brought its audit back to clean. **The second check** (one agent, all four pages) found no error; its ten small points were applied by a script that required each old sentence to match exactly once.
+> - **Worksheet 4's rubric** keeps its six lines and points; four lines are reworded so that each ratio names its two species, the note on raw moles says which point it applies to, and two other sound routes are scored (naming KI; comparing the lead(II) iodide each reactant could form).
+> - **Topics:** Worksheet 4 gained 4.1 (part (f) tests it).
+> - **Phones:** nothing scrolled at any round.
+> - **Tests:** 1,154 unit and 1,266 browser tests; 98 pages.
+
 ---
 
 ## Group C: the skill ladders and the free-response set (pull request C)
@@ -270,6 +280,18 @@ minutes: 50
 With all six documents in place, check by hand: each Unit 4 lesson's "Practice next" lists the documents that have a question on its topic; the unit page lists the six in the order of the table "The six documents"; "oxidation state", "electrolyte", "titre", "diprotic" and "formula equation" occur nowhere under `src/content/practice/unit-4`; no equation given as an answer lacks a state symbol.
 
 - [ ] **Commit** (`feat(practice): add the Unit 4 skill ladders and free-response set`).
+
+> **As carried out (2026-11-24), Tasks 4 to 6.** Both documents were written, fact-checked twice and fixed as drafts in the scratch folder while the worksheets were being finished, then copied in.
+>
+> - **Skill ladders** (two first checkers, six ladders each): no wrong number or equation. Two statements of the source's were wrong, both in Ladder 6 (a product weighed wet as a reason for a low yield; misidentifying the limiting reactant as a cause of a yield above 100 percent). The second check found one error, which the first round's decided list had introduced (Ladder 8(c): "equal only when…"), and it was corrected.
+> - **Ladder 3(d)** lost its ammonium nitrate example (it settled dissolving a salt) and its dye; its look-alikes are two paints stirred together, boiling, and steam on a cold window. **Ladder 3** tests topic 4.1 as well as 4.4.
+> - **Ladder 4(c)** prints 0.10025 mol (the source's 0.1003 is a tie as printed); the answer is unchanged. **Ladder 5** says that 1.984 mol is carried. **Ladder 11's** rules are a bullet list in lesson 4.7's order.
+> - **Ladder 12** shows half-reactions in the worked example and in parts (a) to (c); it does not print the summed dichromate equation, which is the answer to free-response 2(b).
+> - **Free-response set:** no error in either check. Question 3's 3-point line is three 1-point lines, as the key divides it, and its third line accepts either classification, or both arguments, with a reason at the level of the particles. Question 3(b)'s stem was changed after all: "ion–dipole bonds form" contradicts lesson 4.4, and the stem now gives the broken ionic bonds as the argument for chemical. The questions' topics were retagged to what each tests.
+> - **Scoring notes kept as the source has them,** though a grader could read each two ways, are listed in the pull request.
+> - **Phones:** nothing scrolled on either page.
+> - **The hand checks:** each Unit 4 lesson's "Practice next" lists the documents with a question on its topic; the unit page lists the six in the order of "The six documents"; "oxidation state", "electrolyte", "titre", "diprotic" and "formula equation" occur nowhere under `src/content/practice/unit-4`.
+> - **Tests:** 1,154 unit and 1,278 browser tests; 100 pages. One browser test failed once with a refused connection while many agents were running and passed when its file was run again.
 
 ### Task 6: Close out
 

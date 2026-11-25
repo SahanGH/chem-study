@@ -254,3 +254,68 @@ on #59. **Each waits for the teacher's word.**
   as an answer carries its state symbols.
 - No page scrolls sideways, and no equation scrolls in its box, at 412, 390,
   360 or 320 px with every answer open.
+
+## As built (2026-11-24)
+
+Six documents in three pull requests: #62 (this design and its plan), #64
+(Worksheets 1 to 4) and the one that carries this note (the skill ladders
+and the free-response set).
+
+- **Counts.** Four worksheets with 21 questions, one of them scored (10
+  points); twelve ladders with 48 parts; a free-response set of 5 questions,
+  15 parts and 32 points.
+- **Every document was audited to `0 unexplained, 0 stale`** and
+  **fact-checked twice on Fable 5.2** by fresh agents that solved every
+  question before reading its answer, recomputed every number from the exam
+  table's masses, balanced every equation in atoms and in charge and checked
+  every oxidation number by lesson 4.7's rules. Fixers that applied each
+  decided list ran on Sonnet.
+- **No number, equation or answer in the originals was wrong.** Three
+  statements were:
+  - Worksheet 1, 1(b): copper's green coating called "a new carbonate
+    compound" (outdoor patina is mostly a basic sulfate).
+  - Ladder 6, worked example: a product weighed before it is dry given as a
+    reason for a yield below 100 percent (it raises the yield).
+  - Ladder 6(d): misidentifying the limiting reactant given as a cause of a
+    yield above 100 percent (it lowers the percent).
+- **One error came from a decided list.** The first round's replacement for
+  Ladder 8(c) said the moles of acid and base are equal "only when" the acid
+  has one proton and the base one hydroxide ion; sulfuric acid with barium
+  hydroxide is also 1 to 1. The second check caught it.
+- **What changed from this design:**
+  - **Worksheet 2, question 6 is three parts.** The "Beyond the exam" label
+    sits on the older (Arrhenius) definition only; whether ammonia is a
+    Brønsted–Lowry base is exam material and has a part of its own.
+  - **More solubilities and strengths went into stems than section 4.1
+    lists:** silver chloride insoluble (Worksheet 3, question 5; Ladder 7's
+    worked example); copper(II) sulfate and zinc sulfate soluble (Ladder 9);
+    the strong partners of each acid–base pair; "sulfuric acid gives up both
+    of its protons to the base" (Worksheet 3, 6(b)); that both solutions are
+    clear and colorless (Worksheet 4, question 1); carbon dioxide and water
+    as the products of burning ethanol (free-response 5(a)).
+  - **The argument that dissolving is chemical rests on the broken ionic
+    bonds alone**, as lesson 4.4 has it. Ion–dipole attractions are
+    described as what the particles do, not given to either side
+    (free-response question 3; the source's 3(b) had "ion–dipole bonds
+    form").
+  - **Topics follow what each document tests:** 4.1 is added to Worksheet 4
+    and to the ladders (Ladder 3(d)); the free-response set's questions are
+    retagged (question 1 without 4.3, question 5 without 4.1).
+  - **Rubric lines say how another sound route scores** where the source's
+    left it open and the meaning was not in doubt (naming KI for I⁻; a fully
+    balanced final equation; 0.111 M from rounding on the way; an answer
+    that argues dissolving both ways). The scoring notes that a grader could
+    read two ways are kept as the sources have them and listed in the pull
+    requests.
+  - **"This is not a titration question. In a titration, …"** is the
+    sentence the ladders and the free-response set use where section 4.5's
+    wording read awkwardly.
+- **For the units to come:**
+  - No equation scrolled in its box on any of the six pages at any round:
+    the writers split every display at about 25 characters from the start.
+  - A browser test can fail once with "connection refused" when many agents
+    are running; a re-run of the same file passes. Confirm before looking
+    for a cause in the pages.
+  - A replacement sentence with "only" in it gets the same test as the
+    original: apply it to another example before it goes into a decided
+    list.
