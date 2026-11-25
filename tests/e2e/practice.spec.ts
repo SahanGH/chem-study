@@ -226,6 +226,59 @@ test('a Unit 2 lesson ends with a link to the practice for its topic', async ({ 
   await expect(page).toHaveURL(new RegExp(`${WORKSHEET_2_UNIT_2}$`));
 });
 
+// Two Unit 1 worksheets print a spectrum for the student to read.
+const PRACTICE_FIGURES = [
+  {
+    name: 'the mass spectrum of zirconium',
+    path: '/unit-1-atomic-structure/practice/worksheet-2-mass-spectra-and-mixtures/',
+    src: '/figures/1-practice-zirconium-spectrum.svg',
+    peaks: ['90', '91', '92', '94', '96'],
+  },
+  {
+    name: 'the photoelectron spectrum of an unknown element',
+    path: '/unit-1-atomic-structure/practice/worksheet-3-configurations-and-photoelectron-spectra/',
+    src: '/figures/1-practice-unknown-photoelectron-spectrum.svg',
+    peaks: ['126', '9.07', '5.31', '0.74'],
+  },
+];
+
+test.describe('a figure on a practice page', () => {
+  for (const figure of PRACTICE_FIGURES) {
+    const selector = `main figure img[src="${figure.src}"]`;
+    // The image is loaded lazily and has no size of its own until it has loaded.
+    const loaded = (el: HTMLImageElement) => el.complete && el.naturalWidth > 0;
+
+    test(`${figure.name} is drawn, with a text alternative that names every peak`, async ({ page }) => {
+      await page.goto(figure.path);
+      const image = page.locator(selector);
+
+      await expect(image).toHaveCount(1);
+      const alt = (await image.getAttribute('alt')) ?? '';
+      // A number of its own, so that the 91 inside another value would not stand in for a peak.
+      for (const peak of figure.peaks) {
+        expect(alt).toMatch(new RegExp(`(^|[^0-9.])${peak.replace('.', '\\.')}($|[^0-9])`));
+      }
+      await image.scrollIntoViewIfNeeded();
+      await expect.poll(() => image.evaluate(loaded)).toBe(true);
+    });
+
+    test(`${figure.name} shrinks to fit a 320px phone`, async ({ page }) => {
+      await page.setViewportSize({ width: 320, height: 800 });
+      await page.goto(figure.path);
+      const image = page.locator(selector);
+      await image.scrollIntoViewIfNeeded();
+      await expect.poll(() => image.evaluate(loaded)).toBe(true);
+      const box = await image.boundingBox();
+      if (!box) throw new Error(`The figure ${figure.src} has no box: it is not rendered.`);
+
+      // The text column is about 278px wide here: the figure fills it, and has not collapsed.
+      expect(box.width).toBeGreaterThan(200);
+      expect(box.x).toBeGreaterThanOrEqual(0);
+      expect(box.x + box.width).toBeLessThanOrEqual(320);
+    });
+  }
+});
+
 test.describe('without JavaScript', () => {
   test.use({ javaScriptEnabled: false });
 
