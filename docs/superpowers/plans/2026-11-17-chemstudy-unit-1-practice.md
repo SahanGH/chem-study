@@ -123,6 +123,16 @@ Branch `topic/unit-1-practice-design`, from `topic/unit-1-trends-and-ions` (pull
 
 Branch `topic/unit-1-practice-worksheets`, from `topic/unit-1-practice-design`.
 
+> **As carried out (2026-11-24), Tasks 1 to 4.** The four worksheets were converted by four writers in parallel into the scratch folder (each audit clean on the first pass) and a fifth agent drew the two figures. Then:
+>
+> - **Task 1.** The failing state was seen as a failed build ("Expected component `Figure` to be defined") with the real Worksheet 2 in place, so no stand-in was needed. The two reviews approved the change and asked for tighter tests: both figures are tested, each after its image has loaded, and its width is checked as well as its edges (a second commit).
+> - **The figures were redrawn on a 400-unit canvas.** On the built page a figure inside a question's card is 236 px wide at 320 px, and the first, 480-unit drawings had text under 9 px (a third commit).
+> - **Configurations are written as the lessons write them**, as text with superscript characters. The audit does not read a superscript as a number, so each document has a small helper (`scratchpad/unit1-practice/*-superscript-check.mjs`) that runs the audit's comparison with the superscripts turned back into digits.
+> - **The first fact-checks found no wrong answer or number** beyond the one the conversion had already corrected (Worksheet 1, 5(c)). Their findings were answers with no reason, or with a reason that says more than is true; a question with a false premise (Worksheet 4, 1(b)); and a rubric line that a blank answer could earn (Worksheet 4, question 2).
+> - **One Sonnet fixer per worksheet** applied each decided list and brought its audit back to clean. **The second check** (one agent, all four pages) found no error, and one step that the first round's replacement had asserted without showing (Worksheet 2, 1(b), now argued from 91.5 amu). Its points were applied by a fifth fixer.
+> - **Phones:** two equations added by fix lists scrolled inside their boxes (Worksheet 1, 5(a) and 5(b)) and were split.
+> - **Worksheet 3's table** gives the peaks' heights with the shortest as 1, not as numbers of electrons; **question 3** follows "Drawings" as written.
+
 ### Task 1: `Figure` on practice pages, and the two spectra
 
 **Files:**
@@ -304,6 +314,16 @@ The body gives each document's questions and points, each audit's last line and 
 ## Group C: the skill ladders and the free-response set (pull request C)
 
 Branch `topic/unit-1-practice-ladders-frq`, from `topic/unit-1-practice-worksheets`. The two drafts may be written in the scratch folder while Group B is checked, then copied in.
+
+> **As carried out (2026-11-24), Tasks 5 to 7.** Both documents were written and first checked as drafts in the scratch folder while the worksheets were being finished, then copied in.
+>
+> - **Two corrections this plan asked for were wrong, and were not made.** Ladder 3's copper stays 63.55 amu and free-response 1(a) stays 10.81 amu, as the sources have them. The ladders' writer recomputed the first and refused it; the free-response set's fact-checker showed the second. Both items are gone from "What Unit 1 adds" above and from the design.
+> - **Skill ladders** (two first checkers, one for each half): no wrong number or answer; three false statements, all from the source (Ladder 9's "protons are added to the same shell"; Ladder 10(c)'s "(+2)(−2) = 4"; Ladder 8(d)'s "at the same tiny distance"). Molar masses are given to two decimal places, as lesson 1.1 keeps a sum (164.10, 138.21, 342.14), and hydrogen peroxide's is 34.02 g/mol. Ladder 5(d) explains isomers in a sentence. Ladder 6 says why ions pass a filter and grains do not, and its distillation says no more than lesson 3.9. Ladder 10's opening gives the charge rule as lesson 1.8 does.
+> - **Free-response set:** two errors, one from the source (the sign slip in 5(b)) and one from this plan (the reason given for 10.8). Question 3 shows each step and prints the carried 0.2664 g; its one 4-point rubric line is four 1-point lines, as the key divides the work. The stem of 1(e) no longer states its answer, and 5(b)'s stem defines lattice energy.
+> - **The second checks** found no error in either document. For the ladders they found a trend rule stated without "generally" and for every period (now "across period 2 or 3 … generally"), and three model answers that named two of the three things the ladder tells a student to name.
+> - **Five scoring notes of the free-response rubrics are kept as the source has them** although a grader could read each two ways; the pull request lists them for the teacher.
+> - **Phones:** four equations written into fix lists scrolled inside their boxes and were split. A spacing argument, `[0.6em]`, showed up in the audit as a number and was taken out.
+> - **The hand checks:** each Unit 1 lesson's "Practice next" lists the documents with a question on its topic; the unit page lists the six in order; no molar mass has two values under `src/content/practice/unit-1`; "amu" throughout.
 
 ### Task 5: Convert the skill ladders and the free-response set
 
