@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 export const SCANNED = ['src', 'public/figures', 'tests', 'scripts', 'README.md', 'docs/DEPLOY.md'];
 
 /** The file types that hold words a person wrote. */
-const EXTENSIONS = new Set(['.astro', '.css', '.md', '.mdx', '.mjs', '.svelte', '.svg', '.ts']);
+const EXTENSIONS = new Set(['.astro', '.css', '.js', '.json', '.md', '.mdx', '.mjs', '.svelte', '.svg', '.ts']);
 
 /**
  * Files that name British spellings on purpose: this list and its test. Paths
@@ -42,7 +42,7 @@ const IZE_STEMS = [
 
 // Verbs that end in -yze in American English. "Analyses" is left out: it is
 // the plural of "analysis" on both sides of the Atlantic.
-const YZE = ['analyse', 'analysed', 'analysing', 'catalys(?:e|ed|es|ing)', 'electrolys(?:e|ed|es|ing)', 'hydrolys(?:e|ed|es|ing)', 'paralys(?:e|ed|es|ing)'];
+const YZE = ['analyse', 'analysed', 'analyser', 'analysers', 'analysing', 'catalys(?:e|ed|es|ing)', 'electrolys(?:e|ed|es|ing)', 'hydrolys(?:e|ed|es|ing)', 'paralys(?:e|ed|es|ing)'];
 
 const OUR = ['behaviour', 'colour', 'favour', 'flavour', 'harbour', 'honour', 'humour', 'labour', 'neighbour', 'odour', 'rumour', 'tumour', 'vapour', 'vigour'];
 
@@ -57,18 +57,20 @@ const WORDS = [
   'tyres', 'whilst',
 ];
 
-const PHRASES = ['full stop', 'per cent'];
+// A line break or a double space may fall inside a phrase.
+const PHRASES = ['full\\s+stop', 'per\\s+cent'];
 
 const PATTERN = new RegExp(
   '\\b(?:' +
     [
-      `(?:${IZE_STEMS.join('|')})is(?:e|ed|es|ing|ation|ations|able|ability)`,
+      `(?:${IZE_STEMS.join('|')})is(?:e|ed|es|ing|er|ers|ation|ations|able|ability)`,
       ...YZE,
       `(?:${OUR.join('|')})\\w*`,
       `(?:${RE.join('|')})(?:s|d)?`,
-      `(?:${DOUBLED.join('|')})(?:ed|ing)`,
+      `(?:${DOUBLED.join('|')})(?:ed|ing|er|ers)`,
       'sulph\\w+',
-      ...WORDS,
+      // A plural is the same spelling: offences, moulds, cheques.
+      `(?:${WORDS.join('|')})s?`,
       ...PHRASES,
     ].join('|') +
     ')\\b',
@@ -82,7 +84,7 @@ const PATTERN = new RegExp(
 export function britishSpellings(text) {
   const found = [];
   for (const match of text.matchAll(PATTERN)) {
-    const word = match[0].toLowerCase();
+    const word = match[0].toLowerCase().replace(/\s+/g, ' ');
     if (ALLOWED.has(word)) continue;
     const line = text.slice(0, match.index).split('\n').length;
     found.push({ word, line });
@@ -92,7 +94,6 @@ export function britishSpellings(text) {
 
 /** @param {string} target a file or a folder @returns {string[]} the files under it that are read */
 function filesUnder(target) {
-  if (!fs.existsSync(target)) return [];
   if (fs.statSync(target).isFile()) return [target];
   return fs
     .readdirSync(target, { withFileTypes: true })
@@ -113,7 +114,13 @@ export function checkSpelling(root, targets = SCANNED) {
   const problems = [];
   let files = 0;
   for (const target of targets) {
-    for (const file of filesUnder(path.resolve(root, target))) {
+    const full = path.resolve(root, target);
+    // A folder of SCANNED may not exist yet; a file named on the command line must.
+    if (!fs.existsSync(full)) {
+      if (targets === SCANNED) continue;
+      throw new Error(`us-spelling: ${target} does not exist`);
+    }
+    for (const file of filesUnder(full)) {
       const relative = path.relative(root, file).split(path.sep).join('/');
       if (SKIPPED.has(relative)) continue;
       files += 1;
