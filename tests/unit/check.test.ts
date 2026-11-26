@@ -177,6 +177,10 @@ describe('shownAnswer', () => {
     expect(shownAnswer({ numeric: '0.020', unit: 'M/s' })).toBe('0.020 M/s');
   });
 
+  it('sets a percent sign against the number, with no space', () => {
+    expect(shownAnswer({ numeric: '90.1', unit: '%' })).toBe('90.1%');
+  });
+
   it('throws when the numeric answer arrives as a number, which would lose its trailing zeros', () => {
     // MDX is not type-checked, so a lesson can pass numeric={0.020}.
     const fromMdx: unknown = { numeric: 0.02 };

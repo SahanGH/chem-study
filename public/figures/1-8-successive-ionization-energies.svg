@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 336" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Drawn by scratchpad/unit1/tools/figures-1-8.cjs. Plot runs from y=252 (0 kJ/mol) to y=52 (6000 kJ/mol), 1 unit per 30 kJ/mol. Zero is the top edge of the horizontal axis line (centered at y=252.75). Bars are 56 wide: 1st 549 kJ/mol, height 18.3 (top at y=233.7); 2nd 1064 kJ/mol, height 35.47 (top at y=216.53); 3rd 4138 kJ/mol, height 137.93 (top at y=114.07); 4th 5430 kJ/mol, height 181 (top at y=71). The outline of a light bar is drawn inside its edge, so its outer edge is the computed height. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="336" fill="#FDFCF9"/>
+
+  <text x="240" y="26" text-anchor="middle" fill="#26231F">Ionization energy of strontium (kJ/mol)</text>
+
+  <path d="M72 52V252.75H460" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M72 252.75h-7M72 185.33h-7M72 118.67h-7M72 52h-7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <text x="58" y="258" text-anchor="end" fill="#6B655D">0</text>
+  <text x="58" y="191.33" text-anchor="end" fill="#6B655D">2000</text>
+  <text x="58" y="124.67" text-anchor="end" fill="#6B655D">4000</text>
+  <text x="58" y="58" text-anchor="end" fill="#6B655D">6000</text>
+
+  <rect x="96" y="233.7" width="56" height="18.3" fill="#E3EAE9"/>
+  <path d="M96.75 252V234.45H151.25V252" fill="none" stroke="#4F706C" stroke-width="1.5"/>
+  <rect x="190" y="216.53" width="56" height="35.47" fill="#E3EAE9"/>
+  <path d="M190.75 252V217.28H245.25V252" fill="none" stroke="#4F706C" stroke-width="1.5"/>
+  <rect x="284" y="114.07" width="56" height="137.93" fill="#4F706C"/>
+  <rect x="378" y="71" width="56" height="181" fill="#4F706C"/>
+
+  <text x="124" y="225.7" text-anchor="middle" fill="#26231F">549</text>
+  <text x="218" y="208.53" text-anchor="middle" fill="#26231F">1064</text>
+  <text x="312" y="106.07" text-anchor="middle" fill="#26231F">4138</text>
+  <text x="406" y="63" text-anchor="middle" fill="#26231F">5430</text>
+  <text x="124" y="276" text-anchor="middle" fill="#26231F">1st</text>
+  <text x="218" y="276" text-anchor="middle" fill="#26231F">2nd</text>
+  <text x="312" y="276" text-anchor="middle" fill="#26231F">3rd</text>
+  <text x="406" y="276" text-anchor="middle" fill="#26231F">4th</text>
+
+  <path d="M96 285v8H246v-8" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="171" y="318" text-anchor="middle" fill="#26231F">valence (5s)</text>
+  <path d="M284 285v8H434v-8" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="359" y="318" text-anchor="middle" fill="#26231F">core (4p)</text>
+
+  <path d="M258 206L270.23 130.86" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M272 120L275.66 131.74L264.8 129.97Z" fill="#26231F"/>
+  <text x="250" y="166" text-anchor="end" fill="#26231F">the jump</text>
+</svg>

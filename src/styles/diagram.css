@@ -537,6 +537,166 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   fill: #5b86d6;
 }
 
+/* The photoelectron spectrum explorer. A light solid line at each count of
+   electrons, apart from the dashed guides; and the peaks, filled for the
+   chosen atom and dashed outlines for the one compared with, so they differ
+   by more than color. */
+.diagram-gridline {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.diagram-peak {
+  fill: var(--u-ink);
+  stroke: none;
+}
+.diagram-peak.is-compared {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 2;
+}
+.diagram-peak-label,
+.diagram-point-label {
+  fill: var(--ink);
+  font-weight: 600;
+  /* A compared atom's dashed peak can stand where this label is. A halo in
+     the card's color, as on .diagram-curve-name, keeps the label readable.
+     The periodic trends graph's labels, over its line, are the same. */
+  paint-order: stroke;
+  stroke: var(--card);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+/* The periodic trends explorer. */
+/* Its table of elements: eight columns that must fit a 320 px phone, where a
+   four-digit value at 12px is about 29 px wide. Two classes, to outrank
+   ".prose table", which scrolls sideways. Below 30rem the table is also wider
+   than the diagram's text, by the width of the diagram's padding less a
+   little, so that its cells fit their numbers. */
+.diagram .trend-table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+  border-collapse: collapse;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  line-height: 1.25;
+  font-variant-numeric: tabular-nums;
+}
+.diagram .trend-table th,
+.diagram .trend-table td {
+  padding: 0;
+  border: 0;
+  text-align: center;
+}
+.diagram .trend-table thead th {
+  padding-bottom: 0.2rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+/* The graph's title breaks evenly, so that "period 3" is not split. */
+.diagram-plot .trend-title {
+  text-wrap: balance;
+}
+@media (max-width: 30rem) {
+  /* The graph's title can wrap to a second line on a phone; two lines are kept
+     for it whatever it says, so that the graph below does not change height. */
+  .diagram-plot .trend-title {
+    min-height: 2lh;
+  }
+  .diagram-panels .trend-panel {
+    width: calc(100% + 1.5rem);
+    max-width: none;
+    margin-inline: -0.75rem;
+  }
+}
+/* The readout's box is as tall as its longest sentence, which is drawn in it
+   unseen, so that nothing below the readout moves when the sentence changes. */
+.trend-readout {
+  display: grid;
+}
+.trend-readout > .diagram-readout {
+  grid-area: 1 / 1;
+  margin: 0;
+}
+.trend-readout-sizer {
+  visibility: hidden;
+}
+/* The legend of each radio group sits on its own row above the options, so
+   that the options wrap beneath it instead of beside it. */
+.diagram-body[data-diagram='periodic-trends'] .diagram-choice legend {
+  float: none;
+  margin: 0 0 0.15rem;
+}
+/* A cell is a button that chooses its element. The chosen one's heavy border
+   grows outward over its neighbors, so that its number keeps the room it had. */
+.trend-cell {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 2.5rem;
+  padding: 0.15rem 0;
+  font: inherit;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--line);
+  cursor: pointer;
+}
+.trend-cell[aria-current='true'] {
+  z-index: 1;
+  width: calc(100% + 4px);
+  margin: -2px;
+  border: 3px solid var(--ink);
+}
+.diagram-body:not([data-hydrated]) .trend-cell {
+  cursor: default;
+}
+/* A cell with no value has the paper and a dashed border, so that it is not
+   taken for a cell with the lowest shade. */
+.trend-no-value {
+  background: var(--paper);
+  border: 1px dashed var(--muted);
+}
+.trend-symbol {
+  display: block;
+  font-weight: 600;
+}
+.trend-value {
+  display: block;
+}
+/* Four digits at 12px leave 1 to 2 px between neighboring cells' numbers at
+   320 px, so that 1402 and 1314 read as one. A smaller size, and digits of
+   their own widths (the cells are centered, so nothing needs to line up),
+   give them room. */
+@media (max-width: 22.5rem) {
+  .trend-value {
+    font-size: 11px;
+    font-variant-numeric: normal;
+  }
+}
+/* Five steps of the unit's color. The number in each cell carries the
+   information; the darkest step still leaves the text above 4.5 to 1 in both
+   themes (the dark theme's card is near black, so its steps stay as dark). */
+.trend-shade-0 {
+  background: color-mix(in srgb, var(--u) 6%, var(--card));
+}
+.trend-shade-1 {
+  background: color-mix(in srgb, var(--u) 20%, var(--card));
+}
+.trend-shade-2 {
+  background: color-mix(in srgb, var(--u) 34%, var(--card));
+}
+.trend-shade-3 {
+  background: color-mix(in srgb, var(--u) 48%, var(--card));
+}
+.trend-shade-4 {
+  background: color-mix(in srgb, var(--u) 62%, var(--card));
+}
+
 @media print {
   .diagram-controls {
     display: none;
