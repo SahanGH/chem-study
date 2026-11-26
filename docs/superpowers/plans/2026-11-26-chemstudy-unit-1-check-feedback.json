@@ -155,7 +155,7 @@
         },
         {
           "text": "The sample must be a mixture of two elements.",
-          "message": "Two peaks this close in mass are isotopes: atoms of one element with different numbers of neutrons."
+          "message": "The spectrum is of one element, rhenium. Its two peaks are isotopes: atoms with different numbers of neutrons."
         },
         {
           "text": "About 63 percent of rhenium atoms are the heavier isotope.",
@@ -201,7 +201,7 @@
         {
           "value": "64.95",
           "from": "smallest peak left out, not rescaled",
-          "message": "Did you leave out a small peak? The fractions you use should add up to 1."
+          "message": "Did you leave out a small peak, or round too early? The fractions should add up to 1; keep four figures."
         },
         {
           "value": "66.18",
@@ -211,12 +211,12 @@
         {
           "value": "66.93",
           "from": "five masses averaged as equals",
-          "message": "That treats the peaks as equally common. Weight each mass by its percent of the atoms."
+          "message": "Did you average the masses as if the peaks were equally common? Weight each mass by its percent of the atoms."
         },
         {
           "value": "63.93",
           "from": "mass of the tallest peak",
-          "message": "That is the mass of the tallest peak. The other four peaks pull the average up."
+          "message": "Is that the mass of the tallest peak? The other four peaks pull the average up."
         },
         {
           "value": "6538",
@@ -311,11 +311,11 @@
         },
         {
           "text": "SiN",
-          "message": "Check the mole ratio before you round. A ratio near 1.33 is not 1: multiply both numbers until both are whole."
+          "message": "Check the mole ratio before you round. Is it within a few hundredths of a whole number? If not, multiply both numbers until both are whole."
         },
         {
           "text": "Si₂N₃",
-          "message": "Doubling gives 2 to about 2.67, which is still not whole. Try another multiplier."
+          "message": "Check that multiplier: doubling the mole ratio does not make both numbers whole here. Try another."
         },
         {
           "text": "Si₃N₂",
@@ -460,7 +460,7 @@
         },
         {
           "text": "The mass of copper in the sample, and nothing else",
-          "message": "A percent of the rock needs the mass of the rock sample as well."
+          "message": "A mass percent is one mass divided by another. Which mass does this leave out?"
         },
         {
           "text": "The mass of the rock sample and the mass of sulfur in it",
@@ -612,11 +612,11 @@
         },
         {
           "text": "A 2p electron in an atom of aluminum",
-          "message": "Right shell. Now compare the two nuclei: which has more protons pulling on its 2p electrons?"
+          "message": "Distance is not the whole comparison. Compare the charge too: how many protons does each nucleus have?"
         },
         {
           "text": "A 3p electron in an atom of chlorine",
-          "message": "Chlorine has the larger charge, but compare the shells too. A 2p electron is closer, with two electrons inside it and no more."
+          "message": "Charge is not the whole comparison. Compare the shells too: how far out is each electron, and how many electrons are inside it?"
         },
         {
           "text": "A 2p electron in an atom of chlorine",
@@ -820,7 +820,7 @@
         },
         {
           "text": "A cation is always smaller than an anion.",
-          "message": "Not always: the rubidium ion in the figure is larger than the fluoride ion. Compare the electrons and protons of these two ions."
+          "message": "Not always: a rubidium ion, 152 pm, is larger than a fluoride ion, 133 pm. Compare the electrons and protons of these two ions."
         },
         {
           "text": "Al³⁺ has lost its whole outer shell, and the two ions have the same 10 electrons, held by 13 protons against 8.",
@@ -949,7 +949,7 @@
         },
         {
           "text": "In₃O₂",
-          "message": "The numbers are right, but they are on the wrong ions. Add up the charges to check."
+          "message": "Add up the charges. Three In³⁺ and two O²⁻ leave 5+ over."
         },
         {
           "text": "InO₃",
@@ -975,7 +975,7 @@
         },
         {
           "text": "Magnesium and sulfur",
-          "message": "Magnesium matches strontium, but sulfur is not in phosphorus's group. What charge does a sulfide ion have?"
+          "message": "Magnesium matches strontium, but sulfur is not in phosphorus's group. What charge does sulfur's ion have?"
         },
         {
           "text": "Aluminum and fluorine",
