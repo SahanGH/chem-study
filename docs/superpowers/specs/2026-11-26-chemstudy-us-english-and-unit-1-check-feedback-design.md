@@ -328,3 +328,57 @@ Each is stacked on the one before and targets `main`.
 - No lesson of Unit 1 scrolls sideways at 320 px with a message showing.
 - The pull requests wait for the teacher, each with "Build and test" passing
   on GitHub.
+
+## As built
+
+Carried out on 2026-11-26 in a Claude Code session, as pull requests B
+(#69), C (#70) and D. The plan's "As carried out" notes give the detail.
+
+**What changed from this design**
+
+- **The spelling check reads 346 files**, with `.js` and `.json` added, and
+  also catches plurals and "-er" forms and a phrase split by a line break.
+- **A slip is matched only when the typed value is nearer the slip than the
+  answer.** With a 0.5 percent tolerance a slip's 1 percent window reached
+  past the answer: in lesson 1.2, 65.72 would have been told it averaged the
+  peaks as equals. Section 4.2's rule ("within 1 percent of the slip") now
+  has that condition too.
+- **Fourteen of the 116 messages were rewritten** after two fact-checks; the
+  data file has them. Three were errors: one gave the answer away (lesson
+  1.8, In₃O₂), two confirmed half of it (lesson 1.5, Check 5). One sent the
+  student to a figure that does not show what it said (lesson 1.7, Check 3).
+
+**Unit 1 after the change** (section 3's table)
+
+| Unit | Option 1 | Option 2 | Option 3 | Option 4 | Typed number |
+|---|---|---|---|---|---|
+| 1 | 6 | 7 | 8 | 7 | 8 |
+
+All 28 Checks with options say something for each wrong option (84
+messages) and all 8 with a typed number name at least one slip (32). No slip
+is marked correct.
+
+**Left for the teacher.** The 0.5 percent tolerances refuse some answers
+rounded to two figures: 9.2 × 10²¹ and 9.21 × 10²¹ in lesson 1.1 (0.65 and
+0.54 percent low), and 65 or 65.0 in lesson 1.2. A tolerance of 0.8 percent
+in lesson 1.1 would accept them and still refuse the slip, 9.35 × 10²¹. In
+lesson 1.2, 65.0 is nearer the slip 64.95 than the answer, so it gets that
+slip's message, which now mentions rounding.
+
+**What the next unit should do differently**
+
+- **Ask of every message whether it leaves one option standing.** The first
+  fact-check found three messages that gave or nearly gave the answer; a
+  message for a wrong option on a four-option Check easily confirms half of
+  the right one. Put the question in the brief.
+- **A message that points at a figure or a table must be checked against
+  that figure.** The figure in lesson 1.7 shows Rb⁺ beside Br⁻; the
+  comparison with F⁻ is only in the explanation.
+- **Use the lesson's own terms for rounding.** Lesson 1.2 speaks of decimal
+  places, not significant figures.
+- **Before narrowing a tolerance, list the roundings a student gives to one
+  figure fewer and with three-figure intermediates**, and choose the widest
+  tolerance that still refuses the slip.
+- **Two numbers in one Check's slips can coincide with other values on the
+  page** (lesson 1.2's 66.93 is also the third peak's mass). Search the
+  question for each slip's value before writing its message.
