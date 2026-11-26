@@ -201,7 +201,7 @@
         {
           "value": "64.95",
           "from": "smallest peak left out, not rescaled",
-          "message": "Did you leave out a small peak, or round too early? The fractions should add up to 1; keep four figures."
+          "message": "Did you leave out a small peak, or round your answer? The fractions should add up to 1; give the average to two decimal places."
         },
         {
           "value": "66.18",
@@ -820,7 +820,7 @@
         },
         {
           "text": "A cation is always smaller than an anion.",
-          "message": "Not always: a rubidium ion, 152 pm, is larger than a fluoride ion, 133 pm. Compare the electrons and protons of these two ions."
+          "message": "Not always: a rubidium ion, 152 pm, is larger than a fluoride ion, 133 pm. Compare the electrons and protons of Al³⁺ and O²⁻."
         },
         {
           "text": "Al³⁺ has lost its whole outer shell, and the two ions have the same 10 electrons, held by 13 protons against 8.",
