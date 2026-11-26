@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 308" font-family="system-ui, sans-serif" font-size="18">
+  <!-- The photoelectron spectrum of an element to be named. The horizontal axis is logarithmic: 100 MJ/mol at x=60 and 1 MJ/mol at x=382, 161 units per decade, so a binding energy E is at x = 60 + 161 x (2 - log10 E). The vertical axis has no numbers; a peak is 30 units tall for each electron above y=232, the top edge of the horizontal axis line (centered at y=232.75), so the tallest peak is exactly 2 times as tall as the shortest. Peaks are 4 wide with a rounded top, centered on the binding energy, and each is labeled with its binding energy. Peaks: 67.2 MJ/mol, x=87.79, height 60 (top at y=172); 3.88 MJ/mol, x=287.2, height 120 (top at y=112); 1.68 MJ/mol, x=345.73, height 90 (top at y=142). Font size 18 on a width of 400 units is 10.6 px when the figure is drawn 236 px wide, as on a practice page on a 320 px phone. -->
+  <rect width="400" height="308" fill="#FDFCF9"/>
+
+  <path d="M60 36V232.75H382" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M60 232.75v7M221 232.75v7M382 232.75v7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+
+  <text x="60" y="258" text-anchor="middle" fill="#6B655D">100</text>
+  <text x="221" y="258" text-anchor="middle" fill="#6B655D">10</text>
+  <text x="382" y="258" text-anchor="middle" fill="#6B655D">1</text>
+
+  <text x="221" y="288" text-anchor="middle" fill="#26231F">Binding energy (MJ/mol)</text>
+  <text x="22" y="134" text-anchor="middle" fill="#26231F" transform="rotate(-90 22 134)">Relative number</text>
+  <text x="44" y="134" text-anchor="middle" fill="#26231F" transform="rotate(-90 44 134)">of electrons</text>
+
+  <path d="M85.79 232V174A2 2 0 0 1 89.79 174V232Z" fill="#4F706C"/>
+  <path d="M285.2 232V114A2 2 0 0 1 289.2 114V232Z" fill="#4F706C"/>
+  <path d="M343.73 232V144A2 2 0 0 1 347.73 144V232Z" fill="#4F706C"/>
+
+  <text x="87.79" y="164" text-anchor="middle" fill="#26231F">67.2</text>
+  <text x="287.2" y="104" text-anchor="middle" fill="#26231F">3.88</text>
+  <text x="345.73" y="134" text-anchor="middle" fill="#26231F">1.68</text>
+</svg>
