@@ -299,6 +299,10 @@ describe('readTolerance', () => {
     expect(() => readTolerance(percent, '5')).toThrow(message);
   });
 
+  it('refuses a tolerance on an answer of zero, which is graded by a fixed window', () => {
+    expect(() => readTolerance(0.5, '0')).toThrow(/answer of zero/);
+  });
+
   it('refuses a tolerance on a Check with options', () => {
     expect(() => readTolerance(0.5, undefined)).toThrow(/cannot have a `tolerance`/);
   });
@@ -317,6 +321,8 @@ describe('readMisses', () => {
     ['a message for the answer itself', { 2: 'Follow the units.' }, /is the answer/],
     ['option 0', { 0: 'Follow the units.' }, /option number from 1/],
     ['a key that is not a number', { a: 'Follow the units.' }, /option number from 1/],
+    ['a key written another way', { '1.0': 'Follow the units.' }, /option number from 1/],
+    ['one option written two ways', { 1: 'Follow the units.', '01': 'Which way?' }, /option number from 1/],
     ['an empty message', { 1: '' }, /is empty/],
     ['math in a message', { 1: 'Use $K_c$ here.' }, /math or markup/],
     ['a message that opens as the page does', { 1: 'Not quite. Try again.' }, /Not quite/],
@@ -382,6 +388,14 @@ describe('nearestSlip', () => {
     ];
     expect(nearestSlip(66.5, close)?.message).toBe('four peaks as equals');
     expect(nearestSlip(66.6, close)?.message).toBe('five peaks as equals');
+  });
+
+  it('given the answer, matches a slip only for a value nearer the slip than the answer', () => {
+    // Lesson 1.2, Check 3: 65.72 lies inside the slip's 1 percent but nearer the answer, 65.38.
+    const near = [{ value: 66.18, message: 'four peaks as equals' }];
+    expect(nearestSlip(65.72, near, 65.38)).toBeNull();
+    expect(nearestSlip(66.0, near, 65.38)?.message).toBe('four peaks as equals');
+    expect(nearestSlip(65.72, near)?.message).toBe('four peaks as equals');
   });
 
   it('matches a slip of zero only with zero', () => {

@@ -158,6 +158,8 @@ function isPlainObject(value: unknown): value is Record<string, unknown> {
 export function readTolerance(percent: unknown, numeric: string | undefined): number {
   if (percent === undefined) return TOLERANCE;
   if (numeric === undefined) throw new Error('A Check with `answer` (an option number) cannot have a `tolerance`.');
+  // gradeNumeric grades an answer of zero by a fixed window, so a tolerance there would do nothing.
+  if (parseNumber(numeric) === 0) throw new Error('A Check with an answer of zero cannot have a `tolerance`.');
   if (typeof percent !== 'number' || !(percent > 0) || percent > TOLERANCE * 100) {
     throw new Error(
       `A Check's tolerance is a percent above 0 and at most ${TOLERANCE * 100}, such as tolerance={0.5}, ` +
@@ -179,8 +181,10 @@ export function readMisses(misses: unknown, answer: number | undefined): Record<
   if (!isPlainObject(misses)) throw new Error('Write misses as option numbers and messages: misses={{ 1: "…", 3: "…" }}.');
   const read: Record<string, string> = {};
   for (const [key, message] of Object.entries(misses)) {
-    const option = Number(key);
-    if (!Number.isInteger(option) || option < 1) throw new Error(`A miss is keyed by an option number from 1, not ${JSON.stringify(key)}.`);
+    // Only "1", "2", …: Number() would also read "01", "1.0" and "1e0" as 1,
+    // and a second message for the same option would silently replace the first.
+    const option = /^[1-9]\d*$/.test(key) ? Number(key) : NaN;
+    if (!Number.isInteger(option)) throw new Error(`A miss is keyed by an option number from 1, not ${JSON.stringify(key)}.`);
     if (option === answer) throw new Error(`Option ${option} is the answer, so it cannot have a miss.`);
     const problem = feedbackProblem(message);
     if (problem) throw new Error(`The miss for option ${option} ${problem}.`);
@@ -227,15 +231,19 @@ export function readSlips(
 /**
  * The slip a typed value most likely is: the nearest one, when the value is
  * within 1 percent of it. Null when no slip is that near. A slip of exactly
- * zero is matched only by zero.
+ * zero is matched only by zero. Given the answer, a value nearer the answer
+ * than the slip is not matched: with a narrow tolerance, a slip's 1 percent
+ * can reach past the answer, and a rounded right method must not be told it
+ * made the slip's mistake.
  */
-export function nearestSlip(value: number, slips: Slip[]): Slip | null {
+export function nearestSlip(value: number, slips: Slip[], answer?: number): Slip | null {
   let nearest: Slip | null = null;
   let nearestDistance = Infinity;
   for (const slip of slips) {
     const distance = Math.abs(value - slip.value);
     const window = slip.value === 0 ? ZERO_ANSWER_TOLERANCE : Math.abs(slip.value) * SLIP_WINDOW;
-    if (distance <= window * (1 + FLOAT_SLACK) && distance < nearestDistance) {
+    const nearerTheAnswer = answer !== undefined && Math.abs(value - answer) <= distance;
+    if (!nearerTheAnswer && distance <= window * (1 + FLOAT_SLACK) && distance < nearestDistance) {
       nearest = slip;
       nearestDistance = distance;
     }

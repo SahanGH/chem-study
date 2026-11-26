@@ -179,7 +179,7 @@ const slipMessages = readSlips(slips, numeric, allowed);
         } else if (grade === 'incorrect') {
           const typed = parseNumber(input.value);
           // gradeNumeric returned 'incorrect', so the text is a number; the test satisfies the type checker.
-          const slip = typed === null ? null : nearestSlip(typed, slips);
+          const slip = typed === null ? null : nearestSlip(typed, slips, answer);
           say(slip ? `Not quite. ${slip.message}` : 'Not quite. Check your setup and try again.', 'no');
         } else {
           input.disabled = true;
