@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 306" font-family="system-ui, sans-serif" font-size="18">
+  <!-- The reaction of nickel metal with iron(III) ions, built from two half-reactions and laid out like a sum. Row 1, labeled Oxidation: Ni to Ni2+ + 2 e-. Row 2, labeled Reduction: Fe3+ + e- to Fe2+, with "x 2" at its right. Row 3, the reduction doubled: 2 Fe3+ + 2 e- to 2 Fe2+. The "2 e-" of row 1 and the "2 e-" of row 3 each have a light accent background and a slanted accent line through them; the line is thin and runs from 7 units above the baseline to 5 below it, so it crosses the 2 below its top curve and passes under the charge. No connector joins the two (it would cross row 2). The words "2 lost = 2 gained" are written once, under row 3, clear of every other text. Then a rule, like the line under a sum, and row 4: Ni + 2 Fe3+ to Ni2+ + 2 Fe2+, with "charge: +6 on each side" under it in the secondary color. The arrows of the four rows are in one column, with left sides set against it from the left and right sides from the right. Every term is its own text element, centered on an x computed by scratchpad/unit4/tools/fig-4-9.cjs from widths measured in Chromium (8 units between a term and a plus sign, 12 beside an arrow). The arrows are drawn as paths. State symbols and the spectator chloride ions are left out. Font size 18 keeps the main text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="306" fill="#FDFCF9"/>
+
+  <!-- A light background behind each of the two electron terms that cancel -->
+  <g fill="#E3EAE9">
+    <rect x="375.3" y="27" width="41.6" height="29" rx="4"/>
+    <rect x="228.4" y="131" width="41.6" height="29" rx="4"/>
+  </g>
+
+  <!-- Row labels -->
+  <g fill="#4F706C" font-weight="600">
+    <text x="24" y="48">Oxidation</text>
+    <text x="24" y="100">Reduction</text>
+  </g>
+
+  <!-- Row 1: the oxidation half-reaction -->
+  <g fill="#26231F" text-anchor="middle">
+    <text x="257.1" y="48">Ni</text>
+    <text x="333.5" y="48">Ni<tspan dy="-7" font-size="14">2+</tspan></text>
+    <text x="365.1" y="48">+</text>
+    <text x="396.1" y="48">2 e<tspan dy="-7" font-size="14">−</tspan></text>
+  </g>
+  <path d="M278 42H304m-7 -5l7 5l-7 5" fill="none" stroke="#26231F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Row 2: the reduction half-reaction as first written, and its multiplier -->
+  <g fill="#26231F" text-anchor="middle">
+    <text x="256.5" y="100">e<tspan dy="-7" font-size="14">−</tspan></text>
+    <text x="232.8" y="100">+</text>
+    <text x="201" y="100">Fe<tspan dy="-7" font-size="14">3+</tspan></text>
+    <text x="333.7" y="100">Fe<tspan dy="-7" font-size="14">2+</tspan></text>
+  </g>
+  <path d="M278 94H304m-7 -5l7 5l-7 5" fill="none" stroke="#26231F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="377.3" y="100" fill="#4F706C" font-weight="600">× 2</text>
+
+  <!-- Row 3: the reduction half-reaction doubled -->
+  <g fill="#26231F" text-anchor="middle">
+    <text x="249.2" y="152">2 e<tspan dy="-7" font-size="14">−</tspan></text>
+    <text x="218.2" y="152">+</text>
+    <text x="179.1" y="152">2 Fe<tspan dy="-7" font-size="14">3+</tspan></text>
+    <text x="341" y="152">2 Fe<tspan dy="-7" font-size="14">2+</tspan></text>
+  </g>
+  <path d="M278 146H304m-7 -5l7 5l-7 5" fill="none" stroke="#26231F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- A slanted line through each of the two electron terms, from 2 units left of it to 2 units right of it -->
+  <g stroke="#4F706C" stroke-width="1.4" stroke-linecap="round">
+    <line x1="377.3" y1="41" x2="414.9" y2="53"/>
+    <line x1="230.4" y1="145" x2="268" y2="157"/>
+  </g>
+
+  <!-- The note, written once -->
+  <text x="291" y="193" text-anchor="middle" fill="#4F706C" font-weight="600">2 lost = 2 gained</text>
+
+  <!-- The rule under the sum -->
+  <line x1="24" y1="213" x2="456" y2="213" stroke="#26231F" stroke-width="1.5"/>
+
+  <!-- Row 4: the sum -->
+  <g fill="#26231F" text-anchor="middle">
+    <text x="241" y="253">2 Fe<tspan dy="-7" font-size="14">3+</tspan></text>
+    <text x="201.9" y="253">+</text>
+    <text x="178.8" y="253">Ni</text>
+    <text x="333.5" y="253">Ni<tspan dy="-7" font-size="14">2+</tspan></text>
+    <text x="365.1" y="253">+</text>
+    <text x="404.3" y="253">2 Fe<tspan dy="-7" font-size="14">2+</tspan></text>
+  </g>
+  <path d="M278 247H304m-7 -5l7 5l-7 5" fill="none" stroke="#26231F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="291" y="285" text-anchor="middle" fill="#6B655D">charge: +6 on each side</text>
+</svg>

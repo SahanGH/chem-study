@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 468" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Three kinds of reaction. Panel 1: HNO2 passes H+ to OH- (solid arrow). Panel 2: 2 I- pass 2 e- to Br2 (dashed arrow). Panel 3: 2 Cd2+ and 2 S2- apart, then the same four ions as a 2 x 2 block of CdS(s), unlike ions touching and like ions apart; total charge 2(+2) + 2(-2) = 0 before and after. Cations dark, anions pale. Water and spectator ions are not drawn. Coordinates from scratchpad/unit4/tools/fig-4-7.cjs. -->
+  <defs>
+    <g id="cd">
+      <circle r="17" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+      <text y="6.5" text-anchor="middle" fill="#FDFCF9">Cd</text>
+    </g>
+    <g id="s">
+      <circle r="22" fill="#4F706C" fill-opacity="0.4" stroke="#26231F" stroke-width="1.5"/>
+      <text y="6.5" text-anchor="middle" fill="#26231F">S</text>
+    </g>
+  </defs>
+  <rect width="480" height="468" fill="#FDFCF9"/>
+
+  <text x="240" y="26" fill="#26231F" text-anchor="middle" font-weight="600">Acid–base: a proton moves</text>
+  <rect x="86" y="66" width="104" height="36" rx="18" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <text x="138" y="90.5" fill="#26231F" text-anchor="middle">HNO<tspan dy="4" font-size="14">2</tspan></text>
+  <rect x="290" y="66" width="104" height="36" rx="18" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <text x="342" y="90.5" fill="#26231F" text-anchor="middle">OH<tspan dy="-7" font-size="14">−</tspan></text>
+  <path d="M196 76Q240 50 274.5 70.4" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M284 76L271.7 75.1L277.3 65.7Z" fill="#26231F"/>
+  <text x="240" y="55" fill="#26231F" text-anchor="middle">H<tspan dy="-7" font-size="14">+</tspan></text>
+  <text x="240" y="128" fill="#26231F" text-anchor="middle">HNO<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">(aq) + OH</tspan><tspan dy="-7" font-size="14">−</tspan><tspan dy="7">(aq) → NO</tspan><tspan dy="4" font-size="14">2</tspan><tspan dy="-11" font-size="14">−</tspan><tspan dy="7">(aq) + H</tspan><tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O(l)</tspan></text>
+  <path d="M16 144H464" fill="none" stroke="#6B655D" stroke-width="1" stroke-opacity="0.35"/>
+
+  <text x="240" y="170" fill="#26231F" text-anchor="middle" font-weight="600">Oxidation–reduction: electrons move</text>
+  <rect x="86" y="210" width="104" height="36" rx="18" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <text x="138" y="234.5" fill="#26231F" text-anchor="middle">2 I<tspan dy="-7" font-size="14">−</tspan></text>
+  <rect x="290" y="210" width="104" height="36" rx="18" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <text x="342" y="234.5" fill="#26231F" text-anchor="middle">Br<tspan dy="4" font-size="14">2</tspan></text>
+  <path d="M196 220Q240 194 274.5 214.4" fill="none" stroke="#26231F" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M284 220L271.7 219.1L277.3 209.7Z" fill="#26231F"/>
+  <text x="240" y="199" fill="#26231F" text-anchor="middle">2 e<tspan dy="-7" font-size="14">−</tspan></text>
+  <text x="240" y="272" fill="#26231F" text-anchor="middle">2 I<tspan dy="-7" font-size="14">−</tspan><tspan dy="7">(aq) + Br</tspan><tspan dy="4" font-size="14">2</tspan><tspan dy="-4">(aq) → I</tspan><tspan dy="4" font-size="14">2</tspan><tspan dy="-4">(aq) + 2 Br</tspan><tspan dy="-7" font-size="14">−</tspan><tspan dy="7">(aq)</tspan></text>
+  <path d="M16 288H464" fill="none" stroke="#6B655D" stroke-width="1" stroke-opacity="0.35"/>
+
+  <text x="240" y="314" fill="#26231F" text-anchor="middle" font-weight="600">Precipitation: ions join into a solid</text>
+  <g id="ions-apart">
+    <use href="#cd" x="40" y="352"/>
+    <use href="#s" x="164" y="356"/>
+    <use href="#s" x="74" y="404"/>
+    <use href="#cd" x="200" y="404"/>
+  </g>
+  <text x="63" y="358.5" fill="#26231F">Cd<tspan dy="-7" font-size="14">2</tspan><tspan dy="0" font-size="14">+</tspan></text>
+  <text x="102" y="410.5" fill="#26231F">S<tspan dy="-7" font-size="14">2</tspan><tspan dy="0" font-size="14">−</tspan></text>
+  <path d="M236 378H261" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M270 378L259 372.5L259 383.5Z" fill="#26231F"/>
+  <g id="ions-in-solid">
+    <use href="#cd" x="306" y="358.5"/>
+    <use href="#s" x="345" y="358.5"/>
+    <use href="#s" x="306" y="397.5"/>
+    <use href="#cd" x="345" y="397.5"/>
+  </g>
+  <text x="377" y="384.5" fill="#26231F">CdS(s)</text>
+  <text x="240" y="452" fill="#26231F" text-anchor="middle">Cd<tspan dy="-7" font-size="14">2</tspan><tspan dy="0" font-size="14">+</tspan><tspan dy="7">(aq) + S</tspan><tspan dy="-7" font-size="14">2</tspan><tspan dy="0" font-size="14">−</tspan><tspan dy="7">(aq) → CdS(s)</tspan></text>
+</svg>

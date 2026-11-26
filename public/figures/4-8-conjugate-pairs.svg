@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 216" font-family="system-ui, sans-serif" font-size="18">
+  <!-- The equation OCl-(aq) + H2O(l) <=> HOCl(aq) + OH-(aq) on the baseline y = 120. Its four terms start at x = 20, 144, 266 and 393, with equal gaps between the pieces (widths from scratchpad/unit4/tools/fig-4-8-widths.cjs); the middles of the four formulas, without their state symbols, are at x = 39, 161, 287 and 411, and the bracket legs stand there. The solid bracket above joins OCl- to HOCl; its bar at y = 58 is 45 units above the H2O(l) it passes over. The dashed bracket below joins H2O to OH-; its bar at y = 172 is 46 units below the HOCl(aq) it passes under. The equilibrium arrow is drawn, not typed, so that it does not depend on a font. -->
+  <defs>
+    <g id="both-ways" fill="none" stroke="#26231F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-15 -3.5H15L8 -9.5"/>
+      <path d="M15 3.5H-15L-8 9.5"/>
+    </g>
+  </defs>
+  <rect width="480" height="216" fill="#FDFCF9"/>
+
+  <!-- The pair OCl- and HOCl: a solid bracket above. -->
+  <text x="163" y="44" text-anchor="middle" fill="#26231F">base and its conjugate acid</text>
+  <path d="M39 94V58H287V94" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- The equation. -->
+  <g fill="#26231F">
+    <text x="20" y="120">OCl<tspan dy="-7" font-size="14">&#8722;</tspan><tspan dy="7">(aq)</tspan></text>
+    <text x="117" y="120" text-anchor="middle">+</text>
+    <text x="144" y="120">H<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O(l)</tspan></text>
+    <text x="266" y="120">HOCl(aq)</text>
+    <text x="366" y="120" text-anchor="middle">+</text>
+    <text x="393" y="120">OH<tspan dy="-7" font-size="14">&#8722;</tspan><tspan dy="7">(aq)</tspan></text>
+  </g>
+  <use href="#both-ways" transform="translate(230 114)"/>
+
+  <!-- The pair H2O and OH-: a dashed bracket below. -->
+  <path d="M161 136V172H411V136" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6 4"/>
+  <text x="286" y="198" text-anchor="middle" fill="#26231F">acid and its conjugate base</text>
+</svg>

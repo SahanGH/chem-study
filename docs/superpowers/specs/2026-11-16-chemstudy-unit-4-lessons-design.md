@@ -338,3 +338,62 @@ is merged second is first brought up to date with `main`.
 - No lesson scrolls sideways at 320 px with every answer open.
 - Both interactive diagrams work by keyboard, and both show a drawn picture
   without JavaScript and in print.
+
+## As built (2026-11-24)
+
+Nine lessons with 39 Checks (9 of them numeric), 14 worked examples, 14
+drawn figures and two interactive diagrams, in four pull requests: #51 (this
+design and its plan), #54 (lessons 4.1 to 4.4), #56 (the two explorers and
+lessons 4.5 and 4.6) and the one that carries this note (lessons 4.7 to
+4.9). The plan has an "As carried out" note under each group with the
+details.
+
+- **Every lesson was fact-checked twice on Fable 5.2** by fresh agents that
+  solved each Check and worked example before reading its answer, balanced
+  every equation in atoms and in charge, counted every particle drawing, and
+  looked up whether each reaction and each scene is real. No round found a
+  wrong answer, equation, number, count or oxidation number. The one error
+  of fact was in a scene (the opening of lesson 4.4, in its first round).
+  What the checks found otherwise were statements that said more than is
+  true: a rule that failed on one of the lesson's own substances, an "every"
+  with an exception, a Check answered by the sentence above it.
+- **Every group was checked for originality on Sonnet**, and every
+  replacement setting was searched for in the sources before it was used.
+  No lesson shares a reaction's numbers or a distinctive scene with a
+  source. Wording and lists that followed the teacher's notes or a textbook
+  were rebuilt, and settings the site already used were changed.
+- **What changed from this design:**
+  - **Reading times.** The lessons are longer than the briefs planned: 11,
+    18, 13, 11, 20, 13, 17, 16 and 13 minutes, 132 in all. Section 2 called
+    4.3, 4.6 and 4.9 short; each is 13 minutes.
+  - **Both explorers put their controls directly under their drawings**, and
+    the titration explorer sets its flask beside its graph only from 42rem:
+    on a phone the sliders were a screen and a half below what they change.
+  - **The titration lesson pins the endpoint as the turn to blue.** The
+    first tinge of green comes six or seven drops early for tartaric acid.
+  - **Lesson 4.7 opens with black-and-white film**, not with water from a
+    mine, which repeated three scenes already on the site. Its watch battery
+    is written without water (Zn + Ag₂O → ZnO + 2 Ag), so that it is
+    oxidation–reduction and nothing else by the lesson's own tests.
+  - **Lesson 4.8 speaks of a strong acid's molecules, not its protons**, so
+    that what it says is true of sulfuric acid, and limits what "favors"
+    means to equal amounts with no water among the four species.
+  - **Lesson 4.9's numeric Check asks how many electrons pass**, not for a
+    coefficient that was printed in its stem.
+- **Rules that hold for the units to come:**
+  - For reactions, a checker with a reference lookup finds what memory does
+    not (a hydroxide that turns to an oxide, an indicator's early green, a
+    side reaction). Every reaction's products, colors and direction are
+    looked up, with acid strengths or reduction potentials stated.
+  - A rule is tested by applying it, exactly as worded, to every substance
+    in the lesson: the oxidation-number rules, the three questions that sort
+    a reaction, the steps for a half-reaction, "favors".
+  - A replacement setting or sentence gets the same checks as the lesson it
+    goes into. The originality checker clears a setting before it is sent to
+    a writer, and writers do not apply an item they believe is wrong.
+  - After each round, the unit's lessons are compared with one another for
+    a scene used twice and for a Check that another lesson pre-answers.
+  - Two folders on one machine take turns at the browser tests, under a
+    lock file.
+- **Not done here** (section 9): Unit 4's practice and its comprehensive
+  test, each with its own design and plan.
