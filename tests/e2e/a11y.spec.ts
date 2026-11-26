@@ -169,3 +169,23 @@ test('an answered check still passes in both of its states', async ({ page }) =>
   await expect(first.locator('.check-option.is-correct')).toHaveCount(1);
   expect(await violationsInChecks(), 'after the right answer').toEqual([]);
 });
+
+test('a check with a message for a wrong answer still passes in both of its states', async ({ page }) => {
+  await page.goto('/unit-1-atomic-structure/1-3-elemental-composition-of-pure-substances/');
+  const check = page.locator('cs-check').nth(1);
+  const violationsInChecks = async () => {
+    const results = await new AxeBuilder({ page })
+      .include('cs-check')
+      .withTags(['wcag2a', 'wcag2aa'])
+      .analyze();
+    return results.violations.map((v) => `${v.id}: ${v.help}`);
+  };
+
+  await check.locator('.check-option').nth(1).click();
+  await expect(check.locator('.check-feedback')).toContainText('Not quite. Check the mole ratio');
+  expect(await violationsInChecks(), 'with a message showing').toEqual([]);
+
+  await check.locator('.check-option').nth(0).click();
+  await expect(check.locator('.check-feedback')).toHaveText('Correct.');
+  expect(await violationsInChecks(), 'after the right answer').toEqual([]);
+});
