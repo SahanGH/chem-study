@@ -46,7 +46,14 @@ A mass spectrum of an element answers three questions. How many peaks: how many 
 
 </KeyIdea>
 
-<Check answer={4}>
+<Check
+  answer={4}
+  misses={{
+    1: "Look for a peak at 186.21 amu. There is none: that number is an average over the atoms.",
+    2: "59.7 is a height on a scale where the tallest peak is 100. Turn the two heights into shares of the total.",
+    3: "The spectrum is of one element, rhenium. Its two peaks are isotopes: atoms with different numbers of neutrons.",
+  }}
+>
 Rhenium is a metal used in the turbine blades of jet engines. Its mass spectrum has two peaks, near 185 amu and 187 amu. The vertical axis is relative: the peak at 187 is set to 100, and the peak at 185 comes to 59.7. Which statement do these data support?
 
 - Every rhenium atom has the same mass, 186.21 amu.
@@ -171,7 +178,14 @@ Use the spectrum in the figure to find strontium's average atomic mass.
 
 </Worked>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "That would need most of the atoms to be the lighter isotope. Which peak holds nearly all of them?",
+    2: "That is halfway between the two masses, which fits isotopes that are equally common. These are not.",
+    4: "An average cannot lie outside the values being averaged. It has to fall between the two masses.",
+  }}
+>
 The mass spectrum of a certain metal has two peaks: 112.90 amu (4.29 percent of the atoms) and 114.90 amu (95.71 percent). Without calculating, which is the best estimate of the metal's average atomic mass?
 
 - 113.0 amu
@@ -192,7 +206,19 @@ The weighted average works out to 114.8 amu. The metal is indium, 114.82 on the 
 </div>
 </Check>
 
-<Check numeric="65.38" unit="amu">
+<Check
+  numeric="65.38"
+  unit="amu"
+  tolerance={0.5}
+  slips={{
+    "64.95": "Did you leave out a small peak, or round your answer? The fractions should add up to 1; give the average to two decimal places.",
+    "66.18": "Did you treat the peaks as equally common? Each mass counts in proportion to its percent of the atoms.",
+    "66.93": "Did you average the masses as if the peaks were equally common? Weight each mass by its percent of the atoms.",
+    "63.93": "Is that the mass of the tallest peak? The other four peaks pull the average up.",
+    "6538": "Divide each percent by 100 before you multiply, or divide the total by 100 at the end.",
+    "49.72": "An average has to lie between the lightest and heaviest masses. Did you use all five peaks?",
+  }}
+>
 The mass spectrum of a certain metal has five peaks:
 
 | Mass (amu) | Percent of atoms |
@@ -243,7 +269,14 @@ Here is what other common slips give:
 
 The same reading runs backward. Given the spectrum of an unknown element, estimate or calculate its average atomic mass, then find the element with that mass on the periodic table. The number of peaks does not matter for this: one element can have one isotope or ten.
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Iron's 55.85 is below the lightest peak. An average cannot lie outside the masses being averaged.",
+    3: "Copper's 63.55 would need nearly all the atoms to be near 64 amu. Where are most of the atoms here?",
+    4: "Zinc's 65.38 is above the heaviest peak, so it cannot be the average of these five.",
+  }}
+>
 The mass spectrum of a pure metal has five peaks: 57.94 amu (68.08 percent of the atoms), 59.93 amu (26.22 percent), 60.93 amu (1.14 percent), 61.93 amu (3.63 percent) and 63.93 amu (0.93 percent). Use the periodic table. Which metal is it?
 
 - Iron (Fe)
