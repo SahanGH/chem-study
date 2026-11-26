@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Left: a KNO3 crystal of 5 K+ and 5 NO3-, 2 columns by 5 rows, alternating, unlike neighbors touching (spacing 34 = radius 12 + radius 22). Right: 1 K+ at (196,92) with 4 water molecules, each oxygen facing the ion; and 1 NO3- at (376,204) with 4 water molecules, each with one hydrogen pointing straight at the ion. 6 K+ and 6 NO3- in all, 8 water molecules (8 O, 16 H). Water as in 3-8-mgcl2-solution.svg, a little smaller: O radius 16, H radius 11, O-H 34 long, bent at 105 degrees. Nearest approach of two particles that do not belong together: 3. Coordinates come from scratchpad/unit4/tools/fig-4-4.cjs. -->
+  <rect width="480" height="320" fill="#FDFCF9"/>
+
+  <!-- Covalent O-H bonds, drawn under the atoms. -->
+  <path d="M196 61L223 40.3M196 61L169 40.3M227 92L247.7 119M227 92L247.7 65M196 123L169 143.7M196 123L223 143.7M165 92L144.3 65M165 92L144.3 119M376 134L376 168M376 134L343.2 125.2M446 204L412 204M446 204L454.8 236.8M376 274L376 240M376 274L408.8 282.8M306 204L340 204M306 204L297.2 171.2" fill="none" stroke="#26231F" stroke-width="2.5"/>
+
+  <!-- K+ ions: small, dark. 5 in the crystal, 1 in the water. -->
+  <g fill="#4F706C" stroke="#26231F" stroke-width="1.5">
+    <circle cx="34" cy="58" r="12"/>
+    <circle cx="68" cy="92" r="12"/>
+    <circle cx="34" cy="126" r="12"/>
+    <circle cx="68" cy="160" r="12"/>
+    <circle cx="34" cy="194" r="12"/>
+    <circle cx="196" cy="92" r="12"/>
+  </g>
+  <!-- NO3- ions: larger, pale. 5 in the crystal, 1 in the water. -->
+  <g fill="#4F706C" fill-opacity="0.4" stroke="#26231F" stroke-width="1.5">
+    <circle cx="68" cy="58" r="22"/>
+    <circle cx="34" cy="92" r="22"/>
+    <circle cx="68" cy="126" r="22"/>
+    <circle cx="34" cy="160" r="22"/>
+    <circle cx="68" cy="194" r="22"/>
+    <circle cx="376" cy="204" r="22"/>
+  </g>
+  <g fill="#26231F" text-anchor="middle">
+    <text x="68" y="64">NO<tspan dy="4" font-size="14">3</tspan></text>
+    <text x="34" y="98">NO<tspan dy="4" font-size="14">3</tspan></text>
+    <text x="68" y="132">NO<tspan dy="4" font-size="14">3</tspan></text>
+    <text x="34" y="166">NO<tspan dy="4" font-size="14">3</tspan></text>
+    <text x="68" y="200">NO<tspan dy="4" font-size="14">3</tspan></text>
+    <text x="376" y="210">NO<tspan dy="4" font-size="14">3</tspan></text>
+  </g>
+
+  <!-- Oxygen atoms of the 8 water molecules. -->
+  <g fill="#E3EAE9" stroke="#26231F" stroke-width="1.5">
+    <circle cx="196" cy="61" r="16"/>
+    <circle cx="227" cy="92" r="16"/>
+    <circle cx="196" cy="123" r="16"/>
+    <circle cx="165" cy="92" r="16"/>
+    <circle cx="376" cy="134" r="16"/>
+    <circle cx="446" cy="204" r="16"/>
+    <circle cx="376" cy="274" r="16"/>
+    <circle cx="306" cy="204" r="16"/>
+  </g>
+  <!-- Hydrogen atoms. -->
+  <g fill="#FDFCF9" stroke="#26231F" stroke-width="1.5">
+    <circle cx="223" cy="40.3" r="11"/>
+    <circle cx="169" cy="40.3" r="11"/>
+    <circle cx="247.7" cy="119" r="11"/>
+    <circle cx="247.7" cy="65" r="11"/>
+    <circle cx="169" cy="143.7" r="11"/>
+    <circle cx="223" cy="143.7" r="11"/>
+    <circle cx="144.3" cy="65" r="11"/>
+    <circle cx="144.3" cy="119" r="11"/>
+    <circle cx="376" cy="168" r="11"/>
+    <circle cx="343.2" cy="125.2" r="11"/>
+    <circle cx="412" cy="204" r="11"/>
+    <circle cx="454.8" cy="236.8" r="11"/>
+    <circle cx="376" cy="240" r="11"/>
+    <circle cx="408.8" cy="282.8" r="11"/>
+    <circle cx="340" cy="204" r="11"/>
+    <circle cx="297.2" cy="171.2" r="11"/>
+  </g>
+  <g fill="#26231F" text-anchor="middle">
+    <text x="196" y="67.5">O</text>
+    <text x="227" y="98.5">O</text>
+    <text x="196" y="129.5">O</text>
+    <text x="165" y="98.5">O</text>
+    <text x="376" y="140.5">O</text>
+    <text x="446" y="210.5">O</text>
+    <text x="376" y="280.5">O</text>
+    <text x="306" y="210.5">O</text>
+    <text x="223" y="46.8">H</text>
+    <text x="169" y="46.8">H</text>
+    <text x="247.7" y="125.5">H</text>
+    <text x="247.7" y="71.5">H</text>
+    <text x="169" y="150.2">H</text>
+    <text x="223" y="150.2">H</text>
+    <text x="144.3" y="71.5">H</text>
+    <text x="144.3" y="125.5">H</text>
+    <text x="376" y="174.5">H</text>
+    <text x="343.2" y="131.7">H</text>
+    <text x="412" y="210.5">H</text>
+    <text x="454.8" y="243.3">H</text>
+    <text x="376" y="246.5">H</text>
+    <text x="408.8" y="289.3">H</text>
+    <text x="340" y="210.5">H</text>
+    <text x="297.2" y="177.7">H</text>
+  </g>
+
+  <!-- Labels. -->
+  <path d="M207.3 80.7L245.5 42.5" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <g fill="#26231F">
+    <text x="249.5" y="45.5">K<tspan dy="-7" font-size="14">+</tspan></text>
+    <text x="415" y="171" text-anchor="middle">NO<tspan dy="4" font-size="14">3</tspan><tspan dy="-11" font-size="14">&#8722;</tspan></text>
+    <text x="280" y="210.5" text-anchor="end">water</text>
+    <text x="62" y="248" text-anchor="middle">KNO<tspan dy="4" font-size="14">3</tspan><tspan dy="-4"> crystal</tspan></text>
+  </g>
+</svg>
