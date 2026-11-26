@@ -1,0 +1,987 @@
+{
+  "unit": 1,
+  "written": "2026-11-26",
+  "note": "Feedback for the Checks of Unit 1. The design is docs/superpowers/specs/2026-11-26-chemstudy-us-english-and-unit-1-check-feedback-design.md. Options are listed in the order they are to have on the page; the option with no message is the answer.",
+  "checks": [
+    {
+      "lesson": "1.1",
+      "file": "src/content/lessons/unit-1/1-1-moles-and-molar-mass.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "0.0200",
+      "unit": "mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.0400",
+          "from": "molar mass of I atoms, 126.90 g/mol",
+          "message": "That is what the molar mass of iodine atoms gives. The particles here are I₂ molecules."
+        },
+        {
+          "value": "1290",
+          "from": "grams multiplied by 253.80 g/mol",
+          "message": "Did you multiply by the molar mass? Going from grams to moles, the grams have to cancel."
+        },
+        {
+          "value": "645",
+          "from": "grams multiplied by 126.90 g/mol",
+          "message": "Two things to check: the particles are I₂ molecules, and the grams have to cancel."
+        }
+      ]
+    },
+    {
+      "lesson": "1.1",
+      "file": "src/content/lessons/unit-1/1-1-moles-and-molar-mass.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "41.4",
+      "unit": "g",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "3.77",
+          "from": "the two molar masses swapped",
+          "message": "The two molar masses look swapped. A sodium atom is heavier than a lithium atom, so the same number of atoms has more mass."
+        },
+        {
+          "value": "12.5",
+          "from": "the given mass typed back",
+          "message": "The same number of atoms is not the same mass. Go through moles."
+        },
+        {
+          "value": "1.80",
+          "from": "stopped at moles of lithium",
+          "message": "That is the moles of lithium. The question asks for grams of sodium."
+        }
+      ]
+    },
+    {
+      "lesson": "1.1",
+      "file": "src/content/lessons/unit-1/1-1-moles-and-molar-mass.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "1.81e23",
+      "unit": "atoms",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "1.31e25",
+          "from": "grams taken straight to atoms",
+          "message": "That takes grams straight to atoms. Change grams to moles first."
+        },
+        {
+          "value": "0.300",
+          "from": "stopped at moles",
+          "message": "That is the moles of germanium. One more step takes moles to atoms."
+        },
+        {
+          "value": "9.53e26",
+          "from": "multiplied by the molar mass",
+          "message": "Check the molar mass step. The grams have to cancel, so the molar mass goes underneath."
+        }
+      ]
+    },
+    {
+      "lesson": "1.1",
+      "file": "src/content/lessons/unit-1/1-1-moles-and-molar-mass.mdx",
+      "check": 4,
+      "kind": "choice",
+      "moved": false,
+      "answer": 3,
+      "options": [
+        {
+          "text": "Setup A",
+          "message": "Follow the units. This setup never changes grams to moles, so the grams do not cancel."
+        },
+        {
+          "text": "Setup B",
+          "message": "Follow the units. Here the molar mass is upside down, so the grams do not cancel."
+        },
+        {
+          "text": "Setup C",
+          "message": null
+        },
+        {
+          "text": "Setup D",
+          "message": "Follow the units of the last factor. Moles should cancel there and leave molecules."
+        }
+      ]
+    },
+    {
+      "lesson": "1.1",
+      "file": "src/content/lessons/unit-1/1-1-moles-and-molar-mass.mdx",
+      "check": 5,
+      "kind": "numeric",
+      "answer": "9.26e21",
+      "unit": "atoms",
+      "tolerance": 0.5,
+      "slips": [
+        {
+          "value": "4.63e21",
+          "from": "one O in each formula unit",
+          "message": "That counts one oxygen atom in each formula unit. Look at the subscript outside the parentheses."
+        },
+        {
+          "value": "9.35e21",
+          "from": "H counted once in the molar mass",
+          "message": "Close, but check the molar mass. The 2 outside the parentheses doubles the H as well as the O."
+        },
+        {
+          "value": "7.69e-3",
+          "from": "stopped at moles",
+          "message": "That is the moles of copper(II) hydroxide. Go on to formula units, then to oxygen atoms."
+        }
+      ],
+      "explanation_edit": {
+        "old": "One slip lands within about 1 percent of the answer, close enough that this page marks it correct. Counting the H only once gives a molar mass of 96.56 g/mol and $9.35 \\times 10^{21}$ O atoms. That molar mass is still wrong: the 2 doubles the H as well as the O.",
+        "new": "One slip lands within about 1 percent of the answer. Counting the H only once gives a molar mass of 96.56 g/mol and $9.35 \\times 10^{21}$ O atoms. That molar mass is wrong: the 2 doubles the H as well as the O."
+      }
+    },
+    {
+      "lesson": "1.2",
+      "file": "src/content/lessons/unit-1/1-2-mass-spectra-of-elements.mdx",
+      "check": 1,
+      "kind": "choice",
+      "moved": false,
+      "answer": 4,
+      "options": [
+        {
+          "text": "Every rhenium atom has the same mass, 186.21 amu.",
+          "message": "Look for a peak at 186.21 amu. There is none: that number is an average over the atoms."
+        },
+        {
+          "text": "About 60 percent of rhenium atoms are the lighter isotope.",
+          "message": "59.7 is a height on a scale where the tallest peak is 100. Turn the two heights into shares of the total."
+        },
+        {
+          "text": "The sample must be a mixture of two elements.",
+          "message": "Two peaks this close in mass are isotopes: atoms of one element with different numbers of neutrons."
+        },
+        {
+          "text": "About 63 percent of rhenium atoms are the heavier isotope.",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "1.2",
+      "file": "src/content/lessons/unit-1/1-2-mass-spectra-of-elements.mdx",
+      "check": 2,
+      "kind": "choice",
+      "moved": false,
+      "answer": 3,
+      "options": [
+        {
+          "text": "113.0 amu",
+          "message": "That would need most of the atoms to be the lighter isotope. Which peak holds nearly all of them?"
+        },
+        {
+          "text": "113.9 amu",
+          "message": "That is halfway between the two masses, which fits isotopes that are equally common. These are not."
+        },
+        {
+          "text": "114.8 amu",
+          "message": null
+        },
+        {
+          "text": "115.9 amu",
+          "message": "An average cannot lie outside the values being averaged. It has to fall between the two masses."
+        }
+      ]
+    },
+    {
+      "lesson": "1.2",
+      "file": "src/content/lessons/unit-1/1-2-mass-spectra-of-elements.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "65.38",
+      "unit": "amu",
+      "tolerance": 0.5,
+      "slips": [
+        {
+          "value": "64.95",
+          "from": "smallest peak left out, not rescaled",
+          "message": "Did you leave out a small peak? The fractions you use should add up to 1."
+        },
+        {
+          "value": "66.18",
+          "from": "four largest peaks averaged as equals",
+          "message": "Did you treat the peaks as equally common? Each mass counts in proportion to its percent of the atoms."
+        },
+        {
+          "value": "66.93",
+          "from": "five masses averaged as equals",
+          "message": "That treats the peaks as equally common. Weight each mass by its percent of the atoms."
+        },
+        {
+          "value": "63.93",
+          "from": "mass of the tallest peak",
+          "message": "That is the mass of the tallest peak. The other four peaks pull the average up."
+        },
+        {
+          "value": "6538",
+          "from": "percents not divided by 100",
+          "message": "Divide each percent by 100 before you multiply, or divide the total by 100 at the end."
+        },
+        {
+          "value": "49.72",
+          "from": "two tallest peaks, not rescaled",
+          "message": "An average has to lie between the lightest and heaviest masses. Did you use all five peaks?"
+        }
+      ]
+    },
+    {
+      "lesson": "1.2",
+      "file": "src/content/lessons/unit-1/1-2-mass-spectra-of-elements.mdx",
+      "check": 4,
+      "kind": "choice",
+      "moved": false,
+      "answer": 2,
+      "options": [
+        {
+          "text": "Iron (Fe)",
+          "message": "Iron's 55.85 is below the lightest peak. An average cannot lie outside the masses being averaged."
+        },
+        {
+          "text": "Nickel (Ni)",
+          "message": null
+        },
+        {
+          "text": "Copper (Cu)",
+          "message": "Copper's 63.55 would need nearly all the atoms to be near 64 amu. Where are most of the atoms here?"
+        },
+        {
+          "text": "Zinc (Zn)",
+          "message": "Zinc's 65.38 is above the heaviest peak, so it cannot be the average of these five."
+        }
+      ]
+    },
+    {
+      "lesson": "1.3",
+      "file": "src/content/lessons/unit-1/1-3-elemental-composition-of-pure-substances.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "18.78",
+      "unit": "%",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "9.39",
+          "from": "one Li counted in the share",
+          "message": "The formula has two lithium atoms. Count both."
+        },
+        {
+          "value": "10.37",
+          "from": "one Li in the share and in the molar mass",
+          "message": "The formula is Li₂CO₃, with two lithium atoms. Use both in the molar mass and in lithium's share."
+        },
+        {
+          "value": "0.1878",
+          "from": "left as a fraction",
+          "message": "That is the fraction. Multiply by 100 for a percent."
+        },
+        {
+          "value": "16.25",
+          "from": "percent of carbon",
+          "message": "That is the percent of carbon. The question asks for lithium."
+        },
+        {
+          "value": "64.96",
+          "from": "percent of oxygen",
+          "message": "That is the percent of oxygen. The question asks for lithium."
+        },
+        {
+          "value": "33.13",
+          "from": "subscript 3 left off the oxygen",
+          "message": "Check the molar mass. The formula has three oxygen atoms."
+        }
+      ]
+    },
+    {
+      "lesson": "1.3",
+      "file": "src/content/lessons/unit-1/1-3-elemental-composition-of-pure-substances.mdx",
+      "check": 2,
+      "kind": "choice",
+      "moved": true,
+      "answer": 1,
+      "options": [
+        {
+          "text": "Si₃N₄",
+          "message": null
+        },
+        {
+          "text": "SiN",
+          "message": "Check the mole ratio before you round. A ratio near 1.33 is not 1: multiply both numbers until both are whole."
+        },
+        {
+          "text": "Si₂N₃",
+          "message": "Doubling gives 2 to about 2.67, which is still not whole. Try another multiplier."
+        },
+        {
+          "text": "Si₃N₂",
+          "message": "That reads the masses, 3.00 g to 2.00 g, as a ratio of atoms. Compare moles, not grams."
+        }
+      ]
+    },
+    {
+      "lesson": "1.3",
+      "file": "src/content/lessons/unit-1/1-3-elemental-composition-of-pure-substances.mdx",
+      "check": 3,
+      "kind": "choice",
+      "moved": false,
+      "answer": 3,
+      "options": [
+        {
+          "text": "C₆H₁₆O₂",
+          "message": "That formula's molar mass would be twice the empirical formula's. Compare it with the measured 60.1 g/mol."
+        },
+        {
+          "text": "C₉H₂₄O₃",
+          "message": "That formula's molar mass would be three times the empirical formula's. Compare it with the measured 60.1 g/mol."
+        },
+        {
+          "text": "C₃H₈O",
+          "message": null
+        },
+        {
+          "text": "It cannot be found from these data",
+          "message": "An empirical formula and a molar mass together are enough. Divide the molar mass by the mass of one empirical formula."
+        }
+      ]
+    },
+    {
+      "lesson": "1.3",
+      "file": "src/content/lessons/unit-1/1-3-elemental-composition-of-pure-substances.mdx",
+      "check": 4,
+      "kind": "choice",
+      "moved": false,
+      "answer": 1,
+      "options": [
+        {
+          "text": "What is the empirical formula of each liquid?",
+          "message": null
+        },
+        {
+          "text": "Are the two liquids the same compound?",
+          "message": "Different compounds can have the same percent composition. Matching percents cannot show that two liquids are the same."
+        },
+        {
+          "text": "What is the molar mass of each liquid?",
+          "message": "Percent composition gives the ratio of atoms. A molar mass needs a separate measurement."
+        },
+        {
+          "text": "How many carbon atoms are in one molecule of each liquid?",
+          "message": "Percent composition gives the ratio of atoms, not how many of them are in one molecule."
+        }
+      ]
+    },
+    {
+      "lesson": "1.4",
+      "file": "src/content/lessons/unit-1/1-4-composition-of-mixtures.mdx",
+      "check": 1,
+      "kind": "choice",
+      "moved": false,
+      "answer": 3,
+      "options": [
+        {
+          "text": "Dry air: nitrogen molecules, oxygen molecules and argon atoms",
+          "message": "Sort the sample into piles of like units. Dry air needs at least three piles."
+        },
+        {
+          "text": "Bronze: copper atoms with tin atoms scattered among them, in amounts that differ from one casting to the next",
+          "message": "The amounts of copper and tin differ from one casting to the next. A pure substance has one fixed composition."
+        },
+        {
+          "text": "A quartz crystal: silicon and oxygen atoms bonded in a 1 to 2 ratio throughout",
+          "message": null
+        },
+        {
+          "text": "Seawater: water molecules with sodium ions, chloride ions and other ions among them",
+          "message": "The ions are not joined to the water in a fixed ratio, and one sea is saltier than another."
+        }
+      ]
+    },
+    {
+      "lesson": "1.4",
+      "file": "src/content/lessons/unit-1/1-4-composition-of-mixtures.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "90.1",
+      "unit": "%",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "54.0",
+          "from": "percent of titanium in the sample",
+          "message": "That is the percent of titanium in the ore. The question asks for the percent that is TiO₂."
+        },
+        {
+          "value": "135",
+          "from": "oxygen's share of TiO₂ used",
+          "message": "No sample can be more than 100 percent of anything. Use titanium's share of TiO₂, not oxygen's."
+        },
+        {
+          "value": "0.901",
+          "from": "left as a fraction",
+          "message": "That is the fraction. Multiply by 100 for a percent."
+        },
+        {
+          "value": "72.0",
+          "from": "subscript 2 left off the oxygen",
+          "message": "Check the molar mass of TiO₂. It has two oxygen atoms."
+        },
+        {
+          "value": "9.9",
+          "from": "percent that is not TiO₂",
+          "message": "That is the percent of the ore that is not TiO₂."
+        },
+        {
+          "value": "94.1",
+          "from": "shortfall in percent titanium taken off 100",
+          "message": "A gap in percent titanium is not the percent of impurity. Find the mass of TiO₂ from the mass of titanium."
+        }
+      ]
+    },
+    {
+      "lesson": "1.4",
+      "file": "src/content/lessons/unit-1/1-4-composition-of-mixtures.mdx",
+      "check": 3,
+      "kind": "choice",
+      "moved": true,
+      "answer": 1,
+      "options": [
+        {
+          "text": "The mass of the rock sample and the mass of copper in it",
+          "message": null
+        },
+        {
+          "text": "The mass of the rock sample and the mass of iron in it",
+          "message": "Pyrite contains iron too. Follow an element that the chalcopyrite alone contains."
+        },
+        {
+          "text": "The mass of copper in the sample, and nothing else",
+          "message": "A percent of the rock needs the mass of the rock sample as well."
+        },
+        {
+          "text": "The mass of the rock sample and the mass of sulfur in it",
+          "message": "Pyrite contains sulfur too. Follow an element that the chalcopyrite alone contains."
+        }
+      ]
+    },
+    {
+      "lesson": "1.4",
+      "file": "src/content/lessons/unit-1/1-4-composition-of-mixtures.mdx",
+      "check": 4,
+      "kind": "choice",
+      "moved": false,
+      "answer": 4,
+      "options": [
+        {
+          "text": "The bag is still pure CaO",
+          "message": "Pure CaO is 71.47 percent calcium. The sample's 67.1 percent does not match it."
+        },
+        {
+          "text": "All of the CaO has turned into Ca(OH)₂",
+          "message": "Pure Ca(OH)₂ is 54.09 percent calcium. The sample's 67.1 percent does not match it."
+        },
+        {
+          "text": "The bag is a mixture, and more than half of it is Ca(OH)₂",
+          "message": "Is 67.1 nearer 71.47 or 54.09? The mixture holds more of the compound whose value it is nearer."
+        },
+        {
+          "text": "The bag is a mixture, and more than half of it is CaO",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "1.5",
+      "file": "src/content/lessons/unit-1/1-5-atomic-structure-and-electron-configuration.mdx",
+      "check": 1,
+      "kind": "choice",
+      "moved": false,
+      "answer": 2,
+      "options": [
+        {
+          "text": "They are equal, because the two effects cancel",
+          "message": "The distance is squared in Coulomb's law. Twice the distance does more than undo twice the charge."
+        },
+        {
+          "text": "The force on the first electron is twice as strong",
+          "message": null
+        },
+        {
+          "text": "The force on the second electron is twice as strong",
+          "message": "That looks at charge alone. The second electron is also twice as far from its nucleus."
+        },
+        {
+          "text": "The force on the first electron is four times as strong",
+          "message": "That looks at distance alone. The second nucleus also has twice the charge."
+        }
+      ]
+    },
+    {
+      "lesson": "1.5",
+      "file": "src/content/lessons/unit-1/1-5-atomic-structure-and-electron-configuration.mdx",
+      "check": 2,
+      "kind": "choice",
+      "moved": false,
+      "answer": 3,
+      "options": [
+        {
+          "text": "[Kr] 5s² 5p²",
+          "message": "Count the electrons: this has 40, and tin has 50. Row 5 has a d block between its s block and its p block."
+        },
+        {
+          "text": "[Kr] 5s² 5d¹⁰ 5p²",
+          "message": "The d block runs one shell behind its row. Which d subshell fills in row 5?"
+        },
+        {
+          "text": "[Kr] 5s² 4d¹⁰ 5p²",
+          "message": null
+        },
+        {
+          "text": "[Xe] 5s² 4d¹⁰ 5p²",
+          "message": "Count the electrons: xenon alone has 54, and tin has 50. Start from the noble gas that ends the row above tin's."
+        }
+      ]
+    },
+    {
+      "lesson": "1.5",
+      "file": "src/content/lessons/unit-1/1-5-atomic-structure-and-electron-configuration.mdx",
+      "check": 3,
+      "kind": "choice",
+      "moved": false,
+      "answer": 4,
+      "options": [
+        {
+          "text": "[Ar] 4s² 3d¹⁰ 4p¹",
+          "message": "That is the neutral atom, with 31 electrons. Ga³⁺ has three fewer."
+        },
+        {
+          "text": "[Ar] 4s² 3d¹⁰",
+          "message": "Count the electrons: this has 30, which is Ga⁺. Two more have to leave."
+        },
+        {
+          "text": "[Ar] 4s² 3d⁸",
+          "message": "The count is right, 28, but electrons leave the highest shell first. Which shell is 3d in?"
+        },
+        {
+          "text": "[Ar] 3d¹⁰",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "1.5",
+      "file": "src/content/lessons/unit-1/1-5-atomic-structure-and-electron-configuration.mdx",
+      "check": 4,
+      "kind": "choice",
+      "moved": false,
+      "answer": 2,
+      "options": [
+        {
+          "text": "The ground state of a potassium atom",
+          "message": "Compare it with the filling order. Is there a subshell with room while a later one holds electrons?"
+        },
+        {
+          "text": "An excited state of a potassium atom",
+          "message": null
+        },
+        {
+          "text": "The ground state of a calcium atom",
+          "message": "Count the electrons. A neutral atom has as many protons as electrons."
+        },
+        {
+          "text": "An impossible configuration for any atom",
+          "message": "Check each subshell against its limit: s holds 2 and p holds 6. Is any one over?"
+        }
+      ]
+    },
+    {
+      "lesson": "1.5",
+      "file": "src/content/lessons/unit-1/1-5-atomic-structure-and-electron-configuration.mdx",
+      "check": 5,
+      "kind": "choice",
+      "moved": false,
+      "answer": 4,
+      "options": [
+        {
+          "text": "A 3p electron in an atom of aluminum",
+          "message": "Compare the shells first. A 3p electron is farther out and has ten electrons inside it."
+        },
+        {
+          "text": "A 2p electron in an atom of aluminum",
+          "message": "Right shell. Now compare the two nuclei: which has more protons pulling on its 2p electrons?"
+        },
+        {
+          "text": "A 3p electron in an atom of chlorine",
+          "message": "Chlorine has the larger charge, but compare the shells too. A 2p electron is closer, with two electrons inside it and no more."
+        },
+        {
+          "text": "A 2p electron in an atom of chlorine",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "1.6",
+      "file": "src/content/lessons/unit-1/1-6-photoelectron-spectroscopy.mdx",
+      "check": 1,
+      "kind": "choice",
+      "moved": false,
+      "answer": 2,
+      "options": [
+        {
+          "text": "The electrons at 1.31 MJ/mol are held twice as strongly, because their peak is twice as tall.",
+          "message": "Height counts electrons. It says nothing about how strongly they are held."
+        },
+        {
+          "text": "The electrons at 1.31 MJ/mol are the easier ones to remove, and there are twice as many of them.",
+          "message": null
+        },
+        {
+          "text": "The electrons at 3.12 MJ/mol are the easier ones to remove, because their peak is the shorter one.",
+          "message": "Position gives the energy, not height. Which peak is at the lower binding energy?"
+        },
+        {
+          "text": "The sample is a mixture of two elements, one for each peak.",
+          "message": "One element gives a peak for each of its occupied subshells, so two peaks do not mean two elements."
+        }
+      ]
+    },
+    {
+      "lesson": "1.6",
+      "file": "src/content/lessons/unit-1/1-6-photoelectron-spectroscopy.mdx",
+      "check": 2,
+      "kind": "choice",
+      "moved": false,
+      "answer": 4,
+      "options": [
+        {
+          "text": "Lithium",
+          "message": "Three peaks are three subshells, not three electrons. Use the heights to count the electrons in each."
+        },
+        {
+          "text": "Phosphorus",
+          "message": "Phosphorus has five occupied subshells, so its spectrum has five peaks. This one has three."
+        },
+        {
+          "text": "Sodium",
+          "message": "Each peak is a subshell, not a shell. Use the heights to count the electrons in each."
+        },
+        {
+          "text": "Nitrogen",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "1.6",
+      "file": "src/content/lessons/unit-1/1-6-photoelectron-spectroscopy.mdx",
+      "check": 3,
+      "kind": "choice",
+      "moved": false,
+      "answer": 1,
+      "options": [
+        {
+          "text": "It has six peaks, and the new one, for 1 electron, has the lowest binding energy of all.",
+          "message": null
+        },
+        {
+          "text": "It has six peaks, and the new one, for 1 electron, has the highest binding energy of all.",
+          "message": "Where does potassium's nineteenth electron go? Think about its distance from the nucleus and its shielding."
+        },
+        {
+          "text": "It has five peaks, and the last one now stands for 7 electrons.",
+          "message": "A p subshell holds 6 electrons at most. The nineteenth electron has to start a new subshell."
+        },
+        {
+          "text": "It has five peaks with the same heights as argon's, each at a higher binding energy.",
+          "message": "The five peaks do shift, but this leaves out potassium's nineteenth electron."
+        }
+      ]
+    },
+    {
+      "lesson": "1.6",
+      "file": "src/content/lessons/unit-1/1-6-photoelectron-spectroscopy.mdx",
+      "check": 4,
+      "kind": "choice",
+      "moved": false,
+      "answer": 3,
+      "options": [
+        {
+          "text": "Twice as many 4s electrons, each held twice as tightly, because the peak is twice as tall.",
+          "message": "Height counts electrons. To see how tightly they are held, compare the two positions, 0.59 and 0.42 MJ/mol."
+        },
+        {
+          "text": "Twice as many 4s electrons, each easier to remove, because two electrons in a subshell repel.",
+          "message": "Compare the positions: 0.59 MJ/mol is more than 0.42 MJ/mol. Does that mean easier or harder to remove?"
+        },
+        {
+          "text": "Twice as many 4s electrons, each held more tightly: one more proton and the same shielding.",
+          "message": null
+        },
+        {
+          "text": "More tightly held 4s electrons, shown by the height, and more of them, shown by the position.",
+          "message": "This has the two readings swapped. Which one is a count, and which one is an energy?"
+        }
+      ]
+    },
+    {
+      "lesson": "1.6",
+      "file": "src/content/lessons/unit-1/1-6-photoelectron-spectroscopy.mdx",
+      "check": 5,
+      "kind": "choice",
+      "moved": false,
+      "answer": 2,
+      "options": [
+        {
+          "text": "The peak at the highest binding energy is gone, because the electrons nearest the nucleus are removed first.",
+          "message": "An atom loses electrons from its highest shell first. Which peak do those electrons make?"
+        },
+        {
+          "text": "The peak at the lowest binding energy is gone, and the other five keep their heights.",
+          "message": null
+        },
+        {
+          "text": "All six peaks are still there, and the two tallest now stand for 5 electrons each.",
+          "message": "The two electrons come from one subshell, the one in the highest shell. Which is that?"
+        },
+        {
+          "text": "All six peaks are still there with the same heights, each at a lower binding energy.",
+          "message": "Two electrons are gone, so the heights cannot all stay the same. Which subshell did they leave?"
+        }
+      ]
+    },
+    {
+      "lesson": "1.7",
+      "file": "src/content/lessons/unit-1/1-7-periodic-trends.mdx",
+      "check": 1,
+      "kind": "choice",
+      "moved": false,
+      "answer": 2,
+      "options": [
+        {
+          "text": "Tin, because its nucleus has the most protons of the four",
+          "message": "Most of tin's protons are offset by the electrons in the shells inside. Estimate the charge its valence electrons feel."
+        },
+        {
+          "text": "Germanium, because its valence shell is nearer than tin's and it has one more proton than gallium for that shell",
+          "message": null
+        },
+        {
+          "text": "Gallium, because it has fewer valence electrons than germanium, so each one gets a larger share of the nucleus's pull",
+          "message": "A nucleus's pull is not shared out among the electrons. Compare the charge each valence electron feels."
+        },
+        {
+          "text": "Indium, because its outer electrons are the farthest out and the best shielded",
+          "message": "An electron that is far out and well shielded is easier to remove, not harder."
+        }
+      ]
+    },
+    {
+      "lesson": "1.7",
+      "file": "src/content/lessons/unit-1/1-7-periodic-trends.mdx",
+      "check": 2,
+      "kind": "choice",
+      "moved": false,
+      "answer": 4,
+      "options": [
+        {
+          "text": "Tellurium's fourth 5p electron shares an orbital, and the repulsion outweighs the pull of the extra proton.",
+          "message": "If the repulsion outweighed the extra proton, the value would fall. Does it fall or rise from antimony to tellurium?"
+        },
+        {
+          "text": "Tellurium's 5p electrons are shielded by the ten 4d electrons more than antimony's are, which cancels most of the extra proton's pull.",
+          "message": "Antimony and tellurium have the same full 4d subshell, so the shielding is the same in both."
+        },
+        {
+          "text": "The fifth shell is so far from the nucleus that one added proton makes little difference to how tightly its electrons are held.",
+          "message": "The steps on either side, in the same shell, are 122 and 139 kJ/mol. Distance cannot single out one step."
+        },
+        {
+          "text": "Tellurium's fourth 5p electron shares an orbital, and the repulsion offsets part of the extra proton's pull, not all of it.",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "1.7",
+      "file": "src/content/lessons/unit-1/1-7-periodic-trends.mdx",
+      "check": 3,
+      "kind": "choice",
+      "moved": false,
+      "answer": 3,
+      "options": [
+        {
+          "text": "The aluminum atom has more electrons than the oxygen atom, so it has more to lose and shrinks further when it forms an ion.",
+          "message": "A count of electrons names no force. Compare the two ions: how many electrons does each have, and how many protons?"
+        },
+        {
+          "text": "A cation is always smaller than an anion.",
+          "message": "Not always: the rubidium ion in the figure is larger than the fluoride ion. Compare the electrons and protons of these two ions."
+        },
+        {
+          "text": "Al³⁺ has lost its whole outer shell, and the two ions have the same 10 electrons, held by 13 protons against 8.",
+          "message": null
+        },
+        {
+          "text": "Aluminum's nucleus is farther from its electrons.",
+          "message": "This has it backward. A stronger pull holds electrons closer in. Compare the protons in the two ions."
+        }
+      ]
+    },
+    {
+      "lesson": "1.7",
+      "file": "src/content/lessons/unit-1/1-7-periodic-trends.mdx",
+      "check": 4,
+      "kind": "choice",
+      "moved": false,
+      "answer": 1,
+      "options": [
+        {
+          "text": "Nitrogen's valence electrons are in the second shell, closer to the nucleus, and the shorter distance outweighs sulfur's larger charge.",
+          "message": null
+        },
+        {
+          "text": "Electronegativity falls down the table, so an element in period 3 attracts shared electrons less strongly than any element in period 2.",
+          "message": "The trend down a group compares the elements of one group. Boron is in period 2, and its 2.0 is below sulfur's 2.6."
+        },
+        {
+          "text": "A sulfur atom has 16 electrons to nitrogen's 7, and the extra electrons repel shared electrons more strongly than the extra protons attract them.",
+          "message": "The rough charge already counts the core electrons: about +6 for sulfur. Weigh that against the distance."
+        },
+        {
+          "text": "Nitrogen is three electrons short of a full octet and sulfur only two, so nitrogen pulls harder on the electrons it needs.",
+          "message": "Being short of an octet names no force. Use Coulomb's law: compare the charge and the distance."
+        }
+      ]
+    },
+    {
+      "lesson": "1.7",
+      "file": "src/content/lessons/unit-1/1-7-periodic-trends.mdx",
+      "check": 5,
+      "kind": "choice",
+      "moved": false,
+      "answer": 3,
+      "options": [
+        {
+          "text": "About 150 pm",
+          "message": "Radius generally grows down a group, so potassium should be larger than sodium, 166 pm."
+        },
+        {
+          "text": "About 170 pm",
+          "message": "That fits the column, but check the row. Potassium should be larger than calcium, 176 pm, to its right."
+        },
+        {
+          "text": "About 200 pm",
+          "message": null
+        },
+        {
+          "text": "About 240 pm",
+          "message": "Radius generally grows down a group, so potassium should be smaller than rubidium, 220 pm."
+        }
+      ]
+    },
+    {
+      "lesson": "1.8",
+      "file": "src/content/lessons/unit-1/1-8-valence-electrons-and-ionic-compounds.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "5",
+      "unit": "electrons",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "6",
+          "from": "number of the ionization energy where the jump lands",
+          "message": "That is the number of the ionization energy where the jump lands. Count the electrons removed before it."
+        },
+        {
+          "value": "3",
+          "from": "the somewhat larger third increase taken as the jump",
+          "message": "The third increase is somewhat larger than its neighbors. Look for the rise that is many times the ones before it."
+        }
+      ]
+    },
+    {
+      "lesson": "1.8",
+      "file": "src/content/lessons/unit-1/1-8-valence-electrons-and-ionic-compounds.mdx",
+      "check": 2,
+      "kind": "choice",
+      "moved": false,
+      "answer": 4,
+      "options": [
+        {
+          "text": "Barium",
+          "message": "Subtract the first from the second for each element. Barium's rise is the smallest of the four."
+        },
+        {
+          "text": "Beryllium",
+          "message": "Beryllium has the largest values of the three group 2 elements, but compare the rises: second minus first."
+        },
+        {
+          "text": "Strontium",
+          "message": "Subtract the first from the second for each element. Then ask where each second electron comes from."
+        },
+        {
+          "text": "Potassium",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "1.8",
+      "file": "src/content/lessons/unit-1/1-8-valence-electrons-and-ionic-compounds.mdx",
+      "check": 3,
+      "kind": "choice",
+      "moved": false,
+      "answer": 2,
+      "options": [
+        {
+          "text": "InO",
+          "message": "Add up the charges. One In³⁺ and one O²⁻ leave 1+ over."
+        },
+        {
+          "text": "In₂O₃",
+          "message": null
+        },
+        {
+          "text": "In₃O₂",
+          "message": "The numbers are right, but they are on the wrong ions. Add up the charges to check."
+        },
+        {
+          "text": "InO₃",
+          "message": "Add up the charges. One In³⁺ and three O²⁻ leave 3− over."
+        }
+      ]
+    },
+    {
+      "lesson": "1.8",
+      "file": "src/content/lessons/unit-1/1-8-valence-electrons-and-ionic-compounds.mdx",
+      "check": 4,
+      "kind": "choice",
+      "moved": false,
+      "answer": 1,
+      "options": [
+        {
+          "text": "Barium and phosphorus",
+          "message": null
+        },
+        {
+          "text": "Sodium and phosphorus",
+          "message": "Sodium is not in strontium's group. What charge does a sodium ion have?"
+        },
+        {
+          "text": "Magnesium and sulfur",
+          "message": "Magnesium matches strontium, but sulfur is not in phosphorus's group. What charge does a sulfide ion have?"
+        },
+        {
+          "text": "Aluminum and fluorine",
+          "message": "Neither element is in the group of strontium or of phosphorus. Find each ion's charge from its group."
+        }
+      ]
+    }
+  ]
+}
