@@ -22,6 +22,22 @@ describe('britishSpellings', () => {
     ]);
   });
 
+  it('finds a phrase that a line break splits', () => {
+    expect(words('fifty per\ncent of the full  stop')).toEqual(['per cent', 'full stop']);
+  });
+
+  it('finds plurals and the -er forms of the words it lists', () => {
+    expect(words('offences, licences, judgements, moulds, travellers, an organiser, an analyser')).toEqual([
+      'offences',
+      'licences',
+      'judgements',
+      'moulds',
+      'travellers',
+      'organiser',
+      'analyser',
+    ]);
+  });
+
   it('leaves American spellings and look-alikes alone', () => {
     expect(words('analyses made an hour apart; catalysis; synthesis; emphasis')).toEqual([]);
     expect(words('rise, precise, exercise, otherwise, galvanized, burnt sienna')).toEqual([]);
@@ -40,5 +56,10 @@ describe('the site', () => {
     // An empty or misplaced folder would otherwise pass.
     expect(files).toBeGreaterThan(100);
     expect(problems).toEqual([]);
+  });
+
+  it('refuses a named file that is not there, rather than check nothing', () => {
+    const root = fileURLToPath(new URL('../../', import.meta.url));
+    expect(() => checkSpelling(root, ['src/no-such-file.mdx'])).toThrow(/no-such-file\.mdx/);
   });
 });
