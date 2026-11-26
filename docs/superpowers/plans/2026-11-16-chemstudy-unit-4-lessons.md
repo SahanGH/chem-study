@@ -615,6 +615,40 @@ No code. Four writers in parallel, then the steps of "How a group is carried out
 
 Branch: `topic/unit-4-amounts`, from `topic/unit-4-change-and-equations`. Tasks 5 to 8. The pull request title is "feat(lessons): Unit 4 lessons 4.5 and 4.6, the limiting reactant explorer and the titration explorer".
 
+> **As carried out (2026-11-17).** The repository is newer than Tasks 5 to 8 below. Both explorers were built test-first and reviewed twice (TypeScript and general); both lessons were fact-checked twice by fresh agents that solved every Check and worked example before reading its answer, balanced every equation, recomputed every number from the exam table's masses, found every limiting reactant two ways and looked up each industrial and laboratory scene, and were checked once for originality. **No fact-check found a wrong answer, equation, number or limiting reactant.** What differs from the tasks as printed, and why:
+>
+> **The two explorers (Tasks 5 and 6)**
+>
+> - **The controls sit directly under the drawings.** As first built to the contracts, the sliders came after the key, the table and the readout: on a 320 px phone they were a screen and a half below the boxes or the flask they change, and the readout above them changed length and moved them. Now: boxes, sliders, readout, table, key (limiting reactant); flask and graph, choice of acid and slider, readout (titration). Browser tests hold both drawings and a slider in one 320 × 568 screen.
+> - **The atoms are drawn as the lesson's own figure draws them** (limiting reactant): oxygen pale with an accent outline, in boxes with no tint; fluorine a heavy accent ring with a center dot, a look no other atom on the site has. As first built, fluorine was a small hollow circle, which is the figures' hydrogen.
+> - **The flask holds no drawn text and is 6.5rem wide** (titration); its color word is HTML beside it. The liquid is clipped by the glass's own outline.
+> - **The flask and the graph sit side by side only from 42rem.** The contract asked for side by side above 412 px and for no drawn text under 12 px from 412 px up; both cannot hold.
+> - **The graph's two line names have a card-colored backing and stand clear of the moving marker's dots**; a browser test sweeps both acids over all 81 volumes.
+> - **More exports than the contracts list** (the vocabulary the components and tests share, the drawings' accessible descriptions, the slider text); `linePoints` returns exactly three points; the component imports `state` as `titrationState`, because an import named `state` makes Svelte read `$state` as a store.
+> - **Every shown number was compared with exact arithmetic** for every slider position (both acids at 81 volumes; all 36 pairs of molecules), with no difference.
+> - **Shared rules added to `diagram.css`**: `.diagram-panels.is-paired`, `.is-beside`, `.is-flask`, `.diagram-slider-head`, `.diagram-slider-value`, and the `molecule-` and `titration-` classes. The indicator's yellow and blue are real colors, with the word beside them.
+>
+> **Lesson 4.5 (Task 7)**
+>
+> - **The particle figure draws oxygen and water as lesson 4.3 does**, and gives sulfur a look of its own. As briefed, sulfur had the look 4.3 gives oxygen, so hydrogen sulfide looked like 4.3's water.
+> - **The route figure** labels its gas arrows "n = PV/RT" and "V = nRT/P" (the brief had "PV = nRT" on both) and names the volume in its gas and solution boxes.
+> - **Statements narrowed:** "you must pass through moles" and "every stoichiometry calculation" (the lesson's own brine example goes from one gas volume to another); "three ways into and out of moles" (a fourth, counting particles, is in the lesson's table); what a yield above 100 percent means ("usually"); the zinc example says the solid is zinc hydroxide "at the dose used here".
+> - **The limiting-reactant routine, the reasons a yield falls short, the sentence on what is new for a solution and the gas section** followed the teacher's notes, the site's Unit 3 material or a textbook in wording; they are rebuilt, and the gas section now points to topic 3.4 for the law and its conditions. "Bridge" and "road" are gone.
+> - **A sentence beside the diagram** says that it opens with 6 NO and 2 F₂, where fluorine, the reactant with coefficient 1, runs out: in all three of the lesson's own cases the limiting reactant has the coefficient 2.
+> - **Small corrections to numbers as printed:** 68.15 g for 2 mol of H₂S (the brief's 68.16 rounded the molar mass first); "about 59 L" for the brine example's 1 : 1 slip.
+>
+> **Lesson 4.6 (Task 8)**
+>
+> - **The endpoint is pinned as the turn to blue**, not the first tinge of green: a calculation for both acids puts the first green six or seven drops early for tartaric acid and the full blue within a hundredth of a milliliter of the equivalence point.
+> - **The volume that has run out** is said to be the reading at the end less the reading at the start.
+> - **Topics 8.5 and 8.7** (the brief said 8.5 for both the change in acidity and the choice of indicator).
+> - **16.0 mL** in the first Check's explanation (the brief printed 16.00 from three-figure data); "a little of the sample splashes out" (the brief's "a few drops" did not match the 0.40 mL of the explanation).
+> - **Wording that followed the teacher's notes**, rebuilt: why overshooting gives a high result; why the equation is written first; the sentence on how close the endpoint falls; the four steps' labels.
+>
+> **For Group D:** lesson 4.7's opening (a mine's water treatment plant taking cadmium out of water as its sulfide) is the same kind of scene as lesson 4.5's zinc example (a plating shop's rinse water). Change the setting of 4.7's opening when it is written.
+>
+> **Reading times** are 20 and 13 minutes, from each lesson's length; the briefs had 15 and 9. **Measured on phones** at 412, 390, 360 and 320 px with every answer open.
+
 ### Task 5: The limiting reactant explorer
 
 **Files:**

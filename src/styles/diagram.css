@@ -389,6 +389,154 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   }
 }
 
+/* The limiting reactant explorer: two boxes of molecules. The drawings hold
+   no text, so they can sit side by side from a 412 px phone up (25.75rem);
+   below that each box takes the width, up to the 22rem cap above. */
+@media (min-width: 25.75rem) {
+  .diagram-panels.is-paired {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+/* The boxes and the atoms are drawn as the lesson figures draw them (lessons
+   4.3 and 4.5): a box with no fill and a muted outline, oxygen pale with the
+   unit's accent outline, nitrogen dark. Fluorine has a look no other atom of
+   those figures has: a hollow circle with a heavy accent outline and a dot at
+   its center. It is not hydrogen's small ink-outlined circle, not oxygen's
+   thin accent outline, and not sulfur's mid-tone with an ink outline. The
+   three are told apart by size, by shading and by outline, in grayscale too. */
+.molecule-box {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 1.5;
+}
+.molecule-atom {
+  stroke-width: 1.5;
+}
+.molecule-atom.is-n {
+  fill: var(--ink);
+  stroke: var(--ink);
+}
+.molecule-atom.is-o {
+  fill: var(--u-tint);
+  stroke: var(--u-ink);
+}
+.molecule-atom.is-f {
+  fill: var(--card);
+  stroke: var(--u-ink);
+  stroke-width: 3;
+}
+.molecule-atom-dot {
+  fill: var(--u-ink);
+  stroke: none;
+}
+/* The key under the boxes. Its swatches are drawn at the boxes' own scale
+   (one pixel to a drawing unit), and keep their size inside ".diagram svg". */
+.diagram .molecule-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+}
+.diagram .molecule-key ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.diagram .molecule-key li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+}
+.diagram .molecule-key [data-key-atom] svg {
+  flex: none;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.diagram .molecule-key [data-key-particle] svg {
+  flex: none;
+  width: 3rem;
+  height: 1.75rem;
+}
+/* A slider's name, with its count shown at the right. */
+.diagram-slider-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.diagram-slider-value {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--u-ink);
+}
+
+/* The titration explorer: a flask beside a graph. The graph is drawn 320 units
+   wide, so it keeps 12 px text only when it is shown about 320 px wide or
+   more; the two sit side by side only where both fit (42rem, which leaves the
+   graph its 320 px beside a 12rem flask column even with a classic scrollbar),
+   and are stacked below that. The flask drawing holds no text, so it is small
+   (6.5rem), with its color word beside it in HTML. */
+.diagram-panels .diagram-plot.is-flask {
+  max-width: 12rem;
+}
+@media (min-width: 42rem) {
+  .diagram-panels.is-beside {
+    grid-template-columns: 12rem minmax(0, 22rem);
+    justify-content: center;
+    align-items: center;
+  }
+}
+.diagram .titration-flask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.diagram .titration-flask svg {
+  flex: none;
+  width: 6.5rem;
+}
+.diagram .titration-flask-word {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: 700;
+  color: var(--u-ink);
+}
+/* A card-colored rectangle behind a line's name, drawn before the name, so that
+   the chosen-volume line that moves behind it is broken cleanly. */
+.diagram-name-backing {
+  fill: var(--card);
+  stroke: none;
+}
+.titration-glass {
+  fill: var(--card);
+  stroke: var(--ink);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+/* The flask's outline and its rim are open lines, not shapes to fill. */
+.titration-glass.is-open {
+  fill: none;
+}
+/* The indicator's own colors, not the unit's: bromothymol blue is yellow in
+   the acid and blue past the equivalence point. The word under the flask
+   says the same, so the shade is never alone. */
+.titration-liquid {
+  stroke: none;
+}
+.titration-liquid.is-yellow {
+  fill: #e6c845;
+}
+.titration-liquid.is-blue {
+  fill: #5b86d6;
+}
+
 /* The photoelectron spectrum explorer. A light solid line at each count of
    electrons, apart from the dashed guides; and the peaks, filled for the
    chosen atom and dashed outlines for the one compared with, so they differ

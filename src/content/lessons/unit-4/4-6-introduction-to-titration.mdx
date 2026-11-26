@@ -1,0 +1,365 @@
+---
+topic: "4.6"
+minutes: 13
+summary: "How a titration measures the amount of a substance in solution, what the equivalence point and the endpoint are, and how to turn a buret reading into a concentration."
+---
+
+Taste two white wines, and one may be sharp while the other is flat. Most of that difference is acid, and a winery does not leave it to a taster's tongue. A technician puts a measured sample of the wine in a flask and runs in a solution of a base, drop by drop, until every bit of the acid has reacted. The volume of base it took says how much acid was there. That measurement is a titration.
+
+## Counting by reacting
+
+You cannot count the acid molecules in a spoonful of wine. You can count what it takes to react with all of them. A **titration** finds the amount of a dissolved substance by reacting it with a measured amount of something else.
+
+Two names come with it. The **analyte** is the substance being measured. The **titrant** is the solution added to it, and its concentration is known.
+
+The titrant goes in a **buret**, a long marked tube with a tap at the bottom, which can be read to a hundredth of a milliliter. The volume that has run out is the reading at the end minus the reading at the start. A volume in liters times a molarity is a number of moles (topic 3.7). So that volume is really a count of the titrant's particles.
+
+For that count to mean anything, the reaction has to pass two tests:
+
+- It goes to completion, so no analyte is left unreacted.
+- The titrant reacts with the analyte and with nothing else in the sample.
+
+<Figure
+  src="/figures/4-6-titration-setup.svg"
+  alt="A titration set up. A buret, a tall marked tube with a tap at the bottom, is clamped upright above a conical flask. The buret holds the titrant, a sodium hydroxide solution of known concentration, and its liquid level is where the volume is read. The flask holds a measured volume of the sample, with a few drops of indicator; the analyte is the acid in the sample. A drop of titrant is falling from the buret into the flask."
+  caption="The titrant runs from the buret into the flask until the indicator changes color. The volume that has left the buret is the measurement."
+/>
+
+The indicator in the flask is the one part of the figure not yet explained. The next section gets to it.
+
+Either solution can be the known one. A base of known concentration can measure an acid, and an acid of known concentration can measure a base.
+
+## The equivalence point and the endpoint
+
+Start with a simpler acid than the wine's. Lactic acid, HC₃H₅O₃, is the acid of yogurt and sour milk. It is a weak acid: in water, only a small part of it is in the form of ions (topic 8.3). It has one proton to give.
+
+Sodium hydroxide is a strong base: in water, all of it is in the form of ions, Na⁺ and OH⁻. The hydroxide ion takes the proton from every lactic acid molecule it meets, weak acid or not, so the reaction goes to completion:
+
+$$
+\begin{aligned}
+&\ce{HC3H5O3(aq) + OH^-(aq) ->} \\
+&\quad \ce{C3H5O3^-(aq) + H2O(l)}
+\end{aligned}
+$$
+
+The Na⁺ ions take no part. They are spectator ions (topic 4.2).
+
+A buret is read in milliliters, so it is handy to count in **millimoles** (mmol), which are thousandths of a mole. Milliliters times molarity gives millimoles.
+
+Now for the two points this topic is about.
+
+The **equivalence point** is the moment when the titrant added has exactly used up the analyte. It is set by the amounts and by the balanced equation, and by nothing else. A flask holding 1.50 mmol of lactic acid reaches it when 1.50 mmol of OH⁻ has gone in, because the equation is 1 to 1. An acid with two protons to give would take twice as much.
+
+In this titration, nothing you can see marks that moment. The acid, the base and the products of this reaction are all colorless. So a few drops of an **indicator** go into the flask, a dye that has one color in acid and another in base. Bromothymol blue is yellow in acid and blue in base. For nearly the whole titration the flask is yellow. Over the last few drops it shades toward green, and the drop that uses up the last of the acid turns it blue. The **endpoint** is the change you watch for, and here it is the moment the flask turns blue. The first tinge of green is not it.
+
+The two are different kinds of thing. The equivalence point is a fact about amounts, and you calculate with it. The endpoint is an event, and you watch for it. A titration is designed so that the second happens at the first, to within a drop. How the acidity of the flask changes on the way, and how an indicator is chosen to make the two points meet, belong to topics 8.5 and 8.7.
+
+<KeyIdea>
+
+The equivalence point is where the amounts of titrant and analyte exactly match the balanced equation. The endpoint is the color change you watch for: with bromothymol blue, the turn to blue, not the first tinge of green. With the right indicator, the two come within a drop of each other.
+
+</KeyIdea>
+
+In the titration below the flask holds lactic acid, with one proton to give, or tartaric acid, the acid of grapes, with two: run in the base and watch where each acid runs out.
+
+<Titration />
+
+<Check answer={2}>
+A yogurt maker's laboratory is titrating a sample that contains 2.40 mmol of lactic acid, which has one proton to give. So far, 12.00 mL of 0.150 M NaOH has run in from the buret. Where does the titration stand?
+
+- At the equivalence point, with no acid left and no extra base in the flask
+- Before the equivalence point, with 0.60 mmol of the acid still to react
+- Past the equivalence point, with 0.60 mmol of base in excess
+- It cannot be told without seeing the color of the indicator
+
+<div slot="why">
+
+Find the base added so far. A molarity is also millimoles per milliliter.
+
+$$
+\begin{aligned}
+&(12.00\ \text{mL})(0.150\ \text{mmol/mL}) \\
+&= 1.80\ \text{mmol}\ \ce{OH^-}
+\end{aligned}
+$$
+
+The equation is 1 to 1, so 1.80 mmol of acid has reacted. What is left is
+
+$$
+2.40 - 1.80 = 0.60\ \text{mmol}
+$$
+
+The equivalence point will come when 2.40 mmol of OH⁻ has gone in:
+
+$$
+\frac{2.40\ \text{mmol}}{0.150\ \text{mmol/mL}} = 16.0\ \text{mL}
+$$
+
+Where a titration stands is a matter of amounts. The indicator only shows it, and here it would not have changed color yet.
+
+</div>
+</Check>
+
+## From a buret reading to a concentration
+
+At the endpoint, you read the buret. The volume that has run out of it is the volume of titrant that has just used up the analyte, to within a drop. Turning it into a concentration is the route of topic 4.5, with a solution at both ends:
+
+1. **The reaction.** Write the balanced equation for the titrant with the analyte.
+2. **Titrant delivered.** Its molarity times the volume that ran out of the buret, in liters, gives the moles of titrant.
+3. **From titrant to analyte.** The mole ratio from the equation turns the moles of titrant into moles of analyte.
+4. **Back to the sample.** Divide the moles of analyte by the volume of the **sample** that went into the flask, in liters.
+
+The ratio is the reason step 1 is there. Tartaric acid, the acid of the wine in the example below, takes two hydroxide ions for each molecule, and the balanced equation is what tells you so. It can go the other way too. A base such as barium hydroxide, Ba(OH)₂, a strong base, supplies two OH⁻ per formula unit, so one of it does the work of two NaOH. The equation sheet has no formula for any of this, and none is needed.
+
+One more point. Water added to the flask to rinse the sample down does not change the result, because it does not change the moles of analyte in the flask.
+
+<Worked title="The acid in a white wine">
+
+The main acid of grapes is tartaric acid, H₂C₄H₄O₆, a weak acid with two protons to give. Wine holds a few acids. Most wineries report the total as tartaric acid, and this example does the same.
+
+A technician measures 20.00 mL of a white wine into a flask, adds bromothymol blue and titrates with 0.0500 M NaOH. The flask turns from yellow to blue when 31.20 mL has run in. What is the concentration of acid in the wine?
+
+1. **The reaction.** Hydroxide takes both protons.
+
+   $$
+   \begin{aligned}
+   &\ce{H2C4H4O6(aq) + 2OH^-(aq) ->} \\
+   &\quad \ce{C4H4O6^2-(aq) + 2H2O(l)}
+   \end{aligned}
+   $$
+
+   One acid for every two OH⁻.
+
+2. **Titrant delivered.** 31.20 mL is 0.03120 L, and each NaOH supplies one OH⁻.
+
+   $$
+   \begin{aligned}
+   n &= (0.0500\ \text{mol/L})(0.03120\ \text{L}) \\
+   &= 1.56 \times 10^{-3}\ \text{mol}\ \ce{OH^-}
+   \end{aligned}
+   $$
+
+3. **From titrant to analyte.**
+
+   $$
+   \begin{aligned}
+   &1.56 \times 10^{-3}\ \text{mol}\ \ce{OH^-} \times \frac{1\ \text{mol acid}}{2\ \text{mol}\ \ce{OH^-}} \\
+   &= 7.80 \times 10^{-4}\ \text{mol acid}
+   \end{aligned}
+   $$
+
+4. **Back to the sample.** Divide by the volume of wine that went into the flask. 20.00 mL is 0.02000 L.
+
+   $$
+   \frac{7.80 \times 10^{-4}\ \text{mol}}{0.02000\ \text{L}} = 0.0390\ \text{M}
+   $$
+
+   Three significant figures, set by the 0.0500 M.
+
+5. **In the winery's units.** The molar mass of tartaric acid is
+
+   $$
+   \begin{aligned}
+   &4(12.01) + 6(1.008) + 6(16.00) \\
+   &= 150.09\ \text{g/mol}
+   \end{aligned}
+   $$
+
+   so the wine holds
+
+   $$
+   \begin{aligned}
+   &(0.0390\ \text{mol/L})(150.09\ \text{g/mol}) \\
+   &= 5.85\ \text{g/L}
+   \end{aligned}
+   $$
+
+   That is an ordinary figure for a white wine.
+
+6. **What the slips would give.** A 1 : 1 ratio gives 0.0780 M, exactly double. Dividing by the buret volume, 31.20 mL, in place of the sample's gives 0.0250 M, and dividing by the two volumes added together gives 0.0152 M.
+
+</Worked>
+
+<Check numeric="2.32e-3" unit="M">
+Pool water is kept slightly basic with dissolved sodium hydrogen carbonate, NaHCO₃, whose hydrogen carbonate ion, HCO₃⁻, is a weak base (topic 4.2). A pool technician measures it by titrating a sample with sulfuric acid, a strong acid that gives up both of its protons in this reaction:
+
+$$
+\begin{aligned}
+&\ce{H2SO4(aq) + 2NaHCO3(aq) ->} \\
+&\quad \ce{Na2SO4(aq) + 2H2O(l) +} \\
+&\quad \ce{2CO2(aq)}
+\end{aligned}
+$$
+
+A 100.0 mL sample of pool water, with an indicator that turns from green to red at the endpoint, takes 11.60 mL of 0.0100 M H₂SO₄. What is the concentration of NaHCO₃ in the pool water?
+
+<div slot="why">
+
+Moles of titrant first. 11.60 mL is 0.01160 L.
+
+$$
+\begin{aligned}
+&(0.0100\ \text{mol/L})(0.01160\ \text{L}) \\
+&= 1.16 \times 10^{-4}\ \text{mol}\ \ce{H2SO4}
+\end{aligned}
+$$
+
+The equation uses 2 mol of NaHCO₃ for every 1 mol of H₂SO₄.
+
+$$
+\begin{aligned}
+&2 \times 1.16 \times 10^{-4} \\
+&= 2.32 \times 10^{-4}\ \text{mol}\ \ce{NaHCO3}
+\end{aligned}
+$$
+
+Divide by the sample's volume, 0.1000 L.
+
+$$
+\frac{2.32 \times 10^{-4}\ \text{mol}}{0.1000\ \text{L}} = 2.32 \times 10^{-3}\ \text{M}
+$$
+
+Here the titrant is the acid and the analyte is the base, and the acid is the one that counts double.
+
+What the common slips give:
+
+- A 1 : 1 ratio: 1.16 × 10⁻³ M
+- The ratio upside down: 5.80 × 10⁻⁴ M
+- Dividing by the buret volume: 0.0200 M
+- Dividing by the two volumes added together: 2.08 × 10⁻³ M
+- Millimoles divided by liters: 2.32 M
+
+Using milliliters for both volumes is not a slip. Millimoles divided by milliliters gives the same 2.32 × 10⁻³ M.
+
+</div>
+</Check>
+
+## Not only acids and bases
+
+Nothing in the idea of a titration says acid or base. Any reaction will do if it is fast and complete, reacts with the analyte alone and gives a change you can see at the right moment. Many titrations use reactions in which electrons pass from one substance or ion to another (topics 4.7 and 4.9). The equation is given, and the arithmetic is the same four steps.
+
+<Check numeric="0.0880" unit="M">
+A dairy sterilizes its cartons with hydrogen peroxide, H₂O₂, before filling them. Its laboratory checks a diluted sample of the peroxide solution by titrating it with potassium permanganate, KMnO₄. The permanganate ion, MnO₄⁻, is deep purple, and what it turns into here is almost colorless:
+
+$$
+\begin{aligned}
+&\ce{2MnO4^-(aq) + 5H2O2(aq) +} \\
+&\quad \ce{6H^+(aq) ->} \\
+&\quad \ce{2Mn^2+(aq) + 5O2(g) + 8H2O(l)}
+\end{aligned}
+$$
+
+Sulfuric acid, a strong acid, is added to the flask to supply the H⁺. Each drop of purple titrant loses its color as it reacts. The first drop that finds no H₂O₂ left keeps its color and tints the flask pale pink: that is the endpoint, with no indicator added.
+
+A 10.00 mL sample takes 17.60 mL of 0.0200 M KMnO₄. What is the concentration of H₂O₂ in the sample?
+
+<div slot="why">
+
+Moles of titrant first. 17.60 mL is 0.01760 L, and each KMnO₄ supplies one MnO₄⁻.
+
+$$
+\begin{aligned}
+&(0.0200\ \text{mol/L})(0.01760\ \text{L}) \\
+&= 3.52 \times 10^{-4}\ \text{mol}\ \ce{MnO4^-}
+\end{aligned}
+$$
+
+The equation uses 5 mol of H₂O₂ for every 2 mol of MnO₄⁻.
+
+$$
+\begin{aligned}
+&3.52 \times 10^{-4} \times \frac{5}{2} \\
+&= 8.80 \times 10^{-4}\ \text{mol}\ \ce{H2O2}
+\end{aligned}
+$$
+
+Divide by the sample's volume, 0.01000 L.
+
+$$
+\frac{8.80 \times 10^{-4}\ \text{mol}}{0.01000\ \text{L}} = 0.0880\ \text{M}
+$$
+
+Counting protons would not have helped here. The ratio, 5 to 2, comes from the balanced equation and from nowhere else.
+
+What the common slips give:
+
+- A 1 : 1 ratio: 0.0352 M
+- The ratio upside down: 0.0141 M
+- Dividing by the buret volume: 0.0500 M
+- Dividing by the two volumes added together: 0.0319 M
+
+</div>
+</Check>
+
+## Which way does a slip push the answer?
+
+Most slips in a titration make one number in the calculation wrong. The way to judge such a slip is always the same: ask which number the slip changed, and which way, then follow that number through the four steps.
+
+The commonest slip is running in titrant past the endpoint. The volume that left the buret is then larger than the analyte needed, so step 2 finds more moles of titrant than reacted. Every number after it is too large, and the result comes out too high.
+
+Now work a different one. Suppose the titrant is weaker than its label: the bottle reads 0.0500 M, and the solution in it is really 0.0480 M. The wine of the worked example, truly 0.0390 M, holds 0.780 mmol of acid in 20.00 mL and needs 1.560 mmol of OH⁻. Of the weaker solution, that takes more than 31.20 mL:
+
+$$
+\frac{1.560\ \text{mmol}}{0.0480\ \text{mmol/mL}} = 32.50\ \text{mL}
+$$
+
+The technician, trusting the label, calculates
+
+$$
+\begin{aligned}
+&(32.50\ \text{mL})(0.0500\ \text{mmol/mL}) \\
+&= 1.625\ \text{mmol}\ \ce{OH^-}
+\end{aligned}
+$$
+
+The ratio gives half as many millimoles of acid, 0.8125 mmol, and then
+
+$$
+\frac{0.8125\ \text{mmol}}{20.00\ \text{mL}} = 0.0406\ \text{M}
+$$
+
+That is about 4 percent too high. The number the slip changed was the titrant's molarity. The calculation used a value larger than the true one, so every number after it came out too large.
+
+<Check answer={3}>
+In the wine titration of the worked example, a little of the 20.00 mL sample splashes out of the flask before any base is added. The technician carries on, and uses 20.00 mL in the calculation. How does the reported acid concentration compare with the true one?
+
+- It is unchanged, because the concentration of a solution does not depend on how much of it you have
+- It is too high, because the base had less acid to react with
+- It is too low, because the flask held less acid than the calculation assumes
+- It is unchanged, because the indicator still changes color at the equivalence point
+
+<div slot="why">
+
+The wine's concentration did not change, but the amount of acid in the flask did. Fewer moles of acid means the equivalence point comes sooner, so less titrant runs out of the buret and the calculation finds fewer moles. Those moles are then divided by the full 0.02000 L, which is more wine than was titrated, so the result is too low.
+
+Put numbers on it. If 0.40 mL was lost, the flask held 19.60 mL and 0.764 mmol of acid. The base needed was 30.58 mL, and the calculation gives 0.0382 M in place of 0.0390 M: about 2 percent too low.
+
+The indicator did its job. The endpoint still fell at the equivalence point. It was the equivalence point that moved, because it is set by the amount of analyte in the flask.
+
+</div>
+</Check>
+
+<Trap>
+
+Five mistakes come up again and again on this topic:
+
+- **Taking the ratio to be 1 : 1 without looking.** Read it off the balanced equation: each molecule of tartaric acid takes two OH⁻. With 1 : 1, the wine came out at 0.0780 M, double the right 0.0390 M.
+- **Dividing by the wrong volume.** Divide the moles of analyte by the volume of the sample, not by the volume of titrant and not by the two added together.
+- **Mixing milliliters and liters.** Molarity times liters gives moles, and molarity times milliliters gives millimoles. Keep to one.
+- **Treating the endpoint and the equivalence point as one thing.** The endpoint is the color change you watch for, such as the flask turning blue (its first tinge of green is not the endpoint). The equivalence point is set by the amounts.
+- **Guessing which way a slip pushes the answer.** Ask which number in the calculation it changed, and follow that number through. A titrant weaker than its label gave 0.0406 M for a wine that was 0.0390 M.
+
+</Trap>
+
+<KeyPoints>
+
+- A titration finds the amount of an analyte by adding a titrant of known concentration that reacts with it completely and with nothing else in the sample.
+- The equivalence point is reached when the titrant added has exactly used up the analyte, so the amounts are in the ratio of the balanced equation.
+- The endpoint is the change that is watched for, usually an indicator's full change of color: for bromothymol blue, the turn to blue and not the first tinge of green. The indicator is picked so that this change comes within a drop of the equivalence point.
+- A concentration comes from the buret reading in four steps: the balanced equation, moles of titrant (molarity times liters), the mole ratio, then moles of analyte divided by the volume of the sample.
+- The ratio comes from the equation and is often not 1 to 1: two OH⁻ for an acid with two protons to give, 5 to 2 for hydrogen peroxide and permanganate.
+- Adding titrant past the endpoint makes the calculated concentration too high.
+
+</KeyPoints>
+
+<PracticeNext />
