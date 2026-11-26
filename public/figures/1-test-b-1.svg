@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 336" font-family="system-ui, sans-serif" font-size="18">
+  <!-- A mass spectrum of five sticks. Plot runs from x=52 (69 amu) to x=382 (77 amu), 41.25 units per amu, with a tick at every whole number. The vertical axis has no numbers: a stick is 6 units tall for each percent of relative abundance above y=268, the top edge of the horizontal axis line (centered at y=268.75), so the heights are in exact proportion to the abundances. Sticks are 10 wide, centered on the mass: 70 amu at x=93.25, height 20.57 x 6 = 123.42 (top at y=144.58); 72 amu at x=175.75, height 27.45 x 6 = 164.7 (top at y=103.3); 73 amu at x=217, height 7.75 x 6 = 46.5 (top at y=221.5); 74 amu at x=258.25, height 36.5 x 6 = 219 (top at y=49); 76 amu at x=340.75, height 7.73 x 6 = 46.38 (top at y=221.62). No stick carries a label. Font size 18 on a width of 400 units is 10.6 px when the figure is drawn 236 px wide, as on a practice page on a 320 px phone. -->
+  <rect width="400" height="336" fill="#FDFCF9"/>
+
+  <path d="M52 28V268.75H382" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M52 268.75v7M93.25 268.75v7M134.5 268.75v7M175.75 268.75v7M217 268.75v7M258.25 268.75v7M299.5 268.75v7M340.75 268.75v7M382 268.75v7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+
+  <text x="52" y="296" text-anchor="middle" fill="#6B655D">69</text>
+  <text x="93.25" y="296" text-anchor="middle" fill="#6B655D">70</text>
+  <text x="134.5" y="296" text-anchor="middle" fill="#6B655D">71</text>
+  <text x="175.75" y="296" text-anchor="middle" fill="#6B655D">72</text>
+  <text x="217" y="296" text-anchor="middle" fill="#6B655D">73</text>
+  <text x="258.25" y="296" text-anchor="middle" fill="#6B655D">74</text>
+  <text x="299.5" y="296" text-anchor="middle" fill="#6B655D">75</text>
+  <text x="340.75" y="296" text-anchor="middle" fill="#6B655D">76</text>
+  <text x="382" y="296" text-anchor="middle" fill="#6B655D">77</text>
+
+  <text x="217" y="326" text-anchor="middle" fill="#26231F">Mass (amu)</text>
+  <text x="28" y="148" text-anchor="middle" fill="#26231F" transform="rotate(-90 28 148)">Relative abundance</text>
+
+  <rect x="88.25" y="144.58" width="10" height="123.42" fill="#4F706C"/>
+  <rect x="170.75" y="103.3" width="10" height="164.7" fill="#4F706C"/>
+  <rect x="212" y="221.5" width="10" height="46.5" fill="#4F706C"/>
+  <rect x="253.25" y="49" width="10" height="219" fill="#4F706C"/>
+  <rect x="335.75" y="221.62" width="10" height="46.38" fill="#4F706C"/>
+</svg>

@@ -240,6 +240,18 @@ const PRACTICE_FIGURES = [
     src: '/figures/1-practice-unknown-photoelectron-spectrum.svg',
     peaks: ['126', '9.07', '5.31', '0.74'],
   },
+  {
+    name: "the five-peak mass spectrum of the test's first session",
+    path: '/unit-1-atomic-structure/practice/comprehensive-test-session-1/',
+    src: '/figures/1-test-b-1.svg',
+    peaks: ['70', '72', '73', '74', '76'],
+  },
+  {
+    name: "the made-up element's mass spectrum of the test's first session",
+    path: '/unit-1-atomic-structure/practice/comprehensive-test-session-1/',
+    src: '/figures/1-test-b-2.svg',
+    peaks: ['108', '110', '114'],
+  },
 ];
 
 test.describe('a figure on a practice page', () => {
