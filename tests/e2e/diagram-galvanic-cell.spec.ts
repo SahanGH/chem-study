@@ -579,7 +579,9 @@ test('the Q marker never meets a label, over every log Q the sliders reach', asy
       }
     }
   }
-  expect([...seen].sort((a, b) => a - b)).toEqual([-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  // These three cells reach every whole log Q from -6 to 9 except -5
+  // (2a - 3b, a - 3b and a - b with a and b from 0 down to -3).
+  expect([...seen].sort((a, b) => a - b)).toEqual([-6, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
 });
 
 test('no electrode, anode or cathode is given a sign anywhere in the diagram, at any arrangement', async ({ page }) => {
