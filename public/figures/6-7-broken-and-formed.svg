@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 380" font-family="system-ui, sans-serif" font-size="18">
+  <!-- An enthalpy diagram with three levels for acetylene + water -> acetaldehyde, all gases: the reactants at the lower left, the separate atoms at the top, the product at the lower right, a little below the reactants. A solid ink arrow rises by the bonds broken; a dashed accent arrow falls by the bonds formed; a small bracket marks the gap, which is drawn larger than its true size. Font size 18 keeps the text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="380" fill="#FDFCF9"/>
+
+  <!-- Vertical axis, no numbers. -->
+  <path d="M40 350V38" fill="none" stroke="#26231F" stroke-width="1.7"/>
+  <path d="M34 40L40 30L46 40Z" fill="#26231F"/>
+  <text x="22" y="190" text-anchor="middle" fill="#26231F" transform="rotate(-90 22 190)">Enthalpy</text>
+
+  <!-- Level A: the reactants. -->
+  <path d="M70 290H200" fill="none" stroke="#26231F" stroke-width="2.5"/>
+  <text x="135" y="313" text-anchor="middle" fill="#26231F">C&#8322;H&#8322; + H&#8322;O</text>
+
+  <!-- Level B: the separate atoms. -->
+  <path d="M170 60H330" fill="none" stroke="#26231F" stroke-width="2.5"/>
+  <text x="250" y="46" text-anchor="middle" fill="#26231F">2 C + 4 H + O atoms</text>
+
+  <!-- Level C: the product. -->
+  <path d="M300 320H430" fill="none" stroke="#26231F" stroke-width="2.5"/>
+  <text x="365" y="343" text-anchor="middle" fill="#26231F">CH&#8323;CHO</text>
+
+  <!-- Up arrow: bonds broken, solid ink. -->
+  <path d="M130 288V72" fill="none" stroke="#26231F" stroke-width="2.2"/>
+  <path d="M123 74L130 62L137 74Z" fill="#26231F"/>
+  <text x="142" y="120" fill="#26231F">bonds broken</text>
+  <text x="142" y="143" fill="#26231F">+2,591 kJ</text>
+
+  <!-- Down arrow: bonds formed, dashed accent. -->
+  <path d="M370 62V306" fill="none" stroke="#4F706C" stroke-width="2.2" stroke-dasharray="8 5"/>
+  <path d="M363 306L370 318L377 306Z" fill="#4F706C"/>
+  <text x="358" y="185" text-anchor="end" fill="#26231F">bonds formed</text>
+  <text x="358" y="208" text-anchor="end" fill="#26231F">&#8722;2,744 kJ</text>
+
+  <!-- Dotted guides from the two lower levels, and the bracket across the gap. -->
+  <path d="M200 290H285" fill="none" stroke="#6B655D" stroke-width="1.2" stroke-dasharray="2 4"/>
+  <path d="M215 320H300" fill="none" stroke="#6B655D" stroke-width="1.2" stroke-dasharray="2 4"/>
+  <path d="M250 296V314" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M246 297L250 291L254 297Z" fill="#26231F"/>
+  <path d="M246 313L250 319L254 313Z" fill="#26231F"/>
+  <text x="250" y="272" text-anchor="middle" fill="#26231F">&#916;H &#8776; &#8722;153 kJ</text>
+</svg>

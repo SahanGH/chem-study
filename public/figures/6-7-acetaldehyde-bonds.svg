@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 430" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Acetylene + water -> acetaldehyde with every bond drawn as a line, atoms as letters, lone pairs left out. Top row: H-C≡C-H, a plus sign, H-O-H. A down arrow. Bottom row: CH3-CH=O. Under each molecule, its list of bonds. Every bond line stops 12 or 13 units short of the letters it joins. All bonds are drawn alike, in ink. Font size 18 keeps the text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="430" fill="#FDFCF9"/>
+
+  <g fill="#26231F" text-anchor="middle">
+    <!-- Acetylene. -->
+    <text x="40" y="96.5">H</text>
+    <text x="95" y="96.5">C</text>
+    <text x="165" y="96.5">C</text>
+    <text x="220" y="96.5">H</text>
+    <!-- Plus sign. -->
+    <text x="270" y="96.5">+</text>
+    <!-- Water. -->
+    <text x="355" y="81.5">O</text>
+    <text x="315" y="126.5">H</text>
+    <text x="395" y="126.5">H</text>
+    <!-- Bond lists, top row. -->
+    <text x="130" y="185">1 C&#8801;C, 2 C&#8211;H</text>
+    <text x="355" y="185">2 O&#8211;H</text>
+    <!-- Acetaldehyde. -->
+    <text x="170" y="326.5">C</text>
+    <text x="250" y="326.5">C</text>
+    <text x="110" y="326.5">H</text>
+    <text x="170" y="268.5">H</text>
+    <text x="170" y="384.5">H</text>
+    <text x="250" y="268.5">H</text>
+    <text x="330" y="326.5">O</text>
+    <!-- Bond list, bottom row. -->
+    <text x="220" y="418">1 C&#8211;C, 4 C&#8211;H, 1 C=O</text>
+  </g>
+
+  <g fill="none" stroke="#26231F" stroke-width="2">
+    <!-- Acetylene: two C-H bonds and the triple bond. -->
+    <path d="M52 90H83"/>
+    <path d="M107 84H153M107 90H153M107 96H153"/>
+    <path d="M177 90H208"/>
+    <!-- Water: two O-H bonds. -->
+    <path d="M346.4 84.7L323.6 110.3"/>
+    <path d="M363.6 84.7L386.4 110.3"/>
+    <!-- Acetaldehyde: C-C, four C-H, and the C=O double bond. -->
+    <path d="M182 320H238"/>
+    <path d="M122 320H158"/>
+    <path d="M170 275V307"/>
+    <path d="M170 333V365"/>
+    <path d="M250 275V307"/>
+    <path d="M262 316.5H318M262 323.5H318"/>
+  </g>
+
+  <!-- Down arrow from the reactants to the product. -->
+  <path d="M240 198V230" fill="none" stroke="#26231F" stroke-width="1.7"/>
+  <path d="M234 228L240 238L246 228Z" fill="#26231F"/>
+</svg>
