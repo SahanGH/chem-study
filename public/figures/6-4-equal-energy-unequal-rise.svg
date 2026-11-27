@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 330" font-family="system-ui, sans-serif" font-size="18">
+  <!-- The same 900 J into 40.0 g of water (left) and 40.0 g of titanium (right), both starting at 20.0 °C. Two panels 220 wide, 32 apart, each with the unit of its scale, °C, under the thermometer. Each thermometer's scale runs from 20 °C at y=250 to 80 °C at y=50 (200 units for 60 °C), with a tick every 10 °C. The water's column rises 5.4 °C = 18 units, to y=232; the titanium's rises 43.0 °C = 143 units, to y=107. The water is a beaker with a plain fill; the titanium is a hatched block. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <defs>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#FDFCF9"/>
+      <path d="M0 0V8" stroke="#6B655D" stroke-width="2.5"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="330" fill="#FDFCF9"/>
+
+  <g transform="translate(0 0)">
+    <text x="110" y="26" fill="#26231F" text-anchor="middle" font-weight="600">40.0 g of water</text>
+    <!-- Beaker: 96 wide, 90 tall; liquid from y=185 -->
+    <path d="M63 185H157V249H63z" fill="#E3EAE9"/>
+    <path d="M63 185H157" fill="none" stroke="#26231F" stroke-width="1"/>
+    <path d="M62 160V250H158V160" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+    <!-- Energy arrow -->
+    <path d="M6 222H47" fill="none" stroke="#4F706C" stroke-width="4"/>
+    <path d="M45 213L59 222L45 231Z" fill="#4F706C"/>
+    <text x="4" y="204" fill="#26231F">900 J</text>
+    <!-- Thermometer: column from y=250 (20 °C) up to y=232 -->
+    <rect x="172" y="40" width="16" height="222" rx="8" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <circle cx="180" cy="264" r="12" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+    <rect x="176" y="232" width="8" height="22" fill="#4F706C"/>
+    <path d="M188 250.00H195M188 216.67H195M188 183.33H195M188 150.00H195M188 116.67H195M188 83.33H195M188 50.00H195" fill="none" stroke="#26231F" stroke-width="1.5"/>
+    <text x="199" y="256" fill="#26231F">20</text>
+    <text x="199" y="56" fill="#26231F">80</text>
+    <text x="180" y="300" fill="#26231F" text-anchor="middle">°C</text>
+    <text x="110" y="314" fill="#26231F" text-anchor="middle">+5.4 °C</text>
+  </g>
+
+  <g transform="translate(252 0)">
+    <text x="110" y="26" fill="#26231F" text-anchor="middle" font-weight="600">40.0 g of titanium</text>
+    <!-- Block: 96 wide, 60 tall, hatched -->
+    <rect x="62" y="190" width="96" height="60" fill="url(#hatch)" stroke="#26231F" stroke-width="2"/>
+    <!-- Energy arrow -->
+    <path d="M6 222H47" fill="none" stroke="#4F706C" stroke-width="4"/>
+    <path d="M45 213L59 222L45 231Z" fill="#4F706C"/>
+    <text x="4" y="204" fill="#26231F">900 J</text>
+    <!-- Thermometer: column from y=250 (20 °C) up to y=107 -->
+    <rect x="172" y="40" width="16" height="222" rx="8" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <circle cx="180" cy="264" r="12" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+    <rect x="176" y="107" width="8" height="147" fill="#4F706C"/>
+    <path d="M188 250.00H195M188 216.67H195M188 183.33H195M188 150.00H195M188 116.67H195M188 83.33H195M188 50.00H195" fill="none" stroke="#26231F" stroke-width="1.5"/>
+    <text x="199" y="256" fill="#26231F">20</text>
+    <text x="199" y="56" fill="#26231F">80</text>
+    <text x="180" y="300" fill="#26231F" text-anchor="middle">°C</text>
+    <text x="110" y="314" fill="#26231F" text-anchor="middle">+43.0 °C</text>
+  </g>
+</svg>

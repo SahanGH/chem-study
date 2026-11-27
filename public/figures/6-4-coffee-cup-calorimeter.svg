@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 380" font-family="system-ui, sans-serif" font-size="18">
+  <!-- A coffee-cup calorimeter in cross-section. Inner cup: top x=50 to 210 at y=110, bottom x=75 to 185 at y=340. Outer cup 8 units outside it: top x=42 to 218, bottom x=67 to 193 at y=348; the gap between them is filled. Lid: y=98 to 110, x=36 to 224, with gaps at x=104 to 116 (thermometer) and x=155 to 165 (stirrer). Water surface at y=187, two-thirds of the way up, where the inner walls are at x=58.4 and 201.6. Thermometer axis x=110, bulb at y=268. Stirrer axis x=160, loop at y=302. Sample x=118 to 148 on the bottom. Labels start at x=280; each leader runs level from x=274 and ends in a dot on its part. Everything is moved 20 units right to center it. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <defs>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#FDFCF9"/>
+      <path d="M0 0V8" stroke="#6B655D" stroke-width="2.5"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="380" fill="#FDFCF9"/>
+  <g transform="translate(20 0)">
+
+  <!-- Two cups: the foam between the outer and inner outlines -->
+  <path d="M42 110L67 348H193L218 110z" fill="#E6E1D8"/>
+  <path d="M50 110L75 340H185L210 110z" fill="#FDFCF9"/>
+  <!-- Water -->
+  <path d="M58.37 187H201.63L185 340H75z" fill="#E3EAE9"/>
+  <path d="M58.37 187H201.63" fill="none" stroke="#26231F" stroke-width="1"/>
+  <path d="M42 110L67 348H193L218 110" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M50 110L75 340H185L210 110" fill="none" stroke="#26231F" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- Sample on the bottom of the inner cup -->
+  <rect x="118" y="322" width="30" height="17" fill="url(#hatch)" stroke="#26231F" stroke-width="1.5"/>
+
+  <!-- Lid in three pieces, leaving two gaps -->
+  <g fill="#E6E1D8" stroke="#26231F" stroke-width="1.5">
+    <rect x="36" y="98" width="68" height="12"/>
+    <rect x="116" y="98" width="39" height="12"/>
+    <rect x="165" y="98" width="59" height="12"/>
+  </g>
+
+  <!-- Thermometer -->
+  <rect x="106" y="22" width="8" height="246" rx="4" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M110 150V264" fill="none" stroke="#4F706C" stroke-width="3"/>
+  <circle cx="110" cy="268" r="7" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+
+  <!-- Stirrer: handle ring, rod, loop in the water -->
+  <circle cx="160" cy="62" r="5" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M160 67V297" fill="none" stroke="#26231F" stroke-width="2"/>
+  <ellipse cx="160" cy="302" rx="16" ry="5" fill="none" stroke="#26231F" stroke-width="2"/>
+
+  <!-- Leaders -->
+  <g fill="none" stroke="#6B655D" stroke-width="1.5">
+    <path d="M274 44H114"/>
+    <path d="M274 80H161"/>
+    <path d="M274 116L224 104"/>
+    <path d="M274 170H207.6"/>
+    <path d="M274 240H184"/>
+    <path d="M274 330H148"/>
+  </g>
+  <g fill="#6B655D">
+    <circle cx="207.6" cy="170" r="2.5"/>
+    <circle cx="184" cy="240" r="2.5"/>
+  </g>
+
+  <!-- Labels -->
+  <g fill="#26231F">
+    <text x="280" y="50">Thermometer</text>
+    <text x="280" y="86">Stirrer</text>
+    <text x="280" y="122">Lid</text>
+    <text x="280" y="176">Two foam cups</text>
+    <text x="280" y="246">Water</text>
+    <text x="280" y="336">Sample</text>
+  </g>
+
+  </g>
+</svg>

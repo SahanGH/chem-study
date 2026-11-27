@@ -697,6 +697,83 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   background: color-mix(in srgb, var(--u) 62%, var(--card));
 }
 
+/* The calorimetry explorer: a cup of water before and at equilibrium, over
+   two bars of energy. Both drawings are 320 units wide with 12-unit text and
+   are stacked at every width (the shared .diagram-panels rules), so they need
+   no layout of their own. The metal is hatched and the water plain, in the
+   cups and in the bars alike, so the two differ by pattern as well as color. */
+.calorimetry-scene-title {
+  fill: var(--ink);
+  font-weight: 600;
+}
+.calorimetry-reading,
+.calorimetry-bar-value {
+  fill: var(--ink);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+/* The foam between the cup's two outlines, and the inside of the cup. */
+.calorimetry-foam {
+  fill: var(--line);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+.calorimetry-cup-inner {
+  fill: var(--card);
+  stroke: none;
+}
+.calorimetry-water,
+.calorimetry-bar-water {
+  fill: var(--u-tint);
+}
+.calorimetry-water {
+  stroke: none;
+}
+.calorimetry-bar-water {
+  stroke: var(--u-ink);
+  stroke-width: 1.5;
+}
+/* An ink outline. Its fill is set on the element: none for the cup's inner
+   outline, the hatching for the block and the metal's bar. */
+.calorimetry-outline {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+/* Under the hatching, so that the water does not show through the block. */
+.calorimetry-block-base {
+  fill: var(--card);
+  stroke: none;
+}
+.calorimetry-hatch-line {
+  stroke: var(--muted);
+  stroke-width: 2;
+}
+.calorimetry-thread {
+  stroke: var(--muted);
+  stroke-width: 1;
+}
+.calorimetry-probe {
+  fill: var(--card);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+/* The water's surface, so that its depth shows whatever the unit's tint. */
+.calorimetry-water-surface {
+  stroke: var(--u-ink);
+  stroke-width: 1.5;
+}
+
+/* The heating curve explorer: a box of molecules beside a graph. It uses the
+   titration explorer's ".is-beside" panels (the box in the 12rem column, the
+   graph in the 22rem one, side by side from 42rem) and the shared classes for
+   the box (".molecule-box") and its molecules (".diagram-atom"). The box holds
+   no text, so it is small: 12rem at most, 192 units shown about 192 px wide. */
+.diagram-panels .diagram-plot.heating-curve-box {
+  max-width: 12rem;
+}
+
 @media print {
   .diagram-controls {
     display: none;

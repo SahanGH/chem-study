@@ -1,0 +1,479 @@
+---
+topic: "6.4"
+minutes: 20
+summary: "How to find the heat a substance gains or loses from its mass, specific heat capacity and temperature change, and how a coffee-cup calorimeter measures an energy transfer."
+---
+
+Pour 200 g of water into one small pan and 200 g of olive oil into another just like it, and set them on two burners turned to the same setting. A minute later the oil has climbed about twice as far above room temperature as the water. Both pans took in the same energy. This lesson is about why the same energy does such different things to different substances, and how chemists turn a thermometer reading into an amount of energy.
+
+## How much energy for one degree
+
+Warming something takes energy, and how much depends on three things: how much of it there is, how far its temperature must rise, and what it is made of. The last of these has a name. The **specific heat capacity**, $c$, of a substance is the energy needed to raise the temperature of 1 gram of it by 1 °C. Its unit is J/(g·°C).
+
+These are the values this lesson uses:
+
+| Substance | $c$ in J/(g·°C) |
+|---|---|
+| Water, liquid | 4.18 |
+| Olive oil | about 2.0 |
+| Sodium chloride | 0.864 |
+| Titanium | 0.523 |
+| Tin | 0.228 |
+| Tungsten | 0.132 |
+
+Water's value is unusually large. A gram of water takes more than thirty times the energy a gram of tungsten takes for the same one-degree rise.
+
+The three things multiply:
+
+$$
+q = mc\Delta T
+$$
+
+Here $q$ is the heat in joules, $m$ is the mass in grams, $c$ is the specific heat capacity and $\Delta T$ is the change in temperature. This equation is on the exam's equation sheet. The value of $c$ for water is not: a question gives it.
+
+$\Delta T$ is always the final temperature minus the starting temperature:
+
+$$
+\Delta T = T_\text{final} - T_\text{initial}
+$$
+
+So a substance that warms has a positive $\Delta T$ and a positive $q$: it gained energy. A substance that cools has a negative $\Delta T$ and a negative $q$: it lost energy. The $q$ you calculate belongs to the substance whose $m$, $c$ and $\Delta T$ you put in. This is topic 6.1's rule for signs, seen from the side of whatever you chose as the system.
+
+A change of 1 °C is the same size as a change of 1 K, so $\Delta T$ is the same number in either unit, and this unit's lessons leave temperatures in °C.
+
+One caution: $c$ changes a little with temperature, and these problems treat it as constant over the range.
+
+<KeyIdea>
+
+$q = mc\Delta T$ gives the energy a substance gains or loses when its temperature changes and its phase does not. $\Delta T$ is final minus initial, so the sign of $q$ comes out by itself: positive for energy gained, negative for energy lost.
+
+</KeyIdea>
+
+<Worked title="Heating a salt block">
+
+Some cooks sear food on a thick slab of pink rock salt that has been heated in an oven. Treat the slab as pure sodium chloride, with $c = 0.864$ J/(g·°C). How much energy does a 2.50 kg slab take in as it warms from 22 °C to 205 °C?
+
+1. **List what is known, in the units of $c$.** The specific heat capacity is in J/(g·°C), so the mass must be in grams: 2.50 kg = 2,500 g.
+
+2. **Find $\Delta T$, final minus initial.**
+
+   $$
+   \begin{aligned}
+   \Delta T &= 205\ \text{°C} - 22\ \text{°C} \\
+   &= 183\ \text{°C}
+   \end{aligned}
+   $$
+
+3. **Substitute.** With the mass in grams, $c$ in J/(g·°C) and $\Delta T$ in °C, the answer comes out in joules.
+
+   $$
+   \begin{aligned}
+   q &= (2{,}500)(0.864)(183) \\
+   &= 395{,}280\ \text{J}
+   \end{aligned}
+   $$
+
+4. **Report it sensibly.** 395,280 J is 395 kJ to three figures. It is positive, as it should be: the slab gained energy.
+
+</Worked>
+
+<Check
+  numeric="22.6"
+  unit="kJ"
+  slips={{
+    "22550": "That is the energy in joules. The question asks for kilojoules.",
+    "-22550": "Two things to fix: the question asks for a size, so no minus sign, and for kilojoules, not joules.",
+    "-22.6": "The question asks how much energy is released, which is a size. Type it without the minus sign.",
+    "25.6": "Did you use 200.0 °C as the temperature change? ΔT is the final temperature minus the starting temperature.",
+    "3.08": "Did you use 24.0 °C as the temperature change? ΔT is the final temperature minus the starting temperature.",
+    "180": "That is what the specific heat capacity of water gives. The part is titanium, so use the value for titanium.",
+  }}
+>
+A 245 g titanium machine part comes out of a drying oven at 200.0 °C and cools to 24.0 °C on a workbench. The specific heat capacity of titanium is 0.523 J/(g·°C). How much energy, in kJ, does the part release as it cools?
+
+<div slot="why">
+
+$\Delta T$ is final minus initial.
+
+$$
+\begin{aligned}
+\Delta T &= 24.0 - 200.0 \\
+&= -176.0\ \text{°C}
+\end{aligned}
+$$
+
+Then, in joules:
+
+$$
+\begin{aligned}
+q &= (245)(0.523)(-176.0) \\
+&= -22{,}552\ \text{J}
+\end{aligned}
+$$
+
+The minus sign says the titanium lost energy. The question asks how much it released, so the answer is the size: 22,552 J, which is 22.6 kJ.
+
+</div>
+</Check>
+
+## The same energy, a different rise
+
+Turn the equation around:
+
+$$
+\Delta T = \frac{q}{mc}
+$$
+
+For a fixed energy and a fixed mass, a larger $c$ means a smaller temperature change. Equal energy does not mean equal warming.
+
+In the figure, 900 J goes into 40.0 g of water and into 40.0 g of titanium, both at 20.0 °C. The water rises 5.4 °C, to 25.4 °C. The titanium rises 43.0 °C, to 63.0 °C: eight times as far, because its specific heat capacity is one-eighth of water's.
+
+<Figure
+  src="/figures/6-4-equal-energy-unequal-rise.svg"
+  alt="Two panels. On the left, an arrow labeled 900 J points into a beaker labeled 40.0 g of water, and a thermometer beside it has risen a little, by 5.4 °C. On the right, an arrow labeled 900 J points into a hatched block labeled 40.0 g of titanium, and its thermometer has risen most of the way up the same scale, by 43.0 °C."
+  caption="The same 900 J goes into equal masses of water and titanium, both starting at 20.0 °C. Each scale runs from 20 °C to 80 °C. The titanium warms eight times as far."
+/>
+
+**Counting in moles.** Chemists often count in moles, not grams. The **molar heat capacity** of a substance is the energy needed to raise the temperature of 1 mole of it by 1 °C, in J/(mol·°C). It is the specific heat capacity times the molar mass, and it is used the same way, with moles in place of grams:
+
+$$
+q = nC\Delta T
+$$
+
+Here $n$ is the amount in moles and $C$ is the molar heat capacity. Liquid ethanol has $C = 112$ J/(mol·°C), so warming 0.250 mol of it by 12.0 °C takes (0.250)(112)(12.0) = 336 J. Both forms appear on the exam. Look at the unit of the heat capacity you are given to see whether it wants grams or moles.
+
+| Substance | $c$ in J/(g·°C) | $C$ in J/(mol·°C) |
+|---|---|---|
+| Water | 4.18 | 75.3 |
+| Titanium | 0.523 | 25.0 |
+| Tin | 0.228 | 27.1 |
+| Tungsten | 0.132 | 24.3 |
+
+Per gram, titanium needs about four times the energy tungsten needs. Per mole the three metals are nearly alike. A gram of tungsten simply holds about a quarter as many atoms as a gram of titanium, because each tungsten atom is about four times as heavy.
+
+<Check
+  answer={3}
+  misses={{
+    1: "A large specific heat capacity means each gram takes more energy for each degree. What does that do to the temperature rise?",
+    2: "Equal energy does not mean an equal temperature change. Rearrange q = mcΔT for ΔT and see what else is in it.",
+    4: "A middle value of c gives a middle temperature rise. Rearrange q = mcΔT for ΔT and compare all three.",
+  }}
+>
+Three metal samples, each 30.0 g and each at 20 °C, absorb 500 J apiece. The specific heat capacities are 0.523 J/(g·°C) for titanium, 0.228 J/(g·°C) for tin and 0.132 J/(g·°C) for tungsten. Which sample ends at the highest temperature, and why?
+
+- Titanium, because it has the largest specific heat capacity of the three
+- None: all three end at the same temperature, because each absorbed 500 J
+- Tungsten, because a gram of it needs the least energy for each degree
+- Tin, because its specific heat capacity lies between the other two
+
+<div slot="why">
+
+With the same energy and the same mass, the temperature change is largest where $c$ is smallest:
+
+$$
+\Delta T = \frac{q}{mc}
+$$
+
+Tungsten rises to 146.3 °C, tin to 93.1 °C and titanium to 51.9 °C. A large specific heat capacity means a small rise, which is the opposite of the first option. Equal energy gives equal temperature changes only when $m \times c$ is equal too, and a middle value of $c$ gives a middle rise.
+
+</div>
+</Check>
+
+## Energy lost, energy gained
+
+Put a hot object in contact with a cold one, and energy passes from the hot one to the cold one until both are at one temperature: thermal equilibrium. Topic 6.3 explains this with collisions between particles.
+
+The **first law of thermodynamics** says that energy is conserved: it is never made or destroyed in a chemical or physical process, only moved or changed in form. So if no energy escapes to anything else, every joule the hot object loses is a joule the cold object gains.
+
+$$
+q_\text{lost} = -q_\text{gained}
+$$
+
+The two heats are equal in size and opposite in sign, so they add to zero. This line is not on the equation sheet. It is the first law, written for two objects.
+
+What is equal is the energy. The temperature changes are usually not equal. Each object's change is its own $q/(mc)$, so the object with the larger $m \times c$ changes less.
+
+<KeyIdea>
+
+When a hot object and a cold one exchange energy only with each other, the energy one loses equals the energy the other gains. The energies match. The temperature changes do not have to.
+
+</KeyIdea>
+
+<Check
+  answer={2}
+  misses={{
+    1: "Halfway would mean equal temperature changes. The energies are equal, not the changes. Compare mass × c for the two.",
+    3: "Starting hotter does not pull the result toward the tin. For the same energy, which of the two changes temperature less?",
+    4: "Only the energy that moves matters, and q = mcΔT gives it for each body. Set the energy lost equal in size to the energy gained.",
+  }}
+>
+A student pours 75 g of tin shot at 90 °C into 75 g of water at 30 °C in an insulated cup. The specific heat capacity of tin is 0.228 J/(g·°C) and that of water is 4.18 J/(g·°C). Where does the final temperature lie?
+
+- Exactly 60 °C, halfway between the two, because the two masses are equal
+- Between 30 °C and 60 °C, because water needs more energy for each degree
+- Between 60 °C and 90 °C, because the tin started at the higher temperature
+- It cannot be predicted without knowing how much energy the tin holds at 90 °C
+
+<div slot="why">The tin loses exactly the energy the water gains. Gram for gram, water needs about 18 times as much energy for each degree as tin does, so with equal masses the water's temperature changes about one-eighteenth as much as the tin's. The final temperature is far nearer the water's start: 33.1 °C. Halfway would need equal values of m × c. Starting hotter does not give the tin more say. And nothing about the energy "in" the tin is needed: q = mcΔT gives the energy that moves.</div>
+</Check>
+
+In the diagram below, a hot piece of metal goes into cooler water in an insulated cup. You choose the metal, its mass, its starting temperature and the mass of water.
+
+<Calorimetry />
+
+Do three things with it, and predict before each move.
+
+1. **Read the starting state.** 100 g of titanium at 80 °C goes into 100 g of water at 20.0 °C. Both end at 26.7 °C. The two bars are the same height, 2,789 J: what the titanium lost and what the water gained. The titanium fell 53.33 °C and the water rose 6.67 °C.
+
+2. **Change only the metal.** Before you choose tungsten, predict: will the final temperature be higher or lower? You should see it come out lower, at 21.8 °C, and the bars shrink to 768 J. The same mass of tungsten, cooling over nearly the same range, has less energy to give, because its specific heat capacity is smaller. Tin lands between, at 23.1 °C and 1,297 J.
+
+3. **Add water.** Go back to titanium and slide the mass of water up to 200 g. Predict both things first: the final temperature and the height of the bars. You should see the final temperature fall to 23.5 °C, yet the bars grow to 2,953 J. The titanium ends cooler, so it gave up more energy, and twice the water still warmed less.
+
+## The coffee-cup calorimeter
+
+**Calorimetry** is the measurement of energy transferred as heat, made by watching a temperature change. The container it is done in is a **calorimeter**. The simplest is two foam cups, one inside the other, with a lid, a thermometer and a stirrer.
+
+<Figure
+  src="/figures/6-4-coffee-cup-calorimeter.svg"
+  alt="A cross-section of a coffee-cup calorimeter with six labeled parts: a thermometer and a stirrer pass through a lid into water held in two foam cups, one inside the other, and a small solid sample rests on the bottom."
+  caption="A coffee-cup calorimeter. The foam keeps nearly all the energy inside the cup for the short time a measurement takes."
+/>
+
+Foam is a poor conductor, so very little energy passes between the cup's contents and the room during the minute or two a measurement takes. The contents exchange energy with one another only, which is the condition for $q_\text{lost} = -q_\text{gained}$. The cup is open to the air through the lid's holes, so whatever happens in it happens at the pressure of the room. Topic 6.6 needs that.
+
+Every calculation with this cup rests on two assumptions. No energy escapes from the cup. And the cup, lid and thermometer themselves take in so little energy that it is ignored, unless a question gives a number for it.
+
+For a solid put into water, the method has three steps:
+
+- Measure the water's temperature change and compute $q$ for the water.
+- The solid's $q$ is the same size with the opposite sign.
+- From the solid's $q$, its mass and its own temperature change, find whatever is asked.
+
+<Worked title="Cold ceramic in warm water">
+
+A lab technician checks the specific heat capacity of alumina, Al₂O₃, the hard white ceramic that some laboratory crucibles are made of. She keeps 85.0 g of alumina beads in a freezer at −18.00 °C, then tips them at once into 150.0 g of water at 24.00 °C in a coffee-cup calorimeter. The water is stirred, and the temperature settles at 20.01 °C. The specific heat capacity of water is 4.18 J/(g·°C). What specific heat capacity does the experiment give for alumina?
+
+1. **Start with the water, because everything about it is known.** Its temperature change is final minus initial.
+
+   $$
+   \begin{aligned}
+   \Delta T &= 20.01 - 24.00 \\
+   &= -3.99\ \text{°C}
+   \end{aligned}
+   $$
+
+   Then $q$ for the water, in joules:
+
+   $$
+   \begin{aligned}
+   q &= (150.0)(4.18)(-3.99) \\
+   &= -2{,}502\ \text{J}
+   \end{aligned}
+   $$
+
+   The water lost 2,502 J.
+
+2. **Use conservation of energy.** The beads gained what the water lost.
+
+   $$
+   q_\text{beads} = +2{,}502\ \text{J}
+   $$
+
+3. **Find the beads' own temperature change.** They end at the same 20.01 °C as the water.
+
+   $$
+   \begin{aligned}
+   \Delta T &= 20.01 - (-18.00) \\
+   &= +38.01\ \text{°C}
+   \end{aligned}
+   $$
+
+4. **Solve $q = mc\Delta T$ for $c$.** Use the beads' own $q$, mass and $\Delta T$.
+
+   $$
+   \begin{aligned}
+   c &= \frac{q}{m\,\Delta T} \\
+   &= \frac{2{,}502}{(85.0)(38.01)} \\
+   &= 0.774\ \text{J/(g·°C)}
+   \end{aligned}
+   $$
+
+5. **Check it.** A specific heat capacity must be positive, and this one is: the beads' $q$ and their $\Delta T$ are both positive. It is also a sensible size: handbooks list about 0.78 J/(g·°C) for alumina at room temperature. Notice the two temperature changes: about 4 °C for the water and about 38 °C for the beads, for the same 2,502 J.
+
+</Worked>
+
+<Check
+  numeric="163"
+  unit="g"
+  slips={{
+    "382": "Did you swap the two temperature changes? Each water's change is its own: the final temperature minus where that water started.",
+    "112": "Did you use 38.0 °C as the temperature change of the cold water? ΔT is the final temperature minus the starting temperature.",
+    "354": "Did you use 12.0 °C as the temperature change of the cold water? ΔT is the final temperature minus the starting temperature.",
+    "-163": "A mass cannot be negative. The q of the hot water is negative and the q of the cold water is positive, so the signs cancel.",
+    "250": "That is the mass of the hot water. The two masses would be equal only if the two temperature changes were equal in size.",
+  }}
+>
+A baker wants water at 38.0 °C for a yeast dough. She has 250.0 g of hot water at 55.0 °C in an insulated jug and cools it by pouring in cold water at 12.0 °C. The specific heat capacity of water is 4.18 J/(g·°C), and the two portions of water exchange energy only with each other. What mass of cold water, in g, brings the mixture to 38.0 °C?
+
+<div slot="why">
+
+The hot water's $\Delta T$ is 38.0 − 55.0 = −17.0 °C. Its $q$, in joules:
+
+$$
+\begin{aligned}
+q &= (250.0)(4.18)(-17.0) \\
+&= -17{,}765\ \text{J}
+\end{aligned}
+$$
+
+The cold water gains that much: +17,765 J. Its own $\Delta T$ is 38.0 − 12.0 = +26.0 °C. Solve for its mass, in grams:
+
+$$
+\begin{aligned}
+m &= \frac{q}{c\,\Delta T} \\
+&= \frac{17{,}765}{(4.18)(26.0)} \\
+&= 163\ \text{g}
+\end{aligned}
+$$
+
+Less cold water than hot is needed, because each gram of the cold water changes by more degrees. Both portions are water, so the 4.18 would have canceled.
+
+</div>
+</Check>
+
+## When something dissolves
+
+A coffee-cup calorimeter also measures the energy change when a solid dissolves. Now there is no second object: the solid ends up spread through the water, and the thing whose temperature changes is the whole solution.
+
+If the solution warms, it gained energy, so the dissolving released energy: it is exothermic (topic 6.1). If the solution cools, it lost energy, so the dissolving absorbed energy: it is endothermic.
+
+The size comes from the same equation, used for the solution:
+
+$$
+q_\text{solution} = mc\Delta T
+$$
+
+Here $m$ is the mass of everything in the cup that changed temperature: the water plus the dissolved solid. For a dilute solution, $c$ is taken as water's, 4.18 J/(g·°C), unless the question gives another value. Then reverse the sign:
+
+$$
+q_\text{dissolving} = -q_\text{solution}
+$$
+
+Topic 6.6 takes the next step, from this energy to an energy per mole.
+
+<Check
+  answer={1}
+  misses={{
+    2: "The mixture warmed. If the dissolving had absorbed energy, where would that energy have come from?",
+    3: "The dissolved solid is part of the liquid that warmed. What is the mass of everything that rose by 6.5 °C?",
+    4: "The thermometer sits in the whole solution, not in 12.0 g of solid. What is the mass of everything that rose by 6.5 °C?",
+  }}
+>
+Dyers add soda ash, which is anhydrous sodium carbonate, to a dye bath. A student dissolves 12.0 g of soda ash in 100.0 g of water in a coffee-cup calorimeter. The temperature of the mixture rises from 19.5 °C to 26.0 °C. Take the specific heat capacity of the solution as 4.18 J/(g·°C). Which statement do the data support?
+
+- The dissolving released about 3.0 kJ, which the 112.0 g of solution gained
+- The dissolving absorbed about 3.0 kJ, which is why the temperature went up
+- The dissolving released about 2.7 kJ, the energy gained by the 100.0 g of water
+- The dissolving released about 0.33 kJ, the energy gained by the 12.0 g of solid
+
+<div slot="why">
+
+Everything in the cup warmed by 6.5 °C, and everything in the cup is 100.0 g of water plus 12.0 g of dissolved solid. For the solution, in joules:
+
+$$
+\begin{aligned}
+q &= (112.0)(4.18)(6.5) \\
+&= 3{,}043\ \text{J}
+\end{aligned}
+$$
+
+That is about 3.0 kJ, and it is positive: the solution gained energy. That energy came from the dissolving, which therefore released it. A process that absorbed energy would have cooled the mixture. Using the water alone or the solid alone leaves out part of what warmed.
+
+</div>
+</Check>
+
+**When the cup is counted too.** A real cup, lid and thermometer take in or give up a little energy as well. Some questions give a number for it. The **calorimeter constant** is the heat capacity of the calorimeter itself: the energy needed to change its temperature by 1 °C, in J/°C. The calorimeter changes by the same $\Delta T$ as its contents, so its share is
+
+$$
+q_\text{calorimeter} = C_\text{cal}\,\Delta T
+$$
+
+and it is added to the solution's $q$ before the sign is reversed. If a question gives no calorimeter constant, leave it out.
+
+<Check
+  numeric="919"
+  unit="J"
+  slips={{
+    "888": "That leaves out the calorimeter. It cooled by the same 2.54 °C, and its heat capacity is 12.5 J/°C.",
+    "881": "Did you use 80.0 g as the mass of the solution? The solution is the water plus the dissolved urea.",
+    "849": "Two things are missing: the 3.60 g of solid in the mass of the solution, and the energy the calorimeter itself gave up.",
+    "856": "Did you subtract the calorimeter's share? The calorimeter cooled too, so its energy is added to the solution's.",
+    "-919": "The question asks how much energy the dissolving absorbed, which is a size. Type it without the minus sign.",
+    "0.919": "That is in kilojoules. The question asks for joules.",
+  }}
+>
+A coffee-cup calorimeter with a calorimeter constant of 12.5 J/°C holds 80.0 g of water at 22.40 °C. When 3.60 g of urea, a nitrogen fertilizer, dissolves in it, the temperature falls to 19.86 °C. Take the specific heat capacity of the solution as 4.18 J/(g·°C). How much energy, in J, did the dissolving absorb?
+
+<div slot="why">
+
+$\Delta T$ is final minus initial.
+
+$$
+\begin{aligned}
+\Delta T &= 19.86 - 22.40 \\
+&= -2.54\ \text{°C}
+\end{aligned}
+$$
+
+The solution is 80.0 + 3.60 = 83.6 g. Its $q$, in joules:
+
+$$
+\begin{aligned}
+q &= (83.6)(4.18)(-2.54) \\
+&= -887.6\ \text{J}
+\end{aligned}
+$$
+
+The calorimeter cooled by the same amount:
+
+$$
+\begin{aligned}
+q &= (12.5)(-2.54) \\
+&= -31.8\ \text{J}
+\end{aligned}
+$$
+
+Together they lost 919 J (919.3 before rounding), and the dissolving absorbed what they lost: 919 J.
+
+</div>
+</Check>
+
+A chemical system changes its energy in three main ways: by being heated or cooled, by changing phase, and by reacting. This lesson measured the first; topic 6.5 takes the second and topic 6.6 the third, and the same cup measures all three.
+
+**Beyond the exam:** fuels are burned in a sealed steel vessel called a bomb calorimeter, which works at constant volume. The exam's calorimeter is the open cup.
+
+<Trap>
+
+Six mistakes cost points on this topic:
+
+- **Pairing one substance's mass with another's $c$ or $\Delta T$.** Each $q = mc\Delta T$ is about one substance: its mass, its specific heat capacity, its own temperature change.
+- **Taking $\Delta T$ as the bigger number minus the smaller.** It is final minus initial, and its sign carries the direction of the energy.
+- **Expecting equal temperature changes.** The energies are equal in size. Each temperature change depends on that object's $m \times c$.
+- **Leaving the dissolved solid out of the solution's mass.** Everything that changed temperature counts.
+- **Reading a rising thermometer as "absorbed".** If the solution warmed, the dissolving released the energy the solution gained.
+- **Giving joules where kilojoules were asked for,** or the reverse.
+
+</Trap>
+
+<KeyPoints>
+
+- The specific heat capacity $c$ is the energy that raises the temperature of 1 g of a substance by 1 °C. The molar heat capacity $C$ is the same for 1 mol.
+- $q = mc\Delta T$ (or $q = nC\Delta T$) gives the heat a substance gains or loses when only its temperature changes. $\Delta T$ is final minus initial, so $q$ is positive for energy gained and negative for energy lost.
+- For equal masses, the same energy gives a smaller temperature change to the substance with the larger specific heat capacity.
+- Energy is conserved (the first law of thermodynamics), so when two objects exchange energy only with each other, $q_\text{lost} = -q_\text{gained}$.
+- A coffee-cup calorimeter keeps the exchange inside the cup, at constant pressure, and the water's or the solution's $q$ gives the size of the energy transferred.
+- When a solid dissolves, a solution that warms shows the dissolving released energy, and a solution that cools shows it absorbed energy. The mass in $q = mc\Delta T$ is the mass of the whole solution.
+
+</KeyPoints>
+
+<PracticeNext />
