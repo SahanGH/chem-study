@@ -265,6 +265,8 @@ Branch `topic/unit-8-practice-worksheets`, from `topic/unit-8-practice-design`.
 
 ### Task 1: Convert Worksheets 1 to 5
 
+> **As carried out (2026-11-27), Tasks 1 to 3.** Five writers converted the worksheets in parallel into the scratch folder; each audit was clean on the first pass. Each page then had a fact-check, a fixer, and one second check of all five that built the pages and measured them. Pull request 97.
+
 One writer per worksheet, in parallel, writing files only, into `scratchpad/unit8-practice/staging/`, completing its audit's expected file in `scratchpad/unit8-practice/expected/`. Each gets: `scratchpad/unit8-practice/writer-brief.md`; Plan 3's conversion guide; this plan's "Facts", "Conventions" (the layout rules) and "What Unit 8 adds"; its own entry below; its source `.tex`; a finished worksheet as the model (`src/content/practice/unit-6/worksheet-2-calorimetry-and-phase-changes.mdx`; for an ICE table on a practice page, `unit-7/worksheet-3-ice-tables.mdx`; for Worksheet 5's scored question, `unit-6/worksheet-4-bond-and-formation-enthalpies-and-a-long-free-response-question.mdx`, question 8); and the Unit 8 lessons for the terms.
 
 **Worksheet 1** (`u08-ws1.tex`):
@@ -482,6 +484,8 @@ The body gives each document's questions and points, each audit's last line, wha
 Branch `topic/unit-8-practice-ladders-frq`, from `topic/unit-8-practice-worksheets`. The two drafts are written in the scratch folder at the same time as the worksheets.
 
 ### Task 4: Convert the skill ladders and the free-response set
+
+> **As carried out (2026-11-27), Tasks 4 to 6.** Both documents were written in the scratch folder after the worksheets had been checked, so their writers began with what those checks had found (the unit M, the check with its percentage, the pOH step). The ladders were fact-checked in two halves; the design's "As built" note lists what was found.
 
 **Skill ladders** (`u08-selfstudy.tex`), modeled on `src/content/practice/unit-6/skill-ladders.mdx`:
 
