@@ -165,6 +165,8 @@ The last task of group D closes the unit: an "As built" section in the design, "
 
 Branch: `topic/unit-9-entropy-and-free-energy`, from this plan's branch (`topic/unit-9-lessons-design`).
 
+> **As carried out.** The free-energy explorer on Opus, four writers on Fable, a fact-check of each lesson on Fable, an originality check of the prose on Sonnet (ten passages reworded) and a code review on Sonnet. No fact-check found a wrong number. The explorer's first browser run found two layout faults (two axis labels meeting for one reaction, and the slider 17 px off a small phone screen), both fixed in the drawing; the review then found no bug. Pull request 92.
+
 Lesson 9.3's brief holds the "Diagram data" of the free-energy explorer. Before the lessons: the sample lessons of `tests/unit/check-dist.test.ts` move to topic 0.2, and Unit 9 goes on `FEEDBACK_UNITS`.
 
 > **How these briefs were checked.** See section 11 of the design. The first fact-check found no wrong value. The originality check had lesson 9.1's figure and third Check, lesson 9.3's worked example (now magnesium hydride) and most of lesson 9.4's scenes changed. The second check found lesson 9.4's third Check saying something false about how hopcalite works; it was reworded.
@@ -1264,6 +1266,8 @@ All for 25 °C, all written from memory. ΔH°f and ΔG°f in kJ/mol, S° in J/(
 
 Branch: `topic/unit-9-equilibrium-and-coupling`, from `topic/unit-9-entropy-and-free-energy`.
 
+> **As carried out.** The explorer of ΔG° and K on Opus, three writers on Fable, then the same checks. The fact-checks found three errors that came from the briefs (the design's section 12 lists them), and the originality check had 13 passages reworded. The explorer passed its browser tests on the first run, and its review found no bug. The two sentences about diamond were corrected as the design's section 3 decides. Pull request 94.
+
 Lesson 9.5's brief holds the "Diagram data" of the explorer of ΔG° and K. This pull request also corrects the two sentences about diamond and graphite in the Unit 5 and Unit 7 practice pages (the design's section 1).
 
 > **How these briefs were checked.** See section 11 of the design. The first fact-check found two shown steps that did not give their printed results and one piece of wrong reasoning about salts in hot water. Lesson 9.7 was rebuilt after the originality check, and its second check found one Check answered by the section above it.
@@ -2010,6 +2014,8 @@ No atomic mass is used in this lesson.
 ## Group D: electrochemistry (pull request D)
 
 Branch: `topic/unit-9-electrochemistry`, from `topic/unit-9-equilibrium-and-coupling`.
+
+> **As carried out.** The galvanic cell explorer on Opus, four writers on Fable, then the same checks. No fact-check found a wrong number; the originality check had 11 passages reworded. With all eleven lessons in, the check-feedback data file holds 63 Checks, the sweep tried 216 wrong answers and every one showed its message, and Unit 9 went on `BALANCED_UNITS`. Task 12's list for the teacher is the "As built" section of the design.
 
 Lesson 9.9's brief holds the "Diagram data" of the galvanic cell explorer, which lesson 9.10 uses again. With all eleven lessons in, Unit 9 goes on `BALANCED_UNITS`, and the last task closes the unit out.
 
