@@ -1,0 +1,764 @@
+{
+  "unit": 2,
+  "written": "2026-11-27",
+  "note": "Feedback for the Checks of Unit 2. The design is docs/superpowers/specs/2026-11-26-chemstudy-us-english-and-unit-1-check-feedback-design.md. Options are listed in the order they are to have on the page; the option with no message is the answer.",
+  "checks": [
+    {
+      "lesson": "2.1",
+      "file": "src/content/lessons/unit-2/2-1-types-of-chemical-bonds.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 4,
+      "moved": true,
+      "options": [
+        {
+          "text": "S",
+          "message": "Electronegativity rises as you move across a period. Sulfur is not the farthest right of these four."
+        },
+        {
+          "text": "Se",
+          "message": "Electronegativity rises across a period and falls down a group. Selenium is neither the farthest right nor the highest up of these."
+        },
+        {
+          "text": "Br",
+          "message": "Bromine is far to the right, but electronegativity also falls as you move down a group."
+        },
+        {
+          "text": "Cl",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "2.1",
+      "file": "src/content/lessons/unit-2/2-1-types-of-chemical-bonds.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "The carbon atom is partly negative.",
+          "message": "If either atom is partly negative, it is the one that pulls the shared pair harder. Compare the two electronegativities."
+        },
+        {
+          "text": "The oxygen atom is partly negative.",
+          "message": null
+        },
+        {
+          "text": "Neither atom carries a partial charge.",
+          "message": "Even sharing takes the same, or nearly the same, electronegativity. Carbon and oxygen differ by 0.8."
+        },
+        {
+          "text": "The oxygen atom carries a full −1 charge.",
+          "message": "A full charge means an electron was handed over, as in an ionic bond. In a C–O bond the pair is still shared."
+        }
+      ]
+    },
+    {
+      "lesson": "2.1",
+      "file": "src/content/lessons/unit-2/2-1-types-of-chemical-bonds.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Metallic",
+          "message": "A metal conducts while it is still solid. This solid does not."
+        },
+        {
+          "text": "Ionic",
+          "message": null
+        },
+        {
+          "text": "Covalent bonds within molecules, with the molecules held by weak attractions",
+          "message": "A solid made of molecules usually melts at a lower temperature, and it does not conduct even when melted."
+        },
+        {
+          "text": "There is not enough information",
+          "message": "The behavior is the evidence. Match the melting point and the two conduction tests against each kind of solid."
+        }
+      ]
+    },
+    {
+      "lesson": "2.1",
+      "file": "src/content/lessons/unit-2/2-1-types-of-chemical-bonds.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "C and H",
+          "message": "Ionic character grows with the difference in electronegativity. C and H differ by 0.4, so little that the bond is treated as nonpolar."
+        },
+        {
+          "text": "N and O",
+          "message": "Nitrogen and oxygen are neighbors in one period, so their electronegativities are close. Look for the biggest difference."
+        },
+        {
+          "text": "Li and F",
+          "message": null
+        },
+        {
+          "text": "Cl and Cl",
+          "message": "Two atoms of the same element pull equally hard, so the difference is 0. Ionic character grows with the difference."
+        }
+      ]
+    },
+    {
+      "lesson": "2.2",
+      "file": "src/content/lessons/unit-2/2-2-intramolecular-force-and-potential-energy.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 4,
+      "moved": true,
+      "options": [
+        {
+          "text": "Where the curve crosses zero",
+          "message": "Zero is the energy of the atoms when they are far apart. Ask instead where two bonded atoms settle."
+        },
+        {
+          "text": "Where the curve is steepest",
+          "message": "The steep part is where the nuclei are pushed too close and repel. The atoms do not stay there."
+        },
+        {
+          "text": "At the far right, where the curve levels off",
+          "message": "At the far right the atoms are far apart and do not interact. That is not a bond."
+        },
+        {
+          "text": "At the lowest point of the curve",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "2.2",
+      "file": "src/content/lessons/unit-2/2-2-intramolecular-force-and-potential-energy.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "The single bond",
+          "message": "A single bond shares one pair. What does sharing more pairs do to the distance between the nuclei?"
+        },
+        {
+          "text": "The double bond",
+          "message": "Bond order sets the length. Compare the number of shared pairs in each of the three bonds."
+        },
+        {
+          "text": "The triple bond",
+          "message": null
+        },
+        {
+          "text": "All three are the same length",
+          "message": "The same two atoms can sit at different distances. The number of shared pairs changes how tightly the nuclei are held."
+        }
+      ]
+    },
+    {
+      "lesson": "2.2",
+      "file": "src/content/lessons/unit-2/2-2-intramolecular-force-and-potential-energy.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "KBr",
+          "message": "K⁺ and Br⁻ are large ions, so their centers stay far apart. And before sizes, compare the charges of the ions in each compound."
+        },
+        {
+          "text": "KCl",
+          "message": "Look at the charges of the ions in each compound before you compare sizes. A change in charge usually matters more."
+        },
+        {
+          "text": "CaO",
+          "message": null
+        },
+        {
+          "text": "NaCl",
+          "message": "Small ions help, but size is the second thing to compare. Write the charge of each ion in all four compounds first."
+        }
+      ]
+    },
+    {
+      "lesson": "2.2",
+      "file": "src/content/lessons/unit-2/2-2-intramolecular-force-and-potential-energy.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "MgO, because $\\ce{Mg^2+}$ is smaller than $\\ce{Ca^2+}$",
+          "message": null
+        },
+        {
+          "text": "CaO, because $\\ce{Ca^2+}$ is larger than $\\ce{Mg^2+}$",
+          "message": "Larger ions keep their centers farther apart. What does Coulomb's law say more distance does to the attraction?"
+        },
+        {
+          "text": "MgO, because magnesium ions carry a larger charge than calcium ions",
+          "message": "Check the charges: Mg²⁺ and Ca²⁺ are both 2+. Something other than charge has to decide."
+        },
+        {
+          "text": "They are the same, because the charges are the same",
+          "message": "The charges tie, but charge is one of two things in Coulomb's law. Compare the distances between the ions' centers."
+        }
+      ]
+    },
+    {
+      "lesson": "2.3",
+      "file": "src/content/lessons/unit-2/2-3-structure-of-ionic-solids.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 4,
+      "moved": true,
+      "options": [
+        {
+          "text": "Their molecules are very heavy.",
+          "message": "An ionic solid has no molecules. Its formula gives the ratio of the ions in the crystal."
+        },
+        {
+          "text": "Ions cannot move even in a liquid.",
+          "message": "Ions are free to move in the liquid, which is why melted salt conducts. Ask what holds them in place in the solid."
+        },
+        {
+          "text": "Their covalent bonds must be broken to melt them.",
+          "message": "The particles of an ionic solid are ions, and no shared pair joins one ion to the next. Ask what melting has to do to those ions."
+        },
+        {
+          "text": "Melting requires overcoming strong attractions between many oppositely charged ions.",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "2.3",
+      "file": "src/content/lessons/unit-2/2-3-structure-of-ionic-solids.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "The hammer breaks the covalent bonds inside the crystal.",
+          "message": "Potassium chloride is made of K⁺ and Cl⁻ ions. There are no covalent bonds in the crystal to break."
+        },
+        {
+          "text": "The ions are pushed so close together that they turn into atoms.",
+          "message": "A blow does not turn ions into atoms; they stay ions. Ask what the blow does to the pattern of charges in the crystal."
+        },
+        {
+          "text": "A shifted layer puts ions of the same charge next to each other, and they repel.",
+          "message": null
+        },
+        {
+          "text": "The delocalized electrons are knocked out of the crystal.",
+          "message": "Delocalized electrons belong to metals. An ionic crystal is made of ions locked in place."
+        }
+      ]
+    },
+    {
+      "lesson": "2.3",
+      "file": "src/content/lessons/unit-2/2-3-structure-of-ionic-solids.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Only as a solid.",
+          "message": "A current needs charges that can move. In the solid, every ion is locked in place by its neighbors."
+        },
+        {
+          "text": "Only when melted or dissolved in water.",
+          "message": null
+        },
+        {
+          "text": "In every state.",
+          "message": "A current needs charges that can move. Check whether the ions can move in each state."
+        },
+        {
+          "text": "Never, because it contains no free electrons.",
+          "message": "Electrons are not the only charges that can carry a current. Ions can too, when they are free to move."
+        }
+      ]
+    },
+    {
+      "lesson": "2.4",
+      "file": "src/content/lessons/unit-2/2-4-structure-of-metals-and-alloys.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Copper atoms are smaller than sodium ions",
+          "message": "The size of the particles does not decide whether a solid conducts. A current needs charges that can move."
+        },
+        {
+          "text": "Copper has stronger bonds than sodium chloride",
+          "message": "How strong the bonds are does not decide whether a solid conducts. Ask which charges can move."
+        },
+        {
+          "text": "Copper's valence electrons are delocalized and free to move, while the ions in solid sodium chloride are fixed in place",
+          "message": null
+        },
+        {
+          "text": "Sodium chloride contains no charged particles",
+          "message": "Sodium chloride is made of Na⁺ and Cl⁻ ions, so it is full of charge. Ask whether that charge can move in the solid."
+        }
+      ]
+    },
+    {
+      "lesson": "2.4",
+      "file": "src/content/lessons/unit-2/2-4-structure-of-metals-and-alloys.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Interstitial",
+          "message": null
+        },
+        {
+          "text": "Substitutional",
+          "message": "A substitutional alloy forms from atoms of similar size. Compare 60 pm with 140 pm."
+        },
+        {
+          "text": "Ionic",
+          "message": "An alloy is a metal mixed with another element, and it still has its sea of electrons. Compare the two radii to see how the atoms fit."
+        },
+        {
+          "text": "No alloy can form",
+          "message": "Atoms of a different size can still fit into a metal's lattice. Compare the two radii to see where they would go."
+        }
+      ]
+    },
+    {
+      "lesson": "2.4",
+      "file": "src/content/lessons/unit-2/2-4-structure-of-metals-and-alloys.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 4,
+      "moved": true,
+      "options": [
+        {
+          "text": "It bends more easily, because carbon adds electrons to the sea",
+          "message": "The sea of electrons is not what changes here. Ask how a metal bends, and what atoms of another size do to that."
+        },
+        {
+          "text": "It behaves the same, because carbon atoms are so small",
+          "message": "Small atoms still take up room in the lattice. Ask how a metal bends, and whether atoms of another size change that."
+        },
+        {
+          "text": "It shatters, because carbon makes it ionic",
+          "message": "Steel is still a metal, with its sea of electrons, so it is not ionic. Ask how a metal bends, and what the added carbon does to that."
+        },
+        {
+          "text": "It is harder to bend, because carbon atoms in the gaps keep the iron layers from sliding",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "2.5",
+      "file": "src/content/lessons/unit-2/2-5-lewis-diagrams.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "32",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "30",
+          "from": "the 2− charge not counted",
+          "message": "That is what the neutral atoms give. Did you count the charge of the ion?"
+        },
+        {
+          "value": "28",
+          "from": "two electrons taken away for the 2− charge",
+          "message": "Did you take two electrons away for the charge? A negative ion has gained electrons."
+        },
+        {
+          "value": "14",
+          "from": "one oxygen counted, not four",
+          "message": "That is what one sulfur and one oxygen give, with the charge. Check the subscript on the oxygen."
+        },
+        {
+          "value": "50",
+          "from": "every electron counted, not the valence electrons",
+          "message": "That is what counting every electron in the ion gives. A Lewis diagram counts valence electrons only."
+        }
+      ]
+    },
+    {
+      "lesson": "2.5",
+      "file": "src/content/lessons/unit-2/2-5-lewis-diagrams.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "H–C≡N, with one lone pair on N",
+          "message": null
+        },
+        {
+          "text": "H–C=N, with two lone pairs on N",
+          "message": "Count the electrons around carbon in this diagram. Both electrons of every bond it is part of count for it."
+        },
+        {
+          "text": "H–C≡N, with no lone pairs",
+          "message": "Count the electrons drawn in this diagram, and compare with the count of valence electrons. Each one has to be somewhere."
+        },
+        {
+          "text": "H–C–N, with three lone pairs on N",
+          "message": "Count the electrons around carbon in this diagram. With two single bonds it is well short of eight."
+        }
+      ]
+    },
+    {
+      "lesson": "2.5",
+      "file": "src/content/lessons/unit-2/2-5-lewis-diagrams.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "0",
+          "message": "Count the valence electrons, then take away the ones used in the N–H bonds. Any left over go on nitrogen."
+        },
+        {
+          "text": "1",
+          "message": null
+        },
+        {
+          "text": "2",
+          "message": "Two lone pairs and three bonds would put ten electrons around nitrogen. A second-period atom never holds more than eight."
+        },
+        {
+          "text": "3",
+          "message": "Three lone pairs and three bonds would put twelve electrons around nitrogen. Compare that with the count of valence electrons."
+        }
+      ]
+    },
+    {
+      "lesson": "2.5",
+      "file": "src/content/lessons/unit-2/2-5-lewis-diagrams.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "The 2− charge was not counted, and it adds two electrons.",
+          "message": null
+        },
+        {
+          "text": "Oxygen was counted with 5 valence electrons instead of 6.",
+          "message": "Try it: with 5 for each oxygen, the atoms would give 4 + 3 × 5 = 19, not 22. Oxygen is in group 16, so 6 is its number."
+        },
+        {
+          "text": "Carbon should have been given an expanded octet.",
+          "message": "Carbon is in the second period, so it never holds more than eight. The fault here is in the count, not in the drawing."
+        },
+        {
+          "text": "A carbonate ion has 22 electrons, so nothing went wrong.",
+          "message": "Do the count yourself from the formula, CO₃²⁻. Does every part of the formula appear in your sum?"
+        }
+      ]
+    },
+    {
+      "lesson": "2.5",
+      "file": "src/content/lessons/unit-2/2-5-lewis-diagrams.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "$\\ce{BF3}$",
+          "message": null
+        },
+        {
+          "text": "$\\ce{NF3}$",
+          "message": "Count around nitrogen: three bonds and one lone pair, with both electrons of each bond counted."
+        },
+        {
+          "text": "$\\ce{CF4}$",
+          "message": "Count around carbon: four bonds, with both electrons of each bond counted."
+        },
+        {
+          "text": "$\\ce{OF2}$",
+          "message": "Count around oxygen: two bonds and two lone pairs, with both electrons of each bond counted."
+        }
+      ]
+    },
+    {
+      "lesson": "2.6",
+      "file": "src/content/lessons/unit-2/2-6-resonance-and-formal-charge.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "1",
+          "message": "A single diagram puts the double bond on one oxygen atom. Could it just as well go on another?"
+        },
+        {
+          "text": "2",
+          "message": "Draw each structure out. Have you tried the double bond in every place it could go?"
+        },
+        {
+          "text": "3",
+          "message": null
+        },
+        {
+          "text": "4",
+          "message": "Resonance structures keep every atom in place and move only electron pairs. Count the places the double bond can go."
+        }
+      ]
+    },
+    {
+      "lesson": "2.6",
+      "file": "src/content/lessons/unit-2/2-6-resonance-and-formal-charge.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "1",
+          "message": "That is the order of a single bond in one diagram. The real ion is the average of all its resonance structures."
+        },
+        {
+          "text": "$4/3$",
+          "message": null
+        },
+        {
+          "text": "$3/2$",
+          "message": "That is ozone's value: three bonding pairs spread over two bonds. Count the bonding pairs and the bonds in carbonate."
+        },
+        {
+          "text": "2",
+          "message": "That is the order of the double bond in one diagram. The real ion is the average of all its resonance structures."
+        }
+      ]
+    },
+    {
+      "lesson": "2.6",
+      "file": "src/content/lessons/unit-2/2-6-resonance-and-formal-charge.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "H–C≡N, with one lone pair on N",
+          "message": null
+        },
+        {
+          "text": "H–N≡C, with one lone pair on C",
+          "message": "Work out the formal charge on N and on C in this arrangement: valence electrons minus nonbonding electrons minus bonds."
+        },
+        {
+          "text": "both",
+          "message": "Check each arrangement atom by atom. Carbon and nitrogen bring different numbers of valence electrons, so swapping them changes the result."
+        },
+        {
+          "text": "neither",
+          "message": "Work out each atom's formal charge: valence electrons minus nonbonding electrons minus bonds. A triple bond counts 3."
+        }
+      ]
+    },
+    {
+      "lesson": "2.6",
+      "file": "src/content/lessons/unit-2/2-6-resonance-and-formal-charge.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "0",
+          "message": "Use the formula: valence electrons minus nonbonding electrons minus bonds. Count nitrogen's bonds and lone pairs in this ion, not in NH₃."
+        },
+        {
+          "text": "+1",
+          "message": null
+        },
+        {
+          "text": "−1",
+          "message": "Check the order of the subtraction. Start from nitrogen's valence electrons, then take away its nonbonding electrons and its bonds."
+        },
+        {
+          "text": "+4",
+          "message": "That is the number of bonds. Formal charge starts from the valence electrons and takes the nonbonding electrons and the bonds away."
+        }
+      ]
+    },
+    {
+      "lesson": "2.6",
+      "file": "src/content/lessons/unit-2/2-6-resonance-and-formal-charge.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Nitrogen is in the second period.",
+          "message": "Being in the second period keeps an atom from holding more than eight. It does not keep it from reaching eight."
+        },
+        {
+          "text": "Oxygen is more electronegative than nitrogen.",
+          "message": "Electronegativity helps decide where a formal charge goes. It does not decide whether every atom can reach eight."
+        },
+        {
+          "text": "The molecule has an odd number of valence electrons, 17.",
+          "message": null
+        },
+        {
+          "text": "NO₂ has resonance structures.",
+          "message": "Ozone and the nitrate ion have resonance structures too, and every atom in them has eight. Resonance is not what leaves an atom short."
+        }
+      ]
+    },
+    {
+      "lesson": "2.7",
+      "file": "src/content/lessons/unit-2/2-7-vsepr-and-hybridization.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "linear",
+          "message": "The Lewis diagram is drawn flat, so its angles mean nothing. Count all the domains on sulfur, lone pairs included."
+        },
+        {
+          "text": "bent",
+          "message": null
+        },
+        {
+          "text": "trigonal pyramidal",
+          "message": "A trigonal pyramidal shape has three bonds and one lone pair. Count the bonds on sulfur."
+        },
+        {
+          "text": "tetrahedral",
+          "message": "That is the electron geometry. The molecular shape is named from the positions of the atoms only."
+        }
+      ]
+    },
+    {
+      "lesson": "2.7",
+      "file": "src/content/lessons/unit-2/2-7-vsepr-and-hybridization.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "tetrahedral",
+          "message": "Tetrahedral goes with four domains. Xenon has six here, and the lone pairs take up positions too."
+        },
+        {
+          "text": "seesaw",
+          "message": "Seesaw comes from five domains: four bonds and one lone pair. Xenon has six domains here."
+        },
+        {
+          "text": "square planar",
+          "message": null
+        },
+        {
+          "text": "octahedral",
+          "message": "That is the electron geometry for six domains. The shape is named from the atoms only, and two of the domains are lone pairs."
+        }
+      ]
+    },
+    {
+      "lesson": "2.7",
+      "file": "src/content/lessons/unit-2/2-7-vsepr-and-hybridization.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 4,
+      "moved": true,
+      "options": [
+        {
+          "text": "$\\ce{CO2}$",
+          "message": "Its bonds are polar, but they point in opposite directions along a straight line. What do the two dipoles do?"
+        },
+        {
+          "text": "$\\ce{BF3}$",
+          "message": "It is trigonal planar, with three identical outer atoms spread evenly. Check whether its bond dipoles cancel."
+        },
+        {
+          "text": "$\\ce{CH4}$",
+          "message": "It is tetrahedral, with four identical outer atoms spread evenly. Check whether its bond dipoles cancel."
+        },
+        {
+          "text": "$\\ce{NH3}$",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "2.7",
+      "file": "src/content/lessons/unit-2/2-7-vsepr-and-hybridization.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "2",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "4",
+          "from": "every line in O=C=O counted, σ and π together",
+          "message": "That is what counting every line in O=C=O gives. Some of those lines are σ bonds."
+        },
+        {
+          "value": "1",
+          "from": "one double bond counted",
+          "message": "Did you count one double bond? Draw the Lewis diagram of CO₂ and count them."
+        },
+        {
+          "value": "0",
+          "from": "CO₂ drawn with single bonds",
+          "message": "Did you draw CO₂ with single bonds? Carbon would have fewer than eight electrons around it."
+        }
+      ]
+    },
+    {
+      "lesson": "2.7",
+      "file": "src/content/lessons/unit-2/2-7-vsepr-and-hybridization.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "sp",
+          "message": "sp goes with two domains. Count the domains on one carbon: its bonds to hydrogen and its bond to the other carbon."
+        },
+        {
+          "text": "sp²",
+          "message": null
+        },
+        {
+          "text": "sp³",
+          "message": "Did you count the double bond as two domains? Any bond, single, double or triple, is one domain."
+        },
+        {
+          "text": "It cannot be told without the shape.",
+          "message": "Hybridization follows from the number of domains on the atom, and the Lewis diagram gives you that."
+        }
+      ]
+    }
+  ]
+}
