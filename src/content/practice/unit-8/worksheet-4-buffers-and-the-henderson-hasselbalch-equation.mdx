@@ -1,0 +1,430 @@
+---
+title: "Worksheet 4: Buffers and the Henderson–Hasselbalch equation"
+kind: worksheet
+order: 5
+topics: ["8.4", "8.8", "8.9", "8.10"]
+summary: Nine questions on the pH of a buffer, what a buffer does with added acid or base, buffer capacity, and choosing a conjugate pair for a wanted pH.
+---
+
+Work each question on paper before you open its answer.
+
+A buffer holds a weak acid and its conjugate base: its acid form and its base form. The ratio of the two sets the pH, and the amounts set the capacity. When a strong acid or a strong base goes into a buffer, the order of the work matters. React first, in a table of moles. Then put the amounts that are left into the Henderson–Hasselbalch equation.
+
+This site writes H₃O⁺. The exam's equation sheet writes H⁺ for the same ion, and either is accepted.
+
+Every solution here is at 25 °C unless a question says otherwise, so $K_w = 1.0 \times 10^{-14}$.
+
+Use these values. The third acid in the table is acetic acid, $\ce{HC2H3O2}$ (also written $\ce{CH3COOH}$).
+
+| Acid | p$K_a$ |
+|---|---|
+| $\ce{HF}$ | 3.14 |
+| $\ce{HNO2}$ | 3.40 |
+| $\ce{HC2H3O2}$ | 4.74 |
+| $\ce{HOCl}$ | 7.46 |
+| $\ce{HCN}$ | 9.21 |
+| $\ce{NH4+}$ | 9.25 |
+
+Tables round a little differently (lesson 8.6 gives acetic acid's p$K_a$ as 4.76). Use the values a question gives.
+
+## Questions
+
+<Question number={1} title="Where the equation comes from" topic="8.9" beyond>
+
+Derive the Henderson–Hasselbalch equation from the $K_a$ expression, showing each step.
+
+<Answer>
+
+Start from the $K_a$ expression:
+
+$$
+K_a = \frac{[\ce{H3O+}][\ce{A^-}]}{[\ce{HA}]}
+$$
+
+so
+
+$$
+[\ce{H3O+}] = \frac{K_a[\ce{HA}]}{[\ce{A^-}]}
+$$
+
+Taking the negative logarithm of both sides:
+
+$$
+\begin{aligned}
+&{-}\log[\ce{H3O+}] \\
+&\quad = -\log K_a - \log\frac{[\ce{HA}]}{[\ce{A^-}]}
+\end{aligned}
+$$
+
+that is,
+
+$$
+\text{pH} = \text{p}K_a - \log\frac{[\ce{HA}]}{[\ce{A^-}]}
+$$
+
+Inverting the fraction reverses the sign of its logarithm, giving
+
+$$
+\text{pH} = \text{p}K_a + \log\frac{[\ce{A^-}]}{[\ce{HA}]}
+$$
+
+</Answer>
+
+</Question>
+
+<Question number={2} title="Four buffers" topic="8.9">
+
+Calculate the pH of each buffer:
+
+<Part label="a">
+
+0.20 M $\ce{HC2H3O2}$ and 0.20 M $\ce{NaC2H3O2}$: <Blank />
+
+<Answer>
+
+4.74
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+0.10 M $\ce{HC2H3O2}$ and 0.30 M $\ce{NaC2H3O2}$:
+
+<Answer>
+
+$$
+\begin{aligned}
+\text{pH} &= 4.74 + \log\frac{0.30}{0.10} \\
+&= 4.74 + 0.48 \\
+&= \mathbf{5.22}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+0.50 M $\ce{HF}$ and 0.25 M $\ce{NaF}$: <Blank />
+
+<Answer>
+
+$$
+\begin{aligned}
+\text{pH} &= 3.14 + \log\frac{0.25}{0.50} \\
+&= 3.14 - 0.30 \\
+&= \mathbf{2.84}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+0.50 M $\ce{NH4Cl}$ and 0.25 M $\ce{NH3}$:
+
+<Answer>
+
+$$
+\begin{aligned}
+\text{pH} &= 9.25 + \log\frac{0.25}{0.50} \\
+&= 9.25 - 0.30 \\
+&= \mathbf{8.95}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={3} title="Above or below the pKa" topic="8.9">
+
+For each buffer in question 2, state without calculating whether its pH is above, below, or equal to p$K_a$, and why.
+
+<Answer>
+
+(a) Equal: the ratio is 1.
+
+(b) Above: more base form than acid form.
+
+(c) Below: more acid form than base form.
+
+(d) Below: more acid form than base form.
+
+The sign of the log term is decided entirely by which member of the pair is in excess.
+
+</Answer>
+
+</Question>
+
+<Question number={4} title="A buffer meets a strong base" topic="8.8, 8.10">
+
+You have 1.00 L of a buffer that is 0.50 M in $\ce{HC2H3O2}$ and 0.50 M in $\ce{NaC2H3O2}$.
+
+<Part label="a">
+
+Initial pH: <Blank />
+
+<Answer>
+
+4.74
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Add 0.010 mol $\ce{NaOH}$. Write the reaction and the new amounts.
+
+<Answer>
+
+$$
+\begin{aligned}
+&\ce{OH-(aq) + HC2H3O2(aq)} \\
+&\ce{-> C2H3O2-(aq) + H2O(l)}
+\end{aligned}
+$$
+
+The new amounts are 0.49 mol of $\ce{HC2H3O2}$ and 0.51 mol of $\ce{C2H3O2^-}$.
+
+</Answer>
+
+</Part>
+
+<Part label="c" beyond>
+
+New pH:
+
+<Answer>
+
+$$
+\begin{aligned}
+\text{pH} &= 4.74 + \log\frac{0.51}{0.49} \\
+&= 4.74 + 0.02 \\
+&= \mathbf{4.76}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d" beyond>
+
+Instead add 0.010 mol $\ce{HCl}$. New pH: <Blank />
+
+<Answer>
+
+The strong acid turns 0.010 mol of base form into acid form, leaving 0.51 mol of $\ce{HC2H3O2}$ and 0.49 mol of $\ce{C2H3O2^-}$. The buffer started with equal amounts, so these are the two amounts of part (b) with their places changed:
+
+$$
+\begin{aligned}
+\text{pH} &= 4.74 + \log\frac{0.49}{0.51} \\
+&= 4.74 - 0.02 \\
+&= \mathbf{4.72}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+Add 0.010 mol $\ce{NaOH}$ to 1.00 L of pure water instead. pH: <Blank />
+
+<Answer>
+
+12.00
+
+</Answer>
+
+</Part>
+
+<Part label="f">
+
+Compare the pH changes in (c) and (e) and state the point.
+
+<Answer>
+
+The buffer moved 0.02 units; pure water moved 5.00. The buffer turns the added $\ce{OH-}$ into its own base form, a weak base, instead of letting $[\ce{OH-}]$ build up.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={5} title="Two steps, in order" topic="8.4, 8.10">
+
+State the two-step method and say what makes each step different.
+
+<Answer>
+
+Step 1, the table of moles: the strong acid or base reacts to completion, turning one member of the conjugate pair into the other. Work in moles; no equilibrium constant appears.
+
+Step 2, equilibrium: put the new amounts into the Henderson–Hasselbalch equation.
+
+The first is a limiting-reactant calculation and the second an equilibrium calculation, and they must not be combined.
+
+</Answer>
+
+</Question>
+
+<Question number={6} title="Hydroxide in the wrong table" topic="8.4, 8.10">
+
+A student writes: "Adding 0.010 mol $\ce{NaOH}$ to the acetate buffer, I put 0.010 into the ICE table as the initial $[\ce{OH-}]$ and solved for $x$." Identify the error and describe the correct first move.
+
+<Answer>
+
+A strong base does not sit at equilibrium with a weak acid: it reacts with it completely. So the added $\ce{OH-}$ is not put into an ICE table as a starting concentration. It is used up first, in a table of moles: subtract 0.010 mol from the acid form and add it to the base form. The Henderson–Hasselbalch equation then takes the new amounts.
+
+</Answer>
+
+</Question>
+
+<Question number={7} title="Two buffers and the same acid" topic="8.10">
+
+Buffer capacity. Two acetate buffers, 1.00 L of each, each receive 0.01 mol of $\ce{H3O+}$ from a strong acid. In each part the ratio is $[\ce{C2H3O2^-}]$ over $[\ce{HC2H3O2}]$.
+
+<Part label="a">
+
+Buffer A is 1.00 M in each form. Ratio before and after: <Blank />
+
+<Answer>
+
+1.00, then 0.98
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Buffer B is 1.00 M in $\ce{C2H3O2^-}$ and 0.01 M in $\ce{HC2H3O2}$. Ratio before and after: <Blank />
+
+<Answer>
+
+100, then 49.5
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Which resists better, and by roughly what factor in percentage change of the ratio?
+
+<Answer>
+
+A. Its ratio changed by 2.0%, and B's by 50.5%, more than 25 times as much, though both received the same amount of acid. B was hardly a buffer to begin with: its pH, 6.74, is two units above the p$K_a$.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+State the general condition for optimal buffering and the useful range.
+
+<Answer>
+
+Equal amounts of the two forms, so pH = p$K_a$. A buffer is useful within about one unit of the p$K_a$.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={8} title="A buffer for a wanted pH" topic="8.9, 8.10">
+
+Buffer design. For each target pH, choose the best acid from the table at the top of this page and give the ratio of base form to acid form it needs:
+
+<Part label="a">
+
+pH 3.50: <Blank />
+
+<Answer>
+
+$\ce{HNO2}$, ratio 1.3
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+pH 7.50: <Blank />
+
+<Answer>
+
+$\ce{HOCl}$, ratio 1.1
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+pH 9.00: <Blank />
+
+<Answer>
+
+$\ce{HCN}$, ratio 0.62. $\ce{NH4+}$ with $\ce{NH3}$ (p$K_a$ 9.25, ratio 0.56) is nearly as good.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Explain why $\ce{HCN}$ would be a poor choice for a pH 3.50 buffer even though a ratio can be calculated.
+
+<Answer>
+
+The p$K_a$ of $\ce{HCN}$, 9.21, is 5.7 units away, so the required ratio is about $10^{-5.7}$. Essentially no $\ce{CN-}$ would be present, leaving nothing to take up added acid. The pair could not bring a solution to pH 3.50 at all: even a 1 M solution of $\ce{HCN}$ alone has a pH of about 4.6.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={9} title="One pH, two capacities" topic="8.10">
+
+Two acetate buffers: X is 1.0 M in each form, Y is 0.010 M in each.
+
+<Part label="a">
+
+Which has the higher pH?
+
+<Answer>
+
+Neither: both are at 4.74.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Which is the better buffer, and why?
+
+<Answer>
+
+X. The pH depends only on the ratio, which is 1 in both, but capacity depends on the absolute amounts. X holds 100 times as much of each form in the same volume, so it absorbs far more added acid or base before the ratio moves appreciably.
+
+</Answer>
+
+</Part>
+
+</Question>
