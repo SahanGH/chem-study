@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Cell potential E against the reaction quotient Q, on a scale of powers of ten, for Sn(s) + 2Ag+(aq) to Sn2+(aq) + 2Ag(s) at 298 K. Plot area: x from 70 to 450 is log Q from -5 to 35, so x = 70 + 9.5(log Q + 5); y from 270 to 40 is E from 0 V to 1.2 V, so y = 270 - 191.67E. The line is E = 0.94 - 0.029563 log Q, straight through the brief's points: log Q = -5, E = 1.088, (70.0, 61.5); log Q = 0, E = 0.940, (117.5, 89.8); log Q = 10, E = 0.644, (212.5, 146.5); log Q = 20, E = 0.349, (307.5, 203.2); log Q = 31.80, E = 0, (419.6, 270.0), where it stops. A filled circle marks Q = 1 and an open square marks Q = K. The arrow runs parallel to the line, 12 units above it, from log Q = 12 to log Q = 20. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="340" fill="#FDFCF9"/>
+
+  <!-- Axes and ticks -->
+  <path d="M70 40V270H450" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M70 270h-7M70 193.3h-7M70 116.7h-7M70 40h-7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M117.5 270v7M212.5 270v7M307.5 270v7M402.5 270v7" fill="none" stroke="#26231F" stroke-width="1.5"/>
+
+  <g fill="#6B655D" text-anchor="end">
+    <text x="56" y="276">0</text>
+    <text x="56" y="199.3">0.4</text>
+    <text x="56" y="122.7">0.8</text>
+    <text x="56" y="46">1.2</text>
+  </g>
+  <g fill="#6B655D" text-anchor="middle">
+    <text x="117.5" y="298">1</text>
+    <text x="212.5" y="298">10¹⁰</text>
+    <text x="307.5" y="298">10²⁰</text>
+    <text x="402.5" y="298">10³⁰</text>
+  </g>
+  <text x="70" y="24" text-anchor="middle" fill="#26231F"><tspan font-style="italic">E</tspan> (V)</text>
+  <text x="450" y="326" text-anchor="end" fill="#26231F" font-style="italic">Q</text>
+
+  <!-- Guide from the filled circle to the vertical axis -->
+  <line x1="70" y1="89.8" x2="117.5" y2="89.8" stroke="#6B655D" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="76" y="110" fill="#6B655D">0.94</text>
+
+  <!-- The line -->
+  <polyline points="70,61.5 117.5,89.8 212.5,146.5 307.5,203.2 419.6,270" fill="none" stroke="#4F706C" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- The arrow along the line -->
+  <path d="M237.6 147.5L313.6 192.9M308.5 183.9L313.6 192.9L303.4 192.5" fill="none" stroke="#6B655D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="266" y="148" fill="#6B655D">as the cell runs</text>
+
+  <!-- The two marked points -->
+  <circle cx="117.5" cy="89.8" r="6" fill="#26231F"/>
+  <rect x="413.6" y="264" width="12" height="12" fill="#FDFCF9" stroke="#26231F" stroke-width="2"/>
+
+  <text x="130" y="76" fill="#26231F">Standard: <tspan font-style="italic">Q</tspan> = 1</text>
+  <text text-anchor="end" fill="#26231F"><tspan x="448" y="200">Equilibrium:</tspan><tspan x="448" y="222"><tspan font-style="italic">Q</tspan> = <tspan font-style="italic">K</tspan></tspan></text>
+</svg>

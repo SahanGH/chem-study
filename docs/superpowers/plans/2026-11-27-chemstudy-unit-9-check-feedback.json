@@ -1037,6 +1037,665 @@
           "message": "Sulfur burning is a favored reaction, and it uses up the sulfur that Cu₂S gives up. What is that arrangement called?"
         }
       ]
+    },
+    {
+      "lesson": "9.8",
+      "file": "src/content/lessons/unit-9/9-8-galvanic-voltaic-and-electrolytic-cells.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "NO₃⁻, because the cobalt strip is the anode and anions move toward the anode",
+          "message": "The pink ion is Co²⁺. If its color is fading, is Co²⁺ being made or used up at the cobalt strip? Decide from that which electrode cobalt is in this cell."
+        },
+        {
+          "text": "K⁺, because Co²⁺ ions are leaving that solution and positive charge must replace them",
+          "message": null
+        },
+        {
+          "text": "K⁺, because potassium ions are reduced at the cobalt strip along with the Co²⁺ ions",
+          "message": "The ions of a salt bridge take no part in either half-reaction. Ask what charge is building up in the cobalt half-cell, and what could cancel it."
+        },
+        {
+          "text": "NO₃⁻, because nitrate ions carry the electrons across the bridge from the cadmium half-cell",
+          "message": "Electrons travel through the wire, never through a solution. Ask what charge is building up in the cobalt half-cell, and which ion could cancel it."
+        }
+      ]
+    },
+    {
+      "lesson": "9.8",
+      "file": "src/content/lessons/unit-9/9-8-galvanic-voltaic-and-electrolytic-cells.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Tin is the anode, because the anode is the electrode where metal builds up",
+          "message": "An electrode is named for the process at it. Metal building up on a strip means ions are gaining electrons there. Is that oxidation or reduction?"
+        },
+        {
+          "text": "Electrons travel through the salt bridge from the chromium solution to the tin solution",
+          "message": "A salt bridge is a tube of dissolved ions, with no metal in it. Which particles can carry charge through a solution, and which cannot?"
+        },
+        {
+          "text": "Chromium is the cathode, and Cr³⁺ ions are reduced at its surface",
+          "message": "A strip that loses mass is losing atoms to the solution as ions. Does a chromium atom gain electrons or lose them to become Cr³⁺?"
+        },
+        {
+          "text": "Electrons travel through the wire from the chromium strip to the tin strip",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "9.8",
+      "file": "src/content/lessons/unit-9/9-8-galvanic-voltaic-and-electrolytic-cells.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "It is the anode, and it is losing mass",
+          "message": null
+        },
+        {
+          "text": "It is the anode, and it is gaining mass",
+          "message": "Each copper atom that becomes an ion leaves the strip for the solution. What does that do to the mass of the strip?"
+        },
+        {
+          "text": "It is the cathode, and it is losing mass",
+          "message": "The copper atoms are losing electrons. Which process is that, and which electrode is named for it?"
+        },
+        {
+          "text": "Nothing, until the kind of cell is known",
+          "message": "The names anode and cathode come from the process at the electrode. Does that definition depend on the kind of cell?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.8",
+      "file": "src/content/lessons/unit-9/9-8-galvanic-voltaic-and-electrolytic-cells.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "A cobalt strip in copper(II) nitrate solution, with the device wired between the two ends of the strip",
+          "message": "Where cobalt touches Cu²⁺ ions, electrons pass straight from atom to ion. Does any electron have to go through the device?"
+        },
+        {
+          "text": "Cobalt in cobalt(II) nitrate and copper in copper(II) nitrate, joined by a salt bridge, with the device wired between the strips",
+          "message": null
+        },
+        {
+          "text": "The same two half-cells with the device wired between the strips, but no salt bridge, so that no Cu²⁺ ion can ever reach the cobalt strip",
+          "message": "Follow the charge. Co²⁺ ions build up in one beaker and Cu²⁺ ions leave the other. What happens if no ions can move between the two?"
+        },
+        {
+          "text": "Cobalt powder stirred into copper(II) nitrate solution, with both of the device's wires dipped into the mixture",
+          "message": "In a stirred mixture every grain of cobalt touches Cu²⁺ ions. What path do the electrons take, and does it pass through the wires?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.8",
+      "file": "src/content/lessons/unit-9/9-8-galvanic-voltaic-and-electrolytic-cells.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Aluminum at the anode and CO₂ at the cathode, because a metal forms where electrons leave the cell",
+          "message": "Write the half-reaction that turns Al³⁺ into Al. Are electrons gained or lost in it, and which electrode is named for that process?"
+        },
+        {
+          "text": "Both at the cathode, because that is where the power supply delivers its electrons",
+          "message": "Electrons delivered to an electrode are gained by something there. Carbon dioxide forms from O²⁻ ions and carbon: do the oxide ions gain electrons or lose them?"
+        },
+        {
+          "text": "Aluminum at the cathode, where Al³⁺ ions gain electrons, and CO₂ at the anode",
+          "message": null
+        },
+        {
+          "text": "Aluminum throughout the melt, wherever Al³⁺ meets O²⁻, and CO₂ at both electrodes",
+          "message": "Al³⁺ meeting O²⁻ only gives aluminum oxide again. To become metal, Al³⁺ needs electrons. Where in the cell can it get them?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.8",
+      "file": "src/content/lessons/unit-9/9-8-galvanic-voltaic-and-electrolytic-cells.mdx",
+      "check": 6,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Cobalt is still the anode, because the anode of a cell is fixed by its metals",
+          "message": "An electrode is named for the process at it, and both processes have just been reversed. What happens at the cobalt strip now?"
+        },
+        {
+          "text": "Oxidation now happens at the cathode, because the supply has reversed the cell",
+          "message": "Oxidation happens at the anode in every cell, by definition. A power supply can change where oxidation happens. Can it change what the word anode means?"
+        },
+        {
+          "text": "Silver is now the cathode, because the supply is sending the electrons to it",
+          "message": "The supply is taking electrons away from the silver strip. Where do those electrons come from, and what is that process called?"
+        },
+        {
+          "text": "Silver is now the anode, and the silver strip loses mass",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "9.9",
+      "file": "src/content/lessons/unit-9/9-9-cell-potential-and-free-energy.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "0.90",
+      "unit": "V",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "1.46",
+          "message": "That is what adding the two sizes gives. E°cell is a difference: the cathode's value minus the anode's, each with the sign the table gives it."
+        },
+        {
+          "value": "-0.90",
+          "message": "Did you subtract the wrong way around? The half-reaction with the higher reduction potential is the cathode's, and its value comes first."
+        },
+        {
+          "value": "-1.46",
+          "message": "Did you add the two potentials? E°cell is the cathode's value minus the anode's, each with the sign the table gives it."
+        }
+      ]
+    },
+    {
+      "lesson": "9.9",
+      "file": "src/content/lessons/unit-9/9-9-cell-potential-and-free-energy.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Sn²⁺ only",
+          "message": null
+        },
+        {
+          "text": "Cd²⁺ and Cr³⁺, but not Sn²⁺",
+          "message": "Those two stand below cobalt in the table. For a favored reaction, must the half-reaction that is reduced stand above or below the one that is oxidized?"
+        },
+        {
+          "text": "All three: Sn²⁺, Cd²⁺ and Cr³⁺",
+          "message": "Cobalt is the anode in each case. Work out cathode minus anode for each ion separately, and look at the sign of each answer."
+        },
+        {
+          "text": "None of the three",
+          "message": "A negative reduction potential does not rule an ion out. Work out cathode minus anode for each ion, with cobalt as the anode."
+        }
+      ]
+    },
+    {
+      "lesson": "9.9",
+      "file": "src/content/lessons/unit-9/9-9-cell-potential-and-free-energy.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "-347",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "347",
+          "message": "A positive E° means a favored reaction. What sign must ΔG° have, and what does the minus sign in ΔG° = −nFE° do?"
+        },
+        {
+          "value": "-347346",
+          "message": "That is ΔG° in joules, which is what volts times coulombs gives. The question asks for kilojoules."
+        },
+        {
+          "value": "-116",
+          "message": "That is what n = 2 gives. n is the number of electrons that cancel when the two half-reactions are multiplied and added."
+        },
+        {
+          "value": "-174",
+          "message": "That is what n = 3 gives. n is the number of electrons that cancel when the two half-reactions are multiplied and added."
+        },
+        {
+          "value": "-614",
+          "message": "Did you multiply each potential by its coefficient? A potential is energy per coulomb. It does not change when a half-reaction is multiplied."
+        },
+        {
+          "value": "-509",
+          "message": "Did you add the two potentials? E°cell is the cathode's value minus the anode's, each with the sign the table gives it."
+        },
+        {
+          "value": "-289",
+          "message": "That is what n = 5 gives. The electrons of the two half-reactions are not added: each half is multiplied until both have the same number."
+        }
+      ]
+    },
+    {
+      "lesson": "9.9",
+      "file": "src/content/lessons/unit-9/9-9-cell-potential-and-free-energy.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "About 3 × 10⁻³⁵, so almost no products at equilibrium",
+          "message": "A positive E° gives a negative ΔG°. On which side of 1 does K lie when ΔG° is negative?"
+        },
+        {
+          "text": "About 3 × 10¹¹, so products are strongly favored",
+          "message": "That is what n = 2 gives. Count the electrons that cancel when both half-reactions have been multiplied so that they match."
+        },
+        {
+          "text": "About 2 × 10¹⁷, so products are very strongly favored",
+          "message": "That is what n = 3 gives. Count the electrons that cancel when both half-reactions have been multiplied so that they match."
+        },
+        {
+          "text": "About 3 × 10³⁴, so almost no reactants are left",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "9.9",
+      "file": "src/content/lessons/unit-9/9-9-cell-potential-and-free-energy.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "E° is +0.26 V: favored, so it could run a galvanic cell as written",
+          "message": "Which metal is oxidized in the equation as written? Its half-reaction is the anode's, and E°cell is the cathode's value minus the anode's."
+        },
+        {
+          "text": "E° is −0.26 V, so ΔG° is negative and K is greater than 1",
+          "message": "Look at the minus sign in ΔG° = −nFE°. With n and F both positive, what sign of ΔG° goes with a negative E°?"
+        },
+        {
+          "text": "E° is −0.26 V: unfavored, but a power supply could drive it",
+          "message": null
+        },
+        {
+          "text": "E° is −0.26 V: favored, but too slow to give a measurable current",
+          "message": "A potential says nothing about speed. What does the sign of E° tell you about the sign of ΔG°?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.9",
+      "file": "src/content/lessons/unit-9/9-9-cell-potential-and-free-energy.mdx",
+      "check": 6,
+      "kind": "numeric",
+      "answer": "1.21",
+      "unit": "V",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "1.82",
+          "message": "That is what n = 4 gives. Carbon's oxidation number rises by 6, and one carbon atom reacts in each mole of reaction."
+        },
+        {
+          "value": "3.64",
+          "message": "That is what n = 2 gives. Carbon's oxidation number rises by 6, and one carbon atom reacts in each mole of reaction."
+        },
+        {
+          "value": "7.28",
+          "message": "Did you leave out n? In ΔG° = −nFE°, n is the moles of electrons that pass for each mole of reaction."
+        },
+        {
+          "value": "1.21e-3",
+          "message": "Did ΔG° go in as kilojoules? A volt is a joule per coulomb, so ΔG° must be in joules before you divide."
+        },
+        {
+          "value": "-1.21",
+          "message": "A favored reaction has a negative ΔG° and a positive E°. Check what the minus sign in ΔG° = −nFE° does."
+        },
+        {
+          "value": "0.606",
+          "message": "That is what n = 12 gives. The equation as written has one CH₃OH, and ΔG° is for that equation. How many electrons does one carbon atom give up?"
+        },
+        {
+          "value": "2.43",
+          "message": "That is what n = 3 gives. The equation as written has one CH₃OH. How many electrons does its carbon atom give up when its oxidation number changes?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.10",
+      "file": "src/content/lessons/unit-9/9-10-cell-potential-under-nonstandard-conditions.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Expression A",
+          "message": "Check the state symbols. Topic 7.3 says which substances are left out of Q and K."
+        },
+        {
+          "text": "Expression B",
+          "message": "Q is built like K, with products over reactants. Which ion is made as this cell runs?"
+        },
+        {
+          "text": "Expression C",
+          "message": null
+        },
+        {
+          "text": "Expression D",
+          "message": "An exponent in Q is a coefficient from the balanced equation, not the charge on an ion."
+        }
+      ]
+    },
+    {
+      "lesson": "9.10",
+      "file": "src/content/lessons/unit-9/9-10-cell-potential-under-nonstandard-conditions.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "0.10 M Co²⁺ with 1.0 M Ag⁺",
+          "message": null
+        },
+        {
+          "text": "1.0 M Co²⁺ with 1.0 M Ag⁺",
+          "message": "Both solutions at 1.0 M give Q = 1, the standard reading. Work out Q for each of the other three mixtures and compare them with 1."
+        },
+        {
+          "text": "0.0010 M Co²⁺ with 0.010 M Ag⁺",
+          "message": "This mixture has the least Co²⁺, but [Ag⁺] is squared in Q. Work out Q for it and compare the result with 1."
+        },
+        {
+          "text": "0.010 M Co²⁺ with 0.10 M Ag⁺",
+          "message": "Put both concentrations into Q, with [Ag⁺] squared. How does the result compare with Q for the cell whose solutions are both 1.0 M?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.10",
+      "file": "src/content/lessons/unit-9/9-10-cell-potential-under-nonstandard-conditions.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Row A",
+          "message": "Equal concentrations give Q = 1, which is where this cell started. What did the meter read at the start?"
+        },
+        {
+          "text": "Row B",
+          "message": "Q is 3 in this row. Above Q = 1 the reading is below E°, and below E° is not zero. What value must Q reach before nothing pushes the reaction on?"
+        },
+        {
+          "text": "Row C",
+          "message": "Work out Q for that row and set it beside K. Is the mixture at equilibrium yet?"
+        },
+        {
+          "text": "Row D",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "9.10",
+      "file": "src/content/lessons/unit-9/9-10-cell-potential-under-nonstandard-conditions.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "The 1.0 M solution has become more concentrated, and its strip has lost mass",
+          "message": "That would move the two concentrations farther apart. Which way must each one go for Q to approach K?"
+        },
+        {
+          "text": "The 1.0 M solution has become more dilute, and its strip is heavier",
+          "message": null
+        },
+        {
+          "text": "The 0.050 M solution has become more dilute, and its strip has gained mass",
+          "message": "A strip gets heavier where Co²⁺ is reduced, and that takes ions out of its solution. Would this cell widen the gap between the solutions?"
+        },
+        {
+          "text": "The 1.0 M solution has become more dilute, and its strip has lost mass",
+          "message": "Compare the two halves of this statement. When Co²⁺ ions leave a solution at a strip, does that strip get lighter or heavier?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.10",
+      "file": "src/content/lessons/unit-9/9-10-cell-potential-under-nonstandard-conditions.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "It stays the same, because both solutions were diluted by the same factor",
+          "message": "The two ions do not enter Q in the same way. Put 0.10 M into the expression for Q and compare the result with Q at 1.0 M."
+        },
+        {
+          "text": "It rises, because every ion in the cell is now farther from its 1 M value",
+          "message": "Dilution by itself does not say which way Q moves. Put 0.10 M into the expression for Q and compare the result with 1."
+        },
+        {
+          "text": "It stays the same, because E° depends only on the two half-reactions",
+          "message": "E° does stay the same. The meter reads E, which depends on Q. What is Q once both solutions are 0.10 M?"
+        },
+        {
+          "text": "It falls, because Q rises from 1 to 10",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "9.10",
+      "file": "src/content/lessons/unit-9/9-10-cell-potential-under-nonstandard-conditions.mdx",
+      "check": 6,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "The cell has a reading, so it is not at equilibrium and its mixture gives Q, not K",
+          "message": null
+        },
+        {
+          "text": "K does not count the electrons, so it cannot be used for a reaction that moves charge",
+          "message": "K for a redox reaction is written like any other K. Ask instead when the concentrations in a mixture fit the expression for K."
+        },
+        {
+          "text": "The exponent on [Ag⁺] should be 1, because each silver ion takes only one electron",
+          "message": "Exponents come from the balanced equation, where Ag⁺ has a coefficient of 2. Ask instead what state a mixture must be in to fit K."
+        },
+        {
+          "text": "Nothing is wrong: with a K this large, a cell holds almost no Ag⁺ from the moment it is built",
+          "message": "At 5 × 10⁻²¹ M the reaction would be all but finished. What would the meter read then, and what does this one read?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.11",
+      "file": "src/content/lessons/unit-9/9-11-electrolysis-and-faradays-law.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Equal moles of the two metals, because the same charge passed through both baths",
+          "message": "The same charge means the same moles of electrons, not of metal. How many electrons does one atom of each metal take?"
+        },
+        {
+          "text": "Three moles of zinc for every two moles of chromium",
+          "message": null
+        },
+        {
+          "text": "Three moles of chromium for every two moles of zinc",
+          "message": "Check which ion takes more electrons for each atom. From the same charge, does that give more atoms of it or fewer?"
+        },
+        {
+          "text": "Equal masses of the two metals, because equal numbers of electrons arrived",
+          "message": "Equal electrons do not give equal masses. Each metal has its own electrons per atom and its own molar mass. Start with the moles."
+        }
+      ]
+    },
+    {
+      "lesson": "9.11",
+      "file": "src/content/lessons/unit-9/9-11-electrolysis-and-faradays-law.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "54.4",
+      "unit": "kg",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "109",
+          "message": "Did you leave out the half-reaction? Each magnesium atom takes two electrons, so the moles of magnesium are not the moles of electrons."
+        },
+        {
+          "value": "218",
+          "message": "Did you multiply by 2? Going from moles of electrons to moles of magnesium, the 2 of the half-reaction divides."
+        },
+        {
+          "value": "0.907",
+          "message": "Did you use 60 for the time? An hour is 60 minutes, and the charge needs the time in seconds."
+        },
+        {
+          "value": "0.0151",
+          "message": "Did you use 1.00 for the time? An ampere is a coulomb per second, so the hour must be turned into seconds."
+        },
+        {
+          "value": "54400",
+          "message": "That is the mass in grams. The question asks for kilograms."
+        }
+      ]
+    },
+    {
+      "lesson": "9.11",
+      "file": "src/content/lessons/unit-9/9-11-electrolysis-and-faradays-law.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "0.140",
+      "unit": "mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.280",
+          "message": "That is the moles of electrons. The half-reaction has two electrons for every Cl₂."
+        },
+        {
+          "value": "0.560",
+          "message": "Did you multiply by 2? Two electrons leave for each Cl₂ made, so there are fewer moles of Cl₂ than of electrons."
+        },
+        {
+          "value": "3.89e-5",
+          "message": "Did you use 3.00 for the time? An ampere is a coulomb per second, so the hours must be turned into seconds."
+        },
+        {
+          "value": "2.33e-3",
+          "message": "Did you use 180 for the time? That is the time in minutes. The charge needs it in seconds."
+        },
+        {
+          "value": "0.0700",
+          "message": "Did you divide by 2 twice? The half-reaction already counts whole Cl₂ molecules: two electrons for each one."
+        },
+        {
+          "value": "9.92",
+          "message": "That is the mass of the chlorine in grams. The question asks for moles."
+        }
+      ]
+    },
+    {
+      "lesson": "9.11",
+      "file": "src/content/lessons/unit-9/9-11-electrolysis-and-faradays-law.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "1.72",
+      "unit": "A",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.858",
+          "message": "Did you leave out the half-reaction? Each cadmium atom takes two electrons, so the moles of electrons are not the moles of cadmium."
+        },
+        {
+          "value": "0.429",
+          "message": "Did you divide by 2? Going from moles of cadmium to moles of electrons, the 2 of the half-reaction multiplies."
+        },
+        {
+          "value": "103",
+          "message": "Did you divide the charge by 15.0? Current is charge per second, so the time must be in seconds."
+        },
+        {
+          "value": "51.5",
+          "message": "Two things to check: the electrons for each cadmium atom, and the time, which must be in seconds."
+        }
+      ]
+    },
+    {
+      "lesson": "9.11",
+      "file": "src/content/lessons/unit-9/9-11-electrolysis-and-faradays-law.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "One, because half the mass of tin means half as many electrons for each atom",
+          "message": "Fewer atoms were deposited by the same number of electrons. Does that mean each atom took fewer electrons, or more?"
+        },
+        {
+          "text": "Two, because the metal is still tin and its electron count cannot differ",
+          "message": "One metal can form ions of different charge: topic 4.9 met tin as Sn²⁺ and as Sn⁴⁺. Compare the moles of electrons with the moles of tin."
+        },
+        {
+          "text": "Four, because the same charge deposited half as many moles of tin",
+          "message": null
+        },
+        {
+          "text": "It cannot be told without the formula of the tin compound in the bath",
+          "message": "No formula is needed. The current and the time give the moles of electrons, and the mass gives the moles of tin. Compare the two."
+        }
+      ]
+    },
+    {
+      "lesson": "9.11",
+      "file": "src/content/lessons/unit-9/9-11-electrolysis-and-faradays-law.mdx",
+      "check": 6,
+      "kind": "numeric",
+      "answer": "3.86e3",
+      "unit": "C",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "1.93e3",
+          "message": "Did you leave out the half-reaction? Each cobalt atom that leaves the strip gives up two electrons."
+        },
+        {
+          "value": "966",
+          "message": "Did you divide by 2? Each cobalt atom gives up two electrons, so there are more moles of electrons than of cobalt."
+        },
+        {
+          "value": "0.0400",
+          "message": "That is the moles of electrons. One more step, with Faraday's constant, turns it into coulombs."
+        }
+      ]
     }
   ]
 }

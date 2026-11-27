@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" font-family="system-ui, sans-serif" font-size="18">
+  <!-- The surfaces of the two electrodes of the cobalt and silver cell, as particles. Two panels 220 wide, x 0 to 220 and x 260 to 480.
+       Left (anode): metal x 10 to 100 (hatched), solution x 100 to 210, both y 50 to 290.
+       Cobalt atoms on a grid, x = 26, 54, 82 and y = 80, 124, 168, 212, 256 (28 and 44 apart, radius 12): 15 places,
+       of which the surface place (82, 168) is empty (dashed). So 14 atoms and 1 empty place. 1 Co2+ ion at (160, 168). 2 electrons at (54, 146) and (54, 190).
+       Right (cathode): solution x 270 to 380, metal x 380 to 470 (plain). Silver atoms at x = 398, 426, 454 and the same y: 15 atoms.
+       2 Ag+ ions at (320, 124) and (320, 212). 2 electrons at (412, 102) and (412, 190).
+       Charge: one 2+ ion and 2 electrons on the left; two 1+ ions and 2 electrons on the right.
+       Ions are dark and filled; atoms are open circles. Water molecules and nitrate ions are left out. -->
+  <defs>
+    <pattern id="hatch98b" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#6B655D" stroke-width="1.6"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="340" fill="#FDFCF9"/>
+  <g fill="#26231F" text-anchor="middle" font-weight="600">
+    <text x="110" y="26">Cobalt strip: anode</text>
+    <text x="370" y="26">Silver strip: cathode</text>
+  </g>
+  <rect x="100" y="50" width="110" height="240" fill="#E3EAE9"/>
+  <rect x="10" y="50" width="90" height="240" fill="#E6E1D8"/>
+  <rect x="10" y="50" width="90" height="240" fill="url(#hatch98b)" stroke="#26231F" stroke-width="1.7"/>
+  <!-- 14 cobalt atoms and 1 empty place -->
+  <circle cx="26" cy="80" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="26" cy="124" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="26" cy="168" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="26" cy="212" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="26" cy="256" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="54" cy="80" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="54" cy="124" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="54" cy="168" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="54" cy="212" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="54" cy="256" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="82" cy="80" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="82" cy="124" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="82" cy="168" r="12" fill="#E6E1D8" stroke="#6B655D" stroke-width="1.7" stroke-dasharray="4 3"/>
+  <circle cx="82" cy="212" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="82" cy="256" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="160" cy="168" r="12" fill="#26231F"/>
+  <text x="160" y="144" text-anchor="middle" fill="#26231F">Co²⁺</text>
+  <rect x="270" y="50" width="110" height="240" fill="#E3EAE9"/>
+  <rect x="380" y="50" width="90" height="240" fill="#E6E1D8" stroke="#26231F" stroke-width="1.7"/>
+  <!-- 15 silver atoms -->
+  <circle cx="398" cy="80" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="398" cy="124" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="398" cy="168" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="398" cy="212" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="398" cy="256" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="426" cy="80" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="426" cy="124" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="426" cy="168" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="426" cy="212" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="426" cy="256" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="454" cy="80" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="454" cy="124" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="454" cy="168" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="454" cy="212" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="454" cy="256" r="12" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <circle cx="320" cy="124" r="12" fill="#26231F"/>
+  <text x="320" y="100" text-anchor="middle" fill="#26231F">Ag⁺</text>
+  <circle cx="320" cy="212" r="12" fill="#26231F"/>
+  <text x="320" y="188" text-anchor="middle" fill="#26231F">Ag⁺</text>
+  <!-- Arrows and the 4 electrons -->
+  <g fill="none" stroke="#4F706C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M98 168H144m-8 -5l8 5l-8 5"/>
+    <path d="M22 62V40m-5 8l5 -8l5 8"/>
+    <path d="M336 124H378m-8 -5l8 5l-8 5"/>
+    <path d="M336 212H378m-8 -5l8 5l-8 5"/>
+    <path d="M458 40V62m-5 -8l5 8l5 -8"/>
+  </g>
+  <g fill="#4F706C"><circle cx="54" cy="146" r="4"/><circle cx="54" cy="190" r="4"/><circle cx="412" cy="102" r="4"/><circle cx="412" cy="190" r="4"/></g>
+  <g fill="#26231F" text-anchor="middle">
+    <text x="110" y="316">2e⁻ to the wire</text>
+    <text x="370" y="316">2e⁻ from the wire</text>
+  </g>
+</svg>

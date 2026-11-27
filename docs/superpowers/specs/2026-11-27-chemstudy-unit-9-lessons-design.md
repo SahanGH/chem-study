@@ -897,3 +897,36 @@ Each brief had a fact-check, an originality check against the teacher's AP Chem 
 - **The second checks found three Checks answered by the text above them or by their own options** (lesson 9.4's third, lesson 9.7's fourth, lesson 9.10's third); each was changed.
 - **New reference values, from memory, each judged by a second checker:** MgH₂(s) ΔH°f −75.3 kJ/mol, S° 31.1 J/(mol·K), ΔG°f −35.9 kJ/mol; Mg(s) S° 32.7; CH₃Cl(g) S° 234.6; HgS(red) ΔG°f −50.6 kJ/mol; hydrolysis of phosphocreatine −43.0 kJ/mol.
 - **For the teacher to decide:** in lesson 9.6 the entropy change of the step that separates the solvent's molecules is given as negative, with a sentence that says sources differ; many AP sources give it as positive.
+
+## 12. As built
+
+Written November 27, 2026, when the last pull request of the unit was opened.
+
+**What went in.** Eleven lessons (9.1 to 9.11) with 63 Checks, each with a message for every wrong option or a slip for every likely wrong method; 19 drawn figures; three interactive diagrams: the free-energy explorer in lesson 9.3, the explorer of ΔG° and K in lesson 9.5, and the galvanic cell explorer in lessons 9.9 and 9.10. Unit 9 is on `FEEDBACK_UNITS` and on `BALANCED_UNITS`; the right answer sits at options 1 to 4 in 11, 11, 12 and 12 of the choice Checks. Reading times are 20, 17, 22, 20, 22, 20, 18, 22, 22, 22 and 19 minutes.
+
+**Pull requests.** A (this design and the plan, 90), B (lessons 9.1 to 9.4 and the free-energy explorer, 92), C (lessons 9.5 to 9.7, the explorer of ΔG° and K and the two corrected practice sentences about diamond, 94) and D (lessons 9.8 to 9.11, the galvanic cell explorer and this section), each merged by Claude when "Build and test" passed, as the teacher said.
+
+**What differs from the design.**
+
+- The framework could not be read. This session's network does not reach the College Board's site, so section 3 rests on a summary written from memory. The teacher should read section 3 against the framework itself.
+- The textbooks could not be read either. Originality was checked against the teacher's materials in the AP Chem repository and against the rest of this site.
+- Section 11 lists what changed in the briefs. In the finished lessons the originality checks of the prose had 34 more passages reworded (10 in lessons 9.1 to 9.4, 13 in 9.5 to 9.7 and 11 in 9.8 to 9.11), among them the key idea of lesson 9.10, which followed a sentence of the teacher's notes ("a cell's voltage measures how far the reaction is from equilibrium").
+- The fact-checks of the finished lessons found three errors, all from the briefs and all corrected: a wrong reason in lesson 9.5 for an exothermic reaction's K falling on heating; four places in lesson 9.6 that said potassium nitrate's entropy term outweighs its ΔH°, where the lesson's own numbers show the two nearly canceling; and a Check of lesson 9.6 answered by the text above it, replaced by a new question about which of four salts has a negative ΔS° of dissolving.
+- The galvanic cell explorer chooses each metal from a menu, not from radio buttons: twelve radio buttons do not fit a phone.
+- The job that builds and tests the site had a limit of 20 minutes. With six new explorers in Units 8 and 9 it passed that, and the limit is now 45 minutes (`.github/workflows/deploy.yml`).
+
+**Values no checker could confirm without a reference.** Each is the value a standard table gives as far as two independent checkers knew.
+
+| Value | Used | Doubt |
+|---|---|---|
+| MgH₂(s): ΔH°f, S°, ΔG°f (lesson 9.3) | −75.3 kJ/mol, 31.1 J/(mol·K), −35.9 kJ/mol | fairly sure; the three agree with one another |
+| CH₃Cl(g): S° (lesson 9.1) | 234.6 J/(mol·K) | fairly sure |
+| N₂O(g): ΔH°f, behind −164.1 kJ in lessons 9.3 and 9.4 | +82.05 kJ/mol | newer tables give +81.6 |
+| Hydrolysis of phosphocreatine (lesson 9.7) | −43.0 kJ/mol | some texts print −43.1 |
+| ΔH° of solution of LiCl, KNO₃ and MgSO₄ (lesson 9.6) | −37.0, +34.8 and −91.3 kJ/mol | tables differ by 0.1 |
+| Kc for FeSCN²⁺ at 25 °C (lesson 9.5) | 140 | measured values run from about 110 to 900; the lesson says "take" |
+| Ag₂O/Ag and ZnO/Zn potentials in base (lesson 9.9) | +0.34 V and −1.26 V | fairly sure |
+| ΔG°f of ZnO (lesson 9.9) | −320.5 kJ/mol | older tables give −318.3 |
+
+**Claude's calls, for the teacher to change.** "Thermodynamically favored" throughout, and never "spontaneous" or "favorable". Lesson 9.6 gives the entropy change of separating the solvent's molecules as negative and says that sources differ; many AP sources give it as positive. No electrode is given a plus or a minus sign, and "oxidizing agent" and "reducing agent" are not used. The Nernst equation is shown once in lesson 9.10 and named in a key point, and no Check asks for a calculation with it. Lesson 9.10 does not use Le Châtelier's principle for a working cell. The diamond sentence of the Unit 7 skill ladders now uses ethene with hydrogen.
+

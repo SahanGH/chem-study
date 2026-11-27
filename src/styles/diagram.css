@@ -1064,6 +1064,131 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   stroke-dasharray: 10 3 2 3;
 }
 
+/* The galvanic cell explorer: a drawing of the cell over a ladder of the six
+   reduction potentials and a line for Q. Both drawings are 320 units wide with
+   12-unit text and are stacked at every width (the shared .diagram-panels
+   rules), so they need no layout of their own. Anode and cathode are named in
+   words under their beakers; the electrons and each ion of the salt bridge
+   move along an arrow with a label; the chosen rungs are heavier than the
+   others as well as darker; and a sentence under the readout says the same in
+   words. No electrode carries a sign. */
+.galvanic-cell-glass {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+.galvanic-cell-solution {
+  fill: var(--u-tint);
+  stroke: none;
+}
+.galvanic-cell-electrode {
+  fill: var(--line);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.galvanic-cell-wire {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+.galvanic-cell-meter {
+  fill: var(--card);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.galvanic-cell-bridge {
+  fill: var(--card);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+.galvanic-cell-arrow {
+  stroke: var(--u-ink);
+  stroke-width: 2;
+}
+.galvanic-cell-arrowhead {
+  fill: var(--u-ink);
+  stroke: none;
+}
+/* The words of the drawing are in ink, not muted: on the tinted solution and
+   beside the arrows they carry what the drawing says. */
+.diagram-panels .galvanic-cell-meter-text,
+.diagram-panels .galvanic-cell-role {
+  fill: var(--ink);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.diagram-panels .galvanic-cell-ion,
+.diagram-panels .galvanic-cell-symbol,
+.diagram-panels .galvanic-cell-gap,
+.diagram-panels .galvanic-cell-q-one-name {
+  fill: var(--ink);
+  font-weight: 600;
+}
+.diagram-panels .galvanic-cell-on-solution,
+.diagram-panels .galvanic-cell-half {
+  fill: var(--ink);
+}
+/* The ladder: two rails, a rung at each potential and a leader from each name. */
+.galvanic-cell-rail {
+  stroke: var(--muted);
+  stroke-width: 1.5;
+}
+.galvanic-cell-rung {
+  stroke: var(--muted);
+  stroke-width: 1.5;
+}
+/* A chosen rung: heavier, so it is told apart without color too. */
+.galvanic-cell-rung.is-chosen {
+  stroke: var(--u-ink);
+  stroke-width: 4;
+}
+.galvanic-cell-leader {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.galvanic-cell-bracket {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.galvanic-cell-q-line {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+/* Q = 1: taller and firmer than the other ticks. */
+.galvanic-cell-q-one {
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+/* The controls: one group for each half-cell, side by side where both fit
+   (the shared .diagram-controls columns), each a menu of metals with its name
+   beside it and a slider of the concentration. */
+.galvanic-cell-side {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  display: grid;
+  gap: 0.3rem;
+}
+.galvanic-cell-side legend {
+  padding: 0;
+  margin-bottom: 0.1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.diagram-select.galvanic-cell-metal {
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0.6rem;
+}
+.diagram .galvanic-cell-flow {
+  margin-top: 0.4rem;
+}
+
 @media print {
   .diagram-controls {
     display: none;

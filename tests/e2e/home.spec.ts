@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 
 /** Units with at least one lesson file: their rows link to a unit page instead of saying "Coming soon". */
 const LESSON_FILES = new URL('../../src/content/lessons/', import.meta.url);
@@ -154,20 +154,38 @@ test('a unit row counts lessons the same way before and after one is finished', 
   await expect(meta).toHaveText(UNIT_5_READY_ONE_DONE);
 });
 
+/**
+ * Whether every topic has its lesson, read from the nine unit rows of the home
+ * page: a finished unit reads "11 lessons", an unfinished one "3 of 11 lessons
+ * ready" or "Coming soon".
+ */
+async function everyLessonIsPublished(page: Page): Promise<boolean> {
+  await page.goto('/');
+  const rows = await page.locator('.unit-row .unit-meta').allTextContents();
+  if (rows.length !== 9) throw new Error(`The home page has ${rows.length} unit rows, not 9.`);
+  return rows.every((row) => /^\d+ lessons/.test(row.trim()));
+}
+
+// While lessons are missing, the page gives the count. Once all 91 exist it
+// drops the note, and "a lesson for each topic" is then simply true.
 test('the home page says how many lessons exist instead of promising all of them', async ({ page }) => {
+  const complete = await everyLessonIsPublished(page);
   await page.goto('/');
   const hero = page.locator('.hero');
 
-  await expect(hero).toContainText(HOME_COUNT);
+  if (complete) await expect(hero).not.toContainText('so far');
+  else await expect(hero).toContainText(HOME_COUNT);
   await expect(hero).not.toContainText('Every topic');
   await expect(page.locator('meta[name="description"]')).not.toHaveAttribute('content', /every/i);
 });
 
 test('the About page says how many lessons exist instead of promising all of them', async ({ page }) => {
+  const complete = await everyLessonIsPublished(page);
   await page.goto('/about/');
   const main = page.locator('main');
 
-  await expect(main).toContainText(ABOUT_COUNT);
+  if (complete) await expect(main).not.toContainText('so far');
+  else await expect(main).toContainText(ABOUT_COUNT);
   await expect(main).not.toContainText('a lesson for each topic');
 });
 

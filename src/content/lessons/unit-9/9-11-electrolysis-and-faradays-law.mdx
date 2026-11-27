@@ -1,0 +1,491 @@
+---
+topic: "9.11"
+minutes: 19
+summary: "How a current and a time fix the amount of substance made or used at an electrode, through charge, moles of electrons and the half-reaction, and how to run that chain backward."
+---
+
+A steel bolt comes out of a plating bath with a thin gray coat of zinc on it. Nobody weighed the zinc. The plater set a current and a time, and those two numbers fixed how many grams went on. This lesson is about how a current and a clock count atoms.
+
+## Charge, counted in coulombs
+
+In an electrolytic cell, a power supply pushes electrons through a wire into the cathode (topic 9.8). To count those electrons you need the unit of electric charge, the **coulomb**, C. Charge has the symbol $q$.
+
+A word about that letter. Here $q$ is charge, in coulombs. In Unit 6 the same letter was heat, in joules. The equation sheet uses it for both, so read what an equation is about before you use it.
+
+A **current**, $I$, is the charge that passes a point in a wire each second:
+
+$$
+I = \frac{q}{t}
+$$
+
+Its unit is the ampere, A, and 1 A is 1 coulomb per second. This equation is on the equation sheet. Turned around, it gives the charge:
+
+$$
+q = It
+$$
+
+The time must be in seconds, because an ampere is a coulomb per second.
+
+Coulombs are not yet electrons. One mole of electrons carries a charge of 96,485 C. This number is **Faraday's constant**, $F$, the same one topic 9.9 used in $\Delta G^\circ = -nFE^\circ$, and it is on the equation sheet. So a charge in coulombs, divided by 96,485 C/mol, is an amount of electrons in moles:
+
+$$
+\text{moles of electrons} = \frac{q}{F}
+$$
+
+One coulomb is a tiny share of a mole of electrons, about a hundred-thousandth: 1 ÷ 96,485 is 1.04 × 10⁻⁵. So the charges in this lesson run to thousands of coulombs and more: a tenth of a mole of electrons is about 9,650 C.
+
+<KeyIdea>
+
+Current times time, in seconds, is charge in coulombs. Charge divided by 96,485 C/mol is moles of electrons. A current and a clock together count electrons.
+
+</KeyIdea>
+
+## From electrons to atoms
+
+Go back to the bolt. It hangs in a solution of zinc sulfate, the bath of topic 4.5's plating shop, and it is wired so that the supply pushes electrons into it.
+
+<Figure
+  src="/figures/9-11-plating-bath.svg"
+  alt="A plating tank with a power supply above it. On the left a hatched zinc bar, labeled Zinc bar: anode, dips into the solution. On the right a bolt, labeled Bolt: cathode, hangs in the solution. Wires join each to the power supply, and arrowheads labeled e⁻ show electrons going up from the zinc bar to the supply and down from the supply to the bolt. Three dark circles in the solution stand for zinc ions, one of them labeled Zn²⁺, and an arrow points from one of them toward the bolt."
+  caption="Zinc plating. The supply pushes electrons into the bolt, where each Zn²⁺ ion that arrives takes two of them and becomes zinc metal. The sulfate ions and the water are not drawn."
+/>
+
+The bolt is the cathode: reduction happens at its surface (topic 9.8).
+
+$$
+\ce{Zn^2+(aq) + 2e^- -> Zn(s)}
+$$
+
+A bar of zinc is the anode. There the reverse happens,
+
+$$
+\ce{Zn(s) -> Zn^2+(aq) + 2e^-}
+$$
+
+which puts zinc ions back into the bath as fast as the bolt takes them out.
+
+Read the half-reaction at the bolt as a recipe with the electron as one of its reactants. It says that 2 moles of electrons deposit 1 mole of zinc. You use that ratio exactly as topic 4.5 used the ratio of two coefficients.
+
+The half-reaction is the one place in the whole calculation where the charge of the ion comes in. An ion of charge 1+ needs one electron to become an atom, and an ion of charge 2+ needs two. So read the electron count from the half-reaction in front of you every time, and do not carry it over from the last problem.
+
+| Half-reaction at the cathode | Electrons for each atom | Metal from 1 mol of electrons |
+|---|---|---|
+| Ag⁺ + e⁻ → Ag | 1 | 1 mol |
+| Zn²⁺ + 2e⁻ → Zn | 2 | 1/2 mol |
+
+An ion with a larger charge takes more electrons for each atom, so the same charge deposits fewer atoms of it.
+
+One assumption runs through all of this: these problems take every electron that passes as used by the one half-reaction the question gives.
+
+<Check
+  answer={2}
+  misses={{
+    1: "The same charge means the same moles of electrons, not of metal. How many electrons does one atom of each metal take?",
+    3: "Check which ion takes more electrons for each atom. From the same charge, does that give more atoms of it or fewer?",
+    4: "Equal electrons do not give equal masses. Each metal has its own electrons per atom and its own molar mass. Start with the moles.",
+  }}
+>
+The same charge is passed through two plating baths. In one, zinc deposits:
+
+$$
+\ce{Zn^2+(aq) + 2e^- -> Zn(s)}
+$$
+
+In the other, chromium deposits:
+
+$$
+\ce{Cr^3+(aq) + 3e^- -> Cr(s)}
+$$
+
+Which statement about the metal deposited is right?
+
+- Equal moles of the two metals, because the same charge passed through both baths
+- Three moles of zinc for every two moles of chromium
+- Three moles of chromium for every two moles of zinc
+- Equal masses of the two metals, because equal numbers of electrons arrived
+
+<div slot="why">The same charge is the same number of moles of electrons. Take 6 mol of electrons, a number that both 2 and 3 divide. Zinc takes 2 electrons for each atom, so 6 mol of electrons deposit 3 mol of zinc. Chromium takes 3, so they deposit 2 mol of chromium. Equal charge gives equal moles of electrons, not of metal, and the ion with the larger charge gives fewer atoms, not more. The masses are not equal either: 3 mol of zinc is 196.1 g and 2 mol of chromium is 104.0 g.</div>
+</Check>
+
+## The chain
+
+Four steps take a current and a time to a mass.
+
+1. Charge from current and time: $q = It$, with $t$ in seconds.
+2. Moles of electrons from charge: divide by 96,485 C/mol.
+3. Moles of substance from moles of electrons: use the ratio in the half-reaction.
+4. Mass from moles: multiply by the molar mass.
+
+Together these are what chemists call Faraday's law of electrolysis.
+
+<Figure
+  src="/figures/9-11-the-chain.svg"
+  alt="Five boxes in a column, joined by four arrows that point down. The boxes read, from the top: Current and time; Charge (C); Moles of electrons; Moles of substance; Mass (g). Beside the four arrows, from the top: times time, in seconds; divided by 96,485 C/mol; ratio from the half-reaction; times molar mass."
+  caption="The chain from a current and a time to a mass. To find a time, a current or a charge from a mass, follow it upward and undo each step."
+/>
+
+Steps 1, 2 and 4 use only numbers the question hands you and constants you can look up. Step 3 is the one that asks you to look at the chemistry, and nothing in $I = q/t$ or in the value of $F$ reminds you that it is there.
+
+<KeyIdea>
+
+Current and time give charge. Charge gives moles of electrons. The half-reaction turns moles of electrons into moles of substance. The molar mass turns moles into grams.
+
+</KeyIdea>
+
+<Worked title="Zinc on a batch of bolts">
+
+The plating shop of topic 4.5 passes a steady 8.00 A through its zinc bath for 25.0 min. What mass of zinc is deposited on the bolts? The molar mass of zinc is 65.38 g/mol, and the half-reaction is
+
+$$
+\ce{Zn^2+(aq) + 2e^- -> Zn(s)}
+$$
+
+1. **Put the time in seconds.** 25.0 min × 60 s/min = 1,500 s.
+
+2. **Find the charge.** With the current in amperes and the time in seconds, the charge comes out in coulombs.
+
+   $$
+   \begin{aligned}
+   q &= It \\
+   &= (8.00)(1{,}500) \\
+   &= 12{,}000\ \text{C}
+   \end{aligned}
+   $$
+
+3. **Find the moles of electrons.** Divide the charge by Faraday's constant.
+
+   $$
+   \frac{12{,}000}{96{,}485} = 0.1244\ \text{mol}
+   $$
+
+   That is 0.1244 mol of electrons.
+
+4. **Use the half-reaction.** Two electrons for each zinc atom, so there are half as many moles of zinc as of electrons.
+
+   $$
+   \frac{0.1244}{2} = 0.06219\ \text{mol}
+   $$
+
+   That is 0.06219 mol of zinc.
+
+5. **Find the mass.** Multiply the moles of zinc by the molar mass.
+
+   $$
+   (0.06219)(65.38) = 4.07\ \text{g}
+   $$
+
+6. **Check the size.** 12,000 C is about an eighth of a mole of electrons, so about a sixteenth of a mole of zinc, and a sixteenth of 65 g is about 4 g.
+
+</Worked>
+
+<Check
+  numeric="54.4"
+  unit="kg"
+  slips={{
+    "109": "Did you leave out the half-reaction? Each magnesium atom takes two electrons, so the moles of magnesium are not the moles of electrons.",
+    "218": "Did you multiply by 2? Going from moles of electrons to moles of magnesium, the 2 of the half-reaction divides.",
+    "0.907": "Did you use 60 for the time? An hour is 60 minutes, and the charge needs the time in seconds.",
+    "0.0151": "Did you use 1.00 for the time? An ampere is a coulomb per second, so the hour must be turned into seconds.",
+    "54400": "That is the mass in grams. The question asks for kilograms.",
+  }}
+>
+Magnesium metal is made in the cell of topic 9.8, where molten magnesium chloride is electrolyzed. At the cathode:
+
+$$
+\ce{Mg^2+ + 2e^- -> Mg(l)}
+$$
+
+An industrial cell carries a current of 1.20 × 10⁵ A. What mass of magnesium, in kg, does it make in 1.00 h? The molar mass of magnesium is 24.30 g/mol.
+
+<div slot="why">
+
+1.00 h is 3,600 s. The charge, in coulombs:
+
+$$
+\begin{aligned}
+q &= (1.20 \times 10^{5})(3{,}600) \\
+&= 4.32 \times 10^{8}
+\end{aligned}
+$$
+
+The moles of electrons:
+
+$$
+\frac{4.32 \times 10^{8}}{96{,}485} = 4{,}477
+$$
+
+Two electrons for each magnesium atom, so the moles of magnesium are half of that:
+
+$$
+\frac{4{,}477}{2} = 2{,}239
+$$
+
+The mass, in grams:
+
+$$
+(2{,}239)(24.30) = 54{,}400
+$$
+
+54,400 g is 54.4 kg.
+
+</div>
+</Check>
+
+<Check
+  numeric="0.140"
+  unit="mol"
+  slips={{
+    "0.280": "That is the moles of electrons. The half-reaction has two electrons for every Cl₂.",
+    "0.560": "Did you multiply by 2? Two electrons leave for each Cl₂ made, so there are fewer moles of Cl₂ than of electrons.",
+    "3.89e-5": "Did you use 3.00 for the time? An ampere is a coulomb per second, so the hours must be turned into seconds.",
+    "2.33e-3": "Did you use 180 for the time? That is the time in minutes. The charge needs it in seconds.",
+    "0.0700": "Did you divide by 2 twice? The half-reaction already counts whole Cl₂ molecules: two electrons for each one.",
+    "9.92": "That is the mass of the chlorine in grams. The question asks for moles.",
+  }}
+>
+In a small laboratory cell, a current of 2.50 A passes through molten magnesium chloride for 3.00 h. At the anode, chloride ions are oxidized:
+
+$$
+\ce{2Cl^- -> Cl2(g) + 2e^-}
+$$
+
+How many moles of chlorine gas, Cl₂, form?
+
+<div slot="why">
+
+The product does not have to be a metal, and it does not have to form at the cathode: the chain is the same. 3.00 h is 10,800 s. The charge, in coulombs:
+
+$$
+\begin{aligned}
+q &= (2.50)(10{,}800) \\
+&= 27{,}000
+\end{aligned}
+$$
+
+The moles of electrons:
+
+$$
+\frac{27{,}000}{96{,}485} = 0.2798
+$$
+
+The half-reaction releases 2 electrons for each Cl₂, so the moles of Cl₂ are
+
+$$
+\frac{0.2798}{2} = 0.140
+$$
+
+</div>
+</Check>
+
+## Starting from the mass
+
+The same four links answer other questions. Suppose you know the mass and want the time or the current. Start at the mass and undo each step in turn:
+
+- Divide the mass by the molar mass.
+- Use the half-reaction's ratio the other way. Now it multiplies: each atom needs its electrons.
+- Multiply by 96,485 C/mol to get the charge.
+- Last, use $I = q/t$ for whichever of the two is missing.
+
+Which way the electron count goes is the thing to think about each time. For an ion of charge 2+ or more, from electrons to atoms there are fewer atoms than electrons, and from atoms to electrons there are more electrons than atoms. For an ion of charge 1+ the two are equal.
+
+<Worked title="How long for the tin?">
+
+The steel for food cans is coated with a thin layer of tin from a bath that holds Sn²⁺ ions:
+
+$$
+\ce{Sn^2+(aq) + 2e^- -> Sn(s)}
+$$
+
+A test strip of steel is to receive 1.50 g of tin at a steady 3.20 A. How long must the current run? The molar mass of tin is 118.71 g/mol.
+
+1. **Mass to moles of tin.** Divide by the molar mass.
+
+   $$
+   \frac{1.50}{118.71} = 0.01264\ \text{mol}
+   $$
+
+2. **Moles of tin to moles of electrons.** Each tin atom needs 2 electrons, so the 2 multiplies.
+
+   $$
+   (0.01264)(2) = 0.02527\ \text{mol}
+   $$
+
+   That is 0.02527 mol of electrons.
+
+3. **Moles of electrons to charge.** Multiply by Faraday's constant.
+
+   $$
+   (0.02527)(96{,}485) = 2{,}438\ \text{C}
+   $$
+
+4. **Charge to time.** Solve $I = q/t$ for the time.
+
+   $$
+   \begin{aligned}
+   t &= \frac{q}{I} \\
+   &= \frac{2{,}438}{3.20} \\
+   &= 762\ \text{s}
+   \end{aligned}
+   $$
+
+5. **Report it sensibly.** 762 s is 12.7 min.
+
+</Worked>
+
+<Check
+  numeric="1.72"
+  unit="A"
+  slips={{
+    "0.858": "Did you leave out the half-reaction? Each cadmium atom takes two electrons, so the moles of electrons are not the moles of cadmium.",
+    "0.429": "Did you divide by 2? Going from moles of cadmium to moles of electrons, the 2 of the half-reaction multiplies.",
+    "103": "Did you divide the charge by 15.0? Current is charge per second, so the time must be in seconds.",
+    "51.5": "Two things to check: the electrons for each cadmium atom, and the time, which must be in seconds.",
+  }}
+>
+Steel fasteners for aircraft have long been plated with cadmium, which protects the steel from corrosion:
+
+$$
+\ce{Cd^2+(aq) + 2e^- -> Cd(s)}
+$$
+
+In one run, 0.900 g of cadmium is deposited in 15.0 min. What steady current, in A, was used? The molar mass of cadmium is 112.41 g/mol.
+
+<div slot="why">
+
+The moles of cadmium:
+
+$$
+\frac{0.900}{112.41} = 0.008006
+$$
+
+Each atom took 2 electrons, so the moles of electrons are
+
+$$
+(0.008006)(2) = 0.01601
+$$
+
+The charge, in coulombs:
+
+$$
+(0.01601)(96{,}485) = 1{,}545
+$$
+
+The time is 15.0 × 60 = 900 s, so the current, in amperes, is
+
+$$
+\frac{1{,}545}{900} = 1.72
+$$
+
+</div>
+</Check>
+
+<Check
+  answer={3}
+  misses={{
+    1: "Fewer atoms were deposited by the same number of electrons. Does that mean each atom took fewer electrons, or more?",
+    2: "One metal can form ions of different charge: topic 4.9 met tin as Sn²⁺ and as Sn⁴⁺. Compare the moles of electrons with the moles of tin.",
+    4: "No formula is needed. The current and the time give the moles of electrons, and the mass gives the moles of tin. Compare the two.",
+  }}
+>
+A second tin bath holds its tin in a different form. Run at the same 3.20 A for the same 762 s as in the worked example, it deposits only 0.750 g of tin. Every electron that passes is used to deposit tin. How many electrons does each tin atom take in the second bath?
+
+- One, because half the mass of tin means half as many electrons for each atom
+- Two, because the metal is still tin and its electron count cannot differ
+- Four, because the same charge deposited half as many moles of tin
+- It cannot be told without the formula of the tin compound in the bath
+
+<div slot="why">
+
+The charge is the same, (3.20)(762) = 2,438 C, so the moles of electrons are the same, 0.02527 mol. The moles of tin deposited:
+
+$$
+\frac{0.750}{118.71} = 0.006318
+$$
+
+The electrons for each atom:
+
+$$
+\frac{0.02527}{0.006318} = 4.00
+$$
+
+The tin in the second bath is in the +4 oxidation state, where the first bath's was +2. Half as many atoms from the same electrons means each atom took twice as many, not half. One metal can form ions of more than one charge: topic 4.9 met tin as Sn²⁺ and as Sn⁴⁺. And no formula is needed: a mass, a current and a time are enough to find the charge on an ion, because for a simple ion the number of electrons each atom takes is that charge.
+
+</div>
+</Check>
+
+## In any cell
+
+Nothing in the chain depends on what pushes the electrons. It holds at the anode as well as the cathode, for a mass removed as well as a mass deposited, and in a galvanic cell as well as an electrolytic one. Wherever electrons pass through a wire, the charge that passed and the amounts that changed at each electrode are tied together by the half-reactions.
+
+<Check
+  numeric="3.86e3"
+  unit="C"
+  slips={{
+    "1.93e3": "Did you leave out the half-reaction? Each cobalt atom that leaves the strip gives up two electrons.",
+    "966": "Did you divide by 2? Each cobalt atom gives up two electrons, so there are more moles of electrons than of cobalt.",
+    "0.0400": "That is the moles of electrons. One more step, with Faraday's constant, turns it into coulombs.",
+  }}
+>
+In the cobalt and silver galvanic cell of topic 9.8, the cobalt strip is the anode:
+
+$$
+\ce{Co(s) -> Co^2+(aq) + 2e^-}
+$$
+
+After the cell has run for a while, the cobalt strip weighs 1.18 g less than at the start. How much charge, in C, passed through the wire? The molar mass of cobalt is 58.93 g/mol.
+
+<div slot="why">
+
+The moles of cobalt lost:
+
+$$
+\frac{1.18}{58.93} = 0.02002
+$$
+
+Each atom gave up 2 electrons, so the moles of electrons are
+
+$$
+(0.02002)(2) = 0.04005
+$$
+
+The charge, in coulombs:
+
+$$
+(0.04005)(96{,}485) = 3{,}864
+$$
+
+That is 3.86 × 10³ C. The same 0.04005 mol of electrons arrived at the silver strip, where the half-reaction
+
+$$
+\ce{Ag^+(aq) + e^- -> Ag(s)}
+$$
+
+deposited 0.04005 mol of silver, 4.32 g (silver's molar mass is 107.87 g/mol). One charge, two electrodes, two different masses.
+
+</div>
+</Check>
+
+<Trap>
+
+Six mistakes cost points on this topic:
+
+- **Leaving the time in minutes or hours.** An ampere is a coulomb per second, so a time entered in minutes makes the charge, and every amount after it, 60 times too small.
+- **Taking moles of electrons as moles of metal.** The half-reaction stands between them.
+- **Multiplying by the electron count where it divides, or the reverse.** From electrons to atoms there are fewer atoms. From atoms to electrons there are more electrons.
+- **Using the same electron count every time.** It follows the ion: one for Ag⁺, two for Zn²⁺, three for Cr³⁺. Write the half-reaction and count from it.
+- **Reading $q$ as heat.** In this lesson $q$ is charge, in coulombs.
+- **Stopping one unit short.** Grams where kilograms were asked for, or moles of electrons where coulombs were asked for.
+
+</Trap>
+
+<KeyPoints>
+
+- Current is charge per second: $I = q/t$, so $q = It$ with the time in seconds. Here $q$ is charge, in coulombs.
+- One mole of electrons carries 96,485 C, Faraday's constant, so charge divided by 96,485 C/mol is moles of electrons.
+- The half-reaction gives the ratio between moles of electrons and moles of substance: 2 electrons for each atom from Zn²⁺, 3 from Cr³⁺, 2 for each Cl₂ from Cl⁻.
+- From current and time to mass is a chain of four steps: charge, moles of electrons, moles of substance, mass. Run backward, the same chain gives a time, a current, a charge or the charge on an ion.
+- The chain holds at either electrode and in a galvanic cell as well as an electrolytic one: the charge that passed fixes the amount that changed.
+
+</KeyPoints>
+
+<PracticeNext />
