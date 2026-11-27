@@ -1,0 +1,386 @@
+---
+topic: "8.7"
+minutes: 22
+summary: "How comparing the pH of a solution with the pKa of an acid tells you which form of the acid has the higher concentration, and how that explains indicators and the choice of one for a titration."
+---
+
+Potassium sorbate is on the label of many fruit drinks, where it keeps mold and yeast from growing. Stir the same amount into a food that is not acidic and it does very little. Nothing about the sorbate has changed, only the pH around it. This lesson is about what the pH of a solution does to a weak acid dissolved in it.
+
+## Two forms of one acid
+
+A weak acid in solution is always present in two forms. One is the acid itself, HA, which this unit calls the **acid form**. The other is its conjugate base, A⁻, the **base form**. The two forms differ by one proton, and they can differ in much else: in color, in smell, in how they act on a living cell.
+
+So far in this unit the acid set the pH. Now turn it around. Suppose something else fixes the pH of the solution, such as a strong acid, a buffer, or a food full of other acids, and a small amount of a weak acid is dissolved in it. Which form does the weak acid take?
+
+The $K_a$ expression answers at once:
+
+$$
+K_a = \frac{[\ce{H3O+}][\ce{A-}]}{[\ce{HA}]}
+$$
+
+Divide both sides by $[\ce{H3O+}]$:
+
+$$
+\frac{[\ce{A-}]}{[\ce{HA}]} = \frac{K_a}{[\ce{H3O+}]}
+$$
+
+The ratio of base form to acid form depends on one thing only: how $[\ce{H3O+}]$ compares with $K_a$. There are three cases.
+
+- When $[\ce{H3O+}]$ equals $K_a$, the ratio is 1: the two forms are equal. Take minus the logarithm of both sides, and that is when pH = p$K_a$.
+- When the solution is more acidic than that, $[\ce{H3O+}]$ is larger than $K_a$, the ratio is less than 1, and the acid form has the higher concentration.
+- When the solution is less acidic than that, the base form has the higher concentration.
+
+Each pH unit is a factor of ten in $[\ce{H3O+}]$ (topic 8.1), so each pH unit away from the p$K_a$ is a factor of ten in the ratio. Here is the ratio at five pH values:
+
+| pH of the solution | [H₃O⁺] is | A⁻ : HA |
+|---|---|---|
+| p$K_a$ − 2 | 100 × $K_a$ | 1 : 100 |
+| p$K_a$ − 1 | 10 × $K_a$ | 1 : 10 |
+| p$K_a$ | $K_a$ | 1 : 1 |
+| p$K_a$ + 1 | $K_a$ ÷ 10 | 10 : 1 |
+| p$K_a$ + 2 | $K_a$ ÷ 100 | 100 : 1 |
+
+It makes sense without the algebra. A solution with a low pH is crowded with H₃O⁺ ions that give protons away, so the acid keeps its proton. A solution with a high pH has few, and the acid loses its proton.
+
+This ties back to topic 8.3. A weak acid alone in water, at a concentration many times its $K_a$, makes a solution whose pH is well below its own p$K_a$. That is the same fact as "only a small part of it is ionized".
+
+<KeyIdea>
+
+Compare the pH of the solution with the p$K_a$ of the acid. Below the p$K_a$, the acid form has the higher concentration. Above it, the base form has. At pH = p$K_a$ the two are equal, and each pH unit away is a factor of ten.
+
+</KeyIdea>
+
+<Figure
+  src="/figures/8-7-form-against-ph.svg"
+  alt="Five bars, one under another, for a weak acid in solutions at five pH values: two units below its pKa, one unit below, at the pKa, one unit above and two units above. Each bar is split into a hatched part for the acid form, HA, and a plain part for the base form, A⁻. Two units below the pKa the bar is almost all hatched, with a ratio of base form to acid form of 1 to 100. One unit below, the ratio is 1 to 10. At the pKa the bar is half and half, 1 to 1. One unit above, the ratio is 10 to 1, and two units above the bar is almost all plain, 100 to 1."
+  caption="How a weak acid is shared between its two forms. Below its pKa the acid form has the higher concentration, above it the base form has, and each pH unit is a factor of ten."
+/>
+
+<Worked title="Why a preservative needs an acidic food">
+
+Sorbic acid, HC₆H₇O₂, has a p$K_a$ of 4.76. Nearly all of its effect on mold and yeast comes from its acid form. The same small amount of potassium sorbate is dissolved in a fruit drink at pH 2.76 and in a milk pudding at pH 6.76. In each, what is the ratio of the two forms, and what percent of the sorbate ends up in the acid form?
+
+1. **Compare the pH with the p$K_a$, for the drink.** 2.76 is 2.00 below 4.76. The pH is below the p$K_a$, so the acid form has the higher concentration.
+
+2. **Turn the difference into a ratio.** Two pH units below the p$K_a$ means $[\ce{H3O+}]$ is 100 times $K_a$.
+
+   $$
+   \begin{aligned}
+   \frac{[\ce{A-}]}{[\ce{HA}]} &= \frac{K_a}{[\ce{H3O+}]} \\
+   &= \frac{10^{-4.76}}{10^{-2.76}} \\
+   &= 10^{-2.00}
+   \end{aligned}
+   $$
+
+   That is 1 sorbate ion for every 100 sorbic acid molecules.
+
+3. **Turn the ratio into a percent.** The total is both forms together: 100 + 1 = 101 particles. Out of every 101 particles, 100 are in the acid form.
+
+   $$
+   \frac{100}{101} = 0.990
+   $$
+
+   So 99.0 percent of the sorbate is in the acid form.
+
+4. **Do the same for the pudding.** 6.76 is 2.00 above 4.76, so the base form has the higher concentration, by 100 to 1. The acid form is 1 particle in 101.
+
+   $$
+   \frac{1}{101} = 0.0099
+   $$
+
+   That is 0.99 percent.
+
+5. **Say what it means.** The same amount of preservative gives 100 times as much of the working form in the drink as in the pudding (99.0 ÷ 0.99 = 100). That is why sorbate is used in acidic foods. It made no difference that the sorbate went in as the potassium salt, which is the base form: the pH of the food decides how it is shared between the two forms.
+
+</Worked>
+
+<Check
+  numeric="91"
+  unit="%"
+  tolerance={0.5}
+  slips={{
+    "90": "A ratio of 10 to 1 is not 90 to 10. What is the total when both forms are counted? Take the acid form's share of that total.",
+    "10": "Is that the ratio, or the share of the other form? The question asks for the acid form, as a percent of both forms together.",
+    "9.1": "That is the share of the sorbate ion, the base form. Is the pH above or below the pKa, and which form wins there?",
+    "99": "That is the split two pH units below the pKa. How far below 4.76 is 3.76?",
+    "0.91": "That looks like the fraction in the acid form. The question asks for a percent.",
+  }}
+>
+A cider maker adds potassium sorbate to sweet cider at pH 3.76 to keep it from fermenting. The p$K_a$ of sorbic acid is 4.76. What percent of the sorbate is in the acid form, sorbic acid, in the cider?
+
+<div slot="why">
+
+3.76 is 1.00 below the p$K_a$, so $[\ce{H3O+}]$ is 10 times $K_a$ and the ratio of base form to acid form is 1 to 10. Out of every 11 particles, 10 are sorbic acid:
+
+$$
+\frac{10}{11} = 0.909
+$$
+
+That is 91 percent.
+
+</div>
+</Check>
+
+**A base follows the same rule.** A weak base, B, and its conjugate acid, HB⁺, are a pair in the same way. HB⁺ is the acid form and B is the base form, so compare the pH with the p$K_a$ of HB⁺. Below it, the form with the extra proton, HB⁺, has the higher concentration. Above it, B has. One number serves: no p$K_b$ is needed.
+
+<Check
+  answer={3}
+  misses={{
+    1: "That is true of the amine alone in water, where the amine itself sets the pH. Here the juice sets it. Compare that pH with the pKa.",
+    2: "Test that rule on a case you know. The fruit drink at pH 2.76 was two units below sorbic acid's pKa. Which form was 99 percent of the acid there?",
+    4: "The two forms are equal at one pH only. Compare the pH of the juice with 9.80, and count the units between them.",
+  }}
+>
+Fish that is no longer fresh smells of trimethylamine, (CH₃)₃N, a weak base that evaporates easily. Its conjugate acid, (CH₃)₃NH⁺, is an ion and does not evaporate. The p$K_a$ of (CH₃)₃NH⁺ is 9.80. A cook squeezes lemon juice, with a pH of about 2.3, over the fish. Which describes the amine in the juice?
+
+- Nearly all of it is (CH₃)₃N, because a weak base stays mostly un-ionized in water
+- Nearly all of it is (CH₃)₃N, because below the pKa the base form has the higher concentration
+- Nearly all of it is (CH₃)₃NH⁺, because the pH is far below the pKa of the acid form
+- About half of it is each form, because the acid in the juice and the base cancel each other
+
+<div slot="why">
+
+The juice sets the pH, at about 2.3. That is about 7.5 units below 9.80, so the acid form, (CH₃)₃NH⁺, has the higher concentration, by a factor of about $10^{7.5}$, which is more than ten million to one. The ion does not evaporate, so the smell fades.
+
+A weak base at an ordinary concentration is mostly un-ionized when it is alone in water, where it sets a pH above its conjugate acid's p$K_a$. Here something else sets the pH. Below the p$K_a$ it is the acid form that wins, not the base form. And the two forms are equal at one pH only, 9.80.
+
+</div>
+</Check>
+
+<Check
+  answer={2}
+  misses={{
+    1: "Acidic or basic compares the pH with 7. The form of a weak acid depends on a different comparison. Take each acid with its own pKa.",
+    3: "Take one acid at a time. Is 4.40 above or below 3.86? Then recall which form has the higher concentration on that side of a pKa.",
+    4: "An acid is half in each form only at its own pKa. Midway between two pKa values is the pKa of neither acid.",
+  }}
+>
+A solution is held at pH 4.40. Small amounts of lactic acid (p$K_a$ 3.86) and propanoic acid (p$K_a$ 4.87) are dissolved in it. Which statement about the two acids is correct?
+
+- Both are mostly in the acid form, because a solution at pH 4.40 is acidic
+- Lactic acid is mostly lactate ion, and propanoic acid is mostly un-ionized
+- Lactic acid is mostly un-ionized, and propanoic acid is mostly propanoate ion
+- Each is half in each form, because 4.40 lies about midway between the two pKa values
+
+<div slot="why">
+
+Take the acids one at a time, each against its own p$K_a$.
+
+For lactic acid, 4.40 is above 3.86, so the base form, lactate, has the higher concentration. The ratio of base form to acid form is
+
+$$
+\frac{K_a}{[\ce{H3O+}]} = \frac{10^{-3.86}}{10^{-4.40}}
+$$
+
+which is about 3.5 to 1.
+
+For propanoic acid, 4.40 is below 4.87, so the acid form has the higher concentration, by about 3 to 1.
+
+One solution, one pH, and two different answers, because the two acids have different p$K_a$ values. Whether the solution is acidic compares its pH with 7, which says nothing about either acid's form. And an acid is half in each form only at its own p$K_a$.
+
+</div>
+</Check>
+
+## An indicator is a weak acid with two colors
+
+Topic 4.6 called an indicator a dye that has one color in acid and another in base. Now the reason: an **indicator** is a weak acid whose acid form and base form have different colors. Call the two forms HIn and In⁻. Only a few drops go into the flask, far too little to change the pH. The indicator does not set the pH. It reports it.
+
+Bromothymol blue is the indicator of topic 4.6. Its acid form is yellow and its base form is blue, and its p$K_a$ is about 7.1. More than about a pH unit below 7.1, the yellow form outnumbers the blue by more than ten to one, and all you see is yellow. Far enough above 7.1, the blue form outnumbers the yellow in the same way, and all you see is blue. In between you see both at once, which the eye mixes to green. At pH 7.1, with the two forms equal, the solution is green.
+
+So an indicator does not change at one pH. It changes over a range of roughly two pH units centered near its p$K_a$: about p$K_a$ ± 1. The ranges in tables are the ones people actually see, and they are not exactly symmetric, because the eye picks up one color more easily than the other.
+
+The exam gives a table like this one whenever it is needed, so there is nothing in it to memorize:
+
+| Indicator | Acid form to base form | Changes over pH | p$K_a$ |
+|---|---|---|---|
+| Bromocresol green | yellow to blue | 3.8 to 5.4 | about 4.7 |
+| Bromothymol blue | yellow to blue | 6.0 to 7.6 | about 7.1 |
+| Thymol blue | yellow to blue | 8.0 to 9.6 | about 8.9 |
+
+All three happen to go from yellow to blue, through green. What separates them is where on the pH scale they do it. Thymol blue has an earlier color change as well, near pH 2, which this lesson does not use.
+
+<KeyIdea>
+
+An indicator is a weak acid whose two forms differ in color. Its color tells you whether the pH is below its range, inside it or above it, and nothing more.
+
+</KeyIdea>
+
+<Check
+  answer={3}
+  misses={{
+    1: "Blue says only that bromothymol blue is in its base form. What does the yellow of thymol blue say about the same solution?",
+    2: "Each indicator compares the pH with its own pKa, so two of them can show different forms in one solution. Use each result as a limit.",
+    4: "At its pKa an indicator is an equal mix of its two forms. What color would bromothymol blue show there?",
+  }}
+>
+Two samples are taken from one colorless solution. A few drops of bromothymol blue turn the first sample blue. A few drops of thymol blue turn the second sample yellow. Use the table of indicators above. What do the two tests together show about the pH of the solution?
+
+- It is above 9.6, because a blue indicator means a strongly basic solution
+- Nothing certain: the two indicators disagree, so one of them must have failed
+- It is between 7.6 and 8.0: above one indicator's range and below the other's
+- It is 7.1, the pKa of bromothymol blue, because that indicator has changed color
+
+<div slot="why">
+
+Each indicator compares the pH with its own range. Bromothymol blue is fully blue above pH 7.6, so the pH is above 7.6. Thymol blue is still fully yellow below pH 8.0, so the pH is below 8.0. Both are true of the same solution, so its pH lies between 7.6 and 8.0.
+
+The two indicators do not disagree. They have different p$K_a$ values, so at one pH one of them can be in its base form and the other in its acid form. A single indicator's color gives a limit, not a value. And at pH 7.1 bromothymol blue would be green, not blue.
+
+</div>
+</Check>
+
+## Choosing an indicator for a titration
+
+In a titration the endpoint, the color change you watch for, should come at the equivalence point, to within a drop (topic 4.6). A drop from a buret is about 0.05 mL. Topic 8.5 showed what makes that possible: near the equivalence point the pH leaps by several units for a fraction of a milliliter of titrant.
+
+The rule: choose an indicator whose p$K_a$ is close to the pH at the equivalence point. Then its range holds that pH, the whole range lies on the steep part of the curve, and the color goes all the way from one form's to the other's within a drop or two. An indicator whose range lies on a flat part of the curve changes slowly, over many milliliters, and at the wrong volume.
+
+Naming an indicator is never the whole answer to a question. The reason is the answer: the pH at the equivalence point, and the range that holds it.
+
+<Figure
+  src="/figures/8-7-indicator-ranges.svg"
+  alt="A vertical pH axis from 3 to 10 with three hatched bands, one for each indicator. Bromocresol green's band runs from pH 3.8 to 5.4, bromothymol blue's from 6.0 to 7.6 and thymol blue's from 8.0 to 9.6. Each band is labeled yellow below its lower end and blue above its upper end. Two dashed lines cross the picture: one at pH 7.00, labeled HBr, which passes through bromothymol blue's band, and one at pH 8.40, labeled lactic acid, which passes through thymol blue's band."
+  caption="The ranges of three indicators, with the pH at the equivalence point of topic 8.5's two titrations: 7.00 for hydrobromic acid and 8.40 for lactic acid, each titrated with sodium hydroxide."
+/>
+
+<Worked title="The right indicator and the wrong one">
+
+Topic 8.5's flask holds 20.0 mL of 0.150 M lactic acid (3.00 mmol; p$K_a$ 3.86), titrated with 0.200 M NaOH. The equivalence point is at 15.0 mL, where the pH is 8.40. Which of the three indicators in the table marks it, and how far off would bromocresol green be?
+
+1. **Start from the pH at the equivalence point.** It is 8.40 (topic 8.5), above 7, because the flask then holds the lactate ion, a weak base.
+
+2. **Find the range that holds it.** Thymol blue changes from pH 8.0 to pH 9.6, and 8.40 lies inside. Its p$K_a$, about 8.9, is the closest of the three to 8.40. Thymol blue is the choice.
+
+3. **Ask where bromocresol green would finish changing.** It is fully blue at pH 5.4. Use the first section's ratio for lactic acid at that pH. The hydronium concentration, in M:
+
+   $$
+   \begin{aligned}
+   [\ce{H3O+}] &= 10^{-5.4} \\
+   &= 4.0 \times 10^{-6}
+   \end{aligned}
+   $$
+
+   The acid's constant:
+
+   $$
+   \begin{aligned}
+   K_a &= 10^{-3.86} \\
+   &= 1.4 \times 10^{-4}
+   \end{aligned}
+   $$
+
+   The ratio of lactate ion, A⁻, to lactic acid, HA:
+
+   $$
+   \begin{aligned}
+   \frac{[\ce{A-}]}{[\ce{HA}]} &= \frac{1.4 \times 10^{-4}}{4.0 \times 10^{-6}} \\
+   &= 35
+   \end{aligned}
+   $$
+
+4. **Turn the ratio into a volume.** With 35 lactate ions for each lactic acid molecule, 35 parts in 36 of the acid have reacted.
+
+   $$
+   \frac{35}{36} = 0.972
+   $$
+
+   Each lactate ion was made by one OH⁻ ion, and 15.0 mL of the base reacts with all of the acid. So the base added, in mL, is
+
+   $$
+   0.972 \times 15.0 = 14.58
+   $$
+
+5. **Compare.** With bromocresol green the flask is fully blue at 14.58 mL, 0.42 mL before the equivalence point, and it began to turn long before that. A student who stopped there would report 2.8 percent too little lactic acid (0.42 ÷ 15.0).
+
+</Worked>
+
+<Check
+  answer={2}
+  misses={{
+    1: "Does a range have to hold the equivalence pH for the curve to pass through it? Check all three ranges against the pH values the question gives.",
+    3: "The endpoint should come at the equivalence point, where the acid has just run out. Check each range against 2.54 and 11.45.",
+    4: "A sudden change in pH is what makes an endpoint sharp. Check which of the three ranges the pH passes through on the way.",
+  }}
+>
+Topic 8.5's other flask holds hydrobromic acid, a strong acid, at the same concentration, titrated with the same base. On its curve the pH is 2.54 at 14.5 mL, 7.00 at 15.0 mL and 11.45 at 15.5 mL. Which of the three indicators in the table would change color between 14.5 mL and 15.5 mL?
+
+- Bromothymol blue only, because its range is the one that holds pH 7.00
+- All three, because each range lies between pH 2.54 and pH 11.45
+- Thymol blue only, because an endpoint has to come in a basic solution, after the acid is gone
+- None, because a strong acid's pH changes too suddenly for an indicator to follow
+
+<div slot="why">
+
+An indicator changes color when the pH of the flask passes through its range. Between 14.5 mL and 15.5 mL the pH climbs from 2.54 to 11.45, and on the way it passes through 3.8 to 5.4, through 6.0 to 7.6 and through 8.0 to 9.6. All three indicators change within that one milliliter, and the explorer below shows that each does so within a drop of 15.0 mL.
+
+Bromothymol blue's p$K_a$ is the closest to 7.00, but the steep part of a strong acid's curve is so tall that the choice hardly matters. A sudden change in pH is what an indicator needs. And a color change does not have to wait for a basic solution: it has to happen at the equivalence point.
+
+</div>
+</Check>
+
+Here is topic 8.5's explorer again: 20.0 mL of a 0.150 M acid titrated with 0.200 M sodium hydroxide, with the equivalence point at 15.0 mL. This time, use the control that lays an indicator's range across the graph.
+
+<TitrationCurve />
+
+Do four things with it, and predict before each move.
+
+1. **Lactic acid with thymol blue.** Before you choose thymol blue, predict where its band will meet the curve. You should see the band lie across the steep part. The readout says that the color changes between 15.00 mL and 15.01 mL. Slide to 15.0 mL: the pH is 8.40.
+
+2. **Lactic acid with bromocresol green.** Predict from the worked example where the change ends, then look for where it begins. You should see the band lie across the buffer region. The color changes between 6.96 mL and 14.58 mL: it starts before the half-equivalence point and takes more than 7 mL to finish.
+
+3. **Lactic acid with bromothymol blue.** Its range, 6.0 to 7.6, does not hold 8.40. Predict whether it fails as badly as bromocresol green. You should see that it does not. Its band lies on the lower part of the steep rise, and the color changes between 14.89 mL and 15.00 mL: green shows about two drops early, and the full blue arrives at 15.00 mL. That is why topic 4.6, which used bromothymol blue for this same acid and base, told you to wait for the turn to blue and not to stop at the first tinge of green.
+
+4. **Hydrobromic acid with each indicator in turn.** The last question was your prediction. You should see bromocresol green change between 14.97 mL and 15.00 mL, bromothymol blue within 0.01 mL of 15.00 mL, and thymol blue between 15.00 mL and 15.01 mL. Any of the three marks this equivalence point within a drop.
+
+The rule "a p$K_a$ close to the pH at the equivalence point" is the one to state in an answer. The explorer shows what lies behind it: an indicator works when its whole range lies on the steep part of the curve. A weak acid's steep part is shorter than a strong acid's and starts higher, so fewer indicators fit, and none whose range lies in the buffer region can.
+
+<Check
+  answer={1}
+  misses={{
+    2: "An equivalence point is about amounts, not about pH 7. What does the flask hold at this one, and is that an acid or a base?",
+    3: "The flask starts out basic, but the endpoint has to come where the base runs out. What does the question say the pH is there?",
+    4: "An indicator responds to pH, not to amounts. Each one changes where the curve crosses its own range, wherever that is.",
+  }}
+>
+A weak base is titrated with a strong acid. The pH is 4.70 at the equivalence point. In the last 0.1 mL before it the pH falls from 5.7, and in the first 0.1 mL after it the pH reaches 3.7. Which indicator marks this equivalence point best?
+
+- Bromocresol green (3.8 to 5.4), because its range holds the pH there
+- Bromothymol blue (6.0 to 7.6), because at an equivalence point the solution is neutral
+- Thymol blue (8.0 to 9.6), because the flask holds a base, and it changes in basic solution
+- Any of the three, because every indicator changes when the titrant has used up the analyte
+
+<div slot="why">
+
+The pH at the equivalence point is 4.70, and bromocresol green's range, 3.8 to 5.4, holds it. Its p$K_a$, about 4.7, could hardly be closer. The curve falls through that whole range within 0.1 mL either side of the equivalence point.
+
+This equivalence point is below 7 because the flask then holds the conjugate acid of a weak base (topic 8.5), so "neutral" is the wrong idea, and bromothymol blue's range lies above the steep fall: it would turn yellow too early. Thymol blue would change earlier still, in the buffer region, while much of the base was still there. And an indicator responds to the pH, not to the amounts: each changes where the curve crosses its own range.
+
+</div>
+</Check>
+
+<Trap>
+
+Seven mistakes cost points on this topic:
+
+- **Comparing the pH with 7.** Whether a solution is acidic says nothing about which form a weak acid is in. Compare the pH with that acid's own p$K_a$.
+- **Turning the rule around.** Below the p$K_a$ the acid form wins: a low pH means plenty of H₃O⁺, so the acid keeps its proton.
+- **Reading 10 to 1 as 90 percent.** 10 to 1 is 10 parts in 11, about 91 percent.
+- **Using a p$K_b$ for a base.** Compare the pH with the p$K_a$ of the base's conjugate acid.
+- **Choosing bromothymol blue because "the equivalence point is at pH 7".** That is true of a strong acid with a strong base, at 25 °C, and not when either one is weak, as in this unit's titrations. Find the pH at this equivalence point first.
+- **Naming an indicator with no reason.** Give the pH at the equivalence point and the range that holds it.
+- **Thinking an indicator changes at the equivalence point by its nature.** It changes when the pH crosses its range, wherever on the curve that happens.
+
+</Trap>
+
+<KeyPoints>
+
+- A weak acid in solution is shared between its acid form, HA, and its base form, A⁻. The $K_a$ expression gives their ratio, base form to acid form, as $K_a$ divided by $[\ce{H3O+}]$.
+- When the pH of a solution is below the p$K_a$ of an acid, the acid form has the higher concentration. When it is above, the base form has. At pH = p$K_a$ the two are equal.
+- Each pH unit away from the p$K_a$ is a factor of ten in the ratio. One unit below it, the acid is 10 parts in 11 in its acid form, about 91 percent.
+- For a weak base, compare the pH with the p$K_a$ of its conjugate acid.
+- An indicator is a weak acid whose two forms differ in color. It changes color over a range of about two pH units around its own p$K_a$.
+- A good indicator for a titration has a p$K_a$ close to the pH at the equivalence point, so that its whole range lies on the steep part of the curve.
+
+</KeyPoints>
+
+<PracticeNext />

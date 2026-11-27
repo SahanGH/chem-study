@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Two boxes, each 200 wide and 210 tall (x = 15 and x = 265, y = 40 to 250). Before: 8 HA, 3 OH-, 3 Na+. After: 5 HA, 3 A-, 3 Na+, no OH-. Large circles: 8 before, 5 + 3 = 8 after. Na+: 3 and 3. Each box is neutral (3 plus, 3 minus). The three hydrogens that left HA and the three OH- are the three water molecules formed, which are not drawn. Each box has a grid of four columns (box x + 25, 75, 125, 175) and four rows (y = 65, 115, 165, 215); each particle is moved off its cell center by at most 3 units each way. The largest particle, HA, reaches 17.7 units from its center (13 + the small circle of radius 5 centered 18 away at 45 degrees), so neighbors 50 apart, less at most 6 of offset, stay at least 13 units clear, and every particle stays at least 4 units inside its box. The signs inside the particles are drawn as lines, not text. -->
+  <defs>
+    <g id="ha">
+      <circle r="13" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="12.73" cy="-12.73" r="5" fill="#FFFFFF" stroke="#26231F" stroke-width="1.5"/>
+    </g>
+    <g id="a">
+      <circle r="13" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+      <line x1="-6" y1="0" x2="6" y2="0" stroke="#26231F" stroke-width="2"/>
+    </g>
+    <g id="oh">
+      <circle r="8" fill="#FFFFFF" stroke="#26231F" stroke-width="1.5" stroke-dasharray="3 2.5"/>
+      <line x1="-4" y1="0" x2="4" y2="0" stroke="#26231F" stroke-width="2"/>
+    </g>
+    <g id="na">
+      <circle r="7" fill="#26231F" stroke="#26231F" stroke-width="1.5"/>
+      <line x1="-4" y1="0" x2="4" y2="0" stroke="#FFFFFF" stroke-width="2"/>
+      <line x1="0" y1="-4" x2="0" y2="4" stroke="#FFFFFF" stroke-width="2"/>
+    </g>
+  </defs>
+  <rect width="480" height="340" fill="#FDFCF9"/>
+
+  <text x="115" y="28" text-anchor="middle" fill="#26231F" font-weight="600">Before</text>
+  <rect x="15" y="40" width="200" height="210" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <use href="#ha" x="43" y="63"/>
+  <use href="#oh" x="87" y="68"/>
+  <use href="#ha" x="142" y="68"/>
+  <use href="#na" x="188" y="62"/>
+  <use href="#na" x="37" y="117"/>
+  <use href="#ha" x="93" y="118"/>
+  <use href="#ha" x="192" y="113"/>
+  <use href="#ha" x="42" y="167"/>
+  <use href="#ha" x="88" y="163"/>
+  <use href="#oh" x="143" y="162"/>
+  <use href="#ha" x="187" y="163"/>
+  <use href="#oh" x="38" y="218"/>
+  <use href="#ha" x="143" y="217"/>
+  <use href="#na" x="187" y="212"/>
+
+  <!-- The arrow from the first box to the second, at mid-height (y = 145). -->
+  <line x1="223" y1="145" x2="247" y2="145" stroke="#4F706C" stroke-width="3"/>
+  <polygon points="257,145 245,138 245,152" fill="#4F706C"/>
+
+  <text x="365" y="28" text-anchor="middle" fill="#26231F" font-weight="600">After</text>
+  <rect x="265" y="40" width="200" height="210" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <use href="#ha" x="293" y="63"/>
+  <use href="#a" x="392" y="68"/>
+  <use href="#na" x="438" y="62"/>
+  <use href="#na" x="287" y="117"/>
+  <use href="#ha" x="343" y="118"/>
+  <use href="#ha" x="442" y="113"/>
+  <use href="#a" x="292" y="167"/>
+  <use href="#ha" x="393" y="162"/>
+  <use href="#ha" x="288" y="218"/>
+  <use href="#a" x="340" y="215"/>
+  <use href="#na" x="437" y="212"/>
+
+  <!-- The key, on one line at y = 296, drawn with the same shapes. -->
+  <use href="#ha" x="48" y="298"/>
+  <text x="74" y="304" fill="#26231F">HA</text>
+  <use href="#a" x="168" y="298"/>
+  <text x="189" y="304" fill="#26231F">A<tspan dy="-7">&#8722;</tspan></text>
+  <use href="#oh" x="278" y="298"/>
+  <text x="294" y="304" fill="#26231F">OH<tspan dy="-7">&#8722;</tspan></text>
+  <use href="#na" x="388" y="298"/>
+  <text x="403" y="304" fill="#26231F">Na<tspan dy="-7">+</tspan></text>
+</svg>

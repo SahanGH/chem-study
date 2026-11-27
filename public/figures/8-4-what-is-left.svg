@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="system-ui, sans-serif" font-size="18">
+  <!-- One axis, the moles of OH- added to a weak acid HA, from (30, 200) to (460, 200), with a dashed mark at x = 240 where the moles of OH- equal the moles of HA at the start. Left of the mark (x = 30 to 232, y = 110 to 190): a plain tinted stretch, HA and A- together, a buffer. At the mark: a point at (240, 150), A- alone, a weak base. Right of the mark (x = 248 to 450): a hatched stretch, OH- left over, a strong base. The three differ in shading (tint, point, hatching), not in color alone. The stretches show which outcome holds, not amounts, so the axis has no scale. -->
+  <defs>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#FDFCF9"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#6B655D" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="300" fill="#FDFCF9"/>
+
+  <!-- The axis and its arrowhead. -->
+  <line x1="30" y1="200" x2="450" y2="200" stroke="#26231F" stroke-width="2"/>
+  <polygon points="460,200 448,194 448,206" fill="#26231F"/>
+  <text x="240" y="285" text-anchor="middle" fill="#26231F">Moles of OH<tspan dy="-7">&#8722;</tspan><tspan dy="7"> added</tspan></text>
+
+  <!-- The mark at equal moles, from y = 60 to y = 210. -->
+  <line x1="240" y1="60" x2="240" y2="210" stroke="#6B655D" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="240" y="232" text-anchor="middle" fill="#26231F">= moles of HA</text>
+  <text x="240" y="254" text-anchor="middle" fill="#26231F">at the start</text>
+
+  <!-- Left stretch: a buffer. -->
+  <rect x="30" y="110" width="202" height="80" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+  <text x="131" y="144" text-anchor="middle" fill="#26231F" font-weight="600">HA and A<tspan dy="-7">&#8722;</tspan></text>
+  <text x="131" y="170" text-anchor="middle" fill="#26231F">a buffer</text>
+
+  <!-- At the mark: the conjugate base alone. -->
+  <circle cx="240" cy="150" r="7" fill="#26231F"/>
+  <text x="240" y="28" text-anchor="middle" fill="#26231F" font-weight="600">A<tspan dy="-7">&#8722;</tspan><tspan dy="7"> alone</tspan></text>
+  <text x="240" y="50" text-anchor="middle" fill="#26231F">a weak base</text>
+
+  <!-- Right stretch: a strong base left over. The panel (x = 274 to 424, y = 122 to 178) keeps the hatching off the text. -->
+  <rect x="248" y="110" width="202" height="80" fill="url(#hatch)" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="274" y="122" width="150" height="56" fill="#FDFCF9"/>
+  <text x="349" y="144" text-anchor="middle" fill="#26231F" font-weight="600">OH<tspan dy="-7">&#8722;</tspan><tspan dy="7"> left over</tspan></text>
+  <text x="349" y="170" text-anchor="middle" fill="#26231F">a strong base</text>
+</svg>

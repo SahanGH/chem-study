@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440" font-family="system-ui, sans-serif" font-size="18">
+  <!-- A vertical pH axis at x = 40 from pH 3 (y = 400) to pH 10 (y = 92): y = 400 − 44 × (pH − 3). Whole pH values: 3 → 400, 4 → 356, 5 → 312, 6 → 268, 7 → 224, 8 → 180, 9 → 136, 10 → 92. Three bands, each 56 wide, centered at x = 100, 222 and 330 (the first two moved 6 left and 4 right of the plan, so that their headings do not touch). Bromocresol green, pH 3.8 to 5.4: y = 400 − 44 × 0.8 = 364.8 up to 400 − 44 × 2.4 = 294.4. Bromothymol blue, pH 6.0 to 7.6: y = 268.0 up to 400 − 44 × 4.6 = 197.6. Thymol blue, pH 8.0 to 9.6: y = 180.0 up to 400 − 44 × 6.6 = 109.6. Each band is 70.4 tall (1.6 pH units). Dashed lines: pH 7.00 at y = 224.0 and pH 8.40 at y = 400 − 44 × 5.4 = 162.4, which is (180.0 − 162.4) ÷ 70.4 = a quarter of the way up the thymol blue band. -->
+  <defs>
+    <pattern id="hatch-8-7-ranges" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#E3EAE9"/>
+      <path d="M0 0V6" fill="none" stroke="#4F706C" stroke-width="1.8"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="440" fill="#FDFCF9"/>
+
+  <!-- Headings -->
+  <text x="100" y="28" text-anchor="middle" fill="#26231F">bromocresol</text>
+  <text x="100" y="50" text-anchor="middle" fill="#26231F">green</text>
+  <text x="222" y="28" text-anchor="middle" fill="#26231F">bromothymol</text>
+  <text x="222" y="50" text-anchor="middle" fill="#26231F">blue</text>
+  <text x="330" y="28" text-anchor="middle" fill="#26231F">thymol</text>
+  <text x="330" y="50" text-anchor="middle" fill="#26231F">blue</text>
+
+  <!-- The pH axis -->
+  <line x1="40" y1="400" x2="40" y2="92" stroke="#26231F" stroke-width="2"/>
+  <g stroke="#26231F" stroke-width="2">
+    <line x1="40" y1="400" x2="46" y2="400"/>
+    <line x1="40" y1="356" x2="46" y2="356"/>
+    <line x1="40" y1="312" x2="46" y2="312"/>
+    <line x1="40" y1="268" x2="46" y2="268"/>
+    <line x1="40" y1="224" x2="46" y2="224"/>
+    <line x1="40" y1="180" x2="46" y2="180"/>
+    <line x1="40" y1="136" x2="46" y2="136"/>
+    <line x1="40" y1="92" x2="46" y2="92"/>
+  </g>
+  <g text-anchor="end" fill="#26231F">
+    <text x="34" y="72">pH</text>
+    <text x="34" y="406">3</text>
+    <text x="34" y="362">4</text>
+    <text x="34" y="318">5</text>
+    <text x="34" y="274">6</text>
+    <text x="34" y="230">7</text>
+    <text x="34" y="186">8</text>
+    <text x="34" y="142">9</text>
+    <text x="34" y="98">10</text>
+  </g>
+
+  <!-- The three bands -->
+  <rect x="72" y="294.4" width="56" height="70.4" fill="url(#hatch-8-7-ranges)" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="194" y="197.6" width="56" height="70.4" fill="url(#hatch-8-7-ranges)" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="302" y="109.6" width="56" height="70.4" fill="url(#hatch-8-7-ranges)" stroke="#26231F" stroke-width="1.5"/>
+
+  <!-- The pH at the two equivalence points -->
+  <line x1="40" y1="224" x2="388" y2="224" stroke="#6B655D" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="40" y1="162.4" x2="388" y2="162.4" stroke="#6B655D" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="394" y="230" fill="#26231F">7.00</text>
+  <text x="394" y="168" fill="#26231F">8.40</text>
+  <text x="100" y="218" text-anchor="middle" fill="#26231F">HBr</text>
+  <text x="100" y="156" text-anchor="middle" fill="#26231F">lactic acid</text>
+
+  <!-- Color words: the base form's color above each band, the acid form's below -->
+  <g text-anchor="middle" fill="#26231F">
+    <text x="100" y="288.4">blue</text>
+    <text x="100" y="384.8">yellow</text>
+    <text x="222" y="191.6">blue</text>
+    <text x="222" y="288">yellow</text>
+    <text x="330" y="103.6">blue</text>
+    <text x="330" y="200">yellow</text>
+  </g>
+</svg>
