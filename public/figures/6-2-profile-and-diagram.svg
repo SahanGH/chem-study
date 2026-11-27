@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" font-family="system-ui, sans-serif" font-size="18">
+  <rect width="480" height="320" fill="#FDFCF9"/>
+
+  <!-- Shared energy axis -->
+  <path d="M45 270V53" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M45 45L40 55H50z" fill="#26231F"/>
+  <text x="26" y="158" text-anchor="middle" fill="#26231F" transform="rotate(-90 26 158)">energy</text>
+
+  <!-- Guides at the reactants' energy and the products' energy -->
+  <path d="M45 130H465" fill="none" stroke="#6B655D" stroke-width="1" stroke-dasharray="4 4"/>
+  <path d="M45 215H465" fill="none" stroke="#6B655D" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Left: energy profile -->
+  <text x="160" y="28" text-anchor="middle" fill="#26231F" font-weight="600">Energy profile</text>
+  <path d="M45 270H265" fill="none" stroke="#26231F" stroke-width="1"/>
+  <path d="M60 130H100C130 130 135 65 160 65C185 65 190 215 220 215H260" fill="none" stroke="#26231F" stroke-width="3"/>
+  <text x="160" y="55" text-anchor="middle" fill="#26231F">transition state</text>
+  <text x="58" y="152" fill="#26231F">reactants</text>
+  <text x="196" y="238" fill="#26231F">products</text>
+  <text x="160" y="300" text-anchor="middle" fill="#26231F">reaction progress</text>
+
+  <!-- Right: energy diagram -->
+  <text x="378" y="28" text-anchor="middle" fill="#26231F" font-weight="600">Energy diagram</text>
+  <path d="M295 130H365" fill="none" stroke="#26231F" stroke-width="4"/>
+  <text x="295" y="120" fill="#26231F">reactants</text>
+  <path d="M390 215H460" fill="none" stroke="#26231F" stroke-width="4"/>
+  <text x="390" y="238" fill="#26231F">products</text>
+  <path d="M378 134V201" fill="none" stroke="#4F706C" stroke-width="2.5"/>
+  <path d="M378 211L372 199H384z" fill="#4F706C"/>
+</svg>

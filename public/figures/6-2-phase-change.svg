@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="system-ui, sans-serif" font-size="18">
+  <rect width="480" height="300" fill="#FDFCF9"/>
+
+  <path d="M70 270V38" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M70 30L65 40H75z" fill="#26231F"/>
+  <text x="45" y="150" text-anchor="middle" fill="#26231F" transform="rotate(-90 45 150)">energy</text>
+
+  <path d="M100 80H440" fill="none" stroke="#26231F" stroke-width="4"/>
+  <text x="100" y="68" fill="#26231F">CO₂(g)</text>
+  <path d="M100 220H440" fill="none" stroke="#26231F" stroke-width="4"/>
+  <text x="100" y="246" fill="#26231F">CO₂(s)</text>
+
+  <!-- Sublimation: solid arrow, up -->
+  <path d="M150 216V94" fill="none" stroke="#4F706C" stroke-width="2.5"/>
+  <path d="M150 84L144 96H156z" fill="#4F706C"/>
+  <text x="162" y="142" fill="#26231F">sublimation</text>
+  <text x="162" y="166" fill="#26231F">25.2 kJ in</text>
+
+  <!-- Deposition: dashed arrow, down, the same length -->
+  <path d="M300 84V206" fill="none" stroke="#4F706C" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <path d="M300 216L294 204H306z" fill="#4F706C"/>
+  <text x="312" y="142" fill="#26231F">deposition</text>
+  <text x="312" y="166" fill="#26231F">25.2 kJ out</text>
+</svg>
