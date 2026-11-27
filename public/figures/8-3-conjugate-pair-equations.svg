@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Three equations stacked on the baselines y = 60, 120 and 190, with their terms in columns: first term at x = 30, plus sign centered at x = 102, second term at x = 116, arrow centered at x = 196, third term at x = 224, plus sign centered at x = 314, fourth term at x = 328, and the constant at x = 425. Line 3 has one reactant, 2 H2O(l), starting at x = 30. A plus sign at x = 12 and a rule at y = 146 mark the sum. Solid strokes cross HA(aq) in lines 1 and 2; dashed strokes cross A-(aq) in lines 1 and 2. The equilibrium arrows are drawn, not typed, so that they do not depend on a font. -->
+  <defs>
+    <g id="both-ways" fill="none" stroke="#26231F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-15 -3.5H15L8 -9.5"/>
+      <path d="M15 3.5H-15L-8 9.5"/>
+    </g>
+  </defs>
+  <rect width="480" height="300" fill="#FDFCF9"/>
+
+  <!-- Line 1: HA(aq) + H2O(l) <=> H3O+(aq) + A-(aq), Ka. -->
+  <g fill="#26231F">
+    <text x="30" y="60">HA(aq)</text>
+    <text x="102" y="60" text-anchor="middle">+</text>
+    <text x="116" y="60">H<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O(l)</tspan></text>
+    <text x="224" y="60">H<tspan dy="4" font-size="14">3</tspan><tspan dy="-4">O</tspan><tspan dy="-7" font-size="14">+</tspan><tspan dy="7">(aq)</tspan></text>
+    <text x="314" y="60" text-anchor="middle">+</text>
+    <text x="328" y="60">A<tspan dy="-7" font-size="14">&#8722;</tspan><tspan dy="7">(aq)</tspan></text>
+    <text x="425" y="60"><tspan font-style="italic">K</tspan><tspan dy="4" font-size="14">a</tspan></text>
+  </g>
+  <use href="#both-ways" transform="translate(196 54)"/>
+
+  <!-- Line 2: A-(aq) + H2O(l) <=> HA(aq) + OH-(aq), Kb. -->
+  <g fill="#26231F">
+    <text x="12" y="120">+</text>
+    <text x="30" y="120">A<tspan dy="-7" font-size="14">&#8722;</tspan><tspan dy="7">(aq)</tspan></text>
+    <text x="102" y="120" text-anchor="middle">+</text>
+    <text x="116" y="120">H<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O(l)</tspan></text>
+    <text x="224" y="120">HA(aq)</text>
+    <text x="314" y="120" text-anchor="middle">+</text>
+    <text x="328" y="120">OH<tspan dy="-7" font-size="14">&#8722;</tspan><tspan dy="7">(aq)</tspan></text>
+    <text x="425" y="120"><tspan font-style="italic">K</tspan><tspan dy="4" font-size="14">b</tspan></text>
+  </g>
+  <use href="#both-ways" transform="translate(196 114)"/>
+
+  <!-- What cancels: HA with HA (solid), A- with A- (dashed). -->
+  <g fill="none" stroke="#4F706C" stroke-width="2.5" stroke-linecap="round">
+    <path d="M28 68L90 42"/>
+    <path d="M222 128L284 102"/>
+    <path d="M326 70L384 48" stroke-dasharray="7 5"/>
+    <path d="M28 130L86 108" stroke-dasharray="7 5"/>
+  </g>
+
+  <!-- The rule of the sum. -->
+  <path d="M12 146H468" fill="none" stroke="#26231F" stroke-width="1.5"/>
+
+  <!-- Line 3: 2 H2O(l) <=> H3O+(aq) + OH-(aq), Kw. -->
+  <g fill="#26231F">
+    <text x="30" y="190">2 H<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O(l)</tspan></text>
+    <text x="224" y="190">H<tspan dy="4" font-size="14">3</tspan><tspan dy="-4">O</tspan><tspan dy="-7" font-size="14">+</tspan><tspan dy="7">(aq)</tspan></text>
+    <text x="314" y="190" text-anchor="middle">+</text>
+    <text x="328" y="190">OH<tspan dy="-7" font-size="14">&#8722;</tspan><tspan dy="7">(aq)</tspan></text>
+    <text x="425" y="190"><tspan font-style="italic">K</tspan><tspan dy="4" font-size="14">w</tspan></text>
+  </g>
+  <use href="#both-ways" transform="translate(196 184)"/>
+
+  <!-- The result. -->
+  <text x="240" y="264" text-anchor="middle" fill="#4F706C" font-weight="600"><tspan font-style="italic">K</tspan><tspan dy="4" font-size="14">a</tspan><tspan dy="-4"> × </tspan><tspan font-style="italic">K</tspan><tspan dy="4" font-size="14">b</tspan><tspan dy="-4"> = </tspan><tspan font-style="italic">K</tspan><tspan dy="4" font-size="14">w</tspan></text>
+</svg>

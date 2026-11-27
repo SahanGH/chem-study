@@ -1,0 +1,627 @@
+---
+topic: "8.3"
+minutes: 22
+summary: "How to find the pH of a weak acid or a weak base from its Ka or Kb with the equilibrium table of topic 7.7, what percent ionization means, and how Ka and Kb of a conjugate pair are tied together."
+---
+
+Glycolic acid is the acid in many skin-care peels. Make a 0.30 M solution of it, put a pH meter in, and the meter reads close to 2.2. If every molecule of the acid had given its proton to water, the hydronium concentration would be 0.30 M and the meter would read 0.52. A reading near 2.2 says that only about 2 molecules in every 100 have done so. Topic 4.8 said that a weak acid gives up "only some" of its protons, and promised numbers. Here they are.
+
+## A weak acid's equilibrium has its own constant
+
+A weak acid in water is a reaction that runs both ways and settles with most of the acid still whole (topic 4.8). Write a weak acid as HA and its conjugate base as A⁻:
+
+$$
+\begin{aligned}
+&\ce{HA(aq) + H2O(l) <=>} \\
+&\quad \ce{H3O+(aq) + A-(aq)}
+\end{aligned}
+$$
+
+It is an equilibrium, so it has a $K$ (topic 7.3). Water is a pure liquid and is left out of it:
+
+$$
+K_a = \frac{[\ce{H3O+}][\ce{A-}]}{[\ce{HA}]}
+$$
+
+This is the **acid ionization constant**, $K_a$: the equilibrium constant for a weak acid giving its proton to water. The expression is on the equation sheet. The values are not: a question gives the $K_a$ it needs.
+
+Here are the acids this lesson uses. The values are for 25 °C.
+
+| Acid | Formula | $K_a$ |
+|---|---|---|
+| Iodic acid | HIO₃ | 0.17 |
+| Chloroacetic acid | HC₂H₂ClO₂ | 1.4 × 10⁻³ |
+| Formic acid | HCHO₂ | 1.8 × 10⁻⁴ |
+| Glycolic acid | HC₂H₃O₃ | 1.5 × 10⁻⁴ |
+| Butanoic acid | HC₄H₇O₂ | 1.5 × 10⁻⁵ |
+
+Read it this way: the larger the $K_a$, the further the ionization goes and the stronger the acid. Most of the values are very small, so the equilibrium lies far toward the un-ionized acid (topic 7.5). Iodic acid, at the top, is the exception, and a question below shows how far it goes. A strong acid has no place in such a table: its ionization is essentially complete, and there is no equilibrium to describe.
+
+Because $K_a$ values spread over so many powers of ten, they are often given as logarithms, as $[\ce{H3O+}]$ is:
+
+$$
+\text{p}K_a = -\log K_a
+$$
+
+For butanoic acid:
+
+$$
+\begin{aligned}
+\text{p}K_a &= -\log(1.5 \times 10^{-5}) \\
+&= 4.82
+\end{aligned}
+$$
+
+The minus sign turns the order around, as it does for pH: **the stronger the acid, the larger its $K_a$ and the smaller its p$K_a$**. One unit of p$K_a$ is a factor of ten in $K_a$. A question may give the p$K_a$ in place of the $K_a$. Go back the way a pH goes back to a concentration (topic 8.1): $K_a = 10^{-\text{p}K_a}$.
+
+## From Ka to pH
+
+Nothing here is new. Finding the pH of a weak acid is the problem of topic 7.7: start with reactant alone, let $x$ react, and put the equilibrium row into the $K$ expression. The only changes are that $K$ is now called $K_a$, and that the $x$ you find is $[\ce{H3O+}]$.
+
+One thing about the table's starting row: the starting $[\ce{H3O+}]$ is written as 0. Water's own 1.0 × 10⁻⁷ M (topic 8.1) is there, but it is too small to matter beside what the acid makes.
+
+<Worked title="Glycolic acid">
+
+Find the pH of 0.30 M glycolic acid, HC₂H₃O₃, at 25 °C, and the concentration of every species in the solution. $K_a$ = 1.5 × 10⁻⁴.
+
+1. **Write the equilibrium.** HA stands for glycolic acid and A⁻ for its conjugate base, the glycolate ion, C₂H₃O₃⁻.
+
+   $$
+   \begin{aligned}
+   &\ce{HA(aq) + H2O(l) <=>} \\
+   &\quad \ce{H3O+(aq) + A-(aq)}
+   \end{aligned}
+   $$
+
+2. **Set up the table.** Every value is in M. Water has no column.
+
+   | | HA | H₃O⁺ | A⁻ |
+   |---|---|---|---|
+   | I | 0.30 | 0 | 0 |
+   | C | −x | +x | +x |
+   | E | 0.30 − x | x | x |
+
+3. **Put the equilibrium row into $K_a$.**
+
+   $$
+   \begin{aligned}
+   K_a &= \frac{x^2}{0.30 - x} \\
+   &= 1.5 \times 10^{-4}
+   \end{aligned}
+   $$
+
+4. **Leave $x$ out beside 0.30.** $K_a$ is small, so $0.30 - x$ is very nearly 0.30.
+
+   $$
+   \begin{aligned}
+   x^2 &= (1.5 \times 10^{-4})(0.30) \\
+   &= 4.5 \times 10^{-5} \\
+   x &= 6.7 \times 10^{-3}
+   \end{aligned}
+   $$
+
+5. **Check the approximation.**
+
+   $$
+   \frac{6.7 \times 10^{-3}}{0.30} \times 100\% = 2.2\%
+   $$
+
+   That is under 5 percent, so leaving $x$ out was justified.
+
+6. **Take the pH.** $x$ is $[\ce{H3O+}]$.
+
+   $$
+   \begin{aligned}
+   \text{pH} &= -\log(6.7 \times 10^{-3}) \\
+   &= 2.17
+   \end{aligned}
+   $$
+
+7. **List every species.** The hydronium ion and the glycolate ion are each at $x$, 6.7 × 10⁻³ M. For the acid still whole:
+
+   $$
+   \begin{aligned}
+   [\ce{HA}] &= 0.30 - 0.0067 \\
+   &= 0.29\ \text{M}
+   \end{aligned}
+   $$
+
+   And from $K_w$, which is 1.0 × 10⁻¹⁴ at 25 °C:
+
+   $$
+   \begin{aligned}
+   [\ce{OH-}] &= \frac{1.0 \times 10^{-14}}{6.7 \times 10^{-3}} \\
+   &= 1.5 \times 10^{-12}\ \text{M}
+   \end{aligned}
+   $$
+
+8. **Check.**
+
+   $$
+   \frac{(6.7 \times 10^{-3})^2}{0.29} = 1.5 \times 10^{-4}
+   $$
+
+   The answers give $K_a$ back.
+
+</Worked>
+
+Solving the equation without the shortcut gives $x$ = 6.6 × 10⁻³ M and a pH of 2.18. The shortcut's 2.17 is off by less than 0.01 of a pH unit, which is what passing the check buys.
+
+<Check
+  numeric="2.61"
+  tolerance={0.6}
+  slips={{
+    "0.40": "That is the pH if every molecule ionized, which is true of a strong acid. Butanoic acid is weak: set up the table and use Ka.",
+    "5.22": "Did you take the pH from x²? Ka times 0.40 gives x². Take the square root to get x, which is the hydronium concentration.",
+    "11.39": "That is 14.00 minus the pH, which is the pOH. For an acid, x is the hydronium concentration, so its negative logarithm is already the pH.",
+    "4.82": "That is the pKa, the negative logarithm of Ka itself. The pH comes from the hydronium concentration, which the table gives you.",
+    "2.41": "Did you take the square root of Ka alone? x² is Ka times the starting concentration, 0.40 M.",
+  }}
+>
+Butanoic acid, HC₄H₇O₂, is the weak acid that gives rancid butter its smell. Its $K_a$ is 1.5 × 10⁻⁵. What is the pH of a 0.40 M solution of butanoic acid at 25 °C?
+
+<div slot="why">
+
+The table has 0.40 − x, x and x in its equilibrium row.
+
+$$
+\frac{x^2}{0.40 - x} = 1.5 \times 10^{-5}
+$$
+
+Leave $x$ out beside 0.40:
+
+$$
+\begin{aligned}
+x^2 &= (1.5 \times 10^{-5})(0.40) \\
+&= 6.0 \times 10^{-6} \\
+x &= 2.45 \times 10^{-3}
+\end{aligned}
+$$
+
+Here $x$ is kept to three figures for the two steps that use it. Check the approximation:
+
+$$
+\frac{2.45 \times 10^{-3}}{0.40} \times 100\% = 0.61\%
+$$
+
+That is under 5 percent. Then
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(2.45 \times 10^{-3}) \\
+&= 2.61
+\end{aligned}
+$$
+
+</div>
+</Check>
+
+## How much of the acid ionizes
+
+The **percent ionization** of a weak acid is the share of its molecules that have given up their proton: $[\ce{H3O+}]$ at equilibrium divided by the starting concentration of the acid, times 100 percent.
+
+$$
+\begin{aligned}
+&\text{percent ionization} \\
+&= \frac{[\ce{H3O+}]_\text{eq}}{[\ce{HA}]_\text{start}} \times 100\%
+\end{aligned}
+$$
+
+It is not on the equation sheet.
+
+For the 0.30 M glycolic acid you have already calculated it, 2.2 percent, in step 5: for a weak acid alone in water, the check of the approximation and the percent ionization are the same division, as long as the check passes. About 2 molecules in 100 are ionized, which is the opening's number.
+
+**What does adding water do?** Reason with $Q$ (topic 7.10). Double the volume of a weak acid solution and, for an instant, every concentration is halved. $Q$ has two concentrations on top and one underneath, so $Q$ falls to half of $K_a$. With $Q$ below $K$ the reaction runs forward: more of the acid ionizes. Dilution raises the percent ionization. $K_a$ itself has not changed: diluting leaves a $K$ exactly as it was (topic 7.9).
+
+<Check
+  answer={1}
+  misses={{
+    2: "A pH follows the hydronium concentration, not the share of the acid that is ionized. The solution now has ten times the volume. What does that do to the concentration?",
+    3: "Ka is unchanged, but Ka is not the percent ionization. Compare Q with Ka at the instant the water is added.",
+    4: "Compare Q with Ka at the instant the water is added: two concentrations are on top and one is underneath. Which way must the reaction run?",
+  }}
+>
+A 0.30 M solution of glycolic acid is diluted with water to 0.030 M, and the equilibrium settles again. Compared with the 0.30 M solution, what is true of the 0.030 M solution?
+
+- Its percent ionization goes up and its pH goes up
+- Its percent ionization goes up and its pH goes down
+- Its percent ionization and its pH both stay the same
+- Its percent ionization goes down and its pH goes up
+
+<div slot="why">
+
+Just after the water goes in, $Q$ is below $K_a$, so more of the acid ionizes and the percent ionization rises: from 2.2 percent to 6.8 percent. But those ions are now spread through ten times the volume, and the extra ionization does not make up for that. $[\ce{H3O+}]$ falls, from 6.6 × 10⁻³ M to 2.0 × 10⁻³ M, so the pH rises, from 2.18 to 2.69. (These four numbers are from the full equation, because at 0.030 M the shortcut does not pass its check.)
+
+Both things are true at once: a larger share ionized, and a less acidic solution. $K_a$ is the same in both.
+
+</div>
+</Check>
+
+The diagram below is a weak acid in water. You choose the acid and its starting concentration. The box shows 100 particles of the acid, each drawn whole or as a pair of ions. The graph shows the percent ionization of all three acids against the starting concentration, with a dashed line at 5 percent.
+
+<WeakAcid />
+
+Do four things with it, and predict before each move.
+
+1. **Read the starting state.** Formic acid at 0.10 M: 4 of the 100 particles are drawn as ions, 4.2 percent of the acid is ionized, and the pH is 2.38. The readout also gives the pH the shortcut would give, 2.37, and says that the shortcut passes its check here. The check uses the shortcut's $x$, so it comes out a little above the true percent ionized (here both round to 4.2), and the gap widens as the solution is diluted. A strong acid at 0.10 M would have a pH of 1.00.
+
+2. **Dilute it.** Before you slide the concentration down to 0.0010 M, predict two things: will the percent ionization go up or down, and will the pH go up or down? You should see 34 percent ionized and a pH of 3.46. The solution is 100 times more dilute, yet $[\ce{H3O+}]$ fell only about 12-fold, from 4.2 × 10⁻³ M to 3.4 × 10⁻⁴ M, because so much more of the acid ionized. Here the shortcut gives 3.37 and fails its check, at 42 percent.
+
+3. **Change the acid.** Go back to 0.10 M. Butanoic acid's $K_a$ is 12 times smaller than formic acid's. Predict the percent ionization and the pH, then choose it. You should see 1.2 percent and a pH of 2.91. Chloroacetic acid, with the largest $K_a$ of the three, gives 11 percent and a pH of 1.95.
+
+4. **Find where the shortcut stops working.** For each acid, find the highest concentration at which the shortcut fails its check. You should find 0.50 M for chloroacetic acid, 0.050 M for formic acid and 0.0050 M for butanoic acid. Each acid's $K_a$ is about a tenth of the one before, and so is the concentration at which its shortcut gives out.
+
+<KeyIdea>
+
+Diluting a weak acid raises its percent ionization and lowers its $[\ce{H3O+}]$, so the pH rises. $K_a$ does not change. At one concentration, the acid with the larger $K_a$ is more ionized and has the lower pH, and a weak acid's pH is always above that of a strong acid at the same concentration.
+
+</KeyIdea>
+
+**When is the shortcut allowed?** What step 4 showed is what topic 7.7 said: what decides is how large the starting concentration is beside $K$. A concentrated solution of an acid with a small $K_a$ passes easily; a dilute solution, or an acid with a large $K_a$, may not. There is no cutoff worth memorizing, so always do the check, and write the percentage down as part of the answer. If the check fails, the equation has to be solved with $x$ left in. With $C$ for the starting concentration, it is
+
+$$
+x^2 + K_a x - K_a C = 0
+$$
+
+**Beyond the exam:** that takes the quadratic formula, which topic 7.7 uses once. Exam questions are nearly always written so that $x$ is small, and a question that asks you to justify the shortcut wants to see the percentage.
+
+<Check
+  answer={3}
+  misses={{
+    1: "x would be the hydronium concentration if the shortcut held. Do the check before you use x: divide it by the starting concentration.",
+    2: "No acid can be more than 100 percent ionized, so 130 percent cannot describe this solution. Where could a number like that have come from?",
+    4: "A Ka of 0.17 is large for a weak acid, but it is the measured value. Divide x by the starting concentration and see what the check says.",
+  }}
+>
+Iodic acid, HIO₃, has $K_a$ = 0.17, large for a weak acid. A student uses the shortcut for a 0.10 M solution of iodic acid and gets $x$ = 0.13 M. What should the student conclude?
+
+- The pH is 0.89, because x is the hydronium concentration
+- The acid is 130 percent ionized, so it must be a strong acid
+- The shortcut has failed, because x is more than the 0.10 M of acid
+- The Ka was misread, because no weak acid has a Ka as large as 0.17
+
+<div slot="why">
+
+Do the check.
+
+$$
+\frac{0.13}{0.10} \times 100\% = 130\%
+$$
+
+That is far over 5 percent, and it is impossible besides: the acid cannot make more hydronium than there is acid. The shortcut assumed that 0.10 − x is nearly 0.10, and with a $K_a$ this large it is not. The 0.13 M is not a concentration of anything, so no pH can be taken from it.
+
+Solving the full equation gives $x$ = 0.071 M: iodic acid at 0.10 M is 71 percent ionized, with a pH of 1.15. That is what topic 4.8 meant by saying that iodic acid gives up most of its protons, though not essentially all of them.
+
+</div>
+</Check>
+
+## Ka from a measured pH
+
+The same table runs the other way. A pH meter gives the pH of a weak acid solution of known concentration, and the pH gives $x$ (topic 8.1):
+
+$$
+[\ce{H3O+}] = 10^{-\text{pH}}
+$$
+
+The table's equilibrium row then holds three known numbers: $[\ce{H3O+}]$ is $x$, $[\ce{A-}]$ is $x$, and $[\ce{HA}]$ is the starting concentration minus $x$. Put them into the $K_a$ expression. Nothing has to be left out and nothing has to be checked, because $x$ was measured, not solved for.
+
+<Check
+  numeric="1.0e-10"
+  slips={{
+    "5.0e-5": "That is x divided by the starting concentration, the fraction ionized. Ka has two concentrations on top: the hydronium ion's and the conjugate base's.",
+    "4.0e-12": "That is x². The Ka expression also has the concentration of the un-ionized acid underneath.",
+    "2.0e-6": "That is the hydronium ion concentration. It goes into the Ka expression, together with the other two equilibrium concentrations.",
+  }}
+>
+Phenol, C₆H₅OH, is a very weak acid that hospitals once used as an antiseptic. A 0.040 M solution of phenol has a pH of 5.70 at 25 °C. What is $K_a$ for phenol?
+
+<div slot="why">
+
+The pH gives $x$.
+
+$$
+\begin{aligned}
+x &= 10^{-5.70} \\
+&= 2.0 \times 10^{-6}\ \text{M}
+\end{aligned}
+$$
+
+That is $[\ce{H3O+}]$ and also $[\ce{A-}]$. The phenol left is 0.040 − 0.0000020, which is still 0.040 M.
+
+$$
+\begin{aligned}
+K_a &= \frac{x^2}{0.040} \\
+&= \frac{(2.0 \times 10^{-6})^2}{0.040} \\
+&= 1.0 \times 10^{-10}
+\end{aligned}
+$$
+
+</div>
+</Check>
+
+## Weak bases: x is the hydroxide
+
+A weak base takes a proton from water, and only a small fraction of its molecules do (topic 4.8). Write a weak base as B and its conjugate acid as HB⁺:
+
+$$
+\begin{aligned}
+&\ce{B(aq) + H2O(l) <=>} \\
+&\quad \ce{HB+(aq) + OH-(aq)}
+\end{aligned}
+$$
+
+Its constant is the **base ionization constant**, $K_b$: the equilibrium constant for a weak base taking a proton from water.
+
+$$
+K_b = \frac{[\ce{HB+}][\ce{OH-}]}{[\ce{B}]}
+$$
+
+It is on the equation sheet, and so is
+
+$$
+\text{p}K_b = -\log K_b
+$$
+
+Many weak bases are compounds of nitrogen, and take the proton onto the nitrogen atom (topic 8.6 returns to them).
+
+<Figure
+  src="/figures/8-3-weak-base-particles.svg"
+  alt="A box of particles for a weak base, B, dissolved in water. It holds 18 whole molecules of B, drawn as plain circles, 2 HB plus ions, drawn as dark circles each with a small circle attached, and 2 hydroxide ions, drawn as hatched squares marked minus. Most of the base has not reacted."
+  caption="A weak base in water. Of 20 molecules of B, 2 have taken a proton from water, making 2 HB⁺ and 2 OH⁻. Water molecules are left out, and the drawing shows a larger share ionized than most real solutions have."
+/>
+
+The table is the same table. **The one difference decides the answer: what the base makes is OH⁻, so $x$ is $[\ce{OH-}]$.** Its negative logarithm is the pOH. The pH takes one more step, which at 25 °C is
+
+$$
+\text{pH} = 14.00 - \text{pOH}
+$$
+
+A solution of a base must end up with a pH above 7 at 25 °C: if yours does not, you stopped at the pOH.
+
+<Worked title="Ethanolamine">
+
+Ethanolamine, HOC₂H₄NH₂, is a weak base that gas plants use to take carbon dioxide out of natural gas. Its $K_b$ is 3.2 × 10⁻⁵. Find the pH of 0.25 M ethanolamine at 25 °C.
+
+1. **Write the equilibrium.** B stands for ethanolamine and HB⁺ for its conjugate acid, HOC₂H₄NH₃⁺.
+
+   $$
+   \begin{aligned}
+   &\ce{B(aq) + H2O(l) <=>} \\
+   &\quad \ce{HB+(aq) + OH-(aq)}
+   \end{aligned}
+   $$
+
+2. **Set up the table.** Every value is in M.
+
+   | | B | HB⁺ | OH⁻ |
+   |---|---|---|---|
+   | I | 0.25 | 0 | 0 |
+   | C | −x | +x | +x |
+   | E | 0.25 − x | x | x |
+
+3. **Put the equilibrium row into $K_b$.**
+
+   $$
+   \begin{aligned}
+   K_b &= \frac{x^2}{0.25 - x} \\
+   &= 3.2 \times 10^{-5}
+   \end{aligned}
+   $$
+
+4. **Leave $x$ out beside 0.25.**
+
+   $$
+   \begin{aligned}
+   x^2 &= (3.2 \times 10^{-5})(0.25) \\
+   &= 8.0 \times 10^{-6} \\
+   x &= 2.8 \times 10^{-3}
+   \end{aligned}
+   $$
+
+5. **Check the approximation.**
+
+   $$
+   \frac{2.8 \times 10^{-3}}{0.25} \times 100\% = 1.1\%
+   $$
+
+   That is under 5 percent, so leaving $x$ out was justified. It is also the percent of the base that has ionized.
+
+6. **$x$ is $[\ce{OH-}]$, so take the pOH.**
+
+   $$
+   \begin{aligned}
+   \text{pOH} &= -\log(2.8 \times 10^{-3}) \\
+   &= 2.55
+   \end{aligned}
+   $$
+
+7. **Then the pH.**
+
+   $$
+   \begin{aligned}
+   \text{pH} &= 14.00 - 2.55 \\
+   &= 11.45
+   \end{aligned}
+   $$
+
+8. **Check.** The solution is of a base, and the pH is above 7.
+
+</Worked>
+
+<Check
+  numeric="11.55"
+  tolerance={0.18}
+  slips={{
+    "2.45": "That is the pOH: for a base, x is the hydroxide concentration. One more step takes a pOH to a pH at 25 °C.",
+    "13.30": "That is the pH if every molecule took a proton, as for a strong base. Trimethylamine is weak: set up the table and use Kb.",
+    "5.25": "A base cannot have a pH below 7 at 25 °C. Did you turn Kb into a Ka first? Use Kb as given, with x as the hydroxide concentration.",
+    "9.10": "Did you take the pOH from x²? Kb times 0.20 gives x². Take the square root to get x, which is the hydroxide concentration.",
+    "11.5": "Close. Did you round the pH, or x, too early? The concentration has two significant figures, so the pH takes two digits after the decimal point.",
+    "11.6": "Close. Did you round the pH, or x, too early? The concentration has two significant figures, so the pH takes two digits after the decimal point.",
+  }}
+>
+Trimethylamine, (CH₃)₃N, is a weak base with $K_b$ = 6.3 × 10⁻⁵. What is the pH of a 0.20 M solution of trimethylamine at 25 °C?
+
+<div slot="why">
+
+The table has 0.20 − x, x and x in its equilibrium row, and $x$ is $[\ce{OH-}]$. With $x$ left out beside 0.20:
+
+$$
+\begin{aligned}
+x^2 &= (6.3 \times 10^{-5})(0.20) \\
+&= 1.26 \times 10^{-5} \\
+x &= 3.55 \times 10^{-3}
+\end{aligned}
+$$
+
+Here $x$ is kept to three figures for the two steps that use it. Check the approximation:
+
+$$
+\frac{3.55 \times 10^{-3}}{0.20} \times 100\% = 1.8\%
+$$
+
+That is under 5 percent. Then the pOH, and from it the pH:
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(3.55 \times 10^{-3}) \\
+&= 2.45
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 2.45 \\
+&= 11.55
+\end{aligned}
+$$
+
+</div>
+</Check>
+
+## An acid and its conjugate base
+
+The conjugate base of a weak acid is itself a weak base: A⁻ can take a proton back from water. So one conjugate pair has two equilibria, the acid's with $K_a$ and the base's with $K_b$:
+
+$$
+\begin{aligned}
+&\ce{HA(aq) + H2O(l) <=>} \\
+&\quad \ce{H3O+(aq) + A-(aq)}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\ce{A-(aq) + H2O(l) <=>} \\
+&\quad \ce{HA(aq) + OH-(aq)}
+\end{aligned}
+$$
+
+Add the two equations. HA is on both sides and cancels, and so does A⁻. What is left is water's own equilibrium:
+
+$$
+\begin{aligned}
+&\ce{2H2O(l) <=>} \\
+&\quad \ce{H3O+(aq) + OH-(aq)}
+\end{aligned}
+$$
+
+When equations are added, their constants multiply (topic 7.6):
+
+$$
+K_a \times K_b = K_w
+$$
+
+This is on the equation sheet, and at 25 °C the product is 1.0 × 10⁻¹⁴.
+
+<Figure
+  src="/figures/8-3-conjugate-pair-equations.svg"
+  alt="Two equations written one under the other and added. The first is HA plus water giving hydronium plus A minus, with the constant K a. The second is A minus plus water giving HA plus hydroxide, with the constant K b. HA is struck through in both equations with a solid stroke and A minus is struck through in both with a dashed stroke. Under a rule, the sum is two water molecules giving hydronium plus hydroxide, with the constant K w. The last line reads K a times K b equals K w."
+  caption="Add the equation of an acid to the equation of its own conjugate base, and the acid and the base cancel. What is left is water's equilibrium, so the two constants multiply to Kw."
+/>
+
+Here are two uses. For the conjugate base of butanoic acid, the butanoate ion:
+
+$$
+\begin{aligned}
+K_b &= \frac{1.0 \times 10^{-14}}{1.5 \times 10^{-5}} \\
+&= 6.7 \times 10^{-10}
+\end{aligned}
+$$
+
+For the conjugate acid of ethanolamine:
+
+$$
+\begin{aligned}
+K_a &= \frac{1.0 \times 10^{-14}}{3.2 \times 10^{-5}} \\
+&= 3.1 \times 10^{-10}
+\end{aligned}
+$$
+
+This puts a number on topic 4.8's rule that the stronger acid has the weaker conjugate base: the two constants of a pair multiply to a fixed number, so the larger one is, the smaller the other must be. In logarithms, at 25 °C:
+
+$$
+\text{p}K_a + \text{p}K_b = 14.00
+$$
+
+**Only for a conjugate pair.** The equations cancel to water's only when the base is the acid's own conjugate. The $K_a$ of butanoic acid and the $K_b$ of ethanolamine are two unrelated numbers; their product, 4.8 × 10⁻¹⁰, means nothing.
+
+What the pH is when a conjugate base is dissolved by itself, as a salt, is topic 8.4's question.
+
+<KeyIdea>
+
+For an acid and its own conjugate base, $K_a \times K_b = K_w$, which is 1.0 × 10⁻¹⁴ at 25 °C. The stronger the acid, the weaker its conjugate base.
+
+</KeyIdea>
+
+<Check
+  answer={2}
+  misses={{
+    1: "Take one proton off HCHO₂. Is what is left the ion in this option? The two species must be an acid and its own conjugate base.",
+    3: "Take one proton off (CH₃)₃NH⁺. Is what is left the base in this option? The two species must differ by exactly one proton.",
+    4: "Add one proton to (CH₃)₃N. Is the result the acid in this option? The two species must be an acid and its own conjugate base.",
+  }}
+>
+Which pair of constants multiplies to give $K_w$?
+
+- Ka of HCHO₂ and Kb of C₂H₃O₃⁻
+- Ka of C₆H₅OH and Kb of C₆H₅O⁻
+- Ka of (CH₃)₃NH⁺ and Kb of HOC₂H₄NH₂
+- Ka of HOC₂H₄NH₃⁺ and Kb of (CH₃)₃N
+
+<div slot="why">
+
+The two species must be an acid and its own conjugate base, which differ by exactly one proton (topic 4.8). Take one proton off phenol, C₆H₅OH, and what is left is C₆H₅O⁻: that is a pair.
+
+Take one proton off formic acid, HCHO₂, and what is left is CHO₂⁻, not the glycolate ion C₂H₃O₃⁻. Take one proton off (CH₃)₃NH⁺ and what is left is trimethylamine, (CH₃)₃N, not ethanolamine; and the conjugate acid of trimethylamine is (CH₃)₃NH⁺, not HOC₂H₄NH₃⁺. Options 3 and 4 each pair an acid with a base, and each uses the right kind of species, but the two belong to different pairs.
+
+</div>
+</Check>
+
+<Trap>
+
+Eight mistakes come up again and again on this topic:
+
+- **Treating a weak acid as strong.** Its $[\ce{H3O+}]$ is not the number on the label. It comes from the table and $K_a$.
+- **Reporting the pOH of a weak base as its pH.** For a base, $x$ is $[\ce{OH-}]$. Take the pOH, then subtract it from 14.00 at 25 °C.
+- **Saying the shortcut is fine without showing it.** Divide $x$ by the starting concentration and write the percentage.
+- **Using an $x$ that failed its check.** An $x$ larger than the starting concentration is a sign, not an answer.
+- **Thinking that dilution lowers a weak acid's pH because more of it ionizes.** The percent ionization rises, $[\ce{H3O+}]$ falls, and the pH rises.
+- **Thinking that a larger percent ionization means a larger $K_a$.** Dilution changes the percent ionization; only temperature changes $K_a$.
+- **Multiplying a $K_a$ and a $K_b$ that do not belong to one conjugate pair.** The product is $K_w$ only for an acid and its own conjugate base.
+- **Forgetting the square root.** $K_a$ times the concentration is $x^2$, not $x$.
+
+</Trap>
+
+<KeyPoints>
+
+- A weak acid's ionization is an equilibrium, in which HA and water give $\ce{H3O+}$ and $\ce{A-}$, with $K_a = [\ce{H3O+}][\ce{A-}]/[\ce{HA}]$. The stronger the acid, the larger its $K_a$ and the smaller its p$K_a$.
+- The pH of a weak acid comes from the table of topic 7.7, where $x$ is $[\ce{H3O+}]$. Leaving $x$ out beside the starting concentration is allowed only if $x$ turns out under 5 percent of it, with the percentage written down.
+- Percent ionization is $[\ce{H3O+}]$ at equilibrium over the starting concentration, times 100 percent. Dilution raises it while it lowers $[\ce{H3O+}]$ and raises the pH, with $K_a$ unchanged.
+- A measured pH gives $x$, and $x$ in the table gives $K_a$.
+- For a weak base, in which B and water give $\ce{HB+}$ and $\ce{OH-}$ with $K_b$, $x$ is $[\ce{OH-}]$, so find the pOH first and then the pH.
+- For an acid and its own conjugate base, $K_a \times K_b = K_w$.
+
+</KeyPoints>
+
+<PracticeNext />

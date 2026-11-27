@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" font-family="system-ui, sans-serif" font-size="18">
+  <!-- One box of 22 particles for a weak base B in water: 18 whole molecules of B (plain circles), 2 HB+ ions (dark circles, each with a small circle for the proton it took) and 2 OH- ions (hatched squares). Charge balances: 2 plus, 2 minus. The 20 units of base dissolved are 18 B and 2 HB+. The grid has six columns (x = 73, 140, 207, 273, 340, 407) and four rows (y = 58, 113, 168, 223); each molecule of B is moved off its grid point by at most 8 units, the four ions stand on theirs, and the grid points (407, 58) and (207, 223) are empty. Nearest centers are at least 47 units apart, so no two particles touch. Water is not drawn. -->
+  <defs>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#FDFCF9"/>
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#6B655D" stroke-width="2.4"/>
+    </pattern>
+    <g id="b">
+      <circle r="15" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+    </g>
+    <g id="hb">
+      <circle r="15" fill="#26231F" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="14.85" cy="-14.85" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+      <text y="6.5" text-anchor="middle" fill="#FDFCF9">+</text>
+    </g>
+    <g id="oh">
+      <rect x="-11" y="-11" width="22" height="22" fill="url(#hatch)" stroke="#26231F" stroke-width="1.5"/>
+    </g>
+  </defs>
+  <rect width="480" height="340" fill="#FDFCF9"/>
+  <rect x="40" y="30" width="400" height="220" rx="10" fill="none" stroke="#26231F" stroke-width="1.5"/>
+
+  <!-- Row 1 (y = 58): B, B, B, OH-, B, empty. -->
+  <use href="#b" x="78" y="62"/>
+  <use href="#b" x="134" y="55"/>
+  <use href="#b" x="212" y="64"/>
+  <use href="#oh" x="273" y="58"/>
+  <text x="289" y="64" fill="#26231F">&#8722;</text>
+  <use href="#b" x="346" y="60"/>
+
+  <!-- Row 2 (y = 113): B, HB+, B, B, B, B. -->
+  <use href="#b" x="68" y="118"/>
+  <use href="#hb" x="140" y="113"/>
+  <use href="#b" x="203" y="108"/>
+  <use href="#b" x="279" y="117"/>
+  <use href="#b" x="335" y="109"/>
+  <use href="#b" x="412" y="119"/>
+
+  <!-- Row 3 (y = 168): B, B, B, B, HB+, B. -->
+  <use href="#b" x="79" y="163"/>
+  <use href="#b" x="136" y="174"/>
+  <use href="#b" x="213" y="170"/>
+  <use href="#b" x="268" y="163"/>
+  <use href="#hb" x="340" y="168"/>
+  <use href="#b" x="402" y="172"/>
+
+  <!-- Row 4 (y = 223): OH-, B, empty, B, B, B. -->
+  <use href="#oh" x="73" y="223"/>
+  <text x="89" y="229" fill="#26231F">&#8722;</text>
+  <use href="#b" x="146" y="220"/>
+  <use href="#b" x="267" y="226"/>
+  <use href="#b" x="345" y="219"/>
+  <use href="#b" x="411" y="226"/>
+
+  <!-- The key, on one line centered at y = 296. -->
+  <use href="#b" x="66" y="296"/>
+  <text x="89" y="302" fill="#26231F">B (18)</text>
+  <use href="#hb" x="192" y="296"/>
+  <text x="227" y="302" fill="#26231F">HB<tspan dy="-7" font-size="14">+</tspan><tspan dy="7"> (2)</tspan></text>
+  <use href="#oh" x="344" y="296"/>
+  <text x="363" y="302" fill="#26231F">OH<tspan dy="-7" font-size="14">&#8722;</tspan><tspan dy="7"> (2)</tspan></text>
+</svg>
