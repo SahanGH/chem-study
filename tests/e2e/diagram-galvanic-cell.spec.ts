@@ -58,8 +58,8 @@ const drawing = (panel: Locator) => panel.locator('svg[role="img"]');
 const status = (diagram: Locator) => diagram.getByRole('status');
 const flow = (diagram: Locator) => diagram.locator('[data-flow]');
 const group = (diagram: Locator, side: Side) => diagram.getByRole('group', { name: GROUP[side], exact: true });
-const menu = (diagram: Locator, side: Side) => group(diagram, side).getByRole('combobox', { name: 'Metal', exact: true });
-const slider = (diagram: Locator, side: Side) => group(diagram, side).getByRole('slider', { name: 'Concentration', exact: true });
+const menu = (diagram: Locator, side: Side) => group(diagram, side).getByRole('combobox', { name: `${GROUP[side]} metal`, exact: true });
+const slider = (diagram: Locator, side: Side) => group(diagram, side).getByRole('slider', { name: `${GROUP[side]} concentration`, exact: true });
 const sliderValue = (diagram: Locator, side: Side) => group(diagram, side).locator('.diagram-slider-value');
 const label = (diagram: Locator, name: string) => drawing(cell(diagram)).locator(`[data-label="${name}"]`);
 
@@ -164,6 +164,7 @@ test('the diagram starts with tin on the left and silver on the right, both 1.0 
   await expect(label(diagram, 'nitrate')).toHaveText('NO₃⁻');
   await expect(label(diagram, 'potassium')).toHaveText('K⁺');
   expect(await arrows(diagram)).toEqual({ electrons: 'right', nitrate: 'left', potassium: 'right' });
+  await expect(flow(diagram)).toHaveAttribute('aria-live', 'polite');
   await expect(flow(diagram)).toHaveText(
     'Electrons flow through the wire from the tin electrode on the left, the anode, to the silver electrode on the right, the cathode. ' +
       'In the salt bridge, NO₃⁻ ions move toward the left half-cell and K⁺ ions toward the right half-cell.',
@@ -553,6 +554,40 @@ test('for every pair of half-cells, either way round, no text is cut off, no two
   expect(states).toBe(144);
 });
 
+// The same check at the narrowest phone widths, where font hinting can change the boxes: a reduced set,
+// with every metal on each side at least once, the widest labels both ways round and the concentration extremes.
+for (const width of [320, 412]) {
+  test(`at ${width} px wide, no text is cut off, no two labels come within 4 units, and no label meets a line`, async ({ page }) => {
+    test.setTimeout(300_000);
+    await page.setViewportSize({ width, height: 900 });
+    const diagram = await openDiagram(page, PAGE, NAME);
+    await page.evaluate(() => document.fonts.ready);
+    const pairs: [MetalId, MetalId][] = [
+      ...METALS.map((m, i): [MetalId, MetalId] => [m, at(METALS, (i + 1) % METALS.length)]),
+      ['chromium', 'silver'],
+      ['silver', 'chromium'],
+      ['chromium', 'chromium'],
+      ['silver', 'silver'],
+    ];
+    let states = 0;
+    for (const [left, right] of pairs) {
+      for (const [leftExponent, rightExponent] of [
+        [-3, -3],
+        [0, 0],
+        [-3, 0],
+        [0, -3],
+      ] as [Exponent, Exponent][]) {
+        const s = { left, leftExponent, right, rightExponent };
+        await setCell(diagram, s);
+        checkPanel(`${width} px, ${where(s)}, the cell`, await geometry(cell(diagram)));
+        checkPanel(`${width} px, ${where(s)}, the ladder`, await geometry(scales(diagram)));
+        states += 1;
+      }
+    }
+    expect(states).toBe(40);
+  });
+}
+
 test('the Q marker never meets a label, over every log Q the sliders reach', async ({ page }) => {
   test.setTimeout(300_000);
   const diagram = await openDiagram(page, PAGE, NAME);
@@ -584,6 +619,10 @@ test('the Q marker never meets a label, over every log Q the sliders reach', asy
   expect([...seen].sort((a, b) => a - b)).toEqual([-6, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
 });
 
+// A sign after the word ("anode: +", "cathode (−)") or before it ("+ electrode", "(−) cathode").
+const SIGN_AFTER = /(electrode|anode|cathode)s?[\s:,;(]*[+−-]/i;
+const SIGN_BEFORE = /[+−-][\s)]*(electrode|anode|cathode)/i;
+
 test('no electrode, anode or cathode is given a sign anywhere in the diagram, at any arrangement', async ({ page }) => {
   const diagram = await openDiagram(page, PAGE, NAME);
   const figure = page.locator('[data-part="diagram"]', { has: diagram });
@@ -604,10 +643,17 @@ test('no electrode, anode or cathode is given a sign anywhere in the diagram, at
     });
     expect(words, where(s)).not.toMatch(/\b(positive|negative)\b/i);
     expect(words, where(s)).not.toMatch(/terminal/i);
-    expect(words, where(s)).not.toMatch(/(electrode|anode|cathode)s?\s*\(?[+−]/i);
-    expect(words, where(s)).not.toMatch(/[+−]\)?\s*(electrode|anode|cathode)/i);
-    expect(words, where(s)).not.toMatch(/spontaneous|favorable/i);
+    expect(words, where(s)).not.toMatch(SIGN_AFTER);
+    expect(words, where(s)).not.toMatch(SIGN_BEFORE);
+    expect(words, where(s)).not.toMatch(/spontaneous|favorable|oxidizing agent|reducing agent/i);
   }
+});
+
+test('the sign patterns can fail: they match deliberately bad strings', () => {
+  for (const bad of ['anode: +', 'cathode (−)', 'the cathode, − side', 'cathode (-)', 'electrode +', '+ electrode', '(−) cathode']) {
+    expect(bad, bad).toMatch(new RegExp(`${SIGN_AFTER.source}|${SIGN_BEFORE.source}`, 'i'));
+  }
+  expect('the anode, Sn(s) → Sn²⁺(aq) + 2e⁻').not.toMatch(SIGN_AFTER);
 });
 
 // A nominal size: the font size in drawing units, times 320, over the drawing's width in units.
