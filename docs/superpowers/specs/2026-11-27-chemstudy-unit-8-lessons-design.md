@@ -314,7 +314,7 @@ other on the page.
 | Substance | Value the unit uses | Where | How sure |
 |---|---|---|---|
 | Water | $K_w$ = 1.0 × 10⁻¹⁴ at 25 °C; 2.9 × 10⁻¹⁵ at 10 °C; 2.9 × 10⁻¹⁴ at 40 °C | 8.1 | sure; fairly sure of the other two |
-| Chloroacetic acid, HC₂H₂ClO₂ | $K_a$ = 1.4 × 10⁻³ (p$K_a$ 2.87) | 8.3 explorer, 8.6 | sure |
+| Chloroacetic acid, HC₂H₂ClO₂ | $K_a$ = 1.4 × 10⁻³ (p$K_a$ 2.85) | 8.3 explorer, 8.6 | sure |
 | Formic acid, HCHO₂ | $K_a$ = 1.8 × 10⁻⁴; p$K_a$ 3.75 | 8.3 explorer; 8.9, 8.10 | sure |
 | Glycolic acid, HC₂H₃O₃ | $K_a$ = 1.5 × 10⁻⁴; p$K_a$ 3.83 | 8.3; 8.9 | fairly sure |
 | Lactic acid, HC₃H₅O₃ | p$K_a$ 3.86 | 8.5 explorer | sure |
@@ -326,7 +326,7 @@ other on the page.
 | Iodic acid, HIO₃ | $K_a$ = 0.17 | 8.3 | fairly sure |
 | Phenol, C₆H₅OH | $K_a$ = 1.0 × 10⁻¹⁰ | 8.3 | fairly sure |
 | Dihydrogen phosphate ion, H₂PO₄⁻ | p$K_a$ 7.21 | 8.8, 8.10 | sure |
-| Phosphorous acid, H₃PO₃ | p$K_{a1}$ 1.3, p$K_{a2}$ 6.7 | 8.5 figure, 8.6 | unsure of the first |
+| An acid the lesson calls H₂A and says is made up | p$K_{a1}$ 3.00, p$K_{a2}$ 8.00 | 8.5 figure | chosen, not measured (section 11) |
 | H₂S, H₂Se, H₂Te | p$K_{a1}$ 7.0, 3.9, 2.6 | 8.6 | fairly sure |
 | Pyridine, C₅H₅N | $K_b$ = 1.7 × 10⁻⁹ (p$K_a$ of C₅H₅NH⁺ 5.23) | 8.4, 8.9 | sure |
 | Ethanolamine, HOC₂H₄NH₂ | $K_b$ = 3.2 × 10⁻⁵ (p$K_a$ of its conjugate acid 9.50) | 8.3 | sure |
@@ -653,3 +653,45 @@ checks pass.
 
 Section 11, "As built", is added when the last pull request is opened, as
 for Unit 6.
+
+## 11. Changed while the briefs were checked
+
+Written on 2026-11-27, before any lesson was written. Each brief had a
+fact-check, an originality check and a second check; these are the places
+where they changed what the sections above say. The briefs in the plan are
+the final word.
+
+- **Chloroacetic acid's p$K_a$ is 2.85**, not 2.87: it is the logarithm of
+  the 1.4 × 10⁻³ that lesson 8.3 uses, it is inside the spread of the tables
+  (2.85 to 2.87), and with it lesson 8.6's typed Check accepts every honest
+  rounding.
+- **Lactic acid's $K_a$ in the titration-curve explorer is 10⁻³·⁸⁶
+  exactly**, so that lessons 8.5 and 8.7 quote the same numbers (equivalence
+  pH 8.40; bromocresol green changes from 6.96 mL to 14.58 mL).
+- **The curve with two rises in lesson 8.5 is for an acid the lesson calls
+  H₂A and says is made up** (p$K_a$ 3.00 and 8.00), not phosphorous acid.
+  Phosphorous acid's first p$K_a$ was the least certain value of the unit,
+  and with it the reading halfway to the first rise misses the p$K_a$ by
+  half a unit.
+- **Lesson 8.6 opens with gluconic acid**, not lactic acid, which four other
+  lessons already use, and its first Check is about hypophosphorous acid,
+  H₃PO₂, since lesson 8.5 already asked the same question of phosphorous
+  acid.
+- **Lesson 8.6 says that bond polarity is the first test for an acidic
+  hydrogen and not the only one.** On the site's electronegativity scale the
+  S–H and Se–H bonds are no more polar than C–H, and H₂S, H₂Se and H₂Te are
+  acids.
+- **Lesson 8.11's worked example uses lead(II) fluoride and lead(II)
+  bromide.** Strontium fluoride and thallium(I) chloride are the salts of
+  lesson 7.11's and 7.12's own worked examples.
+- **Lesson 8.3's opening has no strong-acid twin**, lesson 8.4 has new
+  scenes (lesson 4.2 already had benzoic acid with sodium hydroxide and
+  pyridine with hydrobromic acid), and lessons 8.8 and 8.10 have new cases
+  and a worked addition with unequal amounts (140 and 60 mmol with 35 mmol
+  of base).
+- **The shared solver's description was wrong for a weak base mixed with a
+  salt of its conjugate acid** (it would have given pH 5.10 where the answer
+  is 9.50). The first fact-check of lesson 8.3's brief caught it, and the
+  solver's tests now hold that case.
+- **Kept, though the originality check flagged it:** the titration-curve
+  explorer's flask is lesson 4.6's, as section 1 decides.
