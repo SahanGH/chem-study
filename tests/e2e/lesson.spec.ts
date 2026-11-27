@@ -27,7 +27,10 @@ test('a wrong answer says so, a right answer explains itself, and the keyboard w
   const options = first.locator('.check-option');
 
   await options.nth(0).click();
-  await expect(feedback).toHaveText('Not quite. Try another.');
+  // Unit 5's Checks name the likely mistake (the unit's check feedback data file).
+  await expect(feedback).toHaveText(
+    'Not quite. Zero order means the rate does not change when the concentration of A changes. Here it does.',
+  );
   await expect(first.locator('.check-why')).not.toHaveAttribute('open', '');
 
   await options.nth(2).focus();
