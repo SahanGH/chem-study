@@ -698,3 +698,38 @@ the final word.
   solver's tests now hold that case.
 - **Kept, though the originality check flagged it:** the titration-curve
   explorer's flask is lesson 4.6's, as section 1 decides.
+
+## 12. As built
+
+Written November 27, 2026, when the last pull request of the unit was opened.
+
+**What went in.** Eleven lessons (8.1 to 8.11) with 67 Checks, each with a message for every wrong option or a slip for every likely wrong method; 19 drawn figures; three interactive diagrams on one shared solver (`src/lib/acid-base.ts`): the weak-acid explorer in lesson 8.3, the titration-curve explorer in lessons 8.5 and 8.7, and the buffer explorer in lesson 8.10. Unit 8 is on `FEEDBACK_UNITS` and on `BALANCED_UNITS`; the right answer sits at options 1 to 4 in 13, 13, 12 and 10 of the choice Checks. Reading times are 20, 18, 22, 21, 22, 22, 22, 22, 22, 22 and 22 minutes.
+
+**Pull requests.** A (this design and the plan, 87), B (lessons 8.1 to 8.3, the solver and the weak-acid explorer, 88), C (lessons 8.4 to 8.7 and the titration-curve explorer, 89) and D (lessons 8.8 to 8.11, the buffer explorer and this section), each merged by Claude when "Build and test" passed, as the teacher said.
+
+**What differs from the design.**
+
+- The framework could not be read. This session's network does not reach the College Board's site, so section 3 rests on a summary written from memory. The teacher should read section 3 against the framework itself, above all the exclusions under topics 8.8 to 8.10 and the numbering of 8.11.
+- The textbooks could not be read either. Originality was checked against the teacher's materials in the AP Chem repository and against the rest of this site, and not against any published textbook.
+- The lessons are longer than the design's lesson table planned. Nine of the eleven are at 22 minutes, the ceiling the site sets, and several would come out higher by the rule that sets a reading time from a lesson's length. Nothing was cut, since each part answers a framework statement; the teacher may want lessons 8.4 and 8.5 split or trimmed.
+- The solver gained a builder for weak-base mixtures (`weakBaseSolution`) after the code review of pull request B, so that no explorer writes that mapping by hand.
+- Section 11 lists what changed in the briefs. In the finished lessons the originality checks of the prose had 45 more passages reworded (9 in lessons 8.1 to 8.3, 18 in 8.4 to 8.7, and those of 8.8 to 8.11), mostly headings, key ideas and items of a Trap list that followed the wording or the order of the teacher's notes.
+- One figure of lesson 8.6 (the pull of a halogen atom) was redrawn after its fact-check: each arrow sat halfway between two rows and could be read one row off.
+
+**Values no checker could confirm without a reference.** Each is the value a standard table gives as far as two independent checkers knew, and none could be looked up from this session.
+
+| Value | Used | Doubt |
+|---|---|---|
+| $K_a$ of hexanoic acid; its solubility | 1.3 × 10⁻⁵; about 0.09 M | fairly sure |
+| $K_b$ of hydroxylamine | 1.1 × 10⁻⁸ | tables give the p$K_a$ of NH₃OH⁺ as 5.94 to 5.96 |
+| p$K_a$ of gluconic acid | 3.86 | fairly sure |
+| p$K_a$ of the methylammonium ion | 10.64 | tables give 10.62 to 10.66 |
+| p$K_a$ of glycolic acid | 3.83 | fairly sure |
+| p$K_a$ values of the haloacetic acids (lesson 8.6) | 2.59, 2.85, 2.90, 3.18 | tables differ in the second decimal place |
+| Indicator p$K_a$ values (lesson 8.7) | 4.7, 7.1, 8.9 | tables differ by about 0.2 |
+| $K_w$ at 10 °C and 40 °C (lesson 8.1) | as in the lesson | fairly sure |
+| $K_{sp}$ of PbF₂, PbBr₂, TlBr and Co(OH)₂ (lesson 8.11) | as in the lesson | tables differ |
+| That hexanoic acid's smell fades only near the equivalence point (lesson 8.4's opening) | two sentences | from reasoning, not from a source |
+
+**Claude's calls, for the teacher to change.** Hydronium, H₃O⁺, is written everywhere and a bare H⁺ nowhere. A typed pH is accepted within about 0.02. The pH of a salt solution is taught in lesson 8.4. Lesson 8.5's curve with two rises is for a made-up acid, H₂A. The titration-curve explorer titrates the flask of topic 4.6. Lesson 8.10 works one addition to a buffer and says in a "Beyond the exam" line that the exam rarely asks for it as a calculation; one checker recalled released questions that do ask for that pH, so the teacher may want the label removed. Lesson 8.4 uses hexanoic acid because its first replacement, phenylacetic acid, is a controlled precursor chemical in the United States. Dilution of a buffer is taught in lesson 8.8, ahead of topic 8.10, where the framework states it.
+
