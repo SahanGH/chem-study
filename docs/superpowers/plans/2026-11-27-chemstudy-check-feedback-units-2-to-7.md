@@ -56,3 +56,31 @@ Every Check with options has four options. 18 typed-number Checks have no `unit`
 - [ ] Apply, then compare; read the diff: only Check tags, reordered options and any `explanation_edit` sentence change.
 - [ ] `npm test`, `npm run build`, the browser tests; a look at each lesson at 412, 390, 360 and 320 px with a wrong answer showing; a browser check by a fresh agent.
 - [ ] An "As carried out" note here; the pull request, listing reorders, tolerances, changed sentences, messages changed in the checks and anything a checker was unsure of.
+
+## As carried out
+
+**For every unit.** The five writers worked at once, one per unit, each from its skeleton. Then, for each unit:
+
+- **First fact-check:** a fresh agent on Fable 5.2.
+- **Fixes:** the session applied the decided fixes to the data file with a script that matches each old message exactly.
+- **Second check:** a fresh agent read every changed message.
+- **Browser check: a script instead of an agent.** For each unit, the script clicked every wrong option and typed every slip, comparing each message with the data file, and confirmed the right answer is accepted. At 412, 390, 360 and 320 px it checked that messages stay inside their cards and that no page scrolls sideways. Unit 1's browser check by an agent found no defect; the fact-checks already judge each message against its lesson.
+
+**The browser test** (`tests/e2e/check-feedback.spec.ts`) was tried on Unit 1 first. With one message altered in the data file, it failed on that Check and slip.
+
+### Unit 2
+
+- **The writer:** 88 messages (81 for options, 7 slips), with 5 moves. Answers at options 1 to 4 went from 6, 12, 9, 0 to 6, 8, 8, 5.
+  - **Moves:** lesson 2.1 Check 1; 2.2 Check 1; 2.3 Check 1; 2.4 Check 3; 2.7 Check 3.
+  - No tolerance and no changed sentence.
+- **The first fact-check** confirmed every answer, move and slip value. It found 6 messages that gave or nearly gave the answer, and 3 points of wording; all were rewritten. The six:
+  - lesson 2.1 Check 2;
+  - lesson 2.3 Checks 1 and 2;
+  - all three messages of lesson 2.4 Check 3;
+  - lesson 2.5 Check 4;
+  - lesson 2.6 Check 4.
+- **The second check** passed 8 of the 11 rewrites. It corrected three:
+  - a false general claim, "an ionic solid has no covalent bonds" (ammonium salts have them, lesson 2.1);
+  - one message that still confirmed half of the answer;
+  - one that assumed the student's working.
+- **The sweep:** 88 wrong answers tried, no problems. The build has no problems; the browser tests that touch Checks pass.
