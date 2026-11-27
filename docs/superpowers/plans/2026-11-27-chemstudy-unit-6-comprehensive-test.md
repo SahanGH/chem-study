@@ -116,8 +116,10 @@ Branch `topic/unit-6-test-session-2`, from `topic/unit-6-test-session-1`.
 
 ### Task 4: Close out
 
-- [ ] "As built" in the design; "As carried out" notes here; the list for the teacher of every value no checker could confirm.
+- [x] "As built" in the design; "As carried out" notes here; the list for the teacher of every value no checker could confirm.
 - [ ] Commit, push, open pull request C, merge when its check passes, confirm the deploy.
+
+> **As carried out (2026-11-27).** Eight writers wrote both sessions at once. Each part then had: its number check run by the controller; a first fact-check; fixes on Sonnet; the session's originality check on Sonnet; the rewrites it asked for, by a Fable reviser per part; a second fact-check of two parts at a time, told to treat every sentence as new; last fixes. Sessions were assembled by `scratchpad/unit6-test/assemble.py`, which numbers the questions, totals the points and writes the front matter. Three displays and two inline expressions were too wide at 320 px and were split or put in words. Tests: 1,618 unit tests; 442 practice and accessibility browser tests with session 1 in place; 137 pages.
 
 ## What this plan delivers against the design
 
