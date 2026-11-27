@@ -1,0 +1,469 @@
+---
+title: "Worksheet 3: Free energy, K and coupled reactions"
+kind: worksheet
+order: 4
+topics: ["9.5", "9.6", "9.7"]
+summary: Eleven questions on what the sign and size of ΔG° say about K, the enthalpy and entropy changes of dissolving a salt, and driving an unfavored reaction by coupling.
+---
+
+Work each question on paper before you open its answer.
+
+You will need these relationships.
+
+$$
+\Delta G^\circ = -RT\ln K
+$$
+
+$$
+R = 8.314\ \text{J/(mol·K)}
+$$
+
+Note the *joules*: $R$ is in joules, so $\Delta G^\circ$ goes in as joules, not kilojoules.
+
+The free energies of coupled steps add.
+
+Question 3, part 5(d) and the end of question 4's answer use $\Delta G$ without the circle, the free energy change of a mixture as it is now:
+
+$$
+\Delta G = \Delta G^\circ + RT\ln Q
+$$
+
+It is not on the AP exam or its equation sheet, and each of those places is labeled. $\Delta G$ is not $\Delta G^\circ$.
+
+## Questions
+
+<Question number={1} title="ΔG° and K" topic="9.5">
+
+Complete the correspondence:
+
+<Part label="a">
+
+$\Delta G^\circ$ negative $\Rightarrow$ $K$ <Blank /> $\Rightarrow$ <Blank />
+
+<Answer>
+
+The first blank: $K > 1$. The second blank: products favored.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$\Delta G^\circ$ zero $\Rightarrow$ $K$ <Blank />
+
+<Answer>
+
+$K = 1$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+$\Delta G^\circ$ positive $\Rightarrow$ $K$ <Blank /> $\Rightarrow$ <Blank />
+
+<Answer>
+
+The first blank: $K < 1$. The second blank: reactants favored.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Why must $\Delta G^\circ$ be converted to joules before using $\Delta G^\circ = -RT\ln K$?
+
+<Answer>
+
+$R$ is in J/(mol·K), so $RT\ln K$ comes out in joules per mole. Both sides of the equation must be in the same unit.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={2} title="Two reactions compared" topic="9.5">
+
+Reaction A has $\Delta G^\circ = -5\ \text{kJ}$; reaction B has $\Delta G^\circ = -50\ \text{kJ}$. Compare their equilibrium constants qualitatively, without a calculator.
+
+<Answer>
+
+Both exceed 1. B's is enormously larger: $K$ depends exponentially on $\Delta G^\circ$, so making the free energy change ten times more negative multiplies $K$ by a huge factor rather than by ten. A's $K$ is only modestly above 1.
+
+</Answer>
+
+</Question>
+
+<Question number={3} title="ΔG and ΔG°" topic="9.5">
+
+$\Delta G$ and $\Delta G^\circ$ are two different quantities.
+
+<Part label="a" beyond>
+
+$\Delta G^\circ$ refers to <Blank />; $\Delta G$ refers to <Blank />.
+
+<Answer>
+
+$\Delta G^\circ$ refers to standard conditions. $\Delta G$ refers to the current mixture.
+
+</Answer>
+
+</Part>
+
+<Part label="b" beyond>
+
+$Q < K$: the sign of $\Delta G$ is <Blank /> and the reaction runs <Blank />.
+
+<Answer>
+
+The sign: negative. The direction: forward.
+
+</Answer>
+
+</Part>
+
+<Part label="c" beyond>
+
+$Q = K$: $\Delta G =$ <Blank />
+
+<Answer>
+
+$\Delta G = 0$
+
+</Answer>
+
+</Part>
+
+<Part label="d" beyond>
+
+$Q > K$: the sign of $\Delta G$ is <Blank />
+
+<Answer>
+
+Positive.
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+A student writes "at equilibrium $\Delta G^\circ = 0$." Correct the student.
+
+<Answer>
+
+At equilibrium $Q = K$. $\Delta G^\circ$ does not change as a reaction runs: it is fixed for the reaction at that temperature, and $\Delta G^\circ = -RT\ln K$ makes it zero only in the special case $K = 1$.
+
+**Beyond the exam:** what is zero at equilibrium is $\Delta G$, without the circle. Setting $\Delta G = 0$ and $Q = K$ in
+
+$$
+\Delta G = \Delta G^\circ + RT\ln Q
+$$
+
+gives
+
+$$
+\Delta G^\circ = -RT\ln K
+$$
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={4} title="A positive ΔG°" topic="9.5">
+
+A reaction has $\Delta G^\circ = +20\ \text{kJ}$. A student concludes it can never proceed forward under any circumstances. Explain why that is wrong.
+
+<Answer>
+
+$\Delta G^\circ$ describes standard conditions, where every solute is at 1 M and every gas is at 1 atm. A positive $\Delta G^\circ$ means $K$ is less than 1, not zero. Take 298 K. In joules, $+20\ \text{kJ}$ is $+20{,}000\ \text{J}$. Rearranged, $\Delta G^\circ = -RT\ln K$ is $K = e^{-\Delta G^\circ/RT}$, so
+
+$$
+\begin{aligned}
+\frac{-\Delta G^\circ}{RT} &= \frac{-20{,}000}{(8.314)(298)} \\
+&= -8.072 \\
+K &= e^{-8.072} \\
+&= 3.1 \times 10^{-4}
+\end{aligned}
+$$
+
+A mixture with no product, or with little enough of it, has $Q$ below $K$, so the reaction runs forward until $Q = K$. It stops with mostly reactants, but it does proceed.
+
+**Beyond the exam:** if very little product is present, $Q$ is small and $RT\ln Q$ is negative enough to make $\Delta G < 0$, so the reaction does run forward, until $Q$ rises to $K$.
+
+</Answer>
+
+</Question>
+
+<Question number={5} title="Fixed, or set by the mixture" topic="9.5">
+
+For each, state whether the quantity is fixed at a given temperature or depends on the current composition:
+
+<Part label="a">
+
+$K$: <Blank />
+
+<Answer>
+
+Fixed.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$Q$: <Blank />
+
+<Answer>
+
+Depends on the mixture.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+$\Delta G^\circ$: <Blank />
+
+<Answer>
+
+Fixed.
+
+</Answer>
+
+</Part>
+
+<Part label="d" beyond>
+
+$\Delta G$: <Blank />
+
+<Answer>
+
+Depends on the mixture.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={6} title="The parts of dissolving" topic="9.6">
+
+The free energy of dissolving a salt. Give the sign of the contribution named:
+
+<Part label="a">
+
+$\Delta H^\circ$ of breaking up the lattice: <Blank />
+
+<Answer>
+
+Positive.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$\Delta S^\circ$ of breaking up the lattice: <Blank />
+
+<Answer>
+
+Positive.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+$\Delta S^\circ$ of solvent reorganizing around the ions: <Blank />
+
+<Answer>
+
+Negative.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+$\Delta H^\circ$ of ion–solvent attraction: <Blank />
+
+<Answer>
+
+Negative.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={7} title="Ammonium nitrate" topic="9.6">
+
+$\ce{NH4NO3}$ dissolves endothermically (the beaker gets cold), yet it is very soluble. Account for this using both terms of this equation:
+
+$$
+\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ
+$$
+
+<Answer>
+
+$\Delta H^\circ > 0$ works against the dissolving, so enthalpy alone would predict that very little dissolves. But $\Delta S^\circ$ is positive: ions fixed in a crystal become hydrated ions that move freely through the solution. And $\Delta S^\circ$ is large enough that at room temperature $T\Delta S^\circ$ exceeds $\Delta H^\circ$, so $\Delta G^\circ$ is negative, $K$ is above 1, and a great deal of the salt dissolves. The entropy term outweighs the enthalpy term here.
+
+</Answer>
+
+</Question>
+
+<Question number={8} title="Why the total is hard to predict" topic="9.6">
+
+The AP exam does not ask you to predict the overall $\Delta G^\circ$ of dissolving from scratch. State the reason, and say what you are expected to produce instead.
+
+<Answer>
+
+The contributions largely cancel: the two large enthalpy terms, for breaking up the lattice and for the ion–solvent attraction, have opposite signs, and so do the entropy gain of the ions and the entropy loss of the water held around them. So the net value is a small difference between big numbers and is not reliably predictable by inspection. You are expected to identify the contributions and their signs, and reason about which dominates.
+
+</Answer>
+
+</Question>
+
+<Question number={9} title="Driving an unfavored process" topic="9.7">
+
+These parts are about driving an unfavored process.
+
+<Part label="a">
+
+Name the two general strategies.
+
+<Answer>
+
+Supply external energy from outside the system, or couple the unfavored reaction to a thermodynamically favored one.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+External energy driving electrolysis of water: <Blank />
+
+<Answer>
+
+Electrical.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+External energy driving photosynthesis: <Blank />
+
+<Answer>
+
+Light.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Free energies of coupled steps <Blank />, provided the steps share a <Blank />.
+
+<Answer>
+
+The first blank: add. The second blank: common intermediate.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={10} title="ATP and glucose" topic="9.7">
+
+A cell adds a phosphate group to glucose (it "phosphorylates" the glucose), a reaction that is unfavored when it is taken alone. The reaction of ATP with water (ATP "hydrolysis") is favored. In words, the two reactions are these, with values for a neutral solution at 25 °C, the conditions biochemists' tables use.
+
+glucose + phosphate → glucose 6-phosphate + H₂O, with $\Delta G^\circ = +13.8\ \text{kJ/mol}$
+
+ATP + H₂O → ADP + phosphate, with $\Delta G^\circ = -30.5\ \text{kJ/mol}$
+
+<Part label="a">
+
+Find $\Delta G^\circ$ for the coupled process.
+
+<Answer>
+
+Add the two equations:
+
+glucose + ATP → glucose 6-phosphate + ADP
+
+The $\Delta G^\circ$ values add with them:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= +13.8 + (-30.5) \\
+&= \mathbf{-16.7}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+The coupled process is thermodynamically favored.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Which species is the common intermediate?
+
+<Answer>
+
+Phosphate: one equation makes it and the other uses it, so it cancels from the sum (water does too). In a cell no free phosphate is made: the group passes straight from ATP to glucose.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Explain what "ATP is the cell's energy currency" actually means.
+
+<Answer>
+
+Not that ATP stores energy in a special bond, but that its reaction with water is thermodynamically favored enough to drive reactions that are not. When the two share an intermediate they go as one process, and the sum of their free energies is negative, so the combined process is thermodynamically favored.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={11} title="A coupling that fails" topic="9.7">
+
+Reaction X has $\Delta G^\circ = +25\ \text{kJ}$; reaction Y has $\Delta G^\circ = -18\ \text{kJ}$. A student couples them and reports the pair as favored. Evaluate.
+
+<Answer>
+
+The sum is
+
+$$
++25 + (-18) = +7\ \text{kJ}
+$$
+
+It is still positive, so the coupled process is *not* thermodynamically favored: Y is not favored enough to carry X. Coupling also requires a shared common intermediate; without one the addition is arithmetic rather than chemistry.
+
+</Answer>
+
+</Question>

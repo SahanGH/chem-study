@@ -1,0 +1,459 @@
+---
+title: "Worksheet 1: Entropy"
+kind: worksheet
+order: 2
+topics: ["9.1", "9.2", "9.3"]
+summary: Eight questions on what entropy measures, predicting the sign of an entropy change from the moles of gas, and calculating ΔS° from standard entropies.
+---
+
+Work each question on paper before you open its answer. One habit runs through the worksheet: to find the sign of an entropy change, count the moles of gas on each side before anything else.
+
+You will need this relationship:
+
+$$
+\begin{aligned}
+\Delta S^\circ ={} & \textstyle\sum n\,S^\circ(\text{products}) \\
+& - \textstyle\sum n\,S^\circ(\text{reactants})
+\end{aligned}
+$$
+
+Here $n$ is each substance's coefficient in the balanced equation.
+
+Use these values. Tables round a little differently from one another, so the values given here are the ones to use on this page.
+
+| Substance | $S^\circ$ in J/(mol·K) |
+|---|---|
+| $\ce{H2(g)}$ | 131 |
+| $\ce{O2(g)}$ | 205 |
+| $\ce{N2(g)}$ | 192 |
+| $\ce{H2O(l)}$ | 70 |
+| $\ce{H2O(g)}$ | 189 |
+| $\ce{NH3(g)}$ | 193 |
+| $\ce{NO2(g)}$ | 240 |
+| $\ce{N2O4(g)}$ | 304 |
+| $\ce{CaCO3(s)}$ | 93 |
+| $\ce{CaO(s)}$ | 40 |
+| $\ce{CO2(g)}$ | 214 |
+
+## Questions
+
+<Question number={1} title="What entropy measures" topic="9.1">
+
+Three short parts on what entropy measures.
+
+<Part label="a">
+
+Complete: entropy measures how <Blank /> the energy and matter of a system are.
+
+<Answer>
+
+Dispersed, or "spread out".
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Explain why "a messy room has high entropy" is a poor analogy.
+
+<Answer>
+
+Entropy counts the microscopic arrangements available to particles and their energy. Tidying a room rearranges macroscopic objects without changing the number of molecular arrangements at all, so the analogy describes appearance rather than the quantity being measured.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Rank by absolute entropy at the same temperature: $\ce{H2O(s)}$, $\ce{H2O(l)}$, $\ce{H2O(g)}$.
+
+<Answer>
+
+From lowest to highest:
+
+$$
+\ce{H2O(s)} < \ce{H2O(l)} < \ce{H2O(g)}
+$$
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={2} title="The sign of an entropy change" topic="9.1">
+
+Predict the sign of $\Delta S^\circ$ and give the controlling reason in three words or fewer.
+
+<Part label="a">
+
+$$
+\begin{aligned}
+&\ce{2H2(g) + O2(g) ->} \\
+&\quad \ce{2H2O(l)}
+\end{aligned}
+$$
+
+<Answer>
+
+Negative; 3 mol of gas to 0.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$$
+\begin{aligned}
+&\ce{NH4NO3(s) ->} \\
+&\quad \ce{NH4+(aq) + NO3^-(aq)}
+\end{aligned}
+$$
+
+<Answer>
+
+Positive; the crystal disperses. Topic 9.6 looks at what the water around the ions does.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+$$
+\ce{CO2(s) -> CO2(g)}
+$$
+
+<Answer>
+
+Positive; sublimation.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+$$
+\begin{aligned}
+&\ce{2SO2(g) + O2(g) ->} \\
+&\quad \ce{2SO3(g)}
+\end{aligned}
+$$
+
+<Answer>
+
+Negative; 3 mol of gas to 2.
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+$$
+\begin{aligned}
+&\ce{H2(g) + Cl2(g) ->} \\
+&\quad \ce{2HCl(g)}
+\end{aligned}
+$$
+
+<Answer>
+
+The sign cannot be predicted by counting, and $\Delta S^\circ$ is small; 2 mol of gas to 2 mol. Question 3 looks at why.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={3} title="When the moles of gas do not change" topic="9.1">
+
+Part e of question 2 has no change in the number of moles of gas:
+
+$$
+\begin{aligned}
+&\ce{H2(g) + Cl2(g) ->} \\
+&\quad \ce{2HCl(g)}
+\end{aligned}
+$$
+
+Explain what that implies about the size of $\Delta S^\circ$ and why the sign is hard to predict by inspection.
+
+<Answer>
+
+With the gas count unchanged the dominant contribution vanishes, so $\Delta S^\circ$ is small beside the other values on this page: about $+20\ \text{J/K}$, from a fuller table of standard entropies than the one above. What remains are secondary differences in molecular complexity and mass, which inspection cannot reliably rank, so the value must be looked up rather than predicted.
+
+</Answer>
+
+</Question>
+
+<Question number={4} title="Entropy of the system and of the surroundings" topic="9.1, 9.3">
+
+Three parts on a process that lowers the entropy of the system: what happens to the entropy of its surroundings, and whether the process can be thermodynamically favored.
+
+<Part label="a" beyond>
+
+The second law of thermodynamics says what every favored process does to the entropy of the universe. State it as an inequality.
+
+<Answer>
+
+For a favored process:
+
+$$
+\Delta S_{\text{univ}} > 0
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b" beyond>
+
+Water freezing at $-10\ \text{°C}$ is favored, yet the water's entropy falls. Resolve this.
+
+<Answer>
+
+Freezing releases heat to the surroundings. Below 0 °C the entropy gained by the surroundings exceeds the entropy lost by the water, so $\Delta S_{\text{univ}}$ remains positive.
+
+The exam's own reasoning gives the same result: freezing has $\Delta H^\circ < 0$ and $\Delta S^\circ < 0$, so
+
+$$
+\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ
+$$
+
+is negative at low temperature, here below 0 °C.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+True or false: a process whose own entropy change is negative ($\Delta S^\circ < 0$) can never be thermodynamically favored.
+
+<Answer>
+
+False. With $\Delta H^\circ < 0$, $\Delta G^\circ$ is negative at a low enough temperature, and water freezing below 0 °C is one such process.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={5} title="Where the entropy scale starts" topic="9.2">
+
+Two parts on the values a table of entropies holds.
+
+<Part label="a">
+
+A perfect crystal at 0 K has entropy exactly <Blank />.
+
+<Answer>
+
+Zero.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$S^\circ$ for $\ce{O2(g)}$ is 205 J/(mol·K), but $\Delta H_f^\circ$ for $\ce{O2(g)}$ is zero. Explain why the two conventions differ.
+
+<Answer>
+
+Entropy has a true zero, a perfect crystal at 0 K, so absolute entropies can be measured, and an element has no reason to sit at that zero. Enthalpy has no natural origin, so only changes are measurable, and elements in their standard states are *assigned* zero by convention.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={6} title="Entropy changes from a table" topic="9.2">
+
+Calculate $\Delta S^\circ$ for each reaction, from the table of values.
+
+<Part label="a">
+
+$$
+\begin{aligned}
+&\ce{CaCO3(s) ->} \\
+&\quad \ce{CaO(s) + CO2(g)}
+\end{aligned}
+$$
+
+<Answer>
+
+Products minus reactants:
+
+$$
+\begin{aligned}
+\Delta S^\circ &= (40 + 214) - 93 \\
+&= \mathbf{+161}\ \text{J/K}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$$
+\begin{aligned}
+&\ce{N2(g) + 3H2(g) ->} \\
+&\quad \ce{2NH3(g)}
+\end{aligned}
+$$
+
+<Answer>
+
+Products minus reactants, each with its coefficient:
+
+$$
+\begin{aligned}
+\Delta S^\circ &= 2(193) \\
+&\quad - [192 + 3(131)] \\
+&= 386 - 585 \\
+&= \mathbf{-199}\ \text{J/K}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+$$
+\ce{H2O(l) -> H2O(g)}
+$$
+
+<Answer>
+
+Products minus reactants:
+
+$$
+\begin{aligned}
+\Delta S^\circ &= 189 - 70 \\
+&= \mathbf{+119}\ \text{J/K}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+$$
+\ce{2NO2(g) -> N2O4(g)}
+$$
+
+<Answer>
+
+Products minus reactants, each with its coefficient:
+
+$$
+\begin{aligned}
+\Delta S^\circ &= 304 - 2(240) \\
+&= \mathbf{-176}\ \text{J/K}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+$$
+\begin{aligned}
+&\ce{2H2(g) + O2(g) ->} \\
+&\quad \ce{2H2O(l)}
+\end{aligned}
+$$
+
+<Answer>
+
+Products minus reactants, each with its coefficient:
+
+$$
+\begin{aligned}
+\Delta S^\circ &= 2(70) \\
+&\quad - [2(131) + 205] \\
+&= 140 - 467 \\
+&= \mathbf{-327}\ \text{J/K}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={7} title="A sum with two errors" topic="9.2">
+
+A student computes $\Delta S^\circ$ for this reaction:
+
+$$
+\begin{aligned}
+&\ce{N2(g) + 3H2(g) ->} \\
+&\quad \ce{2NH3(g)}
+\end{aligned}
+$$
+
+The student writes:
+
+$$
+\begin{aligned}
+\Delta S^\circ &= 193 - (192 + 131) \\
+&= -130\ \text{J/K}
+\end{aligned}
+$$
+
+Identify both errors and give the correct value.
+
+<Answer>
+
+They omitted the coefficient 2 on $\ce{NH3}$ and the coefficient 3 on $\ce{H2}$. Correctly:
+
+$$
+\begin{aligned}
+\Delta S^\circ &= 2(193) \\
+&\quad - [192 + 3(131)] \\
+&= \mathbf{-199}\ \text{J/K}
+\end{aligned}
+$$
+
+</Answer>
+
+</Question>
+
+<Question number={8} title="Predictions and values" topic="9.1, 9.2">
+
+For each of the five reactions of question 6, predict the sign of $\Delta S^\circ$ from the change in the moles of gas. Then compare each prediction with the value you calculated. What does this confirm?
+
+<Answer>
+
+| Part | Change in moles of gas | $\Delta S^\circ$ in J/K |
+|---|---|---|
+| a | $+1$ | $+161$ |
+| b | $-2$ | $-199$ |
+| c | $+1$ | $+119$ |
+| d | $-1$ | $-176$ |
+| e | $-3$ | $-327$ |
+
+All five signs agree. This confirms the rule of counting the gas: where the moles of gas change, that change gives the sign with no table, which is why a question can ask for the sign and give no data.
+
+</Answer>
+
+</Question>

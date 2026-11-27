@@ -52,7 +52,7 @@ const DOUBLED = ['cancell', 'channell', 'fuell', 'labell', 'levell', 'modell', '
 
 const WORDS = [
   'aeroplane', 'ageing', 'aluminium', 'amongst', 'anticlockwise', 'caesium', 'centring', 'cheque',
-  'defence', 'dreamt', 'grey', 'judgement', 'learnt', 'licence', 'maths', 'mould', 'offence', 'practise',
+  'defence', 'dreamt', 'grey', 'jewellery', 'judgement', 'learnt', 'licence', 'maths', 'mould', 'offence', 'practise',
   'practised', 'practises', 'practising', 'programme', 'programmes', 'skilful', 'spelt', 'towards', 'tyre',
   'tyres', 'whilst',
 ];
