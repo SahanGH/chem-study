@@ -300,3 +300,64 @@ exist.
   checks.
 - "As built" is added here, with the list for the teacher of every value no
   checker could confirm.
+
+## 11. As built (2026-11-27)
+
+- **The two pages:** session 1 has 19 questions and 88 points (Parts A to
+  D, topics 9.1 to 9.7); session 2 has 18 questions and 88 points (Parts E
+  to H, topics 9.8 to 9.11). Each is 95 minutes.
+- **The three tasks at the framework's edge** (section 2):
+  - Adding two half-reactions through ΔG° (session 2, question 7) was
+    **dropped**. The fact-checker found it right but not answerable from
+    the lessons, and the originality check found copper(I) in water a stock
+    textbook exercise. Question 7 is now iron(III) with iron wire, inside
+    lesson 9.9.
+  - The hydrogen half-cell (session 2, question 12) is **kept**. Two
+    checkers judged it answerable from the stem, which states that a
+    dissolved ion enters Q as its concentration and the gas as its pressure.
+  - The zinc block on a steel hull (session 2, question 4) is **kept**; the
+    scene, the half-reaction with dissolved oxygen and its state symbols
+    were confirmed.
+- **What the checks found.** No fact-check found a wrong number in an
+  answer. The corrections of substance were: question 1 of session 1 said
+  the table "cannot say" what an ideal-gas calculation can; the baking
+  scene of the old question 9 was not real; question 2 of session 2 gave
+  the wrong reason for where lead(II) sulfate forms (it forms by contact at
+  the lead end, whatever the current does); rubric lines that shut out an
+  answer an earlier line accepted; stems that printed what an earlier part
+  asked for.
+- **Rewritten after the originality check** (it found six questions close
+  to a lesson, a worksheet or a stock exercise, and more in part):
+  - Session 1: question 3 (now carbonyl sulfide), question 9 (now a data
+    sheet for 2-propanol into acetone and hydrogen; baking soda is in the
+    Unit 7 test), question 11(b) and (d), question 12(c) and (d), question
+    15(c), question 16(b), question 17(b), question 18, question 19(b) and
+    (c), and single parts of questions 2, 4 and 8.
+  - Session 2: question 1(d), question 2 (magnesium nitrate in the
+    bridge), question 3(a) and (b), question 5(b) (nickel in place of
+    tin), question 6 (an iron cathode), question 7 (all of it), question
+    9(a), question 10 (now three parts), question 12(d), question 17(c).
+- **Values the checkers could not confirm to the last figure** (all from
+  memory):
+
+| Where | Value | Doubt |
+|---|---|---|
+| Session 1, question 6 | urea reaction, ΔG° −6.2 kJ at 300 K and +15.1 kJ at 350 K, with "take" | within 0.4 kJ of an independent figure |
+| Session 1, question 14 | Kp of the water-gas reaction, calculated from the two values printed | measured values are about 1.7 times larger, and ΔG° is zero near 947 K, not 981 K; the stem says the table is calculated |
+| Session 1, question 15 | glucose 6-phosphate and fructose 6-phosphate, 67 to 33, with "take" | gives +1.8 kJ/mol; the published value is +1.7 |
+| Session 1, question 16 | Ca(OH)₂ dissolving, ΔH° −17.6 kJ/mol | −16.7 to −17.8 by table |
+| Session 1, question 17 | MgSO₄·7H₂O dissolving, ΔH° +16.1 kJ/mol, with "take"; ΔS° of the hydrate forming, −210 J/(mol·K), with "take" | an estimate from formation values gives +11.8; only the sign is used |
+| Session 2, question 14 | gold in the bath taken as Au³⁺ | most real baths hold gold(I) cyanide |
+| Session 2, question 16 | 0.840 kg of oxygen per person per day, with "take" | typical figure |
+| Session 2, question 6 | magnesium and aluminum anodes at their table potentials | a real cell of this kind reads lower; the stem says so |
+
+  Confirmed by a checker to the figures given: every reduction potential
+  (against the table the exam prints), every standard entropy including
+  COS(g) 231.6, the formation enthalpies of 2-propanol(g) and acetone(g),
+  the tin and zinc oxide values, K_sp of Mg(OH)₂, and the biochemical free
+  energies.
+- **Devices used more than once** and left: a record with one wrong entry
+  (question 9 of session 1; questions 10 and 14 of session 2).
+- **For the tests to come:** tell the originality checker from the start
+  that a calculation on new data or a decision the data make is not a
+  repeat, as was done for Unit 8; it saves a round of revision.

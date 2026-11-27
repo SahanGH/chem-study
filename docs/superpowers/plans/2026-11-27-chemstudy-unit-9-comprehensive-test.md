@@ -151,3 +151,22 @@ Branch `topic/unit-9-test-session-2`, from `topic/unit-9-test-session-1`.
 | 7: how a session is made; the roles | "Conventions, models, roles"; 1 to 3 |
 | 8: pull requests | A, 2, 4 |
 | 10: done when | 2, 3, 4 |
+
+## As carried out (2026-11-27)
+
+- Groups A to C were done as planned, with one change of order: both
+  sessions were written, checked and corrected together, and the two
+  pull requests for the sessions were opened one after the other.
+- Writers, fact-checkers, second checkers and revisers ran on the
+  strongest model; the originality checkers and the fixers on Sonnet. The
+  controller ran every number check after every change, assembled, built,
+  measured at four widths and ran the browser tests.
+- The originality check returned six STRONG and about twenty MODERATE
+  findings. Every STRONG finding was revised. For each MODERATE finding
+  the reviser read the passage quoted and revised the part unless it asks
+  for work the passage does not; the parts left are named in the
+  revisers' reports.
+- Every part rewritten after the originality check went through the
+  second check, which confirmed the new values.
+- The findings, scripts and reports are in `scratchpad/unit9-test/`
+  (`fc/`, `notes/`), which is not kept.
