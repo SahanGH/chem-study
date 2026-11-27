@@ -47,23 +47,23 @@ const BRIEF_SEGMENTS: Record<SubstanceId, { joules: number[]; totals: number[]; 
 };
 
 // The brief's worked states: energy in kJ, what is present, the temperature shown, the percent shown.
-const WORKED: [SubstanceId, number, SegmentKind, string, number | null][] = [
+const WORKED: [SubstanceId, number, SegmentKind, string, string | null][] = [
   ['ethanol', 0, 'solid', '−150.0', null],
   ['ethanol', 1, 'solid', '−135.7', null],
-  ['ethanol', 5, 'melting', '−114.1', 50],
+  ['ethanol', 5, 'melting', '−114.1', '50'],
   ['ethanol', 12, 'liquid', '−73.4', null],
   ['ethanol', 26, 'liquid', '51.6', null],
-  ['ethanol', 29, 'boiling', '78.3', 1],
-  ['ethanol', 40, 'boiling', '78.3', 29],
-  ['ethanol', 67.5, 'boiling', '78.3', 99],
+  ['ethanol', 29, 'boiling', '78.3', 'less than 1'],
+  ['ethanol', 40, 'boiling', '78.3', '29'],
+  ['ethanol', 67.5, 'boiling', '78.3', 'more than 99'],
   ['ethanol', 68, 'gas', '83.7', null],
   ['ethanol', 68.5, 'gas', '90.3', null],
   ['ethanol', 70, 'gas', '110.0', null],
   ['iodine', 0, 'solid', '25.0', null],
   ['iodine', 2.5, 'solid', '71.0', null],
-  ['iodine', 12, 'melting', '113.7', 46],
+  ['iodine', 12, 'melting', '113.7', '46'],
   ['iodine', 23, 'liquid', '146.8', null],
-  ['iodine', 40, 'boiling', '184.4', 34],
+  ['iodine', 40, 'boiling', '184.4', '34'],
   ['iodine', 68, 'gas', '194.4', null],
   ['iodine', 70, 'gas', '248.6', null],
 ];
@@ -218,18 +218,25 @@ describe('state', () => {
     const now = state(id, energy);
     expect(now.kind).toBe(kind);
     expect(shownTemperature(now.temperatureTenths)).toBe(temperature);
-    expect(now.percent).toBe(percent);
+    expect(now.percentText).toBe(percent);
   });
 
-  it('holds ethanol at 29.0 kJ at 1 percent, though exactly 0.02 percent has boiled', () => {
+  it('says less than 1 percent for ethanol at 29.0 kJ, where exactly 0.0212 percent has boiled', () => {
     const now = state('ethanol', 29);
     // 820 cJ into a flat of 3,860,000 cJ.
     expect(now.energyCentijoules - (segments('ethanol')[3]?.startCentijoules ?? 0)).toBe(820);
-    expect(now.percent).toBe(1);
+    expect(now.percent).toBe(0);
+    expect(now.percentText).toBe('less than 1');
   });
 
-  it('holds ethanol at 67.5 kJ at 99 percent, though exactly 99.76 percent has boiled', () => {
-    expect(state('ethanol', 67.5).percent).toBe(99);
+  it('says more than 99 percent for ethanol at 67.5 kJ, where exactly 99.76 percent has boiled', () => {
+    expect(state('ethanol', 67.5).percent).toBe(100);
+    expect(state('ethanol', 67.5).percentText).toBe('more than 99');
+  });
+
+  it('gives a share from 1 to 99 percent as a whole number, rounded half up: iodine at 5.0 kJ is 1.13 percent', () => {
+    expect(state('iodine', 5).percent).toBe(1);
+    expect(state('iodine', 5).percentText).toBe('1');
   });
 
   it('rounds the one exact tie, ethanol at 68.5 kJ (90.25 °C), half up to 90.3 °C', () => {
@@ -241,7 +248,7 @@ describe('state', () => {
     expect(state('iodine', 70)).toMatchObject({ energyCentijoules: 7_000_000, segment: 4, kind: 'gas' });
   });
 
-  it('counts the molecules in the box in each phase: 20 in all, split as the percent shown', () => {
+  it('counts the molecules in the box in each phase: 20 in all, split as the exact share, with at least one of each phase on a flat', () => {
     expect(state('ethanol', 0).counts).toEqual({ solid: 20, liquid: 0, gas: 0 });
     expect(state('ethanol', 5).counts).toEqual({ solid: 10, liquid: 10, gas: 0 });
     expect(state('ethanol', 12).counts).toEqual({ solid: 0, liquid: 20, gas: 0 });
@@ -300,10 +307,16 @@ describe('over all 282 states the controls reach', () => {
       if (now.kind === 'boiling') expect(now.temperatureTenths).toBe(substance.boilingTenths);
       const flat = now.kind === 'melting' || now.kind === 'boiling';
       if (flat) {
-        expect(now.percent, `${id} at ${energy} kJ`).toBeGreaterThanOrEqual(1);
-        expect(now.percent, `${id} at ${energy} kJ`).toBeLessThanOrEqual(99);
+        const segment = segments(id)[now.segment];
+        if (!segment) throw new Error('No segment');
+        // The exact share, from the energy into the flat over its length.
+        const exact = (100 * (now.energyCentijoules - segment.startCentijoules)) / (segment.endCentijoules - segment.startCentijoules);
+        const expected = exact < 1 ? 'less than 1' : exact > 99 ? 'more than 99' : String(Math.floor(exact + 0.5 + 1e-9));
+        expect(now.percentText, `${id} at ${energy} kJ (${exact})`).toBe(expected);
+        expect(now.percent, `${id} at ${energy} kJ`).toBe(Math.floor(exact + 0.5 + 1e-9));
       } else {
         expect(now.percent, `${id} at ${energy} kJ`).toBeNull();
+        expect(now.percentText, `${id} at ${energy} kJ`).toBeNull();
       }
     }
   });
@@ -416,6 +429,15 @@ describe('readout', () => {
     );
     expect(readout('iodine', 40)).toBe(
       'Iodine boiling at 184.4 °C: 34 percent is gas. The energy going in is separating molecules, not speeding them up, so the temperature holds. This segment takes 41.6 kJ.',
+    );
+  });
+
+  it('says less than 1 percent and more than 99 percent at the two ends of a flat', () => {
+    expect(readout('ethanol', 29)).toBe(
+      'Ethanol boiling at 78.3 °C: less than 1 percent is gas. The energy going in is separating molecules, not speeding them up, so the temperature holds. This segment takes 38.6 kJ.',
+    );
+    expect(readout('ethanol', 67.5)).toBe(
+      'Ethanol boiling at 78.3 °C: more than 99 percent is gas. The energy going in is separating molecules, not speeding them up, so the temperature holds. This segment takes 38.6 kJ.',
     );
   });
 

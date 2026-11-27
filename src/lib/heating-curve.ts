@@ -132,8 +132,13 @@ export interface HeatingState {
   readonly temperatureTenths: number;
   /** The exact temperature in °C, to place the marker on the line. */
   readonly temperature: number;
-  /** On a flat, the percent that has changed phase, held between 1 and 99; null on a slope. */
+  /** On a flat, the percent that has changed phase, rounded half up (0 to 100); null on a slope. */
   readonly percent: number | null;
+  /**
+   * The percent as the readout words it: a whole number from 1 to 99, or "less than 1" or
+   * "more than 99" when the exact share lies outside that range; null on a slope.
+   */
+  readonly percentText: string | null;
   /** The molecules drawn in the box, in each phase. */
   readonly counts: PhaseCounts;
 }
@@ -247,9 +252,10 @@ export function state(id: SubstanceId, energy: number): HeatingState {
 
   if (isFlat(kind)) {
     const length = segment.endCentijoules - segment.startCentijoules;
-    const percent = Math.min(99, Math.max(1, roundHalfUp(100 * into, length)));
-    // The molecules that have changed phase, in proportion to the percent shown, with at least one of each phase.
-    const changed = Math.min(MOLECULES - 1, Math.max(1, roundHalfUp(percent * MOLECULES, 100)));
+    const percent = roundHalfUp(100 * into, length);
+    const percentText = 100 * into < length ? 'less than 1' : 100 * into > 99 * length ? 'more than 99' : String(percent);
+    // The molecules that have changed phase, in proportion to the exact share, with at least one of each phase.
+    const changed = Math.min(MOLECULES - 1, Math.max(1, roundHalfUp(MOLECULES * into, length)));
     const counts =
       kind === 'melting'
         ? { solid: MOLECULES - changed, liquid: changed, gas: 0 }
@@ -262,6 +268,7 @@ export function state(id: SubstanceId, energy: number): HeatingState {
       temperatureTenths: segment.startTenths,
       temperature: segment.startTenths / 10,
       percent,
+      percentText,
       counts,
     };
   }
@@ -275,6 +282,7 @@ export function state(id: SubstanceId, energy: number): HeatingState {
     temperatureTenths: segment.startTenths + roundHalfUp(into, c),
     temperature: (segment.startTenths + into / c) / 10,
     percent: null,
+    percentText: null,
     counts: { solid: 0, liquid: 0, gas: 0, [kind]: MOLECULES },
   };
 }
@@ -327,7 +335,7 @@ export function readout(id: SubstanceId, energy: number): string {
   const takes = segmentEnergy(id, now.segment);
   if (isFlat(now.kind)) {
     return (
-      `${at}: ${now.percent} percent is ${PHASE_OF_FLAT[now.kind]}. ` +
+      `${at}: ${now.percentText} percent is ${PHASE_OF_FLAT[now.kind]}. ` +
       'The energy going in is separating molecules, not speeding them up, so the temperature holds. ' +
       `This segment takes ${takes} kJ.`
     );

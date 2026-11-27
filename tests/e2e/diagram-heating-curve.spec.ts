@@ -235,8 +235,8 @@ test('the temperatures of the other worked states are in the readout', async ({ 
   // [substance, kJ, the start of the readout], from the brief's table of worked states.
   const cases: [SubstanceKey, number, string][] = [
     ['ethanol', 26, 'Liquid ethanol at 51.6 °C.'],
-    ['ethanol', 29, 'Ethanol boiling at 78.3 °C: 1 percent is gas.'],
-    ['ethanol', 67.5, 'Ethanol boiling at 78.3 °C: 99 percent is gas.'],
+    ['ethanol', 29, 'Ethanol boiling at 78.3 °C: less than 1 percent is gas.'],
+    ['ethanol', 67.5, 'Ethanol boiling at 78.3 °C: more than 99 percent is gas.'],
     ['ethanol', 68, 'Ethanol gas at 83.7 °C.'],
     ['ethanol', 68.5, 'Ethanol gas at 90.3 °C.'],
     ['iodine', 2.5, 'Solid iodine at 71.0 °C.'],
@@ -252,7 +252,7 @@ test('the temperatures of the other worked states are in the readout', async ({ 
 
 test('the box shows the phases the readout names, in the counts of the percent', async ({ page }) => {
   const diagram = await openDiagram(page, PAGE, NAME);
-  // [substance, kJ, solid, liquid, gas]: 20 molecules, split by the percent shown, at least one of each phase on a flat.
+  // [substance, kJ, solid, liquid, gas]: 20 molecules, split by the exact share, at least one of each phase on a flat.
   const cases: [SubstanceKey, number, number, number, number][] = [
     ['ethanol', 0, 20, 0, 0],
     ['ethanol', 5, 10, 10, 0],
