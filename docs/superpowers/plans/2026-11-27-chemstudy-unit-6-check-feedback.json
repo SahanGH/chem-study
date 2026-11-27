@@ -389,6 +389,363 @@
           "message": "What two bodies share at thermal equilibrium is the thing a thermometer reads. Is that their total energy?"
         }
       ]
+    },
+    {
+      "lesson": "6.4",
+      "file": "src/content/lessons/unit-6/6-4-heat-capacity-and-calorimetry.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "22.6",
+      "unit": "kJ",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "22550",
+          "message": "That is the energy in joules. The question asks for kilojoules."
+        },
+        {
+          "value": "-22550",
+          "message": "Two things to fix: the question asks for a size, so no minus sign, and for kilojoules, not joules."
+        },
+        {
+          "value": "-22.6",
+          "message": "The question asks how much energy is released, which is a size. Type it without the minus sign."
+        },
+        {
+          "value": "25.6",
+          "message": "Did you use 200.0 °C as the temperature change? ΔT is the final temperature minus the starting temperature."
+        },
+        {
+          "value": "3.08",
+          "message": "Did you use 24.0 °C as the temperature change? ΔT is the final temperature minus the starting temperature."
+        },
+        {
+          "value": "180",
+          "message": "That is what the specific heat capacity of water gives. The part is titanium, so use the value for titanium."
+        }
+      ]
+    },
+    {
+      "lesson": "6.4",
+      "file": "src/content/lessons/unit-6/6-4-heat-capacity-and-calorimetry.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Titanium, because it has the largest specific heat capacity of the three",
+          "message": "A large specific heat capacity means each gram takes more energy for each degree. What does that do to the temperature rise?"
+        },
+        {
+          "text": "None: all three end at the same temperature, because each absorbed 500 J",
+          "message": "Equal energy does not mean an equal temperature change. Rearrange q = mcΔT for ΔT and see what else is in it."
+        },
+        {
+          "text": "Tungsten, because a gram of it needs the least energy for each degree",
+          "message": null
+        },
+        {
+          "text": "Tin, because its specific heat capacity lies between the other two",
+          "message": "A middle value of c gives a middle temperature rise. Rearrange q = mcΔT for ΔT and compare all three."
+        }
+      ]
+    },
+    {
+      "lesson": "6.4",
+      "file": "src/content/lessons/unit-6/6-4-heat-capacity-and-calorimetry.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Exactly 60 °C, halfway between the two, because the two masses are equal",
+          "message": "Halfway would mean equal temperature changes. The energies are equal, not the changes. Compare mass × c for the two."
+        },
+        {
+          "text": "Between 30 °C and 60 °C, because water needs more energy for each degree",
+          "message": null
+        },
+        {
+          "text": "Between 60 °C and 90 °C, because the tin started at the higher temperature",
+          "message": "Starting hotter does not pull the result toward the tin. For the same energy, which of the two changes temperature less?"
+        },
+        {
+          "text": "It cannot be predicted without knowing how much energy the tin holds at 90 °C",
+          "message": "Only the energy that moves matters, and q = mcΔT gives it for each body. Set the energy lost equal in size to the energy gained."
+        }
+      ]
+    },
+    {
+      "lesson": "6.4",
+      "file": "src/content/lessons/unit-6/6-4-heat-capacity-and-calorimetry.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "163",
+      "unit": "g",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "382",
+          "message": "Did you swap the two temperature changes? Each water's change is its own: the final temperature minus where that water started."
+        },
+        {
+          "value": "112",
+          "message": "Did you use 38.0 °C as the temperature change of the cold water? ΔT is the final temperature minus the starting temperature."
+        },
+        {
+          "value": "354",
+          "message": "Did you use 12.0 °C as the temperature change of the cold water? ΔT is the final temperature minus the starting temperature."
+        },
+        {
+          "value": "-163",
+          "message": "A mass cannot be negative. The q of the hot water is negative and the q of the cold water is positive, so the signs cancel."
+        },
+        {
+          "value": "250",
+          "message": "That is the mass of the hot water. The two masses would be equal only if the two temperature changes were equal in size."
+        }
+      ]
+    },
+    {
+      "lesson": "6.4",
+      "file": "src/content/lessons/unit-6/6-4-heat-capacity-and-calorimetry.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "The dissolving released about 3.0 kJ, which the 112.0 g of solution gained",
+          "message": null
+        },
+        {
+          "text": "The dissolving absorbed about 3.0 kJ, which is why the temperature went up",
+          "message": "The mixture warmed. If the dissolving had absorbed energy, where would that energy have come from?"
+        },
+        {
+          "text": "The dissolving released about 2.7 kJ, the energy gained by the 100.0 g of water",
+          "message": "The dissolved solid is part of the liquid that warmed. What is the mass of everything that rose by 6.5 °C?"
+        },
+        {
+          "text": "The dissolving released about 0.33 kJ, the energy gained by the 12.0 g of solid",
+          "message": "The thermometer sits in the whole solution, not in 12.0 g of solid. What is the mass of everything that rose by 6.5 °C?"
+        }
+      ]
+    },
+    {
+      "lesson": "6.4",
+      "file": "src/content/lessons/unit-6/6-4-heat-capacity-and-calorimetry.mdx",
+      "check": 6,
+      "kind": "numeric",
+      "answer": "919",
+      "unit": "J",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "888",
+          "message": "That leaves out the calorimeter. It cooled by the same 2.54 °C, and its heat capacity is 12.5 J/°C."
+        },
+        {
+          "value": "881",
+          "message": "Did you use 80.0 g as the mass of the solution? The solution is the water plus the dissolved urea."
+        },
+        {
+          "value": "849",
+          "message": "Two things are missing: the 3.60 g of solid in the mass of the solution, and the energy the calorimeter itself gave up."
+        },
+        {
+          "value": "856",
+          "message": "Did you subtract the calorimeter's share? The calorimeter cooled too, so its energy is added to the solution's."
+        },
+        {
+          "value": "-919",
+          "message": "The question asks how much energy the dissolving absorbed, which is a size. Type it without the minus sign."
+        },
+        {
+          "value": "0.919",
+          "message": "That is in kilojoules. The question asks for joules."
+        }
+      ]
+    },
+    {
+      "lesson": "6.5",
+      "file": "src/content/lessons/unit-6/6-5-energy-of-phase-changes.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "None of it is absorbed, because a steady temperature means no energy is going in",
+          "message": "The heater is still on and the crystals are still taking energy in. Ask what that energy changes, if not the temperature."
+        },
+        {
+          "text": "It raises the average kinetic energy of the molecules while they stay in place",
+          "message": "A higher average kinetic energy would show as a higher temperature, and the thermometer is holding steady."
+        },
+        {
+          "text": "It moves molecules out of their places in the crystal, against their attractions",
+          "message": null
+        },
+        {
+          "text": "It breaks the covalent bonds inside the molecules so that the pieces can flow as a liquid",
+          "message": "The liquid is made of the same molecules as the crystal. Could that be so if the bonds inside the molecules had broken (topic 4.4)?"
+        }
+      ]
+    },
+    {
+      "lesson": "6.5",
+      "file": "src/content/lessons/unit-6/6-5-energy-of-phase-changes.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "-1.96",
+      "unit": "kJ",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "1.96",
+          "message": "The gallium is freezing, so energy leaves it. What sign does q have when a system releases energy?"
+        },
+        {
+          "value": "-137",
+          "message": "Did you multiply grams by kJ/mol? Change 24.5 g to moles first."
+        },
+        {
+          "value": "137",
+          "message": "Two things to check: grams were multiplied by kJ/mol, so change to moles first, and freezing releases energy, which sets the sign."
+        },
+        {
+          "value": "-5.59",
+          "message": "That is for one whole mole of gallium. This spoon is 24.5 g, which is less than a mole."
+        },
+        {
+          "value": "-15.9",
+          "message": "Check the moles: divide the mass by the molar mass, not the molar mass by the mass."
+        },
+        {
+          "value": "-2.0",
+          "message": "Did you round to two figures? The data have three significant figures, so give your answer to three as well."
+        }
+      ]
+    },
+    {
+      "lesson": "6.5",
+      "file": "src/content/lessons/unit-6/6-5-energy-of-phase-changes.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "The oxygen absorbs 1,705 kJ, because its molecules must be pushed close together",
+          "message": "Boiling the liquid takes energy in. Condensing is that change run backward, so which way does the energy go?"
+        },
+        {
+          "text": "The oxygen releases 1,705 kJ, so its enthalpy change is −1,705 kJ",
+          "message": null
+        },
+        {
+          "text": "The oxygen releases 6.82 kJ in all, because that is its enthalpy of vaporization",
+          "message": "The 6.82 kJ is for one mole. How many moles are condensing here?"
+        },
+        {
+          "text": "No energy is transferred, because the temperature stays at −183.0 °C throughout",
+          "message": "A steady temperature does not mean that no energy moves. In a phase change the energy changes how the molecules are arranged."
+        }
+      ]
+    },
+    {
+      "lesson": "6.5",
+      "file": "src/content/lessons/unit-6/6-5-energy-of-phase-changes.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Liquid X has the larger molar enthalpy of vaporization",
+          "message": "The enthalpy of vaporization sets how long the boiling flat is. Neither liquid boils here, so ask what sets a slope."
+        },
+        {
+          "text": "Liquid X has the lower boiling point of the two",
+          "message": "A slope says how fast the temperature climbs, not where the climb ends. What does the same energy do to one mole of each liquid?"
+        },
+        {
+          "text": "Liquid X has the larger molar heat capacity",
+          "message": "Check the direction. What does a large molar heat capacity say about the energy needed for each degree of warming?"
+        },
+        {
+          "text": "Liquid X has the smaller molar heat capacity",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "6.5",
+      "file": "src/content/lessons/unit-6/6-5-energy-of-phase-changes.mdx",
+      "check": 5,
+      "kind": "numeric",
+      "answer": "22.3",
+      "unit": "kJ",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "19.3",
+          "message": "That is the energy to vaporize the ethanol. It has to be warmed from 25.0 °C to its boiling point first."
+        },
+        {
+          "value": "2.98",
+          "message": "That is the energy to warm the liquid to 78.3 °C. Boiling it takes more energy, with no change in temperature."
+        },
+        {
+          "value": "3.00e3",
+          "message": "Did you add joules to kilojoules? Put both steps in the same unit before you add them."
+        },
+        {
+          "value": "891",
+          "message": "Did you multiply grams by kJ/mol? Both steps need the amount in moles."
+        },
+        {
+          "value": "157",
+          "message": "Check the warming step. A molar heat capacity goes with moles, not grams."
+        },
+        {
+          "value": "1025",
+          "message": "Did you use 23.0 g in both steps? The heat capacity and the enthalpy in the tables are for each mole."
+        },
+        {
+          "value": "22300",
+          "message": "That looks like the answer in joules. The question asks for kilojoules."
+        }
+      ]
+    },
+    {
+      "lesson": "6.5",
+      "file": "src/content/lessons/unit-6/6-5-energy-of-phase-changes.mdx",
+      "check": 6,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Liquid only, somewhere below its boiling point",
+          "message": null
+        },
+        {
+          "text": "Liquid and vapor together, at the boiling point of 78.3 °C",
+          "message": "Check the amount. The energies read from the explorer are for 1 mol, and this sample is 2.00 mol, so every step takes twice as much."
+        },
+        {
+          "text": "Solid and liquid together, at the melting point of −114.1 °C",
+          "message": "Add up the first two steps for 2.00 mol: warming the solid to −114.1 °C, then melting all of it. Is 30.0 kJ more or less than that?"
+        },
+        {
+          "text": "Solid only, still colder than its melting point of −114.1 °C",
+          "message": "Warming 2.00 mol of solid from −150.0 °C to −114.1 °C takes about 5 kJ. What does the rest of the 30.0 kJ do?"
+        }
+      ]
     }
   ]
 }
