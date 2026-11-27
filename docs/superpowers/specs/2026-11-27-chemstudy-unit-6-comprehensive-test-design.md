@@ -202,3 +202,86 @@ exist.
   numbers, or kind of question the site already sets.
 - Both pages fit a phone at 320 px with every answer open, no equation
   scrolls in its box, and both pass the browser tests' accessibility checks.
+
+## As built (2026-11-27)
+
+Two pages in three pull requests: #84 (this design and its plan), #85
+(session 1) and the one that carries this note (session 2). Claude merged
+each when its check passed.
+
+- **Counts.** Session 1: 19 questions, 89 points (parts A to D: 17, 24, 26,
+  22). Session 2: 18 questions, 90 points (parts E to H: 27, 21, 23, 19).
+  Thirty-seven questions and 179 points. No figures.
+- **Every number was recomputed by a script** for its part (A 54, B 179,
+  C 71, D 74, E 85, F 136, G 46, H 97 values), and **every part was
+  fact-checked twice on Fable** by fresh agents that solved each question
+  before reading its answer and scored their own answers with the rubric.
+  **No check found a wrong number, sign, unit or published value in any
+  part.** What they found: rubric lines a sound answer could not earn, or a
+  wrong one could; two questions with a second defensible answer (a table
+  entry in question 10 of session 2; the metal in question 16 of session 1,
+  until its error margin was widened); one answer that gave a cause that
+  cancels (the 1 kJ gap in the hydrazine question); statements that said
+  more than is true.
+- **The originality checks changed more than the task table expected.**
+  Every task had been compared with the pages before the writers started,
+  and still eighteen parts were rewritten: eight in session 1 and ten in
+  session 2, two of those strong (a part that restated lesson 6.6's "where
+  did that thermal energy come from" Check, and one that restated Ladder
+  8's "each bond is found in one molecule only"). The pattern is the one
+  the Unit 1 test met: a closing part that asks "why", "what does this
+  show" or "give a reason" lands on a sentence the lessons already say. The
+  rewritten parts ask for something the question's own data decide.
+- **What the parts ask, as built** differs from section 4 in these places:
+  - A4: a diesel engine's compression stroke, and a stoppered flask as the
+    comparison.
+  - B2: the third sketch's slip is an amount (a batch's gap labeled as one
+    mole's); B5 ends by finding a mass times specific heat capacity; B6
+    ends with a copied row that cannot be right.
+  - C1: Student 1's slip is a mass in kilograms; C2 ends with a gold block
+    matched to a cobalt block; C4 calibrates the cup with a heater.
+  - D4: Student 2 mixes kelvins and degrees Celsius.
+  - E2 ends with a claim about one cup; E3 with a second batch; E5 is mixed
+    magnesium and copper turnings in acid, not an antacid tablet.
+  - F1 opens by finding the liquid-to-gas step; F2 finds how much weaker
+    each ring bond is; F3 ends with a changed table value and the formation
+    value of a bromine atom.
+  - G5 finds the mass of ammonium chloride that cancels the temperature
+    change of a gram of calcium chloride, and what damp calcium chloride
+    does.
+  - H1's first route goes through Mn₂O₃; H3 ends by weighing a claim about
+    the first two fluorine atoms.
+- **Values no checker could confirm to the figures given** (each stem gives
+  the values it uses, so every answer is right for its question as
+  printed):
+
+| Where | Value | Doubt |
+|---|---|---|
+| Session 1, question 6 | MgCO₃ breaking down, 100.7 kJ/mol | one handbook's formation value; another gives about 117 |
+| Session 1, question 9 | potato, 3.43 J/(g·°C), with "take" | third figure |
+| Session 1, question 3 | sodium thiosulfate pentahydrate dissolving, about +47 kJ/mol (not printed) | from memory |
+| Session 1, question 16 | lead 26.7 J/(mol·°C); cadmium's fusion 6.19 kJ/mol | references spread by about 1 percent |
+| Session 1, question 18 | butane's vaporization 22.4 kJ/mol; steel 0.47 and liquid butane 2.4 J/(g·°C), with "take" | 22.4 is the value at the boiling point |
+| Session 1, question 15 | concrete, cast iron, dry sand, with "take" | typical values of mixtures |
+| Session 2, question 1 | hexamine's combustion, −4,200 kJ/mol | fourth figure |
+| Session 2, question 4 | sucrose's combustion, −5,640 kJ/mol | 5,640 to 5,644 |
+| Session 2, question 9 | C–F 485, C–Cl 339, C–Br 276, C–I 240 kJ/mol | tables differ; the stem says so |
+| Session 2, questions 13 and 14 | H₂Se(g) +29.7, H₂Te(g) +99.6, CaCl₂(s) −795.4, Ca²⁺(aq) −542.8 kJ/mol | last figure |
+| Session 2, question 17 | SF₄(g) −763.2 kJ/mol; HF(g) −273.3 | older tables give about −775 and −272.5; neither changes an answer |
+
+- **Devices used more than once** and left: students' work to mark (three
+  questions in session 1); an entry "that cannot be right" (four in session
+  1, three in session 2); the liquid-to-gas step from two formation values
+  (questions 6 and 11 of session 2).
+- **For the tests to come:**
+  - Tell every writer that a part asking "why" or "what does this show" is
+    the likeliest to restate a lesson, and to end a question on something
+    its data decide.
+  - An inline expression inside a rubric line cannot wrap: write it in
+    words.
+  - An `aligned` display needs `&` on every row, or the rows set side by
+    side.
+  - The older scratch file of the teacher's substances
+    (`scratchpad/unit6/teacher-avoid-list.md`) had lines taken from the
+    unit exam. No agent of this test read it, and the Unit 8 inventory was
+    made without opening any exam file.
