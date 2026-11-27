@@ -247,7 +247,7 @@ describe('the controls’ words', () => {
 
 describe('bad input', () => {
   it('throws a RangeError that names a ΔG° off the slider’s stops', () => {
-    for (const bad of [-41, 41, 2.5, Number.NaN, Number.POSITIVE_INFINITY]) {
+    for (const bad of [-41, 41, 2.5, Number.NaN, Number.POSITIVE_INFINITY, '5' as unknown as number]) {
       expect(() => state(bad, 298), `${bad}`).toThrow(RangeError);
       expect(() => state(bad, 298), `${bad}`).toThrow(String(bad));
       expect(() => freeEnergyText(bad), `${bad}`).toThrow(RangeError);
@@ -587,6 +587,35 @@ describe('the box', () => {
     expect(describeBox(40, 298)).toBe('A box of 100 particles at equilibrium, all drawn as A, open circles: fewer than 1 in 100 is B.');
     expect(describeBox(13, 298)).toBe('A box of 100 particles at equilibrium: 1 is B, drawn as a filled square, and 99 are A, drawn as open circles.');
     expect(describeBox(-13, 298)).toBe('A box of 100 particles at equilibrium: 99 are B, drawn as filled squares, and 1 is A, drawn as an open circle.');
+  });
+});
+
+describe('the labels over all 243 states', () => {
+  it('describeBox names the counts that state() gives, or the fewer-than-1-in-100 form', () => {
+    for (const { g, temperature } of ALL_STATES) {
+      const s = state(g, temperature);
+      const label = describeBox(g, temperature);
+      expect(label.length, where(g, temperature)).toBeGreaterThan(0);
+      if (s.countB === 100) expect(label, where(g, temperature)).toContain('all drawn as B');
+      else if (s.countB === 0) expect(label, where(g, temperature)).toContain('all drawn as A');
+      else {
+        const b = s.countB === 1 ? '1 is B, ' : `${s.countB} are B, `;
+        const a = s.countA === 1 ? '1 is A, ' : `${s.countA} are A, `;
+        expect(label, where(g, temperature)).toContain(b);
+        expect(label, where(g, temperature)).toContain(a);
+      }
+      if (s.countB === 0 || s.countB === 100) expect(label).toContain('fewer than 1 in 100');
+    }
+  });
+
+  it('describeGraph names the shown K at both ends and at the marker', () => {
+    for (const { g, temperature } of ALL_STATES) {
+      const label = describeGraph(g, temperature);
+      expect(label.length, where(g, temperature)).toBeGreaterThan(0);
+      expect(label, where(g, temperature)).toContain(`K = ${state(-40, temperature).kText} at −40 kJ/mol`);
+      expect(label, where(g, temperature)).toContain(`K = ${state(40, temperature).kText} at +40 kJ/mol`);
+      expect(label.endsWith(`is on it at K = ${state(g, temperature).kText}.`), where(g, temperature)).toBe(true);
+    }
   });
 });
 

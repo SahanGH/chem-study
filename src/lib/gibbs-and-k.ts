@@ -83,7 +83,7 @@ const SUPERSCRIPTS: Readonly<Record<string, string>> = {
 
 function assertFreeEnergy(g: number): void {
   // Written so that NaN fails too: every comparison with NaN is false.
-  const inRange = g >= FREE_ENERGY.min && g <= FREE_ENERGY.max;
+  const inRange = typeof g === 'number' && g >= FREE_ENERGY.min && g <= FREE_ENERGY.max;
   if (!(inRange && Number.isInteger((g - FREE_ENERGY.min) / FREE_ENERGY.step))) {
     throw new RangeError(
       `ΔG° must be a whole number of kJ/mol from ${FREE_ENERGY.min} to +${FREE_ENERGY.max}, not ${g}.`,

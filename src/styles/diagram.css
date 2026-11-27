@@ -1053,7 +1053,7 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   margin-top: 0.3rem;
   justify-content: center;
 }
-.diagram .gibbs-and-k-key svg {
+.diagram .molecule-key.gibbs-and-k-key [data-key-particle] svg {
   flex: none;
   width: 1rem;
   height: 1rem;

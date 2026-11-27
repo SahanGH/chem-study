@@ -183,15 +183,26 @@ test('the slider works from the keyboard: the arrows, Home and End', async ({ pa
   await page.keyboard.press('End');
   await expect(slider(diagram)).toHaveAttribute('aria-valuetext', 'plus 40 kilojoules per mole');
   await expect(status(diagram)).toHaveText(PLUS_40_298);
+  // One step down first, so that the key at the end must change the value, not find it already there.
+  await page.keyboard.press('ArrowLeft');
+  await expect(slider(diagram)).toHaveAttribute('aria-valuetext', 'plus 39 kilojoules per mole');
+  await page.keyboard.press('End');
+  await expect(slider(diagram)).toHaveAttribute('aria-valuetext', 'plus 40 kilojoules per mole');
   await page.keyboard.press('ArrowRight');
   await expect(slider(diagram)).toHaveAttribute('aria-valuetext', 'plus 40 kilojoules per mole');
+  await expect(status(diagram)).toHaveText(PLUS_40_298);
 
   await page.keyboard.press('Home');
   await expect(slider(diagram)).toHaveAttribute('aria-valuetext', 'minus 40 kilojoules per mole');
   await expect(diagram.locator('.diagram-slider-value')).toHaveText('−40 kJ/mol');
   await expect(status(diagram)).toHaveText(MINUS_40_298);
+  await page.keyboard.press('ArrowRight');
+  await expect(slider(diagram)).toHaveAttribute('aria-valuetext', 'minus 39 kilojoules per mole');
+  await page.keyboard.press('Home');
+  await expect(slider(diagram)).toHaveAttribute('aria-valuetext', 'minus 40 kilojoules per mole');
   await page.keyboard.press('ArrowLeft');
   await expect(slider(diagram)).toHaveAttribute('aria-valuetext', 'minus 40 kilojoules per mole');
+  await expect(status(diagram)).toHaveText(MINUS_40_298);
 });
 
 test('the temperature can be chosen from the keyboard, and ΔG° stays where it was', async ({ page }) => {
@@ -638,6 +649,7 @@ for (const width of [1280, 680, 412, 320]) {
 test('at 320 × 568 the box, the graph and the slider are on the screen together', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 568 });
   const diagram = await openDiagram(page, PAGE, NAME);
+  await page.evaluate(() => document.fonts.ready);
   // The longest readout makes no difference here: the readout is under the slider.
   await boxPanel(diagram).evaluate((element) => {
     window.scrollTo(0, element.getBoundingClientRect().top + window.scrollY - 8);

@@ -32,11 +32,13 @@
   // (about 24 px), the graph (214 units, at most 214 px) and the slider row
   // (about 50 px), with the gaps between them, come to about 505 px.
   const GRAPH = { width: 320, height: 214 };
-  // Ten units for each power of ten, 2.6 for each kJ. The plot stops 56 units
+  // Ten units for each power of ten, 2.53 for each kJ. The plot stops 62 units
   // short of the right edge: the three lines and the K = 1 line are named
-  // there, past their right-hand ends, where the marker never goes.
-  const PLOT = { left: 56, right: 264, top: 10, bottom: 170 };
-  const NAME_GAP = 10;
+  // there, past their right-hand ends, where the marker never goes. The names
+  // start at x = 266 and the longest ("1,000 K", bold, about 45 units) ends near
+  // 311, at least 8 units inside the 320-unit drawing.
+  const PLOT = { left: 56, right: 258, top: 10, bottom: 170 };
+  const NAME_GAP = 8;
   // The ΔG° values 17 units under the axis and its name 20 units under them:
   // two 12-unit lines (about 14.5 units each, ascent and descent) 5.5 apart.
   const TICK_LABEL_GAP = 17;
