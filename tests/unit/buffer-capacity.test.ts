@@ -321,29 +321,61 @@ describe('the readout', () => {
     for (const { acid, base, added } of EVERY_STATE) {
       const s = state(acid, base, added);
       const text = readout(acid, base, added);
-      expect(text).toContain(`${s.bufferBeforeText}`);
-      expect(text).toContain(`${s.bufferAfterText}.`);
-      expect(text).toContain(s.waterAfterText);
-      if (s.kind === 'nothing') expect(text).toContain(`acid form of ${s.ratioBeforeText}.`);
-      else if (s.ratioAfterText !== null) expect(text).toContain(`went from ${s.ratioBeforeText} to ${s.ratioAfterText},`);
-      else expect(text).not.toMatch(/ratio/);
+      const n = Math.abs(added);
+      // The water's sentence is the same, with its own numbers, in every state with something added.
+      if (s.kind !== 'nothing') expect(text).toContain(`The same ${n} mmol took the water from pH ${s.waterBeforeText} to ${s.waterAfterText}.`);
+      else expect(text).toContain(`The water's pH is ${s.waterBeforeText}. Nothing has been added yet.`);
+      if (s.kind === 'nothing') {
+        expect(text).toContain(`: a ratio of base form to acid form of ${s.ratioBeforeText}. Its pH is ${s.bufferBeforeText}. `);
+      } else if (s.kind === 'ohBoth' || s.kind === 'h3oBoth') {
+        expect(s.ratioAfterText).not.toBeNull();
+        expect(text).toContain(
+          `The ratio of base form to acid form went from ${s.ratioBeforeText} to ${s.ratioAfterText}, and the buffer's pH from ${s.bufferBeforeText} to ${s.bufferAfterText}. `,
+        );
+      } else {
+        expect(s.ratioAfterText).toBeNull();
+        expect(text).not.toMatch(/ratio/);
+        const verb = s.kind === 'ohUsedUp' || s.kind === 'ohOverrun' ? 'jumped' : 'dropped';
+        expect(text).toContain(`${s.kind.endsWith('Overrun') ? 'which' : 'the pH'} has ${verb} from ${s.bufferBeforeText} to ${s.bufferAfterText}. The same`);
+      }
       expect(text).not.toMatch(/[-−]\d/);
       expect(text).not.toMatch(/less than the water/);
-      if (s.kind === 'ohUsedUp' || s.kind === 'ohOverrun') expect(text).toContain('The acid form is used up');
-      if (s.kind === 'h3oUsedUp' || s.kind === 'h3oOverrun') expect(text).toContain('The base form is used up');
-      if (s.kind === 'ohOverrun' || s.kind === 'h3oOverrun') expect(text).toContain(`the ${s.leftOver} mmol of ${s.leftOverIon} left over now sets the pH`);
+      if (s.kind === 'ohUsedUp') expect(text).toContain(`${n} mmol of OH⁻ reacted with all ${acid} mmol of the propanoic acid. The acid form is used up, so this is no longer a buffer.`);
+      if (s.kind === 'h3oUsedUp') expect(text).toContain(`${n} mmol of H₃O⁺ reacted with all ${base} mmol of the propanoate ion. The base form is used up, so this is no longer a buffer.`);
+      if (s.kind === 'ohOverrun') {
+        expect(text).toContain(`Only ${s.reacted} mmol of the ${n} mmol of OH⁻ found propanoic acid to react with. The acid form is used up, and the ${s.leftOver} mmol of OH⁻ left over now sets the pH, which has jumped from `);
+      }
+      if (s.kind === 'h3oOverrun') {
+        expect(text).toContain(`Only ${s.reacted} mmol of the ${n} mmol of H₃O⁺ found propanoate ion to react with. The base form is used up, and the ${s.leftOver} mmol of H₃O⁺ left over now sets the pH, which has dropped from `);
+      }
     }
   });
 
-  it('a ratio and a pH in one sentence agree: a larger shown ratio never has a smaller shown pH', () => {
-    // Both are made from unrounded values, so across the states with both members left, sorting by
-    // the exact ratio sorts the unrounded pH too.
+  it('a larger ratio after never has a smaller pH after: across the states with both members left, the unrounded pH follows the exact ratio', () => {
     const rows = EVERY_STATE.map(({ acid, base, added }) => state(acid, base, added)).filter((s) => s.acidAfter > 0 && s.baseAfter > 0);
-    for (const s of rows) {
-      if (s.baseAfter === s.acidAfter) expect(s.ratioAfterText).toBe('1.00');
-      if (s.baseAfter > s.acidAfter) expect(Number(s.ratioAfterText)).toBeGreaterThan(1);
-      if (s.baseAfter < s.acidAfter) expect(Number(s.ratioAfterText)).toBeLessThan(1);
+    expect(rows.length).toBeGreaterThan(7000);
+    // Order by base / acid with whole-number cross-multiplication, then walk the groups of equal ratio.
+    rows.sort((a, b) => a.baseAfter * b.acidAfter - b.baseAfter * a.acidAfter);
+    let previous: { base: number; acid: number; highest: number } | null = null;
+    let index = 0;
+    while (index < rows.length) {
+      const first = rows[index] as (typeof rows)[number];
+      let lowest = first.bufferAfter;
+      let highest = first.bufferAfter;
+      let end = index + 1;
+      while (end < rows.length) {
+        const row = rows[end] as (typeof rows)[number];
+        if (row.baseAfter * first.acidAfter !== first.baseAfter * row.acidAfter) break;
+        lowest = Math.min(lowest, row.bufferAfter);
+        highest = Math.max(highest, row.bufferAfter);
+        end += 1;
+      }
+      if (previous) expect(lowest, `${first.baseAfter}/${first.acidAfter} after ${previous.base}/${previous.acid}`).toBeGreaterThanOrEqual(previous.highest);
+      previous = { base: first.baseAfter, acid: first.acidAfter, highest };
+      index = end;
     }
+    // And at 1: equal amounts show a ratio of 1.00.
+    for (const s of rows) if (s.baseAfter === s.acidAfter) expect(s.ratioAfterText).toBe('1.00');
   });
 });
 
@@ -411,6 +443,46 @@ describe('the model, step 2: the pH from the shared solver', () => {
         }
       }
     }
+  });
+});
+
+describe('the model, step 2, checked apart from the module', () => {
+  // Written here from the brief's constants, with a plain long bisection in pH on the charge balance
+  // [H3O+] + [cations] = [anions] + Kw / [H3O+] + C·Ka / (Ka + [H3O+]); nothing from acid-base.ts.
+  const KA_BRIEF = 10 ** -4.87;
+  const KW_BRIEF = 1.0e-14;
+  function bisectPH(weakAcid: number, cations: number, anions: number): number {
+    const residual = (pH: number) => {
+      const h = 10 ** -pH;
+      return h + cations - anions - KW_BRIEF / h - (weakAcid * KA_BRIEF) / (KA_BRIEF + h);
+    };
+    // The residual falls as pH rises, from positive (acidic) to negative (basic).
+    let low = -2;
+    let high = 16;
+    for (let i = 0; i < 200; i += 1) {
+      const middle = (low + high) / 2;
+      if (residual(middle) > 0) low = middle;
+      else high = middle;
+    }
+    return (low + high) / 2;
+  }
+
+  it('gives the buffer’s pH before and after, and the water’s, to 1e-6 in all 8,400 states, every kind among them', () => {
+    const kinds = new Set<Kind>();
+    for (const { acid, base, added } of EVERY_STATE) {
+      const s = state(acid, base, added);
+      kinds.add(s.kind);
+      const oh = added > 0 ? added : 0;
+      const h3o = added < 0 ? -added : 0;
+      const where = `${acid}, ${base}, ${added}`;
+      expect(Math.abs(s.bufferBefore - bisectPH(((acid + base) / 1000), base / 1000, 0)), `${where}: buffer before`).toBeLessThan(1e-6);
+      expect(Math.abs(s.bufferAfter - bisectPH((acid + base) / 1000, (base + oh) / 1000, h3o / 1000)), `${where}: buffer after`).toBeLessThan(1e-6);
+      expect(s.waterBefore, `${where}: water before`).toBeCloseTo(7, 6);
+      // The water, in closed form: only the strong base (pOH = −log10 of its molarity) or only the strong acid is there.
+      const expectedWater = added > 0 ? 14 + Math.log10(oh / 1000) : added < 0 ? -Math.log10(h3o / 1000) : 7;
+      expect(Math.abs(s.waterAfter - expectedWater), `${where}: water after`).toBeLessThan(1e-6);
+    }
+    expect([...kinds].sort()).toEqual(['h3oBoth', 'h3oOverrun', 'h3oUsedUp', 'nothing', 'ohBoth', 'ohOverrun', 'ohUsedUp']);
   });
 });
 
