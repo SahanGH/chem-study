@@ -1,0 +1,2814 @@
+---
+title: "Comprehensive test, session 2: electrochemistry"
+kind: test
+order: 9
+topics: ["9.8", "9.9", "9.10", "9.11"]
+summary: Eighteen scored free-response questions on galvanic and electrolytic cells, cell potential and free energy, nonstandard conditions and Faraday's law, each with a worked answer and its scoring rubric.
+points: 88
+minutes: 95
+---
+
+This is the second of two sittings that together test all of Unit 9. It covers topics 9.8 to 9.11: galvanic and electrolytic cells, cell potential and free energy, cell potential away from standard conditions, and electrolysis and Faraday's law. Session 1 covers entropy, free energy and favorability, kinetic control, equilibrium, dissolving and coupled reactions.
+
+There are 18 questions worth 88 points. Give yourself about 95 minutes, and use a calculator, the periodic table and the equation sheet, as on the AP exam. Every question gives the values it needs. Try each part on paper before you open its answer, then score yourself with the rubric.
+
+## Part E: Galvanic and electrolytic cells
+
+Four questions on how a cell is put together and what each part of it does. You will catch two reports of mass changes that cannot be true, choose the salt for a salt bridge and count the ions that leave it, read a refining tank from what is seen in it, and find the parts of a cell on a ship's hull, where nothing is drawn as a cell.
+
+<Question number={1} title="Three reports, one cell" topic="9.8" points={5}>
+
+A chromium strip stands in a solution of chromium(III) nitrate, and a silver strip stands in a solution of silver nitrate. A wire joins the two strips, and a salt bridge of potassium nitrate solution joins the two solutions. Nothing else is connected.
+
+The reaction of chromium metal with silver ions, which gives $\ce{Cr^3+}$ ions and silver metal, is thermodynamically favored. The reverse reaction is thermodynamically unfavored.
+
+The strips are weighed, the cell runs, and the strips are dried and weighed again. Three students each report the change in mass of each strip. Only one report can be true. The reports are made up for this question.
+
+| Report | Chromium strip (g) | Silver strip (g) |
+|---|---|---|
+| A | $-0.520$ | $+3.236$ |
+| B | $-0.520$ | $+1.079$ |
+| C | $+0.520$ | $-3.236$ |
+
+Use these values: the molar mass of chromium is 52.00 g/mol, and the molar mass of silver is 107.87 g/mol.
+
+<Part label="a">
+
+Write the half-reaction at each strip of this galvanic cell. Then calculate the mass of silver that forms while 0.520 g of chromium is oxidized, and identify the report that agrees.
+
+<Answer>
+
+A galvanic cell runs the thermodynamically favored reaction, so chromium atoms are oxidized and silver ions are reduced.
+
+At the chromium strip:
+
+$$
+\ce{Cr(s) -> Cr^3+(aq) + 3e^-}
+$$
+
+At the silver strip:
+
+$$
+\ce{Ag^+(aq) + e^- -> Ag(s)}
+$$
+
+Moles of chromium oxidized, from grams and grams per mole:
+
+$$
+\frac{0.520}{52.00} = 0.0100\ \text{mol}
+$$
+
+Each chromium atom gives up 3 electrons. Moles of electrons:
+
+$$
+0.0100 \times 3 = 0.0300\ \text{mol}
+$$
+
+Every one of those electrons goes through the wire and is taken by a silver ion, and each silver ion takes 1. So 0.0300 mol of silver forms. Its mass:
+
+$$
+\begin{aligned}
+&0.0300 \times 107.87 \\
+&= \mathbf{3.24}\ \text{g}
+\end{aligned}
+$$
+
+The chromium strip loses 0.520 g and the silver strip gains 3.24 g. That is **report A**: its $+3.236$ g is 3.24 g to the three figures that 0.520 g allows.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the moles of silver that report B claims. Then explain, by counting electrons, why report B cannot be true.
+
+<Answer>
+
+Moles of silver in report B:
+
+$$
+\frac{1.079}{107.87} = 0.0100\ \text{mol}
+$$
+
+Report B has the same number of moles of each metal: 0.0100 mol of chromium lost and 0.0100 mol of silver gained. But the two metals do not trade electrons one for one.
+
+The chromium, 0.0100 mol, releases 0.0300 mol of electrons. Silver ions that form 0.0100 mol of silver take only 0.0100 mol of electrons:
+
+$$
+0.0100 \times 1 = 0.0100\ \text{mol}
+$$
+
+That leaves 0.0200 mol of electrons released at one strip and taken by nothing at the other. Electrons cannot pile up in a wire: every electron the anode releases is used at the cathode. **Report B matches the moles of metal where it should match the moles of electrons**, so it cannot be true.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Show that the two masses in report C do pass the count of electrons. Then state why report C still cannot be true for this cell.
+
+<Answer>
+
+Report C has the silver strip losing mass and the chromium strip gaining mass, so it describes silver atoms being oxidized and $\ce{Cr^3+}$ ions being reduced.
+
+Moles of silver lost:
+
+$$
+\frac{3.236}{107.87} = 0.0300\ \text{mol}
+$$
+
+Each silver atom gives up 1 electron, so 0.0300 mol of electrons is released.
+
+Moles of chromium gained:
+
+$$
+\frac{0.520}{52.00} = 0.0100\ \text{mol}
+$$
+
+Each $\ce{Cr^3+}$ ion takes 3 electrons, so 0.0300 mol of electrons is taken. The count balances: 0.0300 mol released and 0.0300 mol taken.
+
+The fault is the direction. Report C is the reverse reaction, which is thermodynamically unfavored. A galvanic cell runs only the favored direction, and this cell has a wire and no power supply, so nothing is there to drive the reverse. **Report C counts its electrons correctly but runs the cell backward.**
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+For the run of part (a), each half-cell held 250.0 mL of solution, and each solution began at 0.200 M in its metal ion. Take the volumes as unchanged. Calculate the concentration of $\ce{Cr^3+}$ and the concentration of $\ce{Ag^+}$ at the end of the run. Then identify the ion whose concentration changed by more, and state how many times more.
+
+<Answer>
+
+Each solution began with the same moles of its metal ion, from liters and moles per liter:
+
+$$
+0.2500 \times 0.200 = 0.0500\ \text{mol}
+$$
+
+**The chromium half-cell.** The chromium strip is the anode, and oxidation there adds ions to the solution: 0.0100 mol of $\ce{Cr^3+}$, from part (a).
+
+$$
+\begin{aligned}
+&0.0500 + 0.0100 \\
+&= 0.0600\ \text{mol}
+\end{aligned}
+$$
+
+$$
+\frac{0.0600}{0.2500} = \mathbf{0.240}\ \text{M}
+$$
+
+**The silver half-cell.** The electrons reach the silver strip through the wire, and reduction there takes ions out of the solution: 0.0300 mol of $\ce{Ag^+}$, from part (a).
+
+$$
+\begin{aligned}
+&0.0500 - 0.0300 \\
+&= 0.0200\ \text{mol}
+\end{aligned}
+$$
+
+$$
+\frac{0.0200}{0.2500} = \mathbf{0.0800}\ \text{M}
+$$
+
+The concentration of $\ce{Cr^3+}$ rose:
+
+$$
+0.240 - 0.200 = 0.040\ \text{M}
+$$
+
+The concentration of $\ce{Ag^+}$ fell:
+
+$$
+0.200 - 0.0800 = 0.120\ \text{M}
+$$
+
+$$
+\frac{0.120}{0.040} = 3.0
+$$
+
+**The concentration of the silver ion changed by more, 3 times as much.** The 3 electrons that one chromium atom gives up are taken by 3 silver ions, so 3 silver ions leave one solution for each chromium ion that enters the other.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for both half-reactions, chromium oxidized to $\ce{Cr^3+}$ with 3 electrons and $\ce{Ag^+}$ reduced with 1 electron, and 0.0300 mol of electrons from 0.0100 mol of chromium (or 0.0300 mol of silver, from 3 silver for each chromium); 1 point for 3.24 g of silver (3.23 to 3.24, or 3.236) with report A named. Report A named with no calculation does not earn the second point. State symbols are not required for the point.</RubricLine>
+<RubricLine part="b" points={1}>1 point for 0.0100 mol of silver together with the reason: that much silver takes 0.0100 mol of electrons while the chromium releases 0.0300 mol (or silver must be three times the moles of chromium, 0.0300 mol, and report B has them equal). "The masses are wrong" with no count of moles or electrons earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for both: the count balances (0.0300 mol of electrons released by the silver and 0.0300 mol taken by 0.0100 mol of chromium), and the report describes the thermodynamically unfavored direction, which a galvanic cell (a cell with no power supply) does not run. Either half alone earns 0 points.</RubricLine>
+<RubricLine part="d" points={1}>1 point for all three: 0.240 M for $\ce{Cr^3+}$; 0.0800 M for $\ce{Ag^+}$ (0.080 M earns it); and the silver ion named as changing by 3 times as much (0.120 M against 0.040 M). Both concentrations moved the same way, or both changed by the same amount, earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={2} title="Choosing the salt for the bridge" topic="9.8" points={5}>
+
+A galvanic cell has a cadmium strip in a solution of cadmium nitrate and a lead strip in a solution of lead(II) nitrate. A wire joins the strips. In this cell the cadmium strip is the anode.
+
+The salt bridge has still to be filled. Each end of the bridge will stand in one of the two solutions, so the solution in the bridge touches both of them. Five salts are on the shelf:
+
+- potassium nitrate, $\ce{KNO3}$
+- ammonium nitrate, $\ce{NH4NO3}$
+- magnesium nitrate, $\ce{Mg(NO3)2}$
+- sodium sulfate, $\ce{Na2SO4}$
+- potassium sulfide, $\ce{K2S}$
+
+Use these facts about solubility in water.
+
+- Every nitrate is soluble. So is every salt of potassium, of sodium and of ammonium.
+- Lead(II) sulfate, lead(II) sulfide and cadmium sulfide are insoluble.
+- Cadmium sulfate is soluble.
+
+<Part label="a">
+
+Identify the salts on the shelf that can fill the bridge. Justify your choice with the solubility facts.
+
+<Answer>
+
+The bridge's ions must carry charge and react with nothing in the cell. Each end of the bridge touches a solution: one holds $\ce{Cd^2+}$ and $\ce{NO3^-}$ ions, the other $\ce{Pb^2+}$ and $\ce{NO3^-}$ ions. So no ion of the bridge may form an insoluble compound with $\ce{Cd^2+}$, $\ce{Pb^2+}$ or $\ce{NO3^-}$.
+
+**Potassium nitrate, ammonium nitrate and magnesium nitrate can fill the bridge.** Their anion is nitrate, and every nitrate is soluble, so it forms no solid with $\ce{Cd^2+}$ or $\ce{Pb^2+}$. Their cations, $\ce{K^+}$, $\ce{NH4^+}$ and $\ce{Mg^2+}$, meet only nitrate ions, and every nitrate is soluble.
+
+The other two salts each bring an anion that forms a solid with a metal ion of the cell. Part (b) finds where.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+For each salt that cannot fill the bridge, identify every solid that forms and the end of the bridge where it forms.
+
+<Answer>
+
+**Sodium sulfate: lead(II) sulfate forms at the end in the lead solution.** At that end the solution in the bridge touches the lead solution, and where two solutions touch, their ions mix. Sulfate ions meet $\ce{Pb^2+}$ ions there as soon as the bridge is lowered in, before any electron has gone through the wire:
+
+$$
+\begin{aligned}
+&\ce{Pb^2+(aq) + SO4^2-(aq) ->} \\
+&\quad \ce{PbSO4(s)}
+\end{aligned}
+$$
+
+No solid forms at the end in the cadmium solution, because cadmium sulfate is soluble. One bad end is enough to rule the salt out.
+
+Running the cell does not save this salt. While the cell runs, sulfate ions are driven toward the anode, which is away from the lead end. But the two solutions still touch at that end, their ions still mix there, and the solid forms all the same.
+
+**Potassium sulfide: a solid forms at both ends.** Cadmium sulfide forms at the end in the cadmium solution:
+
+$$
+\begin{aligned}
+&\ce{Cd^2+(aq) + S^2-(aq) ->} \\
+&\quad \ce{CdS(s)}
+\end{aligned}
+$$
+
+Lead(II) sulfide forms at the end in the lead solution:
+
+$$
+\begin{aligned}
+&\ce{Pb^2+(aq) + S^2-(aq) ->} \\
+&\quad \ce{PbS(s)}
+\end{aligned}
+$$
+
+The sodium and potassium ions form no solid anywhere. In each case it is the anion that rules the salt out.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The bridge is filled with magnesium nitrate solution, and the cell runs until 0.020 mol of electrons has gone through the wire. Calculate the moles of $\ce{Cd^2+}$ ions made and the moles of $\ce{Pb^2+}$ ions used up.
+
+<Answer>
+
+Cadmium is the anode, so cadmium atoms are oxidized:
+
+$$
+\ce{Cd(s) -> Cd^2+(aq) + 2e^-}
+$$
+
+Lead is then the cathode, where lead(II) ions are reduced:
+
+$$
+\ce{Pb^2+(aq) + 2e^- -> Pb(s)}
+$$
+
+Each half-reaction has 2 electrons for 1 ion, so the moles of each ion are half the moles of electrons:
+
+$$
+\frac{0.020}{2} = 0.010\ \text{mol}
+$$
+
+**0.010 mol** of $\ce{Cd^2+}$ is made in the cadmium half-cell, and **0.010 mol** of $\ce{Pb^2+}$ is used up in the lead half-cell.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Suppose that the only ions that cross between the bridge and a solution are the bridge's own ions leaving it. For the run in part (c), determine which ion enters each half-cell from the bridge, and how many moles of it. Then determine the moles of magnesium nitrate that the bridge has given up.
+
+<Answer>
+
+Each solution has to stay neutral. What has to balance is charge, not a count of ions.
+
+**The cadmium half-cell** gained 0.010 mol of $\ce{Cd^2+}$. Each ion carries a charge of 2+, so the positive charge added is
+
+$$
+0.010 \times 2 = 0.020\ \text{mol}
+$$
+
+A nitrate ion carries a charge of 1−, so it takes **0.020 mol** of $\ce{NO3^-}$ from the bridge to balance it. Anions move toward the anode.
+
+**The lead half-cell** lost 0.010 mol of $\ce{Pb^2+}$, which is 0.020 mol of positive charge, and the nitrate ions those lead ions were balancing are still in the solution. A magnesium ion carries a charge of 2+, so the moles of $\ce{Mg^2+}$ that replace that charge are
+
+$$
+\frac{0.020}{2} = 0.010\ \text{mol}
+$$
+
+So **0.010 mol** of $\ce{Mg^2+}$ enters from the bridge. Cations move toward the cathode.
+
+The two amounts of ions are not equal: 0.020 mol at one end and 0.010 mol at the other. The charge is equal: 0.020 mol at each end, the same as the moles of electrons that went through the wire.
+
+**The bridge has given up 0.010 mol of magnesium nitrate.** It lost 0.020 mol of $\ce{NO3^-}$ and 0.010 mol of $\ce{Mg^2+}$, which is 2 nitrate ions for each magnesium ion, the ratio in $\ce{Mg(NO3)2}$. So the solution left in the bridge is still neutral.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for potassium nitrate, ammonium nitrate and magnesium nitrate, all three and only these, with a reason from the facts given: none of their ions forms an insoluble compound with an ion in either half-cell. The three salts named with no reason earn 0 points. Sodium sulfate accepted because sulfate ions move toward the cadmium half-cell earns 0 points: the bridge's solution touches the lead solution whichever way the ions are driven.</RubricLine>
+<RubricLine part="b" points={2}>1 point for sodium sulfate: lead(II) sulfate, at the lead end only. 1 point for potassium sulfide: cadmium sulfide at the cadmium end and lead(II) sulfide at the lead end. Equations are not required. A solid of sodium or potassium, or cadmium sulfate named as a solid, does not earn that salt's point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for 0.010 mol of each ion, with $\ce{Cd^2+}$ made and $\ce{Pb^2+}$ used up, from 2 electrons for each ion. An answer of 0.020 mol or 0.040 mol of each earns 0 points.</RubricLine>
+<RubricLine part="d" points={1}>1 point for all three: 0.020 mol of nitrate ions into the cadmium half-cell; 0.010 mol of magnesium ions into the lead half-cell; and 0.010 mol of magnesium nitrate given up by the bridge. Amounts that follow correctly from the student's own answer to (c) earn the point. An answer of 0.020 mol of magnesium ions, the charge of 2+ on each not counted, earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={3} title="One tank, one half-reaction, two directions" topic="9.8" points={4}>
+
+Copper for electrical wire has to be very pure. To purify it, a thick slab of impure copper and a thin sheet of pure copper are hung in one tank of copper(II) sulfate solution, and each is joined by a cable to a power supply. The slab is nearly all copper, with a little zinc and a little silver mixed through it. There is no salt bridge.
+
+While the supply is on, these things are observed.
+
+- The thin sheet grows thicker, and what is added to it is copper.
+- The slab shrinks.
+- The solution is blue, the color of $\ce{Cu^2+}$ ions in water, and the blue does not visibly change.
+- Zinc ions, which are colorless, slowly build up in the solution.
+- A sludge collects on the floor of the tank under the slab. It contains silver metal.
+
+<Part label="a">
+
+Write the half-reaction that copper undergoes at the slab and the one it undergoes at the sheet. Identify the anode and the cathode, and identify the electrode into which the power supply pushes electrons.
+
+<Answer>
+
+The slab shrinks: copper atoms leave it for the solution, as ions.
+
+$$
+\ce{Cu(s) -> Cu^2+(aq) + 2e^-}
+$$
+
+That is oxidation, so **the slab is the anode.**
+
+The sheet grows: copper(II) ions come out of the solution onto it, as atoms.
+
+$$
+\ce{Cu^2+(aq) + 2e^- -> Cu(s)}
+$$
+
+That is reduction, so **the sheet is the cathode.**
+
+It is one half-reaction, running in opposite directions at the two electrodes.
+
+**The supply pushes electrons into the thin sheet.** At the sheet, $\ce{Cu^2+}$ ions gain electrons. Those electrons have to arrive through the cable, so the sheet is the electrode the supply pushes electrons into. At the slab, copper atoms leave their electrons behind in the metal, and the supply pulls them out through the other cable.
+
+In the cables the electrons go from the slab, the anode, through the supply to the sheet, the cathode.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+In one run the slab loses 96.6 g in all, and the sheet gains 95.3 g of copper. Take the molar mass of copper as 63.55 g/mol, and take every electron that the supply moves as used to turn one kind of copper particle into the other. Calculate the moles of electrons that the supply moved to add 95.3 g of copper to the sheet. Then calculate the moles of electrons that would go with 96.6 g of copper, and decide whether everything the slab lost can have been copper changing to or from $\ce{Cu^2+}$.
+
+<Answer>
+
+Moles of copper added to the sheet, from grams and grams per mole:
+
+$$
+\frac{95.3}{63.55} = 1.50\ \text{mol}
+$$
+
+Each $\ce{Cu^2+}$ ion takes 2 electrons. Moles of electrons that went into the sheet:
+
+$$
+1.50 \times 2 = \mathbf{3.00}\ \text{mol}
+$$
+
+The supply pulled those same electrons out of the slab. The cables and the supply store none, so the atoms of the slab left behind 3.00 mol of electrons in this run.
+
+Now suppose all 96.6 g were copper oxidized to $\ce{Cu^2+}$:
+
+$$
+\frac{96.6}{63.55} = 1.52\ \text{mol}
+$$
+
+$$
+1.52 \times 2 = \mathbf{3.04}\ \text{mol}
+$$
+
+That is more than the 3.00 mol that passed:
+
+$$
+3.04 - 3.00 = 0.04\ \text{mol}
+$$
+
+**No.** Not everything the slab lost was copper oxidized to $\ce{Cu^2+}$. The slab left behind 0.04 mol fewer electrons than 96.6 g of copper would. Some of the mass it lost left fewer electrons behind than the same mass of copper does. Part (d) finds what that was.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Suppose for this part that copper is the only metal in the slab that reacts. For every 2.0 mol of electrons the supply moves, determine the moles of $\ce{Cu^2+}$ that enter the solution, the moles that leave it, and the net change.
+
+<Answer>
+
+Each half-reaction of part (a) has 2 electrons for 1 copper(II) ion.
+
+At the slab, 2.0 mol of electrons are left behind by
+
+$$
+\frac{2.0}{2} = 1.0\ \text{mol}
+$$
+
+of copper atoms, so **1.0 mol** of $\ce{Cu^2+}$ enters the solution.
+
+At the sheet, the same 2.0 mol of electrons are taken by 1.0 mol of copper(II) ions, so **1.0 mol** of $\ce{Cu^2+}$ leaves the solution.
+
+The net change:
+
+$$
+1.0 - 1.0 = \mathbf{0}\ \text{mol}
+$$
+
+There is **no net change.** This agrees with what is seen: the blue does not change. The copper is only carried from the slab to the sheet.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Decide from the observations which impurity, zinc or silver, was oxidized and which was not. Give the observation that decides each.
+
+<Answer>
+
+**Zinc was oxidized.** Zinc ions build up in the solution, and the only zinc in the tank began as atoms in the slab. An atom that becomes an ion has lost electrons:
+
+$$
+\ce{Zn(s) -> Zn^2+(aq) + 2e^-}
+$$
+
+**Silver was not oxidized.** The sludge contains silver metal, which is silver atoms. As the copper around them went into solution, the silver atoms came loose from the slab and fell, still as metal. They never lost electrons.
+
+The observations also say what does not happen at the sheet. Zinc ions build up in the solution, so they are not being reduced there, and the stem says that what is added to the sheet is copper. Zinc stays in the solution, silver stays on the floor of the tank, and only copper reaches the sheet.
+
+One more thing follows. Each zinc atom oxidized at the slab leaves 2 electrons that remove one $\ce{Cu^2+}$ ion at the sheet, and no $\ce{Cu^2+}$ ion enters to replace it. So the count of part (c) is not quite exact: the amount of $\ce{Cu^2+}$ falls very slowly, too slowly to see, because the slab holds only a little zinc.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for all of: both half-reactions, copper oxidized to $\ce{Cu^2+}$ at the slab and $\ce{Cu^2+}$ reduced to copper at the sheet; the slab named as the anode and the sheet as the cathode; and the sheet named as the electrode the supply pushes electrons into. State symbols are not required for the point. A plus or minus sign given to an electrode in place of its name earns 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for both counts and the decision: 3.00 mol of electrons into the sheet (from 1.50 mol of copper) against 3.04 mol for 96.6 g of copper (from 1.52 mol), so not everything the slab lost was copper oxidized to $\ce{Cu^2+}$. Comparing 1.50 mol with 1.52 mol of copper earns the point if the answer says the electrons are the same at both electrodes. "No" with no count, or "the two masses differ" alone, earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for 1.0 mol entering, 1.0 mol leaving and no net change, from 2 electrons for each ion. "No change" with neither amount earns 0 points.</RubricLine>
+<RubricLine part="d" points={1}>1 point for both, each with its observation: zinc was oxidized, because its ions appear in the solution; silver was not, because it is found as metal in the sludge. Both metals named correctly with no observation earn 0 points. The remark about the slow fall of $\ce{Cu^2+}$ is not required.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={4} title="A cell with no beakers" topic="9.8" points={4}>
+
+A block of zinc is bolted to the steel hull of a ship, below the waterline. Steel is mostly iron. The bolt is steel too, so metal touches metal all the way from the block to the hull. Seawater is a solution of ions, mostly $\ce{Na^+}$ and $\ce{Cl^-}$.
+
+Over one season these things are observed.
+
+- The zinc block slowly gets smaller, and $\ce{Zn^2+}$ ions enter the seawater around it.
+- The steel does not corrode.
+- At the surface of the steel, oxygen dissolved in the seawater is reduced:
+
+$$
+\begin{aligned}
+&\ce{O2(aq) + 2H2O(l) + 4e^- ->} \\
+&\quad \ce{4OH^-(aq)}
+\end{aligned}
+$$
+
+The block and the hull form a galvanic cell, though nothing here looks like two beakers, a wire and a salt bridge.
+
+<Part label="a">
+
+Identify the anode of this cell and write the half-reaction that happens there.
+
+<Answer>
+
+**The zinc block is the anode.** It gets smaller because zinc atoms leave it as ions, and an atom that becomes a positive ion has lost electrons. That is oxidation, and the electrode where oxidation happens is the anode.
+
+$$
+\ce{Zn(s) -> Zn^2+(aq) + 2e^-}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+A galvanic cell on a lab bench has a cathode, a wire and a salt bridge. Identify what does the job of each on the hull.
+
+<Answer>
+
+**The cathode is the surface of the steel.** Reduction happens there: oxygen molecules take electrons.
+
+**The wire is the metal itself:** the zinc block, the bolt and the steel of the hull, touching one another. Electrons left in the zinc travel through the metal to the steel surface, from the anode to the cathode, as they would through a wire.
+
+**The salt bridge is the seawater.** Around the zinc, positive $\ce{Zn^2+}$ ions are being added. At the steel, negative $\ce{OH^-}$ ions are being made. The ions of the seawater move between the two places and keep every part of the water neutral: anions such as $\ce{Cl^-}$ toward the zinc, the anode, and cations such as $\ce{Na^+}$ toward the steel, the cathode. Here one solution touches both electrodes, so it carries the ions itself.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+In the season the block loses 6.54 g of zinc. Take the molar mass of zinc as 65.38 g/mol, and suppose that every electron the zinc gives up is taken by oxygen at the steel and that every ion formed stays dissolved. Calculate the moles of oxygen reduced. Then state the change in the mass of the steel that this cell causes, with a reason.
+
+<Answer>
+
+Moles of zinc oxidized:
+
+$$
+\frac{6.54}{65.38} = 0.100\ \text{mol}
+$$
+
+Each zinc atom gives up 2 electrons. Moles of electrons:
+
+$$
+0.100 \times 2 = 0.200\ \text{mol}
+$$
+
+The half-reaction at the steel has 4 electrons for 1 oxygen molecule. Moles of oxygen:
+
+$$
+\frac{0.200}{4} = \mathbf{0.0500}\ \text{mol}
+$$
+
+**The mass of the steel changes by zero.** The steel is an electrode that only hands electrons over. The species reduced at it is oxygen from the water, and the product is hydroxide ions, which stay dissolved. No iron atom leaves the steel and, in this picture, where every ion stays dissolved, nothing is deposited on it.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+On another ship a block of copper is bolted to the hull in place of the zinc. The copper block does not change. The steel near it corrodes, faster than steel with no block at all, and $\ce{Fe^2+}$ ions enter the seawater. Oxygen is still reduced. Identify the metal that is the anode now, write its half-reaction, and identify the surface that only hands electrons over.
+
+<Answer>
+
+**The steel is the anode now.** Its iron atoms are the ones leaving as ions, which is oxidation:
+
+$$
+\ce{Fe(s) -> Fe^2+(aq) + 2e^-}
+$$
+
+**The copper block is now the surface that only hands electrons over.** It does not change, so no copper atom is oxidized and nothing is deposited on it. Electrons left in the steel pass through the bolt to the copper, where dissolved oxygen takes them. The copper is a cathode.
+
+The steel was a cathode beside zinc and is an anode beside copper. A metal has no fixed role: what happens at its surface names it.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for zinc as the anode with its half-reaction, zinc atoms giving $\ce{Zn^2+}$ ions and 2 electrons. State symbols are not required for the point. Zinc named with no half-reaction earns 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for all three: the steel surface as the cathode; the metal in contact, from the block through the bolt to the hull, as the wire (the bolt alone, or "metal touching metal", earns it); the seawater as the salt bridge. Electrons said to travel through the seawater earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for both: 0.0500 mol of oxygen (0.0500 to 0.0501, or 0.050), through 0.200 mol of electrons; and no change in the steel's mass, because the steel only passes electrons (or because oxygen, not iron, is what reacts there and the product is dissolved). An answer of 0.100 mol or 0.200 mol of oxygen earns 0 points.</RubricLine>
+<RubricLine part="d" points={1}>1 point for both: the steel (or iron) as the anode with its half-reaction, iron atoms giving $\ce{Fe^2+}$ ions and 2 electrons; and the copper block as the surface that only hands electrons over (or as the cathode, where oxygen is reduced). Copper named as the anode earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part F: Cell potential and free energy
+
+Five questions on standard reduction potentials and what they are tied to. You will read meter readings backward to the potentials behind them, rank three cells on four different bases, follow a metal that reacts with one of its own ions, go from an equilibrium mixture to a potential, and decide which acid can oxidize which metal.
+
+<Question number={5} title="Three unknown metals against cobalt" topic="9.9" points={5}>
+
+A student has strips of three metals, labeled X, Y and Z. Each metal forms a 2+ ion. The student stands each strip in a 1 M solution of its own ion and joins that half-cell, through a salt bridge and a meter, to a cobalt strip in 1 M cobalt(II) nitrate solution, at 25 °C. After reading the meter, the student lets each cell run and then weighs the cobalt strip.
+
+| Cell | Metal | Reading (V) | Cobalt strip |
+|---|---|---|---|
+| 1 | X | 0.48 | gained mass |
+| 2 | Y | 0.15 | lost mass |
+| 3 | Z | 0.16 | gained mass |
+
+Every cell is at standard conditions, so each reading is a standard cell potential. Use this value.
+
+$$
+\begin{aligned}
+&\ce{Co^2+(aq) + 2e^- -> Co(s)} \\
+&\quad E^\circ = -0.28\ \text{V}
+\end{aligned}
+$$
+
+<Part label="a">
+
+Determine the standard reduction potential of each metal's half-reaction, which has this form, with M for the metal:
+
+$$
+\ce{M^2+(aq) + 2e^- -> M(s)}
+$$
+
+Use the change in the mass of the cobalt strip to justify each one.
+
+<Answer>
+
+The standard cell potential is the cathode's reduction potential minus the anode's, each as a table would print it. So the first job is to find which strip is the cathode, and the mass of the cobalt strip tells you.
+
+**Cell 1.** The cobalt strip gained mass, so cobalt ions were reduced to cobalt metal on it. Reduction happens at the cathode: cobalt is the cathode, and X is the anode.
+
+$$
+\begin{aligned}
+0.48 &= -0.28 - E^\circ_\text{X} \\
+E^\circ_\text{X} &= -0.28 - 0.48 \\
+&= \mathbf{-0.76}\ \text{V}
+\end{aligned}
+$$
+
+**Cell 2.** The cobalt strip lost mass, so cobalt atoms were oxidized to ions. Oxidation happens at the anode: cobalt is the anode, and Y is the cathode.
+
+$$
+\begin{aligned}
+0.15 &= E^\circ_\text{Y} - (-0.28) \\
+E^\circ_\text{Y} &= 0.15 - 0.28 \\
+&= \mathbf{-0.13}\ \text{V}
+\end{aligned}
+$$
+
+**Cell 3.** The cobalt strip gained mass, as in cell 1, so cobalt is the cathode and Z is the anode.
+
+$$
+\begin{aligned}
+0.16 &= -0.28 - E^\circ_\text{Z} \\
+E^\circ_\text{Z} &= -0.28 - 0.16 \\
+&= \mathbf{-0.44}\ \text{V}
+\end{aligned}
+$$
+
+Check each against the rule for a galvanic cell: the half-reaction with the higher reduction potential is the reduction. X and Z stand below cobalt, and cobalt was the cathode. Y stands above cobalt, and Y was the cathode.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The three metals are among the five in this list. Each value is for the half-reaction of the form given in part (a). Identify X, Y and Z. Then name the other metal in the list that would also have made the cobalt strip lose mass, and determine how far apart its reading and Y's reading would be.
+
+| Metal | $E^\circ$ (V) |
+|---|---|
+| Manganese | $-1.18$ |
+| Zinc | $-0.76$ |
+| Iron | $-0.44$ |
+| Nickel | $-0.25$ |
+| Lead | $-0.13$ |
+
+<Answer>
+
+**X is zinc** ($-0.76$ V), **Y is lead** ($-0.13$ V) and **Z is iron** ($-0.44$ V).
+
+The cobalt strip loses mass when cobalt is the anode, and that takes a metal whose half-reaction stands above cobalt's, at $-0.28$ V. Besides lead, only **nickel** does, at $-0.25$ V. Manganese stands far below every value found in part (a), so it is none of the three, and with it the cobalt strip would gain mass.
+
+With nickel or with lead as the cathode, the reading is that metal's value minus cobalt's. The same $-0.28$ V is subtracted both times, so the two readings are as far apart as the two potentials:
+
+$$
+-0.13 - (-0.25) = \mathbf{0.12}\ \text{V}
+$$
+
+The mass of the cobalt strip cannot tell nickel from lead. The reading can: cell 2 read 0.15 V, which is lead's reading, and nickel's would be 0.03 V.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The student now makes two more cells at the same conditions: X with Y, and Z with Y. Predict the reading of each cell and identify the anode of each.
+
+<Answer>
+
+In both cells Y has the higher reduction potential, so Y's ion is reduced and the Y strip is the cathode. The other metal is oxidized, at the anode.
+
+X with Y:
+
+$$
+-0.13 - (-0.76) = \mathbf{+0.63}\ \text{V}
+$$
+
+**The anode is X.**
+
+Z with Y:
+
+$$
+-0.13 - (-0.44) = \mathbf{+0.31}\ \text{V}
+$$
+
+**The anode is Z.**
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Suppose the student had written down only the size of each reading, had not weighed the cobalt strip, and had no list of metals to compare with. Give the two reduction potentials that the reading alone would allow for Y, and the two it would allow for Z. Then decide whether the readings alone settle which of Y and Z is the anode in a cell of Z with Y.
+
+<Answer>
+
+The size of a reading is only the gap between two reduction potentials. It does not say which of the two is the higher one. So each metal could stand above cobalt by its reading or below cobalt by its reading.
+
+For Y, 0.15 V from cobalt:
+
+$$
+\begin{aligned}
+-0.28 + 0.15 &= -0.13\ \text{V} \\
+-0.28 - 0.15 &= -0.43\ \text{V}
+\end{aligned}
+$$
+
+For Z, 0.16 V from cobalt:
+
+$$
+\begin{aligned}
+-0.28 + 0.16 &= -0.12\ \text{V} \\
+-0.28 - 0.16 &= -0.44\ \text{V}
+\end{aligned}
+$$
+
+**The readings alone do not settle it.** If Y is at $-0.13$ V and Z at $-0.44$ V, Z is the lower one and Z is the anode. If Y is at $-0.43$ V and Z at $-0.12$ V, Y is the lower one and Y is the anode. The readings cannot say whether Y and Z are on the same side of cobalt or on opposite sides, and because the two differ by only 0.01 V, even two metals on the same side could go either way: both above cobalt makes Y the anode, and both below makes Z the anode. With no list to compare with, the mass of the cobalt strip is what places each metal.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for using the mass of the cobalt strip to name cobalt as the cathode in cells 1 and 3 (it gained mass, so cobalt ions were reduced there) and as the anode in cell 2; 1 point for all three potentials with their signs: $-0.76$ V for X, $-0.13$ V for Y and $-0.44$ V for Z. Three correct values with no use of the mass earn 1 point.</RubricLine>
+<RubricLine part="b" points={1}>1 point for zinc, lead and iron, in that order, with nickel named and 0.12 V between its reading and Y's (from the two potentials, or as 0.15 V minus nickel's 0.03 V). Names that agree with the student's own values in (a) earn the point if nickel and the 0.12 V are right. The three names alone earn 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for both cells: +0.63 V with X (zinc) as the anode, and +0.31 V with Z (iron) as the anode. Readings and anodes that follow correctly from the student's own values in (a) earn the point. A negative reading does not.</RubricLine>
+<RubricLine part="d" points={1}>1 point for the four values ($-0.13$ or $-0.43$ V for Y; $-0.12$ or $-0.44$ V for Z) with the decision that the readings alone do not settle the anode, because one pair of values makes Z the lower metal and the other pair makes Y the lower one. "No" with no values earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={6} title="Three anodes for one iron cathode" topic="9.9" points={6}>
+
+A student uses a table of standard reduction potentials to compare three metals as the anode of a galvanic cell. In each cell the cathode is an iron strip in 1 M iron(II) sulfate solution, at 25 °C, and every solution is 1 M. The potentials are the table's values; a real cell with a magnesium or an aluminum anode reads lower. The three cell reactions are numbered.
+
+Reaction 1, magnesium:
+
+$$
+\begin{aligned}
+&\ce{Mg(s) + Fe^2+(aq) ->} \\
+&\quad \ce{Mg^2+(aq) + Fe(s)}
+\end{aligned}
+$$
+
+Reaction 2, aluminum:
+
+$$
+\begin{aligned}
+&\ce{2Al(s) + 3Fe^2+(aq) ->} \\
+&\quad \ce{2Al^3+(aq) + 3Fe(s)}
+\end{aligned}
+$$
+
+Reaction 3, zinc:
+
+$$
+\begin{aligned}
+&\ce{Zn(s) + Fe^2+(aq) ->} \\
+&\quad \ce{Zn^2+(aq) + Fe(s)}
+\end{aligned}
+$$
+
+Use these values. $F$ = 96,485 C per mole of electrons.
+
+$$
+\begin{aligned}
+&\ce{Fe^2+(aq) + 2e^- -> Fe(s)} \\
+&\quad E^\circ = -0.44\ \text{V}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\ce{Zn^2+(aq) + 2e^- -> Zn(s)} \\
+&\quad E^\circ = -0.76\ \text{V}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\ce{Al^3+(aq) + 3e^- -> Al(s)} \\
+&\quad E^\circ = -1.66\ \text{V}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\ce{Mg^2+(aq) + 2e^- -> Mg(s)} \\
+&\quad E^\circ = -2.37\ \text{V}
+\end{aligned}
+$$
+
+| Metal | Molar mass (g/mol) |
+|---|---|
+| Magnesium | 24.30 |
+| Aluminum | 26.98 |
+| Zinc | 65.38 |
+
+<Part label="a">
+
+Calculate the standard cell potential of each of the three cells.
+
+<Answer>
+
+In each cell iron(II) ions are reduced, so iron's half-reaction is the cathode's, and the other metal's is the anode's. Take cathode minus anode, with both values as given.
+
+Reaction 1, magnesium:
+
+$$
+-0.44 - (-2.37) = \mathbf{+1.93}\ \text{V}
+$$
+
+Reaction 2, aluminum:
+
+$$
+-0.44 - (-1.66) = \mathbf{+1.22}\ \text{V}
+$$
+
+Reaction 3, zinc:
+
+$$
+-0.44 - (-0.76) = \mathbf{+0.32}\ \text{V}
+$$
+
+In reaction 2 the aluminum half-reaction is taken twice and the iron half-reaction three times. Neither potential is multiplied: a potential is energy per coulomb, and it is the same however much reaction there is.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Determine the number of moles of electrons that pass for each mole of reaction, $n$, in each cell. Then calculate $\Delta G^\circ$ for each reaction as written, in $\text{kJ/mol}_\text{rxn}$.
+
+<Answer>
+
+Read $n$ from each balanced overall equation.
+
+- Reaction 1: one magnesium atom gives up 2 electrons and one iron(II) ion takes them, so $n = 2$.
+- Reaction 2: two aluminum atoms give up 3 electrons each, 6 in all, and three iron(II) ions take 2 each, 6 in all, so $n = 6$.
+- Reaction 3: one zinc atom gives up 2 electrons, so $n = 2$.
+
+Then $\Delta G^\circ = -nFE^\circ$, which comes out in joules for each mole of reaction. Convert on a line of its own.
+
+Reaction 1, magnesium:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -(2)(96{,}485)(1.93) \\
+&= -372{,}432\ \text{J/mol}_\text{rxn} \\
+&= \mathbf{-372}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Reaction 2, aluminum:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -(6)(96{,}485)(1.22) \\
+&= -706{,}270\ \text{J/mol}_\text{rxn} \\
+&= \mathbf{-706}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Reaction 3, zinc:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -(2)(96{,}485)(0.32) \\
+&= -61{,}750\ \text{J/mol}_\text{rxn} \\
+&= \mathbf{-62}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+All three are negative, as they must be for a positive potential: each reaction is thermodynamically favored.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+For each cell, calculate $\Delta G^\circ$ for one mole of the metal that is oxidized, in kJ, and the energy the reaction can deliver for one gram of that metal, in kJ/g.
+
+<Answer>
+
+**For one mole of metal.** Reactions 1 and 3 are written for 1 mol of metal, so their values stand: $-372{,}432$ J is $\mathbf{-372}$ **kJ** for a mole of magnesium, and $-61{,}750$ J is $\mathbf{-62}$ **kJ** for a mole of zinc. Reaction 2 is written for 2 mol of aluminum, so divide by 2:
+
+$$
+\begin{aligned}
+\frac{-706{,}270}{2} &= -353{,}135\ \text{J} \\
+&= \mathbf{-353}\ \text{kJ}
+\end{aligned}
+$$
+
+**For one gram of metal.** Divide the energy for one mole of metal by the molar mass. An energy delivered is a size, so it carries no sign. The values carried, to four figures, are 372.4 kJ, 353.1 kJ and 61.75 kJ.
+
+Magnesium:
+
+$$
+\frac{372.4}{24.30} = \mathbf{15.3}\ \text{kJ/g}
+$$
+
+Aluminum:
+
+$$
+\frac{353.1}{26.98} = \mathbf{13.1}\ \text{kJ/g}
+$$
+
+Zinc:
+
+$$
+\frac{61.75}{65.38} = \mathbf{0.944}\ \text{kJ/g}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Rank the three metals, from largest to smallest, on each of four bases: the standard cell potential; the size of $\Delta G^\circ$ for a mole of reaction as written; the size of $\Delta G^\circ$ for a mole of metal; and the energy for a gram of metal. Then identify the metal that gives a cell of the smallest mass of anode for a given amount of energy.
+
+<Answer>
+
+**By standard cell potential:** magnesium (+1.93 V), then aluminum (+1.22 V), then zinc (+0.32 V).
+
+**For a mole of reaction as written:** aluminum (706 kJ), then magnesium (372 kJ), then zinc (62 kJ).
+
+**For a mole of metal:** magnesium (372 kJ), then aluminum (353 kJ), then zinc (62 kJ).
+
+**For a gram of metal:** magnesium (15.3 kJ), then aluminum (13.1 kJ), then zinc (0.944 kJ).
+
+Zinc is last every time. Magnesium leads on three bases, and aluminum leads on one.
+
+A mole of aluminum sends 3 mol of electrons through the wire and a mole of magnesium sends 2. But magnesium has the higher potential: each coulomb gives up more energy in its cell, 1.93 J against 1.22 J. Here that outweighs the extra electrons, and a mole of magnesium delivers a little more energy, 372 kJ against 353 kJ. Reaction 2 leads for a mole of reaction as written only because it is written for 2 mol of metal.
+
+Per gram magnesium's lead grows. A mole of aluminum delivers about 5% less energy than a mole of magnesium, and it is about 11% heavier, 26.98 g against 24.30 g.
+
+**By these standard values, magnesium gives the smallest mass of anode for a given amount of energy:** it delivers the most energy for each gram, 15.3 kJ.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for all three potentials, each as iron's value minus the other metal's: +1.93 V, +1.22 V and +0.32 V. A potential multiplied by a coefficient (for aluminum, +2.00 V) earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $n$ = 2, 6 and 2, read from the balanced equations; 1 point for the three values of $\Delta G^\circ$ with their negative signs: $-372$, $-706$ and $-62$ $\text{kJ/mol}_\text{rxn}$ (96,500 C/mol gives the same three). Values left in joules and called kilojoules do not earn the second point. Values that follow correctly from the student's own potentials in (a) and the student's own $n$ earn the second point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for the three values for a mole of metal, $-372$, $-353$ and $-62$ kJ, with the aluminum value halved and the other two not; 1 point for the three values for a gram: 15.3, 13.1 and 0.944 kJ/g (0.94 to 0.95 for zinc is accepted, since the rounded $-62$ kJ gives 0.948). A minus sign on an energy for a gram is not penalized. Values that follow correctly from the student's own answers to (b) earn both points.</RubricLine>
+<RubricLine part="d" points={1}>1 point for all four rankings (Mg, Al, Zn by potential; Al, Mg, Zn for a mole of reaction; Mg, Al, Zn for a mole of metal; Mg, Al, Zn for a gram) with magnesium chosen for the smallest mass of anode. Rankings that agree with the student's own values in (a) to (c) earn the point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={7} title="Iron wire in two bottles" topic="9.9" points={6}>
+
+Iron forms two ions, $\ce{Fe^2+}$ and $\ce{Fe^3+}$. A chemist drops a coil of clean iron wire into a solution of an iron(III) salt at 25 °C, in a closed bottle with no air in it, and asks whether the solution will stay as it is. One reaction could change it:
+
+$$
+\begin{aligned}
+&\ce{2Fe^3+(aq) + Fe(s) ->} \\
+&\quad \ce{3Fe^2+(aq)}
+\end{aligned}
+$$
+
+Use these values for the two half-reactions, numbered 1 and 2. $F$ = 96,485 C per mole of electrons, and $R$ = 8.314 J/(mol·K).
+
+Half-reaction 1:
+
+$$
+\begin{aligned}
+&\ce{Fe^3+(aq) + e^- -> Fe^2+(aq)} \\
+&\quad E^\circ = +0.77\ \text{V}
+\end{aligned}
+$$
+
+Half-reaction 2:
+
+$$
+\begin{aligned}
+&\ce{Fe^2+(aq) + 2e^- -> Fe(s)} \\
+&\quad E^\circ = -0.44\ \text{V}
+\end{aligned}
+$$
+
+<Part label="a">
+
+In the reaction above, iron(III) ions are reduced and iron atoms are oxidized, and both become iron(II) ions. Identify which half-reaction runs as the reduction and which runs backward, as the oxidation. Then calculate $E^\circ$ and $\Delta G^\circ$ for the reaction as written, and state whether it is thermodynamically favored.
+
+<Answer>
+
+Each $\ce{Fe^3+}$ ion becomes $\ce{Fe^2+}$: it gains an electron, so **half-reaction 1 runs as written, as the reduction**. The iron atom becomes $\ce{Fe^2+}$: it loses 2 electrons, so **half-reaction 2 runs backward, as the oxidation**.
+
+The reduction's value minus the oxidation's (cathode minus anode), both as given:
+
+$$
+\begin{aligned}
+E^\circ &= 0.77 - (-0.44) \\
+&= \mathbf{+1.21}\ \text{V}
+\end{aligned}
+$$
+
+Read $n$ from the balanced equation: one iron atom gives up 2 electrons, and two iron(III) ions take 1 each, so $n = 2$. Half-reaction 1 is taken twice to make the electrons match, and its potential is not multiplied. The 3 in front of $\ce{Fe^2+}$ counts ions, not electrons.
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -(2)(96{,}485)(1.21) \\
+&= -233{,}494\ \text{J/mol}_\text{rxn} \\
+&= \mathbf{-233}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+The potential is positive and $\Delta G^\circ$ is negative, so **the reaction is thermodynamically favored**: iron metal turns iron(III) ions into iron(II) ions, and becomes iron(II) ions as it does.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the equilibrium constant, $K$, for the reaction at 298 K.
+
+<Answer>
+
+Go through $\Delta G^\circ$, in joules, because $R$ is in joules:
+
+$$
+\begin{aligned}
+\ln K &= \frac{-\Delta G^\circ}{RT} \\
+&= \frac{233{,}494}{(8.314)(298)} \\
+&= 94.24
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+K &= e^{94.24} \\
+&= \mathbf{8.5 \times 10^{40}}
+\end{aligned}
+$$
+
+A negative $\Delta G^\circ$ goes with a $K$ above 1, and this one is very far above 1.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+For this reaction the solid iron is left out of the expression:
+
+$$
+K = \frac{[\ce{Fe^2+}]^3}{[\ce{Fe^3+}]^2}
+$$
+
+A solution at equilibrium with solid iron at 298 K holds 0.10 M $\ce{Fe^2+}$. Calculate $[\ce{Fe^3+}]$ in it, using your value of $K$.
+
+<Answer>
+
+Solve the expression for the concentration asked for:
+
+$$
+\begin{aligned}
+[\ce{Fe^3+}]^2 &= \frac{[\ce{Fe^2+}]^3}{K} \\
+&= \frac{(0.10)^3}{8.5 \times 10^{40}} \\
+&= \frac{1.0 \times 10^{-3}}{8.5 \times 10^{40}} \\
+&= 1.2 \times 10^{-44}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{Fe^3+}] &= \sqrt{1.2 \times 10^{-44}} \\
+&= \mathbf{1.1 \times 10^{-22}}\ \text{M}
+\end{aligned}
+$$
+
+A mole is $6.022 \times 10^{23}$ ions, so this is fewer than 100 iron(III) ions in a whole liter. Beside iron metal, almost no iron(III) is left.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+The chemist has two closed bottles at 25 °C, with no air in either. Each holds a coil of iron wire, more iron than any reaction in the bottle could use up. Bottle A is labeled "1.0 M iron(III)". Bottle B is labeled "1.0 M iron(II)". The only reaction that could change bottle B is the reverse of the one above:
+
+$$
+\begin{aligned}
+&\ce{3Fe^2+(aq) ->} \\
+&\quad \ce{2Fe^3+(aq) + Fe(s)}
+\end{aligned}
+$$
+
+Identify the half-reaction that runs as the reduction in this reverse reaction. Calculate $E^\circ$ for it as written, and state whether its $K$ is greater than 1 or less than 1. Then decide which bottle will still hold, almost unchanged, what its label says, and determine the concentration of iron(II) ions in the other bottle once its reaction is over. Take the volume of each solution as unchanged.
+
+<Answer>
+
+Here one $\ce{Fe^2+}$ ion becomes an iron atom: it gains 2 electrons, so **half-reaction 2 runs as written, as the reduction**. Two other $\ce{Fe^2+}$ ions become $\ce{Fe^3+}$: each loses an electron, so half-reaction 1 runs backward, as the oxidation. The two have changed places since part (a), and the two table values are used as given once more.
+
+The reduction's value minus the oxidation's:
+
+$$
+\begin{aligned}
+E^\circ &= -0.44 - 0.77 \\
+&= \mathbf{-1.21}\ \text{V}
+\end{aligned}
+$$
+
+A negative $E^\circ$ goes with a positive $\Delta G^\circ$, so $K$ is **less than 1**. The reverse reaction is thermodynamically unfavored.
+
+**Bottle B keeps its label.** For iron(II) ions alone, $E^\circ$ is $-1.21$ V and $K$ is very far below 1, so only a trace of iron(III) can form. Part (c) put a number on such a trace: about $1 \times 10^{-22}$ M beside 0.10 M $\ce{Fe^2+}$.
+
+In bottle A the reaction of part (a) has $E^\circ = +1.21$ V and a $K$ of $8.5 \times 10^{40}$, so it goes on until almost no iron(III) is left. The equation makes 3 mol of $\ce{Fe^2+}$ for every 2 mol of $\ce{Fe^3+}$ that react:
+
+$$
+\begin{aligned}
+[\ce{Fe^2+}] &= 1.0 \times \frac{3}{2} \\
+&= \mathbf{1.5}\ \text{M}
+\end{aligned}
+$$
+
+Bottle A ends as 1.5 M iron(II). Neither the ion nor the number on its label is still right, because the wire has added iron to the solution.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for half-reaction 1 as the reduction and half-reaction 2 as the oxidation, with $E^\circ$ = +1.21 V; 1 point for $\Delta G^\circ$ = $-233$ $\text{kJ/mol}_\text{rxn}$ from $n$ = 2, with "favored" ($-234$ from 96,500 C/mol also earns it). A potential of +1.98 V, from doubling half-reaction 1's value, does not earn the first point. Taking $n$ as 1 (which gives $-117$ kJ) or as 3 ($-350$ kJ) does not earn the second point. A value left in joules and called kilojoules does not earn it.</RubricLine>
+<RubricLine part="b" points={1}>1 point for $K$ = $8.5 \times 10^{40}$, found through $\Delta G^\circ$ in joules ($7 \times 10^{40}$ to $1 \times 10^{41}$ is accepted, since rounding in the exponent moves the answer; so is a value from 96,500 C/mol). A $K$ that follows correctly from the student's own $\Delta G^\circ$ in (a) earns the point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for the iron(III) concentration, $1.1 \times 10^{-22}$ M ($1.0 \times 10^{-22}$ to $1.2 \times 10^{-22}$ M), from 0.10 cubed, divided by $K$, and then the square root. A value that follows correctly from the student's own $K$ earns the point. Leaving out the cube or the square root earns 0 points.</RubricLine>
+<RubricLine part="d" points={2}>1 point for half-reaction 2 as the reduction, with $E^\circ$ = $-1.21$ V and a $K$ less than 1 (the potential may be reached by changing the sign of the value of part (a), because the reaction is reversed; the half-reaction and the $K$ are still required); 1 point for bottle B chosen as the one that keeps its label, with 1.5 M iron(II) in bottle A from 3 mol of iron(II) for every 2 mol of iron(III). Bottle B with 1.0 M for bottle A does not earn the second point. A potential that follows correctly from the student's own answer to (a) earns the first point. "Bottle B" with no potential, no $K$ and no concentration earns neither point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={8} title="From a beaker at equilibrium to a potential" topic="9.9" points={5}>
+
+Tin granules are stirred into 0.100 M lead(II) nitrate solution at 25 °C (298 K). Some lead metal forms, and some tin goes into solution:
+
+$$
+\begin{aligned}
+&\ce{Sn(s) + Pb^2+(aq) <=>} \\
+&\quad \ce{Sn^2+(aq) + Pb(s)}
+\end{aligned}
+$$
+
+The stirring goes on until the concentrations stop changing. Both solids are still present. The solution then holds these concentrations.
+
+| Ion | Concentration (M) |
+|---|---|
+| $\ce{Pb^2+}$ | 0.031 |
+| $\ce{Sn^2+}$ | 0.069 |
+
+Use these values. $R$ = 8.314 J/(mol·K), and $F$ = 96,485 C per mole of electrons.
+
+$$
+\begin{aligned}
+&\ce{Pb^2+(aq) + 2e^- -> Pb(s)} \\
+&\quad E^\circ = -0.13\ \text{V}
+\end{aligned}
+$$
+
+<Part label="a">
+
+Calculate the equilibrium constant, $K$, for the reaction as written.
+
+<Answer>
+
+The concentrations have stopped changing, so the mixture is at equilibrium and its concentrations go into the $K$ expression. The two solids are left out of it.
+
+$$
+\begin{aligned}
+K &= \frac{[\ce{Sn^2+}]}{[\ce{Pb^2+}]} \\
+&= \frac{0.069}{0.031} \\
+&= \mathbf{2.2}
+\end{aligned}
+$$
+
+It is 2.226 before rounding. The data have two significant figures, so the parts below use 2.2.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $\Delta G^\circ$ for the reaction at 298 K, in $\text{kJ/mol}_\text{rxn}$.
+
+<Answer>
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -RT\ln K \\
+&= -(8.314)(298)\ln(2.2) \\
+&= -1{,}953\ \text{J/mol}_\text{rxn}
+\end{aligned}
+$$
+
+In kilojoules:
+
+$$
+\begin{aligned}
+&-1{,}953\ \text{J/mol}_\text{rxn} \\
+&\quad = \mathbf{-2.0}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+$K$ is a little above 1, so $\Delta G^\circ$ is negative and small: smaller than $RT$, which is about 2.5 kJ/mol at 298 K.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate $E^\circ$ for the reaction as written. Then determine the standard reduction potential of tin's half-reaction:
+
+$$
+\ce{Sn^2+(aq) + 2e^- -> Sn(s)}
+$$
+
+<Answer>
+
+Read $n$ from the balanced equation: one tin atom gives up 2 electrons and one lead(II) ion takes them, so $n = 2$. Rearrange $\Delta G^\circ = -nFE^\circ$, with $\Delta G^\circ$ in joules:
+
+$$
+\begin{aligned}
+E^\circ &= \frac{-\Delta G^\circ}{nF} \\
+&= \frac{1{,}953}{(2)(96{,}485)} \\
+&= \mathbf{+0.010}\ \text{V}
+\end{aligned}
+$$
+
+In the reaction as written, lead(II) ions are reduced, so lead's half-reaction is the cathode's and tin's is the anode's. Cathode minus anode:
+
+$$
+\begin{aligned}
+0.010 &= -0.13 - E^\circ_\text{Sn} \\
+E^\circ_\text{Sn} &= -0.13 - 0.010 \\
+&= \mathbf{-0.14}\ \text{V}
+\end{aligned}
+$$
+
+Tin's half-reaction stands just below lead's, by a hundredth of a volt.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+A student says, "$E^\circ$ is positive, so the reaction is thermodynamically favored, and all of the lead(II) ions end up as lead metal." Use the data to calculate the percent of the lead(II) ions that are still in solution at equilibrium, and state which half of the student's claim is correct.
+
+<Answer>
+
+The solution began at 0.100 M $\ce{Pb^2+}$ and ends at 0.031 M:
+
+$$
+\frac{0.031}{0.100} \times 100 = \mathbf{31\%}
+$$
+
+**The first half of the claim is correct and the second is not.** $E^\circ$ is positive, $\Delta G^\circ$ is negative and $K$ is above 1, so the reaction is thermodynamically favored. But 31% of the lead(II) ions are still in solution. A positive $E^\circ$ says that $K$ is greater than 1. How far the reaction goes depends on how much greater, and a $K$ of 2.2 leaves plenty of reactant: here it took a potential of only +0.010 V to give it.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for $K$ = 2.2 (or 2.23), from 0.069 divided by 0.031 with the solids left out. The inverted ratio, 0.45, earns 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for $\Delta G^\circ$ = $-2.0$ $\text{kJ/mol}_\text{rxn}$ with its negative sign ($-1.95$ to $-1.99$ before rounding; $-1{,}953$ J with the unit joules also earns the point). A value in joules called kilojoules earns 0 points. A value that follows correctly from the student's own $K$ earns the point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for $E^\circ$ = +0.010 V from $n$ = 2 and $\Delta G^\circ$ in joules (0.010 V, or 0.01 V, also from 96,500 C/mol); 1 point for tin's reduction potential, $-0.14$ V, from lead's value minus the cell's with lead's half-reaction as the cathode's. Reaching $-0.12$ V by adding earns only the first point.</RubricLine>
+<RubricLine part="d" points={1}>1 point for 31% (or 31 percent) with the decision that "favored" is correct and "all of the lead(II) ions end up as metal" is not. The percent alone, or the decision alone, earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={9} title="Two acids, silver and gold" topic="9.9" points={4}>
+
+A refiner has grains of an alloy of silver and gold and wants to take the two metals apart with an acid. Two acids are on the shelf, each at 1 M and 25 °C: hydrochloric acid, which holds $\ce{H^+}$ and $\ce{Cl^-}$ ions, and nitric acid, which holds $\ce{H^+}$ and $\ce{NO3^-}$ ions. A chloride ion cannot be reduced. A hydrogen ion can, by half-reaction 1, and a nitrate ion can in acid, by half-reaction 2.
+
+Use these values. $F$ = 96,485 C per mole of electrons.
+
+Half-reaction 1:
+
+$$
+\begin{aligned}
+&\ce{2H^+(aq) + 2e^- -> H2(g)} \\
+&\quad E^\circ = 0.00\ \text{V}
+\end{aligned}
+$$
+
+Half-reaction 2:
+
+$$
+\begin{aligned}
+&\ce{NO3^-(aq) + 4H^+(aq)} \\
+&\quad +\ \ce{3e^- ->} \\
+&\quad \ce{NO(g) + 2H2O(l)} \\
+&\quad E^\circ = +0.96\ \text{V}
+\end{aligned}
+$$
+
+Half-reaction 3:
+
+$$
+\begin{aligned}
+&\ce{Ag^+(aq) + e^- -> Ag(s)} \\
+&\quad E^\circ = +0.80\ \text{V}
+\end{aligned}
+$$
+
+Half-reaction 4:
+
+$$
+\begin{aligned}
+&\ce{Au^3+(aq) + 3e^- -> Au(s)} \\
+&\quad E^\circ = +1.50\ \text{V}
+\end{aligned}
+$$
+
+<Part label="a">
+
+To take the two metals apart, an acid must oxidize silver in a thermodynamically favored reaction and must not oxidize gold. Determine the range in which the reduction potential of the acid's half-reaction must lie. Then decide, for each of half-reactions 1 and 2, whether it lies in that range.
+
+<Answer>
+
+When an ion of the acid oxidizes a metal, the ion's half-reaction is the cathode's and the metal's is the anode's. $E^\circ$ is the cathode's value minus the anode's, so it is positive only when the acid's half-reaction stands above the metal's.
+
+To oxidize silver, the acid's half-reaction must stand above half-reaction 3, at $+0.80$ V. To leave gold as it is, it must stand below half-reaction 4, at $+1.50$ V. **The range is above +0.80 V and below +1.50 V.**
+
+**Half-reaction 1 is not in the range.** At 0.00 V it stands below both metals' half-reactions, so hydrogen ions oxidize neither metal. A chloride ion cannot be reduced, so the hydrogen ion is the only species in hydrochloric acid that can take electrons: hydrochloric acid oxidizes neither metal.
+
+**Half-reaction 2 is in the range.** Its $+0.96$ V is above $+0.80$ V and below $+1.50$ V.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+For nitric acid, identify the ion whose reduction gives the larger $E^\circ$ with a metal. Calculate $E^\circ$ for the oxidation of silver and for the oxidation of gold by that ion, and state whether each is thermodynamically favored.
+
+<Answer>
+
+Nitric acid holds two species that can be reduced. Half-reaction 2 stands higher than half-reaction 1, $+0.96$ V against 0.00 V, so **the nitrate ion** gives the larger potential with any metal. (Its hydrogen ions stand below both metals, as part (a) found, and oxidize neither.)
+
+Silver, with half-reaction 2 as the cathode's:
+
+$$
+0.96 - 0.80 = \mathbf{+0.16}\ \text{V}
+$$
+
+Gold:
+
+$$
+0.96 - 1.50 = \mathbf{-0.54}\ \text{V}
+$$
+
+**The oxidation of silver by nitrate ions in acid is thermodynamically favored. The oxidation of gold is not.**
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Silver reacts with nitric acid by this equation:
+
+$$
+\begin{aligned}
+&\ce{3Ag(s) + NO3^-(aq)} \\
+&\quad +\ \ce{4H^+(aq) ->} \\
+&\quad \ce{3Ag^+(aq) + NO(g)} \\
+&\quad +\ \ce{2H2O(l)}
+\end{aligned}
+$$
+
+Calculate $\Delta G^\circ$ for the reaction as written, in $\text{kJ/mol}_\text{rxn}$.
+
+<Answer>
+
+Read $n$ from the balanced equation: three silver atoms give up 1 electron each, and one nitrate ion takes all 3, so $n = 3$. Silver's half-reaction was taken three times, and its potential was not multiplied: $E^\circ$ is the $+0.16$ V of part (b).
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -(3)(96{,}485)(0.16) \\
+&= -46{,}313\ \text{J/mol}_\text{rxn} \\
+&= \mathbf{-46}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Identify the acid the refiner should use. State which metal it leaves as a solid, and which metal ion ends up in the solution.
+
+<Answer>
+
+**Nitric acid.** Of the two values of $E^\circ$ in part (b), only one is positive: silver with nitrate ions, $+0.16$ V. So nitric acid oxidizes the silver in the grains, and **silver ions,** $\ce{Ag^+}$, end up in the solution. Gold's value with nitrate ions is $-0.54$ V, so **the gold is left as a solid.** Hydrochloric acid would oxidize neither metal and separate nothing.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for the range, above +0.80 V and below +1.50 V, with half-reaction 1 (0.00 V) outside it and half-reaction 2 (+0.96 V) inside it. The range with no decision about the two half-reactions earns 0 points, and so does a decision with no range.</RubricLine>
+<RubricLine part="b" points={1}>1 point for the nitrate ion with both potentials, +0.16 V for silver and $-0.54$ V for gold, and the statement that only silver's oxidation is favored. A potential multiplied by a coefficient (for silver, 0.80 V taken three times) earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for $\Delta G^\circ$ = $-46$ $\text{kJ/mol}_\text{rxn}$ from $n$ = 3, with its negative sign ($-46{,}313$ J with the unit joules, or a value from 96,500 C/mol, also earns the point). Taking $n$ as 1 ($-15$ kJ) earns 0 points. A value that follows correctly from the student's own potential in (b) and $n$ = 3 earns the point.</RubricLine>
+<RubricLine part="d" points={1}>1 point for nitric acid, with gold left as the solid and silver ions in the solution. A choice that agrees with the student's own signs in (b) earns the point. Naming the acid alone earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part G: Cells away from standard conditions
+
+Four questions on cells whose solutions are not all 1 M. No part needs an equation with a logarithm. Every answer goes through the reaction quotient: where a species sits in $Q$, how $Q$ compares with $K$, and what that says about the reading on the meter.
+
+<Question number={10} title="Five readings, one of them wrong" topic="9.10" points={5}>
+
+A student builds five lead and copper cells at 25 °C. Each has a lead strip in lead(II) nitrate solution and a copper strip in copper(II) nitrate solution. A wire through a meter joins the strips, and a salt bridge joins the solutions. Every cell runs on this reaction:
+
+$$
+\begin{aligned}
+&\ce{Pb(s) + Cu^2+(aq) ->} \\
+&\quad \ce{Pb^2+(aq) + Cu(s)}
+\end{aligned}
+$$
+
+Use these values. The standard reduction potentials are:
+
+$$
+\begin{aligned}
+&\ce{Cu^2+(aq) + 2e^- -> Cu(s)} \\
+&\quad E^\circ = +0.34\ \text{V}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\ce{Pb^2+(aq) + 2e^- -> Pb(s)} \\
+&\quad E^\circ = -0.13\ \text{V}
+\end{aligned}
+$$
+
+Take the equilibrium constant of the cell's reaction as $K = 8 \times 10^{15}$ at 25 °C.
+
+Only the concentrations differ from cell to cell. The table gives them, with the reading the student wrote down for each cell. The meter shows three decimal places. One of the five readings was copied down wrongly.
+
+| Cell | $[\ce{Pb^2+}]$ (M) | $[\ce{Cu^2+}]$ (M) | Reading (V) |
+|---|---|---|---|
+| 1 | 1.0 | 1.0 | 0.470 |
+| 2 | 0.10 | 1.0 | 0.500 |
+| 3 | 0.010 | 1.0 | 0.529 |
+| 4 | 1.0 | 0.010 | 0.411 |
+| 5 | 1.0 | 0.10 | 0.500 |
+
+<Part label="a">
+
+Calculate the standard cell potential, and calculate $Q$ for each of the five cells. Identify the cell that is at standard conditions. Then rank the five cells from the one farthest from equilibrium to the one nearest to it. Use $Q$ and $K$, not the readings.
+
+<Answer>
+
+Copper's half-reaction has the higher reduction potential, so it is the reduction, at the cathode. Lead is oxidized at the anode. The standard cell potential is cathode minus anode, with both values as the table gives them:
+
+$$
+\begin{aligned}
+E^\circ_\text{cell} &= 0.34 - (-0.13) \\
+&= \mathbf{+0.47}\ \text{V}
+\end{aligned}
+$$
+
+$Q$ is products over reactants, with the two solid metals left out:
+
+$$
+Q = \frac{[\ce{Pb^2+}]}{[\ce{Cu^2+}]}
+$$
+
+Divide the first concentration in each row by the second:
+
+| Cell | Division | $Q$ |
+|---|---|---|
+| 1 | 1.0 ÷ 1.0 | 1.0 |
+| 2 | 0.10 ÷ 1.0 | 0.10 |
+| 3 | 0.010 ÷ 1.0 | 0.010 |
+| 4 | 1.0 ÷ 0.010 | 100 |
+| 5 | 1.0 ÷ 0.10 | 10 |
+
+**Cell 1 is at standard conditions**: both of its solutions are 1.0 M, so $Q = 1$. Its reading, 0.470 V, is $E^\circ_\text{cell}$ with one more decimal place.
+
+A cell is at equilibrium when $Q = K$, and here $K$ is $8 \times 10^{15}$. Every one of the five values of $Q$ is far below that, so every cell runs forward and its $Q$ has to climb to reach $K$. The lower a cell's $Q$, the farther it has to climb.
+
+In order of rising $Q$ (0.010, 0.10, 1.0, 10, 100), from farthest to nearest:
+
+**cell 3, cell 2, cell 1, cell 5, cell 4.**
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Identify the reading that cannot be right. State whether the true reading of that cell is above or below 0.470 V, and name the two readings in the table that it must lie between.
+
+<Answer>
+
+The farther a cell is from equilibrium, the larger its potential. So the readings, set in the order of part (a), must fall from each cell to the next:
+
+| Cell | $Q$ | Reading (V) |
+|---|---|---|
+| 3 | 0.010 | 0.529 |
+| 2 | 0.10 | 0.500 |
+| 1 | 1.0 | 0.470 |
+| 5 | 10 | 0.500 |
+| 4 | 100 | 0.411 |
+
+They fall from cell 3 to cell 2 to cell 1, and then rise at cell 5. **Cell 5's reading, 0.500 V, cannot be right.** Its $Q$ is 10, which is above 1, so cell 5 is nearer equilibrium than the standard cell and must read **below 0.470 V**. Its $Q$ is below cell 4's, so it must read above cell 4. The true reading lies **between 0.411 V and 0.470 V**.
+
+Cell 2 shows the same 0.500 V, and there it fits: cell 2's $Q$ is between cell 3's and cell 1's, and 0.500 V is between 0.529 V and 0.470 V.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Set aside the reading you rejected in part (b). In the other four cells, find how far the reading falls each time $Q$ becomes ten times larger. Use that step to determine the reading that the rejected cell should have shown. Work from the cell on each side of it in the order of part (a), and compare the two results. No equation with a logarithm is needed.
+
+<Answer>
+
+The four readings that stand, in order of rising $Q$:
+
+| Cell | $Q$ | Reading (V) |
+|---|---|---|
+| 3 | 0.010 | 0.529 |
+| 2 | 0.10 | 0.500 |
+| 1 | 1.0 | 0.470 |
+| 4 | 100 | 0.411 |
+
+From cell 3 to cell 2, $Q$ becomes ten times larger and the reading falls by
+
+$$
+0.529 - 0.500 = 0.029\ \text{V}
+$$
+
+From cell 2 to cell 1, $Q$ becomes ten times larger again:
+
+$$
+0.500 - 0.470 = 0.030\ \text{V}
+$$
+
+From cell 1 to cell 4, $Q$ becomes 100 times larger. That is two tenfold steps, and the reading falls by
+
+$$
+0.470 - 0.411 = 0.059\ \text{V}
+$$
+
+which is 0.029 V and 0.030 V again. So in these cells the reading falls by **about 0.030 V for each tenfold rise in $Q$**. The step is the same whether the rise comes from more $\ce{Pb^2+}$ (cells 3, 2 and 1) or from less $\ce{Cu^2+}$ (cell 4).
+
+Cell 5 has $Q = 10$. That is one tenfold step above cell 1:
+
+$$
+0.470 - 0.030 = 0.440\ \text{V}
+$$
+
+It is also one tenfold step below cell 4:
+
+$$
+0.411 + 0.030 = 0.441\ \text{V}
+$$
+
+The two results agree to 0.001 V, the last place the meter shows. Cell 5 should have read **0.440 V** (0.441 V is as good an answer). This agrees with part (b): the value is below 0.470 V and above 0.411 V.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the standard cell potential as cathode minus anode, 0.34 minus the lead value of $-0.13$, giving $+0.47$ V (0.47 V with no plus sign is accepted), with all five values of $Q$ (1.0, 0.10, 0.010, 100 and 10) and cell 1 named as the standard cell. A $Q$ that includes a solid metal, or that is upside down, does not earn this first point. 1 point for the order cell 3, cell 2, cell 1, cell 5, cell 4, justified by $Q$: every $Q$ is below $K$, and the lowest $Q$ is the farthest from equilibrium. An order that follows correctly from the student's own values of $Q$ earns the second point. An order with no reference to $Q$, or one taken from the readings, does not earn the second point.</RubricLine>
+<RubricLine part="b" points={1}>1 point for cell 5 (0.500 V), with a true reading below 0.470 V because its $Q$ is above 1, and between 0.411 V and 0.470 V. Naming cell 2 earns 0 points. A reading calculated from an equation with a logarithm is not needed and does not replace the argument through $Q$.</RubricLine>
+<RubricLine part="c" points={2}>1 point for a fall of 0.029 V to 0.030 V (0.0295 V is accepted) for each tenfold rise in $Q$, read from at least one pair of the four other cells (cells 3 and 2, cells 2 and 1, or cells 1 and 4 with the 0.059 V shared between two steps). 1 point for 0.440 V or 0.441 V (or 0.4405 V) for cell 5, found from cell 1 or from cell 4 and compared with the result from the other. A value with no step read from the table earns neither point, but the value halfway between cells 1 and 4, justified by cell 5 lying one tenfold step from each, earns the second point. A student who rejected cell 2 in (b) can earn the first point only, with the step read from cells 3 and 1 or from cells 1 and 4.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={11} title="A cell that can run either way" topic="9.10" points={5}>
+
+A cell has an iron strip in iron(II) sulfate solution and a cadmium strip in cadmium sulfate solution, at 25 °C. A wire through a meter joins the strips, and a salt bridge joins the solutions. Use these values. The standard reduction potentials are:
+
+$$
+\begin{aligned}
+&\ce{Cd^2+(aq) + 2e^- -> Cd(s)} \\
+&\quad E^\circ = -0.40\ \text{V}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\ce{Fe^2+(aq) + 2e^- -> Fe(s)} \\
+&\quad E^\circ = -0.44\ \text{V}
+\end{aligned}
+$$
+
+The two values are close together. Call this equation the forward reaction:
+
+$$
+\begin{aligned}
+&\ce{Fe(s) + Cd^2+(aq) ->} \\
+&\quad \ce{Fe^2+(aq) + Cd(s)}
+\end{aligned}
+$$
+
+For the forward reaction, take $K = 23$ at 25 °C.
+
+The cell is built three times, with these mixtures:
+
+| Mixture | $[\ce{Fe^2+}]$ (M) | $[\ce{Cd^2+}]$ (M) |
+|---|---|---|
+| 1 | 0.010 | 1.0 |
+| 2 | 1.0 | 0.010 |
+| 3 | 0.92 | 0.040 |
+
+<Part label="a">
+
+Calculate the standard cell potential for the forward reaction. Identify the strip that is the anode when both solutions are 1.0 M.
+
+<Answer>
+
+In the forward reaction $\ce{Cd^2+}$ is reduced, so cadmium's half-reaction is the cathode's, and iron is oxidized, so iron's is the anode's. Take cathode minus anode, with both values as given:
+
+$$
+\begin{aligned}
+E^\circ_\text{cell} &= -0.40 - (-0.44) \\
+&= \mathbf{+0.04}\ \text{V}
+\end{aligned}
+$$
+
+The value is positive, so with both solutions at 1.0 M the forward reaction is the one that runs. Iron is oxidized, so **the iron strip is the anode**.
+
+$Q$ and $K$ say the same thing. At 1.0 M each, $Q = 1$, which is below $K = 23$, so the reaction runs forward.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $Q$ for each of the three mixtures. For each one, state the direction in which the reaction runs and the strip that is the anode. For any mixture in which nothing runs, state what the meter reads.
+
+<Answer>
+
+For the forward reaction, with the solid metals left out:
+
+$$
+Q = \frac{[\ce{Fe^2+}]}{[\ce{Cd^2+}]}
+$$
+
+Mixture 1:
+
+$$
+Q = \frac{0.010}{1.0} = 0.010
+$$
+
+$Q$ is below $K$, so the reaction runs **forward** and $Q$ rises toward 23. Iron is oxidized: **the iron strip is the anode.**
+
+Mixture 2:
+
+$$
+Q = \frac{1.0}{0.010} = 100
+$$
+
+$Q$ is above $K$, so the reaction runs **backward** and $Q$ falls toward 23:
+
+$$
+\begin{aligned}
+&\ce{Cd(s) + Fe^2+(aq) ->} \\
+&\quad \ce{Cd^2+(aq) + Fe(s)}
+\end{aligned}
+$$
+
+Now cadmium is oxidized: **the cadmium strip is the anode**, and iron forms on the iron strip, the cathode.
+
+Mixture 3:
+
+$$
+Q = \frac{0.92}{0.040} = 23
+$$
+
+$Q$ equals $K$. The mixture is at equilibrium, so the reaction runs **neither way**, no electrons flow, and **the meter reads 0 V**. Neither strip is an anode.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A classmate says: "Iron has the lower reduction potential, so the iron strip is the anode in this cell whatever the concentrations are." Use your answers to part (b) to decide whether the claim is correct.
+
+<Answer>
+
+**The claim is not correct.** Mixture 2 is the case against it: its $Q$ is 100, above $K = 23$, so the reaction runs backward and the cadmium strip is the anode. In mixture 3 there is no anode at all.
+
+The classmate's rule compares standard reduction potentials, and those belong to standard conditions, where $Q = 1$. The rule gives the right anode there, and in mixture 1, because both have $Q$ below 23. The direction of any mixture is decided by $Q$ against $K$. When $K$ is as close to 1 as 23 is, ordinary concentrations can put $Q$ on either side of it.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+A fourth mixture has $[\ce{Cd^2+}]$ = 0.030 M. Calculate the concentration of $\ce{Fe^2+}$ at which its meter reads zero. Then identify the strip that is the anode when $[\ce{Fe^2+}]$ is higher than that value.
+
+<Answer>
+
+The meter reads zero when $Q = K$:
+
+$$
+\frac{[\ce{Fe^2+}]}{0.030} = 23
+$$
+
+$$
+\begin{aligned}
+[\ce{Fe^2+}] &= (23)(0.030) \\
+&= \mathbf{0.69}\ \text{M}
+\end{aligned}
+$$
+
+$\ce{Fe^2+}$ is on the top of $Q$. A concentration above 0.69 M makes $Q$ larger than 23, so the reaction runs backward, cadmium is oxidized, and **the cadmium strip is the anode**.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for $+0.04$ V from cathode minus anode, the cadmium value of $-0.40$ minus the iron value of $-0.44$, with the iron strip named as the anode at 1.0 M. An answer of $-0.04$ V, or iron named with no potential shown, earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the three values of $Q$: 0.010, 100 and 23. 1 point for all three conclusions, each from $Q$ against $K$: mixture 1 runs forward with iron as the anode; mixture 2 runs backward with cadmium as the anode; mixture 3 is at equilibrium and the meter reads 0 V. Conclusions that follow correctly from the student's own values of $Q$ earn the second point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for rejecting the claim with mixture 2 (its $Q$, 100, is above $K$, so cadmium is the anode) or with mixture 3 (at equilibrium there is no anode). "The claim is wrong" with no mixture named earns 0 points.</RubricLine>
+<RubricLine part="d" points={1}>1 point for 0.69 M, from 23 times 0.030, with the cadmium strip named as the anode above it. The concentration alone, or the strip alone, earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={12} title="A cell that senses acid" topic="9.10" points={4}>
+
+A cell can compare the hydrogen ion concentrations of two acid solutions. One half-cell is a manganese strip in 1.0 M manganese(II) chloride solution. In the other, hydrogen gas at 1.0 atm bubbles over a platinum strip that stands in the acid being tested. The platinum only passes electrons to and from the wire and is not changed. A salt bridge joins the two solutions. The cell runs on this reaction:
+
+$$
+\begin{aligned}
+&\ce{Mn(s) + 2H^+(aq) ->} \\
+&\quad \ce{Mn^2+(aq) + H2(g)}
+\end{aligned}
+$$
+
+Use these values. The standard reduction potentials are 0.00 V for hydrogen ion and $-1.18$ V for manganese(II) ion, so
+
+$$
+\begin{aligned}
+E^\circ_\text{cell} &= 0.00 - (-1.18) \\
+&= +1.18\ \text{V}
+\end{aligned}
+$$
+
+Take $K$ for the reaction as about $10^{40}$ at 25 °C. In $Q$ for this cell, a dissolved ion enters as its concentration in M and the gas enters as its pressure in atm, because those are the standard states that $E^\circ$ and this $K$ are defined for (topic 9.5).
+
+Two cells are built at 25 °C. They differ only in the acid:
+
+| Cell | Acid | $[\ce{H+}]$ (M) |
+|---|---|---|
+| S | 0.10 M hydrochloric acid | 0.10 |
+| W | 0.10 M acetic acid | $1.3 \times 10^{-3}$ |
+
+In both cells $[\ce{Mn^2+}]$ is 1.0 M and the pressure of hydrogen is 1.0 atm.
+
+<Part label="a">
+
+Write the expression for $Q$ for the cell's reaction.
+
+<Answer>
+
+Products over reactants, each raised to its coefficient. Manganese metal is a solid and is left out. Hydrogen gas enters as its pressure, and $\ce{H+}$ has a coefficient of 2:
+
+$$
+Q = \frac{[\ce{Mn^2+}]\,P_{\ce{H2}}}{[\ce{H+}]^2}
+$$
+
+The platinum strip is not in the equation, so it is not in $Q$.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $Q$ for cell S and for cell W.
+
+<Answer>
+
+Cell S:
+
+$$
+\begin{aligned}
+Q &= \frac{(1.0)(1.0)}{(0.10)^2} \\
+&= \frac{1.0}{0.010} \\
+&= \mathbf{1.0 \times 10^{2}}
+\end{aligned}
+$$
+
+Cell W:
+
+$$
+\begin{aligned}
+Q &= \frac{(1.0)(1.0)}{(1.3 \times 10^{-3})^2} \\
+&= \frac{1.0}{1.69 \times 10^{-6}} \\
+&= \mathbf{5.9 \times 10^{5}}
+\end{aligned}
+$$
+
+The two acids have the same concentration, but $[\ce{H+}]$ in the acetic acid is about 77 times lower, and it is squared in $Q$. So cell W's $Q$ is about 5,900 times cell S's.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Identify the cell with the higher reading. State whether each reading is above or below 1.18 V. Justify both answers with $Q$.
+
+<Answer>
+
+**Both readings are below 1.18 V.** $E^\circ_\text{cell}$ is the reading at $Q = 1$. Both cells have $Q$ above 1, so both are nearer equilibrium than the standard cell, and both read less than it does.
+
+**Cell S, with hydrochloric acid, has the higher reading.** Both values of $Q$ are far below $K$, which is about $10^{40}$, so both cells run forward. Cell S has the lower $Q$, $1.0 \times 10^{2}$ against $5.9 \times 10^{5}$, so it is the farther of the two from equilibrium and has the larger potential.
+
+So the cell reads higher in the solution with more $\ce{H+}$. That is how it tells a strong acid from a weak acid of the same concentration.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+A third cell, T, is built in the same way, again with $[\ce{Mn^2+}]$ = 1.0 M. Its acid has $[\ce{H+}]$ = 0.50 M. The gas bubbled over its platinum strip is a mixture of hydrogen and argon in which the pressure of hydrogen is 0.20 atm. Argon takes no part in the reaction. Calculate $Q$ for cell T. Then rank the three cells S, W and T by reading, from highest to lowest, and state where 1.18 V falls in your ranking.
+
+<Answer>
+
+Put cell T's values into the expression of part (a). The hydrogen enters as its own pressure, 0.20 atm:
+
+$$
+\begin{aligned}
+Q &= \frac{(1.0)(0.20)}{(0.50)^2} \\
+&= \frac{0.20}{0.25} \\
+&= \mathbf{0.80}
+\end{aligned}
+$$
+
+$Q$ is below 1, so cell T is farther from equilibrium than the standard cell and reads **above 1.18 V**. Cells S and W have $Q$ above 1 and read below 1.18 V, as part (c) found.
+
+The lower the $Q$, the higher the reading. In order of rising $Q$ ($0.80$, then $1.0 \times 10^{2}$, then $5.9 \times 10^{5}$), from the highest reading to the lowest:
+
+**cell T, then 1.18 V, then cell S, then cell W.**
+
+Cell T's acid has less $\ce{H+}$ than the 1.0 M of the standard cell, and that alone would put its $Q$ at 4.0 and its reading below 1.18 V. The low pressure of hydrogen, a product, is what brings $Q$ under 1.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for $Q$ with the concentration of manganese(II) ion times the pressure of hydrogen on the top and the concentration of hydrogen ion, squared, on the bottom. Manganese metal or platinum in the expression, a missing square, or a missing pressure earns 0 points. The gas must enter as its pressure, as the stem says: a concentration of hydrogen gas in its place earns 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for both values: $1.0 \times 10^{2}$ (or 100) for cell S and $5.9 \times 10^{5}$ for cell W ($5.9 \times 10^{5}$ to $6.0 \times 10^{5}$). Values that follow correctly from the student's own expression in (a) earn the point, unless that expression makes the two values equal.</RubricLine>
+<RubricLine part="c" points={1}>1 point for both conclusions with their reasons: both readings are below 1.18 V because both values of $Q$ are above 1, and cell S reads higher because its $Q$ is lower, so it is farther from equilibrium. A calculated potential is not needed.</RubricLine>
+<RubricLine part="d" points={1}>1 point for $Q$ of 0.80 for cell T with the order T, S, W and 1.18 V placed between T and S, because cell T's $Q$ is below 1 and the other two are above it. A $Q$ of 4.0, from leaving out the pressure of hydrogen or taking it as 1.0 atm, earns 0 points. The value 0.80 with no ranking, or the ranking with no value of $Q$, earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={13} title="Three tin solutions of unknown strength" topic="9.10" points={4}>
+
+Three beakers, X, Y and Z, hold tin(II) chloride solutions of three different concentrations. The labels have been lost. A clean tin strip stands in each beaker. A student joins two beakers at a time, with a wire through a meter between the two strips and a salt bridge between the two solutions. In each pair, the only half-reaction is this one, running forward at one strip and backward at the other:
+
+$$
+\ce{Sn^2+(aq) + 2e^- -> Sn(s)}
+$$
+
+Both half-cells have the same standard reduction potential, so $E^\circ_\text{cell}$ = 0 V and $K = 1$ for each pair. The student observes:
+
+- X joined with Y: the strip in X gains mass.
+- Y joined with Z: electrons go through the wire from the strip in Z to the strip in Y.
+
+<Part label="a">
+
+For the pair X and Y, identify the anode and identify the solution with the higher concentration of $\ce{Sn^2+}$. Justify your answer.
+
+<Answer>
+
+The strip in X gains mass, so tin ions are being reduced to metal on it:
+
+$$
+\ce{Sn^2+(aq) + 2e^- -> Sn(s)}
+$$
+
+Reduction happens at the cathode, so the strip in X is the cathode and **the strip in Y is the anode**, where tin is oxidized:
+
+$$
+\ce{Sn(s) -> Sn^2+(aq) + 2e^-}
+$$
+
+So solution X is losing $\ce{Sn^2+}$ and solution Y is gaining it. With $K = 1$, the pair is at equilibrium when the two concentrations are equal, and a cell runs toward equilibrium. The concentration that is falling must be the higher one: **X is more concentrated than Y.**
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+For the pair Y and Z, identify the anode. Then rank the three solutions from the highest concentration of $\ce{Sn^2+}$ to the lowest.
+
+<Answer>
+
+Electrons leave the anode and travel through the wire to the cathode. They leave the strip in Z, so **the strip in Z is the anode**: tin is oxidized there, and solution Z gains $\ce{Sn^2+}$. The strip in Y is the cathode, and solution Y loses $\ce{Sn^2+}$.
+
+The solution that gains ions is the more dilute one, as in part (a), so Y is more concentrated than Z.
+
+Part (a) put X above Y. From highest to lowest: **X, Y, Z.**
+
+Solution Y was the dilute one beside X and is the concentrated one beside Z. A half-cell's role depends on what it is joined to.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Identify the pair of beakers that gives the largest reading on the meter, and the strip that loses mass in that pair. Justify your answer with $Q$.
+
+<Answer>
+
+In each pair the overall change moves $\ce{Sn^2+}$ from the concentrated solution to the dilute one, so
+
+$$
+Q = \frac{[\ce{Sn^2+}]_\text{dilute}}{[\ce{Sn^2+}]_\text{concentrated}}
+$$
+
+$Q$ is below 1 for every pair, and $K = 1$. The pair with the lowest $Q$ is the farthest from equilibrium and has the largest potential.
+
+**X joined with Z** has the lowest $Q$. Its top is the smallest of the three concentrations and its bottom is the largest, so its ratio is smaller than Z over Y and smaller than Y over X.
+
+Z is the dilute solution of that pair, so its strip is the anode, and **the strip in Z loses mass**.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Later the solutions are analyzed, and the order you found is confirmed: the most concentrated of the three is 0.80 M and the most dilute is 0.20 M. Call these two solutions the pair of part (c). Equal volumes of that pair are joined and left until the meter reads zero. Determine the concentration of $\ce{Sn^2+}$ in each beaker at that moment. Assume the volumes do not change.
+
+<Answer>
+
+The meter reads zero at equilibrium, where $Q = K = 1$: the two concentrations are equal.
+
+Every $\ce{Sn^2+}$ ion reduced in X is matched by one formed in Z, because each takes 2 electrons and the same electrons do both. The volumes are equal, so X falls by the same amount, $x$, that Z rises:
+
+$$
+0.80 - x = 0.20 + x
+$$
+
+$$
+x = 0.30\ \text{M}
+$$
+
+$$
+0.80 - 0.30 = \mathbf{0.50}\ \text{M}
+$$
+
+$$
+0.20 + 0.30 = \mathbf{0.50}\ \text{M}
+$$
+
+**Both beakers hold 0.50 M $\ce{Sn^2+}$.** The cell has stopped with plenty of tin ions left in both. What ran out was the difference between the two solutions.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for the strip in Y as the anode and X as the more concentrated solution, justified by reduction at the strip that gains mass and by the cell running toward equilibrium, where $Q = K = 1$ (or toward equal concentrations in the two solutions). Both answers with no reason earn 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for the strip in Z as the anode, because electrons leave the anode, with the order X, Y, Z. An order that follows correctly from the student's own answer to (a) earns the point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for X joined with Z, justified by the lowest $Q$ (or by the largest ratio of the two concentrations, so the farthest from equilibrium), with the strip in Z losing mass. A pair that follows correctly from the student's own order in (b), with the strip in its dilute solution losing mass, earns the point.</RubricLine>
+<RubricLine part="d" points={1}>1 point for 0.50 M in both beakers, from equal concentrations at a reading of zero and equal changes in the two equal volumes. "The concentrations are equal" with no value earns 0 points, as does an answer in which either solution has no tin ions left. A student whose pair in (c) was not X and Z is scored on the method: equal concentrations at zero, equal changes, 0.50 M.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part H: Electrolysis and Faraday's law
+
+Five questions on counting atoms with a current and a clock. Each one follows the chain from seconds to coulombs, to moles of electrons, through a half-reaction to moles of substance, and on to a mass, or runs that chain backward. Faraday's constant is 96,485 C per mole of electrons.
+
+<Question number={14} title="A plating log with one bad entry" topic="9.11" points={5}>
+
+A shop plates gold onto connector pins from a bath. Take the bath as holding its gold as $\ce{Au^3+}$ ions. The power supply pushes electrons into the pins, and gold is deposited on them:
+
+$$
+\ce{Au^3+(aq) + 3e^- -> Au(s)}
+$$
+
+The log below shows three runs. Take every electron that passes as used by this half-reaction. The log is made up for this question, and one of its masses cannot be right.
+
+| Run | Current (A) | Time (min) | Gold logged (g) |
+|---|---|---|---|
+| 1 | 0.500 | 32.0 | 0.653 |
+| 2 | 0.800 | 45.0 | 1.470 |
+| 3 | 1.25 | 22.0 | 2.246 |
+
+Use these values: the molar mass of gold is 196.97 g/mol, and one mole of electrons carries 96,485 C.
+
+<Part label="a">
+
+Calculate the charge that passed in each run and the moles of electrons in that charge.
+
+<Answer>
+
+A current in amperes is a charge in coulombs each second, so each time must be in seconds first.
+
+Run 1: 32.0 min × 60 s/min = 1,920 s.
+
+$$
+\begin{aligned}
+q &= It \\
+&= (0.500)(1{,}920) \\
+&= 960\ \text{C}
+\end{aligned}
+$$
+
+$$
+\frac{960}{96{,}485} = 0.009950\ \text{mol}
+$$
+
+Run 2: 45.0 min × 60 s/min = 2,700 s.
+
+$$
+\begin{aligned}
+q &= (0.800)(2{,}700) \\
+&= 2{,}160\ \text{C}
+\end{aligned}
+$$
+
+$$
+\frac{2{,}160}{96{,}485} = 0.02239\ \text{mol}
+$$
+
+Run 3: 22.0 min × 60 s/min = 1,320 s.
+
+$$
+\begin{aligned}
+q &= (1.25)(1{,}320) \\
+&= 1{,}650\ \text{C}
+\end{aligned}
+$$
+
+$$
+\frac{1{,}650}{96{,}485} = 0.01710\ \text{mol}
+$$
+
+| Run | Charge (C) | Electrons (mol) |
+|---|---|---|
+| 1 | **960** | **0.009950** |
+| 2 | **2,160** | **0.02239** |
+| 3 | **1,650** | **0.01710** |
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the mass of gold each run should have deposited. Identify the run whose logged mass cannot be right, and state the mass that belongs in the log.
+
+<Answer>
+
+The half-reaction takes 3 electrons for each gold atom. So the moles of gold are one third of the moles of electrons, and the molar mass turns moles of gold into grams.
+
+Run 1, step by step:
+
+$$
+\frac{0.009950}{3} = 0.003317\ \text{mol}
+$$
+
+That is 0.003317 mol of gold.
+
+$$
+\begin{aligned}
+&(0.003317)(196.97) \\
+&= 0.653\ \text{g}
+\end{aligned}
+$$
+
+Runs 2 and 3, with the same two steps on one line each:
+
+$$
+\begin{aligned}
+&\frac{0.02239}{3} \times 196.97 \\
+&= 1.470\ \text{g}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\frac{0.01710}{3} \times 196.97 \\
+&= 1.123\ \text{g}
+\end{aligned}
+$$
+
+| Run | Expected (g) | Logged (g) |
+|---|---|---|
+| 1 | 0.653 | 0.653 |
+| 2 | 1.470 | 1.470 |
+| 3 | 1.123 | 2.246 |
+
+Runs 1 and 2 agree with the log. **Run 3 does not.** Its charge can deposit **1.123 g** of gold, and that is the mass that belongs in the log. The logged 2.246 g is twice as much.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A technician suggests that in the run you named in part (b) a side reaction at the pins used up some of the electrons, and that this explains the logged mass. Calculate the moles of electrons that the logged mass of gold would need, compare it with the moles of electrons that passed in that run, and decide whether the suggestion can be right.
+
+<Answer>
+
+Run the chain backward from the logged mass. The moles of gold:
+
+$$
+\frac{2.246}{196.97} = 0.01140\ \text{mol}
+$$
+
+Each gold atom needs 3 electrons, so going from atoms to electrons the 3 multiplies:
+
+$$
+(0.01140)(3) = 0.0342\ \text{mol}
+$$
+
+The logged mass needs 0.0342 mol of electrons. Only 0.01710 mol passed.
+
+$$
+\frac{0.0342}{0.01710} = 2.00
+$$
+
+The logged mass needs **twice as many electrons as passed**. The suggestion **cannot be right**. A side reaction takes electrons away from the gold half-reaction, so it leaves fewer electrons for gold and a mass below 1.123 g. The electrons that passed cannot reduce more gold ions than one for every 3 of them, whatever else happens at the pins. The fault is in the log, not in the bath.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the three charges, each from a time in seconds: 960 C, 2,160 C and 1,650 C; 1 point for the three amounts of electrons, each charge divided by Faraday's constant: 0.009950 mol, 0.02239 mol and 0.01710 mol. Honest rounding and values worked with 96,500 C/mol are accepted. Times left in minutes earn 0 points for the charges, and amounts of electrons that follow correctly from those charges earn the second point.</RubricLine>
+<RubricLine part="b" points={2}>1 point for dividing the moles of electrons by 3 and multiplying by 196.97 g/mol, shown for at least one run, with expected masses of 0.653 g, 1.470 g and 1.123 g (the neighbors that honest rounding gives are accepted); 1 point for naming run 3 and giving 1.123 g (1.12 g is accepted) as the mass that belongs in the log. Naming run 3 with no expected masses shown earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for showing that 2.246 g of gold needs about 0.0342 mol of electrons, twice the 0.01710 mol that passed, and for rejecting the suggestion because a side reaction leaves fewer electrons for gold and so a smaller mass, never a larger one. Comparing 2.246 g with the 1.123 g of part (b) in place of the moles of electrons earns the point if the same reason is given. Rejecting the suggestion with no number and no reason earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={15} title="Which metal is in the bath?" topic="9.11" points={5}>
+
+A plating bath has lost its label. It holds one of three metal ions, and each would be reduced at the cathode by its own half-reaction:
+
+Half-reaction 1:
+
+$$
+\ce{Ag^+(aq) + e^- -> Ag(s)}
+$$
+
+Half-reaction 2:
+
+$$
+\ce{Pd^2+(aq) + 2e^- -> Pd(s)}
+$$
+
+Half-reaction 3:
+
+$$
+\ce{Cd^2+(aq) + 2e^- -> Cd(s)}
+$$
+
+To find out which ion it is, a chemist passes a steady 0.600 A through a sample of the bath for 45.0 min. The cathode gains 0.893 g. Take every electron that passes as used to deposit the metal. The run is made up for this question.
+
+Use these values. One mole of electrons carries 96,485 C.
+
+| Metal | Molar mass (g/mol) |
+|---|---|
+| Silver | 107.87 |
+| Palladium | 106.42 |
+| Cadmium | 112.41 |
+
+<Part label="a">
+
+Calculate the charge that passed and the moles of electrons in it.
+
+<Answer>
+
+The time in seconds is 45.0 min × 60 s/min = 2,700 s.
+
+$$
+\begin{aligned}
+q &= It \\
+&= (0.600)(2{,}700) \\
+&= \mathbf{1{,}620}\ \text{C}
+\end{aligned}
+$$
+
+Divide by Faraday's constant:
+
+$$
+\frac{1{,}620}{96{,}485} = \mathbf{0.01679}\ \text{mol}
+$$
+
+That is 0.01679 mol of electrons.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the mass that this charge would deposit from each of the three ions. Identify the ion in the bath.
+
+<Answer>
+
+Each half-reaction gives its own ratio of metal to electrons.
+
+Silver takes 1 electron for each atom, so the moles of silver equal the moles of electrons, 0.01679 mol.
+
+$$
+\begin{aligned}
+&(0.01679)(107.87) \\
+&= 1.811\ \text{g}
+\end{aligned}
+$$
+
+Palladium and cadmium each take 2 electrons for each atom, so there are half as many moles of metal as of electrons:
+
+$$
+\frac{0.01679}{2} = 0.008395\ \text{mol}
+$$
+
+Palladium:
+
+$$
+\begin{aligned}
+&(0.008395)(106.42) \\
+&= 0.893\ \text{g}
+\end{aligned}
+$$
+
+Cadmium:
+
+$$
+\begin{aligned}
+&(0.008395)(112.41) \\
+&= 0.944\ \text{g}
+\end{aligned}
+$$
+
+| Ion | Mass expected (g) |
+|---|---|
+| $\ce{Ag^+}$ | 1.811 |
+| $\ce{Pd^2+}$ | 0.893 |
+| $\ce{Cd^2+}$ | 0.944 |
+
+The cathode gained 0.893 g. The bath holds **palladium ions**, $\ce{Pd^2+}$.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The mass the cathode gained can be off by as much as 0.02 g. Calculate how far the expected mass of each of the two wrong candidates lies from 0.893 g. Decide whether the measurement is good enough to rule out both, and state which wrong candidate is the closer one.
+
+<Answer>
+
+Silver:
+
+$$
+1.811 - 0.893 = 0.918\ \text{g}
+$$
+
+Cadmium:
+
+$$
+0.944 - 0.893 = 0.051\ \text{g}
+$$
+
+Both gaps are larger than 0.02 g, so **the measurement is good enough to rule out both**. **Cadmium is the closer one.** The measured gain would have to be wrong by 0.051 g, more than twice what the measured gain can be off by, before palladium could be taken for cadmium.
+
+The two gaps differ in size for a reason you can read from the half-reactions. Cadmium and palladium both take 2 electrons for each atom, so their masses differ only as their molar masses do:
+
+$$
+\frac{112.41}{106.42} = 1.056
+$$
+
+Cadmium's expected mass is about 6 percent larger than palladium's. Silver's molar mass is even closer to palladium's:
+
+$$
+\frac{107.87}{106.42} = 1.014
+$$
+
+But silver takes 1 electron for each atom, not 2. The same charge deposits twice as many moles of it, and its expected mass is about twice palladium's. The electron count in the half-reaction, not the molar mass, sets silver far apart.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for 1,620 C, from the time in seconds, and 0.01679 mol of electrons (0.0168 mol, and a value worked with 96,500 C/mol, are accepted). A charge of 27.0 C, from the time left in minutes, earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the three expected masses, with the moles of electrons halved for palladium and cadmium and not for silver: 1.811 g, 0.893 g and 0.944 g (honest rounding is accepted: 1.81 to 1.812, 0.893 to 0.894, 0.944); 1 point for naming palladium, or half-reaction 2, because its expected mass is the one that matches 0.893 g. Naming palladium with no masses compared earns 0 points. Masses that follow correctly from a wrong answer to (a) earn the first point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for the two gaps: 0.918 g for silver and 0.051 g for cadmium (0.918 to 0.919, 0.92 and 0.05 are accepted); 1 point for deciding that the measurement is good enough because both gaps are larger than 0.02 g, and for naming cadmium as the closer candidate. Gaps given as percentages of 0.893 g (about 103 percent and about 6 percent; 5.6 to 5.7 percent is accepted) earn the first point. Naming cadmium as the closer candidate with no comparison with 0.02 g does not earn the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={16} title="Oxygen for one person" topic="9.11" points={6}>
+
+A submarine makes the oxygen its crew breathes by electrolysis of water. A power supply drives two half-reactions, one at each electrode.
+
+At the anode, water is oxidized:
+
+$$
+\begin{aligned}
+&\ce{2H2O(l) ->} \\
+&\quad \ce{O2(g) + 4H^+(aq) + 4e^-}
+\end{aligned}
+$$
+
+At the cathode, hydrogen ions are reduced:
+
+$$
+\ce{2H^+(aq) + 2e^- -> H2(g)}
+$$
+
+Take the oxygen one person uses as 0.840 kg each day. Take every electron that passes as used by these two half-reactions.
+
+Use these values: the molar mass of $\ce{O2}$ is 32.00 g/mol and of $\ce{H2}$ is 2.016 g/mol; one day is 86,400 s; one mole of electrons carries 96,485 C.
+
+<Part label="a">
+
+Calculate the moles of oxygen one person uses in a day, and the moles of electrons that must leave the anode to make it.
+
+<Answer>
+
+A mass of 0.840 kg is 840 g. The moles of oxygen:
+
+$$
+\frac{840}{32.00} = \mathbf{26.25}\ \text{mol}
+$$
+
+The anode's half-reaction releases 4 electrons for each $\ce{O2}$. Going from molecules to electrons, the 4 multiplies:
+
+$$
+(26.25)(4) = \mathbf{105.0}\ \text{mol}
+$$
+
+That is 105.0 mol of electrons. The mass has three significant figures, so the fourth figure in each value is carried only to keep the next steps from drifting.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the charge that must pass in a day and the steady current that delivers it.
+
+<Answer>
+
+Multiply the moles of electrons by Faraday's constant:
+
+$$
+\begin{aligned}
+q &= (105.0)(96{,}485) \\
+&= 1.013 \times 10^{7}\ \text{C}
+\end{aligned}
+$$
+
+The product is 10,130,925 C, which is $1.013 \times 10^{7}$ C to four figures.
+
+That charge passes in one day, 86,400 s. Current is charge per second:
+
+$$
+\begin{aligned}
+I &= \frac{q}{t} \\
+&= \frac{1.013 \times 10^{7}}{86{,}400} \\
+&= \mathbf{117}\ \text{A}
+\end{aligned}
+$$
+
+The cell must carry a steady **117 A** for each person on board.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate the mass of hydrogen gas that forms at the cathode in the same day.
+
+<Answer>
+
+The electrons that leave the anode are pushed by the supply into the cathode, so 105.0 mol of electrons arrive there in the day. The cathode's half-reaction takes 2 electrons for each $\ce{H2}$, so there are half as many moles of hydrogen as of electrons:
+
+$$
+\frac{105.0}{2} = 52.50\ \text{mol}
+$$
+
+Multiply by the molar mass:
+
+$$
+\begin{aligned}
+&(52.50)(2.016) \\
+&= 105.8\ \text{g}
+\end{aligned}
+$$
+
+To three significant figures, **106 g** of hydrogen forms.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+A student says: "More moles of hydrogen form than of oxygen, so the cathode must carry more current than the anode." State the current at the cathode, and use the two half-reactions to account for the ratio of the moles of the two gases.
+
+<Answer>
+
+The current at the cathode is **117 A, the same as at the anode**. The student's claim is wrong.
+
+The two electrodes are joined through the wire and the supply, in one path. Electrons are not stored anywhere along it, so the charge that leaves the anode each second is the charge that arrives at the cathode each second. In a day that is 105.0 mol of electrons at each electrode.
+
+The ratio of the gases comes from how many electrons each molecule accounts for, not from the current:
+
+- At the anode, 4 electrons are released for each $\ce{O2}$. So 105.0 mol of electrons go with 26.25 mol of $\ce{O2}$.
+- At the cathode, 2 electrons are taken for each $\ce{H2}$. So the same 105.0 mol of electrons make 52.50 mol of $\ce{H2}$.
+
+The same number of electrons, divided by 4 at one electrode and by 2 at the other, gives **twice as many moles of hydrogen as of oxygen**.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for 26.25 mol of oxygen (26.3 is accepted) and 105.0 mol of electrons (105 is accepted), with the 4 of the half-reaction multiplying. Giving 6.56 mol of electrons, from dividing by 4, or 52.5 mol, from using 2 electrons for each molecule of oxygen, earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the charge, the moles of electrons times Faraday's constant, about 1.01 × 10⁷ C; 1 point for dividing by 86,400 s to reach 117 A. Values from 117 A to 118 A are accepted, as is an answer worked with 96,500 C/mol. A charge and a current that follow correctly from a wrong answer to (a) earn both points. Dividing by 24 or by 1,440 in place of the seconds earns the first point only.</RubricLine>
+<RubricLine part="c" points={1}>1 point for 52.5 mol of hydrogen, half the moles of electrons, and 106 g (105.8 g is accepted). Reaching 52.5 mol as twice the moles of oxygen, from the two half-reactions, also earns the point. Giving 212 g, from taking the moles of electrons as moles of hydrogen, earns 0 points.</RubricLine>
+<RubricLine part="d" points={2}>1 point for stating that the current at the cathode is 117 A, the same as at the anode (or the student's own current from part (b)), because the same electrons pass both electrodes; 1 point for the ratio: 4 electrons for each molecule of oxygen and 2 for each molecule of hydrogen, so the same electrons give twice as many moles of hydrogen. "The currents are equal" with no reference to the electrons earns 0 of the 1 point for the current; the point for the ratio is judged on its own.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={17} title="A cell that runs until something is gone" topic="9.11" points={5}>
+
+A galvanic cell is built from two half-cells joined by a wire and a salt bridge.
+
+- A zinc strip with a mass of 5.00 g stands in a solution of zinc nitrate.
+- A cadmium strip stands in 0.100 L of 0.500 M cadmium nitrate.
+
+The thermodynamically favored reaction of the cell is
+
+$$
+\begin{aligned}
+&\ce{Zn(s) + Cd^2+(aq) ->} \\
+&\quad \ce{Zn^2+(aq) + Cd(s)}
+\end{aligned}
+$$
+
+Oxidation happens at the zinc strip, the anode:
+
+$$
+\ce{Zn(s) -> Zn^2+(aq) + 2e^-}
+$$
+
+Reduction happens at the cadmium strip, the cathode:
+
+$$
+\ce{Cd^2+(aq) + 2e^- -> Cd(s)}
+$$
+
+The equilibrium constant of the cell reaction is very large. Take the cell as running until one reactant is used up, and take its current as a steady 0.150 A for as long as it runs.
+
+Use these values: the molar mass of zinc is 65.38 g/mol and of cadmium is 112.41 g/mol; one mole of electrons carries 96,485 C.
+
+<Part label="a">
+
+Determine which reactant is used up first, the zinc of the strip or the cadmium ions of the solution.
+
+<Answer>
+
+The moles of zinc in the strip:
+
+$$
+\frac{5.00}{65.38} = 0.0765\ \text{mol}
+$$
+
+The moles of cadmium ions in the solution:
+
+$$
+\begin{aligned}
+&(0.100)(0.500) \\
+&= 0.0500\ \text{mol}
+\end{aligned}
+$$
+
+The equation uses one zinc atom for each cadmium ion. There are fewer moles of cadmium ions, 0.0500 mol against 0.0765 mol, so **the cadmium ions are used up first**. Zinc is left over.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the total charge the cell can deliver, and the time, in hours, for which it can run at 0.150 A.
+
+<Answer>
+
+The charge is set by the reactant that runs out. Each cadmium ion takes 2 electrons, so going from ions to electrons the 2 multiplies:
+
+$$
+\begin{aligned}
+&(0.0500)(2) \\
+&= 0.100\ \text{mol}
+\end{aligned}
+$$
+
+That is 0.100 mol of electrons. Multiply by Faraday's constant:
+
+$$
+\begin{aligned}
+q &= (0.100)(96{,}485) \\
+&= 9{,}650\ \text{C}
+\end{aligned}
+$$
+
+The product is 9,648.5 C, which is **9,650 C** to three significant figures.
+
+Solve $I = q/t$ for the time:
+
+$$
+\begin{aligned}
+t &= \frac{q}{I} \\
+&= \frac{9{,}650}{0.150} \\
+&= 64{,}300\ \text{s}
+\end{aligned}
+$$
+
+An hour is 3,600 s:
+
+$$
+\frac{64{,}300}{3{,}600} = \mathbf{17.9}\ \text{h}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate the mass of zinc left on the zinc strip when the cell stops, and the mass that the cadmium strip has gained. Then calculate, each with its sign, the change in the combined mass of the two strips and the change in the combined mass of zinc and cadmium dissolved in the two solutions. Leave out the ions of the salt bridge.
+
+<Answer>
+
+The 0.100 mol of electrons passes both strips, and both half-reactions have 2 electrons for each atom. So 0.0500 mol of zinc leaves the zinc strip and 0.0500 mol of cadmium is deposited on the cadmium strip.
+
+The zinc strip loses
+
+$$
+\begin{aligned}
+&(0.0500)(65.38) \\
+&= 3.27\ \text{g}
+\end{aligned}
+$$
+
+so the zinc left is
+
+$$
+5.00 - 3.27 = \mathbf{1.73}\ \text{g}
+$$
+
+The cadmium strip gains
+
+$$
+\begin{aligned}
+&(0.0500)(112.41) \\
+&= \mathbf{5.62}\ \text{g}
+\end{aligned}
+$$
+
+For the two strips together, the loss counts as negative and the gain as positive:
+
+$$
+\begin{aligned}
+&-3.27 + 5.62 \\
+&= \mathbf{+2.35}\ \text{g}
+\end{aligned}
+$$
+
+The combined mass of the strips rises by 2.35 g.
+
+Now the solutions. Every zinc atom that leaves the zinc strip goes into the zinc nitrate solution as an ion, so that solution gains 3.27 g of dissolved zinc. Every cadmium atom deposited came out of the cadmium nitrate solution, so that solution loses 5.62 g of dissolved cadmium:
+
+$$
+\begin{aligned}
+&+3.27 - 5.62 \\
+&= \mathbf{-2.35}\ \text{g}
+\end{aligned}
+$$
+
+The combined mass of dissolved zinc and cadmium falls by 2.35 g. The two changes add up to zero. No zinc or cadmium is made or lost in the cell: 2.35 g more of it has left the solutions for the strips than has left the strips for the solutions. The mass of the electrons that moved is far too small to show in these figures.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for comparing 0.0765 mol of zinc with 0.0500 mol of cadmium ions, one to one, and naming the cadmium ions as used up first. Showing that 0.0500 mol of cadmium ions use 3.27 g of zinc, less than the 5.00 g present, also earns the point. Naming the cadmium ions with no amounts compared earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the charge: 0.100 mol of electrons, twice the moles of cadmium ions, times Faraday's constant, 9,650 C (9,648.5 C, 9.65 × 10³ C and a value worked with 96,500 C/mol are accepted); 1 point for 17.9 h, the charge divided by 0.150 A and by 3,600 s in an hour. A charge of 4,820 C, from leaving out the 2, earns 0 points for the charge, and the 8.93 h that follows from it earns the second point. If (a) named zinc, a charge worked from the zinc, 14,800 C, earns the point for the charge, and the 27.3 h that follows from it earns the second point. If (a) named the cadmium ions, a charge worked from the zinc earns 0 points for the charge.</RubricLine>
+<RubricLine part="c" points={2}>1 point for the two masses: 1.73 g of zinc left (a loss of 3.27 g) and 5.62 g gained by the cadmium strip; 1 point for the two combined changes, each with its sign: +2.35 g for the two strips and −2.35 g for the zinc and cadmium dissolved in the two solutions ("rises by 2.35 g" and "falls by 2.35 g" are accepted). Giving the loss of 3.27 g and not the 1.73 g left does not earn the first point. Giving 2.35 g with no sign or direction, or only one of the two changes, earns the first point only. Combined changes that follow correctly from the student's own loss and gain earn the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={18} title="Where did the charge go?" topic="9.11" points={5}>
+
+Manganese metal is made by electrolysis of a solution of manganese(II) sulfate. At the cathode, the power supply pushes in electrons and manganese is deposited:
+
+$$
+\ce{Mn^2+(aq) + 2e^- -> Mn(s)}
+$$
+
+Not every electron does this job. Some of them make hydrogen gas at the same cathode:
+
+$$
+\ce{2H^+(aq) + 2e^- -> H2(g)}
+$$
+
+Take these two half-reactions as the only ones at the cathode.
+
+A cell runs at a steady 265 A for 2.50 h. Its cathode is weighed before and after the run and has gained 445 g, all of it manganese. The run's numbers are made up for this question.
+
+Use these values: the molar mass of manganese is 54.94 g/mol, and one mole of electrons carries 96,485 C.
+
+<Part label="a">
+
+Calculate the moles of electrons that passed, and the mass of manganese that would have been deposited if every one of them had reduced a manganese ion.
+
+<Answer>
+
+The time in seconds is 2.50 h × 3,600 s/h = 9,000 s.
+
+$$
+\begin{aligned}
+q &= It \\
+&= (265)(9{,}000) \\
+&= 2.385 \times 10^{6}\ \text{C}
+\end{aligned}
+$$
+
+Divide by Faraday's constant:
+
+$$
+\frac{2.385 \times 10^{6}}{96{,}485} = \mathbf{24.72}\ \text{mol}
+$$
+
+That is 24.72 mol of electrons. If all of them made manganese, 2 for each atom, the moles of manganese would be
+
+$$
+\frac{24.72}{2} = 12.36\ \text{mol}
+$$
+
+and the mass would be
+
+$$
+\begin{aligned}
+&(12.36)(54.94) \\
+&= \mathbf{679}\ \text{g}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the percent of the charge that deposited manganese.
+
+<Answer>
+
+Run the chain backward from the mass the cathode gained. The moles of manganese:
+
+$$
+\frac{445}{54.94} = 8.100\ \text{mol}
+$$
+
+Each atom took 2 electrons:
+
+$$
+(8.100)(2) = 16.20\ \text{mol}
+$$
+
+So 16.20 mol of the 24.72 mol of electrons deposited manganese:
+
+$$
+\begin{aligned}
+&\frac{16.20}{24.72} \times 100 \\
+&= \mathbf{65.5}\ \text{percent}
+\end{aligned}
+$$
+
+The masses give the same share: 445 g is 65.5 percent of 679 g.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate the moles of electrons that did not deposit manganese, and the moles of hydrogen gas they made.
+
+<Answer>
+
+The electrons that did not deposit manganese:
+
+$$
+\begin{aligned}
+&24.72 - 16.20 \\
+&= \mathbf{8.52}\ \text{mol}
+\end{aligned}
+$$
+
+By the stem, these made hydrogen. The hydrogen half-reaction takes 2 electrons for each $\ce{H2}$, so there are half as many moles of hydrogen as of these electrons:
+
+$$
+\frac{8.52}{2} = \mathbf{4.26}\ \text{mol}
+$$
+
+The run made **4.26 mol** of hydrogen gas alongside 8.100 mol of manganese. The chain still holds for each half-reaction. What changed is that the electrons had to be shared out between the two before either chain could start.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the charge from the time in seconds, 2.385 × 10⁶ C, and 24.72 mol of electrons (24.7 mol, and a value worked with 96,500 C/mol, are accepted); 1 point for halving the moles of electrons and multiplying by 54.94 g/mol to reach 679 g (678 g to 680 g is accepted). A mass of 1,360 g, from leaving out the half-reaction, earns the first point only.</RubricLine>
+<RubricLine part="b" points={1}>1 point for 65.5 percent (65 to 66 percent is accepted), reached either from the electrons, 16.20 mol out of 24.72 mol, or from the masses, 445 g out of 679 g. Both routes earn the point. A percent that follows correctly from a wrong answer to (a) earns the point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for 8.52 mol of electrons, the electrons that passed minus the electrons that deposited manganese (8.5 mol is accepted); 1 point for halving that to reach 4.26 mol of hydrogen (4.2 to 4.3 mol is accepted). Giving 8.52 mol of hydrogen, from leaving out the hydrogen half-reaction, earns the first point only. Values that follow correctly from the student's own answers to (a) and (b) earn both points.</RubricLine>
+</Rubric>
+
+</Question>
