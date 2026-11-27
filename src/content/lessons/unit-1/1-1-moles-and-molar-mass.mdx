@@ -132,7 +132,15 @@ The moles cancel and grams are left.
 
 This way of working, carrying the units and canceling them, is called **dimensional analysis**. If the units of your answer are wrong, the setup is wrong.
 
-<Check numeric="0.0200" unit="mol">
+<Check
+  numeric="0.0200"
+  unit="mol"
+  slips={{
+    "0.0400": "That is what the molar mass of iodine atoms gives. The particles here are I₂ molecules.",
+    "1290": "Did you multiply by the molar mass? Going from grams to moles, the grams have to cancel.",
+    "645": "Two things to check: the particles are I₂ molecules, and the grams have to cancel.",
+  }}
+>
 For an experiment, a student weighs out 5.08 g of iodine crystals. Iodine is made of I₂ molecules. How many moles of I₂ molecules is that?
 
 <div slot="why">
@@ -173,7 +181,15 @@ Grams to particles takes two steps. Divide by the molar mass to get moles, then 
 
 </KeyIdea>
 
-<Check numeric="41.4" unit="g">
+<Check
+  numeric="41.4"
+  unit="g"
+  slips={{
+    "3.77": "The two molar masses look swapped. A sodium atom is heavier than a lithium atom, so the same number of atoms has more mass.",
+    "12.5": "The same number of atoms is not the same mass. Go through moles.",
+    "1.80": "That is the moles of lithium. The question asks for grams of sodium.",
+  }}
+>
 How many grams of sodium (Na) contain the same number of atoms as 12.5 g of lithium (Li)?
 
 <div slot="why">
@@ -246,7 +262,15 @@ Computer chips are built on thin disks of silicon called wafers. A wafer 300 mm 
 
 </Worked>
 
-<Check numeric="1.81e23" unit="atoms">
+<Check
+  numeric="1.81e23"
+  unit="atoms"
+  slips={{
+    "1.31e25": "That takes grams straight to atoms. Change grams to moles first.",
+    "0.300": "That is the moles of germanium. One more step takes moles to atoms.",
+    "9.53e26": "Check the molar mass step. The grams have to cancel, so the molar mass goes underneath.",
+  }}
+>
 The lens of a thermal camera is often made of germanium (Ge), because germanium lets infrared light through. One such lens, of pure germanium, has a mass of 21.8 g. How many germanium atoms are in it? (To type a power of ten such as 2.5 × 10⁻³, write 2.5e-3 or 2.5 x 10^-3.)
 
 <div slot="why">
@@ -275,7 +299,14 @@ Taking the grams straight to atoms would give $1.31 \times 10^{25}$. That skips 
 </div>
 </Check>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "Follow the units. This setup never changes grams to moles, so the grams do not cancel.",
+    2: "Follow the units. Here the molar mass is upside down, so the grams do not cancel.",
+    4: "Follow the units of the last factor. Moles should cancel there and leave molecules.",
+  }}
+>
 A bottle holds 40.0 g of acetone, C₃H₆O, a common laboratory solvent whose molar mass is 58.08 g/mol. Which setup gives the number of acetone molecules in the bottle?
 
 $$
@@ -383,7 +414,16 @@ A small propane cylinder, of the kind sold for portable grills, holds 465 g of p
 
 </Worked>
 
-<Check numeric="9.26e21" unit="atoms">
+<Check
+  numeric="9.26e21"
+  unit="atoms"
+  tolerance={0.5}
+  slips={{
+    "4.63e21": "That counts one oxygen atom in each formula unit. Look at the subscript outside the parentheses.",
+    "9.35e21": "Close, but check the molar mass. The 2 outside the parentheses doubles the H as well as the O.",
+    "7.69e-3": "That is the moles of copper(II) hydroxide. Go on to formula units, then to oxygen atoms.",
+  }}
+>
 A garden fungicide contains 0.750 g of copper(II) hydroxide, Cu(OH)₂. (The Roman numeral is part of the compound's name.) How many oxygen atoms are in that copper(II) hydroxide?
 
 <div slot="why">
@@ -427,7 +467,7 @@ $$
 
 Forgetting the subscript would leave $4.63 \times 10^{21}$, half as many.
 
-One slip lands within about 1 percent of the answer, close enough that this page marks it correct. Counting the H only once gives a molar mass of 96.56 g/mol and $9.35 \times 10^{21}$ O atoms. That molar mass is still wrong: the 2 doubles the H as well as the O.
+One slip lands within about 1 percent of the answer. Counting the H only once gives a molar mass of 96.56 g/mol and $9.35 \times 10^{21}$ O atoms. That molar mass is wrong: the 2 doubles the H as well as the O.
 
 </div>
 </Check>

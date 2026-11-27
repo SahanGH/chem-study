@@ -51,7 +51,14 @@ For a main-group element, successive ionization energies rise step by step until
 
 </KeyIdea>
 
-<Check numeric="5" unit="electrons">
+<Check
+  numeric="5"
+  unit="electrons"
+  slips={{
+    "6": "That is the number of the ionization energy where the jump lands. Count the electrons removed before it.",
+    "3": "The third increase is somewhat larger than its neighbors. Look for the rise that is many times the ones before it.",
+  }}
+>
 The first six ionization energies of a main-group element are, in kJ/mol: 1402; 2856; 4578; 7475; 9445; 53,266. How many valence electrons does an atom of this element have?
 
 <div slot="why">
@@ -116,7 +123,14 @@ The electron sources of some particle accelerators are coated with a compound of
 
 </Worked>
 
-<Check answer={4}>
+<Check
+  answer={4}
+  misses={{
+    1: "Subtract the first from the second for each element. Barium's rise is the smallest of the four.",
+    2: "Beryllium has the largest values of the three group 2 elements, but compare the rises: second minus first.",
+    3: "Subtract the first from the second for each element. Then ask where each second electron comes from.",
+  }}
+>
 Here are the first and second ionization energies of four elements, in kJ/mol.
 
 | Element | First | Second |
@@ -160,7 +174,14 @@ An ionic compound has no charge overall, so the positive and negative charges in
 
 Always finish by adding the charges up. If the total is not zero, the formula is wrong.
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Add up the charges. One In³⁺ and one O²⁻ leave 1+ over.",
+    3: "Add up the charges. Three In³⁺ and two O²⁻ leave 5+ over.",
+    4: "Add up the charges. One In³⁺ and three O²⁻ leave 3− over.",
+  }}
+>
 Using the usual charge of each element, what is the formula of a compound of indium and oxygen?
 
 - InO
@@ -195,7 +216,14 @@ It works for a column of metals too: magnesium, calcium, strontium and barium fo
 
 Elements in a column tend to do this. It is a strong pattern, not a law without exceptions.
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "Sodium is not in strontium's group. What charge does a sodium ion have?",
+    3: "Magnesium matches strontium, but sulfur is not in phosphorus's group. What charge does sulfur's ion have?",
+    4: "Neither element is in the group of strontium or of phosphorus. Find each ion's charge from its group.",
+  }}
+>
 The compound of strontium and phosphorus is Sr₃P₂. Which pair of elements would you expect to form a compound whose formula has the same pattern, three of the first to two of the second?
 
 - Barium and phosphorus

@@ -32,7 +32,14 @@ Read the three boxes in turn. The first holds single atoms, all alike. That is o
 
 Sorting by kinds of atom would call the second box a mixture, and it is not.
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "Sort the sample into piles of like units. Dry air needs at least three piles.",
+    2: "The amounts of copper and tin differ from one casting to the next. A pure substance has one fixed composition.",
+    4: "The ions are not joined to the water in a fixed ratio, and one sea is saltier than another.",
+  }}
+>
 Which of these samples is a pure substance?
 
 - Dry air: nitrogen molecules, oxygen molecules and argon atoms
@@ -146,7 +153,18 @@ A jar labeled zinc oxide should analyze at 80.34 percent zinc. If it comes out a
 
 And if the impurity holds none of that element, the element's mass tells you how much of the sample is the compound, just as in the worked example.
 
-<Check numeric="90.1" unit="%">
+<Check
+  numeric="90.1"
+  unit="%"
+  slips={{
+    "54.0": "That is the percent of titanium in the ore. The question asks for the percent that is TiO₂.",
+    "135": "No sample can be more than 100 percent of anything. Use titanium's share of TiO₂, not oxygen's.",
+    "0.901": "That is the fraction. Multiply by 100 for a percent.",
+    "72.0": "Check the molar mass of TiO₂. It has two oxygen atoms.",
+    "9.9": "That is the percent of the ore that is not TiO₂.",
+    "94.1": "A gap in percent titanium is not the percent of impurity. Find the mass of TiO₂ from the mass of titanium.",
+  }}
+>
 Rutile is an ore of titanium, mined for white paint pigment and for the metal. It is mostly titanium dioxide, TiO₂. A 5.00 g sample of a rutile ore is found to contain 2.70 g of titanium, and none of the ore's impurities contain titanium. What percent of the ore, by mass, is TiO₂? (Type the number only, without the % sign.)
 
 <div slot="why">
@@ -188,11 +206,18 @@ If your answer was marked wrong, it may be one of these common slips:
 </div>
 </Check>
 
-<Check answer={2}>
+<Check
+  answer={1}
+  misses={{
+    2: "Pyrite contains iron too. Follow an element that the chalcopyrite alone contains.",
+    3: "A mass percent is one mass divided by another. Which mass does this leave out?",
+    4: "Pyrite contains sulfur too. Follow an element that the chalcopyrite alone contains.",
+  }}
+>
 Chalcopyrite, CuFeS₂, is the main ore mineral of copper. A rock contains chalcopyrite along with pyrite, FeS₂, and minerals that hold no copper, iron or sulfur. Which measurements are enough to find the mass percent of chalcopyrite in the rock?
 
-- The mass of the rock sample and the mass of iron in it
 - The mass of the rock sample and the mass of copper in it
+- The mass of the rock sample and the mass of iron in it
 - The mass of copper in the sample, and nothing else
 - The mass of the rock sample and the mass of sulfur in it
 
@@ -213,7 +238,14 @@ Sometimes both substances in a mixture contain the element you measured. Then th
 
 It is a weighted average, like the average atomic mass of topic 1.2, with the two substances in place of the isotopes and their shares of the mass in place of the abundances. So one measured percent, set beside two values worked out from formulas, is enough to say roughly how much of each substance a two-part mixture holds.
 
-<Check answer={4}>
+<Check
+  answer={4}
+  misses={{
+    1: "Pure CaO is 71.47 percent calcium. The sample's 67.1 percent does not match it.",
+    2: "Pure Ca(OH)₂ is 54.09 percent calcium. The sample's 67.1 percent does not match it.",
+    3: "Is 67.1 nearer 71.47 or 54.09? The mixture holds more of the compound whose value it is nearer.",
+  }}
+>
 Quicklime, CaO, is 71.47 percent calcium by mass. Left open to damp air, it takes up water and turns, bit by bit, into Ca(OH)₂, which is 54.09 percent calcium. A sample from an old bag, which holds nothing but these two compounds, is 67.1 percent calcium. What does that show?
 
 - The bag is still pure CaO

@@ -61,7 +61,7 @@ Branch `topic/us-english-and-unit-1-feedback-design`, from `main`. This plan, th
 
 In pull request A (Group A). Nothing to do here.
 
-- [ ] Before Task 2, read `CLAUDE.md` at the top of the repository, and confirm that its paragraph "The check" names the two files Task 2 creates.
+- [x] Before Task 2, read `CLAUDE.md` at the top of the repository, and confirm that its paragraph "The check" names the two files Task 2 creates.
 
 ### Task 2: The spelling check
 
@@ -69,7 +69,7 @@ In pull request A (Group A). Nothing to do here.
 - Create: `scripts/us-spelling.mjs`
 - Create: `tests/unit/us-spelling.test.ts`
 
-- [ ] **Step 1: Write the failing test.**
+- [x] **Step 1: Write the failing test.**
 
   ```ts
   import { fileURLToPath } from 'node:url';
@@ -118,9 +118,9 @@ In pull request A (Group A). Nothing to do here.
   });
   ```
 
-- [ ] **Step 2: Run it and watch it fail**: `npx vitest run tests/unit/us-spelling.test.ts`. Expected: the import fails, because the script does not exist.
+- [x] **Step 2: Run it and watch it fail**: `npx vitest run tests/unit/us-spelling.test.ts`. Expected: the import fails, because the script does not exist.
 
-- [ ] **Step 3: Write the script.**
+- [x] **Step 3: Write the script.**
 
   ```js
   // Finds British spellings and usage in the site's sources. The rule is in
@@ -265,15 +265,22 @@ In pull request A (Group A). Nothing to do here.
   if (entryPoint && fs.realpathSync(entryPoint) === fs.realpathSync(fileURLToPath(import.meta.url))) main();
   ```
 
-- [ ] **Step 4: Run the test and the script.** `npx vitest run tests/unit/us-spelling.test.ts` passes. `node scripts/us-spelling.mjs` prints `us-spelling: 344 files, 0 British spelling(s)`, or a larger count of files if lessons were added since. If it finds a word, fix the word in its file. Add a word to `ALLOWED` only when the American spelling would be wrong there, and say so in the pull request.
+- [x] **Step 4: Run the test and the script.** `npx vitest run tests/unit/us-spelling.test.ts` passes. `node scripts/us-spelling.mjs` prints `us-spelling: 344 files, 0 British spelling(s)`, or a larger count of files if lessons were added since. If it finds a word, fix the word in its file. Add a word to `ALLOWED` only when the American spelling would be wrong there, and say so in the pull request.
 
-- [ ] **Step 5: See it catch one.** Add "colour" to a sentence of any lesson, run the test, see it name the file and line, and take the word out again.
+- [x] **Step 5: See it catch one.** Add "colour" to a sentence of any lesson, run the test, see it name the file and line, and take the word out again.
 
-- [ ] **Step 6: `typescript-reviewer` and `code-reviewer` on the diff. Commit.** `test: check the site's sources for British spellings`
+- [x] **Step 6: `typescript-reviewer` and `code-reviewer` on the diff. Commit.** `test: check the site's sources for British spellings`
 
-- [ ] **Step 7: Open pull request B**, stacked on A. Its text says what the check reads and what it does not (`docs/superpowers/`, `CLAUDE.md`), and that "analyses" and "burnt" are left off the list on purpose.
+- [x] **Step 7: Open pull request B**, stacked on A. Its text says what the check reads and what it does not (`docs/superpowers/`, `CLAUDE.md`), and that "analyses" and "burnt" are left off the list on purpose.
 
 ---
+
+**As carried out (Group B), 2026-11-26.**
+
+- **The named reviewers** (`typescript-reviewer`, `code-reviewer`) were not available in the Claude Code session that carried the plan out. One fresh general-purpose agent did both reviews, here and in Groups C and D.
+- **The review found four gaps in the script, closed in a second commit with a test each:** "per cent" and "full stop" split by a line break or a double space; plurals and "-er" forms (offences, licences, judgements, moulds, travellers, organiser, analyser); `.js` and `.json` files, now read (two test fixtures today, both clean); a file named on the command line that is not there, which now stops with an error instead of checking nothing. The script reads 346 files, not 344.
+- **Left as the plan has it:** "hydrolyses", "electrolyses" and "catalyses" are flagged, though they are also plurals of the "-lysis" nouns; the British verb is the likelier slip.
+- Pull request B is #69.
 
 ## Group C: what a Check can say (pull request C)
 
@@ -285,7 +292,7 @@ No lesson changes in this group, so no page changes.
 - Modify: `src/lib/check.ts`
 - Modify: `tests/unit/check.test.ts`
 
-- [ ] **Step 1: Write the failing tests.** In `tests/unit/check.test.ts`, extend the import to
+- [x] **Step 1: Write the failing tests.** In `tests/unit/check.test.ts`, extend the import to
 
 ```ts
 import {
@@ -449,9 +456,9 @@ import {
   });
   ```
 
-- [ ] **Step 2: Run them and watch them fail**: `npx vitest run tests/unit/check.test.ts`. Expected: the new names are not exported.
+- [x] **Step 2: Run them and watch them fail**: `npx vitest run tests/unit/check.test.ts`. Expected: the new names are not exported.
 
-- [ ] **Step 3: Give `gradeNumeric` its third argument.** Replace its first four lines:
+- [x] **Step 3: Give `gradeNumeric` its third argument.** Replace its first four lines:
 
 ```ts
 /**
@@ -466,7 +473,7 @@ export function gradeNumeric(text: string, answer: number, tolerance: number = T
 
   The rest of the function stays. Change the comment on `TOLERANCE` to "Fraction of the expected value a numeric answer may differ by, unless the Check sets its own."
 
-- [ ] **Step 4: Add the new functions** at the end of `src/lib/check.ts`:
+- [x] **Step 4: Add the new functions** at the end of `src/lib/check.ts`:
 
   ```ts
   /** How near a typed answer must be to a slip's value, as a fraction of that value, to be given its message. */
@@ -617,9 +624,9 @@ export function gradeNumeric(text: string, answer: number, tolerance: number = T
   }
   ```
 
-- [ ] **Step 5: Run the tests, see them pass.** Every older test in the file passes unchanged: `gradeNumeric` with two arguments behaves as before.
+- [x] **Step 5: Run the tests, see them pass.** Every older test in the file passes unchanged: `gradeNumeric` with two arguments behaves as before.
 
-- [ ] **Step 6: Commit.** `feat(check): grade with a Check's own tolerance and read its feedback`
+- [x] **Step 6: Commit.** `feat(check): grade with a Check's own tolerance and read its feedback`
 
 ### Task 4: `Check.astro` takes and shows the messages
 
@@ -628,7 +635,7 @@ export function gradeNumeric(text: string, answer: number, tolerance: number = T
 
 There is no unit test for an Astro component here; the build check (Task 5) and the browser tests (Task 8) cover it. In this task the proof is the build: every existing lesson still builds, and a stand-in shows the attributes arriving.
 
-- [ ] **Step 1: The frontmatter.** Replace the top of the file with:
+- [x] **Step 1: The frontmatter.** Replace the top of the file with:
 
 ```astro
 ---
@@ -664,7 +671,7 @@ const slipMessages = readSlips(slips, numeric, allowed);
 
   The markup inside `<cs-check>` does not change. An attribute whose value is `undefined` is left off the page, as `data-numeric` is today on a Check with options.
 
-- [ ] **Step 2: The page's script.** Extend its import:
+- [x] **Step 2: The page's script.** Extend its import:
 
 ```ts
 import { gradeChoice, gradeNumeric, messagesFrom, nearestSlip, parseNumber, slipsFrom } from '../../lib/check';
@@ -710,11 +717,11 @@ if (grade === 'invalid') {
 
   The `else` branch stays as it is.
 
-- [ ] **Step 3: Build.** `npm run build` passes with no lesson changed: no page carries the new attributes yet.
+- [x] **Step 3: Build.** `npm run build` passes with no lesson changed: no page carries the new attributes yet.
 
-- [ ] **Step 4: See the attributes arrive, and the build refuse a bad one.** In the working tree only, give the first Check of lesson 1.5 the `misses` shown in the design's section 4.1, build, and find `data-misses` on that page in `dist/`. Then change one message so it starts "Not quite", build, and see the build stop with the message from `readMisses`. Restore the lesson: `git checkout src/content/lessons`.
+- [x] **Step 4: See the attributes arrive, and the build refuse a bad one.** In the working tree only, give the first Check of lesson 1.5 the `misses` shown in the design's section 4.1, build, and find `data-misses` on that page in `dist/`. Then change one message so it starts "Not quite", build, and see the build stop with the message from `readMisses`. Restore the lesson: `git checkout src/content/lessons`.
 
-- [ ] **Step 5: `typescript-reviewer` and `code-reviewer`. Commit.** `feat(check): show a message for a wrong option or a known slip`
+- [x] **Step 5: `typescript-reviewer` and `code-reviewer`. Commit.** `feat(check): show a message for a wrong option or a known slip`
 
 ### Task 5: The build check
 
@@ -722,7 +729,7 @@ if (grade === 'invalid') {
 - Modify: `scripts/check-dist.mjs`
 - Modify: `tests/unit/check-dist.test.ts`
 
-- [ ] **Step 1: Write the failing tests.** In `tests/unit/check-dist.test.ts`, import `FEEDBACK_UNITS` beside `checkPage` and add, inside `describe('checkPage', …)`:
+- [x] **Step 1: Write the failing tests.** In `tests/unit/check-dist.test.ts`, import `FEEDBACK_UNITS` beside `checkPage` and add, inside `describe('checkPage', …)`:
 
 ```ts
   describe('feedback on a check', () => {
@@ -778,9 +785,9 @@ if (grade === 'invalid') {
 
   The three "on the list" tests do nothing while the list is empty. That is deliberate and lasts one pull request: Task 8 puts Unit 1 on the list, and from then on they run. Do not leave an early `return` in a test anywhere else.
 
-- [ ] **Step 2: Run them and watch them fail.** Expected: `FEEDBACK_UNITS` is not exported.
+- [x] **Step 2: Run them and watch them fail.** Expected: `FEEDBACK_UNITS` is not exported.
 
-- [ ] **Step 3: Write the check.** In `scripts/check-dist.mjs`, after `REQUIRED_PARTS`:
+- [x] **Step 3: Write the check.** In `scripts/check-dist.mjs`, after `REQUIRED_PARTS`:
 
 ```js
 /**
@@ -835,13 +842,21 @@ function feedbackKeys(json) {
 
   If the first test of Step 1 fails because `getAttribute` returns the text with `&quot;` still in it, decode in `feedbackKeys` (`json.replaceAll('&quot;', '"').replaceAll('&amp;', '&')`, the ampersand last) and say in a comment why.
 
-- [ ] **Step 4: Run the tests, then the whole build.** `npx vitest run tests/unit/check-dist.test.ts`, then `npm run build`: the site builds, and `check-dist` reports the same number of pages as before with no problems.
+- [x] **Step 4: Run the tests, then the whole build.** `npx vitest run tests/unit/check-dist.test.ts`, then `npm run build`: the site builds, and `check-dist` reports the same number of pages as before with no problems.
 
-- [ ] **Step 5: Reviews. Commit.** `feat(check-dist): check a Check's feedback against its options`
+- [x] **Step 5: Reviews. Commit.** `feat(check-dist): check a Check's feedback against its options`
 
-- [ ] **Step 6: Open pull request C**, stacked on B. Its text says that no page changes.
+- [x] **Step 6: Open pull request C**, stacked on B. Its text says that no page changes.
 
 ---
+
+**As carried out (Group C), 2026-11-26.**
+
+- **Fact 11 is settled:** `node-html-parser`'s `getAttribute` hands `&quot;` back decoded. `feedbackKeys` needs no decoding.
+- **The review found one problem that mattered, fixed with tests:** with a 0.5 percent tolerance, a slip's 1 percent window can reach past the answer. In lesson 1.2, 65.72 is nearer the answer, 65.38, than the slip 66.18, and was told it averaged the peaks as equals. `nearestSlip` takes the answer as an optional third argument and matches a slip only when the typed value is nearer the slip; `Check.astro` passes it.
+- **Two smaller fixes from the same review:** an option key must be written "1", "2", … (`{ 1: "…", "01": "…" }` kept one message silently); a tolerance on an answer of zero is refused, since that answer is graded by a fixed window.
+- The browser tests that click lesson 5.2's Checks (lesson, accessibility and content-security specs) pass unchanged.
+- Pull request C is #70.
 
 ## Group D: Unit 1's messages (pull request D)
 
@@ -849,7 +864,7 @@ function feedbackKeys(json) {
 
 No file of the site changes in this task.
 
-- [ ] **Step 1: One fact-checker on Fable 5.2, with a fresh context.** It is given the eight lessons of `src/content/lessons/unit-1/`, the data file, and section 4.4 of the design. For each of the 36 Checks, in this order:
+- [x] **Step 1: One fact-checker on Fable 5.2, with a fresh context.** It is given the eight lessons of `src/content/lessons/unit-1/`, the data file, and section 4.4 of the design. For each of the 36 Checks, in this order:
   1. Solve the Check from its question alone.
   2. For a Check with options: for each wrong option, write down the mistake that leads to it, before reading the message.
   3. For a typed number: work out each slip's value from the mistake named in its `from`, with the exam table's masses (`src/data/elements.ts`) and unrounded intermediates. Report any value that differs in its last digit.
@@ -857,18 +872,18 @@ No file of the site changes in this task.
   5. For the two reordered Checks: does the explanation still read correctly with the options in the new order?
   6. For the two tolerances: compute the range accepted, and name any honest way of rounding that falls outside it.
 
-- [ ] **Step 2: Fix the data file** (a fixer on Sonnet applies the decided list; a message it believes is right is left and reported, with the reason). Each message must still pass `feedbackProblem`.
+- [x] **Step 2: Fix the data file** (a fixer on Sonnet applies the decided list; a message it believes is right is left and reported, with the reason). Each message must still pass `feedbackProblem`.
 
-- [ ] **Step 3: A second check** of every message that changed, by a fresh agent.
+- [x] **Step 3: A second check** of every message that changed, by a fresh agent.
 
-- [ ] **Step 4: Commit the data file** if it changed: `docs: fact-check Unit 1's check feedback`.
+- [x] **Step 4: Commit the data file** if it changed: `docs: fact-check Unit 1's check feedback`.
 
 ### Task 7: Write the messages into the lessons
 
 **Files:**
 - Modify: the eight lessons of `src/content/lessons/unit-1/`
 
-- [ ] **Step 1: Save the apply tool** in the scratch folder as `scratchpad/unit1-feedback/apply-check-feedback.mjs`. It is not part of the site.
+- [x] **Step 1: Save the apply tool** in the scratch folder as `scratchpad/unit1-feedback/apply-check-feedback.mjs`. It is not part of the site.
 
   ```js
   // Writes the feedback in a data file into the lessons it names, and checks it.
@@ -971,7 +986,7 @@ No file of the site changes in this task.
   if (verifyOnly && changed > 0) process.exit(1);
   ```
 
-- [ ] **Step 2: Compare first.** From the top of the repository:
+- [x] **Step 2: Compare first.** From the top of the repository:
 
 ```bash
 node scratchpad/unit1-feedback/apply-check-feedback.mjs docs/superpowers/plans/2026-11-26-chemstudy-unit-1-check-feedback.json . --verify
@@ -979,13 +994,13 @@ node scratchpad/unit1-feedback/apply-check-feedback.mjs docs/superpowers/plans/2
 
   Expected: all eight lessons "differ", and the command exits with 1. If it stops with an error instead, a lesson changed after 2026-11-26: read the error, look at the lesson, and bring the data file in line before going on.
 
-- [ ] **Step 3: Apply**, with the same command without `--verify`. Expected: `applied: 36 Checks in 8 lessons, 8 file(s) changed`. Run it with `--verify` again: 0 files differ.
+- [x] **Step 3: Apply**, with the same command without `--verify`. Expected: `applied: 36 Checks in 8 lessons, 8 file(s) changed`. Run it with `--verify` again: 0 files differ.
 
-- [ ] **Step 4: Read the diff.** Every `<Check` tag of Unit 1 is now several lines long. Two Checks have their options in a new order and `answer={1}`. Lesson 1.1's last Check has `tolerance={0.5}` and one changed sentence; lesson 1.2's third has `tolerance={0.5}`. Nothing else changed: no question, no option's wording, no explanation but that sentence.
+- [x] **Step 4: Read the diff.** Every `<Check` tag of Unit 1 is now several lines long. Two Checks have their options in a new order and `answer={1}`. Lesson 1.1's last Check has `tolerance={0.5}` and one changed sentence; lesson 1.2's third has `tolerance={0.5}`. Nothing else changed: no question, no option's wording, no explanation but that sentence.
 
-- [ ] **Step 5: Build.** `npm run build`. If the build stops on a message, the message breaks a rule of section 4.4: fix it in the data file, run the tool again.
+- [x] **Step 5: Build.** `npm run build`. If the build stops on a message, the message breaks a rule of section 4.4: fix it in the data file, run the tool again.
 
-- [ ] **Step 6: Commit.** `feat(unit-1): say what went wrong on each wrong answer`
+- [x] **Step 6: Commit.** `feat(unit-1): say what went wrong on each wrong answer`
 
 ### Task 8: Put Unit 1 on the lists, and test in the browser
 
@@ -996,7 +1011,7 @@ node scratchpad/unit1-feedback/apply-check-feedback.mjs docs/superpowers/plans/2
 
 Do Steps 1 and 2 **before** Task 7's Step 3 if the tasks are run by one worker in order: the two tests then fail first, for the right reason, and Task 7 makes them pass.
 
-- [ ] **Step 1: The balance test.** Create `tests/unit/check-balance.test.ts`:
+- [x] **Step 1: The balance test.** Create `tests/unit/check-balance.test.ts`:
 
 ```ts
 import fs from 'node:fs';
@@ -1041,9 +1056,9 @@ describe.each(BALANCED_UNITS)('where the answers of unit %i sit', (unit) => {
 
   Before Task 7 is applied it fails for option 1 (4 of 28, 14 percent). After, the shares are 21, 25, 29 and 25 percent.
 
-- [ ] **Step 2: The list.** In `scripts/check-dist.mjs`: `export const FEEDBACK_UNITS = new Set(['1']);`. Before Task 7 is applied the build then fails with 84 "says nothing for wrong option" lines and 8 "names no slip" lines. After, it passes. The three tests of Task 5 that waited for a unit on the list now run.
+- [x] **Step 2: The list.** In `scripts/check-dist.mjs`: `export const FEEDBACK_UNITS = new Set(['1']);`. Before Task 7 is applied the build then fails with 84 "says nothing for wrong option" lines and 8 "names no slip" lines. After, it passes. The three tests of Task 5 that waited for a unit on the list now run.
 
-- [ ] **Step 3: Browser tests.** In `tests/e2e/lesson.spec.ts`:
+- [x] **Step 3: Browser tests.** In `tests/e2e/lesson.spec.ts`:
 
 ```ts
 test.describe('feedback on a wrong answer', () => {
@@ -1144,23 +1159,40 @@ test.describe('feedback on a wrong answer', () => {
 
   In `tests/e2e/a11y.spec.ts`, beside the test that runs axe on a Check after a wrong and a right answer in lesson 5.2, add the same test on the second Check of lesson 1.3, so axe sees a Check with a message showing.
 
-- [ ] **Step 4: Run everything.** `npm test`, `npm run build`, `npm run test:e2e` (under the lock if another folder is building). All pass, the old tests in lesson 5.2 included.
+- [x] **Step 4: Run everything.** `npm test`, `npm run build`, `npm run test:e2e` (under the lock if another folder is building). All pass, the old tests in lesson 5.2 included.
 
-- [ ] **Step 5: Reviews. Commit.** `test(unit-1): cover check feedback, tolerances and answer positions`
+- [x] **Step 5: Reviews. Commit.** `test(unit-1): cover check feedback, tolerances and answer positions`
 
 ### Task 9: Look, and check a second time
 
-- [ ] **Step 1: Look at each of the eight lessons** at 412, 390, 360 and 320 px with one wrong option clicked in each Check, and one slip typed in each typed-number Check. The message wraps inside the Check's card, nothing is clipped, and the "Show answer" line stays where it was.
+- [x] **Step 1: Look at each of the eight lessons** at 412, 390, 360 and 320 px with one wrong option clicked in each Check, and one slip typed in each typed-number Check. The message wraps inside the Check's card, nothing is clipped, and the "Show answer" line stays where it was.
 
-- [ ] **Step 2: A second check on Fable 5.2, with a fresh context, in the browser.** For every Check of Unit 1: click each wrong option and read the message beside the question; type each slip and one number near no slip; then the answer. It reports any message that does not fit what is on the page, any slip that is marked correct, and any right answer that is refused (try the answer rounded to one figure fewer, and with each intermediate rounded to three figures).
+- [x] **Step 2: A second check on Fable 5.2, with a fresh context, in the browser.** For every Check of Unit 1: click each wrong option and read the message beside the question; type each slip and one number near no slip; then the answer. It reports any message that does not fit what is on the page, any slip that is marked correct, and any right answer that is refused (try the answer rounded to one figure fewer, and with each intermediate rounded to three figures).
 
-- [ ] **Step 3: Fix** in the data file, apply with the tool, build, test; a second look at what changed.
+- [x] **Step 3: Fix** in the data file, apply with the tool, build, test; a second look at what changed.
 
 ### Task 10: Close out
 
-- [ ] Add an "As built" note at the end of the design, and "As carried out" notes in this plan under the tasks that went differently.
-- [ ] In the "As built" note, say what the unit that comes next should do differently, and give the counts section 3 of the design gives, for Unit 1, after the change.
-- [ ] Open pull request D, stacked on C. Its text lists, for the teacher: the two reordered Checks, the two tolerances, the one changed sentence, every message that changed in the fact-checks and why, and anything in the 116 messages the checkers were unsure of.
+- [x] Add an "As built" note at the end of the design, and "As carried out" notes in this plan under the tasks that went differently.
+- [x] In the "As built" note, say what the unit that comes next should do differently, and give the counts section 3 of the design gives, for Unit 1, after the change.
+- [x] Open pull request D, stacked on C. Its text lists, for the teacher: the two reordered Checks, the two tolerances, the one changed sentence, every message that changed in the fact-checks and why, and anything in the 116 messages the checkers were unsure of.
+
+**As carried out (Group D), 2026-11-26.**
+
+- **Task 6.** The fact-checker (Fable 5.2) agreed with all 36 answers and every slip value to its last digit, and found the two reorders sound. It found 3 errors and 7 points of wording, all accepted. The session applied them to the data file itself, by a script that matched each old message exactly, rather than by a fixer on Sonnet. A second checker (Fable 5.2) passed ten of the twelve new messages and reworded two; both taken. **Fourteen messages differ from the tables under "The messages" below**, which stay as the picture of 2026-11-26; the data file is the master copy:
+  - Lesson 1.2, Check 1, "mixture of two elements": "two peaks this close are isotopes" is not a rule the lesson states, and not true in general.
+  - Lesson 1.2, Check 3, slips 64.95, 66.93 and 63.93: worded as a likelihood. 64.95 also catches a student who typed 65, and now says so; it asks for two decimal places, the lesson's own term.
+  - Lesson 1.3, Check 2, SiN and Si₂N₃: no longer hand over the ratios 1.33 and 2.67.
+  - Lesson 1.4, Check 3, "copper alone": no longer names the missing mass.
+  - Lesson 1.5, Check 5, options 2 and 3: each confirmed half of the answer ("Right shell"; "A 2p electron is closer").
+  - Lesson 1.7, Check 3, "always smaller": the figure shows Rb⁺ beside Br⁻, not F⁻. The message now gives the explanation's numbers, 152 and 133 pm, and names the question's ions.
+  - Lesson 1.8, Check 3, In₃O₂: "the numbers are right, but on the wrong ions" gave the answer. It now adds up the charges, as the other two do.
+  - Lesson 1.8, Check 4, Mg and S: the lesson does not say "sulfide ion".
+- **Task 7** ran after the fact-check: 309 lines added and 39 removed, as before, and a second run changed nothing.
+- **Task 8.** The balance test and Unit 1 on `FEEDBACK_UNITS` were committed first and failed as the plan says (option 1 at 14 percent; 92 problems). The browser tests follow the data file: the SiN and 64.95 messages are the new ones; the 320 px test uses the longest message, which is now lesson 1.3 Check 2's SiN (139 characters), not lesson 1.7's; lesson 1.2's test also types 65.72 and expects the general line. All 1,788 browser tests pass.
+- **Running the browser tests in a Claude Code cloud session** needs two things this plan did not say. Astro 7's `astro preview` starts in the background when it detects an AI agent (the `AI_AGENT` and `CLAUDECODE` variables), so Playwright's web server "exits early": unset them for the run. And the container's Chromium may not be the build the project's Playwright expects: point `launchOptions.executablePath` at it in a config kept outside the repository.
+- **Task 9.** A script looked at every Unit 1 Check at 412, 390, 360 and 320 px with a wrong answer showing: each message is the right one, stays inside its card, "Show answer" stays where it was, and no page scrolls sideways. The browser check (Fable 5.2) found no defect in the 36 Checks. What it was unsure of is listed in pull request D for the teacher; nothing was changed for it.
+- **Answers now sit at options 1 to 4 in 6, 7, 8 and 7** of the 28 Checks with options; 8 Checks take a typed number.
 
 ## What this plan delivers against the design
 

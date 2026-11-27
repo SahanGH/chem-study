@@ -62,7 +62,14 @@ Each peak is one subshell. Its position says how much energy it takes to remove 
 
 </KeyIdea>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Height counts electrons. It says nothing about how strongly they are held.",
+    3: "Position gives the energy, not height. Which peak is at the lower binding energy?",
+    4: "One element gives a peak for each of its occupied subshells, so two peaks do not mean two elements.",
+  }}
+>
 Part of the photoelectron spectrum of oxygen shows a peak at 3.12 MJ/mol and, beside it, a peak at 1.31 MJ/mol that is twice as tall. What do these two peaks tell you?
 
 - The electrons at 1.31 MJ/mol are held twice as strongly, because their peak is twice as tall.
@@ -124,7 +131,14 @@ The figure above shows the photoelectron spectrum of an element. Its vertical ax
 
 </Worked>
 
-<Check answer={4}>
+<Check
+  answer={4}
+  misses={{
+    1: "Three peaks are three subshells, not three electrons. Use the heights to count the electrons in each.",
+    2: "Phosphorus has five occupied subshells, so its spectrum has five peaks. This one has three.",
+    3: "Each peak is a subshell, not a shell. Use the heights to count the electrons in each.",
+  }}
+>
 A photoelectron spectrum is drawn with binding energy increasing from left to right. Reading across, its three peaks are at 1.40, 2.45 and 39.6 MJ/mol. The peaks at 2.45 and 39.6 MJ/mol are equally tall, and the peak at 1.40 MJ/mol is one and a half times as tall as they are. Which element is it?
 
 - Lithium
@@ -153,7 +167,14 @@ Silicon, 1s² 2s² 2p⁶ 3s² 3p², must give five peaks standing for 2, 2, 6, 2
 
 What the configuration alone cannot tell you is the number on the axis under each peak. Those come from tables of published values. Coulomb's law says which way they move from one atom to the next, and that is the next section.
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "Where does potassium's nineteenth electron go? Think about its distance from the nucleus and its shielding.",
+    3: "A p subshell holds 6 electrons at most. The nineteenth electron has to start a new subshell.",
+    4: "The five peaks do shift, but this leaves out potassium's nineteenth electron.",
+  }}
+>
 The spectrum of argon has five peaks. From the highest binding energy to the lowest they stand for 2, 2, 6, 2 and 6 electrons. Potassium has one more proton and one more electron than argon. How does potassium's spectrum compare?
 
 - It has six peaks, and the new one, for 1 electron, has the lowest binding energy of all.
@@ -215,7 +236,14 @@ The 3p peak is at 1.52 MJ/mol in argon and at 2.38 MJ/mol in potassium. Potassiu
 
 </Worked>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "Height counts electrons. To see how tightly they are held, compare the two positions, 0.59 and 0.42 MJ/mol.",
+    2: "Compare the positions: 0.59 MJ/mol is more than 0.42 MJ/mol. Does that mean easier or harder to remove?",
+    4: "This has the two readings swapped. Which one is a count, and which one is an energy?",
+  }}
+>
 With both spectra drawn to the same scale, the peak at the lowest binding energy is at 0.42 MJ/mol in the spectrum of potassium and at 0.59 MJ/mol in the spectrum of calcium, the next element, where it is twice as tall. What do the height and the position of calcium's peak show, and why?
 
 - Twice as many 4s electrons, each held twice as tightly, because the peak is twice as tall.
@@ -260,7 +288,14 @@ The number of peaks, their heights and the order of their positions are what the
 
 An ion has a photoelectron spectrum of its own, and it is read the same way: write the ion's configuration (topic 1.5), and each subshell gives a peak. A fluoride ion, F⁻, is 1s² 2s² 2p⁶: one more 2p electron than a fluorine atom, so its last peak stands for 6 electrons where the atom's stands for 5.
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "An atom loses electrons from its highest shell first. Which peak do those electrons make?",
+    3: "The two electrons come from one subshell, the one in the highest shell. Which is that?",
+    4: "Two electrons are gone, so the heights cannot all stay the same. Which subshell did they leave?",
+  }}
+>
 The worked example's element, calcium, forms the ion Ca²⁺. How does the photoelectron spectrum of Ca²⁺ differ from the spectrum of a calcium atom?
 
 - The peak at the highest binding energy is gone, because the electrons nearest the nucleus are removed first.

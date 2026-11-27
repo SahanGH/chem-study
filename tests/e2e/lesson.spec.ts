@@ -357,3 +357,105 @@ test('the lesson fits a phone screen without sideways scrolling', async ({ page 
   );
   expect(overflow).toBeLessThanOrEqual(0);
 });
+
+test.describe('feedback on a wrong answer', () => {
+  const UNIT_1 = '/unit-1-atomic-structure/';
+
+  test('a wrong option says what went wrong, and the right one still explains itself', async ({ page }) => {
+    await page.goto(`${UNIT_1}1-3-elemental-composition-of-pure-substances/`);
+    const check = page.locator('cs-check').nth(1);
+    const feedback = check.locator('.check-feedback');
+    const options = check.locator('.check-option');
+
+    await options.nth(1).click();
+    await expect(feedback).toHaveText(
+      'Not quite. Check the mole ratio before you round. Is it within a few hundredths of a whole number? If not, multiply both numbers until both are whole.',
+    );
+    await expect(check.locator('.check-why')).not.toHaveAttribute('open', '');
+
+    await options.nth(3).click();
+    await expect(feedback).toHaveText(
+      'Not quite. That reads the masses, 3.00 g to 2.00 g, as a ratio of atoms. Compare moles, not grams.',
+    );
+
+    await options.nth(0).click();
+    await expect(feedback).toHaveText('Correct.');
+    await expect(check.locator('.check-why')).toHaveAttribute('open', '');
+  });
+
+  test('a typed number that a known slip gives gets the message of that slip', async ({ page }) => {
+    await page.goto(`${UNIT_1}1-3-elemental-composition-of-pure-substances/`);
+    const check = page.locator('cs-check').first();
+    const input = check.locator('input');
+    const feedback = check.locator('.check-feedback');
+
+    await input.fill('9.39');
+    await input.press('Enter');
+    await expect(feedback).toHaveText('Not quite. The formula has two lithium atoms. Count both.');
+
+    // Within 1 percent of the slip, so the same message.
+    await input.fill('9.4');
+    await input.press('Enter');
+    await expect(feedback).toHaveText('Not quite. The formula has two lithium atoms. Count both.');
+
+    // Near no slip.
+    await input.fill('12');
+    await input.press('Enter');
+    await expect(feedback).toHaveText('Not quite. Check your setup and try again.');
+
+    await input.fill('18.78');
+    await input.press('Enter');
+    await expect(feedback).toHaveText('Correct.');
+  });
+
+  test('a slip that 2 percent would have accepted is refused, and a rounded answer is not', async ({ page }) => {
+    await page.goto(`${UNIT_1}1-1-moles-and-molar-mass/`);
+    const check = page.locator('cs-check').nth(4);
+    const input = check.locator('input');
+    const feedback = check.locator('.check-feedback');
+
+    await input.fill('9.35e21');
+    await input.press('Enter');
+    await expect(feedback).toHaveText(
+      'Not quite. Close, but check the molar mass. The 2 outside the parentheses doubles the H as well as the O.',
+    );
+
+    await input.fill('9.3e21');
+    await input.press('Enter');
+    await expect(feedback).toHaveText('Correct.');
+  });
+
+  test('leaving out a peak is refused in lesson 1.2, and whole-number masses are still accepted', async ({ page }) => {
+    await page.goto(`${UNIT_1}1-2-mass-spectra-of-elements/`);
+    const check = page.locator('cs-check').nth(2);
+    const input = check.locator('input');
+    const feedback = check.locator('.check-feedback');
+
+    await input.fill('64.95');
+    await input.press('Enter');
+    await expect(feedback).toHaveText(
+      'Not quite. Did you leave out a small peak, or round your answer? The fractions should add up to 1; give the average to two decimal places.',
+    );
+
+    // Inside the 1 percent of the slip 66.18, but nearer the answer: not told it made that slip.
+    await input.fill('65.72');
+    await input.press('Enter');
+    await expect(feedback).toHaveText('Not quite. Check your setup and try again.');
+
+    await input.fill('65.45');
+    await input.press('Enter');
+    await expect(feedback).toHaveText('Correct.');
+  });
+
+  test('the longest message does not make a 320px page scroll sideways', async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 800 });
+    await page.goto(`${UNIT_1}1-3-elemental-composition-of-pure-substances/`);
+    const check = page.locator('cs-check').nth(1);
+
+    await check.locator('.check-option').nth(1).click();
+    await expect(check.locator('.check-feedback')).toContainText('within a few hundredths of a whole number');
+    expect(
+      await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth),
+    ).toBeLessThanOrEqual(0);
+  });
+});

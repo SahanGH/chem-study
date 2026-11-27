@@ -111,7 +111,18 @@ Find the mass percent of tin and of oxygen in cassiterite, SnO₂.
 
 </Worked>
 
-<Check numeric="18.78" unit="%">
+<Check
+  numeric="18.78"
+  unit="%"
+  slips={{
+    "9.39": "The formula has two lithium atoms. Count both.",
+    "10.37": "The formula is Li₂CO₃, with two lithium atoms. Use both in the molar mass and in lithium's share.",
+    "0.1878": "That is the fraction. Multiply by 100 for a percent.",
+    "16.25": "That is the percent of carbon. The question asks for lithium.",
+    "64.96": "That is the percent of oxygen. The question asks for lithium.",
+    "33.13": "Check the molar mass. The formula has three oxygen atoms.",
+  }}
+>
 Much of the lithium for batteries is sold as lithium carbonate, Li₂CO₃, a white powder. What is the mass percent of lithium in pure lithium carbonate? (Type the number only, without the % sign.)
 
 <div slot="why">
@@ -226,11 +237,18 @@ Hexamine is the white solid in the fuel tablets that hikers light to heat a meal
 
 </Worked>
 
-<Check answer={2}>
+<Check
+  answer={1}
+  misses={{
+    2: "Check the mole ratio before you round. Is it within a few hundredths of a whole number? If not, multiply both numbers until both are whole.",
+    3: "Check that multiplier: doubling the mole ratio does not make both numbers whole here. Try another.",
+    4: "That reads the masses, 3.00 g to 2.00 g, as a ratio of atoms. Compare moles, not grams.",
+  }}
+>
 Silicon nitride is a hard ceramic used for the balls in high-speed bearings. A 5.00 g sample of it contains 3.00 g of silicon; the rest is nitrogen. What is its empirical formula?
 
-- SiN
 - Si₃N₄
+- SiN
 - Si₂N₃
 - Si₃N₂
 
@@ -260,7 +278,14 @@ Si₃N₂ comes from reading the masses themselves, 3.00 to 2.00, as the ratio o
 </div>
 </Check>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "That formula's molar mass would be twice the empirical formula's. Compare it with the measured 60.1 g/mol.",
+    2: "That formula's molar mass would be three times the empirical formula's. Compare it with the measured 60.1 g/mol.",
+    4: "An empirical formula and a molar mass together are enough. Divide the molar mass by the mass of one empirical formula.",
+  }}
+>
 Analysis of rubbing alcohol's main ingredient gives the empirical formula C₃H₈O. A separate measurement gives its molar mass: about 60.1 g/mol. What is its molecular formula?
 
 - C₆H₁₆O₂
@@ -296,7 +321,14 @@ C₆H₁₆O₂ would have a molar mass of 120.2 g/mol and C₉H₂₄O₃ of 18
 
 A table of mass percents looks as if it should tell you everything about a compound. Before you use one to answer a question, ask whether it can answer that question at all.
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "Different compounds can have the same percent composition. Matching percents cannot show that two liquids are the same.",
+    3: "Percent composition gives the ratio of atoms. A molar mass needs a separate measurement.",
+    4: "Percent composition gives the ratio of atoms, not how many of them are in one molecule.",
+  }}
+>
 A chemist measures the composition of two pure, colorless liquids from unlabeled bottles. Both come out the same: 85.63 percent carbon and 14.37 percent hydrogen by mass. Which question can be answered from these results alone?
 
 - What is the empirical formula of each liquid?
