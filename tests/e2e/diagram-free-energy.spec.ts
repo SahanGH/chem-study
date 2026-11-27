@@ -510,7 +510,7 @@ test('in the bars no text is cut off and no label meets another, a bar or the ze
       // Three values, three names and the zero line's "0".
       expect(labels).toHaveLength(7);
       for (const label of labels) {
-        expect(label.left >= -0.5 && label.right <= 320.5 && label.top >= -0.5 && label.bottom <= 236.5, `${where}: "${label.name}" is cut off`).toBe(true);
+        expect(label.left >= -0.5 && label.right <= 320.5 && label.top >= -0.5 && label.bottom <= 218.5, `${where}: "${label.name}" is cut off`).toBe(true);
       }
       for (let i = 0; i < labels.length; i++) {
         for (let j = i + 1; j < labels.length; j++) {

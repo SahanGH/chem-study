@@ -29,23 +29,28 @@
   // figures (18 on 480). They are stacked at every width, as in the
   // titration-curve explorer.
   //
-  // The graph and the bars share one vertical scale: 0.2 unit for each kJ,
-  // so the 900 kJ from −400 to +500 are 180 units in both.
-  const GRAPH = { width: 320, height: 254 };
-  const PLOT = { left: 56, right: 304, top: 30, bottom: 210 };
+  // The graph and the bars share one vertical scale: 0.18 unit for each kJ,
+  // so the 900 kJ from −400 to +500 are 162 units in both. That keeps the
+  // graph, the bars and the slider on a 320 × 568 screen together.
+  const GRAPH = { width: 320, height: 238 };
+  const PLOT = { left: 56, right: 304, top: 30, bottom: 192 };
+  // The temperatures sit 21 units under the plot, so that "200" clears "−400"
+  // at the corner where the two axes meet.
+  const TEMPERATURE_LABEL_GAP = 21;
+  const TEMPERATURE_TITLE_GAP = 39;
   const UNITS_PER_KJ = (PLOT.bottom - PLOT.top) / (AXES.energyMax - AXES.energyMin);
 
   // Where the labels stand, clear of every line and of the marker at every
   // setting:
   // - "favored" sits in the bottom left corner of the hatched half, below the
-  //   lowest line there (nitrous oxide, at most −231 kJ up to 450 K, 16 units
-  //   above the label) and left of any guide;
+  //   lowest line there (nitrous oxide, at most −233 kJ up to 470 K, about
+  //   12 units above the label) and left of any guide;
   // - the guide at the temperature of ΔG° = 0 runs from the top of the plot
   //   down to the zero line only, and its value is written above the plot,
   //   where no line and no marker goes;
   // - the lines are named in the key under the graph.
   // A browser test sweeps every setting to check it.
-  const FAVORED_LABEL = { x: PLOT.left + 6, baseline: PLOT.bottom - 8 };
+  const FAVORED_LABEL = { x: PLOT.left + 6, baseline: PLOT.bottom - 6 };
   const GUIDE_LABEL_Y = PLOT.top - 8;
   // A card-colored backing behind "favored", so that the hatching does not run
   // through its letters. Sized from the glyphs (capitals 0.73 em, descenders
@@ -56,8 +61,8 @@
   // negative one. Each value is written beyond its bar's end, above a rising
   // bar and below a falling one; the names are in a row under the lowest a bar
   // can reach (−400 kJ).
-  const BARS = { width: 320, height: 236, top: 20 };
-  const BAR = { width: 56, centers: [104, 188, 272] as const, valueAbove: 6, valueBelow: 14, nameY: 228, lineLeft: 64, lineRight: 304 };
+  const BARS = { width: 320, height: 218, top: 20 };
+  const BAR = { width: 56, centers: [104, 188, 272] as const, valueAbove: 6, valueBelow: 14, nameY: 210, lineLeft: 64, lineRight: 304 };
   /** The x of a bar's center; a bar that does not exist is an error, never a bar drawn at 0. */
   function barCenter(index: number): number {
     const x = BAR.centers[index];
@@ -150,9 +155,9 @@
         {#each AXES.temperatureTicks as tick (tick)}
           {@const x = f(xFor(tick))}
           <line class="diagram-axis" data-tick-x={tick} x1={x} y1={PLOT.bottom} x2={x} y2={PLOT.bottom + 4} />
-          <text class="diagram-label" {x} y={PLOT.bottom + 18} text-anchor="middle">{temperatureTickText(tick)}</text>
+          <text class="diagram-label" {x} y={PLOT.bottom + TEMPERATURE_LABEL_GAP} text-anchor="middle">{temperatureTickText(tick)}</text>
         {/each}
-        <text class="diagram-label" data-axis-label="x" x={(PLOT.left + PLOT.right) / 2} y={PLOT.bottom + 36} text-anchor="middle"
+        <text class="diagram-label" data-axis-label="x" x={(PLOT.left + PLOT.right) / 2} y={PLOT.bottom + TEMPERATURE_TITLE_GAP} text-anchor="middle"
           >{LABELS.temperatureAxis}</text
         >
 
