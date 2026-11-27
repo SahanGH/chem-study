@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Two panels, x 10 to 230 and x 250 to 470, each with a box 200 wide and 160 tall (y 90 to 250). Left box: 5 HA and 5 A-, a weak acid with a salt of its conjugate base, in rows of three, four and three (y near 120, 170, 220). Right box: 5 H3O+ and 10 X-, the same amounts of a strong acid (5 H3O+ and 5 X-) and its salt (5 more X-), in four rows (y near 112, 150, 188, 226) on columns near x = 280, 320, 400, 440, with the lane around x = 360 left empty. One H3O+ ion arrives above each box, at (120, 58) and (360, 58). The left arrow runs straight down from y = 70 into the box and its tip, at (120, 105), meets the top of the A- ion centered at (120, 120); the nearest other particles are 65 units to either side. The right arrow runs down from y = 70 to a tip at (360, 140), in the empty lane: the nearest particles are 39 units to either side, and nothing lies below it on its line. Shapes: HA is a circle of radius 13 with a solid dot of radius 5 on its upper right edge; A- is the same circle with a minus sign 10 units long; H3O+ is a solid circle of radius 9 with a white plus sign; X- is a hatched square of side 20 with a minus sign. The signs are lines, not text. The salts' cations, the anion that came with the arriving H3O+, and water are not drawn. -->
+  <defs>
+    <pattern id="hatch-8-8-x" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="2.5" x2="5" y2="2.5" stroke="#6B655D" stroke-width="1.2"/>
+    </pattern>
+    <g id="ha">
+      <circle r="13" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="12.73" cy="-12.73" r="5" fill="#26231F"/>
+    </g>
+    <g id="a">
+      <circle r="13" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+      <line x1="-5" y1="0" x2="5" y2="0" stroke="#26231F" stroke-width="2"/>
+    </g>
+    <g id="h">
+      <circle r="9" fill="#26231F"/>
+      <line x1="-5" y1="0" x2="5" y2="0" stroke="#FFFFFF" stroke-width="2"/>
+      <line x1="0" y1="-5" x2="0" y2="5" stroke="#FFFFFF" stroke-width="2"/>
+    </g>
+    <g id="x">
+      <rect x="-10" y="-10" width="20" height="20" fill="#FDFCF9"/>
+      <rect x="-10" y="-10" width="20" height="20" fill="url(#hatch-8-8-x)" stroke="#26231F" stroke-width="1.5"/>
+      <line x1="-5" y1="0" x2="5" y2="0" stroke="#26231F" stroke-width="2.5"/>
+    </g>
+  </defs>
+  <rect width="480" height="340" fill="#FDFCF9"/>
+
+  <text x="120" y="28" text-anchor="middle" fill="#26231F" font-weight="600">A buffer</text>
+  <rect x="20" y="90" width="200" height="160" rx="10" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <use href="#ha" x="55" y="120"/>
+  <use href="#a" x="120" y="120"/>
+  <use href="#ha" x="185" y="120"/>
+  <use href="#a" x="45" y="170"/>
+  <use href="#ha" x="95" y="170"/>
+  <use href="#a" x="145" y="170"/>
+  <use href="#ha" x="193" y="172"/>
+  <use href="#ha" x="57" y="220"/>
+  <use href="#a" x="122" y="218"/>
+  <use href="#a" x="185" y="222"/>
+  <use href="#h" x="120" y="58"/>
+  <line x1="120" y1="70" x2="120" y2="94" stroke="#4F706C" stroke-width="3"/>
+  <polygon points="120,105 113,93 127,93" fill="#4F706C"/>
+  <text x="120" y="282" text-anchor="middle" fill="#26231F">HA and A⁻</text>
+  <text x="120" y="310" text-anchor="middle" fill="#26231F">A⁻ takes the proton</text>
+
+  <text x="360" y="28" text-anchor="middle" fill="#26231F" font-weight="600">Not a buffer</text>
+  <rect x="260" y="90" width="200" height="160" rx="10" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <use href="#x" x="280" y="113"/>
+  <use href="#h" x="321" y="110"/>
+  <use href="#x" x="400" y="112"/>
+  <use href="#x" x="440" y="114"/>
+  <use href="#h" x="281" y="151"/>
+  <use href="#x" x="320" y="149"/>
+  <use href="#h" x="400" y="150"/>
+  <use href="#x" x="439" y="152"/>
+  <use href="#x" x="279" y="188"/>
+  <use href="#x" x="328" y="190"/>
+  <use href="#x" x="441" y="187"/>
+  <use href="#x" x="281" y="227"/>
+  <use href="#h" x="330" y="226"/>
+  <use href="#x" x="392" y="228"/>
+  <use href="#h" x="440" y="225"/>
+  <use href="#h" x="360" y="58"/>
+  <line x1="360" y1="70" x2="360" y2="129" stroke="#4F706C" stroke-width="3"/>
+  <polygon points="360,140 353,128 367,128" fill="#4F706C"/>
+  <text x="360" y="282" text-anchor="middle" fill="#26231F">H₃O⁺ and X⁻</text>
+  <text x="360" y="310" text-anchor="middle" fill="#26231F">Nothing takes it</text>
+</svg>

@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import LessonLayout from '../../layouts/LessonLayout.astro';
 import AbsorbanceExplorer from '../../components/lesson/AbsorbanceExplorer.astro';
 import BondEnergyCurve from '../../components/lesson/BondEnergyCurve.astro';
+import BufferCapacity from '../../components/lesson/BufferCapacity.astro';
 import Calorimetry from '../../components/lesson/Calorimetry.astro';
 import CatalystProfile from '../../components/lesson/CatalystProfile.astro';
 import Check from '../../components/lesson/Check.astro';
@@ -48,6 +49,7 @@ const { Content, headings } = await render(lesson);
 const blocks = {
   AbsorbanceExplorer,
   BondEnergyCurve,
+  BufferCapacity,
   Calorimetry,
   CatalystProfile,
   Check,

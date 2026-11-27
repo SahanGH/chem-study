@@ -1,0 +1,448 @@
+---
+topic: "8.9"
+minutes: 22
+summary: "How the Henderson–Hasselbalch equation gives the pH of a buffer from the pKa of its acid form and the ratio of base form to acid form, and how to turn a wanted pH into a ratio."
+---
+
+A biology laboratory keeps two white powders on one shelf: Tris, a weak base, and Tris hydrochloride, the salt of its conjugate acid. Dissolve one mole of the first for every five moles of the second, and the solution's pH is near 7.4. Turn the proportions around, five to one, and it is near 8.8. The same two substances, in whatever proportion, and a pH you can choose in advance. This lesson is the one equation that tells you which proportion gives which pH.
+
+## The same relation, in logarithms
+
+A weak acid and its conjugate base in water are tied together by the acid's ionization (topic 8.3):
+
+$$
+\begin{aligned}
+&\ce{HA(aq) + H2O(l) <=>} \\
+&\quad \ce{H3O+(aq) + A-(aq)}
+\end{aligned}
+$$
+
+Topic 8.4 solved the $K_a$ expression of that equation for the hydronium concentration:
+
+$$
+[\ce{H3O+}] = K_a \times \frac{[\ce{HA}]}{[\ce{A-}]}
+$$
+
+That line already gives the pH of a buffer. But chemists report pH, not $[\ce{H3O+}]$, and tables list p$K_a$, not $K_a$. Take the negative logarithm of both sides and the relation becomes the **Henderson–Hasselbalch equation**, which gives the pH of a buffer from the p$K_a$ of its acid form and the ratio of base form to acid form:
+
+$$
+\text{pH} = \text{p}K_a + \log\frac{[\ce{A-}]}{[\ce{HA}]}
+$$
+
+It is on the exam's equation sheet in this form.
+
+**Beyond the exam:** the exam asks you to use the equation, not to derive it. Taking the negative logarithm of each side of the relation above gives
+
+$$
+\begin{aligned}
+-\log[\ce{H3O+}] &= -\log K_a - \log\frac{[\ce{HA}]}{[\ce{A-}]} \\
+\text{pH} &= \text{p}K_a + \log\frac{[\ce{A-}]}{[\ce{HA}]}
+\end{aligned}
+$$
+
+The first line uses the fact that the logarithm of a product is a sum (topic 8.1). The second uses "p" for "minus the logarithm of", and the fact that minus the logarithm of a fraction is the logarithm of the fraction turned upside down. That last step is why the acid form, which was on top, ends up underneath.
+
+Three things go into the equation, and each has one place.
+
+- The p$K_a$ is that of the acid form of the pair.
+- The base form goes on top of the ratio.
+- The acid form goes underneath.
+
+**Which concentrations?** The ones the buffer was made with. Strictly, the equation wants the concentrations at equilibrium. In a buffer both members are present in large amounts, and with the base form already there, only a tiny part of the acid form ionizes. So the concentrations at equilibrium are the ones you put in, to the figures you can measure. That is true while both amounts are large and neither is more than about ten times the other. Outside those limits the solution is hardly a buffer, and the equation should not be trusted.
+
+**A buffer made from a weak base.** The equation is built on an acid's p$K_a$, and it stays that way. Take Tris, (HOCH₂)₃CNH₂. Write B for Tris and HB⁺ for its conjugate acid, (HOCH₂)₃CNH₃⁺. The acid form of this pair is HB⁺ and the base form is B, so the equation reads
+
+$$
+\text{pH} = \text{p}K_a + \log\frac{[\ce{B}]}{[\ce{HB+}]}
+$$
+
+with the p$K_a$ of HB⁺. If a question gives the $K_b$ of the base, first find the $K_a$ of its conjugate acid from $K_a \times K_b = K_w$ (topic 8.3), then the p$K_a$. Do not put a p$K_b$ into this equation.
+
+<KeyIdea>
+
+pH = p$K_a$ + log of (base form over acid form). The p$K_a$ belongs to the acid form of the pair, whether the buffer was made from a weak acid or from a weak base. Decide which member is the acid form and which is the base form before you write the ratio.
+
+</KeyIdea>
+
+## Read it before you calculate
+
+The logarithm of 1 is 0. So when the two members are present in equal amounts, the pH equals the p$K_a$. (Topic 8.5 found this at the half-equivalence point of a titration, and topic 8.7 used it to say which form has the higher concentration.)
+
+Now tip the balance either way.
+
+- More base form than acid form: the ratio is above 1, its logarithm is positive, and the pH is above the p$K_a$.
+- More acid form than base form: the ratio is below 1, its logarithm is negative, and the pH is below the p$K_a$.
+
+How far above or below? Ten of one for each one of the other is a whole pH unit, as topic 8.7 found: log 10 = 1.00. Three to one is about half a unit: log 3 = 0.48.
+
+<Figure
+  src="/figures/8-9-ratio-ladder.svg"
+  alt="A ladder with five rungs. On the left of each rung is the ratio of base form to acid form, and on the right the pH. From the top: 10 to 1, pKa plus 1.00; 3 to 1, pKa plus 0.48; 1 to 1, pKa, on a heavier rung; 1 to 3, pKa minus 0.48; 1 to 10, pKa minus 1.00. The rungs for 3 to 1 and 1 to 3 lie about halfway between the middle rung and the two ends."
+  caption="The ratio of base form to acid form sets how far the pH of a buffer lies from the pKa. Equal amounts put it at the pKa, and each tenfold change in the ratio moves it one unit."
+/>
+
+So a working buffer has a pH within about one unit of the p$K_a$ of its acid form. This is the check to make on every answer in this lesson: on the right side of the p$K_a$, and less than a unit from it.
+
+<Check
+  answer={1}
+  misses={{
+    2: "Decide which member is the acid form before you compare. Tris is the base, so its conjugate acid is the acid form. Which is there more of?",
+    3: "The pH equals the pKa only when the two amounts are equal. Here they are 0.025 mol and 0.070 mol.",
+    4: "14.00 − 8.07 is the pKb of Tris. The equation takes the pKa of the acid form as it is, with nothing subtracted from 14.",
+  }}
+>
+A buffer holds 0.025 mol of Tris and 0.070 mol of its conjugate acid in a liter of solution. The p$K_a$ of the conjugate acid is 8.07 at 25 °C. Without calculating, where does the pH lie?
+
+- Between 7.07 and 8.07, below the pKa
+- Between 8.07 and 9.07, above the pKa
+- Exactly 8.07, equal to the pKa
+- Between 5.93 and 6.93, near 14.00 − 8.07
+
+<div slot="why">
+
+Name the two forms first. Tris is the base, so Tris is the base form and its conjugate acid is the acid form. There is more acid form (0.070 mol) than base form (0.025 mol), so the ratio of base form to acid form is below 1, its logarithm is negative, and the pH is below 8.07.
+
+The ratio, about 1 to 3, is nowhere near 1 to 10, so the pH is less than one unit below: the equation gives 7.62.
+
+The pH would equal the p$K_a$ only for equal amounts. And 14.00 − 8.07 = 5.93 is the p$K_b$ of Tris, which this equation does not use.
+
+</div>
+</Check>
+
+<Worked title="A Tris buffer">
+
+A laboratory makes a buffer by dissolving 0.060 mol of Tris and 0.025 mol of Tris hydrochloride in water and making the solution up to 500 mL. The p$K_a$ of the conjugate acid of Tris is 8.07 at 25 °C. What is the pH of the buffer?
+
+1. **Name the two forms.** Tris, B, is the base form: 0.060 mol. Tris hydrochloride supplies the conjugate acid, HB⁺, the acid form: 0.025 mol. Its chloride ions are spectators.
+
+2. **Find the two concentrations.** The volume is 0.500 L.
+
+   $$
+   \begin{aligned}
+   [\ce{B}] &= \frac{0.060}{0.500} = 0.12\ \text{M} \\
+   [\ce{HB+}] &= \frac{0.025}{0.500} = 0.050\ \text{M}
+   \end{aligned}
+   $$
+
+3. **Form the ratio, base form on top.**
+
+   $$
+   \frac{[\ce{B}]}{[\ce{HB+}]} = \frac{0.12}{0.050} = 2.4
+   $$
+
+4. **Use the equation.** The logarithm is to base 10: the "log" key of a calculator, not "ln".
+
+   $$
+   \begin{aligned}
+   \text{pH} &= 8.07 + \log(2.4) \\
+   &= 8.07 + 0.38 \\
+   &= 8.45
+   \end{aligned}
+   $$
+
+   The pH has two decimal places because the p$K_a$ has two (topic 8.1).
+
+5. **Check it.** There is more base form than acid form, so the pH should be above 8.07, and it is. The ratio is well under 10, so it should be less than a unit above, and it is.
+
+</Worked>
+
+<Check
+  numeric="3.35"
+  tolerance={0.6}
+  slips={{
+    "4.15": "Is the ratio upside down? The base form, formate ion, goes on top, and formic acid goes underneath.",
+    "3.75": "That is the pKa alone. The pH equals the pKa only when the two amounts are equal. Add the logarithm of the ratio.",
+    "2.29": "That is the pH of 0.15 M formic acid with no formate present. The formate ion is there in a large amount, so this is a buffer.",
+    "2.83": "Did you use the natural logarithm? The equation takes the logarithm to base 10, the log key.",
+    "-0.40": "That is the logarithm of the ratio alone. Add it to the pKa, 3.75.",
+    "3.4": "Did you round to one decimal place? The pKa has two, so give the pH to two decimal places.",
+  }}
+>
+A buffer is made by dissolving 0.15 mol of formic acid, HCHO₂, and 0.060 mol of sodium formate, NaCHO₂, in water and making the solution up to 1.00 L. The p$K_a$ of formic acid is 3.75. What is the pH of the buffer?
+
+<div slot="why">
+
+The acid form is formic acid, 0.15 M, and the base form is the formate ion, 0.060 M. The ratio of base form to acid form is
+
+$$
+\frac{0.060}{0.15} = 0.40
+$$
+
+and log(0.40) = −0.40. So
+
+$$
+\begin{aligned}
+\text{pH} &= 3.75 + (-0.40) \\
+&= 3.35
+\end{aligned}
+$$
+
+There is more acid form than base form, so a pH below the p$K_a$ is what to expect.
+
+</div>
+</Check>
+
+<Check
+  answer={3}
+  misses={{
+    1: "Which of the two is the base form? The equation puts the base form over the acid form, whatever charge each one carries.",
+    2: "−log Kb is the pKb of pyridine. The equation is built on the acid form of the pair. Whose pK does it need?",
+    4: "Kb is a K, not a pK, and the equation is written in logarithms. It needs a pK, and it must be the pK of the pair's acid form.",
+  }}
+>
+Pyridine, C₅H₅N, is a weak base with $K_b$ = 1.7 × 10⁻⁹ at 25 °C, which makes the p$K_a$ of its conjugate acid, the pyridinium ion, 5.23. A buffer holds 0.24 mol of pyridine and 0.080 mol of pyridinium bromide in a liter. Which expression gives its pH?
+
+- 5.23 + log(0.080 ÷ 0.24), with the pyridinium ion on top
+- 8.77 + log(0.24 ÷ 0.080), with 8.77 from −log Kb
+- 5.23 + log(0.24 ÷ 0.080), with pyridine on top
+- 1.7 × 10⁻⁹ + log(0.24 ÷ 0.080), with Kb as the first term
+
+<div slot="why">
+
+The pair is pyridine and the pyridinium ion. The pyridinium ion has the extra proton, so it is the acid form, and pyridine is the base form. The equation takes the p$K_a$ of the acid form, 5.23, and puts the base form on top:
+
+$$
+\begin{aligned}
+\text{pH} &= 5.23 + \log\frac{0.24}{0.080} \\
+&= 5.23 + \log(3.0) \\
+&= 5.23 + 0.48 = 5.71
+\end{aligned}
+$$
+
+More base form than acid form, and a pH above the p$K_a$: it fits.
+
+With the ion on top, the first option would give a pH below 5.23 for a buffer that holds more base than acid. 8.77 is −log $K_b$, the p$K_b$ of pyridine, which the equation does not use. And a $K$ is not a p$K$: the equation is written in logarithms throughout, so it takes the p$K$.
+
+The 5.23 came from the $K_a$ of the pyridinium ion, which is $K_w$ divided by the $K_b$ of pyridine, its conjugate base:
+
+$$
+\begin{aligned}
+K_a &= \frac{1.0 \times 10^{-14}}{1.7 \times 10^{-9}} \\
+&= 5.9 \times 10^{-6}
+\end{aligned}
+$$
+
+</div>
+</Check>
+
+## Do you need the volume?
+
+The worked example divided each amount by 0.500 L before forming the ratio. Was that needed?
+
+No, and topic 8.4 showed why. Each concentration is moles divided by the volume of the one solution, and that volume stands on top and underneath alike:
+
+$$
+\begin{aligned}
+\frac{[\ce{A-}]}{[\ce{HA}]} &= \frac{n_{\ce{A-}} / V}{n_{\ce{HA}} / V} \\
+&= \frac{n_{\ce{A-}}}{n_{\ce{HA}}}
+\end{aligned}
+$$
+
+So moles, or millimoles, can go straight into the equation. In the worked example, 0.060 ÷ 0.025 = 2.4 at once.
+
+Many buffers are made by pouring two solutions together, each holding one member of the pair.
+
+<Check
+  answer={2}
+  misses={{
+    1: "The bottles are the same, but the volumes poured are not. Find the millimoles of each form in each mixture, milliliters times molarity, and compare the two ratios.",
+    3: "Follow each solution into the second mixture: 40.0 mL goes into 120.0 mL, and 80.0 mL goes into 120.0 mL. Are the two diluted alike?",
+    4: "Mixing does lower both concentrations. The equation takes their ratio. Can two concentrations both fall while their ratio stays where it was?",
+  }}
+>
+Two bottles hold solutions of the two members of a buffer pair: the acid form at 0.40 M and the base form at 0.60 M. One student mixes 40.0 mL of each and, without finding moles, puts 0.60 ÷ 0.40 = 1.5 into the equation as the ratio of base form to acid form. A second student mixes 40.0 mL of the acid form's solution with 80.0 mL of the base form's and uses 1.5 too. Whose ratio is right?
+
+- Both. Each mixture is made from the same two bottles, so the ratio is 1.5 in each
+- Only the first. Equal volumes dilute the two solutions alike
+- Only the second. In 120.0 mL each solution is diluted less than in 80.0 mL
+- Neither. Mixing dilutes both solutions, so the bottles' numbers cannot give the ratio
+
+<div slot="why">
+
+Find the millimoles in each mixture: milliliters times molarity.
+
+First mixture: 40.0 mL × 0.40 M = 16 mmol of acid form and 40.0 mL × 0.60 M = 24 mmol of base form, and 24 ÷ 16 = 1.5, the same as the ratio of the bottles' concentrations. Each solution went from 40.0 mL into 80.0 mL, so each was diluted to half its concentration: both concentrations fell, and their ratio stayed where it was.
+
+Second mixture: 16 mmol of acid form again, and 80.0 mL × 0.60 M = 48 mmol of base form. The ratio is 48 ÷ 16 = 3.0, not 1.5. Here the acid form's solution went from 40.0 mL into 120.0 mL, to one-third of its concentration, and the base form's from 80.0 mL into 120.0 mL, to two-thirds. The two were diluted unequally, so the bottles' ratio is no longer the mixture's.
+
+The same two bottles do not make the same buffer when the volumes poured differ. And the larger total volume does not dilute each solution less: it dilutes the acid form's solution more. The ratio of the bottles' concentrations is the mixture's ratio only when the two volumes are equal. Finding the moles is right every time.
+
+</div>
+</Check>
+
+Two cautions go with the shortcut.
+
+The moles must be the moles of each member in the final mixture. When a buffer is made by pouring two solutions together, find the millimoles of each: milliliters times molarity (topic 4.6). The two concentrations printed on the bottles are not the concentrations in the mixture, because each solution dilutes the other, and their ratio is the mixture's ratio only when the two volumes are equal.
+
+And when a strong acid or a strong base has been added, let it react to completion first, in a table of moles (topic 8.4), and put the amounts that are left into the equation. The table comes first here, just as it did there.
+
+<Check
+  numeric="4.03"
+  tolerance={0.4}
+  slips={{
+    "3.63": "Is the ratio upside down? Glycolate ion, the base form, goes on top.",
+    "3.43": "Did you use 0.200 and 0.500, the concentrations before mixing? Each solution dilutes the other. Find the moles of each member in the mixture.",
+    "4.23": "Did you use the concentrations before mixing, with the acid's on top? Find the moles of each member in the mixture, and put the base form on top.",
+    "4.43": "Did you use the two volumes as the ratio? The ratio is of amounts. Multiply each volume by its molarity to get millimoles.",
+    "3.83": "That is the pKa alone. The two amounts are not equal here, so the logarithm of the ratio is not zero.",
+    "4.0": "Did you round to one decimal place? The pKa has two, so give the pH to two decimal places.",
+  }}
+>
+A chemist makes a buffer by mixing 50.0 mL of 0.500 M glycolic acid, a weak acid, with 200.0 mL of 0.200 M sodium glycolate, a soluble salt of its conjugate base. The p$K_a$ of glycolic acid is 3.83. What is the pH of the mixture?
+
+<div slot="why">
+
+Find the millimoles of each member in the mixture.
+
+Acid form: 50.0 mL × 0.500 M = 25.0 mmol of glycolic acid.
+
+Base form: 200.0 mL × 0.200 M = 40.0 mmol of glycolate ion.
+
+The two do not react with each other, and they share the 250.0 mL, so the ratio of base form to acid form is
+
+$$
+\frac{40.0}{25.0} = 1.60
+$$
+
+Then
+
+$$
+\begin{aligned}
+\text{pH} &= 3.83 + \log(1.60) \\
+&= 3.83 + 0.20 \\
+&= 4.03
+\end{aligned}
+$$
+
+More base form than acid form, and a pH above the p$K_a$.
+
+The concentrations on the two bottles, 0.500 M and 0.200 M, would give the wrong ratio, because the mixing diluted the two solutions unequally: the acid to one-fifth of its concentration, the salt only to four-fifths.
+
+</div>
+</Check>
+
+## From a wanted pH to a ratio
+
+A buffer is usually made to order: the pH is chosen first, and the question is how much of each member to use. The equation runs backward. Subtract the p$K_a$ from the wanted pH to get the logarithm of the ratio, then raise 10 to that power:
+
+$$
+\frac{[\ce{A-}]}{[\ce{HA}]} = 10^{\,\text{pH} - \text{p}K_a}
+$$
+
+<Worked title="A formate buffer at pH 4.10">
+
+A laboratory needs a buffer of pH 4.10 and has formic acid, whose p$K_a$ is 3.75, and sodium formate. What ratio of formate ion to formic acid is needed, and how many moles of sodium formate go with 0.10 mol of formic acid?
+
+1. **Find the logarithm of the ratio.** It is the pH minus the p$K_a$.
+
+   $$
+   4.10 - 3.75 = 0.35
+   $$
+
+2. **Undo the logarithm.** The ratio of base form to acid form is
+
+   $$
+   10^{0.35} = 2.2
+   $$
+
+   The difference, 0.35, has two decimal places, so the ratio has two figures.
+
+3. **Turn the ratio into an amount.** The base form is the formate ion, and sodium formate supplies it, one for one. Its sodium ions are spectators. In moles:
+
+   $$
+   2.2 \times 0.10 = 0.22
+   $$
+
+   The buffer needs 0.22 mol of sodium formate.
+
+4. **Check it.** The wanted pH is above the p$K_a$, so the buffer should hold more base form than acid form, and it does. Put the amounts back:
+
+   $$
+   \begin{aligned}
+   \text{pH} &= 3.75 + \log\frac{0.22}{0.10} \\
+   &= 3.75 + 0.34 \\
+   &= 4.09
+   \end{aligned}
+   $$
+
+   That is 4.10 within the rounding of the ratio to two figures.
+
+</Worked>
+
+<Check
+  numeric="0.25"
+  slips={{
+    "3.98": "Is the ratio upside down? The wanted pH is below the pKa. Should there be more Tris than conjugate acid, or less?",
+    "-0.60": "That is the logarithm of the ratio. Raise 10 to that power to get the ratio itself.",
+    "0.926": "Did you divide the pH by the pKa? Subtract the pKa from the pH first, then raise 10 to that power.",
+    "0.60": "Is that pH − pKa without its sign? The wanted pH is below the pKa, so the logarithm is negative. Then raise 10 to that power.",
+  }}
+>
+What ratio of Tris to its conjugate acid, in moles, gives a buffer of pH 7.47 at 25 °C? The p$K_a$ of the conjugate acid of Tris is 8.07.
+
+<div slot="why">
+
+The logarithm of the ratio is the pH minus the p$K_a$:
+
+$$
+7.47 - 8.07 = -0.60
+$$
+
+The ratio of base form to acid form is
+
+$$
+10^{-0.60} = 0.25
+$$
+
+Tris is the base form, so the buffer needs 0.25 mol of Tris for each mole of its conjugate acid: one part Tris to four parts conjugate acid.
+
+The wanted pH is below the p$K_a$, so there has to be less base form than acid form, and a ratio below 1 says so.
+
+</div>
+</Check>
+
+## Why a small addition changes the pH so little
+
+Topic 8.8 gave the reason in words: added acid or base is used up by one member of the pair, and the ratio of the two members changes only a little. The equation shows how little that means for the pH, because the pH follows the logarithm of the ratio, and a logarithm changes slowly.
+
+Three sizes to remember, each true for every buffer:
+
+- Raising the ratio by 10 percent moves the pH by 0.04.
+- Doubling the ratio moves it by 0.30.
+- Only a tenfold change in the ratio moves it by a whole unit.
+
+Without a buffer there is nothing to use up the added acid or base, and the same addition changes $[\ce{H3O+}]$ itself many times over (topic 8.8 compared the two).
+
+The equation goes on working only while both members are present in large amounts. How much a buffer can take before one of them runs out is topic 8.10, which also works one addition through from start to finish.
+
+<KeyIdea>
+
+The pH of a buffer follows the logarithm of the ratio of base form to acid form. A small addition changes the ratio by a few percent and the pH by a few hundredths.
+
+</KeyIdea>
+
+<Trap>
+
+Six mistakes cost points on this topic:
+
+- **Turning the ratio upside down.** The base form goes on top. Upside down, the logarithm has the wrong sign and the pH ends up on the other side of the p$K_a$ from where it belongs, so check which side it should be on.
+- **Putting a $K_a$ into the equation.** It is written in logarithms throughout, so it takes the p$K_a$.
+- **Using a p$K_b$ for a buffer made from a weak base.** Use the p$K_a$ of the base's conjugate acid, with the base itself on top.
+- **Using the concentrations printed on two bottles after mixing them.** Find the moles of each member in the mixture.
+- **Using the equation when one member is missing.** A weak acid alone, or a weak acid that has reacted with an equal amount of strong base, is not a buffer: topics 8.3 and 8.4 have those.
+- **Reporting a pH more than about a unit from the p$K_a$ without asking why.** A working buffer cannot be there.
+
+</Trap>
+
+<KeyPoints>
+
+- The Henderson–Hasselbalch equation gives the pH of a buffer: pH = p$K_a$ + log of the ratio of base form to acid form. It is on the equation sheet.
+- The p$K_a$ is that of the acid form. For a buffer made from a weak base, the acid form is the base's conjugate acid.
+- Equal amounts of the two members give pH = p$K_a$. More base form gives a pH above it, more acid form a pH below it, and a tenfold ratio is one pH unit.
+- Moles can be used in place of concentrations, because both members share one volume, but they must be the moles in the final mixture.
+- The ratio needed for a wanted pH is 10 raised to the power pH − p$K_a$.
+- A small addition of acid or base changes the ratio only a little, and the pH follows the logarithm of the ratio, so the pH of a buffer changes far less than that of a solution with no buffer.
+
+</KeyPoints>
+
+<PracticeNext />

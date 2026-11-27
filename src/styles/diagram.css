@@ -876,6 +876,81 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   height: 0.875rem;
 }
 
+/* The buffer explorer: two pH scales, the buffer's over the water's, over
+   bars of the buffer's two members and of what is left over. Both drawings
+   are 320 units wide with 12-unit text and are stacked at every width (the
+   shared .diagram-panels rules), so they need no layout of their own. On a
+   scale the pH before an addition is a hollow ring and the pH after a smaller
+   filled dot (the shared ".diagram-marker"), so the two differ in shape as
+   well as color, and the dot shows inside the ring when they are close. In
+   the bars the acid form is hatched, the base form plain tint and what is
+   left over solid, as in the lesson's figure, and the amount before is a
+   dashed outline, so no two are told apart by color alone. */
+.buffer-capacity-title {
+  fill: var(--ink);
+  font-weight: 600;
+}
+.buffer-capacity-scale {
+  stroke: var(--ink);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.buffer-capacity-before {
+  fill: var(--card);
+  stroke: var(--u-ink);
+  stroke-width: 2;
+}
+.buffer-capacity-acid {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.buffer-capacity-hatch-line {
+  stroke: var(--muted);
+  stroke-width: 2;
+}
+.buffer-capacity-base {
+  fill: var(--u-tint);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.buffer-capacity-left {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+/* The amount before an addition: drawn over the bar, in ink, dashed. */
+.buffer-capacity-outline {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 3;
+}
+.buffer-capacity-baseline {
+  stroke: var(--ink);
+}
+.buffer-capacity-bar-name {
+  fill: var(--ink);
+}
+.buffer-capacity-value {
+  fill: var(--ink);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+/* The keys under the drawings (the shared ".molecule-key"); their swatches
+   keep their size inside ".diagram svg". */
+.diagram .buffer-capacity-key {
+  margin-top: 0.3rem;
+  justify-content: center;
+}
+.diagram .buffer-capacity-key svg {
+  flex: none;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.diagram .buffer-capacity-key [data-key='outline'] svg {
+  width: 1.5rem;
+  height: 1rem;
+}
+
 @media print {
   .diagram-controls {
     display: none;
