@@ -20,14 +20,15 @@
  *   f(h) = h + c₊ − c₋ − Kw/h − C Ka/(Ka + h),
  *
  * which rises steadily with h. It is found by bisection on the pH, from pH −2
- * to pH 16, in exactly 60 halvings, so that the result is the same on every
- * machine. There is no shortcut and no case split: a strong acid, a strong
+ * to pH 16, in exactly 60 halvings, so that the result is the same to well
+ * beyond 1e-9 in pH on every machine. There is no shortcut and no case split: a strong acid, a strong
  * base or pure water is the same function with C = 0.
  *
  * A weak base B and its conjugate acid HB⁺ use the same function: C is the
  * total of both forms, Ka is that of HB⁺ (Kw/Kb), and the whole of C is added
  * to c₊; the anion that came with a salt of HB⁺ goes into c₋. What is
  * returned as the base form is then [B], and as the acid form [HB⁺].
+ * `weakBaseSolution` builds that mapping so that no explorer writes it by hand.
  *
  * Rounding for display is not done here: each explorer's module rounds.
  */
@@ -49,7 +50,11 @@ export interface Solution {
   readonly weakAcid?: number;
   /** The weak acid's Ka. Needed when there is a weak acid, ignored when there is none. */
   readonly ka?: number;
-  /** The spectator cations' total charge concentration, in mol/L. */
+  /**
+   * The spectator cations' total charge concentration, in mol/L. For a weak
+   * base this includes the base's own concentration (the whole of C), so the
+   * 10 M limit applies to that sum.
+   */
   readonly cations?: number;
   /** The spectator anions' total charge concentration, in mol/L. */
   readonly anions?: number;
@@ -105,13 +110,18 @@ function checked(solution: Solution): Checked {
   return { c, ka: solution.ka, cations, anions, kw };
 }
 
-/** [H₃O⁺] of the solution, in mol/L: the root of the charge balance, by 60 halvings of the pH interval. */
-export function hydronium(solution: Solution): number {
-  const { c, ka, cations, anions, kw } = checked(solution);
-  const f = (h: number) => h + cations - anions - kw / h - (c * ka) / (ka + h);
+/** The root of the charge balance for a checked solution, by 60 halvings of the pH interval. */
+function root({ c, ka, cations, anions, kw }: Checked): number {
+  // c * (ka / (ka + h)) cannot overflow for a huge Ka, where (c * ka) / (ka + h) could.
+  const f = (h: number) => h + cations - anions - kw / h - c * (ka / (ka + h));
   let low: number = BISECTION.lowPH;
   let high: number = BISECTION.highPH;
-  let mid = (low + high) / 2;
+  // f rises with h, so the root is inside the interval only if f is not negative at its
+  // low-pH end (large h) and not positive at its high-pH end (small h).
+  if (!(f(10 ** -low) >= 0 && f(10 ** -high) <= 0)) {
+    throw new RangeError(`The root for Kw = ${kw} lies outside pH ${low} to ${high}.`);
+  }
+  let mid = low;
   for (let step = 0; step < BISECTION.halvings; step++) {
     mid = (low + high) / 2;
     // f > 0: h is too large, so the root lies at a higher pH.
@@ -121,10 +131,16 @@ export function hydronium(solution: Solution): number {
   return 10 ** -mid;
 }
 
+/** [H₃O⁺] of the solution, in mol/L: the root of the charge balance, by 60 halvings of the pH interval. */
+export function hydronium(solution: Solution): number {
+  return root(checked(solution));
+}
+
 /** The solution at equilibrium: [H₃O⁺] and the pH, and from them alone [OH⁻] and the two forms of the weak acid. */
 export function solve(solution: Solution): Equilibrium {
-  const h = hydronium(solution);
-  const { c, ka, kw } = checked(solution);
+  const input = checked(solution);
+  const { c, ka, kw } = input;
+  const h = root(input);
   return {
     hydronium: h,
     pH: -Math.log10(h),
@@ -134,9 +150,52 @@ export function solve(solution: Solution): Equilibrium {
   };
 }
 
+/** The fraction of a weak acid in its base form at a given [H₃O⁺]: Ka/(Ka + h). */
+export function fractionIonized(ka: number, h: number): number {
+  assertPositive('Ka', ka);
+  assertPositive('[H₃O⁺]', h);
+  return ka / (ka + h);
+}
+
+export interface WeakBase {
+  /** The weak base B, in mol/L. */
+  readonly base: number;
+  /** Its conjugate acid HB⁺ put in as a salt, in mol/L. 0 when there is none. */
+  readonly conjugateAcid?: number;
+  /** The base's Kb. */
+  readonly kb: number;
+  /** Other spectator cations, in mol/L, besides the base and its conjugate acid. */
+  readonly cations?: number;
+  /** Other spectator anions, in mol/L, besides the one that came with the conjugate acid. */
+  readonly anions?: number;
+  /** Kw; 1.0 × 10⁻¹⁴ (25 °C) unless given. */
+  readonly kw?: number;
+}
+
+/**
+ * A weak base, and optionally a salt of its conjugate acid, as a `Solution`:
+ * the weak "acid" is B plus HB⁺, its Ka is Kw/Kb, the cations are B plus HB⁺
+ * plus any others, and the anions are the HB⁺ salt's anion plus any others.
+ * Read the solved base form as [B] and the acid form as [HB⁺].
+ */
+export function weakBaseSolution({ base, conjugateAcid = 0, kb, cations = 0, anions = 0, kw = KW_25C }: WeakBase): Solution {
+  assertConcentration('weak base', base);
+  assertConcentration('conjugate acid', conjugateAcid);
+  assertPositive('Kb', kb);
+  assertPositive('Kw', kw);
+  return {
+    weakAcid: base + conjugateAcid,
+    ka: kw / kb,
+    cations: base + conjugateAcid + cations,
+    anions: conjugateAcid + anions,
+    kw,
+  };
+}
+
 /** The shortcut a student uses by hand for a weak acid alone: x = √(Ka C), nothing else. */
 export function shortcutHydronium(ka: number, concentration: number): number {
   assertPositive('Ka', ka);
   assertConcentration('weak acid', concentration);
+  if (concentration === 0) throw new RangeError('The shortcut needs a concentration above 0 M, not 0 M.');
   return Math.sqrt(ka * concentration);
 }

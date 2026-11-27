@@ -15,7 +15,7 @@
  * to two significant figures under 10 and to a whole number from 10 up.
  */
 
-import { hydronium, shortcutHydronium } from './acid-base';
+import { fractionIonized, hydronium, shortcutHydronium } from './acid-base';
 
 export interface Acid {
   /** The name in a sentence. */
@@ -214,7 +214,7 @@ export function concentrationValueText(position: number): string {
   return `${concentrationText(position)} molar`;
 }
 
-const percentIonized = (ka: number, h: number) => (100 * ka) / (ka + h);
+const percentIonized = (ka: number, h: number) => 100 * fractionIonized(ka, h);
 
 /** The solution at a setting: the full equilibrium, the shortcut and its check, and the strong acid. */
 export function state(acid: AcidId, position: number): WeakAcidState {
