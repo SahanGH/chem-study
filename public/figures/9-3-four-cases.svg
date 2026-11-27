@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 640" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Four graphs of ΔG° = ΔH° - TΔS° against temperature, one for each combination of signs, all on one scale. Panel origins (x0, y0): (14, 8), (250, 8), (14, 326), (250, 326). In each panel x = x0 + 44 + (T - 200)(160/1200), so 200 K is at x0 + 44 and 1,400 K at x0 + 204; y = y0 + 162 - 0.2(ΔG° in kJ), so +500 kJ is at y0 + 62, zero at y0 + 162 and -400 kJ at y0 + 242. Each line is straight, through its values at 200 K, 800 K and 1,400 K:
+       N₂O breaking down: 200 K, -193.78 kJ at (58.0, 208.8); 800 K, -282.82 kJ at (138.0, 226.6); 1400 K, -371.86 kJ at (218.0, 244.4).
+       ozone forming: 200 K, 312.96 kJ at (294.0, 107.4); 800 K, 395.64 kJ at (374.0, 90.9); 1400 K, 478.32 kJ at (454.0, 74.3).
+       methane with steam: 200 K, 162.96 kJ at (58.0, 455.4); 800 K, 34.14 kJ at (138.0, 481.2); 1400 K, -94.68 kJ at (218.0, 506.9); zero at 959.01 K, x = 159.2.
+       methanol forming: 200 K, -46.66 kJ at (294.0, 497.3); 800 K, 84.86 kJ at (374.0, 471.0); 1400 K, 216.38 kJ at (454.0, 444.7); zero at 412.86 K, x = 322.4.
+       The hatched band, y0 + 246 to y0 + 256, covers the temperatures at which ΔG° is negative; a dashed guide drops from the point where a line meets zero to the end of its band. -->
+  <defs>
+    <pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="5" height="5" fill="#FDFCF9"/>
+      <path d="M0 0V5" fill="none" stroke="#4F706C" stroke-width="1.8"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="640" fill="#FDFCF9"/>
+
+  <text x="122" y="30" text-anchor="middle" fill="#26231F">ΔH° &lt; 0, ΔS° &gt; 0</text>
+  <text x="122" y="54" text-anchor="middle" fill="#26231F">N₂O breaking down</text>
+  <line x1="58" y1="70" x2="58" y2="250" stroke="#26231F" stroke-width="1"/>
+  <line x1="58" y1="170" x2="218" y2="170" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="58" y="254" width="160" height="10" fill="url(#hatch)" stroke="#26231F" stroke-width="1"/>
+  <polyline points="58.0,208.8 138.0,226.6 218.0,244.4" fill="none" stroke="#26231F" stroke-width="3"/>
+  <text x="52" y="86" text-anchor="end" fill="#26231F">ΔG°</text>
+  <text x="52" y="176" text-anchor="end" fill="#26231F">0</text>
+  <text x="58" y="286" text-anchor="middle" fill="#6B655D">200</text>
+  <text x="138" y="286" text-anchor="middle" fill="#6B655D">T (K)</text>
+  <text x="226" y="286" text-anchor="end" fill="#6B655D">1,400</text>
+  <text x="122" y="308" text-anchor="middle" fill="#26231F">favored at every T</text>
+
+  <text x="358" y="30" text-anchor="middle" fill="#26231F">ΔH° &gt; 0, ΔS° &lt; 0</text>
+  <text x="358" y="54" text-anchor="middle" fill="#26231F">ozone forming</text>
+  <line x1="294" y1="70" x2="294" y2="250" stroke="#26231F" stroke-width="1"/>
+  <line x1="294" y1="170" x2="454" y2="170" stroke="#26231F" stroke-width="1.5"/>
+  <polyline points="294.0,107.4 374.0,90.9 454.0,74.3" fill="none" stroke="#26231F" stroke-width="3"/>
+  <text x="288" y="86" text-anchor="end" fill="#26231F">ΔG°</text>
+  <text x="288" y="176" text-anchor="end" fill="#26231F">0</text>
+  <text x="294" y="286" text-anchor="middle" fill="#6B655D">200</text>
+  <text x="374" y="286" text-anchor="middle" fill="#6B655D">T (K)</text>
+  <text x="462" y="286" text-anchor="end" fill="#6B655D">1,400</text>
+  <text x="358" y="308" text-anchor="middle" fill="#26231F">favored at no T</text>
+
+  <text x="122" y="348" text-anchor="middle" fill="#26231F">ΔH° &gt; 0, ΔS° &gt; 0</text>
+  <text x="122" y="372" text-anchor="middle" fill="#26231F">methane with steam</text>
+  <line x1="58" y1="388" x2="58" y2="568" stroke="#26231F" stroke-width="1"/>
+  <line x1="58" y1="488" x2="218" y2="488" stroke="#26231F" stroke-width="1.5"/>
+  <line x1="159.2" y1="488" x2="159.2" y2="582" stroke="#6B655D" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <rect x="159.2" y="572" width="58.8" height="10" fill="url(#hatch)" stroke="#26231F" stroke-width="1"/>
+  <polyline points="58.0,455.4 138.0,481.2 218.0,506.9" fill="none" stroke="#26231F" stroke-width="3"/>
+  <text x="52" y="404" text-anchor="end" fill="#26231F">ΔG°</text>
+  <text x="52" y="494" text-anchor="end" fill="#26231F">0</text>
+  <text x="58" y="604" text-anchor="middle" fill="#6B655D">200</text>
+  <text x="138" y="604" text-anchor="middle" fill="#6B655D">T (K)</text>
+  <text x="226" y="604" text-anchor="end" fill="#6B655D">1,400</text>
+  <text x="122" y="626" text-anchor="middle" fill="#26231F">favored above 959 K</text>
+
+  <text x="358" y="348" text-anchor="middle" fill="#26231F">ΔH° &lt; 0, ΔS° &lt; 0</text>
+  <text x="358" y="372" text-anchor="middle" fill="#26231F">methanol forming</text>
+  <line x1="294" y1="388" x2="294" y2="568" stroke="#26231F" stroke-width="1"/>
+  <line x1="294" y1="488" x2="454" y2="488" stroke="#26231F" stroke-width="1.5"/>
+  <line x1="322.4" y1="488" x2="322.4" y2="582" stroke="#6B655D" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <rect x="294" y="572" width="28.4" height="10" fill="url(#hatch)" stroke="#26231F" stroke-width="1"/>
+  <polyline points="294.0,497.3 374.0,471.0 454.0,444.7" fill="none" stroke="#26231F" stroke-width="3"/>
+  <text x="288" y="404" text-anchor="end" fill="#26231F">ΔG°</text>
+  <text x="288" y="494" text-anchor="end" fill="#26231F">0</text>
+  <text x="294" y="604" text-anchor="middle" fill="#6B655D">200</text>
+  <text x="374" y="604" text-anchor="middle" fill="#6B655D">T (K)</text>
+  <text x="462" y="604" text-anchor="end" fill="#6B655D">1,400</text>
+  <text x="358" y="626" text-anchor="middle" fill="#26231F">favored below 413 K</text>
+</svg>

@@ -951,6 +951,69 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   height: 1rem;
 }
 
+/* The free-energy explorer: a graph of ΔG° against temperature over three
+   bars, ΔH°, −TΔS° and ΔG°, on the same vertical scale. Both drawings are 320
+   units wide with 12-unit text and are stacked at every width (the shared
+   .diagram-panels rules), so they need no layout of their own. The favored
+   half of the graph is hatched and labeled in words; the chosen line is heavy
+   and solid and the other three faint and dashed (the shared .diagram-curve
+   classes); the lines are named in a key under the graph (the shared
+   ".molecule-key"). In the bars ΔH° is hatched, −TΔS° plain tint and ΔG°
+   solid, as in the lesson's figure, so no two are told apart by color alone. */
+.free-energy-favored {
+  stroke: none;
+}
+.free-energy-favored-hatch-line {
+  stroke: var(--u);
+  stroke-width: 1.5;
+  opacity: 0.45;
+}
+/* The zero line, in both drawings: firmer than the axes and the guides. */
+.free-energy-zero {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.free-energy-favored-label {
+  fill: var(--u-ink);
+  font-weight: 700;
+}
+.free-energy-guide-name {
+  fill: var(--ink);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.free-energy-bar {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.free-energy-bar.is-entropy {
+  fill: var(--u-tint);
+}
+.free-energy-bar.is-free {
+  fill: var(--u-ink);
+}
+.free-energy-enthalpy-hatch-line {
+  stroke: var(--muted);
+  stroke-width: 2;
+}
+.free-energy-bar-value {
+  fill: var(--ink);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.free-energy-bar-name {
+  fill: var(--ink);
+}
+.diagram .free-energy-key {
+  margin-top: 0.3rem;
+  justify-content: center;
+}
+.diagram .free-energy-key svg {
+  flex: none;
+  width: 2.25rem;
+  height: 0.875rem;
+}
+
 @media print {
   .diagram-controls {
     display: none;

@@ -1,0 +1,316 @@
+---
+topic: "9.4"
+minutes: 20
+summary: "Why a thermodynamically favored reaction can be too slow to see, how to tell a slow mixture from one at equilibrium, and what a catalyst and heating change."
+---
+
+A hospital's nitrous oxide comes in steel cylinders, and a cylinder can stand in a storeroom for years. Topic 9.3's explorer said that nitrous oxide breaking down into nitrogen and oxygen is thermodynamically favored at every temperature. Yet what comes out of an old cylinder is still nitrous oxide. Nothing is wrong with the thermodynamics. It answers one question, and the cylinder is asking another.
+
+## Two questions, two answers
+
+Ask two things about any change. Which direction is favored? And how fast does it go?
+
+Topic 9.3 answered the first with ΔG°. And ΔG° is worked out from tables of the reactants and the products alone: only the two ends of the reaction go into it. Nothing about the route between them does.
+
+The second question is about the route. Topic 5.5 called the height of the climb the **activation energy**, $E_a$: the minimum energy a collision needs for the bonds to start rearranging. At a given temperature, the higher it is, the smaller the share of collisions that have enough energy, and the slower the reaction (topic 5.6).
+
+<Figure
+  src="/figures/9-4-two-questions.svg"
+  alt="An energy profile. The curve starts level at the left, labeled reactants, climbs a high hill and comes down to a lower level at the right, labeled products. A vertical arrow from the reactants' level up to the top of the hill is labeled how fast: kinetics. A second vertical arrow, between the reactants' level and the lower level of the products, is labeled which way: thermodynamics."
+  caption="Two questions about one reaction. Thermodynamics compares the two ends. Kinetics looks at the hill between them, and a high hill can hold back a reaction that the two ends favor."
+/>
+
+The drop from one end to the other belongs to thermodynamics, and the height of the hill belongs to kinetics, and you cannot read either one from the other.
+
+So four kinds of reaction are possible: favored and fast, favored and slow, and unfavored with a reverse direction that is fast or slow. The second kind is the subject of this lesson, and it has a name. A thermodynamically favored process that does not go at a measurable rate, or goes only very slowly, is under **kinetic control**: what you observe is decided by its rate, not by its ΔG°.
+
+The size of ΔG° does not help. A very negative ΔG° does not mean a fast reaction, and a small one does not mean a slow reaction.
+
+<KeyIdea>
+
+On an energy profile, thermodynamics reads the two ends and kinetics reads the hill between them. The ends give the favored direction, through ΔG°. The hill gives the rate, through the activation energy. Neither reading can be worked out from the other. A change that the two ends favor and a high hill holds back is under kinetic control.
+
+</KeyIdea>
+
+<Worked title="The cylinder that keeps">
+
+For nitrous oxide breaking down,
+
+$$
+\ce{2N2O(g) -> 2N2(g) + O2(g)}
+$$
+
+ΔG° is about −208 $\text{kJ/mol}_\text{rxn}$ at 25 °C, and with no catalyst the activation energy is about 250 kJ/mol. Explain why nitrous oxide keeps for years in its cylinder.
+
+1. **The thermodynamics.** ΔG° is negative, so the breakdown is thermodynamically favored. (Topic 9.3: taking ΔH° and ΔS° as constant, it is favored at every temperature, because it releases energy and gains entropy.) The favored contents of the cylinder are nitrogen and oxygen. The cylinder is far from that.
+
+2. **The kinetics.** For the reaction to start, a collision has to supply about 250 kJ/mol, enough to begin pulling an oxygen atom off a nitrogen atom. Compare that with the energies of collisions at room temperature. A yardstick for them is $RT$, the same $RT$ that sits in the Arrhenius equation of topic 5.6. With $R$ in J/(mol·K) and $T$ in kelvins:
+
+   $$
+   \begin{aligned}
+   RT &= (8.314)(298) \\
+   &= 2{,}478\ \text{J/mol}
+   \end{aligned}
+   $$
+
+   In kilojoules:
+
+   $$
+   2{,}478\ \text{J/mol} = 2.48\ \text{kJ/mol}
+   $$
+
+   The activation energy is about 101 times that, a hundred times the yardstick.
+
+3. **What that does to the rate.** With a hill that high, the share of collisions with enough energy is of the order of one in 10⁴⁴. Each molecule collides billions of times a second (topic 5.5), and still, for practical purposes, none of the collisions succeeds. The rate is far too small to measure.
+
+4. **Both halves, in order.** The breakdown is thermodynamically favored (ΔG° < 0), but it is under kinetic control: its activation energy is so high that at 25 °C almost no collisions have enough energy, so it does not go at a measurable rate.
+
+</Worked>
+
+<Check
+  answer={3}
+  misses={{
+    1: "ΔG° compares the two ends of the reaction. Does anything in it describe the path between them?",
+    2: "ΔH° also compares only the two ends. Does the energy a reaction releases overall say anything about how it begins?",
+    4: "No change can mean two things. With ΔG° this negative, what would the jar hold if the reaction had gone as far as it can?",
+  }}
+>
+Thermite is a mixture of aluminum powder and iron(III) oxide powder. For its reaction,
+
+$$
+\begin{aligned}
+&\ce{2Al(s) + Fe2O3(s) ->} \\
+&\quad \ce{Al2O3(s) + 2Fe(s)}
+\end{aligned}
+$$
+
+ΔG° = −840 kJ/mol at 25 °C. A jar of the mixture has stood on a shelf for years with no change. Which further fact do you need in order to explain why it has not reacted?
+
+- The exact value of ΔG°, because a more negative ΔG° means a faster reaction
+- The value of ΔH°, because a reaction that releases energy needs none to begin
+- The activation energy, because the change needs that much energy to start
+- Nothing more, because years with no change show the mixture is at equilibrium
+
+<div slot="why">
+
+ΔG° of −840 $\text{kJ/mol}_\text{rxn}$ says that aluminum oxide and iron are favored, and by a great deal. It says nothing about the rate, however many figures it is given to. ΔH° compares the same two ends and says nothing about the rate either.
+
+What sets the rate is the activation energy: before any atoms can rearrange, bonds in the solids have to begin to break, and at room temperature almost none of the particles has the energy for that. The mixture is under kinetic control.
+
+It is not at equilibrium: a mixture that had gone as far as it could would be aluminum oxide and iron. (Lit with a strip of burning magnesium, thermite does react, and the energy it then releases keeps it going.)
+
+</div>
+</Check>
+
+<Check
+  answer={1}
+  misses={{
+    2: "The two forms can sit in balance at one temperature only. What does the question say about ΔG° at 5 °C?",
+    3: "The question gives the sign of ΔG° at 5 °C as negative. A bar that has not changed does not overturn it.",
+    4: "The energy a change takes in or gives out is already counted in ΔG°. What sign does the question give ΔG° at 5 °C?",
+  }}
+>
+Tin has two solid forms. Ordinary white tin is the metal you know. Gray tin is a crumbly gray powder. Above 13 °C white tin is the favored form, and below 13 °C ΔG° for the change from white tin to gray tin is negative. Bars of pure white tin have been kept all winter in an unheated storeroom at about 5 °C and have come out as sound as they went in. Which explanation fits?
+
+- Gray tin is favored at 5 °C, but the change has a high activation energy
+- At 5 °C the two forms are at equilibrium, so neither one turns into the other
+- ΔG° must really be positive at 5 °C, or the bars would have crumbled by now
+- The change must be endothermic, and a cold storeroom has too little energy to give
+
+<div slot="why">
+
+The question gives the thermodynamics: below 13 °C, ΔG° for white tin turning into gray tin is negative, so at 5 °C gray tin is the favored form. The bars have not changed because the change is slow. To become gray tin, every atom in the solid has to take up a new position among its neighbors, and at 5 °C very few atoms have the energy to begin. That is kinetic control.
+
+The two forms are in balance, with no tendency either way, at 13 °C and at no other temperature, so the second option is wrong at 5 °C. An unchanged bar is no evidence about the sign of ΔG°: slow and unfavored look alike until you know ΔG°. And whether the change takes energy in or gives it out is already counted inside ΔG° (this one in fact gives energy out).
+
+In a much colder place, over years, white tin does crumble.
+
+</div>
+</Check>
+
+## Not changing is not the same as at equilibrium
+
+A mixture whose composition is not changing may be at equilibrium. Or it may be far from equilibrium and getting there too slowly to notice. From the outside the two look the same.
+
+Topic 7.5 met such a mixture before it had a name: a bulb of ethene and hydrogen that had made no ethane after a year. The name is kinetic control.
+
+How can the two be told apart? The next question gives you one piece of evidence and asks what it proves.
+
+<Check
+  answer={3}
+  misses={{
+    1: "A catalyst speeds up the forward and the reverse reaction alike. Could it change a mixture in which the two already balance?",
+    2: "Hopcalite is not a reactant or a product. Can something outside the equation change which direction is favored?",
+    4: "A catalyst is still there, unchanged, at the end (topic 5.11). Which gas in the air supplied the extra oxygen atoms?",
+  }}
+>
+A faulty furnace has left carbon monoxide in the air of a closed boiler room. Hours later a meter still reads the same level of it. One kind of escape mask that miners carry holds hopcalite, a catalyst. When air from the room is drawn through hopcalite at room temperature, it comes out with carbon dioxide in place of the carbon monoxide. What does that show about the air in the room?
+
+- It was at equilibrium, and the catalyst moved the equilibrium toward carbon dioxide
+- The change was unfavored there, and the catalyst made it favored
+- It was far from equilibrium, and only a slow reaction kept it there
+- It was at equilibrium, and the hopcalite was used up changing the gas
+
+<div slot="why">
+
+A catalyst gives a reaction a quicker route and is still there at the end (topic 5.11). It quickens the forward and the reverse reaction alike, so a mixture in which the two already balance stays as it is: a catalyst cannot move a mixture that is at equilibrium.
+
+The hopcalite, a mixture of manganese and copper oxides, did change the air, so the air was not at equilibrium. Carbon monoxide and oxygen turning into carbon dioxide was the favored direction all along, and the only thing holding it back was its rate. That is kinetic control.
+
+The catalyst did not make the change favored: it is not a reactant or a product, and at a given temperature which direction is favored depends on those alone. And the hopcalite was not used up. It takes part in one step and is made again in a later one (topic 5.11), so the extra oxygen atom in each molecule of carbon dioxide came, in the end, from the oxygen of the air.
+
+</div>
+</Check>
+
+**The other test.** A second way to tell needs no catalyst, only $K$. Compare the mixture with what $K$ demands (topics 7.3 and 7.10). For
+
+$$
+\ce{2CO(g) + O2(g) <=> 2CO2(g)}
+$$
+
+topic 7.5 gave $K_p$ of about 10⁹⁰ at 25 °C. Suppose the room's air has carbon monoxide at 0.00010 atm, enough to set off an alarm, with oxygen at 0.21 atm and carbon dioxide at 0.00040 atm. Then
+
+$$
+\begin{aligned}
+Q &= \frac{(0.00040)^2}{(0.00010)^2(0.21)} \\
+&= 76
+\end{aligned}
+$$
+
+$Q$ is 76 and $K$ is about 10⁹⁰. $Q$ is nowhere near $K$, so the air is nowhere near equilibrium, and the reaction that would close the gap runs forward, toward carbon dioxide (topic 7.10). The meter's steady reading says only that it runs too slowly to see.
+
+<Worked title="The tank that waits fifteen years">
+
+A communications satellite steers with small thrusters that run on liquid hydrazine, N₂H₄. The hydrazine sits in its tank for the whole life of the satellite, fifteen years or more. When a thruster fires, a valve lets a little hydrazine onto a bed of catalyst, grains coated with the metal iridium, and with no oxygen and no spark it turns at once into hot gas that pushes the satellite. Overall,
+
+$$
+\ce{N2H4(l) -> N2(g) + 2H2(g)}
+$$
+
+ΔG° = −149.3 $\text{kJ/mol}_\text{rxn}$ at 25 °C (in a real thruster part of the hydrazine ends up as ammonia instead, by a route that is favored too). Is the hydrazine in the tank at equilibrium? What did the iridium change, and what did it leave alone?
+
+1. **What ΔG° says.** It is negative: the breakdown to nitrogen and hydrogen is thermodynamically favored. A tank that still holds liquid hydrazine is far from where the favored direction leads.
+
+2. **Two ways to read "nothing is happening".** Either the hydrazine is at equilibrium with its products, or it is far from equilibrium and slow.
+
+3. **The test.** It is the one the boiler-room question used, and the thruster runs it every time it fires: bring in a catalyst. On the iridium the hydrazine breaks down in a fraction of a second. A system at equilibrium would not have answered, because a catalyst leaves a balanced mixture as it is. So the hydrazine in the tank was not at equilibrium. It was under kinetic control.
+
+4. **What the iridium changed.** The route. On the metal's surface the bonds of a hydrazine molecule come apart in steps, and the highest point on that route is lower than on the route with no catalyst (topic 5.11). At the same temperature a far larger share of the molecules has enough energy to react.
+
+5. **What it did not change.** ΔG° is −149.3 $\text{kJ/mol}_\text{rxn}$ with the iridium or without it, because iridium is not in the equation. The products are the same, and each mole that reacts releases the same energy. The iridium changed how long the reaction takes. It changed nothing about where the reaction ends.
+
+6. **The answer in one sentence.** The breakdown of hydrazine is thermodynamically favored, but without a catalyst its activation energy is high enough that at the temperature of the tank it goes far too slowly to matter, even in fifteen years.
+
+</Worked>
+
+## The hill and the two ends
+
+Go back to the figure. It has three things on it: the level of the reactants, the level of the products, and the hill between them. The two levels belong to the substances at the two ends, and at a given temperature ΔG°, ΔH° and $K$ depend on those substances alone. The rate depends on the hill, and on how much energy the collisions have.
+
+**A catalyst** redraws the hill. It gives the reaction another route whose highest point is lower (topic 5.11). The substances at the two ends are what they were. So the rate changes, and ΔG°, ΔH° and $K$ do not.
+
+Now read the figure from right to left. That is the reverse reaction. The catalyst has lowered its hill too, by the same amount, and speeds it up as well. But the two ends have not moved, so whichever direction was unfavored before is unfavored still.
+
+**Heating** leaves the drawing as it is. The hill is as high as before. What changes is the collisions: at a higher temperature a larger share of them has at least the activation energy (topic 5.5), so more of them get over the same hill. That is why heating speeds up nearly every reaction.
+
+Heating also does something a catalyst never does: it changes $K$ (topic 7.9) and ΔG° (topic 9.3). Whether that change helps depends on the reaction: for an exothermic reaction $K$ gets smaller as the temperature rises.
+
+So a catalyzed reaction is faster, with the same ΔG° and the same $K$ as before. A hot reaction is faster, and its $K$ may be larger or smaller than before.
+
+<KeyIdea>
+
+If a process is known to be thermodynamically favored and you do not see it happen, conclude that it is under kinetic control, not that it is at equilibrium. A lower hill (a catalyst) or more energetic collisions (heating) can set it going. What makes it favored was there all along, in the two ends.
+
+</KeyIdea>
+
+<Check
+  answer={2}
+  misses={{
+    1: "A catalyst does speed up both directions. Does speeding up both tell you which way a mixture moves?",
+    3: "A catalyst speeds up the reverse reaction by the same factor as the forward one. What else, besides speed, decides what comes out?",
+    4: "The activation energy sets how fast a change goes. Is speed the only thing that decides what comes out?",
+  }}
+>
+One plan for making oxygen on Mars starts from the carbon dioxide of its air:
+
+$$
+\ce{2CO2(g) -> 2CO(g) + O2(g)}
+$$
+
+Topic 7.5 gave $K_p$ of about 10⁻⁹⁰ for this reaction at 25 °C. A student suggests passing carbon dioxide through hopcalite at 25 °C, because hopcalite is a catalyst for the reaction among these three gases. What would come out of the hopcalite?
+
+- Mostly carbon monoxide and oxygen, since the catalyst can run the reaction either way
+- Carbon dioxide, as good as unchanged, since $K$ is still about 10⁻⁹⁰
+- Carbon monoxide and oxygen, slowly, since a catalyst cannot speed up a reverse reaction
+- It cannot be said until the activation energy on hopcalite is known
+
+<div slot="why">
+
+This is the reaction of the boiler-room question written backward, and hopcalite does speed it up, by the same factor as the forward one. But speed is not what holds carbon dioxide together.
+
+$K$ of 10⁻⁹⁰ says that a mixture at equilibrium at 25 °C is carbon dioxide with no carbon monoxide to speak of, and the catalyst leaves $K$ exactly as it was, because the substances at the two ends are the same. So the gas arrives at the hopcalite already at equilibrium for every practical purpose, and comes out as it went in.
+
+The activation energy would tell you how fast a favored change goes; it cannot make an unfavored one go. (A rover on Mars has made oxygen from carbon dioxide. It drove the reaction with electricity, and topic 9.7 comes back to driving an unfavored reaction.)
+
+</div>
+</Check>
+
+<Check
+  answer={4}
+  misses={{
+    1: "Warming a gas moves its collisions toward higher energies (topic 5.5). Would the share with enough energy to react stay where it was?",
+    2: "This reaction is exothermic. Topic 7.9 says what heating does to K for an exothermic reaction.",
+    3: "ΔG° = ΔH° − TΔS°, and T has gone from 298 K to 900 K. This reaction makes 3 moles of gas from 2. Is ΔS° zero?",
+  }}
+>
+Nitrous oxide from the cylinder is passed through a tube kept at 900 K. Now it breaks down into nitrogen and oxygen at a rate that is easy to measure. No catalyst is in the tube. The reaction is exothermic, with ΔH° = −164 kJ/mol. Which of these is the same in the hot tube as it was in the cylinder at 298 K?
+
+- The share of collisions with enough energy to react
+- The equilibrium constant of the breakdown
+- The value of ΔG° for the breakdown
+- The activation energy of the breakdown
+
+<div slot="why">
+
+The activation energy belongs to the reaction and its route, and with no catalyst the route is the same one, so the hill is as high at 900 K as at 298 K. Everything else on the list moved.
+
+At 900 K (627 °C) the molecules have far more energy, and the share of collisions with at least 250 kJ/mol is larger by many powers of ten: that is what made the reaction fast.
+
+$K$ changed too: for an exothermic reaction it gets smaller on heating (topic 7.9), though here it stays very large.
+
+And ΔG° changes whenever $T$ does:
+
+$$
+\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ
+$$
+
+Topic 9.3's equation gives −297.7 $\text{kJ/mol}_\text{rxn}$ at 900 K, against −208 at 298 K.
+
+</div>
+</Check>
+
+<Trap>
+
+Six mistakes cost points on this topic:
+
+- **"ΔG° is negative, so the reaction is fast."** ΔG° comes from the two ends of the reaction and says nothing about its rate, however negative it is.
+- **"Nothing is happening, so it must be at equilibrium."** A favored reaction that is not seen to go is under kinetic control. At equilibrium the mixture would fit $K$.
+- **Giving half the answer.** Say both halves: thermodynamically favored, and slow because the activation energy is high at this temperature.
+- **"A catalyst makes the reaction favored."** A catalyst changes the route, not the reactants or the products, so ΔG°, ΔH° and $K$ are what they were, and an unfavored direction is unfavored still.
+- **"Heating lowers the activation energy."** Heating gives more collisions enough energy to get over the same hill.
+- **"Heating always raises $K$."** It raises the rate. What it does to $K$ depends on the sign of ΔH°.
+
+</Trap>
+
+<KeyPoints>
+
+- The favored direction of a change comes from its two ends, through ΔG°. Its rate comes from the hill between them, through the activation energy. Neither can be worked out from the other.
+- A thermodynamically favored process that goes too slowly to measure is under kinetic control, usually because its activation energy is high, so that almost no collisions have enough energy at that temperature.
+- A mixture that is not changing is not necessarily at equilibrium. If the process is known to be favored and is not observed, the conclusion is kinetic control.
+- A catalyst gives a reaction a route with a lower activation energy, between the same reactants and the same products. The rate changes while ΔG° and $K$ do not, and a direction that was unfavored stays unfavored.
+- Heating raises the share of collisions with at least the activation energy, which raises the rate. Separately, it changes $K$ and ΔG°.
+- A full explanation has two halves: the process is thermodynamically favored, and it is slow because its activation energy is high.
+
+</KeyPoints>
+
+<PracticeNext />
