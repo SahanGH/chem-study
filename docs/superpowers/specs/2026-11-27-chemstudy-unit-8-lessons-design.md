@@ -318,7 +318,8 @@ other on the page.
 | Formic acid, HCHO₂ | $K_a$ = 1.8 × 10⁻⁴; p$K_a$ 3.75 | 8.3 explorer; 8.9, 8.10 | sure |
 | Glycolic acid, HC₂H₃O₃ | $K_a$ = 1.5 × 10⁻⁴; p$K_a$ 3.83 | 8.3; 8.9 | fairly sure |
 | Lactic acid, HC₃H₅O₃ | p$K_a$ 3.86 | 8.5 explorer | sure |
-| Benzoic acid, HC₇H₅O₂ | $K_a$ = 6.3 × 10⁻⁵ (p$K_a$ 4.20); dissolves to about 0.028 M | 8.4 | sure; fairly sure of the solubility |
+| Hexanoic acid, HC₆H₁₁O₂ | $K_a$ = 1.3 × 10⁻⁵ (p$K_a$ 4.88); dissolves to about 0.09 M | 8.4 | fairly sure |
+| Hydroxylamine, NH₂OH | $K_b$ = 1.1 × 10⁻⁸ (tables give the p$K_a$ of NH₃OH⁺ as 5.94 to 5.96) | 8.4 | fairly sure |
 | Sorbic acid, HC₆H₇O₂ | p$K_a$ 4.76 | 8.7 | fairly sure |
 | Butanoic acid, HC₄H₇O₂ | $K_a$ = 1.5 × 10⁻⁵ | 8.3 explorer | fairly sure |
 | Propanoic acid, HC₃H₅O₂ | p$K_a$ 4.87 | 8.5, 8.10 explorer | sure |
@@ -328,7 +329,7 @@ other on the page.
 | Dihydrogen phosphate ion, H₂PO₄⁻ | p$K_a$ 7.21 | 8.8, 8.10 | sure |
 | An acid the lesson calls H₂A and says is made up | p$K_{a1}$ 3.00, p$K_{a2}$ 8.00 | 8.5 figure | chosen, not measured (section 11) |
 | H₂S, H₂Se, H₂Te | p$K_{a1}$ 7.0, 3.9, 2.6 | 8.6 | fairly sure |
-| Pyridine, C₅H₅N | $K_b$ = 1.7 × 10⁻⁹ (p$K_a$ of C₅H₅NH⁺ 5.23) | 8.4, 8.9 | sure |
+| Pyridine, C₅H₅N | $K_b$ = 1.7 × 10⁻⁹ (p$K_a$ of C₅H₅NH⁺ 5.23) | 8.8, 8.9 | sure |
 | Ethanolamine, HOC₂H₄NH₂ | $K_b$ = 3.2 × 10⁻⁵ (p$K_a$ of its conjugate acid 9.50) | 8.3 | sure |
 | Methylamine, CH₃NH₂ | p$K_a$ of CH₃NH₃⁺ 10.64 | 8.5 | fairly sure |
 | Trimethylamine, (CH₃)₃N | $K_b$ = 6.3 × 10⁻⁵; p$K_a$ of (CH₃)₃NH⁺ 9.80 | 8.3; 8.7 | fairly sure |
@@ -684,9 +685,11 @@ the final word.
 - **Lesson 8.11's worked example uses lead(II) fluoride and lead(II)
   bromide.** Strontium fluoride and thallium(I) chloride are the salts of
   lesson 7.11's and 7.12's own worked examples.
-- **Lesson 8.3's opening has no strong-acid twin**, lesson 8.4 has new
-  scenes (lesson 4.2 already had benzoic acid with sodium hydroxide and
-  pyridine with hydrobromic acid), and lessons 8.8 and 8.10 have new cases
+- **Lesson 8.3's opening has no strong-acid twin**, lesson 8.4 is built on
+  hexanoic acid and hydroxylamine (lesson 4.2 already had benzoic acid with
+  sodium hydroxide and pyridine with hydrobromic acid; the first replacement
+  acid, phenylacetic acid, is a controlled precursor chemical in the United
+  States and was taken out), and lessons 8.8 and 8.10 have new cases
   and a worked addition with unequal amounts (140 and 60 mmol with 35 mmol
   of base).
 - **The shared solver's description was wrong for a weak base mixed with a
