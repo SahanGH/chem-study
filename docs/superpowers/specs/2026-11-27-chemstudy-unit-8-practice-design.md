@@ -510,3 +510,20 @@ Each targets `main` and is merged by Claude when its check passes.
 - **How these pages render.** Nothing is built until the worksheets are
   written; the plan's layout rules come from the sources and from the
   earlier units.
+
+## As built (2026-11-27)
+
+Seven documents in three pull requests: 95 (this design and its plan), 97 (Worksheets 1 to 5) and the one that carries this note (the skill ladders and the free-response set). Claude merged each when its check passed.
+
+- **Counts.** Five worksheets with 42 questions and 113 parts, one question scored (10 points); twelve ladders with 48 parts; a free-response set of 5 questions, 16 parts and 32 points.
+- **Every document was audited to `0 unexplained, 0 stale`** and **fact-checked twice on Fable** by fresh agents that solved every question before reading its answer and recomputed every number. The second check of the worksheets built the pages and measured them at 320 px. Fixers that applied each decided list ran on Sonnet.
+- **What the checks found beyond the seven corrections of section 4.5**, all carried from the originals and all changed:
+  - Ladder 1's example said HCO₃⁻ would give a proton "with a stronger acid present"; it gives one to a base.
+  - Ladder 6(d) said the amount of H₃O⁺ goes down on dilution; the concentration falls and the amount rises.
+  - Ladder 9's example and 12(b) called Na⁺ "the conjugate of something strong"; it is the cation of a strong base and the conjugate of nothing.
+  - The free-response set's 2(e) gave no volumes for its two buffers, so "amounts" decided nothing; it now says 1.00 L of each, as Ladder 11 does.
+  - Concentrations printed without the unit M (Worksheets 1, 2 and 3).
+  - Worksheet 5's rubric line (f) could be read as crediting "phenolphthalein's range holds 10.08", which the corrected answer says is false; it now says why phenolphthalein is still the best of the three.
+- **Changed from this design while the pages were checked.** The "Beyond the exam" label on Worksheet 4's question 4 sits on its parts c and d, the two that find a pH after an addition. Worksheet 1's question 8 is titled "Find the error". A pOH is turned into a pH on its own line, with "14.00 −", on every page. One equation (Worksheet 4, 4(b)) breaks before its arrow, because split after it the line ran 1 px past a 320 px screen. The free-response set's 5(b) names nitric acid, so that no common ion is added.
+- **For the teacher.** HF's Ka (7.2 × 10⁻⁴) is kept as the sources have it; other books print 6.3 to 6.8 × 10⁻⁴. The free-response set's 2(d) and Ladder 12 name thymol blue and bromocresol green from lesson 8.7's table, where the sources named phenolphthalein and methyl orange. The ladders' closing table lost its twelve one-line hints, as on the other units' pages.
+
