@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Two equations that share sulfur, their sum, and three bars to one scale. Values in kJ for each mole of reaction, at 25 °C: +86.2, −300.1, and +86.2 + (−300.1) = −213.9.
+       Equations: each line starts at x = 30, its value ends at x = 450. The lone S that ends line 1 and the lone S that starts line 2 are their own text elements, each set 11 wide, with a strike line 2 thick from its left edge to its right edge, 6 above the baseline (mid-height of a capital).
+       Line 1: "Cu₂S → 2Cu +" is set 120 wide (30 to 150); the lone S is at 155 to 166; strike at y = 56 − 6 = 50.
+       Line 2: the lone S is at 30 to 41; strike at y = 88 − 6 = 82; "+ O₂ → SO₂" starts at 46.
+       Bars: zero line at y = 250, 0.5 unit for each kJ, each bar 70 wide.
+       Cu₂S alone, +86.2: 0.5(86.2) = 43.1 up, from 250 to 250 − 43.1 = 206.9, x 100 to 170.
+       S + O₂, −300.1: 0.5(300.1) = 150.05 down, from 250 to 400.05, x 215 to 285.
+       together, −213.9: 0.5(213.9) = 106.95 down, from 250 to 356.95, x 330 to 400. -->
+  <defs>
+    <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#FDFCF9"/>
+      <path d="M0 0V7" fill="none" stroke="#6B655D" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="440" fill="#FDFCF9"/>
+
+  <text x="450" y="24" text-anchor="end" fill="#6B655D">ΔG°, kJ/mol</text>
+
+  <text x="30" y="56" textLength="120" lengthAdjust="spacing" fill="#26231F">Cu₂S → 2Cu +</text>
+  <text x="155" y="56" textLength="11" lengthAdjust="spacingAndGlyphs" fill="#26231F">S</text>
+  <line x1="155" y1="50" x2="166" y2="50" stroke="#4F706C" stroke-width="2"/>
+  <text x="450" y="56" text-anchor="end" fill="#26231F">+86.2</text>
+
+  <text x="30" y="88" textLength="11" lengthAdjust="spacingAndGlyphs" fill="#26231F">S</text>
+  <line x1="30" y1="82" x2="41" y2="82" stroke="#4F706C" stroke-width="2"/>
+  <text x="46" y="88" fill="#26231F">+ O₂ → SO₂</text>
+  <text x="450" y="88" text-anchor="end" fill="#26231F">−300.1</text>
+
+  <line x1="30" y1="102" x2="450" y2="102" stroke="#26231F" stroke-width="1.5"/>
+
+  <text x="30" y="130" font-weight="600" fill="#26231F">Cu₂S + O₂ → 2Cu + SO₂</text>
+  <text x="450" y="130" text-anchor="end" font-weight="600" fill="#26231F">−213.9</text>
+
+  <rect x="100" y="206.9" width="70" height="43.1" fill="url(#hatch)" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="215" y="250" width="70" height="150.05" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="330" y="250" width="70" height="106.95" fill="#4F706C" stroke="#26231F" stroke-width="1.5"/>
+  <line x1="70" y1="250" x2="430" y2="250" stroke="#26231F" stroke-width="1.5"/>
+  <text x="56" y="256" text-anchor="middle" fill="#26231F">0</text>
+
+  <text x="135" y="199" text-anchor="middle" fill="#26231F">+86.2</text>
+  <text x="250" y="422" text-anchor="middle" fill="#26231F">−300.1</text>
+  <text x="365" y="379" text-anchor="middle" fill="#26231F">−213.9</text>
+
+  <text x="135" y="274" text-anchor="middle" fill="#26231F">Cu₂S alone</text>
+  <text x="250" y="240" text-anchor="middle" fill="#26231F">S + O₂</text>
+  <text x="365" y="240" text-anchor="middle" fill="#26231F">together</text>
+</svg>

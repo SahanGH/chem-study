@@ -584,6 +584,459 @@
           "message": null
         }
       ]
+    },
+    {
+      "lesson": "9.5",
+      "file": "src/content/lessons/unit-9/9-5-free-energy-and-equilibrium.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "About 2.5 × 10⁻¹⁸, so almost no ethane at equilibrium",
+          "message": "ΔG° is negative here. Decide which side of 1 the K must lie on before you do any arithmetic."
+        },
+        {
+          "text": "About 1.04, so nearly equal amounts of each side",
+          "message": "R is in joules, so ΔG° must go in as joules. With kilojoules the exponent comes out a thousand times too small."
+        },
+        {
+          "text": "About 3 × 10⁴⁰, so essentially all ethane at equilibrium",
+          "message": "Check which key you used on the exponent. ln K is a power of e, not a power of ten."
+        },
+        {
+          "text": "About 4 × 10¹⁷, so almost all ethane at equilibrium",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "9.5",
+      "file": "src/content/lessons/unit-9/9-5-free-energy-and-equilibrium.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "-12.2",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "12.2",
+          "message": "K is above 1 here, so products are favored. Which sign of ΔG° goes with that?"
+        },
+        {
+          "value": "-5.32",
+          "message": "Did you use the log key? The equation needs ln, the natural logarithm."
+        },
+        {
+          "value": "-12243",
+          "message": "That is ΔG° in joules per mole. The question asks for kilojoules."
+        },
+        {
+          "value": "-1.03",
+          "message": "Did you use 25 for the temperature? T in this equation is in kelvins."
+        }
+      ]
+    },
+    {
+      "lesson": "9.5",
+      "file": "src/content/lessons/unit-9/9-5-free-energy-and-equilibrium.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "About −514 kJ for each mole of reaction",
+          "message": null
+        },
+        {
+          "text": "About −223 kJ for each mole of reaction",
+          "message": "That is 90 × RT. But 90 is the power of ten of K, not ln K. How many kJ go with each factor of ten at 298 K?"
+        },
+        {
+          "text": "About −90 kJ for each mole of reaction",
+          "message": "The power of ten in K is not a number of kilojoules. How many kJ go with each factor of ten at 298 K?"
+        },
+        {
+          "text": "About +514 kJ for each mole of reaction",
+          "message": "This K is far above 1, so products are favored. Settle the sign of ΔG° first, then estimate its size."
+        }
+      ]
+    },
+    {
+      "lesson": "9.5",
+      "file": "src/content/lessons/unit-9/9-5-free-energy-and-equilibrium.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "None: with ΔG° above zero, X does not react",
+          "message": "A positive ΔG° puts K below 1. It does not make K zero. Work out K and see what mixture it describes."
+        },
+        {
+          "text": "About half, since 3.0 kJ is close to zero",
+          "message": "Half and half needs K = 1, and that needs ΔG° = 0. Compare 3.0 kJ with RT at 298 K, then work out K."
+        },
+        {
+          "text": "About a quarter of them",
+          "message": null
+        },
+        {
+          "text": "About three quarters of them",
+          "message": "A mixture that is mostly product goes with K above 1. Check the sign of the exponent you used."
+        }
+      ]
+    },
+    {
+      "lesson": "9.5",
+      "file": "src/content/lessons/unit-9/9-5-free-energy-and-equilibrium.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "ΔG° is −37.2 kJ/mol in flask 1 and +37.2 kJ/mol in flask 2, which ran backward",
+          "message": "ΔG° goes with the equation as it is written, not with the direction a flask happened to run. Is the equation different for flask 2?"
+        },
+        {
+          "text": "ΔG° for this equation is −37.2 kJ/mol in both flasks, as it was at the start",
+          "message": null
+        },
+        {
+          "text": "ΔG° was −37.2 kJ/mol at the start and is now zero in both flasks",
+          "message": "ΔG° compares substances in their standard states. Does a mixture changing in a flask alter that comparison?"
+        },
+        {
+          "text": "ΔG° is zero in flask 1 only, because flask 2 never ran forward",
+          "message": "Both flasks end at equilibrium for the same equation at the same temperature. Can ΔG° differ between them?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.5",
+      "file": "src/content/lessons/unit-9/9-5-free-energy-and-equilibrium.mdx",
+      "check": 6,
+      "kind": "numeric",
+      "answer": "6.5",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.153",
+          "message": "ΔG° is negative at 1,000 K, so K must be above 1. Check the sign of the exponent."
+        },
+        {
+          "value": "1.00",
+          "message": "Did ΔG° go into the exponent in kilojoules? R is in joules, so ΔG° must be in joules."
+        },
+        {
+          "value": "543",
+          "message": "Did you use 298 K in RT? The T in RT is the temperature the K is for: 1,000 K."
+        },
+        {
+          "value": "75.2",
+          "message": "Did you use the 10ˣ key? The exponent 1.876 is a power of e."
+        },
+        {
+          "value": "1.76e5",
+          "message": "That is what the ΔG° for 298 K gives. Find ΔG° at 1,000 K from ΔH° and ΔS° first."
+        },
+        {
+          "value": "5.0e-7",
+          "message": "Did TΔS° stay in joules? Change ΔS° to kJ/(mol·K) before it is subtracted from ΔH°."
+        }
+      ]
+    },
+    {
+      "lesson": "9.6",
+      "file": "src/content/lessons/unit-9/9-6-free-energy-of-dissolution.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Part 1 takes in more energy, and part 3 releases about the same",
+          "message": "Part 3 is an attraction between charges too: the ion and the partial charges on water molecules. What does a 2+ charge do to it?"
+        },
+        {
+          "text": "Part 1 takes in about the same energy, and part 3 releases more",
+          "message": "Part 1 overcomes the attraction between the cations and the anions. What do charges of 2+ and 2− do to that attraction?"
+        },
+        {
+          "text": "Part 1 takes in more energy, and part 3 releases more as well",
+          "message": null
+        },
+        {
+          "text": "Both parts are about the same, because both solids are ionic",
+          "message": "Ionic solids are not all held together equally strongly. Compare the charges on the ions of the two salts."
+        }
+      ]
+    },
+    {
+      "lesson": "9.6",
+      "file": "src/content/lessons/unit-9/9-6-free-energy-of-dissolution.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "It is negative, because water molecules gather around each xylitol molecule",
+          "message": "Water held around a solute does lower the entropy. But with ΔH° positive too, what sign would ΔG° then have?"
+        },
+        {
+          "text": "It is close to zero, because no gas is made or used up",
+          "message": "Counting gas is only the first test for a sign. If ΔS° were zero, ΔG° would equal ΔH°. What sign is that here?"
+        },
+        {
+          "text": "Nothing can be said: whether a solid dissolves depends on ΔH° alone",
+          "message": "Topic 6.1 showed an endothermic dissolving that happens anyway. Which equation of topic 9.3 holds the other term?"
+        },
+        {
+          "text": "It is positive, and TΔS° is larger than ΔH° at this temperature",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "9.6",
+      "file": "src/content/lessons/unit-9/9-6-free-energy-of-dissolution.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Calcium sulfate, CaSO₄",
+          "message": null
+        },
+        {
+          "text": "Potassium bromide, KBr",
+          "message": "K⁺ and Br⁻ are large ions with single charges. How firmly do such ions hold the water around them?"
+        },
+        {
+          "text": "Cesium iodide, CsI",
+          "message": "Cs⁺ and I⁻ are among the largest common ions, each with a single charge. How much water do they hold?"
+        },
+        {
+          "text": "Rubidium nitrate, RbNO₃",
+          "message": "Rb⁺ and NO₃⁻ are large ions with single charges, much like K⁺ and NO₃⁻. What sign did that salt have?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.6",
+      "file": "src/content/lessons/unit-9/9-6-free-energy-of-dissolution.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Both work for the dissolving: ΔH° and −TΔS° are both negative",
+          "message": "ΔS° is negative here. Write −TΔS° with the minus signs showing and work out the sign of the whole term."
+        },
+        {
+          "text": "ΔH° works for the dissolving, and −TΔS° is positive and works against it",
+          "message": null
+        },
+        {
+          "text": "ΔH° works against the dissolving, and −TΔS° is negative and works for it",
+          "message": "A negative ΔH° lowers ΔG°. Does lowering ΔG° work for a change or against it?"
+        },
+        {
+          "text": "Both work against the dissolving: ΔH° and −TΔS° are both positive",
+          "message": "The water warms, so the dissolving releases energy. What sign does that give ΔH°, and what does that do to ΔG°?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.6",
+      "file": "src/content/lessons/unit-9/9-6-free-energy-of-dissolution.mdx",
+      "check": 5,
+      "kind": "numeric",
+      "answer": "56.8",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "-56.8",
+          "message": "Look at the sign of each term: ΔH° as given, and −TΔS° when ΔS° is negative. What sign must their sum have?"
+        },
+        {
+          "value": "-4.24",
+          "message": "Did the minus sign of ΔS° get lost? Subtracting a negative TΔS° adds to ΔH°."
+        },
+        {
+          "value": "30570",
+          "message": "Did the entropy term stay in joules? Change ΔS° to kJ/(mol·K) before you multiply by T."
+        },
+        {
+          "value": "-30520",
+          "message": "Two things to check: ΔS° must be in kJ/(mol·K) before it meets ΔH°, and it is negative."
+        },
+        {
+          "value": "28.9",
+          "message": "Did you use 25 for the temperature? T in this equation is in kelvins."
+        }
+      ]
+    },
+    {
+      "lesson": "9.6",
+      "file": "src/content/lessons/unit-9/9-6-free-energy-of-dissolution.mdx",
+      "check": 6,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Silver iodide's is larger, by about 12 factors of ten",
+          "message": "The more positive ΔG° is, the further below 1 the K lies. Which of the two salts has the more positive ΔG°?"
+        },
+        {
+          "text": "Thallium(I) chloride's is larger, by about 4 times",
+          "message": "ΔG° goes with ln K, so a difference in ΔG° becomes a ratio of K values. Dividing one ΔG° by the other tells you nothing."
+        },
+        {
+          "text": "Thallium(I) chloride's is larger, by about 12 factors of ten",
+          "message": null
+        },
+        {
+          "text": "Thallium(I) chloride's is larger, by about 70 factors of ten",
+          "message": "70.4 kJ/mol is the difference in ΔG°. How many kilojoules go with each factor of ten in K at 298 K?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.7",
+      "file": "src/content/lessons/unit-9/9-7-coupled-reactions.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "-249.5",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "249.5",
+          "message": "Check the sign of the sum. Add +50.6 and −300.1 with their signs."
+        },
+        {
+          "value": "-350.7",
+          "message": "Did both values go in as negative? The first reaction is unfavored: its ΔG° is +50.6 kJ/mol."
+        },
+        {
+          "value": "350.7",
+          "message": "Did you subtract the second value? When equations are added, their ΔG° values are added, signs included."
+        }
+      ]
+    },
+    {
+      "lesson": "9.7",
+      "file": "src/content/lessons/unit-9/9-7-coupled-reactions.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Reaction A",
+          "message": null
+        },
+        {
+          "text": "Reaction B",
+          "message": "Try both tests on B: does it use something the first reaction makes, and is the sum of the two ΔG° values below zero?"
+        },
+        {
+          "text": "Reaction C",
+          "message": "Reaction C does use up chlorine. Now add the two ΔG° values, signs included. What sign has the sum?"
+        },
+        {
+          "text": "Reaction D",
+          "message": "With D the sum is far below zero. But which product of the first reaction would D use up?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.7",
+      "file": "src/content/lessons/unit-9/9-7-coupled-reactions.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Breaking ATP's bond releases energy, and glutamate takes that energy in",
+          "message": "Breaking a bond always takes energy in (topic 6.7). What makes the overall change favored must be something else."
+        },
+        {
+          "text": "ATP is a catalyst, and it brings ΔG° for making glutamine below zero",
+          "message": "A catalyst is not used up, and it changes how fast a reaction goes. Can it change ΔG° (topic 9.4)?"
+        },
+        {
+          "text": "ATP's reaction warms the cell until the unfavored reaction becomes favored",
+          "message": "A living cell stays at one temperature, so nothing here depends on warming. Notice that ATP is used up in the reaction."
+        },
+        {
+          "text": "ATP gives glutamate a phosphate group, so two reactions go as one",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "9.7",
+      "file": "src/content/lessons/unit-9/9-7-coupled-reactions.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Burning carbon is favored, so with carbon present the overall reaction is favored",
+          "message": "A favored partner is one of two conditions. Add the two ΔG° values, signs included, and look at the sign of the sum."
+        },
+        {
+          "text": "Carbon cuts the energy that must come from outside, but not to zero",
+          "message": null
+        },
+        {
+          "text": "The sum is above zero, so aluminum cannot be made from its oxide by any means",
+          "message": "Read the last three words of this option again. How many ways of making an unfavored change happen has this lesson described?"
+        },
+        {
+          "text": "A gas forms and the entropy rises, so the overall reaction must be favored",
+          "message": "A rise in entropy is one term of ΔG°, and ΔG° already includes it. Add the two ΔG° values given."
+        }
+      ]
+    },
+    {
+      "lesson": "9.7",
+      "file": "src/content/lessons/unit-9/9-7-coupled-reactions.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "A cell links amino acids into a protein, with ATP reacting at each step",
+          "message": "ATP reacting is a favored chemical reaction. Is that a partner reaction, or a source of energy outside the chemistry?"
+        },
+        {
+          "text": "Sodium takes the chlorine from TiCl₄ and leaves titanium metal",
+          "message": "Sodium combining with chlorine is itself a favored reaction, and it uses the chlorine. What is that arrangement called?"
+        },
+        {
+          "text": "Oxygen high in the atmosphere becomes ozone in ultraviolet light",
+          "message": null
+        },
+        {
+          "text": "The sulfur of Cu₂S burns to SO₂ in a stream of air and leaves copper",
+          "message": "Sulfur burning is a favored reaction, and it uses up the sulfur that Cu₂S gives up. What is that arrangement called?"
+        }
+      ]
     }
   ]
 }

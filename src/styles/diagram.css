@@ -1014,6 +1014,56 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   height: 0.875rem;
 }
 
+/* The explorer of ΔG° and K: a box of 100 particles beside a graph of K, on
+   a scale of powers of ten, against ΔG°. It uses the heating curve explorer's
+   ".is-beside" panels (the box in the 12rem column, the graph in the 22rem
+   one, side by side from 42rem) and the shared classes for the box's frame
+   (".molecule-box"), the key (".molecule-key"), the gridlines
+   (".diagram-gridline") and the lines (".diagram-curve"). The box drawing
+   holds no text, so it is small: 10rem at most, which keeps the box, the
+   graph and the slider on a 320 × 568 screen together. A is an open circle
+   and B a filled square, so the two differ in shape, not only in color. */
+.diagram-panels .diagram-plot.gibbs-and-k-box {
+  max-width: 12rem;
+}
+.diagram .gibbs-and-k-box > svg {
+  max-width: 10rem;
+  margin-inline: auto;
+}
+.gibbs-and-k-a {
+  fill: var(--card);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.gibbs-and-k-b {
+  fill: var(--u-ink);
+  stroke: var(--u-ink);
+  stroke-width: 1;
+}
+/* K = 1: firmer than the axes and the gridlines, and solid. */
+.gibbs-and-k-one {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.gibbs-and-k-one-name {
+  fill: var(--ink);
+  font-weight: 600;
+}
+.diagram .gibbs-and-k-key {
+  margin-top: 0.3rem;
+  justify-content: center;
+}
+.diagram .molecule-key.gibbs-and-k-key [data-key-particle] svg {
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+}
+/* The third temperature's dash pattern, beside the shared ".is-pattern-1"
+   and ".is-pattern-2", so each faint line has a pattern of its own. */
+.diagram-curve.gibbs-and-k-pattern-3 {
+  stroke-dasharray: 10 3 2 3;
+}
+
 @media print {
   .diagram-controls {
     display: none;
