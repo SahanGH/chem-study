@@ -75,7 +75,7 @@ Give every writer this section with Plan 3's guide.
 - Kinetic energy, not speed: Worksheet 1, 4(b) (the metal's atoms have more average kinetic energy and pass some to the water molecules in collisions; the metal's average kinetic energy falls and the water's rises); Worksheet 2, 1(c) and Ladder 4 (energy goes into the hydrogen-bond network instead of into the molecules' kinetic energy); Ladder 6.
 - "The energy released" where a source has heat sitting somewhere; "energy" for "internal energy" (Worksheet 1, 4(d): "What the block has is energy, and a temperature").
 - Worksheet 1, 5(b): the energy came from the water, which is the surroundings here.
-- Signs: Worksheet 2, 1(b): "15.7 kJ is released; $q = -15.7$ kJ". Free-response 1(c): the substitution shows ΔT = 26.6 − 100.0 = −73.4 °C and the metal's negative q; the rubric line keeps its three points and names "the metal's own temperature change, a fall of 73.4 °C".
+- Signs: Worksheet 2, 1(b): "15.7 kJ is released; $q = -15.7$ kJ". Free-response 1(c): the substitution shows ΔT = 24.6 − 98.0 = −73.4 °C and the metal's negative q; the rubric line keeps its three points and names "the metal's own temperature change, a fall of 73.4 °C".
 - Each introduction that has a ΔH beside an equation says once: "A ΔH written beside an equation is for the equation as written."
 - Worksheet 4, 1(c): the reason is lesson 6.7's (a bond enthalpy is the energy to take something apart, so the bonds broken are counted as energy in and the bonds formed as energy out).
 - The header formula ΔH = ΣD(broken) − ΣD(formed) is written in words with "≈".
