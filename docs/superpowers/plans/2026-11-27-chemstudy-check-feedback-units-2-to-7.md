@@ -130,3 +130,13 @@ Every Check with options has four options. 18 typed-number Checks have no `unit`
   - `tests/unit/check-dist.test.ts` built its sample lessons in topic 5.2. With Unit 5 on the list they would need messages, so they moved to topic 6.2, a unit with no lessons. The test of the list now asks about Unit 6.
   - The two browser tests that click lesson 5.2's first Check (`lesson.spec.ts`, `a11y.spec.ts`) expect that option's message.
 - **The sweep:** 123 wrong answers tried, no problems.
+
+### Unit 7
+
+- **The writer:** 159 messages (99 for options, 60 slips across 16 typed-number Checks).
+  - **Moves:** none. Answers stay at 6, 9, 11, 7, already in range, so the balance test passed before the messages too.
+  - No tolerance and no changed sentence.
+  - **Two slips are listed at both three and two figures** with one message (lesson 7.4 Check 2: 2.56e-3 and 2.6e-3; lesson 7.7 Check 4: 1.52e-4 and 1.5e-4), because the explanations quote them to two figures. The fact-check found this sound.
+- **The first fact-check** found no MUST finding. It made three points, all on slips (lesson 7.8 Check 3; 7.12 Check 2; 7.5 Check 2), all taken.
+- **The second check** passed all three. On its advice, lesson 7.12's message was made stricter, because it told the student the typed number was twice the answer.
+- **The sweep:** 159 wrong answers tried, no problems.

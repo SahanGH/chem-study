@@ -102,7 +102,15 @@ The trap is to multiply $K$ by $n$. The coefficients are exponents in the expres
 
 So far, one mixture has four ways of writing its reaction, and four values: 10⁹⁰, 10⁻⁹⁰, 10⁴⁵ and 10¹⁸⁰. All four say the same thing about the flask.
 
-<Check numeric="2.5e2">
+<Check
+  numeric="2.5e2"
+  slips={{
+    "62500": "Did you reverse the equation and stop? Every coefficient is halved as well.",
+    "4.0e-3": "Did you halve the equation without reversing it? Look at which side H₂S is on.",
+    "31250": "Did you divide 1/K by 2? Halving the coefficients does not halve the constant.",
+    "3.91e9": "Did you square 1/K? Squaring goes with doubling the coefficients. Here they are halved.",
+  }}
+>
 Hydrogen sulfide, the gas that gives rotten eggs their smell, breaks apart when it is heated strongly:
 
 $$
@@ -203,7 +211,14 @@ A $K$ belongs to its equation as written, and to one temperature. Reverse the eq
 
 </KeyIdea>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "Constants are never added. What happens to the constants when equations are added?",
+    2: "A factor of 2 in an equation is not a multiplier of K. What does it become?",
+    4: "Add the steps as written. Does every SO₃ that step 1 makes cancel?",
+  }}
+>
 Sulfur dioxide from a smokestack can end up as sulfuric acid in two steps. Step 1, with constant $K_1$:
 
 $$
@@ -376,7 +391,15 @@ The result, 6.4 × 10¹², is very large, so this reaction too goes essentially 
 
 </Worked>
 
-<Check numeric="4.5">
+<Check
+  numeric="4.5"
+  slips={{
+    "15": "Did you forget to square K₁? Reaction 1 has to be doubled to give 2 X and 2 Z.",
+    "30": "Did you double K₁? Doubling an equation squares its constant.",
+    "0.0018": "Did you leave reaction 2 as written? The target has W on the left.",
+    "0.222": "Did you invert the wrong constant? Check which reaction has to be reversed to match the target.",
+  }}
+>
 X, Y, Z and W are made-up gases. At a certain temperature, reaction 1 has $K_c$ = 0.30. Call that constant $K_1$.
 
 $$
@@ -446,7 +469,14 @@ $Q$ is built from the equation in exactly the same way as $K$ (topic 7.3). The o
 
 One thing follows that matters in practice. When you compare $Q$ with $K$, both must belong to the same equation, written the same way. A $Q$ worked out for one way of writing the reaction cannot be compared with a $K$ quoted for another.
 
-<Check answer={4}>
+<Check
+  answer={4}
+  misses={{
+    1: "The mixture has not changed, but the equation has. What does reversing an equation do to Q and K?",
+    2: "Compare Q with K for the equation as now written. Q moves toward K: which substances form as it does?",
+    3: "Reversing never makes Q or K negative. What does it do to each?",
+  }}
+>
 At a certain high temperature $K_c$ = 5.0 for this equation:
 
 $$

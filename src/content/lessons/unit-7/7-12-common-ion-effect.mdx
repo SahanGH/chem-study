@@ -68,7 +68,14 @@ A common ion lowers a salt's solubility. It does not change $K_{sp}$. The ion co
 
 </KeyIdea>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "Water lowers both ion concentrations. Does that take Q above Ksp or below it?",
+    2: "Look for an ion in common with lead(II) iodide. Does potassium nitrate give one?",
+    4: "More of the same solution has the same concentrations. Does Q change?",
+  }}
+>
 A saturated solution of lead(II) iodide, PbI₂, is filtered. The clear solution still holds as much dissolved salt as it can, but no solid. Which addition makes yellow solid lead(II) iodide appear in it?
 
 - A little distilled water
@@ -162,7 +169,16 @@ Calculate the molar solubility of calcium iodate, Ca(IO₃)₂, in 0.200 M potas
 
 </Worked>
 
-<Check numeric="8.50e-5" unit="M">
+<Check
+  numeric="8.50e-5"
+  unit="M"
+  slips={{
+    "1.70e-4": "That is what writing [F⁻] as s gives. Each SrF₂ that dissolves gives two F⁻, so build the equilibrium row again.",
+    "1.03e-3": "That is the solubility in pure water. Here [Sr²⁺] starts at 0.150 M, not at 0.",
+    "1.20e-4": "Did you write 2s² for the fluoride? The whole of 2s is squared: (2s)².",
+    "7.22e-9": "Did you stop before the square root? That number is s², not s.",
+  }}
+>
 Strontium fluoride, SrF₂, has $K_{sp}$ = 4.33 × 10⁻⁹ at 25 °C. Calculate its molar solubility in 0.150 M strontium nitrate, Sr(NO₃)₂.
 
 <div slot="why">
@@ -225,7 +241,13 @@ has to be solved with the quadratic formula, as in topic 7.7, which gives $s$ = 
 
 The table also runs the other way. If you are told how much of a salt dissolves in a solution that holds a common ion, fill in the equilibrium row with numbers and put them into the $K_{sp}$ expression.
 
-<Check numeric="3.17e-8">
+<Check
+  numeric="3.17e-8"
+  slips={{
+    "3.92e-12": "Did you square the given solubility? That fits pure water. Here most of the iodate comes from the potassium iodate.",
+    "1.24e-4": "Did you divide? Ksp is the product of the two ion concentrations.",
+  }}
+>
 Suppose a measurement finds that the molar solubility of silver iodate, AgIO₃, at 25 °C in 0.0160 M potassium iodate, KIO₃, is 1.98 × 10⁻⁶ M. What value of $K_{sp}$ does that give?
 
 <div slot="why">
@@ -325,7 +347,14 @@ Procedure A adds exactly as many moles of sulfate as there are moles of lead. Pr
 
 </Worked>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "A rinse washes away the solution clinging to the solid, and it dissolves a little of the solid too. Compare the two liquids.",
+    3: "Ksp is indeed the same in both liquids. Is the solubility the same when one liquid holds a common ion?",
+    4: "Dissolving is reversible. A precipitate in contact with fresh liquid always dissolves a little.",
+  }}
+>
 The procedure says to rinse the lead(II) sulfate on the filter with cold, dilute sulfuric acid, H₂SO₄(aq), a solution that holds sulfate ions. A student rinses it with the same volume of distilled water instead, then dries and weighs the solid. Compared with following the procedure, the mass of lead the student reports is:
 
 - Higher, because the water leaves sulfate ions behind on the solid, which add to its mass

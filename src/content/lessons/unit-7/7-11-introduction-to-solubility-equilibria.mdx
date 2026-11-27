@@ -70,7 +70,14 @@ $K_{sp}$ is the equilibrium constant for a solid salt dissolving into its ions. 
 
 </KeyIdea>
 
-<Check answer={4}>
+<Check
+  answer={4}
+  misses={{
+    1: "Check the coefficient in the dissolving equation. It becomes an exponent.",
+    2: "The solid is left out of the expression, so nothing goes on the bottom.",
+    3: "The coefficient does not multiply the concentration. What does it become?",
+  }}
+>
 Silver chromate, Ag₂CrO₄, is a dark red solid that dissolves very slightly in water. Which of these is its $K_{sp}$ expression?
 
 $$
@@ -200,7 +207,16 @@ The two examples show the pattern:
 
 These come from the dissolving equation, and they are not worth memorizing apart from it. Build them each time.
 
-<Check numeric="1.03e-3" unit="M">
+<Check
+  numeric="1.03e-3"
+  unit="M"
+  slips={{
+    "6.58e-5": "Did you take a square root? That fits a salt that gives two ions. SrF₂ gives three.",
+    "1.63e-3": "Did you leave out the 4? [F⁻] is 2s, and it is squared.",
+    "1.29e-3": "Did you write 2s³? The whole of 2s is squared: (2s)².",
+    "2.05e-3": "That is [F⁻], which is 2s. The molar solubility is s.",
+  }}
+>
 Strontium fluoride, SrF₂, has $K_{sp}$ = 4.33 × 10⁻⁹ at 25 °C. Calculate its molar solubility in water.
 
 <div slot="why">
@@ -270,7 +286,15 @@ Suppose a measurement finds that a liter of saturated thallium(I) chloride solut
 
 For a salt that gives three ions the road is the same, but the two ion concentrations are not equal, and one of them is squared.
 
-<Check numeric="9.84e-9">
+<Check
+  numeric="9.84e-9"
+  slips={{
+    "1.97e-8": "Did you set [Pb²⁺] equal to [I⁻]? Two iodide ions dissolve for every lead ion.",
+    "7.87e-8": "Did you use 4s³ with 2.70 × 10⁻³ M as s? The number given is already [I⁻], which is 2s.",
+    "3.65e-6": "Did you forget the square? The coefficient 2 on I⁻ becomes an exponent.",
+    "3.94e-8": "Did you double the given number to get [Pb²⁺]? Check which ion there is more of in the solution.",
+  }}
+>
 Suppose a measurement on a saturated solution of lead(II) iodide, PbI₂, at 25 °C finds [I⁻] = 2.70 × 10⁻³ M. What $K_{sp}$ does that give?
 
 <div slot="why">
@@ -311,7 +335,14 @@ Which of two salts is more soluble? If they give the same number of ions, the on
 
 If the salts give different numbers of ions, their $K_{sp}$ values cannot be compared directly, because one is $s^2$ and the other is $4s^3$. Strontium fluoride's $K_{sp}$ (4.33 × 10⁻⁹) is about 80 times smaller than strontium sulfate's (3.44 × 10⁻⁷). Yet its calculated molar solubility, 1.03 × 10⁻³ M (from the strontium fluoride question above), is about 1.8 times that of SrSO₄, 5.87 × 10⁻⁴ M. When the ion ratios differ, calculate $s$ for each salt and compare those.
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "That is the ratio of the Ksp values. The salts give different numbers of ions, so compare solubilities.",
+    2: "That is the square root of the ratio of the Ksp values. Find each salt's solubility, then compare.",
+    4: "Check the expression for barium iodate. With s and 2s for its ions, is Ksp equal to s³?",
+  }}
+>
 At 25 °C, silver iodate, AgIO₃, has $K_{sp}$ = 3.17 × 10⁻⁸ and barium iodate, Ba(IO₃)₂, has $K_{sp}$ = 4.01 × 10⁻⁹. By calculation from these values, which has the greater molar solubility in water, and by about how much?
 
 - Silver iodate, about 8 times as soluble
@@ -408,7 +439,14 @@ A chemist pours 25.0 mL of 0.120 M calcium nitrate, Ca(NO₃)₂, into 75.0 mL o
 
 </Worked>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Mixing dilutes both solutions. Find each concentration in the 100.0 mL mixture before working out Q.",
+    3: "Check the exponent. The formula Ba(IO₃)₂ gives two iodate ions, so [IO₃⁻] is squared in Q.",
+    4: "Potassium and nitrate ions take no part. Decide by comparing Q with Ksp.",
+  }}
+>
 20.0 mL of 0.00400 M barium nitrate, Ba(NO₃)₂, is added to 80.0 mL of 0.00150 M potassium iodate, KIO₃. Does barium iodate, Ba(IO₃)₂ ($K_{sp}$ = 4.01 × 10⁻⁹), precipitate?
 
 - Yes: $Q$ = 9.00 × 10⁻⁹, which is larger than $K_{sp}$

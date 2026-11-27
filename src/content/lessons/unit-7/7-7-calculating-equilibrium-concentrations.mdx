@@ -48,7 +48,14 @@ $Q$ less than $K$: the reaction runs toward products. $Q$ greater than $K$: it r
 
 </KeyIdea>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Check the exponent. The coefficient 2 on H₂ becomes an exponent in Q.",
+    3: "At equilibrium Q equals K. Work out Q from the two concentrations and compare it with 8.1.",
+    4: "Carbon is a solid, so it is left out of Q. Its amount does not matter, as long as some is there.",
+  }}
+>
 In a reactor, solid carbon and hydrogen make methane:
 
 $$
@@ -105,7 +112,14 @@ The figure shows the layout for a made-up equation, 2 A + B ⇌ 3 C, running for
 
 One more thing: $x$ has to make sense. It is positive, and it cannot be so large that any concentration comes out negative.
 
-<Check answer={4}>
+<Check
+  answer={4}
+  misses={{
+    1: "Check the signs. Q is greater than K, so which way does the reaction run?",
+    2: "Two things to check: the sizes follow the coefficients, and the signs follow the direction the reaction runs.",
+    3: "Check the sizes. Each change is x times the coefficient in the equation.",
+  }}
+>
 For the made-up reaction
 
 $$
@@ -209,7 +223,16 @@ At the cell's temperature, $K_c$ = 4.30. Find the three concentrations at equili
 
 The square root worked because the two reactants started equal, which made the bottom of the expression a perfect square like the top. Look for that before reaching for anything harder. Another easy case is when $x$ appears only to the first power, as in the next question.
 
-<Check numeric="0.244" unit="M">
+<Check
+  numeric="0.244"
+  unit="M"
+  slips={{
+    "0.184": "That is x. Add it to the trans-2-butene that was there at the start.",
+    "0.203": "Did you leave out the trans-2-butene that was there at the start? It belongs in the top of the fraction.",
+    "0.116": "That is the cis concentration, or what an upside-down fraction gives. The question asks for trans.",
+    "0.630": "Did you multiply K by the starting cis concentration? The cis falls by x as the trans rises by x.",
+  }}
+>
 Over a catalyst, the two forms of 2-butene, C₄H₈, turn into each other. They have the same atoms, arranged differently:
 
 $$
@@ -390,7 +413,16 @@ and is solved with the quadratic formula; it gives $x$ = 0.119 atm here, so the 
 
 Why did one case pass and the other fail? It is not $K$ alone that decides, but how large the starting amount is compared with $K$. In the first case the starting pressure was 25,000 times $K_p$ (1.30 divided by 5.2 × 10⁻⁵). In the second it was only about 110 times $K_p$ (1.30 divided by 0.0120). For a reaction like this one, where one particle becomes two, the larger the starting amount is beside $K$, the smaller the share of it that reacts. There is no cutoff worth memorizing, so always do the check.
 
-<Check numeric="1.2e-4" unit="M">
+<Check
+  numeric="1.2e-4"
+  unit="M"
+  slips={{
+    "6.04e-5": "That is x, which is [O₂]. The change row gives [CO] as a multiple of x.",
+    "9.58e-5": "Did your change row have a plain x for every gas? The sizes follow the coefficients.",
+    "1.52e-4": "Did you write (2x)² as 2x²? The 2 is squared along with the x.",
+    "1.5e-4": "Did you write (2x)² as 2x²? The 2 is squared along with the x.",
+  }}
+>
 Inside a very hot furnace a little carbon dioxide breaks apart:
 
 $$
@@ -442,7 +474,14 @@ This is the reaction that opened topic 7.5, where $K_p$ was about 10⁻⁹⁰ at
 </div>
 </Check>
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "Work out x for each start and divide it by the starting concentration. Which start leaves x under 5 percent?",
+    3: "A small K is not enough. It has to be small compared with the starting concentration, so run the check for each start.",
+    4: "Run the 5 percent check for each start: find x with the approximation, then divide it by the starting concentration.",
+  }}
+>
 For the made-up reaction
 
 $$
