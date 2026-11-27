@@ -1,5 +1,15 @@
 import { describe, expect, it } from 'vitest';
-import { BISECTION, KW_25C, PRECISION_PH, hydronium, shortcutHydronium, solve, type Solution } from '../../src/lib/acid-base';
+import {
+  BISECTION,
+  KW_25C,
+  PRECISION_PH,
+  fractionIonized,
+  hydronium,
+  shortcutHydronium,
+  solve,
+  weakBaseSolution,
+  type Solution,
+} from '../../src/lib/acid-base';
 
 // Every pH below is written out from lesson 8.3's brief, "Diagram data: the shared solver": the root
 // of the full charge balance to six decimal places, found by the brief's own script with its own
@@ -181,14 +191,36 @@ describe('what the solver returns besides [H₃O⁺]', () => {
     expect(s.hydroxide).toBe(2.9e-15 / s.hydronium);
   });
 
-  it('gives the same root every time: a fixed number of halvings', () => {
-    const solution = { weakAcid: 0.1, ka: 1.8e-4 };
-    expect(hydronium(solution)).toBe(hydronium(solution));
-    expect(hydronium({ weakAcid: 0.1, ka: 1.8e-4, cations: 0, anions: 0, kw: KW_25C })).toBe(hydronium(solution));
+  it('gives a pinned root, to well beyond 1e-9 in pH, and the same root when the defaults are written out', () => {
+    expect(hydronium({ weakAcid: 0.1, ka: 1.8e-4 })).toBeCloseTo(4.153595e-3, 9);
+    expect(hydronium({ weakAcid: 0.1, ka: 1.8e-4, cations: 0, anions: 0, kw: KW_25C })).toBe(hydronium({ weakAcid: 0.1, ka: 1.8e-4 }));
   });
 
-  it('ignores Ka when there is no weak acid', () => {
+  it('finds the root for a very dilute solution, 1e-300 M, at pH 7', () => {
+    expect(pH({ anions: 1e-300 })).toBeCloseTo(7, 9);
+    expect(pH({ weakAcid: 1e-300, ka: 1e-5 })).toBeCloseTo(7, 9);
+  });
+
+  it('finds the root with a weak acid, cations and anions together, just under 10 M', () => {
+    const solution = { weakAcid: 9.99, ka: 1e-5, cations: 9.99, anions: 9.99 };
+    const s = solve(solution);
+    const positive = s.hydronium + 9.99;
+    const negative = s.hydroxide + 9.99 + s.baseForm;
+    expect(Math.abs(positive - negative)).toBeLessThanOrEqual(1e-8 * Math.max(positive, negative));
+    expect(s.pH).toBeGreaterThan(BISECTION.lowPH);
+    expect(s.pH).toBeLessThan(BISECTION.highPH);
+  });
+
+  it('does not overflow for a Ka near the largest number', () => {
+    expect(pH({ weakAcid: 2, ka: Number.MAX_VALUE })).toBeCloseTo(pH({ anions: 0, cations: 0, weakAcid: 2, ka: 1e100 }), 6);
+  });
+
+  it('ignores Ka when there is no weak acid, whatever it is, and needs none', () => {
     expect(hydronium({ weakAcid: 0, ka: 0.5, anions: 0.01 })).toBe(hydronium({ anions: 0.01 }));
+    for (const ka of [-1, 0, Number.NaN, Number.POSITIVE_INFINITY]) {
+      expect(hydronium({ weakAcid: 0, ka, anions: 0.01 })).toBe(hydronium({ anions: 0.01 }));
+    }
+    expect(hydronium({ weakAcid: 0, anions: 0.01 })).toBe(hydronium({ anions: 0.01 }));
   });
 
   it('finds a root inside the interval for the strongest solutions it takes', () => {
@@ -223,6 +255,13 @@ describe('the shortcut', () => {
     expect(() => shortcutHydronium(0, 0.1)).toThrow(/0/);
     expect(() => shortcutHydronium(1e-4, -0.1)).toThrow(/-0\.1/);
   });
+
+  it('refuses a concentration that is not a number, and a concentration of zero', () => {
+    expect(() => shortcutHydronium(1e-4, Number.NaN)).toThrow(RangeError);
+    expect(() => shortcutHydronium(1e-4, Number.NaN)).toThrow(/NaN/);
+    expect(() => shortcutHydronium(1e-4, 0)).toThrow(RangeError);
+    expect(() => shortcutHydronium(1e-4, 0)).toThrow(/concentration/);
+  });
 });
 
 describe('bad input', () => {
@@ -238,6 +277,8 @@ describe('bad input', () => {
     ['a concentration that is not a number', { anions: Number.NaN }, /anions.*NaN/],
     ['an infinite concentration', { cations: Number.POSITIVE_INFINITY }, /cations.*Infinity/],
     ['an infinite Ka', { weakAcid: 0.1, ka: Number.POSITIVE_INFINITY }, /Ka.*Infinity/],
+    ['a Kw that is not a number', { kw: Number.NaN }, /Kw.*NaN/],
+    ['an infinite Kw', { kw: Number.POSITIVE_INFINITY }, /Kw.*Infinity/],
     ['a concentration of 10 M', { anions: 10 }, /anions.*10\b/],
     ['a weak acid at 12 M', { weakAcid: 12, ka: 1e-5 }, /weak acid.*12\b/],
   ];
@@ -249,7 +290,83 @@ describe('bad input', () => {
     });
   }
 
+  it('throws a RangeError that names Kw when the root lies outside the pH interval', () => {
+    expect(() => hydronium({ kw: 1e10 })).toThrow(RangeError);
+    expect(() => hydronium({ kw: 1e10 })).toThrow(/Kw = 10000000000\b/);
+    expect(() => solve({ kw: 1e10 })).toThrow(RangeError);
+    expect(() => hydronium({ kw: 1e-40 })).toThrow(RangeError);
+    expect(() => hydronium({ kw: 1e-40 })).toThrow(/Kw = 1e-40/);
+    expect(() => hydronium({ weakAcid: 0.1, ka: 1e-5, kw: 1e10 })).toThrow(/Kw/);
+  });
+
   it('takes a concentration just under 10 M', () => {
     expect(() => hydronium({ anions: 9.99 })).not.toThrow();
+  });
+});
+
+describe('fractionIonized', () => {
+  it('is Ka/(Ka + h)', () => {
+    expect(fractionIonized(1.8e-4, 1.8e-4)).toBe(0.5);
+    const h = hydronium({ weakAcid: 0.1, ka: 1.8e-4 });
+    expect(fractionIonized(1.8e-4, h)).toBe(1.8e-4 / (1.8e-4 + h));
+    // About h/C, the shortcut's own fraction, since water's ions add only a little.
+    expect(fractionIonized(1.8e-4, h)).toBeCloseTo(h / 0.1, 6);
+  });
+
+  it('refuses a Ka or an [H₃O⁺] that is not positive', () => {
+    expect(() => fractionIonized(0, 1e-3)).toThrow(/Ka/);
+    expect(() => fractionIonized(1e-4, 0)).toThrow(RangeError);
+    expect(() => fractionIonized(1e-4, Number.NaN)).toThrow(/NaN/);
+  });
+});
+
+describe('weakBaseSolution', () => {
+  it('maps a base with its conjugate acid: weak acid = B + HB⁺, Ka = Kw/Kb, cations = B + HB⁺, anions = HB⁺', () => {
+    const solution = weakBaseSolution({ base: 0.1, conjugateAcid: 0.1, kb: ETHANOLAMINE_KB });
+    expect(solution.weakAcid).toBeCloseTo(0.2, 15);
+    expect(solution.ka).toBe(KW_25C / ETHANOLAMINE_KB);
+    expect(solution.cations).toBeCloseTo(0.2, 15);
+    expect(solution.anions).toBe(0.1);
+    expect(solution.kw).toBe(KW_25C);
+  });
+
+  it('adds other cations and anions to the right sides, and uses the Kw it is given', () => {
+    const solution = weakBaseSolution({ base: 0.1, conjugateAcid: 0.05, kb: 1e-5, cations: 0.02, anions: 0.03, kw: 2.9e-15 });
+    expect(solution.weakAcid).toBeCloseTo(0.15, 15);
+    expect(solution.ka).toBe(2.9e-15 / 1e-5);
+    expect(solution.cations).toBeCloseTo(0.17, 15);
+    expect(solution.anions).toBeCloseTo(0.08, 15);
+    expect(solution.kw).toBe(2.9e-15);
+  });
+
+  it('gives the base buffer at pH 9.504872, the pKa of the conjugate acid, not the 5.10 of the wrong mapping', () => {
+    const solution = weakBaseSolution({ base: 0.1, conjugateAcid: 0.1, kb: ETHANOLAMINE_KB });
+    expect(pH(solution).toFixed(6)).toBe('9.504872');
+    expect(pH(solution)).toBeCloseTo(pH({ weakAcid: 0.2, ka: 3.125e-10, cations: 0.2, anions: 0.1 }), 9);
+    const [b, hb] = [solve(solution).baseForm, solve(solution).acidForm];
+    expect(b).toBeCloseTo(0.1, 3);
+    expect(hb).toBeCloseTo(0.1, 3);
+  });
+
+  it('gives a plain weak base, 0.25 M ethanolamine, at pH 11.449088', () => {
+    const solution = weakBaseSolution({ base: 0.25, kb: ETHANOLAMINE_KB });
+    expect(solution.anions).toBe(0);
+    expect(pH(solution).toFixed(6)).toBe('11.449088');
+    const s = solve(solution);
+    // [HB⁺] = [OH⁻] nearly, and B + HB⁺ is the whole 0.25 M.
+    expect(Math.abs(s.acidForm - s.hydroxide) / s.hydroxide).toBeLessThan(1e-6);
+    expect(s.acidForm + s.baseForm).toBeCloseTo(0.25, 12);
+  });
+
+  it('throws a RangeError that names the value for a bad Kb, Kw or concentration', () => {
+    expect(() => weakBaseSolution({ base: 0.1, kb: 0 })).toThrow(/Kb.*\b0\b/);
+    expect(() => weakBaseSolution({ base: 0.1, kb: Number.NaN })).toThrow(/Kb.*NaN/);
+    expect(() => weakBaseSolution({ base: 0.1, kb: 1e-5, kw: -1 })).toThrow(/Kw.*-1/);
+    expect(() => weakBaseSolution({ base: -0.1, kb: 1e-5 })).toThrow(/weak base.*-0\.1/);
+    expect(() => weakBaseSolution({ base: 0.1, conjugateAcid: -0.2, kb: 1e-5 })).toThrow(/conjugate acid.*-0\.2/);
+  });
+
+  it('refuses a total of cations that reaches 10 M, since the base itself counts among them', () => {
+    expect(() => hydronium(weakBaseSolution({ base: 6, kb: 1e-5, cations: 5 }))).toThrow(/cations.*11/);
   });
 });

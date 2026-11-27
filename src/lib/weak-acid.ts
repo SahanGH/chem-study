@@ -214,8 +214,6 @@ export function concentrationValueText(position: number): string {
   return `${concentrationText(position)} molar`;
 }
 
-const percentIonized = (ka: number, h: number) => 100 * fractionIonized(ka, h);
-
 /** The solution at a setting: the full equilibrium, the shortcut and its check, and the strong acid. */
 export function state(acid: AcidId, position: number): WeakAcidState {
   assertAcid(acid);
@@ -223,7 +221,7 @@ export function state(acid: AcidId, position: number): WeakAcidState {
   const { ka } = ACIDS[acid];
   const c = units / UNITS_PER_MOLAR;
   const h = hydronium({ weakAcid: c, ka });
-  const percent = percentIonized(ka, h);
+  const percent = 100 * fractionIonized(ka, h);
   const x = shortcutHydronium(ka, c);
   const check = (100 * x) / c;
   const pH = -Math.log10(h);
@@ -355,7 +353,7 @@ export interface CurvePoint {
 export function curve(acid: AcidId): readonly CurvePoint[] {
   assertAcid(acid);
   const { ka } = ACIDS[acid];
-  const at = (c: number): CurvePoint => ({ logConcentration: Math.log10(c), percent: percentIonized(ka, hydronium({ weakAcid: c, ka })) });
+  const at = (c: number): CurvePoint => ({ logConcentration: Math.log10(c), percent: 100 * fractionIonized(ka, hydronium({ weakAcid: c, ka })) });
   const slider = CONCENTRATION_UNITS.map((units) => at(units / UNITS_PER_MOLAR));
   const decades = AXES.logLeft - AXES.logRight;
   const grid = Array.from({ length: decades * CURVE_STEPS_PER_DECADE + 1 }, (_, k) => -k / CURVE_STEPS_PER_DECADE)

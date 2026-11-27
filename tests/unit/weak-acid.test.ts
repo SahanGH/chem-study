@@ -284,6 +284,12 @@ describe('rounding, half up from the unrounded value', () => {
     expect(shownPercent(9.97)).toBe('10');
     expect(shownPercent(0.996)).toBe('1.0');
   });
+
+  it('rounds exact ties half up', () => {
+    expect(shownPercent(9.95)).toBe('10');
+    expect(shownPH(-0.005)).toBe('0.00');
+    expect(shownPercent(99.5)).toBe('100');
+  });
 });
 
 describe('the model', () => {
@@ -295,7 +301,8 @@ describe('the model', () => {
       expect(s.concentration).toBe(c);
       expect(s.hydronium).toBe(hydronium({ weakAcid: c, ka }));
       expect(s.pH).toBe(-Math.log10(s.hydronium));
-      expect(s.percent).toBe((100 * ka) / (ka + s.hydronium));
+      // 100 × Ka/(Ka + h), which can differ from (100 Ka)/(Ka + h) in the last place.
+      expect(s.percent).toBeCloseTo((100 * ka) / (ka + s.hydronium), 12);
       expect(s.ions).toBe(Math.floor(s.percent + 0.5));
       expect(s.shortcutHydronium).toBe(Math.sqrt(ka * c));
       expect(s.shortcutPH).toBe(-Math.log10(s.shortcutHydronium));
