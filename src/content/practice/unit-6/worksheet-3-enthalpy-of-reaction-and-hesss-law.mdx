@@ -1,0 +1,410 @@
+---
+title: "Worksheet 3: Enthalpy of reaction and Hess's law"
+kind: worksheet
+order: 4
+topics: ["6.6", "6.8", "6.9"]
+summary: Seven questions on what an enthalpy change means for an equation as written, what reversing and scaling an equation do to it, and adding equations by Hess's law.
+---
+
+Work each question on paper before you open its answer.
+
+A $\Delta H$ written beside an equation is for the equation as written. So it changes when the equation does. Multiply an equation by a number, and its $\Delta H$ is multiplied by the same number. Reverse an equation, and the sign of its $\Delta H$ changes: change it every time. Add equations, and their $\Delta H$ values add.
+
+## Questions
+
+<Question number={1} title="Burning methane" topic="6.6, 6.9">
+
+Methane burns in oxygen:
+
+$$
+\begin{aligned}
+&\ce{CH4(g) + 2O2(g) ->} \\
+&\quad \ce{CO2(g) + 2H2O(l)} \\
+&\Delta H = -890.5\ \text{kJ}
+\end{aligned}
+$$
+
+<Part label="a">
+
+Energy released per mole of $\ce{CH4}$: <Blank />
+
+<Answer>
+
+890.5 kJ. The equation as written burns one mole of methane, so its $\Delta H$ is the energy for each mole of methane. The minus sign says that the energy is released, and an amount released is written without it.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Energy released by 0.500 mol of $\ce{CH4}$: <Blank />
+
+<Answer>
+
+Multiply the moles of methane by the energy released for each mole:
+
+$$
+\begin{aligned}
+&0.500\ \text{mol} \\
+&\quad \times 890.5\ \text{kJ/mol} \\
+&= 445.25\ \text{kJ}
+\end{aligned}
+$$
+
+To three significant figures, 445 kJ is released.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+$\Delta H$ for this equation: <Blank />
+
+$$
+\begin{aligned}
+&\ce{2CH4(g) + 4O2(g) ->} \\
+&\quad \ce{2CO2(g) + 4H2O(l)}
+\end{aligned}
+$$
+
+<Answer>
+
+Every coefficient is doubled, so $\Delta H$ is doubled:
+
+$$
+\begin{aligned}
+\Delta H &= 2(-890.5) \\
+&= -1{,}781\ \text{kJ}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+$\Delta H$ for this equation: <Blank />
+
+$$
+\begin{aligned}
+&\ce{CO2(g) + 2H2O(l) ->} \\
+&\quad \ce{CH4(g) + 2O2(g)}
+\end{aligned}
+$$
+
+<Answer>
+
+$+890.5\ \text{kJ}$. This is the equation reversed, so the sign of $\Delta H$ changes and its size stays the same.
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+Parts (b), (c) and (d) made three changes: taking half a mole, doubling the equation and reversing it. Which of those three manipulations changed the *sign*, and which changed the *size*?
+
+<Answer>
+
+Reversing changed the sign; doubling the coefficients changed the size. Taking half a mole changed the amount of energy but is not a change to the thermochemical equation itself.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={2} title="Burning carbon monoxide" topic="6.6, 6.9">
+
+Carbon monoxide burns in oxygen:
+
+$$
+\begin{aligned}
+&\ce{2CO(g) + O2(g) -> 2CO2(g)} \\
+&\Delta H = -566\ \text{kJ}
+\end{aligned}
+$$
+
+<Part label="a">
+
+Energy released per mole of $\ce{CO}$: <Blank />
+
+<Answer>
+
+The equation as written burns two moles of carbon monoxide, so each mole releases half of the total:
+
+$$
+\frac{566}{2} = 283\ \text{kJ}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$\Delta H$ for this equation: <Blank />
+
+$$
+\ce{2CO2(g) -> 2CO(g) + O2(g)}
+$$
+
+<Answer>
+
+$+566\ \text{kJ}$. This is the equation reversed, so the sign of $\Delta H$ changes.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+$\Delta H$ for this equation: <Blank />
+
+$$
+\ce{CO(g) + 1/2 O2(g) -> CO2(g)}
+$$
+
+<Answer>
+
+Every coefficient is halved, so $\Delta H$ is halved:
+
+$$
+\frac{-566}{2} = -283\ \text{kJ}
+$$
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={3} title="Hess's law in words" topic="6.9">
+
+Hess's law is the rule behind questions 4 to 6.
+
+<Part label="a">
+
+State Hess's law, and say why it holds.
+
+<Answer>
+
+The enthalpy change of a reaction is the same whether it happens in one step or several, so reactions can be added and their $\Delta H$ values add with them.
+
+It holds because energy is conserved. Suppose two routes between the same start and the same end had different totals. You could then run one route forward and the other backward, finish with the substances back where they began, and have energy left over from nothing. That cannot happen, so the enthalpy change between a given start and a given end cannot depend on the route.
+
+</Answer>
+
+</Part>
+
+<Part label="b" beyond>
+
+A quantity whose change depends only on the start and the end has a name. What is it?
+
+<Answer>
+
+A state function. Enthalpy is one: its change depends only on the initial and final states, not on the route between them. That is the property of enthalpy that makes Hess's law valid.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={4} title="Carbon to carbon monoxide" topic="6.8, 6.9">
+
+You are given two equations. Equation (1):
+
+$$
+\begin{aligned}
+&\ce{C(s, graphite) + O2(g) ->} \\
+&\quad \ce{CO2(g)} \\
+&\Delta H = -393.5\ \text{kJ}
+\end{aligned}
+$$
+
+Equation (2):
+
+$$
+\begin{aligned}
+&\ce{CO(g) + 1/2 O2(g) -> CO2(g)} \\
+&\Delta H = -283.0\ \text{kJ}
+\end{aligned}
+$$
+
+Find $\Delta H$ for this target equation:
+
+$$
+\begin{aligned}
+&\ce{C(s, graphite) + 1/2 O2(g) ->} \\
+&\quad \ce{CO(g)}
+\end{aligned}
+$$
+
+<Part label="a">
+
+Which equation must be reversed, and why?
+
+<Answer>
+
+Equation (2). $\ce{CO}$ must end up as a product of the target, but it is a reactant in (2), so (2) has to be reversed, and the sign of its $\Delta H$ changes with it.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Carry out the combination.
+
+<Answer>
+
+Equation (1) is used as written, with its $\Delta H$ of $-393.5\ \text{kJ}$. Equation (2) is reversed:
+
+$$
+\begin{aligned}
+&\ce{CO2(g) -> CO(g) + 1/2 O2(g)} \\
+&\Delta H = +283.0\ \text{kJ}
+\end{aligned}
+$$
+
+Adding, $\ce{CO2}$ cancels and half the $\ce{O2}$ cancels, which leaves the target:
+
+$$
+\begin{aligned}
+\Delta H &= -393.5 + 283.0 \\
+&= \mathbf{-110.5}\ \text{kJ}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The tabulated standard enthalpy of formation of $\ce{CO}$, $\Delta H_f^\circ$, is $-110.5\ \text{kJ/mol}$. What does the agreement confirm?
+
+<Answer>
+
+That the combination was done correctly. More generally, it shows that a standard enthalpy of formation is simply the $\Delta H$ of forming one mole of the compound from its elements in their standard states, which is exactly what the target reaction is. The agreement is not an independent test of the table: the table's value for $\ce{CO}$ was itself found from these two combustions.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Why is this reaction's $\Delta H$ hard to measure directly?
+
+<Answer>
+
+Carbon burned in a limited supply of oxygen gives a mixture of $\ce{CO}$ and $\ce{CO2}$: the burning cannot be made to stop at $\ce{CO}$ alone. So the energy measured is released by a mixture of two reactions and cannot be cleanly attributed to either one.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={5} title="A sign that was not changed" topic="6.9">
+
+A student works question 4, which is a Hess's law problem. The student reverses equation (2), as the problem needs, but forgets to change the sign of its $\Delta H$. The correct answer is $-110.5\ \text{kJ}$.
+
+<Part label="a">
+
+What does the student report?
+
+<Answer>
+
+$-676.5\ \text{kJ}$. With the sign left as it was, the two values are added as they were given:
+
+$$
+\begin{aligned}
+\Delta H &= -393.5 + (-283.0) \\
+&= -676.5\ \text{kJ}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+By how much is the student wrong, and how does that relate to the equation that was given the wrong sign?
+
+<Answer>
+
+By 566 kJ. That is exactly twice the size of equation (2)'s $\Delta H$, $-283.0\ \text{kJ}$, because failing to change a sign changes a term by twice its own size.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={6} title="Nitrogen to nitrogen dioxide" topic="6.9">
+
+You are given two equations:
+
+$$
+\begin{aligned}
+&\ce{N2(g) + O2(g) -> 2NO(g)} \\
+&\Delta H = +180\ \text{kJ}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\ce{2NO(g) + O2(g) -> 2NO2(g)} \\
+&\Delta H = -112\ \text{kJ}
+\end{aligned}
+$$
+
+Find $\Delta H$ for this equation:
+
+$$
+\ce{N2(g) + 2O2(g) -> 2NO2(g)}
+$$
+
+<Answer>
+
+Both equations are used as written and simply added; $\ce{NO}$ cancels.
+
+$$
+\begin{aligned}
+\Delta H &= +180 + (-112) \\
+&= \mathbf{+68}\ \text{kJ}
+\end{aligned}
+$$
+
+The reaction is endothermic overall.
+
+</Answer>
+
+</Question>
+
+<Question number={7} title="Fractions as coefficients" topic="6.6, 6.8">
+
+A thermochemical equation is written with fractional coefficients:
+
+$$
+\begin{aligned}
+&\ce{H2(g) + 1/2 O2(g) -> H2O(l)} \\
+&\Delta H = -286\ \text{kJ}
+\end{aligned}
+$$
+
+Is that legitimate, and what does the value mean?
+
+<Answer>
+
+Yes. Fractional coefficients are allowed in thermochemical equations precisely so that $\Delta H$ can be quoted per mole of one chosen substance. Here it is per mole of water formed. The water forms from its elements in their standard states, so this value is the standard enthalpy of formation of $\ce{H2O(l)}$.
+
+</Answer>
+
+</Question>
