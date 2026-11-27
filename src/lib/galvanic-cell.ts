@@ -337,7 +337,9 @@ export function state(left: MetalId, leftExponent: Exponent, right: MetalId, rig
   const exactE = standardHundredths / 100 + shift.exact;
   // The cell runs in the direction for which E is positive. For the six metals of this explorer that is
   // always the direction E° gives: the largest shift the sliders can make is smaller than every gap.
-  if (!(exactE > 0)) throw new Error(`${a.name} with ${c.name} would run backward at these concentrations, which the brief rules out.`);
+  if (!(exactE > 0)) throw new RangeError(
+      `${a.name} at 10 to the power ${anodeExponent} M with ${c.name} at 10 to the power ${cathodeExponent} M would run backward (E = ${exactE} V), which the brief rules out.`,
+    );
   const eThousandths = standardHundredths * 10 + shift.thousandths;
   return {
     ...settings,
@@ -480,7 +482,7 @@ export function describeCell(s: GalvanicCellState): string {
     `The ${s.anode} half-cell is the anode: oxidation, ${anode.halfReaction}, and its electrode loses mass. ` +
     `The ${s.cathode} half-cell is the cathode: reduction, ${cathode.halfReaction}, and its electrode gains mass. ` +
     `An arrow on the wire shows electrons moving from the ${s.anode} electrode to the ${s.cathode} one. ` +
-    `In the salt bridge, an arrow shows NO₃⁻ moving toward the ${s.anode} half-cell and another K⁺ moving toward the ${s.cathode} half-cell.`
+    `In the salt bridge, an arrow shows NO₃⁻ moving toward the ${s.anode} half-cell, and an arrow shows K⁺ moving toward the ${s.cathode} half-cell.`
   );
 }
 

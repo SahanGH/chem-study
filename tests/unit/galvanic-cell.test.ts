@@ -820,7 +820,7 @@ describe('the names of the drawings', () => {
         'The left half-cell is the anode: oxidation, Sn(s) → Sn²⁺(aq) + 2e⁻, and its electrode loses mass. ' +
         'The right half-cell is the cathode: reduction, Ag⁺(aq) + e⁻ → Ag(s), and its electrode gains mass. ' +
         'An arrow on the wire shows electrons moving from the left electrode to the right one. ' +
-        'In the salt bridge, an arrow shows NO₃⁻ moving toward the left half-cell and another K⁺ moving toward the right half-cell.',
+        'In the salt bridge, an arrow shows NO₃⁻ moving toward the left half-cell, and an arrow shows K⁺ moving toward the right half-cell.',
     );
   });
 
@@ -900,6 +900,10 @@ function everyString(): string[] {
   return strings;
 }
 
+// A sign after the word ("anode: +", "cathode (−)", "electrode, -") or before it ("+ electrode", "(−) cathode").
+const SIGN_AFTER = /(electrode|anode|cathode)s?[\s:,;(]*[+−-]/i;
+const SIGN_BEFORE = /[+−-][\s)]*(electrode|anode|cathode)/i;
+
 describe('the words', () => {
   const strings = everyString();
 
@@ -908,14 +912,22 @@ describe('the words', () => {
       expect(text, text).not.toMatch(/\b(positive|negative)\b/i);
       expect(text, text).not.toMatch(/terminal/i);
       // No "+" or "−" (or a hyphen) beside an electrode, an anode or a cathode.
-      expect(text, text).not.toMatch(/(electrode|anode|cathode)s?\s*\(?[+−-]/i);
-      expect(text, text).not.toMatch(/[+−-]\)?\s*(electrode|anode|cathode)/i);
+      expect(text, text).not.toMatch(SIGN_AFTER);
+      expect(text, text).not.toMatch(SIGN_BEFORE);
     }
   });
 
-  it('never say "spontaneous" or "favorable", and use the true minus sign', () => {
+  it('use sign patterns that can fail: they match deliberately bad strings', () => {
+    for (const bad of ['anode: +', 'cathode (−)', 'the cathode, − side', 'cathode (-)', 'electrode +', '+ electrode', '(−) cathode', 'anode +']) {
+      expect(bad, bad).toMatch(new RegExp(`${SIGN_AFTER.source}|${SIGN_BEFORE.source}`, 'i'));
+    }
+    expect('the anode, Sn(s) → Sn²⁺(aq) + 2e⁻', 'a sign far from the word is not a sign on it').not.toMatch(SIGN_AFTER);
+    expect('a cathode', 'no sign').not.toMatch(SIGN_AFTER);
+  });
+
+  it('never say "spontaneous", "favorable", "oxidizing agent" or "reducing agent", and use the true minus sign', () => {
     for (const text of strings) {
-      expect(text, text).not.toMatch(/spontaneous|favorable/i);
+      expect(text, text).not.toMatch(/spontaneous|favorable|oxidizing agent|reducing agent/i);
       // A hyphen only inside words ("half-cell", "half-cells"), never as a minus.
       expect(text.replace(/[a-z]-[a-z]/gi, ''), text).not.toMatch(/-/);
     }
