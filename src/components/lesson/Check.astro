@@ -1,12 +1,32 @@
 ---
-import { shownAnswer, type CheckAnswer } from '../../lib/check';
+import { readMisses, readSlips, readTolerance, shownAnswer, type CheckAnswer } from '../../lib/check';
 
-type Props = CheckAnswer;
-const { answer, numeric, unit } = Astro.props;
+interface Props extends CheckAnswer {
+  /** With `answer`: what to say for each wrong option, by option number from 1. */
+  misses?: Record<number, string>;
+  /** With `numeric`: what to say for each known wrong answer, by its value written as text. */
+  slips?: Record<string, string>;
+  /** With `numeric`: the percent of the answer a typed value may differ by. 2 when left out. */
+  tolerance?: number;
+}
+
+const { answer, numeric, unit, misses, slips, tolerance } = Astro.props;
 const shown = shownAnswer({ answer, numeric, unit });
+// Each of these throws, and stops the build, when a lesson wrote something unusable.
+const allowed = readTolerance(tolerance, numeric);
+const optionMessages = readMisses(misses, answer);
+const slipMessages = readSlips(slips, numeric, allowed);
 ---
 
-<cs-check data-part="check" data-answer={answer} data-numeric={numeric} data-unit={unit}>
+<cs-check
+  data-part="check"
+  data-answer={answer}
+  data-numeric={numeric}
+  data-unit={unit}
+  data-tolerance={tolerance === undefined ? undefined : allowed}
+  data-misses={optionMessages && JSON.stringify(optionMessages)}
+  data-slips={slipMessages && JSON.stringify(slipMessages)}
+>
   <p class="label">Check yourself</p>
   <div class="check-body"><slot /></div>
   <p class="check-feedback" role="status"></p>
@@ -18,7 +38,7 @@ const shown = shownAnswer({ answer, numeric, unit });
 </cs-check>
 
 <script>
-  import { gradeChoice, gradeNumeric, parseNumber } from '../../lib/check';
+  import { gradeChoice, gradeNumeric, messagesFrom, nearestSlip, parseNumber, slipsFrom } from '../../lib/check';
   import { browserProgress } from '../../lib/progress';
 
   /**
@@ -92,6 +112,7 @@ const shown = shownAnswer({ answer, numeric, unit });
         if (!label) throw new Error(`Option ${index + 1} is math with no readable text, so it would have no name.`);
         return label;
       });
+      const misses = messagesFrom(this.dataset.misses);
       const buttons: HTMLButtonElement[] = [];
       items.forEach((item, index) => {
         const button = document.createElement('button');
@@ -110,7 +131,8 @@ const shown = shownAnswer({ answer, numeric, unit });
           } else {
             button.classList.add('is-wrong');
             button.disabled = true;
-            say('Not quite. Try another.', 'no');
+            const miss = misses[String(index + 1)];
+            say(miss ? `Not quite. ${miss}` : 'Not quite. Try another.', 'no');
           }
         });
       });
@@ -123,6 +145,12 @@ const shown = shownAnswer({ answer, numeric, unit });
       say: (text: string, state: 'ok' | 'no') => void,
       finish: () => void,
     ) {
+      const slips = slipsFrom(this.dataset.slips);
+      // Absent on a Check that keeps the page-wide tolerance; gradeNumeric then uses its default.
+      const tolerance = this.dataset.tolerance === undefined ? undefined : Number(this.dataset.tolerance);
+      if (tolerance !== undefined && !(tolerance > 0)) {
+        throw new Error(`cs-check has a tolerance that is not a positive number: ${this.dataset.tolerance}`);
+      }
       const form = document.createElement('form');
       form.className = 'check-numeric';
       const label = document.createElement('label');
@@ -145,11 +173,14 @@ const shown = shownAnswer({ answer, numeric, unit });
 
       form.addEventListener('submit', (event) => {
         event.preventDefault();
-        const grade = gradeNumeric(input.value, answer);
+        const grade = gradeNumeric(input.value, answer, tolerance);
         if (grade === 'invalid') {
           say('Enter a number, for example 0.25 or 2.5e-3.', 'no');
         } else if (grade === 'incorrect') {
-          say('Not quite. Check your setup and try again.', 'no');
+          const typed = parseNumber(input.value);
+          // gradeNumeric returned 'incorrect', so the text is a number; the test satisfies the type checker.
+          const slip = typed === null ? null : nearestSlip(typed, slips, answer);
+          say(slip ? `Not quite. ${slip.message}` : 'Not quite. Check your setup and try again.', 'no');
         } else {
           input.disabled = true;
           submit.disabled = true;

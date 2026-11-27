@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { checkPage, checkSite } from '../../scripts/check-dist.mjs';
+import { FEEDBACK_UNITS, checkPage, checkSite } from '../../scripts/check-dist.mjs';
 
 const everythingExists = () => true;
 
@@ -14,6 +14,56 @@ const fullLesson =
   part('worked') + part('trap') + part('key-points') + part('practice-next') + choice(1, 2).repeat(3);
 
 describe('checkPage', () => {
+  describe('feedback on a check', () => {
+    const withMisses = (answer: number, options: number, misses: Record<number, string>, quote = "'") =>
+      `<cs-check data-part="check" data-answer="${answer}" data-misses=${quote}${
+        quote === '"' ? JSON.stringify(misses).replaceAll('"', '&quot;') : JSON.stringify(misses)
+      }${quote}><ul>${'<li>x</li>'.repeat(options)}</ul></cs-check>`;
+    const numeric = (slips?: Record<string, string>) =>
+      `<cs-check data-part="check" data-numeric="5"${slips ? ` data-slips='${JSON.stringify(slips)}'` : ''}></cs-check>`;
+    const parts = part('worked') + part('trap') + part('key-points') + part('practice-next');
+    const inUnit = (unit: number, checks: string) => `<main data-topic="${unit}.2">${parts}${checks}</main>`;
+    const all = { 2: 'Follow the units.', 3: 'Follow the units.', 4: 'Follow the units.' };
+
+    it('reads messages whose quotation marks the build escaped', () => {
+      const html = inUnit(5, withMisses(1, 4, { 9: 'Follow the units.' }, '"').repeat(3));
+      expect(checkPage(html, everythingExists)).toContainEqual(expect.stringContaining('feedback for option 9'));
+    });
+
+    it('reports a message for an option the check does not have, in any unit', () => {
+      const html = inUnit(5, withMisses(1, 4, { 5: 'Follow the units.' }).repeat(3));
+      expect(checkPage(html, everythingExists)).toContainEqual(
+        'lesson 5.2: a check has feedback for option 5 but has only 4 options',
+      );
+    });
+
+    it('asks nothing of a unit that is not on the list', () => {
+      expect(FEEDBACK_UNITS.has('5')).toBe(false);
+      expect(checkPage(inUnit(5, choice(1, 4).repeat(3)), everythingExists)).toEqual([]);
+    });
+
+    it('in a unit on the list, reports a wrong option with no message', () => {
+      const [unit] = [...FEEDBACK_UNITS];
+      if (unit === undefined) return; // The list is empty until Unit 1's messages are written (Task 8).
+      const html = inUnit(Number(unit), withMisses(1, 4, { 2: 'Follow the units.', 3: 'Follow the units.' }).repeat(3));
+      expect(checkPage(html, everythingExists)).toContainEqual(`lesson ${unit}.2: a check says nothing for wrong option 4`);
+    });
+
+    it('in a unit on the list, reports a typed-number check that names no slip', () => {
+      const [unit] = [...FEEDBACK_UNITS];
+      if (unit === undefined) return;
+      const html = inUnit(Number(unit), withMisses(1, 4, all).repeat(2) + numeric());
+      expect(checkPage(html, everythingExists)).toContainEqual(`lesson ${unit}.2: a typed-number check names no slip`);
+    });
+
+    it('in a unit on the list, passes checks that are complete', () => {
+      const [unit] = [...FEEDBACK_UNITS];
+      if (unit === undefined) return;
+      const html = inUnit(Number(unit), withMisses(1, 4, all).repeat(2) + numeric({ '6': 'Count again.' }));
+      expect(checkPage(html, everythingExists)).toEqual([]);
+    });
+  });
+
   it('passes a complete lesson', () => {
     expect(checkPage(lesson(fullLesson), everythingExists)).toEqual([]);
   });

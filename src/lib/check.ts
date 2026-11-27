@@ -3,7 +3,7 @@ import { fromSuperscript, toSuperscript } from './format';
 
 export type NumericGrade = 'correct' | 'incorrect' | 'invalid';
 
-/** Fraction of the expected value a numeric answer may differ by. */
+/** Fraction of the expected value a numeric answer may differ by, unless the Check sets its own. */
 const TOLERANCE = 0.02;
 
 export function gradeChoice(selected: number, answer: number): boolean {
@@ -106,11 +106,170 @@ function asPowerOfTen(numeric: string): string {
   });
 }
 
-export function gradeNumeric(text: string, answer: number): NumericGrade {
+/**
+ * `tolerance` is the fraction of the answer a typed value may differ by. It
+ * is the page's 2 percent unless the Check set its own (readTolerance).
+ */
+export function gradeNumeric(text: string, answer: number, tolerance: number = TOLERANCE): NumericGrade {
   const value = parseNumber(text);
   if (value === null) return 'invalid';
-  const allowed = answer === 0 ? ZERO_ANSWER_TOLERANCE : Math.abs(answer) * TOLERANCE;
+  const allowed = answer === 0 ? ZERO_ANSWER_TOLERANCE : Math.abs(answer) * tolerance;
   // The slack absorbs floating-point error: 0.0204 is exactly 2% from 0.02,
   // yet |0.0204 - 0.02| computes to slightly more than 0.02 * 0.02.
   return Math.abs(value - answer) <= allowed * (1 + FLOAT_SLACK) ? 'correct' : 'incorrect';
+}
+
+/** How near a typed answer must be to a slip's value, as a fraction of that value, to be given its message. */
+const SLIP_WINDOW = 0.01;
+
+/** The longest feedback message, in characters: about four lines on a 320 px phone. */
+export const FEEDBACK_LIMIT = 180;
+
+/** A wrong numeric answer a known mistake gives, and what to say about it. */
+export interface Slip {
+  value: number;
+  message: string;
+}
+
+/**
+ * Why a feedback message cannot be used, or null when it can. A message is
+ * plain text shown after "Not quite.", so it carries no math, no markup and
+ * no opening of its own.
+ */
+export function feedbackProblem(message: unknown): string | null {
+  if (typeof message !== 'string' || message.trim() === '') return 'is empty';
+  if (message !== message.trim()) return 'has a space at its start or end';
+  if (message.length > FEEDBACK_LIMIT) return `is ${message.length} characters long; the limit is ${FEEDBACK_LIMIT}`;
+  if (/[$<>\\]/.test(message)) return 'has math or markup in it; write formulas as the prose does (H₂, 10²³)';
+  if (/^not quite/i.test(message)) return 'starts with "Not quite", which the page adds';
+  if (!/[.?]$/.test(message)) return 'does not end with a period or a question mark';
+  return null;
+}
+
+function isPlainObject(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+/**
+ * A Check's own tolerance, written in percent (`tolerance={0.5}`), as a
+ * fraction. A Check may tighten the page's 2 percent, never loosen it: a
+ * looser one would mark wrong methods correct.
+ */
+export function readTolerance(percent: unknown, numeric: string | undefined): number {
+  if (percent === undefined) return TOLERANCE;
+  if (numeric === undefined) throw new Error('A Check with `answer` (an option number) cannot have a `tolerance`.');
+  // gradeNumeric grades an answer of zero by a fixed window, so a tolerance there would do nothing.
+  if (parseNumber(numeric) === 0) throw new Error('A Check with an answer of zero cannot have a `tolerance`.');
+  if (typeof percent !== 'number' || !(percent > 0) || percent > TOLERANCE * 100) {
+    throw new Error(
+      `A Check's tolerance is a percent above 0 and at most ${TOLERANCE * 100}, such as tolerance={0.5}, ` +
+        `not ${JSON.stringify(percent)}.`,
+    );
+  }
+  return percent / 100;
+}
+
+/**
+ * The messages for a choice Check's wrong options, keyed by option number
+ * from 1. Throws when the lesson's `misses` cannot be used. Whether each
+ * number names an option the Check has is checked on the built page
+ * (scripts/check-dist.mjs), which is where the options are.
+ */
+export function readMisses(misses: unknown, answer: number | undefined): Record<string, string> | undefined {
+  if (misses === undefined) return undefined;
+  if (answer === undefined) throw new Error('A Check with `numeric` takes `slips`, not `misses`.');
+  if (!isPlainObject(misses)) throw new Error('Write misses as option numbers and messages: misses={{ 1: "…", 3: "…" }}.');
+  const read: Record<string, string> = {};
+  for (const [key, message] of Object.entries(misses)) {
+    // Only "1", "2", …: Number() would also read "01", "1.0" and "1e0" as 1,
+    // and a second message for the same option would silently replace the first.
+    const option = /^[1-9]\d*$/.test(key) ? Number(key) : NaN;
+    if (!Number.isInteger(option)) throw new Error(`A miss is keyed by an option number from 1, not ${JSON.stringify(key)}.`);
+    if (option === answer) throw new Error(`Option ${option} is the answer, so it cannot have a miss.`);
+    const problem = feedbackProblem(message);
+    if (problem) throw new Error(`The miss for option ${option} ${problem}.`);
+    read[String(option)] = message as string;
+  }
+  return read;
+}
+
+/**
+ * The messages for a numeric Check's known wrong answers, keyed by the value
+ * as the lesson wrote it. Throws when a slip cannot be used, and when one lies
+ * inside the tolerance: the page would mark that mistake correct.
+ */
+export function readSlips(
+  slips: unknown,
+  numeric: string | undefined,
+  tolerance: number,
+): Record<string, string> | undefined {
+  if (slips === undefined) return undefined;
+  if (numeric === undefined) throw new Error('A Check with `answer` (an option number) takes `misses`, not `slips`.');
+  if (!isPlainObject(slips)) throw new Error('Write slips as values and messages: slips={{ "0.0400": "…" }}.');
+  const answer = parseNumber(numeric);
+  if (answer === null) throw new Error(`A Check's numeric answer must be a number, not ${JSON.stringify(numeric)}.`);
+  const seen = new Set<number>();
+  const read: Record<string, string> = {};
+  for (const [key, message] of Object.entries(slips)) {
+    const value = parseNumber(key);
+    if (value === null) throw new Error(`A slip is keyed by a number such as "0.0400" or "1.31e25", not ${JSON.stringify(key)}.`);
+    if (seen.has(value)) throw new Error(`The slip ${key} is listed twice.`);
+    seen.add(value);
+    if (gradeNumeric(key, answer, tolerance) === 'correct') {
+      throw new Error(
+        `The slip ${key} is within ${tolerance * 100} percent of the answer ${numeric}, so the page would mark it correct. ` +
+          'Give the Check a smaller `tolerance`, or drop the slip.',
+      );
+    }
+    const problem = feedbackProblem(message);
+    if (problem) throw new Error(`The message for the slip ${key} ${problem}.`);
+    read[key] = message as string;
+  }
+  return read;
+}
+
+/**
+ * The slip a typed value most likely is: the nearest one, when the value is
+ * within 1 percent of it. Null when no slip is that near. A slip of exactly
+ * zero is matched only by zero. Given the answer, a value nearer the answer
+ * than the slip is not matched: with a narrow tolerance, a slip's 1 percent
+ * can reach past the answer, and a rounded right method must not be told it
+ * made the slip's mistake.
+ */
+export function nearestSlip(value: number, slips: Slip[], answer?: number): Slip | null {
+  let nearest: Slip | null = null;
+  let nearestDistance = Infinity;
+  for (const slip of slips) {
+    const distance = Math.abs(value - slip.value);
+    const window = slip.value === 0 ? ZERO_ANSWER_TOLERANCE : Math.abs(slip.value) * SLIP_WINDOW;
+    const nearerTheAnswer = answer !== undefined && Math.abs(value - answer) <= distance;
+    if (!nearerTheAnswer && distance <= window * (1 + FLOAT_SLACK) && distance < nearestDistance) {
+      nearest = slip;
+      nearestDistance = distance;
+    }
+  }
+  return nearest;
+}
+
+/**
+ * The messages a Check carries in a data attribute, as written by
+ * Check.astro. Throws when the attribute is not a set of messages: a page
+ * built from a lesson cannot carry anything else.
+ */
+export function messagesFrom(json: string | undefined): Record<string, string> {
+  if (json === undefined) return {};
+  const parsed: unknown = JSON.parse(json);
+  if (!isPlainObject(parsed) || !Object.values(parsed).every((message) => typeof message === 'string')) {
+    throw new Error('A Check carries feedback that is not a set of messages.');
+  }
+  return parsed as Record<string, string>;
+}
+
+/** The slips a Check carries, each value read the way a typed answer is. */
+export function slipsFrom(json: string | undefined): Slip[] {
+  return Object.entries(messagesFrom(json)).map(([key, message]) => {
+    const value = parseNumber(key);
+    if (value === null) throw new Error(`A Check has a slip that is not a number: ${key}`);
+    return { value, message };
+  });
 }

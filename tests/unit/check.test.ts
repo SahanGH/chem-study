@@ -1,5 +1,17 @@
 import { describe, expect, it } from 'vitest';
-import { gradeChoice, gradeNumeric, parseNumber, shownAnswer, type CheckAnswer } from '../../src/lib/check';
+import {
+  gradeChoice,
+  gradeNumeric,
+  messagesFrom,
+  nearestSlip,
+  parseNumber,
+  readMisses,
+  readSlips,
+  readTolerance,
+  shownAnswer,
+  slipsFrom,
+  type CheckAnswer,
+} from '../../src/lib/check';
 
 describe('gradeChoice', () => {
   it('accepts the option whose 1-based number matches the answer', () => {
@@ -251,5 +263,161 @@ describe('shownAnswer', () => {
 
   it('throws when the numeric answer is too large to be a finite number', () => {
     expect(() => shownAnswer({ numeric: '1e999' })).toThrow('must be a number');
+  });
+});
+
+describe('gradeNumeric with a tolerance of its own', () => {
+  it('refuses a slip that the page-wide 2 percent would accept', () => {
+    expect(gradeNumeric('9.35e21', 9.26e21)).toBe('correct');
+    expect(gradeNumeric('9.35e21', 9.26e21, 0.005)).toBe('incorrect');
+    expect(gradeNumeric('64.95', 65.38, 0.005)).toBe('incorrect');
+    expect(gradeNumeric('66.18', 65.38, 0.005)).toBe('incorrect');
+  });
+
+  it('still accepts the answer as a student rounds it', () => {
+    expect(gradeNumeric('9.3e21', 9.26e21, 0.005)).toBe('correct');
+    expect(gradeNumeric('9.258e21', 9.26e21, 0.005)).toBe('correct');
+    expect(gradeNumeric('65.33', 65.38, 0.005)).toBe('correct');
+    expect(gradeNumeric('65.4', 65.38, 0.005)).toBe('correct');
+  });
+});
+
+describe('readTolerance', () => {
+  it('is the page-wide 2 percent when the Check sets none', () => {
+    expect(readTolerance(undefined, '5')).toBe(0.02);
+  });
+
+  it('turns a percent into a fraction', () => {
+    expect(readTolerance(0.5, '5')).toBe(0.005);
+  });
+
+  it.each([
+    ['more than 2 percent', 5, /at most 2/],
+    ['zero', 0, /above 0/],
+    ['text', '0.5', /percent/],
+  ])('refuses %s', (_name, percent, message) => {
+    expect(() => readTolerance(percent, '5')).toThrow(message);
+  });
+
+  it('refuses a tolerance on an answer of zero, which is graded by a fixed window', () => {
+    expect(() => readTolerance(0.5, '0')).toThrow(/answer of zero/);
+  });
+
+  it('refuses a tolerance on a Check with options', () => {
+    expect(() => readTolerance(0.5, undefined)).toThrow(/cannot have a `tolerance`/);
+  });
+});
+
+describe('readMisses', () => {
+  it('returns the messages keyed by option number', () => {
+    expect(readMisses({ 1: 'Follow the units.', 3: 'Which way?' }, 2)).toEqual({
+      '1': 'Follow the units.',
+      '3': 'Which way?',
+    });
+    expect(readMisses(undefined, 2)).toBeUndefined();
+  });
+
+  it.each([
+    ['a message for the answer itself', { 2: 'Follow the units.' }, /is the answer/],
+    ['option 0', { 0: 'Follow the units.' }, /option number from 1/],
+    ['a key that is not a number', { a: 'Follow the units.' }, /option number from 1/],
+    ['a key written another way', { '1.0': 'Follow the units.' }, /option number from 1/],
+    ['one option written two ways', { 1: 'Follow the units.', '01': 'Which way?' }, /option number from 1/],
+    ['an empty message', { 1: '' }, /is empty/],
+    ['math in a message', { 1: 'Use $K_c$ here.' }, /math or markup/],
+    ['a message that opens as the page does', { 1: 'Not quite. Try again.' }, /Not quite/],
+    ['a message with no ending', { 1: 'No ending' }, /period or a question mark/],
+    ['a message over the limit', { 1: `${'x'.repeat(180)}.` }, /181 characters/],
+    ['a list', ['Follow the units.'], /option numbers and messages/],
+  ])('refuses %s', (_name, misses, message) => {
+    expect(() => readMisses(misses, 2)).toThrow(message);
+  });
+
+  it('refuses misses on a Check with a typed number', () => {
+    expect(() => readMisses({ 1: 'Follow the units.' }, undefined)).toThrow(/takes `slips`/);
+  });
+});
+
+describe('readSlips', () => {
+  it('returns the messages keyed by the value as written', () => {
+    expect(readSlips({ '0.0400': 'The particles are I₂ molecules.' }, '0.0200', 0.02)).toEqual({
+      '0.0400': 'The particles are I₂ molecules.',
+    });
+    expect(readSlips(undefined, '0.0200', 0.02)).toBeUndefined();
+  });
+
+  it('refuses a slip the page would mark correct, until the tolerance is narrowed', () => {
+    const slips = { '9.35e21': 'Check the molar mass.' };
+    expect(() => readSlips(slips, '9.26e21', 0.02)).toThrow(/would mark it correct/);
+    expect(readSlips(slips, '9.26e21', 0.005)).toEqual(slips);
+  });
+
+  it.each([
+    ['a key that is not a number', { lots: 'Count again.' }, /keyed by a number/],
+    ['one value written two ways', { '6': 'Count again.', '6.0': 'Count again.' }, /listed twice/],
+    ['a message with no ending', { '6': 'Count again' }, /period or a question mark/],
+  ])('refuses %s', (_name, slips, message) => {
+    expect(() => readSlips(slips, '5', 0.02)).toThrow(message);
+  });
+
+  it('refuses slips on a Check with options', () => {
+    expect(() => readSlips({ '6': 'Count again.' }, undefined, 0.02)).toThrow(/takes `misses`/);
+  });
+});
+
+describe('nearestSlip', () => {
+  const slips = [
+    { value: 1.31e25, message: 'straight to atoms' },
+    { value: 0.3, message: 'stopped at moles' },
+  ];
+
+  it('matches a typed value within 1 percent of a slip', () => {
+    expect(nearestSlip(1.3e25, slips)?.message).toBe('straight to atoms');
+    expect(nearestSlip(0.3002, slips)?.message).toBe('stopped at moles');
+  });
+
+  it('matches nothing when no slip is that near', () => {
+    expect(nearestSlip(1.2e25, slips)).toBeNull();
+    expect(nearestSlip(5, [])).toBeNull();
+  });
+
+  it('picks the nearer of two slips whose ranges overlap', () => {
+    const close = [
+      { value: 66.18, message: 'four peaks as equals' },
+      { value: 66.93, message: 'five peaks as equals' },
+    ];
+    expect(nearestSlip(66.5, close)?.message).toBe('four peaks as equals');
+    expect(nearestSlip(66.6, close)?.message).toBe('five peaks as equals');
+  });
+
+  it('given the answer, matches a slip only for a value nearer the slip than the answer', () => {
+    // Lesson 1.2, Check 3: 65.72 lies inside the slip's 1 percent but nearer the answer, 65.38.
+    const near = [{ value: 66.18, message: 'four peaks as equals' }];
+    expect(nearestSlip(65.72, near, 65.38)).toBeNull();
+    expect(nearestSlip(66.0, near, 65.38)?.message).toBe('four peaks as equals');
+    expect(nearestSlip(65.72, near)?.message).toBe('four peaks as equals');
+  });
+
+  it('matches a slip of zero only with zero', () => {
+    const zero = [{ value: 0, message: 'nothing left' }];
+    expect(nearestSlip(0, zero)?.message).toBe('nothing left');
+    expect(nearestSlip(1e-6, zero)).toBeNull();
+  });
+});
+
+describe('messagesFrom and slipsFrom', () => {
+  it('read what Check.astro wrote into the page', () => {
+    expect(messagesFrom(undefined)).toEqual({});
+    expect(messagesFrom('{"1":"Follow the units."}')).toEqual({ '1': 'Follow the units.' });
+    expect(slipsFrom('{"1.31e25":"a","0.300":"b"}')).toEqual([
+      { value: 1.31e25, message: 'a' },
+      { value: 0.3, message: 'b' },
+    ]);
+  });
+
+  it('refuse anything that is not a set of messages', () => {
+    expect(() => messagesFrom('[1]')).toThrow(/not a set of messages/);
+    expect(() => messagesFrom('{"1":2}')).toThrow(/not a set of messages/);
+    expect(() => slipsFrom('{"lots":"a"}')).toThrow(/not a number/);
   });
 });

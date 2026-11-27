@@ -21,6 +21,19 @@ export const REQUIRED_PARTS = {
   'practice-next': 1,
 };
 
+/**
+ * Units whose lessons must say something for every wrong answer: a message
+ * for each wrong option, and at least one slip for each typed number. A unit
+ * is added when its messages are written. Unit numbers as text.
+ * @type {Set<string>}
+ */
+export const FEEDBACK_UNITS = new Set([]);
+
+/** @param {string | undefined} json a data attribute written by Check.astro @returns {string[]} its keys */
+function feedbackKeys(json) {
+  return json === undefined ? [] : Object.keys(JSON.parse(json));
+}
+
 // TeX that should never reach a reader. If any of these is visible, math was
 // not rendered -- typically two copies of katex, so mhchem is not registered.
 // \ce matches with nothing required after it: the real failure prints
@@ -85,6 +98,7 @@ export function checkPage(html, exists) {
         problems.push(`lesson ${topic} has ${count} "${name}", needs at least ${minimum}`);
       }
     }
+    const needsFeedback = FEEDBACK_UNITS.has((topic ?? '').split('.')[0]);
     for (const check of main.querySelectorAll('cs-check[data-answer]')) {
       const answer = Number(check.getAttribute('data-answer'));
       // The page script grades against the first list only; a list inside the
@@ -94,6 +108,26 @@ export function checkPage(html, exists) {
         problems.push(
           `lesson ${topic}: a check says the answer is option ${answer} but has only ${options} options`,
         );
+      }
+      const misses = feedbackKeys(check.getAttribute('data-misses')).map(Number);
+      for (const option of misses) {
+        if (option > options) {
+          problems.push(`lesson ${topic}: a check has feedback for option ${option} but has only ${options} options`);
+        }
+      }
+      if (needsFeedback) {
+        for (let option = 1; option <= options; option += 1) {
+          if (option !== answer && !misses.includes(option)) {
+            problems.push(`lesson ${topic}: a check says nothing for wrong option ${option}`);
+          }
+        }
+      }
+    }
+    if (needsFeedback) {
+      for (const check of main.querySelectorAll('cs-check[data-numeric]')) {
+        if (feedbackKeys(check.getAttribute('data-slips')).length === 0) {
+          problems.push(`lesson ${topic}: a typed-number check names no slip`);
+        }
       }
     }
   }
