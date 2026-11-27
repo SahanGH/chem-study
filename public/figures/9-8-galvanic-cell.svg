@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 430" font-family="system-ui, sans-serif" font-size="18">
+  <!-- The galvanic cell of cobalt and silver, with the anode's half-cell on the left.
+       Beakers: left x 40 to 200, right x 280 to 440, both y 200 to 340, open at the top; liquid from y 240 down.
+       The left liquid (the pink cobalt solution) carries a pattern of dots; the right liquid (colorless) is plain.
+       Strips: cobalt x 80 to 104 (hatched), silver x 376 to 400 (plain), both y 150 to 320.
+       Wire: (92, 150) up to y 60, across to x 388, down to (388, 150); meter of radius 22 at (240, 60).
+       Electron arrows at y 46: 110 to 170 and 310 to 370, both pointing right (anode to cathode).
+       Salt bridge: a tube 18 wide with its center line (160, 300) up to y 130, across to x 320, down to (320, 300).
+       Ion arrows at y 112: nitrate 228 to 178 (toward the anode), potassium 252 to 302 (toward the cathode).
+       No plus or minus sign stands beside either electrode: the only signs are the charges of ions and of the electron. -->
+  <defs>
+    <pattern id="dots98a" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.6" fill="#4F706C"/>
+      <circle cx="11" cy="11" r="1.6" fill="#4F706C"/>
+    </pattern>
+    <pattern id="hatch98a" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#6B655D" stroke-width="2.2"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="430" fill="#FDFCF9"/>
+
+  <!-- Liquids -->
+  <rect x="40" y="240" width="160" height="100" fill="#E3EAE9"/>
+  <rect x="40" y="240" width="160" height="100" fill="url(#dots98a)"/>
+  <rect x="280" y="240" width="160" height="100" fill="#E3EAE9"/>
+
+  <!-- Wire -->
+  <path d="M92 150V60H388V150" fill="none" stroke="#26231F" stroke-width="2"/>
+
+  <!-- Electrodes -->
+  <rect x="80" y="150" width="24" height="170" fill="#E6E1D8"/>
+  <rect x="80" y="150" width="24" height="170" fill="url(#hatch98a)" stroke="#26231F" stroke-width="1.7"/>
+  <rect x="376" y="150" width="24" height="170" fill="#E6E1D8" stroke="#26231F" stroke-width="1.7"/>
+
+  <!-- Salt bridge -->
+  <path d="M160 300V130H320V300" fill="none" stroke="#26231F" stroke-width="18" stroke-linejoin="round"/>
+  <path d="M160 298.4V130H320V298.4" fill="none" stroke="#E6E1D8" stroke-width="14.8" stroke-linejoin="round"/>
+
+  <!-- Beakers -->
+  <path d="M40 200V340H200V200" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M280 200V340H440V200" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Meter -->
+  <circle cx="240" cy="60" r="22" fill="#FDFCF9" stroke="#26231F" stroke-width="2"/>
+  <g fill="#26231F" text-anchor="middle">
+    <text x="240" y="66.5">V</text>
+    <text x="240" y="26">meter</text>
+    <text x="58" y="176">Co</text>
+    <text x="422" y="176">Ag</text>
+    <text x="240" y="166">salt bridge</text>
+    <text x="240" y="188">KNO₃(aq)</text>
+  </g>
+
+  <!-- Electron arrows, anode to cathode -->
+  <g fill="none" stroke="#4F706C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M110 46H170m-8 -5l8 5l-8 5"/>
+    <path d="M310 46H370m-8 -5l8 5l-8 5"/>
+  </g>
+  <g fill="#4F706C" text-anchor="middle" font-weight="600">
+    <text x="140" y="36">e⁻</text>
+    <text x="340" y="36">e⁻</text>
+  </g>
+
+  <!-- Ion arrows -->
+  <g fill="none" stroke="#4F706C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M228 112H178m8 -5l-8 5l8 5"/>
+    <path d="M252 112H302m-8 -5l8 5l-8 5"/>
+  </g>
+  <g fill="#26231F" text-anchor="middle">
+    <text x="203" y="102">NO₃⁻</text>
+    <text x="277" y="102">K⁺</text>
+  </g>
+
+  <!-- Under the beakers -->
+  <g fill="#26231F" text-anchor="middle">
+    <text x="120" y="364">Co(NO₃)₂(aq)</text>
+    <text x="360" y="364">AgNO₃(aq)</text>
+    <text x="120" y="388" font-weight="600">anode: oxidation</text>
+    <text x="360" y="388" font-weight="600">cathode: reduction</text>
+    <text x="120" y="412">Co → Co²⁺ + 2e⁻</text>
+    <text x="360" y="412">Ag⁺ + e⁻ → Ag</text>
+  </g>
+</svg>

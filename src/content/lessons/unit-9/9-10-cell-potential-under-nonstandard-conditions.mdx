@@ -1,0 +1,554 @@
+---
+topic: "9.10"
+minutes: 22
+summary: "How a cell's potential changes when its solutions are not 1 M, argued by comparing Q with K, and why two half-cells of one metal can still give a voltage."
+---
+
+Build the tin and silver cell of topic 9.9 with both solutions at 1.0 M, and the meter reads 0.94 V, as the table of reduction potentials says it should. Build it again with the same two strips, the same solution of tin(II) ions, and a silver nitrate solution of only 0.010 M, and the meter reads about 0.82 V. Nothing about the metals or the reaction has changed. This lesson is about where the missing 0.12 V went, and what a cell's reading says about the mixture inside it.
+
+## E° is the reading at Q = 1
+
+Here is the cell's reaction, as topic 9.9 found it:
+
+$$
+\begin{aligned}
+&\ce{Sn(s) + 2Ag^+(aq) ->} \\
+&\quad \ce{Sn^2+(aq) + 2Ag(s)}
+\end{aligned}
+$$
+
+Two moles of electrons pass for each mole of reaction, so $n = 2$, and the standard cell potential is cathode minus anode:
+
+$$
+E^\circ_\text{cell} = 0.80 - (-0.14) = 0.94\ \text{V}
+$$
+
+Like any reaction, this one has a reaction quotient, $Q$ (topics 7.3 and 7.10): products over reactants, each concentration raised to its coefficient, with solids left out. For this cell:
+
+$$
+Q = \frac{[\ce{Sn^2+}]}{[\ce{Ag+}]^2}
+$$
+
+The two metal strips are solids, so they are not in it. The equation sheet does not say how to write $Q$. Write it as topic 7.3 writes $K$.
+
+Standard conditions mean every solute at 1 M. Put 1.0 in for both ions:
+
+$$
+Q = \frac{1.0}{(1.0)^2} = 1
+$$
+
+So $E^\circ$ is the potential of the cell at one particular mixture, the standard one, which has $Q = 1$.
+
+A real cell is rarely that mixture, so it needs a symbol of its own. The **cell potential**, $E$ or $E_\text{cell}$, written without the little circle, is the potential of the cell as it is now, whatever its concentrations. $E^\circ$ is one value of $E$: the value at $Q = 1$. At 25 °C a reaction has one $E^\circ$. A cell running that reaction can have many values of $E$.
+
+<KeyIdea>
+
+$E^\circ$ is the cell potential when $Q = 1$. $E$, with no circle, is the cell potential at whatever $Q$ the cell has now.
+
+</KeyIdea>
+
+<Check
+  answer={3}
+  misses={{
+    1: "Check the state symbols. Topic 7.3 says which substances are left out of Q and K.",
+    2: "Q is built like K, with products over reactants. Which ion is made as this cell runs?",
+    4: "An exponent in Q is a coefficient from the balanced equation, not the charge on an ion.",
+  }}
+>
+A cell runs on the reaction below. Which expression is its reaction quotient?
+
+$$
+\begin{aligned}
+&\ce{2Cr(s) + 3Cu^2+(aq) ->} \\
+&\quad \ce{2Cr^3+(aq) + 3Cu(s)}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\textbf{A}\quad & Q = \dfrac{[\ce{Cr^3+}]^2[\ce{Cu}]^3}{[\ce{Cr}]^2[\ce{Cu^2+}]^3} \\[1.4em]
+\textbf{B}\quad & Q = \dfrac{[\ce{Cu^2+}]^3}{[\ce{Cr^3+}]^2} \\[1.4em]
+\textbf{C}\quad & Q = \dfrac{[\ce{Cr^3+}]^2}{[\ce{Cu^2+}]^3} \\[1.4em]
+\textbf{D}\quad & Q = \dfrac{[\ce{Cr^3+}]^3}{[\ce{Cu^2+}]^2}
+\end{aligned}
+$$
+
+- Expression A
+- Expression B
+- Expression C
+- Expression D
+
+<div slot="why">
+
+$Q$ is products over reactants, each raised to its coefficient in the balanced equation, with solids left out. The product in solution is Cr³⁺, with coefficient 2, and the reactant in solution is Cu²⁺, with coefficient 3. That is expression C.
+
+Expression A puts the two solid metals in. Expression B is upside down. Expression D takes its exponents from the charges on the ions, 3+ and 2+, which only happen to be the same two numbers the other way around.
+
+</div>
+</Check>
+
+## The potential says how far there is to go
+
+Every reaction has an equilibrium constant. For the tin and silver cell, topic 9.9's two steps give it. First the potential gives the free energy change:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -nFE^\circ \\
+&= -181\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Then $\Delta G^\circ = -RT\ln K$ gives a $K$ of about 6 × 10³¹ at 25 °C, close to 10³². A mixture with $Q = 1$ is about 32 powers of ten short of equilibrium.
+
+Now recall topic 7.10's rule: a mixture with $Q$ less than $K$ reacts forward, and $Q$ rises until it equals $K$. A cell is that same reaction with its electrons sent through a wire. The reading on the meter is the size of the push on the electrons at this moment. A mixture with $Q$ far below $K$ still has a long way to go, and the push is big. A mixture with $Q$ close to $K$ has almost nowhere left to go, and the push is small.
+
+So to predict what a changed concentration does to the reading, find what it does to $Q$ and see whether $Q$ ends up nearer to $K$ than before or farther from it. For a galvanic cell, $Q$ is below $K$. A change that raises $Q$ takes the cell nearer equilibrium and lowers $E$. A change that lowers $Q$ takes it farther from equilibrium and raises $E$.
+
+You may want to reach for Le Châtelier's principle here (topic 7.9). It does not fit. That principle is about a system that is at equilibrium and is then disturbed. A cell that shows a potential is not at equilibrium: it is on its way there. The argument that works for a mixture on its way is the one topic 7.10 gave, through $Q$.
+
+<KeyIdea>
+
+The reading on a cell's meter is large while the mixture has far to go to reach equilibrium and small when it has little left to go. A change that raises $Q$ toward $K$ lowers the potential. A change that lowers $Q$ away from $K$ raises it.
+
+</KeyIdea>
+
+<Worked title="Three changes to the tin and silver cell">
+
+The tin and silver cell starts at standard conditions, 1.0 M Sn²⁺ and 1.0 M Ag⁺, reading 0.94 V. Predict what each change does to the reading, taking each one separately from that start:
+
+(a) the silver solution is diluted to 0.10 M;
+
+(b) the tin solution is diluted to 0.10 M;
+
+(c) the tin strip is replaced by a larger one.
+
+1. **Write $Q$ and its starting value.**
+
+   $$
+   Q = \frac{[\ce{Sn^2+}]}{[\ce{Ag+}]^2}
+   $$
+
+   At the start, $Q = 1$.
+
+2. **(a) Find where the changed species sits in $Q$, and what happens to $Q$.** Ag⁺ is a reactant, on the bottom, squared. With 0.10 M, the bottom is $(0.10)^2 = 0.010$.
+
+   $$
+   Q = \frac{1.0}{0.010} = 100
+   $$
+
+   $Q$ rose a hundredfold, toward $K$.
+
+3. **Say what that does to $E$.** The cell is nearer equilibrium than it was at $Q = 1$, so $E$ is below 0.94 V.
+
+4. **(b) The same three questions.** Sn²⁺ is a product, on the top. With 0.10 M:
+
+   $$
+   Q = \frac{0.10}{(1.0)^2} = 0.10
+   $$
+
+   $Q$ fell, away from $K$. The cell is farther from equilibrium than at standard conditions, so $E$ is above 0.94 V. A cell can read more than its $E^\circ$.
+
+5. **(c) Look for the strip in $Q$.** Tin metal is a solid and is not in $Q$. $Q$ is still 1 and the reading is still 0.94 V. A larger strip is more tin to use, not a different mixture.
+
+</Worked>
+
+A full answer to a question like these has three parts: where the species sits in $Q$, what the change does to $Q$, and so what happens to $E$.
+
+<Check
+  answer={1}
+  misses={{
+    2: "Both solutions at 1.0 M give Q = 1, the standard reading. Work out Q for each of the other three mixtures and compare them with 1.",
+    3: "This mixture has the least Co²⁺, but [Ag⁺] is squared in Q. Work out Q for it and compare the result with 1.",
+    4: "Put both concentrations into Q, with [Ag⁺] squared. How does the result compare with Q for the cell whose solutions are both 1.0 M?",
+  }}
+>
+Four cobalt and silver cells are set up at 25 °C. Each has a cobalt strip in cobalt(II) nitrate solution and a silver strip in silver nitrate solution, and each runs on the reaction below. Only the concentrations differ. Which cell has the highest potential?
+
+$$
+\begin{aligned}
+&\ce{Co(s) + 2Ag^+(aq) ->} \\
+&\quad \ce{Co^2+(aq) + 2Ag(s)}
+\end{aligned}
+$$
+
+- 0.10 M Co²⁺ with 1.0 M Ag⁺
+- 1.0 M Co²⁺ with 1.0 M Ag⁺
+- 0.0010 M Co²⁺ with 0.010 M Ag⁺
+- 0.010 M Co²⁺ with 0.10 M Ag⁺
+
+<div slot="why">
+
+The reaction quotient is
+
+$$
+Q = \frac{[\ce{Co^2+}]}{[\ce{Ag+}]^2}
+$$
+
+Work it out for each cell, in the order of the options:
+
+$$
+\begin{aligned}
+\frac{0.10}{(1.0)^2} &= 0.10 \\[0.6em]
+\frac{1.0}{(1.0)^2} &= 1.0 \\[0.6em]
+\frac{0.0010}{(0.010)^2} &= 10 \\[0.6em]
+\frac{0.010}{(0.10)^2} &= 1.0
+\end{aligned}
+$$
+
+The cell with the lowest $Q$ is the farthest from equilibrium, so it has the highest potential. That is the first: the only one with $Q$ below 1, and so the only one that reads above $E^\circ$.
+
+The third cell has the least Co²⁺, the product, but its Ag⁺ is so dilute, and counts twice, that its $Q$ is the highest of the four and its potential the lowest. The second and fourth cells have the same $Q$ and so the same potential, although only the second is at standard conditions.
+
+</div>
+</Check>
+
+## As the cell runs
+
+Leave the tin and silver cell joined through its meter. Every second, tin atoms become Sn²⁺ ions and Ag⁺ ions become silver metal. The top of $Q$ grows and the bottom shrinks, so $Q$ climbs toward $K$ all the time the cell runs, and $E$ falls.
+
+<Figure
+  src="/figures/9-10-potential-against-q.svg"
+  alt="A graph of cell potential E, in volts, against the reaction quotient Q on a scale of powers of ten, for the tin and silver cell. A straight line slopes down from left to right. It passes through a filled circle at Q = 1 and E = 0.94 V, labeled Standard, and ends at an open square on the axis, where E = 0 and Q is near 10 to the power 32, labeled Equilibrium. To the left of the filled circle the line lies above 0.94 V. An arrow along the line, pointing down it, is labeled as the cell runs."
+  caption="The tin and silver cell at 25 °C. Its potential is E° at Q = 1, higher where Q is below 1, and falls to zero as Q climbs to K, which is about 10³²."
+/>
+
+The horizontal scale counts powers of ten of $Q$, and against that scale the potential falls along a straight line, from 0.94 V at $Q = 1$ to zero at $Q = K$.
+
+The fall is slow at first. Suppose the cell starts with equal volumes of the two 1.0 M solutions. When 99 percent of the silver ions have reacted, [Ag⁺] is 0.010 M and [Sn²⁺] is 1.495 M, $Q$ is about 1.5 × 10⁴, and the reading is still about 0.82 V. Nearly all of the fall comes at the very end, as the last traces of Ag⁺ go.
+
+At $Q = K$ the reaction is at equilibrium. Nothing pushes it either way, no electrons flow, and $E = 0$. That is what a run-down cell is: a mixture that has reached equilibrium.
+
+$E^\circ$ has not changed. It belongs to the reaction, at $Q = 1$, and it is 0.94 V for this reaction at 25 °C whatever the cell in front of you is doing. Build the cell afresh from 1.0 M solutions and it reads 0.94 V again. What ran down is $E$.
+
+<Check
+  answer={4}
+  misses={{
+    1: "Equal concentrations give Q = 1, which is where this cell started. What did the meter read at the start?",
+    2: "Q is 3 in this row. Above Q = 1 the reading is below E°, and below E° is not zero. What value must Q reach before nothing pushes the reaction on?",
+    3: "Work out Q for that row and set it beside K. Is the mixture at equilibrium yet?",
+  }}
+>
+A cell runs on the reaction below, for which $E^\circ$ = 0.14 V and $K$ = 5 × 10⁴ at 25 °C. It is built from equal volumes of two 1.0 M solutions and left running, and samples of both solutions are analyzed from time to time. The table has four of the results. Which row was measured when the meter read zero?
+
+$$
+\begin{aligned}
+&\ce{Co(s) + Sn^2+(aq) ->} \\
+&\quad \ce{Co^2+(aq) + Sn(s)}
+\end{aligned}
+$$
+
+| Row | [Co²⁺] (M) | [Sn²⁺] (M) |
+|---|---|---|
+| A | 1.0 | 1.0 |
+| B | 1.5 | 0.50 |
+| C | 1.99 | 0.010 |
+| D | 2.0 | 4.0 × 10⁻⁵ |
+
+- Row A
+- Row B
+- Row C
+- Row D
+
+<div slot="why">
+
+A reading of zero means that nothing pushes the reaction either way: it is at equilibrium, and $Q = K$. Here
+
+$$
+Q = \frac{[\ce{Co^2+}]}{[\ce{Sn^2+}]}
+$$
+
+Row by row, $Q$ is 1.0, then 3.0, then about 200 (199), and in row D
+
+$$
+\begin{aligned}
+Q &= 2.0 \div (4.0 \times 10^{-5}) \\
+&= 5.0 \times 10^{4}
+\end{aligned}
+$$
+
+Only row D has reached $K$.
+
+Row A is the start, where the meter read $E^\circ$, 0.14 V. In rows B and C, $Q$ is above 1, so the reading is below 0.14 V, but $Q$ is still far below $K$ and the cell is still running, even in row C, where 99 percent of the Sn²⁺ has reacted. A cell stops when $Q$ reaches $K$, and how much reactant is left by then depends on the size of $K$.
+
+And in row D, $E^\circ$ is still 0.14 V and $K$ is still 5 × 10⁴: the potential that fell to zero is $E$.
+
+</div>
+</Check>
+
+## One metal, two concentrations
+
+Now a cell that standard potentials say should do nothing. Put a cobalt strip into each of two beakers of cobalt(II) nitrate solution, one 1.0 M and deep pink, the other 0.0010 M and so pale it looks almost colorless (topic 7.9 met the pink ion). Join the strips through a meter and the solutions with a salt bridge. Both half-cells have the same half-reaction, so the two values in cathode minus anode are the same:
+
+$$
+E^\circ_\text{cell} = -0.28 - (-0.28) = 0\ \text{V}
+$$
+
+The meter still shows a small potential. Such a cell is a **concentration cell**: a cell whose two half-cells differ only in concentration.
+
+Why does it read anything? Argue through $Q$. With $E^\circ = 0$, $\Delta G^\circ = 0$ and $K = 1$ (topic 9.9). The only change this cell can make is to move Co²⁺ from one solution to the other, in effect:
+
+$$
+\begin{aligned}
+&\ce{Co^2+}(\text{concentrated}) \ce{->} \\
+&\quad \ce{Co^2+}(\text{dilute})
+\end{aligned}
+$$
+
+So the product is the ion in the dilute solution and the reactant is the ion in the concentrated one:
+
+$$
+\begin{aligned}
+Q &= \frac{[\ce{Co^2+}]_\text{dilute}}{[\ce{Co^2+}]_\text{concentrated}} \\[0.6em]
+&= \frac{0.0010}{1.0} = 1.0 \times 10^{-3}
+\end{aligned}
+$$
+
+$Q$ is less than $K$, so the reaction runs forward until the two concentrations are equal.
+
+Here is what that means at each strip. No cobalt ion crosses from one beaker to the other. In the dilute half-cell, cobalt atoms of the strip become ions:
+
+$$
+\ce{Co(s) -> Co^2+(aq) + 2e^-}
+$$
+
+That is oxidation, so this strip is the anode. It loses mass, and its solution becomes more concentrated. The electrons go through the wire to the other strip, where
+
+$$
+\ce{Co^2+(aq) + 2e^- -> Co(s)}
+$$
+
+That is reduction, so that strip is the cathode. It gains mass, and its solution becomes more dilute. In the salt bridge of potassium nitrate, NO₃⁻ moves toward the anode and K⁺ toward the cathode: anions toward the anode, as in every cell (topic 9.8).
+
+<Figure
+  src="/figures/9-10-concentration-cell.svg"
+  alt="Two beakers, each holding a metal strip in solution, joined by a salt bridge and by a wire through a meter. The left solution is sparsely hatched and labeled 0.0010 M Co²⁺; the strip in it is labeled Anode: loses mass. The right solution is densely hatched and labeled 1.0 M Co²⁺; the strip in it is labeled Cathode: gains mass. Two arrowheads on the wire, one of them labeled e⁻, point from the left strip toward the right strip."
+  caption="A concentration cell: two cobalt strips in cobalt(II) nitrate solutions of different concentration. Cobalt is oxidized in the dilute half-cell and Co²⁺ is reduced in the concentrated one, until the two concentrations are equal."
+/>
+
+The cell stops when the two concentrations are equal: $Q = 1 = K$ and $E = 0$. The potential is small throughout, 0.089 V at the start for these two solutions, because a thousandfold difference in concentration is only three powers of ten in $Q$.
+
+<KeyIdea>
+
+In a concentration cell the electrons flow in the direction that brings the two concentrations together. The half-cell with the lower concentration is the anode.
+
+</KeyIdea>
+
+<Check
+  answer={2}
+  misses={{
+    1: "That would move the two concentrations farther apart. Which way must each one go for Q to approach K?",
+    3: "A strip gets heavier where Co²⁺ is reduced, and that takes ions out of its solution. Would this cell widen the gap between the solutions?",
+    4: "Compare the two halves of this statement. When Co²⁺ ions leave a solution at a strip, does that strip get lighter or heavier?",
+  }}
+>
+A concentration cell has a cobalt strip in 0.050 M cobalt(II) nitrate and another cobalt strip in 1.0 M cobalt(II) nitrate. It runs for an hour. What has changed?
+
+- The 1.0 M solution has become more concentrated, and its strip has lost mass
+- The 1.0 M solution has become more dilute, and its strip is heavier
+- The 0.050 M solution has become more dilute, and its strip has gained mass
+- The 1.0 M solution has become more dilute, and its strip has lost mass
+
+<div slot="why">
+
+The cell runs in the direction that takes $Q$ toward $K = 1$, which is the direction that brings the two concentrations together. So the 0.050 M solution must gain Co²⁺, and the only source is its strip: cobalt atoms are oxidized there, the strip loses mass and the solution becomes more concentrated. The 1.0 M solution loses Co²⁺ to its strip, so it becomes more dilute and the strip gains mass.
+
+The first and third options would move the concentrations apart. The fourth has the right change for the 1.0 M solution and the wrong one for its strip: ions leaving a solution become metal on the strip.
+
+</div>
+</Check>
+
+## See it in numbers
+
+The diagram below is the cell explorer of topic 9.9, where the two concentration sliders were left at 1.0 M. Now they are the point.
+
+<GalvanicCell />
+
+Do five things with it, and predict before each move.
+
+1. **Read the starting state.** Tin is on the left and silver on the right, both at 1.0 M. You should see that $Q$ is 1 and that the readout gives $E$ as 0.940 V, the same as $E^\circ_\text{cell}$, 0.94 V.
+
+2. **Dilute the silver ion.** Before you move the silver slider to 0.10 M, predict: will the reading go up or down? You should see it go down: $Q$ is 100, which the readout writes as 1.0 × 10², and $E$ is 0.881 V. At 0.010 M, $Q$ is 10⁴ and $E$ is 0.822 V, the cell of this lesson's opening. At 0.0010 M, $Q$ is 10⁶ and $E$ is 0.763 V. Each tenfold dilution of Ag⁺ costs 0.059 V.
+
+3. **Dilute the tin ion instead.** Put silver back at 1.0 M. Predict, then move the tin slider to 0.10 M. You should see that $Q$ is 0.1, written 1.0 × 10⁻¹, and $E$ is 0.970 V, above $E^\circ$. At 0.0010 M, $Q$ is 10⁻³ and $E$ is 1.029 V. Each tenfold dilution of Sn²⁺ adds only about 0.030 V, half as much as silver's step, because Sn²⁺ is in $Q$ to the first power and Ag⁺ is squared.
+
+4. **Look at the size.** The lowest reading these sliders can give this cell is 0.763 V and the highest is 1.029 V. A change of a billion in $Q$, from 10⁻³ to 10⁶, moves the potential by about a quarter of a volt (0.266 V). Concentrations adjust a cell's potential. The choice of metals sets it.
+
+5. **Make a concentration cell.** Choose cobalt on both sides, both at 1.0 M. You should see the readout say that $Q$ and $K$ are both 1, that $E$ is 0 and that no electrons flow. Predict which side becomes the anode, then set the left solution to 0.0010 M. You should see the left half-cell labeled the anode, with $Q$ at 10⁻³ and $E$ at 0.089 V. Now exchange the two concentrations, 1.0 M on the left and 0.0010 M on the right: the labels change sides and the number does not.
+
+## The same story as an equation
+
+Everything above fits in one line, which the equation sheet prints:
+
+$$
+E_\text{cell} = E^\circ_\text{cell} - \dfrac{RT}{nF}\ln Q
+$$
+
+$R$ is 8.314 J/(mol·K), $T$ is in kelvins, $n$ is the moles of electrons in the balanced equation, and $F$ is 96,485 C per mole of electrons (topic 9.9). It is called the **Nernst equation**. On the exam it is mostly a tool for reasoning: which way $E$ moves, and why.
+
+Read it without a calculator. There are three cases:
+
+- When $Q = 1$, $\ln Q = 0$ and $E = E^\circ$.
+- When $Q$ is greater than 1, $\ln Q$ is positive, something is subtracted, and $E$ is below $E^\circ$.
+- When $Q$ is less than 1, $\ln Q$ is negative, subtracting a negative adds, and $E$ is above $E^\circ$.
+
+These are the three results of the worked example above.
+
+The equation also says why the changes are small. The logarithm grows slowly, and it is multiplied by a small number: at 298 K, $RT/F$ is 0.0257 V, and it is divided by $n$.
+
+And it says what happens at equilibrium. Put in $E = 0$ and $Q = K$, and the equation becomes
+
+$$
+E^\circ = \dfrac{RT}{nF}\ln K
+$$
+
+which is topic 9.9's link between $E^\circ$ and $K$, arrived at from the other side.
+
+One calculation with the equation follows. It is here so that "the change is small" has a number behind it.
+
+<Worked title="The opening cell, in numbers">
+
+The tin and silver cell has [Sn²⁺] = 1.0 M and [Ag⁺] = 0.010 M at 25 °C. $E^\circ_\text{cell}$ = 0.94 V and $n$ = 2. What is the cell potential?
+
+1. **Find $Q$.**
+
+   $$
+   Q = \frac{1.0}{(0.010)^2} = 1.0 \times 10^{4}
+   $$
+
+2. **Find $RT/nF$.** The numbers go in without their units, and the answer is in volts, because joules per coulomb are volts.
+
+   $$
+   \begin{aligned}
+   \frac{RT}{nF} &= \frac{(8.314)(298)}{(2)(96{,}485)} \\[0.6em]
+   &= 0.01284
+   \end{aligned}
+   $$
+
+3. **Multiply by $\ln Q$.**
+
+   $$
+   \ln(1.0 \times 10^{4}) = 9.210
+   $$
+
+   $$
+   (0.01284)(9.210) = 0.118
+   $$
+
+   That is 0.118 V, which is 0.12 V to the two decimal places $E^\circ$ has.
+
+4. **Subtract.**
+
+   $$
+   E = 0.94 - 0.12 = 0.82\ \text{V}
+   $$
+
+5. **Check the direction and the size.** $Q$ is greater than 1, so $E$ should be below $E^\circ$, and it is. A change of ten thousand in $Q$ moved the potential by about 0.12 V. The explorer showed this state as 0.822 V: it keeps a third decimal place so that small changes can be seen.
+
+</Worked>
+
+<Check
+  answer={4}
+  misses={{
+    1: "The two ions do not enter Q in the same way. Put 0.10 M into the expression for Q and compare the result with Q at 1.0 M.",
+    2: "Dilution by itself does not say which way Q moves. Put 0.10 M into the expression for Q and compare the result with 1.",
+    3: "E° does stay the same. The meter reads E, which depends on Q. What is Q once both solutions are 0.10 M?",
+  }}
+>
+The chromium and copper cell of the first Check runs on this reaction:
+
+$$
+\begin{aligned}
+&\ce{2Cr(s) + 3Cu^2+(aq) ->} \\
+&\quad \ce{2Cr^3+(aq) + 3Cu(s)}
+\end{aligned}
+$$
+
+Both solutions start at 1.0 M. Then enough water is added to each half-cell to make both solutions 0.10 M. What happens to the cell potential?
+
+- It stays the same, because both solutions were diluted by the same factor
+- It rises, because every ion in the cell is now farther from its 1 M value
+- It stays the same, because E° depends only on the two half-reactions
+- It falls, because Q rises from 1 to 10
+
+<div slot="why">
+
+Put the new concentrations into $Q$:
+
+$$
+Q = \frac{(0.10)^2}{(0.10)^3} = 10
+$$
+
+The bottom shrank by a factor of 1,000 and the top by only 100, so $Q$ rose from 1 to 10, toward $K$, and $E$ falls. In the equation, $\ln Q$ is now positive, so something is subtracted from $E^\circ$.
+
+The fall is slight: the explorer, set to chromium and copper with both solutions at 0.10 M, shows 1.070 V against an $E^\circ_\text{cell}$ of 1.08 V.
+
+Equal dilution leaves $Q$ alone only when the exponents on top and bottom are equal. $E^\circ$ does stay the same, but the meter reads $E$.
+
+</div>
+</Check>
+
+<Check
+  answer={1}
+  misses={{
+    2: "K for a redox reaction is written like any other K. Ask instead when the concentrations in a mixture fit the expression for K.",
+    3: "Exponents come from the balanced equation, where Ag⁺ has a coefficient of 2. Ask instead what state a mixture must be in to fit K.",
+    4: "At 5 × 10⁻²¹ M the reaction would be all but finished. What would the meter read then, and what does this one read?",
+  }}
+>
+A cadmium and silver cell runs on the reaction below, for which $E^\circ$ = 1.20 V and $K$ = 4 × 10⁴⁰ at 25 °C. Its cadmium solution is 1.0 M, and its meter reads 1.14 V. To find the concentration of silver ions, a classmate writes K = [Cd²⁺]/[Ag⁺]², puts in the values of K and [Cd²⁺], and gets [Ag⁺] = 5 × 10⁻²¹ M. What is wrong with this?
+
+$$
+\begin{aligned}
+&\ce{Cd(s) + 2Ag^+(aq) ->} \\
+&\quad \ce{Cd^2+(aq) + 2Ag(s)}
+\end{aligned}
+$$
+
+- The cell has a reading, so it is not at equilibrium and its mixture gives Q, not K
+- K does not count the electrons, so it cannot be used for a reaction that moves charge
+- The exponent on [Ag⁺] should be 1, because each silver ion takes only one electron
+- Nothing is wrong: with a K this large, a cell holds almost no Ag⁺ from the moment it is built
+
+<div slot="why">
+
+The expression for $K$ holds only for a mixture at equilibrium, and a cell at equilibrium reads zero. This cell reads 1.14 V, so it is a long way from equilibrium, and the ratio of its concentrations is its $Q$, which is nowhere near $K$.
+
+The classmate's arithmetic is right:
+
+$$
+\sqrt{1.0 \div (4 \times 10^{40})} = 5 \times 10^{-21}
+$$
+
+So is the form of the expression: the exponent on [Ag⁺] is its coefficient, 2, and $K$ for a redox reaction is written like any other. But 5 × 10⁻²¹ M is about the silver ion concentration this cell would have once it had run down, not the one it has now.
+
+A reading only a little below $E^\circ$ belongs to a $Q$ that is still close to 1 on the scale of this $K$: the explorer, set to cadmium at 1.0 M and silver at 0.10 M, where $Q$ is 100, shows 1.141 V.
+
+</div>
+</Check>
+
+<Trap>
+
+Seven mistakes cost points on this topic:
+
+- **Saying that $E^\circ$ falls as a cell runs.** It is $E$ that falls. $E^\circ$ belongs to the reaction at $Q = 1$ and stays put.
+- **Explaining a change with Le Châtelier's principle.** That principle is for a system at equilibrium, and a working cell is not at equilibrium. Say where the species sits in $Q$, what happens to $Q$, and so what happens to $E$.
+- **Putting a working cell's concentrations into the expression for $K$.** They give $Q$. They fit $K$ only when the meter reads zero.
+- **Putting an electrode into $Q$.** The metals are solids, and a larger strip changes nothing.
+- **Forgetting the exponents in $Q$.** Diluting Ag⁺ tenfold changes the tin and silver cell's $Q$ a hundredfold.
+- **Making the concentrated half-cell the anode of a concentration cell.** The dilute side is where ions must be made, so oxidation happens there.
+- **Predicting when a cell will stop from how much reactant is left.** The stopping point is $Q = K$. For the tin and silver cell that is long after 99 percent of the silver ions have reacted.
+
+</Trap>
+
+<KeyPoints>
+
+- $E^\circ$ is the cell potential at standard conditions, where $Q = 1$. $E$ is the cell potential at whatever $Q$ the cell has now. $Q$ is written as in topic 7.3, with the solid electrodes left out.
+- A cell's potential is large while its mixture has far to go to equilibrium and small when little is left to go. A change that raises $Q$ toward $K$ lowers $E$. A change that lowers $Q$ raises $E$, above $E^\circ$ when $Q$ is below 1.
+- As a cell runs, $Q$ rises and $E$ falls. At $Q = K$ the cell is at equilibrium and $E = 0$. $E^\circ$ has not changed.
+- A working cell is not at equilibrium, so reason through $Q$, not through Le Châtelier's principle: where the species sits in $Q$, what happens to $Q$, and so what happens to $E$.
+- In a concentration cell $E^\circ = 0$ and $K = 1$. The half-cell with the lower concentration is the anode, and the cell stops when the two concentrations are equal.
+- The Nernst equation says all of this in one line: the cell potential is $E^\circ_\text{cell}$ minus $RT/nF$ times $\ln Q$. The changes it gives are small beside $E^\circ$.
+
+</KeyPoints>
+
+<PracticeNext />

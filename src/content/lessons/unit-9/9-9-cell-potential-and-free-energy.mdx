@@ -1,0 +1,701 @@
+---
+topic: "9.9"
+minutes: 22
+summary: "How standard reduction potentials give the potential of a cell, why a potential is never multiplied, and how the potential, the free energy change and the equilibrium constant are tied together."
+---
+
+Turn over the button cell from a watch and you will often find a number stamped into the steel: 1.55 V. Topic 9.8 showed where the cell's current comes from: zinc gives up electrons, silver oxide takes them, and the two are kept apart so that the electrons must go through the watch. This lesson is about the number: what a volt measures, why this pair of substances gives about one and a half of them, and what that has to do with ΔG°.
+
+## What a volt measures
+
+Electrons in the wire of a galvanic cell go from the anode to the cathode (topic 9.8) because the cell's reaction is thermodynamically favored. The **cell potential**, $E_\text{cell}$, measures how hard the reaction pushes them: it is the energy that each coulomb of charge gives up on its way through the wire from the anode to the cathode. Its unit is the volt, and one volt is one joule per coulomb. The equation sheet prints that line. A meter joined to the two electrodes reads the cell potential.
+
+The potential depends on the concentrations, which is topic 9.10's subject, so chemists agree on one set of conditions for the tables. The **standard cell potential**, $E^\circ_\text{cell}$, is the cell potential when every substance is in its standard state: every solute at 1 M, every gas at 1 bar, which is very nearly 1 atm, and every solid and liquid pure. The values in this lesson are for 25 °C. The little circle means what it meant on ΔH° and ΔG° (topics 6.8 and 9.3).
+
+## A table of reductions
+
+A meter can only compare two half-cells. No half-reaction runs alone (topic 4.9), so no half-cell has a potential that can be measured alone. Chemists therefore chose one half-reaction as the zero of the scale, the reduction of hydrogen ions to hydrogen gas, and gave every other half-reaction the potential it shows against that one. The result is the **standard reduction potential**, $E^\circ$, of a half-reaction: a number in volts that says how strongly the half-reaction pulls toward reduction, on a scale where hydrogen's is 0.00 V by definition.
+
+Tables write the half-reaction as a reduction, electrons on the left, whichever way it will run in your cell. These are the values this lesson uses. An exam question gives the ones it needs.
+
+| Half-reaction, written as a reduction | $E^\circ$ (V) |
+|---|---|
+| $\ce{Ag^+(aq) + e^- -> Ag(s)}$ | +0.80 |
+| $\ce{Cu^2+(aq) + 2e^- -> Cu(s)}$ | +0.34 |
+| $\ce{2H^+(aq) + 2e^- -> H2(g)}$ | 0.00 |
+| $\ce{Sn^2+(aq) + 2e^- -> Sn(s)}$ | −0.14 |
+| $\ce{Co^2+(aq) + 2e^- -> Co(s)}$ | −0.28 |
+| $\ce{Cd^2+(aq) + 2e^- -> Cd(s)}$ | −0.40 |
+| $\ce{Cr^3+(aq) + 3e^- -> Cr(s)}$ | −0.74 |
+
+Here is what the order means. The higher a half-reaction stands, the more strongly it pulls toward reduction. Ag⁺ at the top takes electrons more readily than any other ion in this table. Chromium metal at the bottom is the one whose half-reaction is most easily pushed backward: of these metals it gives up electrons most readily. A negative value is not a verdict on the half-reaction. It only says the half-reaction stands below hydrogen's.
+
+Put two half-cells together and they compete for the electrons. **The half-reaction with the higher reduction potential wins: it runs as written, as the reduction, at the cathode. The other is forced to run backward, as the oxidation, at the anode.** That is the rule for a galvanic cell at standard conditions.
+
+The standard cell potential is the gap between the two.
+
+$$
+E^\circ_\text{cell} = E^\circ_\text{cathode} - E^\circ_\text{anode}
+$$
+
+Both values go in exactly as the table prints them, as reduction potentials, signs included. Do not change the sign of the anode's value before you subtract: the minus sign in the equation already accounts for that half-reaction running backward. This equation is not on the equation sheet.
+
+Take cobalt and tin. Tin's half-reaction is the higher of the two, −0.14 V against −0.28 V, so Sn²⁺ is reduced and cobalt is oxidized:
+
+$$
+\begin{aligned}
+E^\circ_\text{cell} &= -0.14 - (-0.28) \\
+&= +0.14\ \text{V}
+\end{aligned}
+$$
+
+Two negative potentials still make a cell with a positive one.
+
+<KeyIdea>
+
+In a galvanic cell at standard conditions, the half-reaction with the higher standard reduction potential is the reduction, at the cathode. The standard cell potential is the cathode's value minus the anode's, both taken from the table as they stand.
+
+</KeyIdea>
+
+<Check
+  numeric="0.90"
+  unit="V"
+  slips={{
+    "1.46": "That is what adding the two sizes gives. E°cell is a difference: the cathode's value minus the anode's, each with the sign the table gives it.",
+    "-0.90": "Did you subtract the wrong way around? The half-reaction with the higher reduction potential is the cathode's, and its value comes first.",
+    "-1.46": "Did you add the two potentials? E°cell is the cathode's value minus the anode's, each with the sign the table gives it.",
+  }}
+>
+A galvanic cell is made from a manganese strip in a 1 M solution of Mn²⁺ ions and a cobalt strip in a 1 M solution of Co²⁺ ions, at 25 °C. The standard reduction potentials are:
+
+$$
+\begin{aligned}
+&\ce{Mn^2+(aq) + 2e^- -> Mn(s)} \\
+&\quad E^\circ = -1.18\ \text{V}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\ce{Co^2+(aq) + 2e^- -> Co(s)} \\
+&\quad E^\circ = -0.28\ \text{V}
+\end{aligned}
+$$
+
+What is the standard cell potential, in V?
+
+<div slot="why">
+
+Cobalt's half-reaction has the higher reduction potential, so Co²⁺ is reduced at the cobalt strip, the cathode, and manganese is oxidized at the anode.
+
+$$
+\begin{aligned}
+E^\circ_\text{cell} &= -0.28 - (-1.18) \\
+&= +0.90\ \text{V}
+\end{aligned}
+$$
+
+A galvanic cell's potential comes out positive: if yours is negative, the two values are the wrong way around.
+
+</div>
+</Check>
+
+<Check
+  answer={1}
+  misses={{
+    2: "Those two stand below cobalt in the table. For a favored reaction, must the half-reaction that is reduced stand above or below the one that is oxidized?",
+    3: "Cobalt is the anode in each case. Work out cathode minus anode for each ion separately, and look at the sign of each answer.",
+    4: "A negative reduction potential does not rule an ion out. Work out cathode minus anode for each ion, with cobalt as the anode.",
+  }}
+>
+A strip of cobalt is lowered into a solution that holds Sn²⁺, Cd²⁺ and Cr³⁺ ions, each at 1 M. The standard reduction potentials are −0.14 V for Sn²⁺/Sn, −0.28 V for Co²⁺/Co, −0.40 V for Cd²⁺/Cd and −0.74 V for Cr³⁺/Cr. For which of the three ions is its reduction by cobalt metal thermodynamically favored?
+
+- Sn²⁺ only
+- Cd²⁺ and Cr³⁺, but not Sn²⁺
+- All three: Sn²⁺, Cd²⁺ and Cr³⁺
+- None of the three
+
+<div slot="why">
+
+Cobalt is the only metal there, so in any reaction it is the one oxidized, and its half-reaction is the anode's: −0.28 V. For each ion, take cathode minus anode.
+
+For Sn²⁺:
+
+$$
+-0.14 - (-0.28) = +0.14\ \text{V}
+$$
+
+For Cd²⁺:
+
+$$
+-0.40 - (-0.28) = -0.12\ \text{V}
+$$
+
+For Cr³⁺:
+
+$$
+-0.74 - (-0.28) = -0.46\ \text{V}
+$$
+
+Only the first is positive, so only tin(II) ions are reduced by cobalt in a favored reaction, and tin can form on the strip. A metal reduces the ions that stand above it in the table, not the ones below it. Having a negative potential does not stop an ion from being reduced: Sn²⁺ has one.
+
+</div>
+</Check>
+
+## From volts to free energy
+
+A volt is a joule per coulomb, so a cell potential times the charge that passes is an energy. For one mole of reaction the charge is $n$ moles of electrons, and each mole of electrons carries 96,485 C. That number is **Faraday's constant**, $F$: the charge of one mole of electrons, 96,485 C/mol. So $nF$ is the charge in coulombs, and $nFE^\circ$ is the electrical energy the reaction can deliver, in joules. The free energy of the chemicals falls by that much.
+
+$$
+\Delta G^\circ = -nFE^\circ
+$$
+
+This equation is on the equation sheet, and so is the value of $F$.
+
+There are three things to get right.
+
+- **$n$ is counted once the electrons match.** It is the number of moles of electrons that pass from the anode to the cathode for one mole of reaction: the number that canceled when the two half-reactions were added (topic 4.9). A half-reaction on its own may have been multiplied first, so its electron count can be too small.
+- **The answer is in joules.** Volts times coulombs are joules. ΔG° values are quoted in $\text{kJ/mol}_\text{rxn}$, so the conversion is a line of its own.
+- **The minus sign.** A positive $E^\circ$ gives a negative ΔG°: a cell that runs by itself runs a thermodynamically favored reaction. A negative $E^\circ$ gives a positive ΔG°.
+
+**A potential is never multiplied.** To make the electrons cancel you often multiply a half-reaction by 2 or 3. Its $E^\circ$ stays as the table printed it. A potential is energy per coulomb. Doubling a half-reaction doubles the coulombs and doubles the joules, and the joules per coulomb do not change, just as the price per kilogram does not change when you buy two kilograms. The amount of reaction does matter to the energy, and it comes in through $n$: that is what $n$ is for.
+
+<KeyIdea>
+
+$\Delta G^\circ = -nFE^\circ$. Balancing the electrons may mean multiplying a half-reaction, and its $E^\circ$ stays as the table printed it. The size of the reaction enters once, through $n$, the moles of electrons in the balanced overall equation.
+
+</KeyIdea>
+
+<Worked title="Cadmium and silver">
+
+A galvanic cell has a cadmium strip in 1.0 M cadmium nitrate solution and a silver strip in 1.0 M silver nitrate solution, at 25 °C. The standard reduction potentials are:
+
+$$
+\begin{aligned}
+&\ce{Cd^2+(aq) + 2e^- -> Cd(s)} \\
+&\quad E^\circ = -0.40\ \text{V}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\ce{Ag^+(aq) + e^- -> Ag(s)} \\
+&\quad E^\circ = +0.80\ \text{V}
+\end{aligned}
+$$
+
+Which strip is the cathode? Find the standard cell potential, the balanced equation and ΔG°.
+
+1. **Find the cathode.** Silver's half-reaction has the higher reduction potential, so it runs as written: Ag⁺ ions are reduced at the silver strip, the cathode. Cadmium's runs backward, at the cadmium strip, the anode:
+
+   $$
+   \ce{Cd(s) -> Cd^2+(aq) + 2e^-}
+   $$
+
+2. **Subtract, cathode minus anode.**
+
+   $$
+   \begin{aligned}
+   E^\circ_\text{cell} &= 0.80 - (-0.40) \\
+   &= 1.20\ \text{V}
+   \end{aligned}
+   $$
+
+3. **Balance the electrons.** Each cadmium atom gives up 2 electrons and each silver ion takes 1, so the silver half-reaction is doubled:
+
+   $$
+   \ce{2Ag^+(aq) + 2e^- -> 2Ag(s)}
+   $$
+
+   The half-reaction was doubled and its potential was not: step 2 used the table's value as it stands, and that value is not touched again. Add the two halves:
+
+   $$
+   \begin{aligned}
+   &\ce{Cd(s) + 2Ag^+(aq) ->} \\
+   &\quad \ce{Cd^2+(aq) + 2Ag(s)}
+   \end{aligned}
+   $$
+
+   Check: the charge is +2 on each side.
+
+4. **Count the electrons.** Two electrons canceled, so $n = 2$.
+
+5. **Find ΔG°, in joules first.** With $F$ in coulombs per mole of electrons and $E^\circ$ in volts, the answer is in joules for each mole of reaction.
+
+   $$
+   \begin{aligned}
+   \Delta G^\circ &= -(2)(96{,}485)(1.20) \\
+   &= -231{,}564
+   \end{aligned}
+   $$
+
+6. **Convert, and check the sign.**
+
+   $$
+   \begin{aligned}
+   &-231{,}564\ \text{J/mol}_\text{rxn} \\
+   &\quad = -232\ \text{kJ/mol}_\text{rxn}
+   \end{aligned}
+   $$
+
+   The potential is positive and ΔG° is negative, as they must be for a cell that runs by itself.
+
+</Worked>
+
+<Check
+  numeric="-347"
+  unit="kJ/mol"
+  slips={{
+    "347": "A positive E° means a favored reaction. What sign must ΔG° have, and what does the minus sign in ΔG° = −nFE° do?",
+    "-347346": "That is ΔG° in joules, which is what volts times coulombs gives. The question asks for kilojoules.",
+    "-116": "That is what n = 2 gives. n is the number of electrons that cancel when the two half-reactions are multiplied and added.",
+    "-174": "That is what n = 3 gives. n is the number of electrons that cancel when the two half-reactions are multiplied and added.",
+    "-614": "Did you multiply each potential by its coefficient? A potential is energy per coulomb. It does not change when a half-reaction is multiplied.",
+    "-509": "Did you add the two potentials? E°cell is the cathode's value minus the anode's, each with the sign the table gives it.",
+    "-289": "That is what n = 5 gives. The electrons of the two half-reactions are not added: each half is multiplied until both have the same number.",
+  }}
+>
+Chromium metal reduces tin(II) ions:
+
+$$
+\begin{aligned}
+&\ce{2Cr(s) + 3Sn^2+(aq) ->} \\
+&\quad \ce{2Cr^3+(aq) + 3Sn(s)}
+\end{aligned}
+$$
+
+The standard reduction potentials are −0.74 V for Cr³⁺(aq) + 3e⁻ → Cr(s) and −0.14 V for Sn²⁺(aq) + 2e⁻ → Sn(s). What is ΔG° for the reaction as written, in $\text{kJ/mol}_\text{rxn}$? Give the answer with its sign. ($F$ = 96,485 C per mole of electrons.)
+
+<div slot="why">
+
+Tin's half-reaction is the reduction, so:
+
+$$
+\begin{aligned}
+E^\circ_\text{cell} &= -0.14 - (-0.74) \\
+&= +0.60\ \text{V}
+\end{aligned}
+$$
+
+To balance the electrons, chromium's half-reaction is multiplied by 2 and tin's by 3, so 6 electrons cancel: $n = 6$. Neither potential is multiplied. In joules for each mole of reaction:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -(6)(96{,}485)(0.60) \\
+&= -347{,}346
+\end{aligned}
+$$
+
+In kilojoules:
+
+$$
+\begin{aligned}
+&-347{,}346\ \text{J/mol}_\text{rxn} \\
+&\quad = -347\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+</div>
+</Check>
+
+The diagram below has two half-cells, each a metal in a solution of its own ion, joined by a wire with a meter and by a salt bridge of potassium nitrate, at 25 °C. You choose the metal on each side. Each side also has a slider for the concentration of its ion. Leave both at 1.0 M in this lesson: topic 9.10 is about what they do. The ladder beside the cell is the table of this lesson stood on end.
+
+<GalvanicCell />
+
+Do five things with it, and predict before each move.
+
+1. **Read the starting cell.** Tin is on the left and silver on the right. Before you look at the labels, find the two rungs on the ladder and say which metal is the cathode. You should see that it is silver, the higher rung. The gap between the rungs is $E^\circ_\text{cell}$, 0.94 V. The equation is
+
+   $$
+   \begin{aligned}
+   &\ce{Sn(s) + 2Ag^+(aq) ->} \\
+   &\quad \ce{Sn^2+(aq) + 2Ag(s)}
+   \end{aligned}
+   $$
+
+   and 2 mol of electrons pass for each mole of reaction. ΔG° is −181 $\text{kJ/mol}_\text{rxn}$.
+
+2. **Trade the two sides.** Choose silver on the left and tin on the right. Predict what changes. You should see the labels "anode" and "cathode", the electron arrow and the arrows in the salt bridge all change sides. No number changes: still 0.94 V and −181 $\text{kJ/mol}_\text{rxn}$. Which beaker stands on the left has nothing to do with which is the anode.
+
+3. **Put cobalt in place of tin.** That makes cobalt with silver. Predict the potential from the table first:
+
+   $$
+   0.80 - (-0.28) = 1.08\ \text{V}
+   $$
+
+   You should see 1.08 V, 2 mol of electrons and −208 $\text{kJ/mol}_\text{rxn}$. Silver's coefficient of 2 in the equation has doubled nothing.
+
+4. **Build the worked example.** Choose cadmium with silver. You should see 1.20 V and −232 $\text{kJ/mol}_\text{rxn}$, as calculated above. Keep those two numbers in mind for the next step.
+
+5. **Rank two cells twice.** The next cell is chromium with copper. Before you build it, predict from the table whether its potential is higher or lower than the cadmium and silver cell's, and then whether its ΔG° is more negative or less. The potential first:
+
+   $$
+   0.34 - (-0.74) = 1.08\ \text{V}
+   $$
+
+   That is lower than 1.20 V. But you should see this equation:
+
+   $$
+   \begin{aligned}
+   &\ce{2Cr(s) + 3Cu^2+(aq) ->} \\
+   &\quad \ce{2Cr^3+(aq) + 3Cu(s)}
+   \end{aligned}
+   $$
+
+   Here 6 mol of electrons pass for each mole of reaction, and ΔG° is −625 $\text{kJ/mol}_\text{rxn}$, about 2.7 times the cadmium and silver cell's −232. Ranked by potential, cadmium with silver comes first. Ranked by free energy for each mole of reaction, chromium with copper does. Each coulomb gives up less energy in the chromium cell, and three times as many coulombs pass. And if you predicted 2.50 V, you multiplied each potential by its coefficient, 3 for copper's and 2 for chromium's: the explorer's meter shows 1.08 V.
+
+Now back to the watch.
+
+<Worked title="The watch battery, two ways">
+
+The silver oxide cell of topic 4.7 runs on this reaction:
+
+$$
+\begin{aligned}
+&\ce{Zn(s) + Ag2O(s) ->} \\
+&\quad \ce{ZnO(s) + 2Ag(s)}
+\end{aligned}
+$$
+
+Inside the cell the solids sit in a paste of potassium hydroxide, a strong base, so its two half-reactions are written with hydroxide ions. A table gives them as reductions:
+
+$$
+\begin{aligned}
+&\ce{Ag2O(s) + H2O(l) + 2e^- ->} \\
+&\quad \ce{2Ag(s) + 2OH^-(aq)} \\
+&\quad E^\circ = +0.34\ \text{V}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\ce{ZnO(s) + H2O(l) + 2e^- ->} \\
+&\quad \ce{Zn(s) + 2OH^-(aq)} \\
+&\quad E^\circ = -1.26\ \text{V}
+\end{aligned}
+$$
+
+The standard free energies of formation are −320.5 kJ/mol for ZnO(s) and −11.2 kJ/mol for Ag₂O(s). Find $E^\circ_\text{cell}$, then find ΔG° twice: from the potential, and from the formation values.
+
+1. **Find the cathode.** The silver oxide half-reaction has the higher potential, so it is the reduction: Ag₂O is reduced at the cathode. The zinc half-reaction runs backward: zinc is oxidized at the anode. That agrees with the oxidation numbers of topic 4.7.
+
+2. **Subtract.**
+
+   $$
+   \begin{aligned}
+   E^\circ_\text{cell} &= 0.34 - (-1.26) \\
+   &= 1.60\ \text{V}
+   \end{aligned}
+   $$
+
+3. **Add the halves and count the electrons.** Each half-reaction has 2 electrons, so neither is multiplied, and $n = 2$. The water and the hydroxide ions appear once on each side and cancel, which leaves the equation of topic 4.7.
+
+4. **ΔG° from the potential.** In joules for each mole of reaction:
+
+   $$
+   \begin{aligned}
+   \Delta G^\circ &= -(2)(96{,}485)(1.60) \\
+   &= -308{,}752
+   \end{aligned}
+   $$
+
+   In kilojoules:
+
+   $$
+   \begin{aligned}
+   &-308{,}752\ \text{J/mol}_\text{rxn} \\
+   &\quad = -309\ \text{kJ/mol}_\text{rxn}
+   \end{aligned}
+   $$
+
+5. **ΔG° from formation values** (topic 9.3). Zinc and silver are elements in their standard states, so each has $\Delta G_f^\circ = 0$. Products minus reactants, in $\text{kJ/mol}_\text{rxn}$:
+
+   $$
+   \begin{aligned}
+   \Delta G^\circ ={} & [1(-320.5) + 2(0)] \\
+   & - [1(0) + 1(-11.2)] \\
+   ={} & -309.3
+   \end{aligned}
+   $$
+
+6. **Compare.** −309 $\text{kJ/mol}_\text{rxn}$ from a meter reading and −309.3 $\text{kJ/mol}_\text{rxn}$ from a table of free energies: two roads to one number. A potential is a free energy change, counted per coulomb.
+
+</Worked>
+
+The cell's standard potential, 1.60 V, is close to the 1.55 V often stamped on it. The stamp is the voltage the maker promises while the cell is delivering current, which is a little below what a meter reads on a fresh cell that is delivering almost none.
+
+## Potential, free energy and K on one scale
+
+Topic 9.5 tied ΔG° to the equilibrium constant:
+
+$$
+\Delta G^\circ = -RT\ln K
+$$
+
+This lesson ties ΔG° to the cell potential. So for a redox reaction the three numbers cannot be chosen separately: fix one and the other two follow.
+
+The three rulers below are drawn for a reaction in which 2 mol of electrons pass, at 298 K, and any vertical line across them picks out a matching $E^\circ_\text{cell}$, ΔG° and $K$.
+
+<Figure
+  src="/figures/9-9-three-rulers.svg"
+  alt="Three horizontal rulers stacked on one scale, for a reaction in which 2 moles of electrons pass, at 298 kelvins. The top ruler is the standard cell potential, from negative 0.30 volts at the left to positive 0.30 volts at the right. The middle ruler is delta G standard, from about positive 58 kilojoules per mole at the left to about negative 58 at the right. The bottom ruler is K on a logarithmic scale, from about 10 to the negative 10 at the left to about 10 to the 10 at the right. One dashed vertical line passes through zero volts, zero kilojoules and K equal to 1. The half to the right of it is hatched and labeled favored, and the half to the left is labeled unfavored."
+  caption="Three scales with one line across them. A positive cell potential, a negative ΔG° and a K greater than 1 lie on the same side of the line. Each tenth of a volt here is 19.3 kJ/mol and a factor of about 2,400 in K."
+/>
+
+Read the figure outward from its dashed line. To the right of the line, the half-reaction written as the reduction has the higher reduction potential, so cathode minus anode is positive. Then $nFE^\circ$ is a positive number of joules, energy the reaction can deliver, so ΔG° is negative, and topic 9.5 puts $K$ above 1. To the left, the half-reaction written as the reduction has the lower potential. Cathode minus anode is negative, $nFE^\circ$ is energy that would have to be supplied, ΔG° is positive and $K$ is below 1. On the line itself the two half-reactions pull equally hard, as two identical half-cells would: nothing is gained in either direction, and $K$ is 1.
+
+**K from a cell potential** takes the two steps you already have, and no new equation: $E^\circ_\text{cell}$ gives ΔG°, and ΔG° gives $K$. For the cadmium and silver cell, ΔG° is −231,564 $\text{J/mol}_\text{rxn}$. Keep the joules, because $R$ is in joules.
+
+$$
+\begin{aligned}
+\ln K &= \frac{-\Delta G^\circ}{RT} \\
+&= \frac{231{,}564}{(8.314)(298)} \\
+&= 93.46
+\end{aligned}
+$$
+
+$$
+K = e^{93.46} = 4 \times 10^{40}
+$$
+
+That is far off the right-hand end of the figure's bottom ruler: a potential of little more than a volt belongs to a reaction that goes, for every practical purpose, to completion. This $K$ is $K_c$, written with the molarities of the two ions. Topic 7.3 leaves the solid metals out.
+
+A large $E^\circ_\text{cell}$ says the reaction is strongly favored. It says nothing about how fast the reaction goes (topic 9.4).
+
+<Check
+  answer={4}
+  misses={{
+    1: "A positive E° gives a negative ΔG°. On which side of 1 does K lie when ΔG° is negative?",
+    2: "That is what n = 2 gives. Count the electrons that cancel when both half-reactions have been multiplied so that they match.",
+    3: "That is what n = 3 gives. Count the electrons that cancel when both half-reactions have been multiplied so that they match.",
+  }}
+>
+For this reaction the standard cell potential is 0.34 V at 25 °C:
+
+$$
+\begin{aligned}
+&\ce{2Cr(s) + 3Cd^2+(aq) ->} \\
+&\quad \ce{2Cr^3+(aq) + 3Cd(s)}
+\end{aligned}
+$$
+
+($F$ = 96,485 C per mole of electrons, and $R$ = 8.314 J/(mol·K).) About how large is the equilibrium constant $K$ at 298 K?
+
+- About 3 × 10⁻³⁵, so almost no products at equilibrium
+- About 3 × 10¹¹, so products are strongly favored
+- About 2 × 10¹⁷, so products are very strongly favored
+- About 3 × 10³⁴, so almost no reactants are left
+
+<div slot="why">
+
+Chromium's half-reaction has 3 electrons and cadmium's has 2, so the balanced equation exchanges 6: $n = 6$. In joules for each mole of reaction:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -(6)(96{,}485)(0.34) \\
+&= -196{,}829
+\end{aligned}
+$$
+
+Then:
+
+$$
+\begin{aligned}
+\ln K &= \frac{196{,}829}{(8.314)(298)} \\
+&= 79.44
+\end{aligned}
+$$
+
+$$
+K = e^{79.44} = 3 \times 10^{34}
+$$
+
+Taking $n$ as 2, from cadmium's half-reaction, gives 3 × 10¹¹, and taking it as 3, from chromium's, gives 2 × 10¹⁷: $n$ sits in the exponent of $K$, so a wrong $n$ is not a small error. A positive potential cannot give a $K$ below 1.
+
+</div>
+</Check>
+
+## When the potential is negative
+
+Write a cell reaction in the direction that is not favored and the subtraction says so. Take the explorer's first cell, tin with silver, and write its equation backward:
+
+$$
+\begin{aligned}
+&\ce{2Ag(s) + Sn^2+(aq) ->} \\
+&\quad \ce{2Ag^+(aq) + Sn(s)}
+\end{aligned}
+$$
+
+As written, silver is oxidized, so now silver's half-reaction is the anode's and tin's is the cathode's.
+
+$$
+\begin{aligned}
+E^\circ_\text{cell} &= -0.14 - 0.80 \\
+&= -0.94\ \text{V}
+\end{aligned}
+$$
+
+Then, in joules for each mole of reaction:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -(2)(96{,}485)(-0.94) \\
+&= +181{,}392
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&+181{,}392\ \text{J/mol}_\text{rxn} \\
+&\quad = +181\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+The reaction as written is thermodynamically unfavored. Compare the explorer's readout for the forward cell, 0.94 V and −181 $\text{kJ/mol}_\text{rxn}$. Writing a reaction backward changes the sign of $E^\circ_\text{cell}$ and the sign of ΔG°, and it leaves the size of each as it was.
+
+A reaction with a negative $E^\circ_\text{cell}$ cannot run a galvanic cell at standard conditions. It can be made to go in an electrolytic cell (topic 9.8), where a power supply pushes the electrons the way the reaction will not send them. The supply must provide more than the size of the negative potential: here, more than 0.94 V at standard conditions.
+
+<KeyIdea>
+
+A positive $E^\circ_\text{cell}$ means a negative ΔG° and a $K$ greater than 1: a favored reaction, which can run a galvanic cell. A negative $E^\circ_\text{cell}$ means a positive ΔG° and a $K$ less than 1: an unfavored reaction, which cannot run a galvanic cell at standard conditions. A power supply can drive it in an electrolytic cell.
+
+</KeyIdea>
+
+<Check
+  answer={3}
+  misses={{
+    1: "Which metal is oxidized in the equation as written? Its half-reaction is the anode's, and E°cell is the cathode's value minus the anode's.",
+    2: "Look at the minus sign in ΔG° = −nFE°. With n and F both positive, what sign of ΔG° goes with a negative E°?",
+    4: "A potential says nothing about speed. What does the sign of E° tell you about the sign of ΔG°?",
+  }}
+>
+A student writes this equation for a cell:
+
+$$
+\begin{aligned}
+&\ce{Sn(s) + Cd^2+(aq) ->} \\
+&\quad \ce{Sn^2+(aq) + Cd(s)}
+\end{aligned}
+$$
+
+The standard reduction potentials are −0.14 V for Sn²⁺/Sn and −0.40 V for Cd²⁺/Cd. Which statement about the reaction as written, at standard conditions, is correct?
+
+- E° is +0.26 V: favored, so it could run a galvanic cell as written
+- E° is −0.26 V, so ΔG° is negative and K is greater than 1
+- E° is −0.26 V: unfavored, but a power supply could drive it
+- E° is −0.26 V: favored, but too slow to give a measurable current
+
+<div slot="why">
+
+As written, tin is oxidized and Cd²⁺ is reduced, so cadmium's half-reaction is the cathode's:
+
+$$
+\begin{aligned}
+E^\circ &= -0.40 - (-0.14) \\
+&= -0.26\ \text{V}
+\end{aligned}
+$$
+
+A negative potential means a positive ΔG°. In joules for each mole of reaction:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -(2)(96{,}485)(-0.26) \\
+&= +50{,}172
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&+50{,}172\ \text{J/mol}_\text{rxn} \\
+&\quad = +50\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+So $K$ is below 1, and the reaction is unfavored as written. An electrolytic cell with a supply of more than 0.26 V could force it.
+
+The first option subtracts the wrong way around: it is the potential of the reverse reaction. The second forgets the minus sign in $\Delta G^\circ = -nFE^\circ$. The fourth mixes up favored with fast: a potential says nothing about rate.
+
+</div>
+</Check>
+
+The equation runs backward too: a ΔG° from a table of formation values gives the potential a cell could have.
+
+<Check
+  numeric="1.21"
+  unit="V"
+  slips={{
+    "1.82": "That is what n = 4 gives. Carbon's oxidation number rises by 6, and one carbon atom reacts in each mole of reaction.",
+    "3.64": "That is what n = 2 gives. Carbon's oxidation number rises by 6, and one carbon atom reacts in each mole of reaction.",
+    "7.28": "Did you leave out n? In ΔG° = −nFE°, n is the moles of electrons that pass for each mole of reaction.",
+    "1.21e-3": "Did ΔG° go in as kilojoules? A volt is a joule per coulomb, so ΔG° must be in joules before you divide.",
+    "-1.21": "A favored reaction has a negative ΔG° and a positive E°. Check what the minus sign in ΔG° = −nFE° does.",
+    "0.606": "That is what n = 12 gives. The equation as written has one CH₃OH, and ΔG° is for that equation. How many electrons does one carbon atom give up?",
+    "2.43": "That is what n = 3 gives. The equation as written has one CH₃OH. How many electrons does its carbon atom give up when its oxidation number changes?",
+  }}
+>
+A fuel cell makes electricity from methanol and oxygen:
+
+$$
+\begin{aligned}
+&\ce{CH3OH(l)} + \tfrac{3}{2}\,\ce{O2(g)} \ce{->} \\
+&\quad \ce{CO2(g) + 2H2O(l)}
+\end{aligned}
+$$
+
+For this reaction ΔG° = −702.0 $\text{kJ/mol}_\text{rxn}$ at 25 °C. In it the oxidation number of carbon goes from −2 to +4. What is the standard cell potential, in V? ($F$ = 96,485 C per mole of electrons.)
+
+<div slot="why">
+
+One carbon atom reacts in each mole of reaction and its oxidation number rises by 6, so 6 mol of electrons pass: $n = 6$. The oxygen agrees: three oxygen atoms each go from 0 to −2.
+
+ΔG° must be in joules:
+
+$$
+\begin{aligned}
+&-702.0\ \text{kJ/mol}_\text{rxn} \\
+&\quad = -702{,}000\ \text{J/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Rearranged, the equation gives the potential in volts:
+
+$$
+\begin{aligned}
+E^\circ &= \frac{-\Delta G^\circ}{nF} \\
+&= \frac{702{,}000}{(6)(96{,}485)} \\
+&= 1.21
+\end{aligned}
+$$
+
+It is 1.2126 before rounding. A favored reaction, a negative ΔG°, a positive potential.
+
+</div>
+</Check>
+
+<Trap>
+
+Seven mistakes cost points on this topic:
+
+- **Multiplying a potential by a coefficient.** The half-reaction gets the coefficient. Its $E^\circ$ keeps the table's value, because a potential is energy per coulomb.
+- **Changing the sign of the anode's value and then subtracting it as well.** Both values go into cathode minus anode exactly as the table prints them.
+- **Using one half-reaction's electron count as $n$.** Chromium's half-reaction shows 3 electrons and tin(II)'s shows 2, but the equation they add up to passes 6 for each mole of reaction.
+- **Leaving $-nFE^\circ$ in joules** and calling it kilojoules, or putting kilojoules into $-RT\ln K$.
+- **Reading a positive $E^\circ$ as a positive ΔG°.** The signs are opposite: a positive potential is a favored reaction.
+- **Taking the beaker on the left for the anode.** The anode is where oxidation happens, wherever it stands.
+- **Reading a large potential as a fast reaction.**
+
+</Trap>
+
+<KeyPoints>
+
+- A standard reduction potential, $E^\circ$, says how strongly a half-reaction pulls toward reduction, on a scale where the reduction of H⁺(aq) to H₂(g) is 0.00 V. Tables write every half-reaction as a reduction.
+- In a galvanic cell at standard conditions the half-reaction with the higher $E^\circ$ is the reduction, at the cathode. $E^\circ_\text{cell}$ is the cathode's value minus the anode's, with both values as the table prints them.
+- Multiplying a half-reaction to balance the electrons never changes its potential, because a volt is a joule per coulomb.
+- $\Delta G^\circ = -nFE^\circ$, where $n$ is the moles of electrons in the balanced overall equation and $F$ is 96,485 C per mole of electrons. The answer is in joules.
+- $E^\circ_\text{cell}$, ΔG° and $K$ of a redox reaction fix one another. When the cathode's reduction potential is the higher one, $E^\circ_\text{cell}$ is positive, ΔG° is negative and $K$ is greater than 1. $K$ comes from $E^\circ_\text{cell}$ in two steps, through ΔG°.
+- A reaction with a negative $E^\circ_\text{cell}$ is thermodynamically unfavored: it cannot run a galvanic cell at standard conditions, and a power supply can drive it in an electrolytic cell.
+
+</KeyPoints>
+
+<PracticeNext />

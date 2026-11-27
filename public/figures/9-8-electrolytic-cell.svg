@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400" font-family="system-ui, sans-serif" font-size="18">
+  <!-- The electrolytic cell for molten magnesium chloride, with the cathode on the left.
+       Power supply: box x 165 to 315, y 20 to 60, no terminal marked.
+       Pot: x 60 to 420, y 150 to 320, open at the top; melt from y 180 down.
+       Electrodes: steel (cathode, plain) x 120 to 144, graphite (anode, hatched) x 336 to 360, both y 110 to 280.
+       Wires: (165, 40) to (132, 40) to (132, 110); (315, 40) to (348, 40) to (348, 110).
+       Electron arrows: down from (110, 60) to (110, 100), into the cathode; up from (370, 100) to (370, 60), out of the anode.
+       3 drops of magnesium (ellipses 14 by 10) at (152, 200), (152, 228), (152, 256), touching the steel electrode's right face.
+       4 bubbles of chlorine (radius 6) at (326, 250), (322, 222), (328, 198), (323, 168); the top one is above the melt.
+       Ion arrows: magnesium ions (268, 248) to (212, 248), toward the cathode; chloride ions (212, 282) to (268, 282), toward the anode.
+       No plus or minus sign stands beside either electrode or on the power supply. -->
+  <defs>
+    <pattern id="hatch98c" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#6B655D" stroke-width="2.2"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="400" fill="#FDFCF9"/>
+
+  <!-- Melt -->
+  <rect x="60" y="180" width="360" height="140" fill="#E3EAE9"/>
+
+  <!-- Wires -->
+  <path d="M165 40H132V110" fill="none" stroke="#26231F" stroke-width="2"/>
+  <path d="M315 40H348V110" fill="none" stroke="#26231F" stroke-width="2"/>
+
+  <!-- Power supply -->
+  <rect x="165" y="20" width="150" height="40" rx="3" fill="#E6E1D8" stroke="#26231F" stroke-width="2"/>
+  <text x="240" y="46" text-anchor="middle" fill="#26231F">power supply</text>
+
+  <!-- Electrodes -->
+  <rect x="120" y="110" width="24" height="170" fill="#E6E1D8" stroke="#26231F" stroke-width="1.7"/>
+  <rect x="336" y="110" width="24" height="170" fill="#E6E1D8"/>
+  <rect x="336" y="110" width="24" height="170" fill="url(#hatch98c)" stroke="#26231F" stroke-width="1.7"/>
+
+  <!-- Pot -->
+  <path d="M60 150V320H420V150" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- 3 drops of liquid magnesium -->
+  <g fill="#6B655D">
+    <ellipse cx="152" cy="200" rx="7" ry="5"/>
+    <ellipse cx="152" cy="228" rx="7" ry="5"/>
+    <ellipse cx="152" cy="256" rx="7" ry="5"/>
+  </g>
+
+  <!-- 4 bubbles of chlorine -->
+  <g fill="#FDFCF9" stroke="#26231F" stroke-width="1.5">
+    <circle cx="326" cy="250" r="6"/>
+    <circle cx="322" cy="222" r="6"/>
+    <circle cx="328" cy="198" r="6"/>
+    <circle cx="323" cy="168" r="6"/>
+  </g>
+
+  <!-- Electron arrows -->
+  <g fill="none" stroke="#4F706C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M110 60V100m-5 -8l5 8l5 -8"/>
+    <path d="M370 100V60m-5 8l5 -8l5 8"/>
+    <path d="M268 248H212m8 -5l-8 5l8 5"/>
+    <path d="M212 282H268m-8 -5l8 5l-8 5"/>
+  </g>
+  <g fill="#4F706C" text-anchor="middle" font-weight="600">
+    <text x="90" y="86">e⁻</text>
+    <text x="392" y="86">e⁻</text>
+  </g>
+
+  <g fill="#26231F" text-anchor="middle">
+    <text x="88" y="136">steel</text>
+    <text x="410" y="136">graphite</text>
+    <text x="196" y="206">Mg(l)</text>
+    <text x="276" y="170">Cl₂(g)</text>
+    <text x="240" y="238">Mg²⁺</text>
+    <text x="240" y="272">Cl⁻</text>
+    <text x="240" y="312">molten MgCl₂</text>
+    <text x="132" y="350" font-weight="600">cathode: reduction</text>
+    <text x="348" y="350" font-weight="600">anode: oxidation</text>
+    <text x="132" y="376">Mg²⁺ + 2e⁻ → Mg</text>
+    <text x="348" y="376">2Cl⁻ → Cl₂ + 2e⁻</text>
+  </g>
+</svg>

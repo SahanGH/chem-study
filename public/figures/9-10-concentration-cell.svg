@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="system-ui, sans-serif" font-size="18">
+  <!-- A concentration cell. Two beakers, each 150 wide and 130 tall: the left from x = 50 to 200, the right from x = 280 to 430, both from y = 150 to 280, each holding solution up to y = 180. The left solution (0.0010 M) has sparse diagonal hatching, lines 16 apart; the right (1.0 M) has dense hatching, lines 5 apart: the two differ in pattern, not in color. The hatching lines are at 45 degrees and their ends are computed on the edges of each solution's rectangle. A strip 22 wide stands in the outer half of each beaker, centered at x = 100 and x = 380, from y = 110 to y = 260. The salt bridge is an inverted U whose center line runs from (170, 215) up to y = 130, across, and down to (310, 215); it is drawn as a wide ink stroke with a narrower background stroke on it, which leaves two outlines 14 apart. The wire runs from the top of the left strip up to y = 60, across through the meter at (240, 60) and down to the right strip, with two arrowheads that point from the left strip toward the right one. No sign stands beside either strip. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <rect width="480" height="360" fill="#FDFCF9"/>
+
+  <!-- Solutions -->
+  <rect x="50" y="180" width="150" height="100" fill="#E3EAE9"/>
+  <rect x="280" y="180" width="150" height="100" fill="#E3EAE9"/>
+  <path d="M50 191.3L61.3 180M50 213.9L83.9 180M50 236.6L106.6 180M50 259.2L129.2 180M51.8 280L151.8 180M74.5 280L174.5 180M97.1 280L197.1 180M119.7 280L200 199.7M142.3 280L200 222.3M165 280L200 245M187.6 280L200 267.6" fill="none" stroke="#6B655D" stroke-width="1.2"/>
+  <path d="M280 183.5L283.5 180M280 190.6L290.6 180M280 197.7L297.7 180M280 204.7L304.7 180M280 211.8L311.8 180M280 218.9L318.9 180M280 226L326 180M280 233L333 180M280 240.1L340.1 180M280 247.2L347.2 180M280 254.2L354.2 180M280 261.3L361.3 180M280 268.4L368.4 180M280 275.5L375.5 180M282.5 280L382.5 180M289.6 280L389.6 180M296.7 280L396.7 180M303.7 280L403.7 180M310.8 280L410.8 180M317.9 280L417.9 180M325 280L425 180M332 280L430 182M339.1 280L430 189.1M346.2 280L430 196.2M353.2 280L430 203.2M360.3 280L430 210.3M367.4 280L430 217.4M374.5 280L430 224.5M381.5 280L430 231.5M388.6 280L430 238.6M395.7 280L430 245.7M402.7 280L430 252.7M409.8 280L430 259.8M416.9 280L430 266.9M424 280L430 274" fill="none" stroke="#6B655D" stroke-width="1.2"/>
+
+  <!-- Beakers, open at the top -->
+  <path d="M50 150V280H200V150M280 150V280H430V150" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Salt bridge -->
+  <path d="M170 215V144Q170 130 184 130H296Q310 130 310 144V215" fill="none" stroke="#26231F" stroke-width="17"/>
+  <path d="M170 215V144Q170 130 184 130H296Q310 130 310 144V215" fill="none" stroke="#FDFCF9" stroke-width="14"/>
+  <path d="M161.5 215H178.5M301.5 215H318.5" fill="none" stroke="#26231F" stroke-width="1.5"/>
+
+  <!-- Metal strips -->
+  <rect x="89" y="110" width="22" height="150" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="369" y="110" width="22" height="150" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/>
+
+  <!-- Wire, meter and arrowheads -->
+  <path d="M100 110V60H224M256 60H380V110" fill="none" stroke="#26231F" stroke-width="1.7" stroke-linejoin="round"/>
+  <circle cx="240" cy="60" r="16" fill="#FDFCF9" stroke="#26231F" stroke-width="1.7"/>
+  <text x="240" y="66.5" text-anchor="middle" fill="#26231F">V</text>
+  <path d="M160 52L174 60L160 68ZM306 52L320 60L306 68Z" fill="#26231F"/>
+  <text x="166" y="42" text-anchor="middle" fill="#26231F">e⁻</text>
+
+  <!-- Labels -->
+  <text x="240" y="112" text-anchor="middle" fill="#6B655D">Salt bridge</text>
+  <g fill="#26231F" text-anchor="middle">
+    <text x="125" y="304">0.0010 M Co²⁺</text>
+    <text x="355" y="304">1.0 M Co²⁺</text>
+    <text x="125" y="330">Anode: loses mass</text>
+    <text x="355" y="330">Cathode: gains mass</text>
+  </g>
+</svg>

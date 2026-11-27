@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 380" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Zinc plating: a tank in cross-section with its power supply above it.
+       Tank: open-topped, x = 60 to 420, y = 170 to 330; the solution fills it from the liquid level, y = 195, down.
+       Anode (left): a zinc bar, x = 110 to 140 (30 wide), y = 130 to 300, hatched.
+       Cathode (right): a bolt centered at x = 350. Head: a hexagon 44 wide (x = 328 to 372) and 26 tall (y = 215 to 241),
+       corners at (328,228) (339,215) (361,215) (372,228) (361,241) (339,241). Shank: 20 wide (x = 340 to 360), y = 241 to 300.
+       Power supply: x = 180 to 300, y = 30 to 74; its middle height is y = 52.
+       Wires: from the top of the bar (125, 130) up to y = 52 and right to (180, 52); from (300, 52) right to x = 350 and down to the bolt's head (350, 215).
+       Electron arrowheads: on the left wire pointing up, tip at (125, 82); on the right wire pointing down, tip at (350, 122).
+       Zinc ions: circles of radius 9 at (200, 250), (250, 280) and (290, 240). Nearest pair: (250,280) and (290,240), 56.6 apart, so 38.6 between their edges.
+       The accent arrow runs from the middle ion's right edge plus 5 (264, 280) to 8 short of the shank (332, 280); the ion at (290, 240) ends at y = 249, 31 above it.
+       No sign stands beside either electrode or on the power supply. -->
+  <defs>
+    <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#FDFCF9"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#6B655D" stroke-width="2.4"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="380" fill="#FDFCF9"/>
+
+  <!-- The solution, then the tank's walls -->
+  <rect x="60" y="195" width="360" height="135" fill="#E3EAE9"/>
+  <path d="M60 170V330H420V170" fill="none" stroke="#26231F" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="60" y1="195" x2="420" y2="195" stroke="#4F706C" stroke-width="1"/>
+
+  <!-- Wires -->
+  <path d="M125 130V52H180" fill="none" stroke="#26231F" stroke-width="1.7"/>
+  <path d="M300 52H350V215" fill="none" stroke="#26231F" stroke-width="1.7"/>
+
+  <!-- The power supply -->
+  <rect x="180" y="30" width="120" height="44" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <text x="240" y="58" text-anchor="middle" fill="#26231F">Power supply</text>
+
+  <!-- Electron arrowheads and their labels, each on the outer side of its wire -->
+  <g fill="#26231F">
+    <path d="M125 82L118 96H132z"/>
+    <path d="M350 122L343 108H357z"/>
+    <text x="110" y="100" text-anchor="end">e⁻</text>
+    <text x="365" y="120">e⁻</text>
+  </g>
+
+  <!-- The zinc bar (anode) -->
+  <rect x="110" y="130" width="30" height="170" fill="url(#hatch)" stroke="#26231F" stroke-width="1.5"/>
+
+  <!-- The bolt (cathode): shank, then head -->
+  <rect x="340" y="241" width="20" height="59" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M328 228L339 215H361L372 228L361 241H339z" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- Three zinc ions -->
+  <g fill="#26231F">
+    <circle cx="200" cy="250" r="9"/>
+    <circle cx="250" cy="280" r="9"/>
+    <circle cx="290" cy="240" r="9"/>
+  </g>
+
+  <!-- The label of the leftmost ion, with a short leader line -->
+  <text x="158" y="226" fill="#26231F">Zn²⁺</text>
+  <line x1="186" y1="232" x2="193" y2="242" stroke="#26231F" stroke-width="1"/>
+
+  <!-- One ion on its way to the bolt -->
+  <line x1="264" y1="280" x2="324" y2="280" stroke="#4F706C" stroke-width="1.5"/>
+  <path d="M332 280L322 275V285z" fill="#4F706C"/>
+
+  <!-- Labels under the tank -->
+  <g fill="#26231F" text-anchor="middle">
+    <text x="125" y="358">Zinc bar: anode</text>
+    <text x="350" y="358">Bolt: cathode</text>
+  </g>
+</svg>
