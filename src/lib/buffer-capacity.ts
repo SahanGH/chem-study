@@ -45,6 +45,7 @@ export const BAR_MAX_MMOL = AMOUNT.max + ADDED.max;
 
 /** The words drawn in the diagram, its key and its controls. */
 export const LABELS = {
+  scales: 'pH of the buffer and of the water',
   buffer: 'Buffer',
   water: 'Water',
   bars: 'In the buffer, in millimoles',
@@ -259,7 +260,11 @@ export function readout(acid: number, base: number, added: number): string {
   const s = state(acid, base, added);
   const n = Math.abs(added);
   const water = `The same ${n} mmol took the water from pH ${s.waterBeforeText} to ${s.waterAfterText}.`;
-  const ratio = `The ratio of base form to acid form went from ${s.ratioBeforeText} to ${s.ratioAfterText ?? ''}, and the buffer's pH from ${s.bufferBeforeText} to ${s.bufferAfterText}.`;
+  // Only the two "both members remain" kinds say a ratio after; a missing one there is a bug, not an empty string.
+  const ratio = () => {
+    if (s.ratioAfterText === null) throw new Error(`No ratio after for ${acid}, ${base} and ${added} mmol, but both members remain.`);
+    return `The ratio of base form to acid form went from ${s.ratioBeforeText} to ${s.ratioAfterText}, and the buffer's pH from ${s.bufferBeforeText} to ${s.bufferAfterText}.`;
+  };
   switch (s.kind) {
     case 'nothing':
       return (
@@ -267,9 +272,9 @@ export function readout(acid: number, base: number, added: number): string {
         `Its pH is ${s.bufferBeforeText}. The water's pH is ${s.waterBeforeText}. Nothing has been added yet.`
       );
     case 'ohBoth':
-      return `${n} mmol of OH⁻ reacted with ${n} mmol of propanoic acid and made ${n} mmol of propanoate ion. ${ratio} ${water}`;
+      return `${n} mmol of OH⁻ reacted with ${n} mmol of propanoic acid and made ${n} mmol of propanoate ion. ${ratio()} ${water}`;
     case 'h3oBoth':
-      return `${n} mmol of H₃O⁺ reacted with ${n} mmol of propanoate ion and made ${n} mmol of propanoic acid. ${ratio} ${water}`;
+      return `${n} mmol of H₃O⁺ reacted with ${n} mmol of propanoate ion and made ${n} mmol of propanoic acid. ${ratio()} ${water}`;
     case 'ohUsedUp':
       return (
         `${n} mmol of OH⁻ reacted with all ${acid} mmol of the propanoic acid. The acid form is used up, so this is no longer a buffer. ` +
@@ -336,6 +341,10 @@ export function describeBars(acid: number, base: number, added: number): string 
   const s = state(acid, base, added);
   const left = s.leftOverIon ? `Left over: ${s.leftOver} of ${s.leftOverIon}.` : 'Left over: none.';
   if (s.kind === 'nothing') return `Bars in millimoles, with nothing added yet. Acid form: ${acid}. Base form: ${base}. ${left}`;
-  const change = (after: number, before: number) => `${after}, ${after > before ? 'up' : 'down'} from ${before}`;
+  const change = (after: number, before: number) => {
+    // A reacting addition moves each bar by 5 mmol or more, so a bar never stays put here.
+    if (after === before) throw new Error(`A bar did not move (${before} mmol) in a state with something added.`);
+    return `${after}, ${after > before ? 'up' : 'down'} from ${before}`;
+  };
   return `Bars in millimoles. Acid form: ${change(s.acidAfter, acid)}. Base form: ${change(s.baseAfter, base)}. ${left}`;
 }

@@ -113,6 +113,7 @@ test('the diagram starts with 100 mmol of each form and nothing added, with its 
   await expect(acidSlider(diagram)).toHaveAttribute('aria-valuetext', '100 millimoles of propanoic acid');
   await expect(baseSlider(diagram)).toHaveAttribute('aria-valuetext', '100 millimoles of propanoate ion');
   await expect(values(diagram)).toHaveText(['nothing added', '100 mmol', '100 mmol']);
+  await expect(scalesPanel(diagram).locator('figcaption')).toHaveText('pH of the buffer and of the water');
   await expect(scalesPanel(diagram).locator('[data-scale-title]')).toHaveText(['Buffer', 'Water']);
   // One marker on each scale, hollow, when nothing is added.
   await expect(scalesPanel(diagram).locator('[data-marker="before"]')).toHaveCount(2);
@@ -248,6 +249,9 @@ test('the bars differ in pattern: the acid form hatched, the base form plain, th
   const acid = barsPanel(diagram).locator('[data-bar="acid"]');
   const fill = await acid.getAttribute('fill');
   expect(fill).toMatch(/^url\(#buffer-capacity-.+-hatch\)$/);
+  // The computed fill is what is painted: a CSS rule would beat the attribute.
+  const painted = await acid.evaluate((element) => getComputedStyle(element).fill);
+  expect(painted).toMatch(/^url\(["']?#buffer-capacity-.+-hatch["']?\)$/);
   const hatchId = fill?.slice(5, -1) ?? '';
   await expect(page.locator(`[id="${hatchId}"]`)).toHaveCount(1);
   expect(await barsPanel(diagram).locator('[data-bar="base"]').getAttribute('fill')).toBeNull();

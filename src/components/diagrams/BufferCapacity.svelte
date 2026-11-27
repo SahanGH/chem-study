@@ -55,7 +55,6 @@
   // built and when the script takes over.
   const uid = $props.id();
   const HATCH_ID = `buffer-capacity-${uid}-hatch`;
-  const KEY_HATCH_ID = `buffer-capacity-${uid}-key-hatch`;
 
   let acid = $state<number>(START.acid);
   let base = $state<number>(START.base);
@@ -87,6 +86,7 @@
 <div class="diagram-body" data-diagram="buffer-capacity" data-hydrated={hydrated ? 'true' : undefined}>
   <div class="diagram-panels">
     <figure class="diagram-plot" data-panel="scales">
+      <figcaption class="diagram-panel-title">{LABELS.scales}</figcaption>
       <svg viewBox={`0 0 ${SCALES.width} ${SCALES.height}`} role="img" aria-label={describeScales(acid, base, added)}>
         {#each ROWS as row (row.id)}
           {@const marker = markers.find((m) => m.id === row.id)}
