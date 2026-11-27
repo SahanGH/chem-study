@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" font-family="system-ui, sans-serif" font-size="18">
+  <!-- The entropy tally for 4 Fe(s) + 3 O2(g) to 2 Fe2O3(s), as two stacked bars on one baseline at y = 300, to scale: 1 unit of height for every 3 J/K.
+       Reactants' bar, x = 160 to 250. Four iron blocks, each 27.3 / 3 = 9.1 units: edges at y = 300, 290.9, 281.8, 272.7, 263.6. Three oxygen blocks, each 205.2 / 3 = 68.4 units: edges at y = 263.6, 195.2, 126.8, 58.4. The whole bar is 724.8 / 3 = 241.6 units, and 300 - 241.6 = 58.4.
+       Product's bar, x = 300 to 390. Two iron(III) oxide blocks, each 87.4 / 3 = 29.13 units: edges at y = 300, 270.87, 241.73. The whole bar is 174.8 / 3 = 58.27 units.
+       The gap between the two tops is 241.73 - 58.4 = 183.33 units, which is 550.0 / 3. Dashed guides mark the two levels, and a heavy arrow at x = 275 falls from y = 62 to y = 238 between them.
+       The three kinds of block differ in fill: hatched (iron), pale (oxygen), solid (iron(III) oxide). -->
+  <defs>
+    <pattern id="hatch-9-2" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="5" height="5" fill="#FDFCF9"/>
+      <path d="M0 0V5" stroke="#6B655D" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="340" fill="#FDFCF9"/>
+
+  <text x="8" y="26" fill="#6B655D">Entropy in J/K</text>
+
+  <!-- Reactants: four iron blocks -->
+  <g fill="url(#hatch-9-2)" stroke="#26231F" stroke-width="1.5">
+    <rect x="160" y="290.9" width="90" height="9.1"/>
+    <rect x="160" y="281.8" width="90" height="9.1"/>
+    <rect x="160" y="272.7" width="90" height="9.1"/>
+    <rect x="160" y="263.6" width="90" height="9.1"/>
+  </g>
+
+  <!-- Reactants: three oxygen blocks -->
+  <g fill="#E3EAE9" stroke="#26231F" stroke-width="1.5">
+    <rect x="160" y="195.2" width="90" height="68.4"/>
+    <rect x="160" y="126.8" width="90" height="68.4"/>
+    <rect x="160" y="58.4" width="90" height="68.4"/>
+  </g>
+  <g fill="#26231F" text-anchor="middle">
+    <text x="205" y="235.4">O<tspan dy="4" font-size="14">2</tspan></text>
+    <text x="205" y="167">O<tspan dy="4" font-size="14">2</tspan></text>
+    <text x="205" y="98.6">O<tspan dy="4" font-size="14">2</tspan></text>
+  </g>
+
+  <!-- Product: two iron(III) oxide blocks -->
+  <g fill="#4F706C" stroke="#26231F" stroke-width="1.5">
+    <rect x="300" y="270.87" width="90" height="29.13"/>
+    <rect x="300" y="241.73" width="90" height="29.14"/>
+  </g>
+  <g fill="#FDFCF9" text-anchor="middle">
+    <text x="345" y="291.4">Fe<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O</tspan><tspan dy="4" font-size="14">3</tspan></text>
+    <text x="345" y="262.3">Fe<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O</tspan><tspan dy="4" font-size="14">3</tspan></text>
+  </g>
+
+  <!-- The baseline -->
+  <line x1="150" y1="300" x2="400" y2="300" stroke="#26231F" stroke-width="2"/>
+
+  <!-- Labels beside the blocks -->
+  <g fill="#26231F">
+    <text x="152" y="288" text-anchor="end">Fe: 4 × 27.3</text>
+    <text x="152" y="167" text-anchor="end">O<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">: 3 × 205.2</tspan></text>
+    <text x="396" y="277">2 × 87.4</text>
+  </g>
+
+  <!-- Totals above the bars -->
+  <g fill="#26231F" text-anchor="middle" font-weight="600">
+    <text x="205" y="50">724.8</text>
+    <text x="345" y="234">174.8</text>
+  </g>
+
+  <!-- What each bar is -->
+  <g fill="#26231F" text-anchor="middle">
+    <text x="205" y="324">4 Fe(s) + 3 O<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">(g)</tspan></text>
+    <text x="345" y="324">2 Fe<tspan dy="4" font-size="14">2</tspan><tspan dy="-4">O</tspan><tspan dy="4" font-size="14">3</tspan><tspan dy="-4">(s)</tspan></text>
+  </g>
+
+  <!-- The two levels and the fall between them -->
+  <g stroke="#6B655D" stroke-width="1.5" stroke-dasharray="6 5">
+    <line x1="250" y1="58.4" x2="284" y2="58.4"/>
+    <line x1="266" y1="241.7" x2="300" y2="241.7"/>
+  </g>
+  <line x1="275" y1="62" x2="275" y2="228" stroke="#26231F" stroke-width="3.5"/>
+  <path d="M275 238L267 224H283Z" fill="#26231F"/>
+  <text x="288" y="150" fill="#26231F" font-weight="600">ΔS° = −550.0</text>
+</svg>

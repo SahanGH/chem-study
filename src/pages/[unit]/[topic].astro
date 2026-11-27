@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import LessonLayout from '../../layouts/LessonLayout.astro';
 import AbsorbanceExplorer from '../../components/lesson/AbsorbanceExplorer.astro';
 import BondEnergyCurve from '../../components/lesson/BondEnergyCurve.astro';
+import BufferCapacity from '../../components/lesson/BufferCapacity.astro';
 import Calorimetry from '../../components/lesson/Calorimetry.astro';
 import CatalystProfile from '../../components/lesson/CatalystProfile.astro';
 import Check from '../../components/lesson/Check.astro';
@@ -10,6 +11,7 @@ import ConcentrationPlots from '../../components/lesson/ConcentrationPlots.astro
 import EquilibriumApproach from '../../components/lesson/EquilibriumApproach.astro';
 import EquilibriumShift from '../../components/lesson/EquilibriumShift.astro';
 import Figure from '../../components/lesson/Figure.astro';
+import FreeEnergy from '../../components/lesson/FreeEnergy.astro';
 import HeatingCurve from '../../components/lesson/HeatingCurve.astro';
 import KeyIdea from '../../components/lesson/KeyIdea.astro';
 import KeyPoints from '../../components/lesson/KeyPoints.astro';
@@ -48,6 +50,7 @@ const { Content, headings } = await render(lesson);
 const blocks = {
   AbsorbanceExplorer,
   BondEnergyCurve,
+  BufferCapacity,
   Calorimetry,
   CatalystProfile,
   Check,
@@ -55,6 +58,7 @@ const blocks = {
   EquilibriumApproach,
   EquilibriumShift,
   Figure,
+  FreeEnergy,
   HeatingCurve,
   KeyIdea,
   KeyPoints,

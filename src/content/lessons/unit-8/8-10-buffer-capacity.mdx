@@ -1,0 +1,443 @@
+---
+topic: "8.10"
+minutes: 22
+summary: "Why two buffers with the same pH can take very different amounts of acid or base, what happens when one member runs out, and how to choose a conjugate pair for a wanted pH."
+---
+
+Bacteria growing in a flask of sugary broth give off acids as they feed. Microbiologists put a buffer in the broth to hold its pH, and for a while it does. Then, if the buffer was made too weak, the pH falls quickly and the culture stops growing. The buffer did not stop being a buffer by accident: it ran out. How much acid or base can a buffer take, and what decides that?
+
+## One pH, two sizes of buffer
+
+A buffer has two members. Its acid form reacts with added OH⁻, and its base form reacts with added H₃O⁺ (topic 8.8). Its pH follows the ratio of the two forms (topic 8.9):
+
+$$
+\text{pH} = \text{p}K_a + \log\dfrac{[\ce{A-}]}{[\ce{HA}]}
+$$
+
+Both forms are in the same solution, so the ratio of their concentrations is the ratio of their moles (topic 8.9).
+
+Look at what that equation holds. The amounts of the two forms are in it only as a ratio. A liter holding 0.20 mol of each form and a liter holding 0.020 mol of each have the same ratio, 1, and the same pH, which is the p$K_a$. Put a pH meter in each and the two readings match.
+
+An addition can. Each mole of OH⁻ that goes in turns one mole of acid form into base form (topic 8.8). Take 0.015 mol of OH⁻. From 0.20 mol of acid form it removes 7.5 percent, less than a tenth, and the ratio barely moves. From 0.020 mol it removes 75 percent, three-quarters, and the ratio moves a long way.
+
+That difference has a name. The **buffer capacity** of a buffer is the amount of strong acid or strong base it can take before its pH changes sharply. More moles of both forms means more capacity.
+
+Add water to a buffer and its pH hardly changes, because both forms are diluted alike (topic 8.8), and the moles of each form in the flask are unchanged. What falls is the amount in each liter you pour from it.
+
+<KeyIdea>
+
+A buffer's pH follows the ratio of base form to acid form. How much it can take is a matter of how many moles of the two forms it holds. More of both at the same ratio means the same pH, and more acid or base taken up before the pH changes much.
+
+</KeyIdea>
+
+<Worked title="Thirty-five millimoles of base, into a buffer and into water">
+
+A liter of buffer holds 140 mmol of propanoic acid, HC₃H₅O₂, and 60 mmol of sodium propanoate, NaC₃H₅O₂. The p$K_a$ of propanoic acid is 4.87. A chemist dissolves 35 mmol of solid sodium hydroxide (1.40 g) in it, so the volume stays 1.00 L. Find the pH before and after, and compare with what the same 35 mmol does to 1.00 L of pure water at 25 °C. Write HA for propanoic acid and A⁻ for the propanoate ion.
+
+1. **Before.** The ratio of base form to acid form is 60 ÷ 140 = 0.429.
+
+   $$
+   \begin{aligned}
+   \text{pH} &= 4.87 + \log(0.429) \\
+   &= 4.87 - 0.37 \\
+   &= 4.50
+   \end{aligned}
+   $$
+
+   The buffer holds more acid form than base form, and its pH is below the p$K_a$ (topic 8.9).
+
+2. **React first, in moles.** Sodium hydroxide is a strong base, so its OH⁻ reacts to completion with the acid form (topic 8.8):
+
+   $$
+   \begin{aligned}
+   &\ce{HC3H5O2(aq) + OH-(aq) ->} \\
+   &\quad \ce{C3H5O2-(aq) + H2O(l)}
+   \end{aligned}
+   $$
+
+   Here is the table of moles. Every value is in mmol. It is not an ICE table: nothing in it is at equilibrium yet (topic 8.4).
+
+   | | HA | OH⁻ | A⁻ |
+   |---|---|---|---|
+   | Before | 140 | 35 | 60 |
+   | Change | −35 | −35 | +35 |
+   | After | 105 | 0 | 95 |
+
+3. **Then the new ratio gives the pH.** The ratio is now 95 ÷ 105 = 0.905.
+
+   $$
+   \begin{aligned}
+   \text{pH} &= 4.87 + \log(0.905) \\
+   &= 4.87 - 0.04 \\
+   &= 4.83
+   \end{aligned}
+   $$
+
+4. **The same 35 mmol in water.** In 1.00 L of water nothing reacts with the OH⁻, so $[\ce{OH-}]$ is 0.035 M. At 25 °C, pH + pOH = 14.00.
+
+   $$
+   \begin{aligned}
+   \text{pOH} &= -\log(0.035) \\
+   &= 1.46
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   \text{pH} &= 14.00 - 1.46 \\
+   &= 12.54
+   \end{aligned}
+   $$
+
+5. **Compare.** The buffer went from 4.50 to 4.83, a change of 0.33. The water went from 7.00 to 12.54, a change of 5.54. The buffer's ratio went from 0.429 to 0.905, a little more than double. The water's $[\ce{OH-}]$ went from 1.0 × 10⁻⁷ M to 0.035 M, up 350,000 times.
+
+</Worked>
+
+**Beyond the exam:** the exam rarely asks you to calculate the pH of a ready-made buffer after an addition, as steps 2 and 3 did. It asks which reaction happens, which way the pH moves, and which of two buffers moves less. The numbers are here because "the ratio barely changes" is easier to believe once you have seen it.
+
+The order of the steps is what matters everywhere in this unit. The strong base reacts completely first, in moles; only then does an equilibrium expression come in (topic 8.4).
+
+<Check
+  answer={3}
+  misses={{
+    1: "A total is not what an addition meets. Added OH⁻ reacts with one member of the pair only, and added H₃O⁺ with the other. Count each member on its own.",
+    2: "Added OH⁻ is a base. Which member of a buffer does a base react with, the acid form or the base form? Then compare the moles of that member.",
+    4: "A pKa would give each buffer's pH. This question is about amounts: how many moles does each buffer hold of the member that the addition uses up?",
+  }}
+>
+Two formate buffers are made from formic acid and sodium formate. Buffer P holds 0.32 mol of formic acid and 0.40 mol of formate ion in 1.00 L. Buffer Q holds 0.45 mol of formic acid and 0.12 mol of formate ion in 1.00 L. Which buffer can take more strong acid before one of its members runs out, and which can take more strong base?
+
+- P can take more of both, because it holds more moles in all
+- P can take more base, and Q can take more acid
+- P can take more acid, and Q can take more base
+- It cannot be decided without the pKa of formic acid
+
+<div slot="why">
+
+Count the member that each addition reacts with (topic 8.8).
+
+Added H₃O⁺ reacts with the base form, the formate ion. P holds 0.40 mol of it and Q holds 0.12 mol, so P can take more strong acid.
+
+Added OH⁻ reacts with the acid form, formic acid. Q holds 0.45 mol of it and P holds 0.32 mol, so Q can take more strong base.
+
+P does hold more moles in all, 0.72 mol against 0.57 mol, but a total is not what an addition meets: each addition meets one member only. The second option has the two members the wrong way around: formic acid is what uses up a base, not an acid.
+
+And no p$K_a$ is needed. A p$K_a$ would give each buffer's pH, and the two are different, because the ratios are: 0.40 ÷ 0.32 = 1.25 in P and 0.12 ÷ 0.45 = 0.27 in Q. The question is about amounts.
+
+</div>
+</Check>
+
+## Room for base, room for acid
+
+A buffer does not have to hold equal amounts of its two forms, and when it does not, its capacity is lopsided. The reason is in the two reactions (topic 8.8). Added OH⁻ is met by the acid form and by nothing else. Added H₃O⁺ is met by the base form and by nothing else.
+
+<Figure
+  src="/figures/8-10-room-for-acid-or-base.svg"
+  alt="Two bar charts side by side. On the left, under the title more acid form, a tall hatched bar labeled HA stands at 150 and a short plain bar labeled A minus stands at 50, and under them it says room for more OH minus. On the right, under the title more base form, a short hatched bar labeled HA stands at 50 and a tall plain bar labeled A minus stands at 150, and under them it says room for more H3O plus."
+  caption="Two buffers of propanoic acid, HA, and propanoate ion, A⁻, with the amounts in millimoles. The one with more acid form can take more added base. The one with more base form can take more added acid."
+/>
+
+Both buffers are propanoic acid with propanoate ion, and both hold 200 mmol in all. The first holds 150 mmol of acid form and 50 mmol of base form. It could use up 150 mmol of OH⁻ before its acid form was gone, and only 50 mmol of H₃O⁺ before its base form was gone. The second, with 50 mmol of acid form and 150 mmol of base form, is the reverse.
+
+The two do not have the same pH. The first is below the p$K_a$ and the second above it (topic 8.9):
+
+$$
+\begin{aligned}
+4.87 + \log\frac{50}{150} &= 4.39 \\[4pt]
+4.87 + \log\frac{150}{50} &= 5.35
+\end{aligned}
+$$
+
+A buffer with equal amounts, at pH = p$K_a$, has the same room on both sides. For a given total amount of the two forms, that is also where a small addition moves the pH least. So when a buffer must guard against both acid and base, it is made with a ratio near 1.
+
+<KeyIdea>
+
+The acid form is what meets added base, and the base form is what meets added acid. A buffer with more acid form than base form has more capacity for added base than for added acid. With more base form, it is the other way around.
+
+</KeyIdea>
+
+<Check
+  answer={1}
+  misses={{
+    2: "Tris does react with acid, but count it: 30 mmol. How much is there of the other member, and what does that one react with?",
+    3: "Both ways, yes, but not alike. Each member can use up only as many moles as there are of it. Compare 30 mmol with 90 mmol.",
+    4: "Capacity is not read from the pH. It is counted in moles: how much of each member is there, and what does each one react with?",
+  }}
+>
+Tris is a weak base that biology labs use in buffers (topic 8.9). A Tris buffer holds 30 mmol of Tris and 90 mmol of its conjugate acid. Of which can it take more before one of its members runs out: strong acid or strong base?
+
+- Strong base: it holds more of the member that reacts with OH⁻
+- Strong acid: Tris is a base, and a base is what reacts with an acid
+- The same of either: a buffer holds both members, so it guards both ways alike
+- Strong base: the solution is already basic, so more OH⁻ changes it little
+
+<div slot="why">
+
+Write B for Tris and HB⁺ for its conjugate acid. HB⁺ is the acid form here, and there is 90 mmol of it. B is the base form, and there is 30 mmol.
+
+Added OH⁻ reacts with the acid form:
+
+$$
+\begin{aligned}
+&\ce{HB+(aq) + OH-(aq) ->} \\
+&\quad \ce{B(aq) + H2O(l)}
+\end{aligned}
+$$
+
+So the buffer can use up as much as 90 mmol of OH⁻. Added H₃O⁺ reacts with the base form, so it can use up only 30 mmol of H₃O⁺.
+
+Tris does react with acid, but there is little of it. A buffer guards both ways, but not equally unless its two amounts are equal. The last option names the right direction for a wrong reason: capacity is counted in moles of a member, not read from the pH.
+
+</div>
+</Check>
+
+<Check
+  numeric="65"
+  unit="mmol"
+  slips={{
+    "115": "Did you add the 25 mmol to the acid form? OH⁻ uses up the acid form. Which member grows instead?",
+    "55": "That is the Tris after the reaction, which is the base form. The question asks for the acid form.",
+    "5": "Did you take the 25 mmol from the Tris? OH⁻ reacts with the acid form, which here is the conjugate acid of Tris.",
+    "90": "That is the acid form before the reaction. The OH⁻ reacts with it, mole for mole.",
+    "0.065": "That is in moles. The question asks for millimoles.",
+  }}
+>
+Now 25 mmol of solid sodium hydroxide dissolves in the Tris buffer of the last question (30 mmol of Tris, 90 mmol of its conjugate acid). When the reaction is over, how many millimoles of the acid form are left?
+
+<div slot="why">
+
+The acid form is the conjugate acid of Tris, HB⁺. OH⁻ reacts with it to completion, mole for mole. Here is the table of moles, with every value in mmol.
+
+| | HB⁺ | OH⁻ | B |
+|---|---|---|---|
+| Before | 90 | 25 | 30 |
+| Change | −25 | −25 | +25 |
+| After | 65 | 0 | 55 |
+
+65 mmol of the acid form is left, with 55 mmol of Tris. Both members are still there in large amounts, so the solution is still a buffer: the ratio of base form to acid form has gone from 30 ÷ 90 = 0.33 to 55 ÷ 65 = 0.85.
+
+</div>
+</Check>
+
+## When one member runs out
+
+A buffer works only while both members are there. Keep adding strong base and the acid form is used up, mole for mole, until none is left. From then on, added OH⁻ has nothing to react with, and it stays in the solution as OH⁻.
+
+What the solution is depends on how far you have gone, and topic 8.4 sorted the cases by comparing the moles of OH⁻ with the moles of acid form. With less OH⁻ than acid form, both members remain and the ratio sets the pH. With exactly as much, only the base form is left, a weak base in water, and at 25 °C its pH is above 7. With more, the OH⁻ left over sets the pH, and the weak base beside it hardly counts.
+
+The same happens on the other side: add more H₃O⁺ than there is base form, and the H₃O⁺ left over sets the pH.
+
+The pH does not wait for the last mole. As a member gets scarce, the ratio runs away from 1. Once there is ten times as much base form as acid form, the pH is already a full unit above the p$K_a$ (topic 8.7), and each further millimole of base moves it more than the one before. That is why capacity is defined by a sharp change in pH, and not by the last mole.
+
+So the pH of a buffer is never quite fixed. How well it resists a change depends on how much of each member it holds, and when one member is gone the resistance goes with it.
+
+<Check
+  answer={4}
+  misses={{
+    1: "A ratio needs both members. Make the table of moles: how much HA is left after the OH⁻ has reacted?",
+    2: "A⁻ is there, but it is a weak base. Look at the table of moles again for anything stronger that is left.",
+    3: "Not all of it is still there. OH⁻ reacts with HA until one of them runs out. Which runs out, and how much of the other is left?",
+  }}
+>
+A buffer holds 30 mmol of a weak acid, HA, and 90 mmol of its conjugate base, A⁻, in 250 mL. Then 42 mmol of solid sodium hydroxide dissolves in it. What sets the pH of the solution now?
+
+- The buffer's ratio of base form to acid form, which the addition has made larger
+- The 120 mmol of A⁻ alone, a weak base reacting with water
+- The 42 mmol of OH⁻ that was added, all of which is still in the solution
+- The 12 mmol of OH⁻ left over once the HA has run out
+
+<div slot="why">
+
+React first, in moles. Here is the table of moles, with every value in mmol.
+
+| | HA | OH⁻ | A⁻ |
+|---|---|---|---|
+| Before | 30 | 42 | 90 |
+| Change | −30 | −30 | +30 |
+| After | 0 | 12 | 120 |
+
+The HA runs out first, and 12 mmol of OH⁻ is left with nothing to react with. In 250 mL that is
+
+$$
+\begin{aligned}
+[\ce{OH-}] &= \frac{12}{250} \\
+&= 0.048\ \text{M}
+\end{aligned}
+$$
+
+At 25 °C:
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(0.048) \\
+&= 1.32
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 1.32 \\
+&= 12.68
+\end{aligned}
+$$
+
+There is no ratio any more, because there is no acid form. The 120 mmol of A⁻ is there, but it is a weak base: the OH⁻ it would make by reacting with water is tiny beside 0.048 M. And 30 of the 42 mmol of OH⁻ were used up. The buffer has been used up.
+
+</div>
+</Check>
+
+One prediction before you try a buffer for yourself.
+
+<Check
+  answer={2}
+  misses={{
+    1: "A buffer needs both members. Make the table of moles: how much propanoic acid is left after 20 mmol of OH⁻ has reacted?",
+    3: "Matched in moles does not mean neutral. Look at what is in the solution after the reaction, and ask whether that ion reacts with water.",
+    4: "The water goes that high because its OH⁻ has nothing to react with. Here all 20 mmol of OH⁻ reacted. What is left to set the pH?",
+  }}
+>
+The explorer below starts with 1.00 L of a buffer of propanoic acid (p$K_a$ 4.87) and propanoate ion at 25 °C. Suppose you set both forms to 20 mmol and then add 20 mmol of OH⁻. What is in the liter after the reaction, and where does that put its pH?
+
+- Close to 4.87, because a buffer holds its pH
+- Between 8 and 9, because a weak base alone is left
+- Exactly 7, because the acid has been exactly neutralized
+- Above 12, because the water beside it goes above 12
+
+<div slot="why">
+
+The table of moles has 20 mmol of propanoic acid and 20 mmol of OH⁻ before, and none of either after. All the propanoic acid has become propanoate ion: 40 mmol of it in 1.00 L, and nothing else that matters.
+
+That is a solution of a weak base alone, the "equal moles" case of topic 8.4, so its pH is above 7 but far below what free OH⁻ would give. The explorer shows 8.74.
+
+It is not near 4.87, because a buffer needs both members and one is gone. It is not 7: "neutralized" says the acid and the base were matched in moles, not that the solution is neutral. And it is not above 12 as the water is, because here every OH⁻ found an acid molecule to react with.
+
+</div>
+</Check>
+
+In the explorer, a liter of propanoic acid and propanoate buffer stands beside a liter of pure water, and whatever you add goes into both. You choose how much of each form the buffer starts with, and how much strong acid or strong base to add.
+
+The pH values come from solving the full equilibrium, so now and then one differs in the second decimal place from what the Henderson–Hasselbalch equation gives, most when one form is nearly used up.
+
+<BufferCapacity />
+
+Do three things with it, and predict before each move.
+
+1. **Start with equal amounts.** The buffer starts with 100 mmol of each form at pH 4.87, and the water at 7.00. Predict which of the two will move further, then add 15 mmol of OH⁻. You should see the ratio go from 1.00 to 1.35 and the buffer go to 5.00, a change of 0.13, while the water goes to 12.18. Before you move the slider to 15 mmol of H₃O⁺, predict where each will go. You should see the buffer at 4.74, the same 0.13 on the other side, and the water at 1.82.
+
+2. **Make the buffer small, then run it out.** Set both forms to 20 mmol. The starting pH is still 4.87. Add 15 mmol of OH⁻: the buffer goes to 5.72, where the larger one went to 5.00. Add 20 mmol, as in the last question: 8.74, with the acid form gone. Add 25 mmol: 11.70, set by the 5 mmol of OH⁻ left over. Now set both forms to 200 mmol and add the same 15 mmol. Predict first. You should see the buffer go to 4.94. Even 50 mmol, the most the slider gives, takes it only to 5.09.
+
+3. **Make it lopsided.** Set the acid form to 150 mmol and the base form to 50 mmol, the first buffer of the figure. The pH is 4.39. Which will move it more: 40 mmol of OH⁻ or 40 mmol of H₃O⁺? Predict, then try both. You should see 40 mmol of OH⁻ take it to 4.78, a change of 0.39. 40 mmol of H₃O⁺ takes it to 3.60, a change of 0.79, about twice as far, and 50 mmol uses up the base form and drops it to 2.79.
+
+## Choosing a buffer for a wanted pH
+
+On paper, any conjugate pair can be pushed to almost any pH by choosing the ratio. But a ratio far from 1 means one member is scarce, and a scarce member is no capacity on that side. So a buffer is useful only when both forms are present in comparable amounts: a ratio between about 1 to 10 and 10 to 1, which is a pH within about one unit of the p$K_a$ (topic 8.7).
+
+That gives a method in two steps:
+
+1. Choose the pair whose p$K_a$ is nearest the wanted pH.
+2. Find the ratio from the Henderson–Hasselbalch equation (topic 8.9), then make the amounts as large as the job needs.
+
+These are the pairs this lesson chooses from, all at 25 °C.
+
+| Acid form, with its base form | p$K_a$ |
+|---|---|
+| Formic acid, with formate ion | 3.75 |
+| Propanoic acid, with propanoate ion | 4.87 |
+| H₂PO₄⁻, with HPO₄²⁻ | 7.21 |
+| Conjugate acid of Tris, with Tris | 8.07 |
+
+The p$K_a$ in the last row belongs to the conjugate acid of Tris. A buffer made from a weak base is worked with the p$K_a$ of its conjugate acid (topic 8.9).
+
+<Worked title="A buffer for pH 8.60">
+
+A biochemist needs a buffer at pH 8.60. Choose a pair from the table and find the ratio of its two forms.
+
+1. **Find the nearest p$K_a$.** The wanted pH is 4.85 above formic acid's p$K_a$, 3.73 above propanoic acid's, 1.39 above that of H₂PO₄⁻ and 0.53 above that of the conjugate acid of Tris. Tris is the only pair within one unit.
+
+2. **Find the ratio.** Write B for Tris and HB⁺ for its conjugate acid.
+
+   $$
+   \begin{aligned}
+   \log\frac{[\ce{B}]}{[\ce{HB+}]} &= 8.60 - 8.07 \\
+   &= 0.53
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   \frac{[\ce{B}]}{[\ce{HB+}]} &= 10^{0.53} \\
+   &= 3.4
+   \end{aligned}
+   $$
+
+3. **Turn the ratio into amounts.** For every 0.050 mol of the conjugate acid, the buffer needs 3.4 × 0.050 = 0.17 mol of Tris.
+
+4. **Check the answer against what you know.** The wanted pH is above the p$K_a$, so there should be more base form than acid form, and there is.
+
+5. **Why not the phosphate pair?** It would need a ratio of $10^{1.39}$, about 25 to 1. Only 1 part in 26 of the phosphate would be in the acid form, about 4 percent, so the buffer would have almost nothing to meet added base with.
+
+</Worked>
+
+With 3.4 times as much base form as acid form, this buffer has more room for added acid than for added base. If the experiment is going to make base, use larger amounts of both.
+
+<Check
+  answer={1}
+  misses={{
+    2: "More base form than acid form puts a buffer's pH above its pKa. Where would this recipe land, and where is 6.90?",
+    3: "This pair could reach pH 6.90, but with so little Tris a small addition of acid would use the base form up. Look for a pKa nearer 6.90.",
+    4: "A hundred to one leaves almost no acid form to meet added base. A buffer works best within about one pH unit of its pKa.",
+  }}
+>
+A lab needs a buffer at pH 6.90. Use the table of pairs above. Which recipe is the best choice?
+
+- H₂PO₄⁻ with HPO₄²⁻, with somewhat more of the acid form
+- H₂PO₄⁻ with HPO₄²⁻, with somewhat more of the base form
+- Tris with its conjugate acid, with about fifteen times as much acid form
+- Propanoic acid with propanoate ion, with about a hundred times as much base form
+
+<div slot="why">
+
+The nearest p$K_a$ is 7.21, which is 0.31 above the wanted pH, so the phosphate pair is the one to use. The wanted pH is below that p$K_a$, so the acid form must be in excess. The ratio of HPO₄²⁻ to H₂PO₄⁻ is
+
+$$
+10^{-0.31} = 0.49
+$$
+
+That is about twice as much acid form as base form. With more base form the pH would be above 7.21, not below it.
+
+Tris could reach pH 6.90 only at a ratio of
+
+$$
+10^{-1.17} = 0.068
+$$
+
+which is about 15 parts of acid form to 1 of Tris. Propanoic acid could reach it only at $10^{2.03}$, about 107 parts of base form to 1 of acid. Each would have one member so scarce that a small addition would use it up.
+
+</div>
+</Check>
+
+<Trap>
+
+Six mistakes come up again and again on this topic:
+
+- **Reading capacity from the pH.** Two buffers with the same pH can differ tenfold in capacity. Count the moles of each form.
+- **Saying that extra acid form helps against added acid.** The acid form meets added base; the base form meets added acid.
+- **Letting the added hydroxide join an equilibrium table.** It reacts with the acid form until one of them runs out, and that is counted in moles. Only what is left goes into an equation with a $K$ or a logarithm.
+- **Using the Henderson–Hasselbalch equation after a member has run out.** With no acid form left there is no ratio; what is left over sets the pH.
+- **Believing a buffer holds its pH constant.** The pH moves a little with every addition, and it moves a lot once one member is nearly gone.
+- **Choosing a pair by its name and not by its p$K_a$.** The p$K_a$ must be within about one unit of the wanted pH, or one member will be scarce.
+
+</Trap>
+
+<KeyPoints>
+
+- A buffer's pH follows the ratio of base form to acid form. Its buffer capacity, the amount of strong acid or strong base it can take before its pH changes sharply, follows the amounts of the two forms.
+- Two buffers with the same ratio have the same pH, and the one holding more moles of both forms has the larger capacity.
+- Added base is met by the acid form and added acid by the base form, so a buffer with more acid form has more capacity for base, and one with more base form has more capacity for acid.
+- An added strong acid or base reacts completely first, in moles. When it is more than the member it reacts with, that member runs out and the strong acid or base left over sets the pH.
+- A buffer is useful within about one pH unit of its p$K_a$, so choose the pair whose p$K_a$ is nearest the wanted pH and then set the ratio.
+- For a buffer made from a weak base, the p$K_a$ is that of its conjugate acid.
+
+</KeyPoints>
+
+<PracticeNext />

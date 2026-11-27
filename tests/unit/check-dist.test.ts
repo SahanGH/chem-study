@@ -10,7 +10,7 @@ const part = (name: string) => `<div data-part="${name}"></div>`;
 const choice = (answer: number, options: number) =>
   `<cs-check data-part="check" data-answer="${answer}"><ul>${'<li>x</li>'.repeat(options)}</ul></cs-check>`;
 // A unit with no lessons yet, so not on FEEDBACK_UNITS: these lessons test the other rules.
-const lesson = (inner: string) => `<main data-topic="9.2">${inner}</main>`;
+const lesson = (inner: string) => `<main data-topic="0.2">${inner}</main>`;
 const fullLesson =
   part('worked') + part('trap') + part('key-points') + part('practice-next') + choice(1, 2).repeat(3);
 
@@ -27,20 +27,20 @@ describe('checkPage', () => {
     const all = { 2: 'Follow the units.', 3: 'Follow the units.', 4: 'Follow the units.' };
 
     it('reads messages whose quotation marks the build escaped', () => {
-      const html = inUnit(9, withMisses(1, 4, { 9: 'Follow the units.' }, '"').repeat(3));
+      const html = inUnit(0, withMisses(1, 4, { 9: 'Follow the units.' }, '"').repeat(3));
       expect(checkPage(html, everythingExists)).toContainEqual(expect.stringContaining('feedback for option 9'));
     });
 
     it('reports a message for an option the check does not have, in any unit', () => {
-      const html = inUnit(9, withMisses(1, 4, { 5: 'Follow the units.' }).repeat(3));
+      const html = inUnit(0, withMisses(1, 4, { 5: 'Follow the units.' }).repeat(3));
       expect(checkPage(html, everythingExists)).toContainEqual(
-        'lesson 9.2: a check has feedback for option 5 but has only 4 options',
+        'lesson 0.2: a check has feedback for option 5 but has only 4 options',
       );
     });
 
     it('asks nothing of a unit that is not on the list', () => {
-      expect(FEEDBACK_UNITS.has('9')).toBe(false);
-      expect(checkPage(inUnit(9, choice(1, 4).repeat(3)), everythingExists)).toEqual([]);
+      expect(FEEDBACK_UNITS.has('0')).toBe(false);
+      expect(checkPage(inUnit(0, choice(1, 4).repeat(3)), everythingExists)).toEqual([]);
     });
 
     it('in a unit on the list, reports a wrong option with no message', () => {
@@ -131,18 +131,18 @@ describe('checkPage', () => {
 
   it('reports a lesson that is missing a required part', () => {
     const html = lesson(fullLesson.replace(part('trap'), ''));
-    expect(checkPage(html, everythingExists)).toEqual(['lesson 9.2 has 0 "trap", needs at least 1']);
+    expect(checkPage(html, everythingExists)).toEqual(['lesson 0.2 has 0 "trap", needs at least 1']);
   });
 
   it('reports a lesson with too few checks', () => {
     const html = lesson(part('worked') + part('trap') + part('key-points') + part('practice-next') + choice(1, 2));
-    expect(checkPage(html, everythingExists)).toEqual(['lesson 9.2 has 1 "check", needs at least 3']);
+    expect(checkPage(html, everythingExists)).toEqual(['lesson 0.2 has 1 "check", needs at least 3']);
   });
 
   it('reports a check whose answer points past its last option', () => {
     const html = lesson(fullLesson + choice(5, 4));
     expect(checkPage(html, everythingExists)).toEqual([
-      'lesson 9.2: a check says the answer is option 5 but has only 4 options',
+      'lesson 0.2: a check says the answer is option 5 but has only 4 options',
     ]);
   });
 
@@ -156,7 +156,7 @@ describe('checkPage', () => {
     it('counts only the options, not the explanation items', () => {
       const html = lesson(fullLesson + withExplanationList('5', 2));
       expect(checkPage(html, everythingExists)).toEqual([
-        'lesson 9.2: a check says the answer is option 5 but has only 2 options',
+        'lesson 0.2: a check says the answer is option 5 but has only 2 options',
       ]);
     });
 
@@ -168,7 +168,7 @@ describe('checkPage', () => {
     it('reports an answer that is not a whole number', () => {
       const html = lesson(fullLesson + withExplanationList('1.5', 2));
       expect(checkPage(html, everythingExists)).toEqual([
-        'lesson 9.2: a check says the answer is option 1.5 but has only 2 options',
+        'lesson 0.2: a check says the answer is option 1.5 but has only 2 options',
       ]);
     });
 
@@ -179,14 +179,14 @@ describe('checkPage', () => {
           '<details class="check-why"><ul><li>a</li><li>b</li><li>c</li></ul></details></cs-check>',
       );
       expect(checkPage(html, everythingExists)).toEqual([
-        'lesson 9.2: a check says the answer is option 3 but has only 2 options',
+        'lesson 0.2: a check says the answer is option 3 but has only 2 options',
       ]);
     });
 
     it('reports a check that has no list of options at all', () => {
       const html = lesson(fullLesson + '<cs-check data-part="check" data-answer="1"></cs-check>');
       expect(checkPage(html, everythingExists)).toEqual([
-        'lesson 9.2: a check says the answer is option 1 but has only 0 options',
+        'lesson 0.2: a check says the answer is option 1 but has only 0 options',
       ]);
     });
   });

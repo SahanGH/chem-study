@@ -159,6 +159,8 @@ The last task of group D closes the unit: an "As built" section in the design, "
 
 Branch: `topic/unit-8-ph-and-weak-acids`, from this plan's branch (`topic/unit-8-lessons-design`).
 
+> **As carried out.** The solver and the weak-acid explorer were built on Opus while three writers on Fable wrote the lessons; a fact-check of each lesson on Fable, an originality check of the prose on Sonnet (nine passages reworded) and a code review on Sonnet followed. The review found no bug; a root outside the solver's bracket now throws, and the solver gained a builder for weak-base mixtures with the base-buffer case among its tests. Two key points of lesson 8.3 carried inline equations too wide for a phone and were put in words. Merged as pull request 88.
+
 Lesson 8.3's brief holds the "Diagram data" of the weak-acid explorer and of the solver all three explorers share. The builder (on Opus) writes `src/lib/acid-base.ts` first, test-first, then the explorer; three writers write the lessons at the same time.
 
 > **How these briefs were checked.** The first fact-check confirmed every value and reproduced all thirty states of the explorer with its own solver. It found four things that had to change, all in lesson 8.3: a displayed step that did not compute, two wrong-answer messages that gave the answer, and **the solver's description for a weak base mixed with a salt of its conjugate acid, which would have given pH 5.10 where the answer is 9.50**; a test row now holds that case. The originality check had lesson 8.3's opening rewritten (it set a weak acid beside a strong acid of the same molarity, the teacher's stock scene). A second check found nothing that had to change, and had phenol's Ka taken out of the lesson's table, where it gave away the Check that asks for it.
@@ -891,6 +893,8 @@ No atomic mass is used in this lesson.
 ## Group C: reactions, titrations, structure and indicators (pull request C)
 
 Branch: `topic/unit-8-reactions-and-titrations`, from `topic/unit-8-ph-and-weak-acids`.
+
+> **As carried out.** The titration-curve explorer on Opus, four writers on Fable, then the same checks. No fact-check found a wrong number. A figure of lesson 8.6 was redrawn, a message of lesson 8.7 that gave its answer was replaced, and the originality check had 18 passages reworded, among them the key idea of lesson 8.4, which opened with a section title of the teacher's notes. The code review found no bug and added an independent charge-balance test of the pH at all 61 settings of both acids. Merged as pull request 89.
 
 Lesson 8.5's brief holds the "Diagram data" of the titration-curve explorer, which lesson 8.7 places a second time. The builder imports the solver and does not change it.
 
@@ -2133,6 +2137,8 @@ No atomic mass is used. Propanoic acid's p$K_a$ is given as 4.87 here and in les
 ## Group D: buffers, capacity and solubility (pull request D)
 
 Branch: `topic/unit-8-buffers-and-solubility`, from `topic/unit-8-reactions-and-titrations`.
+
+> **As carried out.** The buffer explorer on Opus, four writers on Fable, then the same checks. One sentence of lesson 8.9 was true only for a rise in the ratio and was changed; no other fact-check found an error. The originality check of the prose had 15 passages reworded, and two headings changed with them (lesson 8.10's first, now "One pH, two sizes of buffer", and lesson 8.11's "Which anions react with acid"). With all eleven lessons in, the check-feedback data file holds 67 Checks, the sweep tried 238 wrong answers and every one showed its message, and Unit 8 went on `BALANCED_UNITS`. Task 12's list for the teacher is the "As built" section of the design.
 
 Lesson 8.10's brief holds the "Diagram data" of the buffer explorer. With all eleven lessons in, Unit 8 goes on `BALANCED_UNITS`, and the last task closes the unit out.
 
