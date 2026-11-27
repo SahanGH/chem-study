@@ -173,7 +173,7 @@ title: "Worksheet 4: Bond and formation enthalpies, and a long free-response que
 kind: worksheet
 order: 5
 topics: ["6.4", "6.6", "6.7", "6.8"]
-summary: Seven questions on estimating an enthalpy change from bond enthalpies and calculating it from enthalpies of formation, then one 10-point free-response question on burning methane, with its scoring rubric.
+summary: Seven questions on estimating ΔH from bond enthalpies and calculating it from enthalpies of formation, then one 10-point free-response question on burning methane, with its scoring rubric.
 points: 10
 ---
 ```
