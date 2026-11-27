@@ -1,0 +1,502 @@
+{
+  "unit": 8,
+  "written": "2026-11-27",
+  "note": "Feedback for the Checks of Unit 8, read from the lesson files, where it was written with the lessons (docs/superpowers/specs/2026-11-27-chemstudy-unit-6-lessons-design.md). The option with no message is the answer. tests/e2e/check-feedback.spec.ts compares each lesson page with this file.",
+  "checks": [
+    {
+      "lesson": "8.1",
+      "file": "src/content/lessons/unit-8/8-1-introduction-to-acids-and-bases.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "3.8e-4",
+      "unit": "M",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "2.6e-11",
+          "message": "That is the hydroxide ion concentration of this drink. The question asks for the hydronium ion concentration."
+        },
+        {
+          "value": "2.63e-11",
+          "message": "That is the hydroxide ion concentration of this drink. The question asks for the hydronium ion concentration."
+        },
+        {
+          "value": "2630",
+          "message": "Did you leave the minus sign out of the exponent? A pH between 3 and 4 goes with a concentration between 10⁻⁴ and 10⁻³ M."
+        },
+        {
+          "value": "2600",
+          "message": "Did you leave the minus sign out of the exponent? A pH between 3 and 4 goes with a concentration between 10⁻⁴ and 10⁻³ M."
+        },
+        {
+          "value": "0.534",
+          "message": "That is the logarithm of 3.42. Going from a pH to a concentration undoes a logarithm. It does not take another one."
+        },
+        {
+          "value": "3.42e-4",
+          "message": "Did you copy the digits of the pH into the concentration? The whole pH, 3.42, is an exponent."
+        },
+        {
+          "value": "0.0327",
+          "message": "Did you use the e key? A pH is a base-ten logarithm, so going back takes 10 raised to the power, not e."
+        }
+      ]
+    },
+    {
+      "lesson": "8.1",
+      "file": "src/content/lessons/unit-8/8-1-introduction-to-acids-and-bases.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "2.1, because 0.0072 has two significant figures",
+          "message": "Ask which digits of a pH are significant. The digit before the decimal point only tells you the power of ten."
+        },
+        {
+          "text": "2.143, because extra digits make an answer more exact",
+          "message": "The concentration is known to two figures, and the pH cannot be known better than that. Which digits of a pH count as significant figures?"
+        },
+        {
+          "text": "2, because the zeros in 0.0072 are not significant",
+          "message": "A whole-number pH says only that the concentration is near 10⁻² M. The digits 7.2 have to leave their mark on the pH too."
+        },
+        {
+          "text": "2.14, because 0.0072 has two significant figures",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "8.1",
+      "file": "src/content/lessons/unit-8/8-1-introduction-to-acids-and-bases.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "About 1.3 times, the ratio of 6.8 to 5.3",
+          "message": "Dividing one pH by the other treats a pH as a plain amount. A pH is an exponent. What does a difference between two exponents mean?"
+        },
+        {
+          "text": "About 15 times, ten for a whole unit times 1.5 units",
+          "message": "Each unit does stand for a factor of ten, but factors of ten are not added up. Think about what part of a unit means for a power of ten."
+        },
+        {
+          "text": "About 32 times, 10 raised to the power 1.5",
+          "message": null
+        },
+        {
+          "text": "About 1.5 times, the difference between the two readings",
+          "message": "1.5 is how far the pH moved, in pH units. The question asks about the concentration, and a pH is an exponent. What does 1.5 do as a power of ten?"
+        }
+      ]
+    },
+    {
+      "lesson": "8.1",
+      "file": "src/content/lessons/unit-8/8-1-introduction-to-acids-and-bases.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "8.15",
+      "tolerance": 0.25,
+      "slips": [
+        {
+          "value": "5.85",
+          "message": "That is the pOH: the concentration you were given is hydroxide. One more step takes a pOH to a pH at 25 °C."
+        },
+        {
+          "value": "8.1",
+          "message": "Did you round to one decimal place? The concentration has two significant figures, so the pH takes two digits after the decimal point."
+        },
+        {
+          "value": "8.2",
+          "message": "Did you round to one decimal place? The concentration has two significant figures, so the pH takes two digits after the decimal point."
+        },
+        {
+          "value": "7.1e-9",
+          "message": "That is the hydronium ion concentration. The question asks for the pH, which is its negative logarithm."
+        }
+      ]
+    },
+    {
+      "lesson": "8.1",
+      "file": "src/content/lessons/unit-8/8-1-introduction-to-acids-and-bases.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "The sample with a pOH of 4.30",
+          "message": null
+        },
+        {
+          "text": "The sample with [H₃O⁺] = 2.5 × 10⁻¹⁰ M",
+          "message": "Dividing Kw by this hydronium concentration gives a hydroxide concentration of 4.0 × 10⁻⁵ M. Put the other three samples in the same form before you compare."
+        },
+        {
+          "text": "The sample with [OH⁻] = 2.0 × 10⁻⁵ M",
+          "message": "This sample is the easy one to read, because it is already a hydroxide concentration. Convert the other three to the same form and compare."
+        },
+        {
+          "text": "The sample with a pH of 9.20",
+          "message": "A pH of 9.20 is basic, but the other three samples are basic too. Find the hydroxide concentration of each before you compare."
+        }
+      ]
+    },
+    {
+      "lesson": "8.1",
+      "file": "src/content/lessons/unit-8/8-1-introduction-to-acids-and-bases.mdx",
+      "check": 6,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Neutral, because its pH is exactly 7.00",
+          "message": "A pH of 7.00 marks neutral only at 25 °C. Use the Kw given for 40 °C to find the hydroxide concentration, then compare the two."
+        },
+        {
+          "text": "Basic, because [OH⁻] is larger than [H₃O⁺]",
+          "message": null
+        },
+        {
+          "text": "Acidic, because warm water holds more H₃O⁺ than cold water does",
+          "message": "Warm water does hold more H₃O⁺ than cold water, and more OH⁻ too. What decides acidic or basic is which of the two is larger in this solution."
+        },
+        {
+          "text": "Neutral, because [H₃O⁺] × [OH⁻] still equals Kw",
+          "message": "The product equals Kw in every water solution, whether acidic, basic or neutral. Neutral needs the two concentrations to be equal. Are they?"
+        }
+      ]
+    },
+    {
+      "lesson": "8.2",
+      "file": "src/content/lessons/unit-8/8-2-ph-and-poh-of-strong-acids-and-bases.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "0.50 M formic acid, HCHO₂",
+          "message": "This is the most concentrated of the four, but only about 1.9 percent of it is ionized. Work out its hydronium concentration before you compare."
+        },
+        {
+          "text": "0.0080 M hydroiodic acid, HI",
+          "message": "The lowest pH goes with the highest hydronium concentration, not the lowest. Find the hydronium concentration of all four solutions."
+        },
+        {
+          "text": "0.015 M perchloric acid, HClO₄",
+          "message": "Perchloric acid is strong, so its hydronium concentration is 0.015 M. Is that the highest of the four? Find the other three."
+        },
+        {
+          "text": "0.030 M nitric acid, HNO₃",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "8.2",
+      "file": "src/content/lessons/unit-8/8-2-ph-and-poh-of-strong-acids-and-bases.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "12.65",
+      "tolerance": 0.18,
+      "slips": [
+        {
+          "value": "1.35",
+          "message": "That is the pOH. A solution of a base has a pH above 7 at 25 °C, so one more step is needed."
+        },
+        {
+          "value": "12.95",
+          "message": "Did you double the hydroxide concentration? Look at the formula: how many OH does one formula unit of this base hold?"
+        },
+        {
+          "value": "12.7",
+          "message": "Did you round to one decimal place? The concentration has two significant figures, so the pH takes two digits after the decimal point."
+        }
+      ]
+    },
+    {
+      "lesson": "8.2",
+      "file": "src/content/lessons/unit-8/8-2-ph-and-poh-of-strong-acids-and-bases.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "0.014",
+      "unit": "M",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "7.1e-13",
+          "message": "That is the hydroxide ion concentration of this solution. The acid's concentration equals the hydronium ion concentration."
+        },
+        {
+          "value": "71",
+          "message": "Did you leave the minus sign out of the exponent? A pH between 1 and 2 goes with a concentration between 0.01 M and 0.1 M."
+        },
+        {
+          "value": "0.27",
+          "message": "That is the logarithm of 1.85. Going from a pH to a concentration undoes a logarithm. It does not take another one."
+        },
+        {
+          "value": "0.267",
+          "message": "That is the logarithm of 1.85. Going from a pH to a concentration undoes a logarithm. It does not take another one."
+        }
+      ]
+    },
+    {
+      "lesson": "8.2",
+      "file": "src/content/lessons/unit-8/8-2-ph-and-poh-of-strong-acids-and-bases.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "0.0079",
+      "unit": "M",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.016",
+          "message": "That is the hydroxide ion concentration. How many hydroxide ions does each formula unit of calcium hydroxide supply?"
+        },
+        {
+          "value": "0.0158",
+          "message": "That is the hydroxide ion concentration. How many hydroxide ions does each formula unit of calcium hydroxide supply?"
+        },
+        {
+          "value": "0.032",
+          "message": "Did you multiply by 2? Each calcium hydroxide gives two OH⁻, so there is less calcium hydroxide than hydroxide, not more."
+        },
+        {
+          "value": "0.0316",
+          "message": "Did you multiply by 2? Each calcium hydroxide gives two OH⁻, so there is less calcium hydroxide than hydroxide, not more."
+        },
+        {
+          "value": "6.3e-13",
+          "message": "That is the hydronium ion concentration. For a base, go from the pH to the pOH first, then to the hydroxide concentration."
+        },
+        {
+          "value": "3.175e-13",
+          "message": "That starts from the hydronium ion concentration. For a base, go from the pH to the pOH first, then to the hydroxide concentration."
+        }
+      ]
+    },
+    {
+      "lesson": "8.2",
+      "file": "src/content/lessons/unit-8/8-2-ph-and-poh-of-strong-acids-and-bases.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Solution A",
+          "message": "Rubidium hydroxide gives one OH⁻ for each formula unit, so its hydroxide concentration is 0.011 M. Is that the highest of the four?"
+        },
+        {
+          "text": "Solution B",
+          "message": null
+        },
+        {
+          "text": "Solution C",
+          "message": "Sodium hydroxide gives one OH⁻ for each formula unit, so its hydroxide concentration is 0.0090 M. Is that the highest of the four?"
+        },
+        {
+          "text": "Solution D",
+          "message": "This solution has the largest concentration of the four, but it is an acid. A high pH needs a high hydroxide concentration."
+        }
+      ]
+    },
+    {
+      "lesson": "8.2",
+      "file": "src/content/lessons/unit-8/8-2-ph-and-poh-of-strong-acids-and-bases.mdx",
+      "check": 6,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "4.40, because [H₃O⁺] falls to one-hundredth",
+          "message": null
+        },
+        {
+          "text": "0.40, because a hundredfold dilution takes 2 off the pH",
+          "message": "Diluting an acid lowers its hydronium concentration. Which way does the pH move when the hydronium concentration goes down?"
+        },
+        {
+          "text": "3.40, because one dilution adds 1 to the pH",
+          "message": "Compare the two volumes: 10.0 mL becomes 1.00 L. By what factor is the acid diluted, and how many tenfold steps is that?"
+        },
+        {
+          "text": "0.024, because the pH falls to one-hundredth",
+          "message": "It is the hydronium concentration that is divided by the dilution factor, not the pH. Find the new concentration, then take its pH."
+        }
+      ]
+    },
+    {
+      "lesson": "8.3",
+      "file": "src/content/lessons/unit-8/8-3-weak-acid-and-base-equilibria.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "2.61",
+      "tolerance": 0.6,
+      "slips": [
+        {
+          "value": "0.40",
+          "message": "That is the pH if every molecule ionized, which is true of a strong acid. Butanoic acid is weak: set up the table and use Ka."
+        },
+        {
+          "value": "5.22",
+          "message": "Did you take the pH from x²? Ka times 0.40 gives x². Take the square root to get x, which is the hydronium concentration."
+        },
+        {
+          "value": "11.39",
+          "message": "That is 14.00 minus the pH, which is the pOH. For an acid, x is the hydronium concentration, so its negative logarithm is already the pH."
+        },
+        {
+          "value": "4.82",
+          "message": "That is the pKa, the negative logarithm of Ka itself. The pH comes from the hydronium concentration, which the table gives you."
+        },
+        {
+          "value": "2.41",
+          "message": "Did you take the square root of Ka alone? x² is Ka times the starting concentration, 0.40 M."
+        }
+      ]
+    },
+    {
+      "lesson": "8.3",
+      "file": "src/content/lessons/unit-8/8-3-weak-acid-and-base-equilibria.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Its percent ionization goes up and its pH goes up",
+          "message": null
+        },
+        {
+          "text": "Its percent ionization goes up and its pH goes down",
+          "message": "A pH follows the hydronium concentration, not the share of the acid that is ionized. The solution now has ten times the volume. What does that do to the concentration?"
+        },
+        {
+          "text": "Its percent ionization and its pH both stay the same",
+          "message": "Ka is unchanged, but Ka is not the percent ionization. Compare Q with Ka at the instant the water is added."
+        },
+        {
+          "text": "Its percent ionization goes down and its pH goes up",
+          "message": "Compare Q with Ka at the instant the water is added: two concentrations are on top and one is underneath. Which way must the reaction run?"
+        }
+      ]
+    },
+    {
+      "lesson": "8.3",
+      "file": "src/content/lessons/unit-8/8-3-weak-acid-and-base-equilibria.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "The pH is 0.89, because x is the hydronium concentration",
+          "message": "x would be the hydronium concentration if the shortcut held. Do the check before you use x: divide it by the starting concentration."
+        },
+        {
+          "text": "The acid is 130 percent ionized, so it must be a strong acid",
+          "message": "No acid can be more than 100 percent ionized, so 130 percent cannot describe this solution. Where could a number like that have come from?"
+        },
+        {
+          "text": "The shortcut has failed, because x is more than the 0.10 M of acid",
+          "message": null
+        },
+        {
+          "text": "The Ka was misread, because no weak acid has a Ka as large as 0.17",
+          "message": "A Ka of 0.17 is large for a weak acid, but it is the measured value. Divide x by the starting concentration and see what the check says."
+        }
+      ]
+    },
+    {
+      "lesson": "8.3",
+      "file": "src/content/lessons/unit-8/8-3-weak-acid-and-base-equilibria.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "1.0e-10",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "5.0e-5",
+          "message": "That is x divided by the starting concentration, the fraction ionized. Ka has two concentrations on top: the hydronium ion's and the conjugate base's."
+        },
+        {
+          "value": "4.0e-12",
+          "message": "That is x². The Ka expression also has the concentration of the un-ionized acid underneath."
+        },
+        {
+          "value": "2.0e-6",
+          "message": "That is the hydronium ion concentration. It goes into the Ka expression, together with the other two equilibrium concentrations."
+        }
+      ]
+    },
+    {
+      "lesson": "8.3",
+      "file": "src/content/lessons/unit-8/8-3-weak-acid-and-base-equilibria.mdx",
+      "check": 5,
+      "kind": "numeric",
+      "answer": "11.55",
+      "tolerance": 0.18,
+      "slips": [
+        {
+          "value": "2.45",
+          "message": "That is the pOH: for a base, x is the hydroxide concentration. One more step takes a pOH to a pH at 25 °C."
+        },
+        {
+          "value": "13.30",
+          "message": "That is the pH if every molecule took a proton, as for a strong base. Trimethylamine is weak: set up the table and use Kb."
+        },
+        {
+          "value": "5.25",
+          "message": "A base cannot have a pH below 7 at 25 °C. Did you turn Kb into a Ka first? Use Kb as given, with x as the hydroxide concentration."
+        },
+        {
+          "value": "9.10",
+          "message": "Did you take the pOH from x²? Kb times 0.20 gives x². Take the square root to get x, which is the hydroxide concentration."
+        },
+        {
+          "value": "11.5",
+          "message": "Close. Did you round the pH, or x, too early? The concentration has two significant figures, so the pH takes two digits after the decimal point."
+        },
+        {
+          "value": "11.6",
+          "message": "Close. Did you round the pH, or x, too early? The concentration has two significant figures, so the pH takes two digits after the decimal point."
+        }
+      ]
+    },
+    {
+      "lesson": "8.3",
+      "file": "src/content/lessons/unit-8/8-3-weak-acid-and-base-equilibria.mdx",
+      "check": 6,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Ka of HCHO₂ and Kb of C₂H₃O₃⁻",
+          "message": "Take one proton off HCHO₂. Is what is left the ion in this option? The two species must be an acid and its own conjugate base."
+        },
+        {
+          "text": "Ka of C₆H₅OH and Kb of C₆H₅O⁻",
+          "message": null
+        },
+        {
+          "text": "Ka of (CH₃)₃NH⁺ and Kb of HOC₂H₄NH₂",
+          "message": "Take one proton off (CH₃)₃NH⁺. Is what is left the base in this option? The two species must differ by exactly one proton."
+        },
+        {
+          "text": "Ka of HOC₂H₄NH₃⁺ and Kb of (CH₃)₃N",
+          "message": "Add one proton to (CH₃)₃N. Is the result the acid in this option? The two species must be an acid and its own conjugate base."
+        }
+      ]
+    }
+  ]
+}
