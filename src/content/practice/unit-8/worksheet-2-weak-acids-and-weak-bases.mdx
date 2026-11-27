@@ -1,0 +1,501 @@
+---
+title: "Worksheet 2: Weak acids and weak bases"
+kind: worksheet
+order: 3
+topics: ["8.2", "8.3"]
+summary: Eight questions on the pH of a weak acid or a weak base from its ionization constant, the 5 percent check, percent ionization, and finding a constant from a measured pH.
+---
+
+Work each question on paper before you open its answer.
+
+A weak acid or a weak base ionizes only partly, so its pH comes from an ICE table and its ionization constant. For an acid, $x$ is $[\ce{H3O+}]$. For a base, $x$ is $[\ce{OH-}]$, so find the pOH first and then change it to a pH.
+
+Whenever you leave $x$ out, do the check and write its percentage in your answer.
+
+This site writes H₃O⁺. The exam's equation sheet writes H⁺ for the same ion, and either is accepted.
+
+Use these values.
+
+| Acid or base | Constant |
+|---|---|
+| $\ce{HF}$ | $K_a = 7.2 \times 10^{-4}$ |
+| $\ce{HC2H3O2}$ | $K_a = 1.8 \times 10^{-5}$ |
+| $\ce{HOCl}$ | $K_a = 3.5 \times 10^{-8}$ |
+| $\ce{HCN}$ | $K_a = 6.2 \times 10^{-10}$ |
+| $\ce{NH3}$ | $K_b = 1.8 \times 10^{-5}$ |
+
+The second acid in the table is acetic acid, $\ce{HC2H3O2}$ (also written $\ce{CH3COOH}$).
+
+Every solution here is at 25 °C unless a question says otherwise, so
+
+$$
+K_w = 1.0 \times 10^{-14}
+$$
+
+## Questions
+
+<Question number={1} title="Setting up the table" topic="8.3">
+
+Set up the ICE table for 0.250 M $\ce{HOCl}$ and write $K_a$ in terms of $x$.
+
+<Answer>
+
+The acid gives a proton to water:
+
+$$
+\begin{aligned}
+&\ce{HOCl(aq) + H2O(l) <=>} \\
+&\quad \ce{H3O+(aq) + OCl-(aq)}
+\end{aligned}
+$$
+
+Every value is in M.
+
+| | HOCl | H₃O⁺ | OCl⁻ |
+|---|---|---|---|
+| I | 0.250 | 0 | 0 |
+| C | −x | +x | +x |
+| E | 0.250 − x | x | x |
+
+The last row gives $[\ce{HOCl}] = 0.250 - x$ and $[\ce{H3O+}] = [\ce{OCl-}] = x$, so
+
+$$
+K_a = \frac{x^2}{0.250 - x}
+$$
+
+</Answer>
+
+</Question>
+
+<Question number={2} title="Three weak acids" topic="8.3">
+
+Calculate the pH of each weak acid solution, and show the check.
+
+<Part label="a">
+
+0.100 M $\ce{HC2H3O2}$
+
+<Answer>
+
+$$
+\begin{aligned}
+x &= \sqrt{(1.8 \times 10^{-5})(0.100)} \\
+&= 1.34 \times 10^{-3}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\text{pH} = \mathbf{2.87}
+$$
+
+The check:
+
+$$
+\frac{1.34 \times 10^{-3}}{0.100} \times 100\% = 1.3\%
+$$
+
+Under 5 percent, so the shortcut holds.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+0.500 M $\ce{HOCl}$
+
+<Answer>
+
+$$
+\begin{aligned}
+x &= \sqrt{(3.5 \times 10^{-8})(0.500)} \\
+&= 1.32 \times 10^{-4}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\text{pH} = \mathbf{3.88}
+$$
+
+The check:
+
+$$
+\begin{aligned}
+&\frac{1.32 \times 10^{-4}}{0.500} \times 100\% \\
+&\quad = 0.026\%
+\end{aligned}
+$$
+
+Under 5 percent, so the shortcut holds.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+0.0500 M $\ce{HCN}$: <Blank />
+
+<Answer>
+
+$$
+\begin{aligned}
+x &= \sqrt{(6.2 \times 10^{-10})(0.0500)} \\
+&= \sqrt{3.1 \times 10^{-11}} \\
+&= 5.57 \times 10^{-6}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\text{pH} = \mathbf{5.25}
+$$
+
+The check:
+
+$$
+\begin{aligned}
+&\frac{5.57 \times 10^{-6}}{0.0500} \times 100\% \\
+&\quad = 0.011\%
+\end{aligned}
+$$
+
+Under 5 percent, so the shortcut holds.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={3} title="Strong is not concentrated" topic="8.2, 8.3">
+
+0.10 M $\ce{HCl}$ has pH 1.00; 0.10 M acetic acid has pH 2.87. Explain the difference and state what it shows about the words "strong" and "concentrated."
+
+<Answer>
+
+$\ce{HCl}$ ionizes completely, so $[\ce{H3O+}] = 0.10$ M. Acetic acid reaches equilibrium with only about 1.3% ionized, giving a far smaller $[\ce{H3O+}]$. The two solutions are equally *concentrated* but differ enormously in *strength*. Strength is how far the ionization goes, which $K_a$ measures; at one concentration, the stronger acid is the more ionized.
+
+</Answer>
+
+</Question>
+
+<Question number={4} title="Percent ionization" topic="8.3">
+
+Find each percent ionization, then explain the pattern.
+
+<Part label="a">
+
+For 0.100 M acetic acid: <Blank />
+
+<Answer>
+
+1.3%. This is the check of question 2, part a: for a weak acid alone in water, the check and the percent ionization are the same division.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+For 0.0100 M acetic acid,
+
+$$
+[\ce{H3O+}] = 4.24 \times 10^{-4}\ \text{M}
+$$
+
+Percent ionization? <Blank />
+
+<Answer>
+
+$$
+\frac{4.24 \times 10^{-4}}{0.0100} \times 100\% = 4.24\%
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The dilute solution has the higher percent ionization but the higher pH. Explain.
+
+<Answer>
+
+With $C_0$ for the starting concentration, $x \approx \sqrt{K_a C_0}$. On dilution $x$ falls only as the square root of $C_0$, more slowly than $C_0$ itself, so the *fraction* ionized, $x/C_0$, rises. The absolute $[\ce{H3O+}]$ is nonetheless smaller, so the pH is higher.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={5} title="An ionization constant from a pH" topic="8.3">
+
+A 0.20 M solution of a weak acid has pH 3.10.
+
+<Part label="a">
+
+$[\ce{H3O+}] =$ <Blank />
+
+<Answer>
+
+$$
+[\ce{H3O+}] = 7.9 \times 10^{-4}\ \text{M}
+$$
+
+($7.94 \times 10^{-4}$ M before rounding; carry it)
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $K_a$.
+
+<Answer>
+
+$$
+\begin{aligned}
+K_a &\approx \frac{(7.94 \times 10^{-4})^2}{0.20} \\
+&= \mathbf{3.2 \times 10^{-6}}
+\end{aligned}
+$$
+
+The $x$ is left out of $0.20 - x$, so do the check:
+
+$$
+\frac{7.94 \times 10^{-4}}{0.20} \times 100\% = 0.40\%
+$$
+
+Under 5 percent, so the shortcut holds.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+p$K_a =$ <Blank />
+
+<Answer>
+
+Carry $K_a$ with one more figure, $3.15 \times 10^{-6}$, from part b.
+
+$$
+\begin{aligned}
+\text{p}K_a &= -\log(3.15 \times 10^{-6}) \\
+&= \mathbf{5.50}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={6} title="Ammonia at three concentrations" topic="8.3">
+
+Calculate the pH of each weak base solution:
+
+<Part label="a">
+
+0.150 M $\ce{NH3}$
+
+<Answer>
+
+For a base, $x$ is $[\ce{OH-}]$.
+
+$$
+\begin{aligned}
+x &= \sqrt{(1.8 \times 10^{-5})(0.150)} \\
+&= 1.643 \times 10^{-3}\ \text{M} \\
+&= [\ce{OH-}]
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(1.643 \times 10^{-3}) \\
+&= 2.78
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 2.78 \\
+&= \mathbf{11.22}
+\end{aligned}
+$$
+
+The check:
+
+$$
+\frac{1.643 \times 10^{-3}}{0.150} \times 100\% = 1.1\%
+$$
+
+Under 5 percent, so the shortcut holds.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+0.400 M $\ce{NH3}$: <Blank />
+
+<Answer>
+
+For a base, $x$ is $[\ce{OH-}]$.
+
+$$
+\begin{aligned}
+x &= \sqrt{(1.8 \times 10^{-5})(0.400)} \\
+&= \sqrt{7.2 \times 10^{-6}} \\
+&= 2.68 \times 10^{-3}\ \text{M} \\
+&= [\ce{OH-}]
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(2.68 \times 10^{-3}) \\
+&= 2.57
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 2.57 \\
+&= \mathbf{11.43}
+\end{aligned}
+$$
+
+The check:
+
+$$
+\frac{2.68 \times 10^{-3}}{0.400} \times 100\% = 0.67\%
+$$
+
+Under 5 percent, so the shortcut holds.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+0.100 M $\ce{NH3}$: <Blank />
+
+<Answer>
+
+For a base, $x$ is $[\ce{OH-}]$.
+
+$$
+\begin{aligned}
+x &= \sqrt{(1.8 \times 10^{-5})(0.100)} \\
+&= \sqrt{1.8 \times 10^{-6}} \\
+&= 1.34 \times 10^{-3}\ \text{M} \\
+&= [\ce{OH-}]
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(1.34 \times 10^{-3}) \\
+&= 2.87
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 2.87 \\
+&= \mathbf{11.13}
+\end{aligned}
+$$
+
+The check:
+
+$$
+\frac{1.34 \times 10^{-3}}{0.100} \times 100\% = 1.3\%
+$$
+
+Under 5 percent, so the shortcut holds.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={7} title="A pOH reported as a pH" topic="8.3">
+
+A student calculates $x = 1.643 \times 10^{-3}$ M for 0.150 M $\ce{NH3}$ and reports pH = 2.78. Identify the error and give the correct answer.
+
+<Answer>
+
+For a base, $x$ is $[\ce{OH-}]$, not $[\ce{H3O+}]$. Taking $-\log x$ gives the pOH, so
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 2.78 \\
+&= 11.22
+\end{aligned}
+$$
+
+They reported a basic solution as an acidic one; a quick check of the direction would have caught it.
+
+</Answer>
+
+</Question>
+
+<Question number={8} title="Acids with more than one proton" topic="8.3">
+
+Phosphoric acid, $\ce{H3PO4}$, can give up three protons, one at a time. Its three ionization constants are
+
+$$
+\begin{aligned}
+K_{a1} &= 7.5 \times 10^{-3} \\
+K_{a2} &= 6.2 \times 10^{-8} \\
+K_{a3} &= 4.8 \times 10^{-13}
+\end{aligned}
+$$
+
+<Part label="a">
+
+Why is each successive constant so much smaller?
+
+<Answer>
+
+Each proton must be pulled away from an increasingly negative anion, and separating positive from negative charge becomes progressively harder.
+
+</Answer>
+
+</Part>
+
+<Part label="b" beyond>
+
+Justify calculating the pH from $K_{a1}$ alone.
+
+<Answer>
+
+$K_{a2}$ is about $10^5$ times smaller, so the second ionization contributes a negligible amount of $\ce{H3O+}$ beside the first.
+
+</Answer>
+
+</Part>
+
+<Part label="c" beyond>
+
+For which common acid with more than one proton does the reasoning of part b fail, and why?
+
+<Answer>
+
+$\ce{H2SO4}$: its first ionization is strong and its second ($K_{a2} = 1.2 \times 10^{-2}$) is large enough to contribute measurably.
+
+</Answer>
+
+</Part>
+
+</Question>
