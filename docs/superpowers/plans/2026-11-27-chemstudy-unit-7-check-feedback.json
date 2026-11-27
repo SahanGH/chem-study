@@ -1,0 +1,1331 @@
+{
+  "unit": 7,
+  "written": "2026-11-27",
+  "note": "Feedback for the Checks of Unit 7. The design is docs/superpowers/specs/2026-11-26-chemstudy-us-english-and-unit-1-check-feedback-design.md. Options are listed in the order they are to have on the page; the option with no message is the answer.",
+  "checks": [
+    {
+      "lesson": "7.1",
+      "file": "src/content/lessons/unit-7/7-1-introduction-to-equilibrium.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "All of the NOCl has broken down.",
+          "message": "Follow the moles of gas. Every 2 NOCl become 3 molecules of gas, so what pressure would complete breakdown give?"
+        },
+        {
+          "text": "The mixture is at equilibrium, and it still holds NOCl, NO and Cl₂.",
+          "message": null
+        },
+        {
+          "text": "The three gases are now present in equal amounts.",
+          "message": "Look at the coefficients in the equation. Can NO and Cl₂ form in equal amounts?"
+        },
+        {
+          "text": "The gauge must have stuck, because the pressure of a reacting mixture always keeps changing.",
+          "message": "A reacting mixture does not have to keep changing. What does a steady pressure say about net change?"
+        }
+      ]
+    },
+    {
+      "lesson": "7.1",
+      "file": "src/content/lessons/unit-7/7-1-introduction-to-equilibrium.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Dissolving and crystallizing both stopped once their rates became equal.",
+          "message": "Equal rates are not zero rates. If both processes had stopped, could the crystal have changed shape?"
+        },
+        {
+          "text": "The solution was not really saturated, so the crystal went on dissolving.",
+          "message": "A crystal that went on dissolving would lose mass. Its mass is exactly what it was."
+        },
+        {
+          "text": "Ions were joining the crystal faster than they were leaving it.",
+          "message": "If ions joined faster than they left, the crystal would gain mass. Its mass did not change."
+        },
+        {
+          "text": "Ions kept leaving the crystal and joining it, equally fast.",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "7.1",
+      "file": "src/content/lessons/unit-7/7-1-introduction-to-equilibrium.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "20 s, when all three concentrations are equal",
+          "message": "Equal is not the same as constant. Are the concentrations still changing after 20 s?"
+        },
+        {
+          "text": "60 s",
+          "message": "Compare the reading at 60 s with the one after it. Is [Br₂] still changing?"
+        },
+        {
+          "text": "80 s",
+          "message": null
+        },
+        {
+          "text": "None of them, because Br₂ is never used up",
+          "message": "Br₂ is not used up at equilibrium: reactants and products are both present. Look for where the concentrations stop changing."
+        }
+      ]
+    },
+    {
+      "lesson": "7.1",
+      "file": "src/content/lessons/unit-7/7-1-introduction-to-equilibrium.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Each gas is present in the same amount in bulb 1 as in bulb 2.",
+          "message": null
+        },
+        {
+          "text": "Bulb 1 holds more ICl, because it started with ICl.",
+          "message": "Count the iodine and chlorine atoms each bulb starts with. Does the starting side matter if the atoms, volume and temperature match?"
+        },
+        {
+          "text": "Bulb 2 holds more ICl, because only it started with what is needed to make ICl.",
+          "message": "The reaction is reversible, so ICl can also break down. Count the iodine and chlorine atoms each bulb starts with."
+        },
+        {
+          "text": "Bulb 1 never changes, because it holds a single substance.",
+          "message": "The reaction is reversible. In bulb 1 some ICl can break down into I₂ and Cl₂."
+        }
+      ]
+    },
+    {
+      "lesson": "7.10",
+      "file": "src/content/lessons/unit-7/7-10-reaction-quotient-and-le-chateliers-principle.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "87.5",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "140",
+          "from": "the old [SCN⁻], 1.25e-3 M",
+          "message": "That is what the old [SCN⁻] gives, and it is K. Use [SCN⁻] after the crystals dissolve."
+        },
+        {
+          "value": "0.0114",
+          "from": "fraction upside down",
+          "message": "Is your fraction upside down? The product, FeSCN²⁺, goes on top."
+        }
+      ]
+    },
+    {
+      "lesson": "7.10",
+      "file": "src/content/lessons/unit-7/7-10-reaction-quotient-and-le-chateliers-principle.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "$Q$ is halved, so the reaction runs toward products",
+          "message": null
+        },
+        {
+          "text": "$Q$ is doubled, so the reaction runs toward reactants",
+          "message": "Doubling is what a squeeze to half the volume would do. Here the volume doubles, so every concentration is halved."
+        },
+        {
+          "text": "$Q$ is unchanged, so nothing shifts",
+          "message": "Q stays unchanged only when both sides have the same number of moles of gas. Count them here."
+        },
+        {
+          "text": "$Q$ falls to one eighth, so the reaction runs toward products",
+          "message": "One eighth is what the top of the fraction alone does. The bottom changes too."
+        }
+      ]
+    },
+    {
+      "lesson": "7.10",
+      "file": "src/content/lessons/unit-7/7-10-reaction-quotient-and-le-chateliers-principle.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "16",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "2",
+          "from": "exponent 4 on [Cl⁻] left out",
+          "message": "Did you leave out the exponent on [Cl⁻]? The coefficient 4 becomes an exponent in Q."
+        },
+        {
+          "value": "0.0625",
+          "from": "fraction upside down, 1/16",
+          "message": "Is your fraction upside down? The product, CoCl₄²⁻, goes on top."
+        },
+        {
+          "value": "32",
+          "from": "the bottom alone, top not halved",
+          "message": "That is what the bottom of the fraction alone does. The top is halved too."
+        },
+        {
+          "value": "0.5",
+          "from": "Q halved like a concentration",
+          "message": "Each concentration is halved, but Q is a fraction built from them. Follow the one half through the top and the bottom."
+        }
+      ]
+    },
+    {
+      "lesson": "7.10",
+      "file": "src/content/lessons/unit-7/7-10-reaction-quotient-and-le-chateliers-principle.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "$Q$ = 165 and $K$ = 165, so nothing happens",
+          "message": "Nothing has reacted yet, so no concentration has changed. Can Q already equal the new K?"
+        },
+        {
+          "text": "$Q$ = 140 and $K$ = 140, because cooling changes neither",
+          "message": "Cooling changes no concentration, but K depends on temperature. The question gives its new value."
+        },
+        {
+          "text": "$Q$ = 140 and $K$ = 165, so the reaction runs toward products and the red deepens",
+          "message": null
+        },
+        {
+          "text": "$Q$ = 140 and $K$ = 165, so the reaction runs toward reactants and the red turns paler",
+          "message": "Compare Q with K. When Q is less than K, which way does the reaction run?"
+        }
+      ]
+    },
+    {
+      "lesson": "7.10",
+      "file": "src/content/lessons/unit-7/7-10-reaction-quotient-and-le-chateliers-principle.mdx",
+      "check": 5,
+      "kind": "numeric",
+      "answer": "0.460",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "2.05",
+          "from": "exponent left out, 0.225/0.110",
+          "message": "Did you leave out the exponent? The coefficient 2 on NO₂ becomes an exponent in Q."
+        },
+        {
+          "value": "2.17",
+          "from": "fraction upside down, 0.110/0.225²",
+          "message": "Is your fraction upside down? The product, NO₂, goes on top."
+        },
+        {
+          "value": "0.490",
+          "from": "K typed back; 0.110/0.225 = 0.489 (upside down, no exponent) lands here too",
+          "message": "That matches K. Build Q from the two new concentrations, with the product on top and its coefficient as an exponent."
+        },
+        {
+          "value": "4.09",
+          "from": "coefficient as a multiplier, 2(0.225)/0.110",
+          "message": "Did you multiply [NO₂] by 2? A coefficient becomes an exponent, not a multiplier."
+        }
+      ]
+    },
+    {
+      "lesson": "7.11",
+      "file": "src/content/lessons/unit-7/7-11-introduction-to-solubility-equilibria.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Expression A",
+          "message": "Check the coefficient in the dissolving equation. It becomes an exponent."
+        },
+        {
+          "text": "Expression B",
+          "message": "The solid is left out of the expression, so nothing goes on the bottom."
+        },
+        {
+          "text": "Expression C",
+          "message": "The coefficient does not multiply the concentration. What does it become?"
+        },
+        {
+          "text": "Expression D",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "7.11",
+      "file": "src/content/lessons/unit-7/7-11-introduction-to-solubility-equilibria.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "1.03e-3",
+      "unit": "M",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "6.58e-5",
+          "from": "square root of Ksp",
+          "message": "Did you take a square root? That fits a salt that gives two ions. SrF₂ gives three."
+        },
+        {
+          "value": "1.63e-3",
+          "from": "cube root of Ksp, the 4 left out",
+          "message": "Did you leave out the 4? [F⁻] is 2s, and it is squared."
+        },
+        {
+          "value": "1.29e-3",
+          "from": "2s³ in place of 4s³",
+          "message": "Did you write 2s³? The whole of 2s is squared: (2s)²."
+        },
+        {
+          "value": "2.05e-3",
+          "from": "gave [F⁻] = 2s",
+          "message": "That is [F⁻], which is 2s. The molar solubility is s."
+        }
+      ]
+    },
+    {
+      "lesson": "7.11",
+      "file": "src/content/lessons/unit-7/7-11-introduction-to-solubility-equilibria.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "9.84e-9",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "1.97e-8",
+          "from": "[Pb²⁺] set equal to [I⁻]",
+          "message": "Did you set [Pb²⁺] equal to [I⁻]? Two iodide ions dissolve for every lead ion."
+        },
+        {
+          "value": "7.87e-8",
+          "from": "2.70e-3 treated as s, 4s³",
+          "message": "Did you use 4s³ with 2.70 × 10⁻³ M as s? The number given is already [I⁻], which is 2s."
+        },
+        {
+          "value": "3.65e-6",
+          "from": "square forgotten, (1.35e-3)(2.70e-3)",
+          "message": "Did you forget the square? The coefficient 2 on I⁻ becomes an exponent."
+        },
+        {
+          "value": "3.94e-8",
+          "from": "[Pb²⁺] taken as twice [I⁻]",
+          "message": "Did you double the given number to get [Pb²⁺]? Check which ion there is more of in the solution."
+        }
+      ]
+    },
+    {
+      "lesson": "7.11",
+      "file": "src/content/lessons/unit-7/7-11-introduction-to-solubility-equilibria.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Silver iodate, about 8 times as soluble",
+          "message": "That is the ratio of the Ksp values. The salts give different numbers of ions, so compare solubilities."
+        },
+        {
+          "text": "Silver iodate, about 3 times as soluble",
+          "message": "That is the square root of the ratio of the Ksp values. Find each salt's solubility, then compare."
+        },
+        {
+          "text": "Barium iodate, about 6 times as soluble",
+          "message": null
+        },
+        {
+          "text": "Barium iodate, about 9 times as soluble",
+          "message": "Check the expression for barium iodate. With s and 2s for its ions, is Ksp equal to s³?"
+        }
+      ]
+    },
+    {
+      "lesson": "7.11",
+      "file": "src/content/lessons/unit-7/7-11-introduction-to-solubility-equilibria.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Yes: $Q$ = 9.00 × 10⁻⁹, which is larger than $K_{sp}$",
+          "message": "Mixing dilutes both solutions. Find each concentration in the 100.0 mL mixture before working out Q."
+        },
+        {
+          "text": "No: $Q$ = 1.15 × 10⁻⁹, which is smaller than $K_{sp}$",
+          "message": null
+        },
+        {
+          "text": "Yes: $Q$ = 9.60 × 10⁻⁷, which is larger than $K_{sp}$",
+          "message": "Check the exponent. The formula Ba(IO₃)₂ gives two iodate ions, so [IO₃⁻] is squared in Q."
+        },
+        {
+          "text": "No: the potassium and nitrate ions keep the barium iodate dissolved",
+          "message": "Potassium and nitrate ions take no part. Decide by comparing Q with Ksp."
+        }
+      ]
+    },
+    {
+      "lesson": "7.12",
+      "file": "src/content/lessons/unit-7/7-12-common-ion-effect.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "A little distilled water",
+          "message": "Water lowers both ion concentrations. Does that take Q above Ksp or below it?"
+        },
+        {
+          "text": "A few crystals of potassium nitrate, KNO₃",
+          "message": "Look for an ion in common with lead(II) iodide. Does potassium nitrate give one?"
+        },
+        {
+          "text": "A few crystals of potassium iodide, KI",
+          "message": null
+        },
+        {
+          "text": "More of the same filtered solution",
+          "message": "More of the same solution has the same concentrations. Does Q change?"
+        }
+      ]
+    },
+    {
+      "lesson": "7.12",
+      "file": "src/content/lessons/unit-7/7-12-common-ion-effect.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "8.50e-5",
+      "unit": "M",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "1.70e-4",
+          "from": "[F⁻] written as s (the 4 left out); also the value of [F⁻] = 2s",
+          "message": "That is what writing [F⁻] as s gives. Each SrF₂ that dissolves gives two F⁻, so build the equilibrium row again."
+        },
+        {
+          "value": "1.03e-3",
+          "from": "strontium nitrate ignored, 4s³",
+          "message": "That is the solubility in pure water. Here [Sr²⁺] starts at 0.150 M, not at 0."
+        },
+        {
+          "value": "1.20e-4",
+          "from": "2s² in place of (2s)²",
+          "message": "Did you write 2s² for the fluoride? The whole of 2s is squared: (2s)²."
+        },
+        {
+          "value": "7.22e-9",
+          "from": "stopped at s², no square root",
+          "message": "Did you stop before the square root? That number is s², not s."
+        }
+      ]
+    },
+    {
+      "lesson": "7.12",
+      "file": "src/content/lessons/unit-7/7-12-common-ion-effect.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "3.17e-8",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "3.92e-12",
+          "from": "given solubility squared",
+          "message": "Did you square the given solubility? That fits pure water. Here most of the iodate comes from the potassium iodate."
+        },
+        {
+          "value": "1.24e-4",
+          "from": "divided, 1.98e-6/0.0160",
+          "message": "Did you divide? Ksp is the product of the two ion concentrations."
+        }
+      ]
+    },
+    {
+      "lesson": "7.12",
+      "file": "src/content/lessons/unit-7/7-12-common-ion-effect.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Higher, because the water leaves sulfate ions behind on the solid, which add to its mass",
+          "message": "A rinse washes away the solution clinging to the solid, and it dissolves a little of the solid too. Compare the two liquids."
+        },
+        {
+          "text": "Lower, because more of the solid dissolves in water than in the acid",
+          "message": null
+        },
+        {
+          "text": "The same, because $K_{sp}$ has the same value in water and in the acid",
+          "message": "Ksp is indeed the same in both liquids. Is the solubility the same when one liquid holds a common ion?"
+        },
+        {
+          "text": "The same, because a precipitate cannot dissolve again once it has formed",
+          "message": "Dissolving is reversible. A precipitate in contact with fresh liquid always dissolves a little."
+        }
+      ]
+    },
+    {
+      "lesson": "7.2",
+      "file": "src/content/lessons/unit-7/7-2-direction-of-reversible-reactions.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "The amount of liquid is shrinking, because water molecules are still leaving its surface.",
+          "message": "Leaving the surface is one of two processes. Compare it with the rate of return to find the net change."
+        },
+        {
+          "text": "Nothing is changing, because both processes are still going on.",
+          "message": "Both processes going on is not enough for no change. The two rates would have to be equal. Are they?"
+        },
+        {
+          "text": "The amount of liquid is growing, because condensation is outpacing evaporation.",
+          "message": null
+        },
+        {
+          "text": "Evaporation has stopped, because the jar is now cold.",
+          "message": "Evaporation has not stopped: the question says molecules are still leaving the liquid."
+        }
+      ]
+    },
+    {
+      "lesson": "7.2",
+      "file": "src/content/lessons/unit-7/7-2-direction-of-reversible-reactions.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Forward 6.0 × 10⁻⁵ M/s, reverse 6.0 × 10⁻⁵ M/s",
+          "message": "Both rates move on the way to equilibrium. Can the forward rate still be where it started?"
+        },
+        {
+          "text": "Forward 3.5 × 10⁻⁵ M/s, reverse 3.5 × 10⁻⁵ M/s",
+          "message": null
+        },
+        {
+          "text": "Forward 4.0 × 10⁻⁵ M/s, reverse 3.0 × 10⁻⁵ M/s",
+          "message": "Those rates lie in between, but are they equal? Unequal rates mean a net change is still going on."
+        },
+        {
+          "text": "Forward 0 M/s, reverse 0 M/s",
+          "message": "The rates at equilibrium are equal but not zero."
+        }
+      ]
+    },
+    {
+      "lesson": "7.2",
+      "file": "src/content/lessons/unit-7/7-2-direction-of-reversible-reactions.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Nothing happens, because the bulb holds neither of the reactants on the left of the equation.",
+          "message": "Reactants and products only name the two sides of the equation as written. A reaction can start from either side."
+        },
+        {
+          "text": "The forward rate starts high and falls until it reaches zero.",
+          "message": "Which reaction can run when the bulb holds only IBr? The forward reaction needs I₂ and Br₂."
+        },
+        {
+          "text": "Both rates start out equal, because only one substance is present.",
+          "message": "With no I₂ or Br₂ in the bulb yet, how fast can the forward reaction go?"
+        },
+        {
+          "text": "The reverse rate falls and the forward rate rises from zero until they are equal.",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "7.3",
+      "file": "src/content/lessons/unit-7/7-3-reaction-quotient-and-equilibrium-constant.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Expression A",
+          "message": "Check the coefficients. Each one becomes an exponent on its concentration."
+        },
+        {
+          "text": "Expression B",
+          "message": "Look at where the product is. Which side of the equation goes on top?"
+        },
+        {
+          "text": "Expression C",
+          "message": null
+        },
+        {
+          "text": "Expression D",
+          "message": "Coefficients do not multiply the concentrations, and the terms are not added. What does a coefficient become?"
+        }
+      ]
+    },
+    {
+      "lesson": "7.3",
+      "file": "src/content/lessons/unit-7/7-3-reaction-quotient-and-equilibrium-constant.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Nothing is wrong, because the fraction has the same value as the constant in the table, so the mixture must be at equilibrium.",
+          "message": "Check what the constant in the table is built from, and what the student's fraction is built from. Do they match?"
+        },
+        {
+          "text": "The fraction is upside down, because NOCl belongs on top.",
+          "message": "The fraction is the right way up. NO and Cl₂ are the products, so they belong on top."
+        },
+        {
+          "text": "A mixture is at equilibrium only when its fraction equals 1.",
+          "message": "The number 1 is nothing special. At equilibrium the fraction equals the constant, whatever its value."
+        },
+        {
+          "text": "The fraction was built from concentrations, so it is $Q_c$, and it has to be compared with $K_c$, not $K_p$.",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "7.3",
+      "file": "src/content/lessons/unit-7/7-3-reaction-quotient-and-equilibrium-constant.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Expression A",
+          "message": "Look at the state of the bromine in the equation as written. What is left out of the expression?"
+        },
+        {
+          "text": "Expression B",
+          "message": null
+        },
+        {
+          "text": "Expression C",
+          "message": "Check the coefficients. Each one becomes an exponent on its partial pressure."
+        },
+        {
+          "text": "Expression D",
+          "message": "Look at where the product is. Which side of the equation goes on top?"
+        }
+      ]
+    },
+    {
+      "lesson": "7.3",
+      "file": "src/content/lessons/unit-7/7-3-reaction-quotient-and-equilibrium-constant.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "It is the same as before.",
+          "message": null
+        },
+        {
+          "text": "It is higher, because there is more iodine to turn into vapor.",
+          "message": "Write the expression for K. Does the amount of solid appear in it?"
+        },
+        {
+          "text": "It is lower, because the extra crystals take vapor out of the space.",
+          "message": "Write the expression for K. Extra solid does not change the solid's concentration."
+        },
+        {
+          "text": "It cannot be known without the value of $K_p$.",
+          "message": "The question asks for a comparison, not a value. What does K depend on, and has that changed?"
+        }
+      ]
+    },
+    {
+      "lesson": "7.4",
+      "file": "src/content/lessons/unit-7/7-4-calculating-the-equilibrium-constant.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "150",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "500",
+          "from": "exponent left off",
+          "message": "Did you leave off the exponent? The coefficient 2 on IBr becomes an exponent on its pressure."
+        },
+        {
+          "value": "1000",
+          "from": "IBr pressure doubled, not squared",
+          "message": "Did you double the IBr pressure? A coefficient becomes an exponent. It does not multiply."
+        },
+        {
+          "value": "600",
+          "from": "IBr pressure doubled and squared",
+          "message": "Did you double the IBr pressure and square it as well? A coefficient becomes an exponent and nothing else."
+        },
+        {
+          "value": "6.67e-3",
+          "from": "fraction upside down",
+          "message": "Is your fraction upside down? The product, IBr, goes on top."
+        }
+      ]
+    },
+    {
+      "lesson": "7.4",
+      "file": "src/content/lessons/unit-7/7-4-calculating-the-equilibrium-constant.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "3.0e-3",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "7.62e-4",
+          "from": "I atoms not doubled, (0.0040)²/0.0210",
+          "message": "Did you forget that each I₂ gives two atoms? Check the moles of I that formed."
+        },
+        {
+          "value": "6.10e-3",
+          "from": "moles used, not divided by 2.00 L",
+          "message": "Did you use moles? Divide each amount by the 2.00 L before it goes into the expression."
+        },
+        {
+          "value": "2.56e-3",
+          "from": "starting I₂, (0.0080)²/0.0250",
+          "message": "Did you use the starting amount of I₂? The expression takes the amount left at equilibrium."
+        },
+        {
+          "value": "2.6e-3",
+          "from": "the same slip rounded to two figures, as the explanation quotes it (1.5 percent from 2.56e-3, outside the 1 percent window)",
+          "message": "Did you use the starting amount of I₂? The expression takes the amount left at equilibrium."
+        },
+        {
+          "value": "0.381",
+          "from": "square forgotten, 0.0080/0.0210",
+          "message": "Did you forget the square? The coefficient 2 on I becomes an exponent."
+        }
+      ]
+    },
+    {
+      "lesson": "7.4",
+      "file": "src/content/lessons/unit-7/7-4-calculating-the-equilibrium-constant.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "$K_c$ is twice as large, because there is twice as much NOCl.",
+          "message": "K does not depend on how much you start with. What does it depend on?"
+        },
+        {
+          "text": "$K_c$ is the same, but the concentrations are not simply doubled.",
+          "message": null
+        },
+        {
+          "text": "$K_c$ is the same, and every concentration is exactly double the first vessel's.",
+          "message": "Try it: put the doubled concentrations, 0.300 M, 0.180 M and 0.0900 M, into the expression. Do they give 0.0162?"
+        },
+        {
+          "text": "$K_c$ is smaller, because a smaller fraction of the NOCl breaks down.",
+          "message": "A smaller fraction does break down, but that changes the concentrations. Does it change K?"
+        }
+      ]
+    },
+    {
+      "lesson": "7.5",
+      "file": "src/content/lessons/unit-7/7-5-magnitude-of-the-equilibrium-constant.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Almost all of the glucose in the β form",
+          "message": "A K of 1.8 is not very large. Work out how many β molecules there are for each α."
+        },
+        {
+          "text": "Exactly equal amounts of the two forms, because $K$ is close to 1",
+          "message": "Close to 1 is not exactly 1. K is the ratio of the two concentrations, so what does 1.8 say?"
+        },
+        {
+          "text": "A large share in each form, with more β than α",
+          "message": null
+        },
+        {
+          "text": "Almost all of the glucose in the α form",
+          "message": "A K of 1.8 is not very small, and it is above 1. Check which form is on top in the expression."
+        }
+      ]
+    },
+    {
+      "lesson": "7.5",
+      "file": "src/content/lessons/unit-7/7-5-magnitude-of-the-equilibrium-constant.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "0.016",
+      "unit": "M",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.028",
+          "from": "one O₂ for each CH₄, 0.040 − 0.012",
+          "message": "Did you take away the methane one for one? Look at the coefficients in the equation."
+        },
+        {
+          "value": "0.024",
+          "from": "O₂ used, not O₂ left",
+          "message": "That is the O₂ used up. The question asks for the O₂ left over."
+        },
+        {
+          "value": "0.040",
+          "from": "starting [O₂] typed back",
+          "message": "That is [O₂] before the spark. With K this large, treat the reaction as complete."
+        },
+        {
+          "value": "0.034",
+          "from": "ratio upside down, 0.040 − 0.012/2",
+          "message": "Did you take away half the methane? Each CH₄ uses two O₂, not half of one."
+        }
+      ]
+    },
+    {
+      "lesson": "7.5",
+      "file": "src/content/lessons/unit-7/7-5-magnitude-of-the-equilibrium-constant.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "The mixture is at equilibrium, and equilibrium lies on the side of ethene and hydrogen.",
+          "message": "Look at the size of K. Where would equilibrium lie with K above 10¹⁷?"
+        },
+        {
+          "text": "The mixture is far from equilibrium, but the reaction is too slow to see.",
+          "message": null
+        },
+        {
+          "text": "A $K$ that large means a fast reaction, so the value of $K$ must be wrong.",
+          "message": "K says how far a reaction can go, not how fast it goes."
+        },
+        {
+          "text": "Ethane forms quickly and breaks down again just as quickly.",
+          "message": "That describes a mixture at equilibrium. With K above 10¹⁷, what would such a mixture mostly hold?"
+        }
+      ]
+    },
+    {
+      "lesson": "7.6",
+      "file": "src/content/lessons/unit-7/7-6-properties-of-the-equilibrium-constant.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "2.5e2",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "62500",
+          "from": "reversed, not halved",
+          "message": "Did you reverse the equation and stop? Every coefficient is halved as well."
+        },
+        {
+          "value": "4.0e-3",
+          "from": "halved, not reversed",
+          "message": "Did you halve the equation without reversing it? Look at which side H₂S is on."
+        },
+        {
+          "value": "31250",
+          "from": "1/K divided by 2",
+          "message": "Did you divide 1/K by 2? Halving the coefficients does not halve the constant."
+        },
+        {
+          "value": "3.91e9",
+          "from": "1/K squared",
+          "message": "Did you square 1/K? Squaring goes with doubling the coefficients. Here they are halved."
+        }
+      ]
+    },
+    {
+      "lesson": "7.6",
+      "file": "src/content/lessons/unit-7/7-6-properties-of-the-equilibrium-constant.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Expression A",
+          "message": "Constants are never added. What happens to the constants when equations are added?"
+        },
+        {
+          "text": "Expression B",
+          "message": "A factor of 2 in an equation is not a multiplier of K. What does it become?"
+        },
+        {
+          "text": "Expression C",
+          "message": null
+        },
+        {
+          "text": "Expression D",
+          "message": "Add the steps as written. Does every SO₃ that step 1 makes cancel?"
+        }
+      ]
+    },
+    {
+      "lesson": "7.6",
+      "file": "src/content/lessons/unit-7/7-6-properties-of-the-equilibrium-constant.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "4.5",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "15",
+          "from": "K₁ not squared",
+          "message": "Did you forget to square K₁? Reaction 1 has to be doubled to give 2 X and 2 Z."
+        },
+        {
+          "value": "30",
+          "from": "K₁ doubled, not squared",
+          "message": "Did you double K₁? Doubling an equation squares its constant."
+        },
+        {
+          "value": "0.0018",
+          "from": "reaction 2 not reversed",
+          "message": "Did you leave reaction 2 as written? The target has W on the left."
+        },
+        {
+          "value": "0.222",
+          "from": "K₁² inverted, K₂ not",
+          "message": "Did you invert the wrong constant? Check which reaction has to be reversed to match the target."
+        }
+      ]
+    },
+    {
+      "lesson": "7.6",
+      "file": "src/content/lessons/unit-7/7-6-properties-of-the-equilibrium-constant.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "$Q_c$ = 0.50 and $K_c$ = 5.0, because the mixture has not changed",
+          "message": "The mixture has not changed, but the equation has. What does reversing an equation do to Q and K?"
+        },
+        {
+          "text": "$Q_c$ = 2.0 and $K_c$ = 0.20, so the mixture is now making ethene and hydrogen",
+          "message": "Compare Q with K for the equation as now written. Q moves toward K: which substances form as it does?"
+        },
+        {
+          "text": "$Q_c$ = −0.50 and $K_c$ = −5.0, and the mixture is still making ethane",
+          "message": "Reversing never makes Q or K negative. What does it do to each?"
+        },
+        {
+          "text": "$Q_c$ = 2.0 and $K_c$ = 0.20, and the mixture is still making ethane",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "7.7",
+      "file": "src/content/lessons/unit-7/7-7-calculating-equilibrium-concentrations.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Toward methane, because $Q$ = 1.2 is less than $K$",
+          "message": "Check the exponent. The coefficient 2 on H₂ becomes an exponent in Q."
+        },
+        {
+          "text": "Toward hydrogen, because $Q$ = 24 is greater than $K$",
+          "message": null
+        },
+        {
+          "text": "Neither way, because the mixture is already at equilibrium",
+          "message": "At equilibrium Q equals K. Work out Q from the two concentrations and compare it with 8.1."
+        },
+        {
+          "text": "It cannot be decided without the mass of carbon",
+          "message": "Carbon is a solid, so it is left out of Q. Its amount does not matter, as long as some is there."
+        }
+      ]
+    },
+    {
+      "lesson": "7.7",
+      "file": "src/content/lessons/unit-7/7-7-calculating-equilibrium-concentrations.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "−2x, +2x, +x",
+          "message": "Check the signs. Q is greater than K, so which way does the reaction run?"
+        },
+        {
+          "text": "−x, +x, +x",
+          "message": "Two things to check: the sizes follow the coefficients, and the signs follow the direction the reaction runs."
+        },
+        {
+          "text": "+x, −x, −x",
+          "message": "Check the sizes. Each change is x times the coefficient in the equation."
+        },
+        {
+          "text": "+2x, −2x, −x",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "7.7",
+      "file": "src/content/lessons/unit-7/7-7-calculating-equilibrium-concentrations.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "0.244",
+      "unit": "M",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.184",
+          "from": "stopped at x",
+          "message": "That is x. Add it to the trans-2-butene that was there at the start."
+        },
+        {
+          "value": "0.203",
+          "from": "starting trans left out, x/(0.300 − x) = 2.10",
+          "message": "Did you leave out the trans-2-butene that was there at the start? It belongs in the top of the fraction."
+        },
+        {
+          "value": "0.116",
+          "from": "the cis concentration, or the fraction upside down",
+          "message": "That is the cis concentration, or what an upside-down fraction gives. The question asks for trans."
+        },
+        {
+          "value": "0.630",
+          "from": "K times the starting cis concentration",
+          "message": "Did you multiply K by the starting cis concentration? The cis falls by x as the trans rises by x."
+        }
+      ]
+    },
+    {
+      "lesson": "7.7",
+      "file": "src/content/lessons/unit-7/7-7-calculating-equilibrium-concentrations.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "1.2e-4",
+      "unit": "M",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "6.04e-5",
+          "from": "gave x",
+          "message": "That is x, which is [O₂]. The change row gives [CO] as a multiple of x."
+        },
+        {
+          "value": "9.58e-5",
+          "from": "change row −x, +x, +x",
+          "message": "Did your change row have a plain x for every gas? The sizes follow the coefficients."
+        },
+        {
+          "value": "1.52e-4",
+          "from": "(2x)² written as 2x²",
+          "message": "Did you write (2x)² as 2x²? The 2 is squared along with the x."
+        },
+        {
+          "value": "1.5e-4",
+          "from": "the same slip rounded to two figures, as the explanation quotes it (1.4 percent from 1.52e-4, outside the 1 percent window)",
+          "message": "Did you write (2x)² as 2x²? The 2 is squared along with the x."
+        }
+      ]
+    },
+    {
+      "lesson": "7.7",
+      "file": "src/content/lessons/unit-7/7-7-calculating-equilibrium-concentrations.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Only starting from 0.40 M",
+          "message": null
+        },
+        {
+          "text": "Only starting from 0.0010 M",
+          "message": "Work out x for each start and divide it by the starting concentration. Which start leaves x under 5 percent?"
+        },
+        {
+          "text": "In both cases, because $K$ is small",
+          "message": "A small K is not enough. It has to be small compared with the starting concentration, so run the check for each start."
+        },
+        {
+          "text": "In neither case",
+          "message": "Run the 5 percent check for each start: find x with the approximation, then divide it by the starting concentration."
+        }
+      ]
+    },
+    {
+      "lesson": "7.8",
+      "file": "src/content/lessons/unit-7/7-8-representations-of-equilibrium.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Nothing happens, because XY already outnumbers the other molecules and the box is at equilibrium.",
+          "message": "More product than reactant does not mean equilibrium. Work out Q from the counts and compare it with K."
+        },
+        {
+          "text": "More XY forms, because $Q$ = 3.5 is less than $K$.",
+          "message": "Check the exponent. The count of XY is squared in Q."
+        },
+        {
+          "text": "Some XY breaks up into X₂ and Y₂, because $Q$ = 49 is greater than $K$.",
+          "message": null
+        },
+        {
+          "text": "It cannot be decided without the volume of the box.",
+          "message": "The volume cancels for this reaction, so the counts can go straight into Q."
+        }
+      ]
+    },
+    {
+      "lesson": "7.8",
+      "file": "src/content/lessons/unit-7/7-8-representations-of-equilibrium.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "8",
+      "unit": "molecules",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "10",
+          "from": "stopped after one event",
+          "message": "Did you stop after one event? Work out Q for that box and compare it with K."
+        },
+        {
+          "value": "6",
+          "from": "one event too far",
+          "message": "That goes one event too far. Work out Q for that box: is it above K or below it?"
+        },
+        {
+          "value": "12",
+          "from": "box left as it was",
+          "message": "That is the box at the start. Can a box with no X₂ or Y₂ be at equilibrium?"
+        }
+      ]
+    },
+    {
+      "lesson": "7.8",
+      "file": "src/content/lessons/unit-7/7-8-representations-of-equilibrium.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "50",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.50",
+          "from": "bare counts, 8/4²",
+          "message": "Did you put in the bare counts? Each particle stands for 0.010 M. If you used concentrations, check which one is on top and where the exponent goes."
+        },
+        {
+          "value": "2.0",
+          "from": "exponent left off, 0.080/0.040; also bare counts upside down, 4²/8",
+          "message": "Did you leave off the exponent, or turn the fraction over? Z₂ goes on top, and the coefficient 2 becomes an exponent on [Z]."
+        },
+        {
+          "value": "0.020",
+          "from": "fraction upside down",
+          "message": "Is your fraction upside down? The product, Z₂, goes on top."
+        },
+        {
+          "value": "1.0",
+          "from": "[Z] doubled, not squared, 0.080/(2 × 0.040); bare counts give the same",
+          "message": "Did you double the Z where it should be squared? A coefficient becomes an exponent and nothing else."
+        }
+      ]
+    },
+    {
+      "lesson": "7.8",
+      "file": "src/content/lessons/unit-7/7-8-representations-of-equilibrium.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Box 1, because the counts give a larger ratio there.",
+          "message": null
+        },
+        {
+          "text": "Box 2, because it holds more XY molecules.",
+          "message": "More XY is not enough. Box 2 also holds more X₂ and Y₂, and K is a ratio. Work it out for each box."
+        },
+        {
+          "text": "Neither, because one reaction has only one value of $K$.",
+          "message": "A reaction has one K at one temperature. These boxes are at different temperatures."
+        },
+        {
+          "text": "It cannot be decided, because the boxes hold different numbers of atoms.",
+          "message": "The boxes are separate samples, so they do not need the same atoms. Work out K from the counts in each box."
+        }
+      ]
+    },
+    {
+      "lesson": "7.9",
+      "file": "src/content/lessons/unit-7/7-9-introduction-to-le-chateliers-principle.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "The deep blue gets deeper, because something was added on the reactant side.",
+          "message": "The acid does not add a reactant. Read again what H⁺ does to the NH₃."
+        },
+        {
+          "text": "The deep blue fades toward pale blue.",
+          "message": null
+        },
+        {
+          "text": "No change, because H⁺ is not in the equation.",
+          "message": "H⁺ is not in the equation, but it changes the concentration of something that is."
+        },
+        {
+          "text": "No change, because $K$ has not changed.",
+          "message": "K has not changed, but a concentration has. The concentrations have to move so that they fit the same K again."
+        }
+      ]
+    },
+    {
+      "lesson": "7.9",
+      "file": "src/content/lessons/unit-7/7-9-introduction-to-le-chateliers-principle.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Mixture A",
+          "message": "Count the moles of gas on each side. Compression shifts an equilibrium toward the side with fewer."
+        },
+        {
+          "text": "Mixture B",
+          "message": "Count the moles of gas on each side. What happens when the two sides have the same number?"
+        },
+        {
+          "text": "Mixture C",
+          "message": null
+        },
+        {
+          "text": "Mixture D",
+          "message": "X is a solid here, so it is not counted. Compare the moles of gas on each side."
+        }
+      ]
+    },
+    {
+      "lesson": "7.9",
+      "file": "src/content/lessons/unit-7/7-9-introduction-to-le-chateliers-principle.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "The forward reaction is endothermic, and $K$ is larger at the higher temperature.",
+          "message": null
+        },
+        {
+          "text": "The forward reaction is exothermic, and $K$ is larger at the higher temperature.",
+          "message": "Heating made more of the blue product. A shift that uses up added energy is in which direction?"
+        },
+        {
+          "text": "The forward reaction is endothermic, and $K$ has the same value at both temperatures.",
+          "message": "The color differs at the two temperatures, so the equilibrium mixture differs. Can K be the same?"
+        },
+        {
+          "text": "Heat acts as a catalyst for the forward reaction.",
+          "message": "A catalyst would not change the equilibrium mixture at all. Here the mixture changes with temperature."
+        }
+      ]
+    },
+    {
+      "lesson": "7.9",
+      "file": "src/content/lessons/unit-7/7-9-introduction-to-le-chateliers-principle.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Adding a catalyst",
+          "message": "A catalyst speeds both directions equally, so it shifts nothing."
+        },
+        {
+          "text": "Pumping in argon, with the piston locked so the volume is fixed",
+          "message": "With the volume fixed, does argon change the concentration of P₄ or of P₂?"
+        },
+        {
+          "text": "Squeezing the vapor into a smaller volume",
+          "message": "Squeezing shifts toward the side with fewer moles of gas. Which side is that? The question asks for moles, not concentration."
+        },
+        {
+          "text": "Raising the temperature",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "7.9",
+      "file": "src/content/lessons/unit-7/7-9-introduction-to-le-chateliers-principle.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "It turns yellow, and the pH falls.",
+          "message": "The base removes H⁺, a product. Which way does the equilibrium shift, and does [H⁺] end higher or lower than at the start?"
+        },
+        {
+          "text": "It turns yellow, and the pH rises.",
+          "message": "The base removes H⁺, a product. Toward which side does the equilibrium shift, and which form of the dye is made?"
+        },
+        {
+          "text": "It turns blue, and the pH rises.",
+          "message": null
+        },
+        {
+          "text": "It turns blue, and the pH falls.",
+          "message": "The shift releases some H⁺, but only part of what the base removed. How does [H⁺] compare with the start?"
+        }
+      ]
+    }
+  ]
+}
