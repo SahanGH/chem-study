@@ -167,3 +167,19 @@ Branch `topic/unit-8-test-session-2`, from `main` after pull request B is merged
 | 7: how a session is made, and the roles | "Conventions, models, roles"; 1 to 3 |
 | 8: pull requests | A, 2, 4 |
 | 10: done when | 2, 3, 4 |
+
+## As carried out (2026-11-27)
+
+- Groups A to C were done as planned, with one change of order: both
+  sessions were written, checked and corrected together, and the two
+  pull requests for the sessions were opened one after the other.
+- Writers, fact-checkers, second checkers and revisers ran on the
+  strongest model; the originality checkers and the fixers on Sonnet. The
+  controller ran every number check after every change, assembled, built,
+  measured at four widths and ran the browser tests.
+- The originality check was told to class a finding STRONG or MODERATE
+  only where a student who did the existing passage would answer with no
+  new thought. It returned three STRONG and six MODERATE findings; all
+  were revised except where the reviser showed the part asks for new work.
+- The findings, scripts and reports are in `scratchpad/unit8-test/`
+  (`fc/`, `notes/`), which is not kept.
