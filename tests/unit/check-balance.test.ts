@@ -6,7 +6,7 @@ import { describe, expect, it } from 'vitest';
  * its Checks are balanced; the other units are listed, with their counts, in
  * the design of 2026-11-26.
  */
-const BALANCED_UNITS = [1, 2, 3];
+const BALANCED_UNITS = [1, 2, 3, 4];
 const LOWEST_SHARE = 0.15;
 const HIGHEST_SHARE = 0.35;
 

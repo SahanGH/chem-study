@@ -42,7 +42,14 @@ The coefficients of a balanced equation compare moles (and particles), not grams
 
 </KeyIdea>
 
-<Check answer={3}>
+<Check
+  answer={2}
+  misses={{
+    1: "Coefficients count moles, not grams. Work out the mass of 2 mol of H₂S and of 1 mol of SO₂, and compare.",
+    3: "Add up the coefficients on each side. Atoms are conserved, but are moles of substances?",
+    4: "Look at the coefficients of the two gases. They count molecules as well as moles.",
+  }}
+>
 Oil refineries strip poisonous hydrogen sulfide, H₂S, out of their fuels and turn it into sulfur by reacting it with sulfur dioxide:
 
 $$
@@ -55,8 +62,8 @@ $$
 Which statement does this equation support?
 
 - Every 2 g of H₂S that reacts uses up 1 g of SO₂
-- The total number of moles of substances is the same before and after the reaction
 - For every 1 mol of SO₂ that reacts, 3 mol of sulfur atoms form
+- The total number of moles of substances is the same before and after the reaction
 - H₂S and SO₂ molecules are used up in equal numbers
 
 <div slot="why">
@@ -141,7 +148,17 @@ This one runs backward along the route: from the product wanted to the reactant 
 
 </Worked>
 
-<Check numeric="9.08" unit="g">
+<Check
+  numeric="9.08"
+  unit="g"
+  slips={{
+    "3.03": "That is what a 1 : 1 ratio gives. Check the coefficients of WO₃ and H₂ in the equation.",
+    "4.54": "This is near the moles of H₂, and near what 1.008 g/mol for hydrogen gives. Hydrogen gas is H₂: check its molar mass.",
+    "1.01": "Is the mole ratio upside down? Check which substance in the equation has the coefficient 3.",
+    "11.4": "Did you divide by the molar mass of W? The 348 g is WO₃.",
+    "1.50": "That is the moles of WO₃. Go on through the mole ratio to hydrogen, and then to grams.",
+  }}
+>
 Tungsten is the metal of lamp filaments and, as its carbide, of drill bits. It is made by heating tungsten(VI) oxide, a yellow powder, in a stream of hydrogen gas:
 
 $$
@@ -322,7 +339,18 @@ A technician treats a sample of the rinse water with 50.0 mL of 0.240 M NaOH, a 
 
 Here the dose was matched to the zinc, so the amount of zinc sulfate never entered the calculation. The next section is about what happens when the two amounts do not match.
 
-<Check numeric="0.900" unit="L">
+<Check
+  numeric="0.900"
+  unit="L"
+  slips={{
+    "0.600": "That is what a 1 : 1 ratio gives. Check the coefficients of NdCl₃ and H₂C₂O₄ in the equation.",
+    "0.400": "Is the mole ratio upside down? Check which substance has the 3 and which has the 2.",
+    "0.225": "Did you multiply by the molarity at the end? Going from moles to a volume, divide by it.",
+    "2.00": "That is the volume of the NdCl₃ solution. The question asks for the volume of the oxalic acid solution.",
+    "0.450": "That is the moles of oxalic acid. One more step takes moles to a volume of solution.",
+    "900": "Is that in milliliters? This answer is asked for in liters.",
+  }}
+>
 Neodymium is the metal in the strong magnets of earphones and electric motors. A refinery takes it out of solution by adding oxalic acid, H₂C₂O₄, a weak acid. Neodymium oxalate is insoluble:
 
 $$
@@ -502,7 +530,18 @@ Try other amounts yourself: nitrogen monoxide and fluorine combine into nitrosyl
 
 <LimitingReactant />
 
-<Check numeric="69.6" unit="kg">
+<Check
+  numeric="69.6"
+  unit="kg"
+  slips={{
+    "104": "That is what PbS as the limiting reactant gives. Compare the moles with the coefficients in mind, not the grams.",
+    "46.4": "That is what a 1 : 1 ratio gives. Check the coefficients of Pb and of the limiting reactant.",
+    "30.9": "Is the mole ratio upside down? Check which coefficient belongs to Pb.",
+    "75.0": "Did you apply the coefficients to kilograms? They count moles, so change the masses to moles first.",
+    "81.1": "That is all the lead in the charge, from both compounds. One reactant runs out first, and some of the other is left over.",
+    "90.0": "That is the two masses added together. Go through moles, and find the limiting reactant.",
+  }}
+>
 In a lead smelter, part of the ore, lead(II) sulfide, PbS, is first burned to lead(II) oxide, PbO. Then the two react in the furnace and give the metal:
 
 $$
@@ -587,7 +626,17 @@ Real sulfur units recover between about 94 and 98 percent, depending on how many
 
 The equation sheet does not give the formula for percent yield, and the course's description of this unit does not name percent yield. Laboratory questions use it all the same.
 
-<Check numeric="94.3" unit="%">
+<Check
+  numeric="94.3"
+  unit="%"
+  slips={{
+    "74.8": "Did you divide by the mass of WO₃ that went in? Percent yield compares the actual yield with the theoretical yield.",
+    "106": "Is the fraction upside down? The actual yield goes on top.",
+    "0.943": "That is the fraction. Multiply by 100 for a percent.",
+    "79.3": "That compares the theoretical yield with the WO₃ that went in. Percent yield compares the actual yield with the theoretical yield.",
+    "1.98": "That is the theoretical yield in kilograms. Percent yield compares the actual yield with it.",
+  }}
+>
 A tray holding 2.50 kg of tungsten(VI) oxide, WO₃, goes through the hydrogen furnace you met earlier, in a large excess of hydrogen:
 
 $$

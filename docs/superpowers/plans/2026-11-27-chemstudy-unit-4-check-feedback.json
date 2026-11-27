@@ -1,0 +1,1119 @@
+{
+  "unit": 4,
+  "written": "2026-11-27",
+  "note": "Feedback for the Checks of Unit 4. The design is docs/superpowers/specs/2026-11-26-chemstudy-us-english-and-unit-1-check-feedback-design.md. Options are listed in the order they are to have on the page; the option with no message is the answer.",
+  "checks": [
+    {
+      "lesson": "4.1",
+      "file": "src/content/lessons/unit-4/4-1-introduction-for-reactions.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "A square of chocolate left in a warm car goes soft and runny, then hardens again in the shade",
+          "message": "Melting and hardening again are changes of phase. Ask whether the substance at the end is the one that was there at the start."
+        },
+        {
+          "text": "A slice of bread in a toaster turns brown and smells different",
+          "message": null
+        },
+        {
+          "text": "A wet towel hung on a line is dry by the evening",
+          "message": "The towel dried because its water turned to vapor, which is a change of phase. Is the water a different substance afterward?"
+        },
+        {
+          "text": "Muddy water left overnight goes clear above a layer of silt",
+          "message": "Settling is a mixture separating. Ask whether the substances at the end are the ones that were there at the start."
+        }
+      ]
+    },
+    {
+      "lesson": "4.1",
+      "file": "src/content/lessons/unit-4/4-1-introduction-for-reactions.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "A chemical change happened, because the hot platinum gave off orange light",
+          "message": "Light counts as evidence when the change itself gives it off. Ask where the heat that made this wire glow came from."
+        },
+        {
+          "text": "A physical change happened, because platinum is a metal that cannot react at all",
+          "message": "Platinum can react: a hot mixture of nitric acid and hydrochloric acid dissolves it. Judge by what was seen, not by what the metal is."
+        },
+        {
+          "text": "A chemical change happened, because the wire changed color twice, to orange and back",
+          "message": "The color came and went with the heat. Compare the properties of the wire before the flame with its properties once it is cool."
+        },
+        {
+          "text": "Nothing points to a new substance in the wire: the flame's heat made it glow",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "4.1",
+      "file": "src/content/lessons/unit-4/4-1-introduction-for-reactions.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "A solid formed and the pink left the liquid, which a new substance explains best",
+          "message": null
+        },
+        {
+          "text": "The pink color only faded because one solution diluted the other, so nothing new formed",
+          "message": "Dilution makes a color paler. Can it also account for the solid, and for pink turning to violet?"
+        },
+        {
+          "text": "There is no evidence of a chemical change, because no gas formed and no heat was felt",
+          "message": "A reaction does not have to show all four signs. Weigh the signs that were seen."
+        },
+        {
+          "text": "The violet solid is the pink cobalt compound coming back out of its solution unchanged",
+          "message": "Compare the colors. And a dissolved compound comes back out when water is taken away, where this solid appeared when a solution was added."
+        }
+      ]
+    },
+    {
+      "lesson": "4.1",
+      "file": "src/content/lessons/unit-4/4-1-introduction-for-reactions.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "The milky mixture has no color when a light is shone through it",
+          "message": "A white solid of either fertilizer salt would look the same. Pick the observation that would come out differently if the solid were one of the two salts."
+        },
+        {
+          "text": "Left to stand, the white solid sinks slowly and forms a layer on the bottom",
+          "message": "A solid of either fertilizer salt would settle in the same way. Pick the observation that would come out differently if the solid were one of the two salts."
+        },
+        {
+          "text": "The white solid, filtered off and rinsed, will not dissolve in fresh water",
+          "message": null
+        },
+        {
+          "text": "Stirring the bucket hard for a minute spreads the cloudiness evenly through it",
+          "message": "Stirring would do this whether or not anything new had formed. Which observation would come out differently if the solid were one of the two salts?"
+        }
+      ]
+    },
+    {
+      "lesson": "4.2",
+      "file": "src/content/lessons/unit-4/4-2-net-ionic-equations.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "2",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "3",
+          "from": "atoms balanced without the charge: 2 NH₄⁺ + 3 O₂ → 2 NO₃⁻ + 8 H⁺",
+          "message": "Did you balance the atoms alone? Add up the charge on each side as well: an equation can have the same atoms on both sides and still not balance."
+        },
+        {
+          "value": "4",
+          "from": "O atoms counted in place of O₂ molecules, or every coefficient doubled",
+          "message": "Did you count O atoms, or double every coefficient? The coefficient counts O₂ molecules, with the smallest whole numbers."
+        },
+        {
+          "value": "1.5",
+          "from": "the O in H₂O left out: 3 O for NO₃⁻ alone",
+          "message": "Did you count the oxygen in NO₃⁻ alone? Water holds oxygen too, and the coefficients are whole numbers."
+        }
+      ]
+    },
+    {
+      "lesson": "4.2",
+      "file": "src/content/lessons/unit-4/4-2-net-ionic-equations.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Benzoic acid, sodium hydroxide and sodium benzoate",
+          "message": "Dissolved does not always mean split into ions. Check whether each of the three is strong or weak."
+        },
+        {
+          "text": "Sodium hydroxide and sodium benzoate",
+          "message": null
+        },
+        {
+          "text": "Benzoic acid and sodium hydroxide",
+          "message": "Check each substance on its own: is it strong, weak, or a soluble ionic compound? The label (aq) alone does not mean split into ions."
+        },
+        {
+          "text": "Sodium hydroxide only",
+          "message": "Go through all four substances in the equation, one at a time: strong, weak, dissolved ionic compound, or liquid? One of them is misplaced."
+        }
+      ]
+    },
+    {
+      "lesson": "4.2",
+      "file": "src/content/lessons/unit-4/4-2-net-ionic-equations.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Equation A",
+          "message": "That is the molecular equation. A net ionic equation leaves out the spectator ions."
+        },
+        {
+          "text": "Equation B",
+          "message": "These are the spectator ions. Is potassium sulfate soluble, by the rule?"
+        },
+        {
+          "text": "Equation C",
+          "message": null
+        },
+        {
+          "text": "Equation D",
+          "message": "Add up the charge on the left side. A solid has no charge, so the charges of its ions must cancel."
+        }
+      ]
+    },
+    {
+      "lesson": "4.2",
+      "file": "src/content/lessons/unit-4/4-2-net-ionic-equations.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Citric acid with potassium hydroxide",
+          "message": "Citric acid is a weak acid, so it is written whole. Would H⁺ appear in its net ionic equation?"
+        },
+        {
+          "text": "Hydrochloric acid with trimethylamine",
+          "message": "Trimethylamine is a weak base, so it is written whole. Would OH⁻ appear in its net ionic equation?"
+        },
+        {
+          "text": "Hydrobromic acid with a solution of potassium nitrate",
+          "message": "Is there a base in this pair? Check whether these four ions form anything new when they meet."
+        },
+        {
+          "text": "Perchloric acid with strontium hydroxide",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "4.2",
+      "file": "src/content/lessons/unit-4/4-2-net-ionic-equations.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "It has no spectator ions: every ion ends up in a new substance",
+          "message": null
+        },
+        {
+          "text": "Ca²⁺ is a spectator ion, because calcium appears on both sides of it",
+          "message": "A spectator ion is dissolved and separate on both sides. Look at where the calcium is on the right."
+        },
+        {
+          "text": "OH⁻ is a spectator ion, because hydroxide is not part of the solid",
+          "message": "A spectator ion is the same on both sides of the equation. Look for OH⁻ on the right."
+        },
+        {
+          "text": "It has no net ionic equation, because carbon dioxide is not ionic",
+          "message": "A net ionic equation can contain molecules. CO₂ is written whole because it is a gas."
+        }
+      ]
+    },
+    {
+      "lesson": "4.3",
+      "file": "src/content/lessons/unit-4/4-3-representations-of-reactions.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Equation A",
+          "message": "Some O₂ molecules are in both drawings and did not react. Do they belong in the equation?"
+        },
+        {
+          "text": "Equation B",
+          "message": "Count the O atoms on each side of this equation."
+        },
+        {
+          "text": "Equation C",
+          "message": null
+        },
+        {
+          "text": "Equation D",
+          "message": "Check the direction. Which substance do the drawings show forming?"
+        }
+      ]
+    },
+    {
+      "lesson": "4.3",
+      "file": "src/content/lessons/unit-4/4-3-representations-of-reactions.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "15",
+      "unit": "ions",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "14",
+          "from": "the spectator ions alone, 8 + 6, with the leftover Ba²⁺ forgotten",
+          "message": "Did you count the spectator ions alone? Check whether either ion of the solid has some left over."
+        },
+        {
+          "value": "20",
+          "from": "every ion in both boxes, 4 + 8 + 6 + 2",
+          "message": "That is every ion in the two boxes. Some of them are in the solid now."
+        },
+        {
+          "value": "16",
+          "from": "one Ba²⁺ for each PO₄³⁻, so 2 Ba²⁺ left: 2 + 8 + 6",
+          "message": "Did you take one Ba²⁺ for each PO₄³⁻? Use the ratio in the equation."
+        },
+        {
+          "value": "5",
+          "from": "the ions in the solid, 3 + 2",
+          "message": "That is the number of ions in the solid. The question asks for the ions still dissolved."
+        },
+        {
+          "value": "1",
+          "from": "the leftover Ba²⁺ alone, with the spectator ions forgotten",
+          "message": "Did you count the leftover ions of the solid alone? Spectator ions are still dissolved too."
+        }
+      ]
+    },
+    {
+      "lesson": "4.3",
+      "file": "src/content/lessons/unit-4/4-3-representations-of-reactions.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Charge is not conserved: the dissolved ions now add up to +4",
+          "message": null
+        },
+        {
+          "text": "Silver is not conserved: the box has gained four silver atoms",
+          "message": "Count the silver in each box, ions and atoms together. A silver ion that takes an electron is still silver."
+        },
+        {
+          "text": "The nitrate ions should be gone, because they are spectator ions",
+          "message": "Spectator ions take no part in the reaction, so they stay dissolved. They do not leave the box."
+        },
+        {
+          "text": "Nothing is wrong: every atom in the first box is in the second",
+          "message": "Matching atoms is one test, and not the only one. Run the rest of the checks the lesson makes on a drawing before you accept this box."
+        }
+      ]
+    },
+    {
+      "lesson": "4.3",
+      "file": "src/content/lessons/unit-4/4-3-representations-of-reactions.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "4 CH₄ molecules still in the left bulb and 4 CO₂ molecules still in the right",
+          "message": "Gas molecules keep moving. What happens once the valve is open and each gas can reach more space?"
+        },
+        {
+          "text": "8 CO molecules and 8 H₂ molecules, spread through both bulbs",
+          "message": "Every atom is there, but in new molecules. That would be a reaction, and these two gases do not react at room temperature."
+        },
+        {
+          "text": "2 CH₄ molecules and 2 CO₂ molecules in all, because the gases now have twice the space",
+          "message": "More space means the molecules are farther apart. Does it change how many there are?"
+        },
+        {
+          "text": "4 CH₄ molecules and 4 CO₂ molecules, every one whole, spread through both bulbs",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "4.4",
+      "file": "src/content/lessons/unit-4/4-4-physical-and-chemical-changes.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": true,
+      "options": [
+        {
+          "text": "The Cl–Cl bonds broke, and the gas is made of separate chlorine atoms",
+          "message": "Compare the energies. The sample took in 20.4 kJ for each mole, and breaking the bonds takes 243 kJ for each mole."
+        },
+        {
+          "text": "The molecules moved far apart, and every Cl–Cl bond stayed intact",
+          "message": null
+        },
+        {
+          "text": "Some of the Cl–Cl bonds broke, since energy was absorbed by the sample",
+          "message": "Absorbing energy does not have to mean breaking bonds. The gas has all the chemical properties of chlorine: what does that say about its particles?"
+        },
+        {
+          "text": "The molecules themselves grew larger as they took in the energy",
+          "message": "Molecules do not swell when they are heated. Ask what the 20.4 kJ for each mole was used to overcome."
+        }
+      ]
+    },
+    {
+      "lesson": "4.4",
+      "file": "src/content/lessons/unit-4/4-4-physical-and-chemical-changes.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Water left sample 1, while in sample 2 new bonds formed, taking in atoms from the air",
+          "message": null
+        },
+        {
+          "text": "Both are physical changes: in each sample a liquid evaporated and left the solid behind",
+          "message": "Evaporation takes molecules away, so the mass falls. Does that fit a sample that gained mass?"
+        },
+        {
+          "text": "Both are chemical changes, because both paints ended up hard and dry to the touch",
+          "message": "Hard and dry is how both ended, not what happened on the way. Check which sample a wet brush turns back into paint."
+        },
+        {
+          "text": "Sample 2 is a physical change, because its mass went up where sample 1's went down",
+          "message": "A mass that goes up is not just the reverse of one that goes down. What could add mass, and can oil or water turn sample 2 back into paint?"
+        }
+      ]
+    },
+    {
+      "lesson": "4.4",
+      "file": "src/content/lessons/unit-4/4-4-physical-and-chemical-changes.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Whole Na₂SO₄ units move apart from one another and spread through the water",
+          "message": "Sodium sulfate is ionic. What happens to the ionic bonds between its ions when it dissolves?"
+        },
+        {
+          "text": "One Na₂²⁺ ion and one SO₄²⁻ ion separate, and each attracts water molecules around it",
+          "message": "Check the sodium. What does the subscript 2 in Na₂SO₄ count?"
+        },
+        {
+          "text": "Bonds inside each sulfate ion break, freeing sulfur and oxygen atoms into the water",
+          "message": "Dissolving does not break the covalent bonds inside a sulfate ion. They stay as they are."
+        },
+        {
+          "text": "Two Na⁺ ions and one SO₄²⁻ ion separate, and each attracts water molecules",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "4.5",
+      "file": "src/content/lessons/unit-4/4-5-stoichiometry.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": true,
+      "options": [
+        {
+          "text": "Every 2 g of H₂S that reacts uses up 1 g of SO₂",
+          "message": "Coefficients count moles, not grams. Work out the mass of 2 mol of H₂S and of 1 mol of SO₂, and compare."
+        },
+        {
+          "text": "For every 1 mol of SO₂ that reacts, 3 mol of sulfur atoms form",
+          "message": null
+        },
+        {
+          "text": "The total number of moles of substances is the same before and after the reaction",
+          "message": "Add up the coefficients on each side. Atoms are conserved, but are moles of substances?"
+        },
+        {
+          "text": "H₂S and SO₂ molecules are used up in equal numbers",
+          "message": "Look at the coefficients of the two gases. They count molecules as well as moles."
+        }
+      ]
+    },
+    {
+      "lesson": "4.5",
+      "file": "src/content/lessons/unit-4/4-5-stoichiometry.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "9.08",
+      "unit": "g",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "3.03",
+          "from": "1 : 1 ratio of H₂ to WO₃",
+          "message": "That is what a 1 : 1 ratio gives. Check the coefficients of WO₃ and H₂ in the equation."
+        },
+        {
+          "value": "4.54",
+          "from": "1.008 g/mol used for hydrogen gas (4.50, the moles of H₂, is within 1 percent)",
+          "message": "This is near the moles of H₂, and near what 1.008 g/mol for hydrogen gives. Hydrogen gas is H₂: check its molar mass."
+        },
+        {
+          "value": "1.01",
+          "from": "the ratio upside down, 1/3",
+          "message": "Is the mole ratio upside down? Check which substance in the equation has the coefficient 3."
+        },
+        {
+          "value": "11.4",
+          "from": "the molar mass of W, 183.84, in place of that of WO₃",
+          "message": "Did you divide by the molar mass of W? The 348 g is WO₃."
+        },
+        {
+          "value": "1.50",
+          "from": "stopped at moles of WO₃",
+          "message": "That is the moles of WO₃. Go on through the mole ratio to hydrogen, and then to grams."
+        }
+      ]
+    },
+    {
+      "lesson": "4.5",
+      "file": "src/content/lessons/unit-4/4-5-stoichiometry.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "0.900",
+      "unit": "L",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.600",
+          "from": "1 : 1 ratio",
+          "message": "That is what a 1 : 1 ratio gives. Check the coefficients of NdCl₃ and H₂C₂O₄ in the equation."
+        },
+        {
+          "value": "0.400",
+          "from": "the ratio upside down, 2/3",
+          "message": "Is the mole ratio upside down? Check which substance has the 3 and which has the 2."
+        },
+        {
+          "value": "0.225",
+          "from": "moles multiplied by the molarity at the end",
+          "message": "Did you multiply by the molarity at the end? Going from moles to a volume, divide by it."
+        },
+        {
+          "value": "2.00",
+          "from": "the volume of the NdCl₃ solution typed back",
+          "message": "That is the volume of the NdCl₃ solution. The question asks for the volume of the oxalic acid solution."
+        },
+        {
+          "value": "0.450",
+          "from": "stopped at moles of oxalic acid",
+          "message": "That is the moles of oxalic acid. One more step takes moles to a volume of solution."
+        },
+        {
+          "value": "900",
+          "from": "the answer in milliliters",
+          "message": "Is that in milliliters? This answer is asked for in liters."
+        }
+      ]
+    },
+    {
+      "lesson": "4.5",
+      "file": "src/content/lessons/unit-4/4-5-stoichiometry.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "69.6",
+      "unit": "kg",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "104",
+          "from": "PbS taken as limiting: 167.2 mol × 3 × 207.2 g/mol",
+          "message": "That is what PbS as the limiting reactant gives. Compare the moles with the coefficients in mind, not the grams."
+        },
+        {
+          "value": "46.4",
+          "from": "PbO limiting, 1 : 1 ratio",
+          "message": "That is what a 1 : 1 ratio gives. Check the coefficients of Pb and of the limiting reactant."
+        },
+        {
+          "value": "30.9",
+          "from": "PbO limiting, ratio upside down, 2/3",
+          "message": "Is the mole ratio upside down? Check which coefficient belongs to Pb."
+        },
+        {
+          "value": "75.0",
+          "from": "coefficients applied to kilograms, 50.0 kg × 3/2",
+          "message": "Did you apply the coefficients to kilograms? They count moles, so change the masses to moles first."
+        },
+        {
+          "value": "81.1",
+          "from": "all the lead in both compounds",
+          "message": "That is all the lead in the charge, from both compounds. One reactant runs out first, and some of the other is left over."
+        },
+        {
+          "value": "90.0",
+          "from": "the two masses added",
+          "message": "That is the two masses added together. Go through moles, and find the limiting reactant."
+        }
+      ]
+    },
+    {
+      "lesson": "4.5",
+      "file": "src/content/lessons/unit-4/4-5-stoichiometry.mdx",
+      "check": 5,
+      "kind": "numeric",
+      "answer": "94.3",
+      "unit": "%",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "74.8",
+          "from": "actual yield divided by the mass of WO₃",
+          "message": "Did you divide by the mass of WO₃ that went in? Percent yield compares the actual yield with the theoretical yield."
+        },
+        {
+          "value": "106",
+          "from": "the fraction upside down",
+          "message": "Is the fraction upside down? The actual yield goes on top."
+        },
+        {
+          "value": "0.943",
+          "from": "left as a fraction",
+          "message": "That is the fraction. Multiply by 100 for a percent."
+        },
+        {
+          "value": "79.3",
+          "from": "theoretical yield divided by the mass of WO₃",
+          "message": "That compares the theoretical yield with the WO₃ that went in. Percent yield compares the actual yield with the theoretical yield."
+        },
+        {
+          "value": "1.98",
+          "from": "stopped at the theoretical yield in kilograms",
+          "message": "That is the theoretical yield in kilograms. Percent yield compares the actual yield with it."
+        }
+      ]
+    },
+    {
+      "lesson": "4.6",
+      "file": "src/content/lessons/unit-4/4-6-introduction-to-titration.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "At the equivalence point, with no acid left and no extra base in the flask",
+          "message": "Work out the millimoles of OH⁻ added so far, and compare them with the 2.40 mmol of acid."
+        },
+        {
+          "text": "Before the equivalence point, with 0.60 mmol of the acid still to react",
+          "message": null
+        },
+        {
+          "text": "Past the equivalence point, with 0.60 mmol of base in excess",
+          "message": "Compare the two amounts again. Which is larger: the acid in the sample, or the base added so far?"
+        },
+        {
+          "text": "It cannot be told without seeing the color of the indicator",
+          "message": "Where a titration stands is a matter of amounts. The indicator only shows it, and the amounts here can be worked out."
+        }
+      ]
+    },
+    {
+      "lesson": "4.6",
+      "file": "src/content/lessons/unit-4/4-6-introduction-to-titration.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "2.32e-3",
+      "unit": "M",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "1.16e-3",
+          "from": "1 : 1 ratio",
+          "message": "That is what a 1 : 1 ratio gives. Check the coefficients of H₂SO₄ and NaHCO₃ in the equation."
+        },
+        {
+          "value": "5.80e-4",
+          "from": "the ratio upside down",
+          "message": "Is the mole ratio upside down? Check which substance has the coefficient 2."
+        },
+        {
+          "value": "0.0200",
+          "from": "moles divided by the buret volume, 0.01160 L",
+          "message": "Did you divide by the buret volume? The NaHCO₃ was in the 100.0 mL sample."
+        },
+        {
+          "value": "2.08e-3",
+          "from": "moles divided by the two volumes added, 0.1116 L",
+          "message": "Did you divide by the two volumes added together? The NaHCO₃ was in the 100.0 mL sample."
+        },
+        {
+          "value": "2.32",
+          "from": "millimoles divided by liters",
+          "message": "Check the units of the two numbers you divided. Millimoles divided by liters is not molarity."
+        },
+        {
+          "value": "2.32e-4",
+          "from": "stopped at moles of NaHCO₃",
+          "message": "That is the moles of NaHCO₃ in the sample. Divide by the volume of the sample for the concentration."
+        }
+      ]
+    },
+    {
+      "lesson": "4.6",
+      "file": "src/content/lessons/unit-4/4-6-introduction-to-titration.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "0.0880",
+      "unit": "M",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.0352",
+          "from": "1 : 1 ratio",
+          "message": "That is what a 1 : 1 ratio gives. The ratio comes from the coefficients of MnO₄⁻ and H₂O₂ in the equation."
+        },
+        {
+          "value": "0.0141",
+          "from": "the ratio upside down, 2/5",
+          "message": "Is the mole ratio upside down? Check which species has the 5 and which has the 2."
+        },
+        {
+          "value": "0.0500",
+          "from": "moles divided by the buret volume, 0.01760 L",
+          "message": "Did you divide by the buret volume? The H₂O₂ was in the 10.00 mL sample."
+        },
+        {
+          "value": "0.0319",
+          "from": "moles divided by the two volumes added, 0.02760 L",
+          "message": "Did you divide by the two volumes added together? The H₂O₂ was in the 10.00 mL sample."
+        },
+        {
+          "value": "8.80e-4",
+          "from": "stopped at moles of H₂O₂",
+          "message": "That is the moles of H₂O₂ in the sample. Divide by the volume of the sample, in liters."
+        },
+        {
+          "value": "88.0",
+          "from": "millimoles divided by liters",
+          "message": "Check the units of the two numbers you divided. Millimoles divided by liters is not molarity."
+        }
+      ]
+    },
+    {
+      "lesson": "4.6",
+      "file": "src/content/lessons/unit-4/4-6-introduction-to-titration.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 4,
+      "moved": true,
+      "options": [
+        {
+          "text": "It is unchanged, because the concentration of a solution does not depend on how much of it you have",
+          "message": "The concentration of the wine did not change, but the amount of acid in the flask did. Was 20.00 mL the volume that was titrated?"
+        },
+        {
+          "text": "It is too high, because the base had less acid to react with",
+          "message": "Less acid to react with changes how much base is used. Follow that through: the titrant volume, the moles found, then the moles divided by 20.00 mL."
+        },
+        {
+          "text": "It is unchanged, because the indicator still changes color at the equivalence point",
+          "message": "The indicator did its job. But the equivalence point is set by the amount of analyte in the flask, and that amount changed."
+        },
+        {
+          "text": "It is too low, because the flask held less acid than the calculation assumes",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "4.7",
+      "file": "src/content/lessons/unit-4/4-7-types-of-chemical-reactions.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Cadmium nitrate and sodium sulfide",
+          "message": "Swap the partners. The rule covers sodium nitrate, but does it say anything about cadmium sulfide?"
+        },
+        {
+          "text": "Strontium bromide and potassium chromate",
+          "message": "Swap the partners. The rule covers potassium bromide, but does it say anything about strontium chromate?"
+        },
+        {
+          "text": "Calcium nitrate and potassium fluoride",
+          "message": "Swap the partners. The rule covers potassium nitrate, but does it say anything about calcium fluoride?"
+        },
+        {
+          "text": "Sodium chromate and ammonium bromide",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "4.7",
+      "file": "src/content/lessons/unit-4/4-7-types-of-chemical-reactions.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "+6",
+          "message": "That is the total for both sulfur atoms. The question asks for the number of each one."
+        },
+        {
+          "text": "+3",
+          "message": null
+        },
+        {
+          "text": "+4",
+          "message": "Did you set the sum of the oxidation numbers to 0? In an ion they add up to the charge of the ion."
+        },
+        {
+          "text": "+5",
+          "message": "Check the sign of the charge you used. The dithionite ion is S₂O₄²⁻."
+        }
+      ]
+    },
+    {
+      "lesson": "4.7",
+      "file": "src/content/lessons/unit-4/4-7-types-of-chemical-reactions.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "It is not a combustion, because no carbon dioxide is formed at all",
+          "message": "Burning in oxygen gas is what makes a reaction a combustion. Ammonia has no carbon to give."
+        },
+        {
+          "text": "It is a combustion, and hydrogen is oxidized, from 0 to +1",
+          "message": "Work out the oxidation number of hydrogen in NH₃ and in H₂O. Does it change?"
+        },
+        {
+          "text": "It is a combustion, and nitrogen is oxidized, from −3 to 0",
+          "message": null
+        },
+        {
+          "text": "It is a combustion, and oxygen is oxidized, from 0 to −2",
+          "message": "Check the direction of the change. A fall in oxidation number is reduction, not oxidation."
+        }
+      ]
+    },
+    {
+      "lesson": "4.7",
+      "file": "src/content/lessons/unit-4/4-7-types-of-chemical-reactions.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Equation A",
+          "message": null
+        },
+        {
+          "text": "Equation B",
+          "message": "Compare the charges of the tin ion and of the iron ions before and after. What moved from one to the other?"
+        },
+        {
+          "text": "Equation C",
+          "message": "Compare HSO₄⁻ with SO₄²⁻, and CH₃NH₂ with CH₃NH₃⁺. A reaction can be one of the three kinds with no hydroxide ion in it and no water formed."
+        },
+        {
+          "text": "Equation D",
+          "message": "Dissolved ions join into a sparingly soluble solid here. Is that one of the three kinds?"
+        }
+      ]
+    },
+    {
+      "lesson": "4.7",
+      "file": "src/content/lessons/unit-4/4-7-types-of-chemical-reactions.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "It is complete, because a solid formed from ions in solution and nothing else changed",
+          "message": "A solid did form from dissolved ions. But the liquid also turned brown: does a solid settling out account for that?"
+        },
+        {
+          "text": "It is wrong, because no solid can form when every potassium salt is soluble",
+          "message": "The rule about potassium salts applies to compounds that hold potassium. Does the solid here hold any?"
+        },
+        {
+          "text": "It is incomplete, because copper goes from +2 to +1, so electrons moved as well",
+          "message": null
+        },
+        {
+          "text": "It is incomplete, because a proton also moved, from an iodide ion to a copper ion",
+          "message": "A proton is H⁺. Look for hydrogen anywhere in the equation."
+        }
+      ]
+    },
+    {
+      "lesson": "4.8",
+      "file": "src/content/lessons/unit-4/4-8-introduction-to-acid-base-reactions.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "N₂H₄, because it has the most hydrogen atoms",
+          "message": "How many hydrogen atoms a molecule has does not decide anything. Compare each reactant with what it becomes: which one has lost H⁺?"
+        },
+        {
+          "text": "N₂H₅⁺, because it carries a positive charge",
+          "message": "The question is about the forward reaction. Compare each reactant with what it becomes: which one has lost H⁺?"
+        },
+        {
+          "text": "OH⁻, because hydroxide is what acids react with",
+          "message": "OH⁻ is a product of the forward reaction. Compare each reactant with what it becomes: which one has lost H⁺?"
+        },
+        {
+          "text": "H₂O, because it gives up a proton to hydrazine",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "4.8",
+      "file": "src/content/lessons/unit-4/4-8-introduction-to-acid-base-reactions.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Anilinium ion, C₆H₅NH₃⁺, and aniline, C₆H₅NH₂",
+          "message": null
+        },
+        {
+          "text": "Anilinium ion, C₆H₅NH₃⁺, and hydroxide ion, OH⁻",
+          "message": "These are the acid and the base that react with each other. The members of a conjugate pair differ by one proton and by nothing else."
+        },
+        {
+          "text": "Aniline, C₆H₅NH₂, and hydroxide ion, OH⁻",
+          "message": "These are the two bases of the equation. The members of a conjugate pair differ by one proton and by nothing else."
+        },
+        {
+          "text": "Anilinium ion, C₆H₅NH₃⁺, and water, H₂O",
+          "message": "These are the two acids of the equation, one on each side. The members of a conjugate pair differ by one proton and by nothing else."
+        }
+      ]
+    },
+    {
+      "lesson": "4.8",
+      "file": "src/content/lessons/unit-4/4-8-introduction-to-acid-base-reactions.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Conjugate acid H₃PO₄, conjugate base PO₄³⁻",
+          "message": "Count the protons between H₃PO₄ and HPO₄²⁻. A conjugate is one proton away."
+        },
+        {
+          "text": "Conjugate acid PO₄³⁻, conjugate base H₂PO₄⁻",
+          "message": "A conjugate acid has one more proton than the species it comes from. Does PO₄³⁻ have more protons than HPO₄²⁻, or fewer?"
+        },
+        {
+          "text": "Conjugate acid H₂PO₄⁻, conjugate base PO₄³⁻",
+          "message": null
+        },
+        {
+          "text": "Conjugate acid H₂PO₄²⁻, conjugate base PO₄²⁻",
+          "message": "A proton carries a charge. Adding one or taking one away changes the charge as well as the formula."
+        }
+      ]
+    },
+    {
+      "lesson": "4.8",
+      "file": "src/content/lessons/unit-4/4-8-introduction-to-acid-base-reactions.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Neither side is favored, because both acids are weak",
+          "message": "Weak compares an acid with the strong acids. Two weak acids still differ from each other."
+        },
+        {
+          "text": "Products are favored, and CH₃NH₂ is a stronger base than CN⁻",
+          "message": null
+        },
+        {
+          "text": "Products are favored, and CN⁻ is a stronger base than CH₃NH₂",
+          "message": "HCN is the stronger of the two acids. What does that say about the strength of its conjugate base?"
+        },
+        {
+          "text": "Reactants are favored, and CH₃NH₂ is a weaker base than CN⁻",
+          "message": "Find the two acids, one on each side, and their conjugate bases. The stronger acid has the weaker conjugate base."
+        }
+      ]
+    },
+    {
+      "lesson": "4.8",
+      "file": "src/content/lessons/unit-4/4-8-introduction-to-acid-base-reactions.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "A needs 8 and B needs 1, because OH⁻ reacts only with the H₃O⁺ ions",
+          "message": "HY is a far stronger acid than water. What can a hydroxide ion do when it meets an HY molecule?"
+        },
+        {
+          "text": "A needs 8 and B needs 7, because only the HY molecules still hold a proton",
+          "message": "Go through each kind of particle in flask B and ask whether it has a proton to give to OH⁻."
+        },
+        {
+          "text": "A needs 8 and B needs 8, because OH⁻ takes protons from HY molecules too",
+          "message": null
+        },
+        {
+          "text": "A needs 16 and B needs 9, because every particle pictured uses up one OH⁻",
+          "message": "The X⁻ and Y⁻ ions have no proton to give. Count the particles that do."
+        }
+      ]
+    },
+    {
+      "lesson": "4.9",
+      "file": "src/content/lessons/unit-4/4-9-oxidation-reduction-redox-reactions.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Equation A",
+          "message": "Count the iodine atoms on each side."
+        },
+        {
+          "text": "Equation B",
+          "message": "Add up the charge on each side. Does iodide gain electrons or lose them when it becomes I₂?"
+        },
+        {
+          "text": "Equation C",
+          "message": null
+        },
+        {
+          "text": "Equation D",
+          "message": "This one is balanced, but check its direction. The question asks what happens to the iodide."
+        }
+      ]
+    },
+    {
+      "lesson": "4.9",
+      "file": "src/content/lessons/unit-4/4-9-oxidation-reduction-redox-reactions.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "6",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "2",
+          "from": "the electrons in the tin half-reaction as written",
+          "message": "That is the number of electrons in the tin half-reaction as written. Do the electrons lost equal the electrons gained yet?"
+        },
+        {
+          "value": "3",
+          "from": "the electrons in the gold half-reaction as written",
+          "message": "That is the number of electrons in the gold half-reaction as written. Do the electrons lost equal the electrons gained yet?"
+        },
+        {
+          "value": "5",
+          "from": "the two numbers added, 3 + 2",
+          "message": "Did you add the electrons of the two half-reactions? The electrons tin loses are the ones gold gains, so the two counts must be made equal."
+        },
+        {
+          "value": "1",
+          "from": "the two numbers subtracted, 3 − 2",
+          "message": "Did you subtract one number of electrons from the other? Multiply the half-reactions until the electrons lost equal the electrons gained."
+        },
+        {
+          "value": "12",
+          "from": "the total charge on each side of the balanced equation",
+          "message": "That is the total charge on each side of the balanced equation, not a number of electrons."
+        }
+      ]
+    },
+    {
+      "lesson": "4.9",
+      "file": "src/content/lessons/unit-4/4-9-oxidation-reduction-redox-reactions.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Equation A",
+          "message": null
+        },
+        {
+          "text": "Equation B",
+          "message": "Count the sulfur atoms on each side."
+        },
+        {
+          "text": "Equation C",
+          "message": "This doubles one half-reaction and not the other. Compare the electrons gained with the electrons lost, or add up the charge on each side."
+        },
+        {
+          "text": "Equation D",
+          "message": "When the electrons lost equal the electrons gained, they cancel. Add up the charge on each side of this one."
+        }
+      ]
+    },
+    {
+      "lesson": "4.9",
+      "file": "src/content/lessons/unit-4/4-9-oxidation-reduction-redox-reactions.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Equation A",
+          "message": "The atoms balance, but add up the charge on each side. Do the electrons gained match the electrons lost?"
+        },
+        {
+          "text": "Equation B",
+          "message": null
+        },
+        {
+          "text": "Equation C",
+          "message": "Compare the products with those of the second half-reaction. An H₂ molecule is not two H⁺ ions: add up the charge on each side."
+        },
+        {
+          "text": "Equation D",
+          "message": "Check which half-reaction needs multiplying. Compare the electrons one Ce⁴⁺ gains with the electrons one H₂O₂ loses."
+        }
+      ]
+    }
+  ]
+}
