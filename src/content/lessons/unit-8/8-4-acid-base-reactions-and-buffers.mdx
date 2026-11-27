@@ -1,0 +1,804 @@
+---
+topic: "8.4"
+minutes: 21
+summary: "How to find what a flask holds after an acid meets a base, by reacting them in moles first, and how what is left over sets the pH of the mixture."
+---
+
+Hexanoic acid is one of the acids behind the sharp smell of goat cheese. Its old name, caproic acid, comes from the Latin word for a goat. A chemist who dissolves a little of it in water and runs in sodium hydroxide solution finds that the smell fades, because the base turns the acid's molecules into ions, and the ions stay in the water. The smell is slow to go: it is nearly gone only when nearly all of the acid is in its ion form.
+
+Where the base is stopped decides what is in the flask. Stop when two fifths of the base the acid needs is in, and the mixture sits near pH 4.7. Stop exactly on time and the pH is about 8.7. Let it run a little long and the pH is above 11.5. The same two chemicals and one reaction give three very different solutions. Once you can say which one is in the flask, the rest is methods you already have.
+
+## Let the reaction finish on paper
+
+You already have two tools. Unit 4 treats a reaction that goes to completion with moles and a limiting reactant. Unit 7 treats a reaction that stops short with an ICE table. A flask in which an acid has met a base may need both, and the order matters.
+
+Start with why a reaction with a strong acid or a strong base can be treated as complete. When H₃O⁺ meets OH⁻, the reaction is the reverse of water's reaction with itself (topic 8.1):
+
+$$
+\begin{aligned}
+&\ce{H3O+(aq) + OH-(aq) ->} \\
+&\quad \ce{2H2O(l)}
+\end{aligned}
+$$
+
+Reversing an equation turns $K$ into $1/K$ (topic 7.6), so its constant is $1/K_w$, which is 1.0 × 10¹⁴ at 25 °C. Topic 4.2 wrote the reaction as
+
+$$
+\ce{H+(aq) + OH-(aq) -> H2O(l)}
+$$
+
+and that is the same reaction with the water molecule that carries the proton left out: one reaction written two ways (topic 4.8).
+
+A hydroxide ion also takes the proton straight off a weak acid's molecules (topic 4.8). For hexanoic acid, HC₆H₁₁O₂, the acid of the opening:
+
+$$
+\begin{aligned}
+&\ce{HC6H11O2(aq) + OH-(aq) ->} \\
+&\quad \ce{C6H11O2-(aq) + H2O(l)}
+\end{aligned}
+$$
+
+Topic 4.2 wrote the same kind of equation for benzoic acid on its way to sodium benzoate. This equation is the acid's ionization, for which $K_a$ = 1.3 × 10⁻⁵, added to the equation above. So its constant is the product of the two (topic 7.6):
+
+$$
+\begin{aligned}
+\frac{K_a}{K_w} &= \frac{1.3 \times 10^{-5}}{1.0 \times 10^{-14}} \\
+&= 1.3 \times 10^{9}
+\end{aligned}
+$$
+
+A constant that large means that essentially nothing of the limiting reactant is left (topic 7.5). That is why these equations carry a single arrow, and why you can treat them the way Unit 4 treats any reaction: the reactant with fewer moles is used up.
+
+**The table of moles.** Keep the books in millimoles, which are milliliters times molarity (topic 4.6), in a table with three rows: Before, Change and After. Nothing in it is at equilibrium yet, so no $x$ appears. It is the bookkeeping for a reaction that ran until something ran out. If an equilibrium is still to come, it comes afterward and gets its own table.
+
+The routine has three steps:
+
+1. If a strong acid or a strong base is among the things mixed, let it react to completion, in moles.
+2. Say what the flask now holds in large amounts.
+3. Only then choose how to find the pH.
+
+The equation sheet has the $K_a$ and $K_b$ expressions, $K_w$, pH and pOH on it. Nothing on it says to react first, or what is left over. That part is yours.
+
+<KeyIdea>
+
+A strong acid or a strong base reacts until one reactant is gone, and that step is done in moles. What is left in the flask afterward decides how the pH is found.
+
+</KeyIdea>
+
+## A strong acid with a strong base
+
+Both are fully ionized before they meet (topic 8.2), so the only reaction is H₃O⁺ with OH⁻. The other ions, such as ClO₄⁻ and K⁺, are spectators (topic 4.2), and they stay spectators: they neither give a proton to water nor take one from it.
+
+Whichever of H₃O⁺ and OH⁻ is left over sets the pH, exactly as in topic 8.2. There is one thing to watch. The leftover ions are now spread through both solutions, so the concentration is the leftover moles divided by the **total volume**.
+
+If the moles are equal, neither is left over. The flask holds water and spectator ions, and the solution is neutral: pH 7.00 at 25 °C.
+
+<Worked title="Perchloric acid meets potassium hydroxide">
+
+25.0 mL of 0.120 M perchloric acid, HClO₄, a strong acid, is mixed with 15.0 mL of 0.130 M potassium hydroxide, KOH, a strong base. What is the pH of the mixture at 25 °C?
+
+1. **Count the moles.** Milliliters times molarity gives millimoles.
+
+   $$
+   \begin{aligned}
+   \ce{H3O+}&: (25.0)(0.120) = 3.00\ \text{mmol} \\
+   \ce{OH-}&: (15.0)(0.130) = 1.95\ \text{mmol}
+   \end{aligned}
+   $$
+
+2. **React to completion.** The equation is 1 to 1, so the OH⁻ runs out first. Every value in the table is in mmol.
+
+   | | H₃O⁺ | OH⁻ |
+   |---|---|---|
+   | Before | 3.00 | 1.95 |
+   | Change | −1.95 | −1.95 |
+   | After | 1.05 | 0 |
+
+3. **Say what is left.** 1.05 mmol of H₃O⁺, with the spectators ClO₄⁻ and K⁺. A strong acid is left over.
+
+4. **Find its concentration in the total volume.** The mixture is 25.0 + 15.0 = 40.0 mL.
+
+   $$
+   \begin{aligned}
+   [\ce{H3O+}] &= \frac{1.05}{40.0} \\
+   &= 0.02625\ \text{M}
+   \end{aligned}
+   $$
+
+5. **Take the pH.**
+
+   $$
+   \begin{aligned}
+   \text{pH} &= -\log(0.02625) \\
+   &= 1.58
+   \end{aligned}
+   $$
+
+6. **Does it make sense?** The acid started at pH 0.92, which is −log(0.120). Part of it was neutralized and the rest was diluted, so the pH should be higher than 0.92 and still well below 7. It is.
+
+</Worked>
+
+<Check
+  numeric="12.37"
+  tolerance={0.18}
+  slips={{
+    "1.63": "That is the pOH. The ion left over is OH⁻, so one more step takes the pOH to the pH at 25 °C.",
+    "12.62": "Did you divide by 32.0 mL? The leftover OH⁻ is spread through both solutions, so divide by the total volume.",
+    "12.73": "Did you divide by 25.0 mL? The leftover OH⁻ is spread through both solutions, so divide by the total volume.",
+    "12.83": "Did you count all 3.84 mmol of OH⁻? Part of it reacted with the acid. Only what is left over sets the pH.",
+    "12.4": "Did you round to one decimal place? The question asks for two decimal places.",
+  }}
+>
+25.0 mL of 0.100 M hydrobromic acid, HBr, a strong acid, is mixed with 32.0 mL of 0.120 M rubidium hydroxide, RbOH, a strong base. What is the pH of the mixture at 25 °C? Give two decimal places.
+
+<div slot="why">
+
+Count the millimoles of each.
+
+$$
+\begin{aligned}
+\ce{H3O+}&: (25.0)(0.100) = 2.50 \\
+\ce{OH-}&: (32.0)(0.120) = 3.84
+\end{aligned}
+$$
+
+The acid runs out, and OH⁻ is left over, in mmol:
+
+$$
+3.84 - 2.50 = 1.34
+$$
+
+It is spread through 25.0 + 32.0 = 57.0 mL.
+
+$$
+\begin{aligned}
+[\ce{OH-}] &= \frac{1.34}{57.0} \\
+&= 0.0235\ \text{M}
+\end{aligned}
+$$
+
+The ion left over is OH⁻, so take the pOH first, and then the pH:
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(0.0235) \\
+&= 1.63
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 1.63 \\
+&= 12.37
+\end{aligned}
+$$
+
+</div>
+</Check>
+
+## A weak acid with a strong base: three outcomes
+
+In water alone, a weak acid keeps most of its protons (topic 8.3). A hydroxide ion does not wait for them: it takes the proton off each acid molecule it meets. Write HA for the acid and A⁻ for its conjugate base:
+
+$$
+\begin{aligned}
+&\ce{HA(aq) + OH-(aq) ->} \\
+&\quad \ce{A-(aq) + H2O(l)}
+\end{aligned}
+$$
+
+Here eight acid molecules meet three hydroxide ions.
+
+<Figure
+  src="/figures/8-4-partial-neutralization-particles.svg"
+  alt="Two boxes of particles. The box labeled Before holds eight whole acid molecules, HA, three hydroxide ions and three sodium ions. The box labeled After holds five whole acid molecules, three A⁻ ions and three sodium ions, and no hydroxide ions. Water molecules are not drawn."
+  caption="Three OH⁻ ions take the protons of three HA molecules. What is left is both members of the pair, HA and A⁻. Water molecules, including the three that form, are left out."
+/>
+
+What the flask holds afterward depends on one comparison only: the moles of OH⁻ added against the moles of HA that were there.
+
+<Figure
+  src="/figures/8-4-what-is-left.svg"
+  alt="A line showing the moles of hydroxide ion added to a weak acid, HA, with a mark where they equal the moles of HA at the start. To the left of the mark, a shaded stretch is labeled HA and A⁻, a buffer. At the mark, a point is labeled A⁻ alone, a weak base. To the right, a hatched stretch is labeled OH⁻ left over, a strong base."
+  caption="Add a strong base to a weak acid and the flask ends up as one of three things. Which one depends only on the moles of OH⁻ added against the moles of HA that were there."
+/>
+
+- **Fewer moles of OH⁻ than of HA.** Some HA is left, and A⁻ has been formed. The flask holds large amounts of both members of a conjugate acid–base pair. A solution like that is called a **buffer**. (Topic 8.8 explains what a buffer is good for. Here it is one of three things a flask can turn out to hold.)
+- **Equal moles.** All of the HA has become A⁻ and no OH⁻ is left. The flask holds the conjugate base alone, and a conjugate base of a weak acid is a weak base (topic 4.8).
+- **More moles of OH⁻ than of HA.** All of the HA has become A⁻, and OH⁻ is left over. A strong base is left over, and it sets the pH.
+
+**The pH of the buffer, from the $K_a$ expression.** Both HA and A⁻ are in the flask, so the acid's ionization equilibrium (topic 8.3) holds. There is one difference from a solution of the acid alone: there is already plenty of A⁻. Here is the expression, and then the same line solved for the hydronium ion:
+
+$$
+K_a = \frac{[\ce{H3O+}][\ce{A-}]}{[\ce{HA}]}
+$$
+
+$$
+[\ce{H3O+}] = K_a \times \frac{[\ce{HA}]}{[\ce{A-}]}
+$$
+
+HA and A⁻ share one flask, so both concentrations are moles over the same volume, and the volume cancels. The ratio of the concentrations is the ratio of the moles:
+
+$$
+[\ce{H3O+}] = K_a \times \frac{\text{moles of HA}}{\text{moles of A}^-}
+$$
+
+Why can the After row's amounts go straight in? The A⁻ already present pushes the acid's ionization back toward HA. That is Le Châtelier's principle (topic 7.9), and the common-ion effect of topic 7.12 is the same push. So the $x$ of the ICE table is even smaller than it would be for the acid alone. It is still checked, as always (topic 7.7). Topic 8.9 writes this same line in logarithms, and nothing new will be in it.
+
+<Worked title="Hexanoic acid with less base than it needs">
+
+50.0 mL of 0.0450 M hexanoic acid, HC₆H₁₁O₂, is mixed with 10.0 mL of 0.0900 M NaOH. For hexanoic acid, $K_a$ = 1.3 × 10⁻⁵. What is the pH of the mixture at 25 °C?
+
+Write HA for hexanoic acid and A⁻ for the hexanoate ion, C₆H₁₁O₂⁻.
+
+1. **Count the moles.**
+
+   $$
+   \begin{aligned}
+   \ce{HA}&: (50.0)(0.0450) = 2.25\ \text{mmol} \\
+   \ce{OH-}&: (10.0)(0.0900) = 0.90\ \text{mmol}
+   \end{aligned}
+   $$
+
+2. **React to completion.** Every value is in mmol.
+
+   | | HA | OH⁻ | A⁻ |
+   |---|---|---|---|
+   | Before | 2.25 | 0.90 | 0 |
+   | Change | −0.90 | −0.90 | +0.90 |
+   | After | 1.35 | 0 | 0.90 |
+
+3. **Say what is left.** 1.35 mmol of HA and 0.90 mmol of A⁻: both members of the pair. The flask holds a buffer.
+
+4. **Now the equilibrium, in its own table.** The total volume is 50.0 + 10.0 = 60.0 mL.
+
+   $$
+   \begin{aligned}
+   [\ce{HA}] &= \frac{1.35}{60.0} = 0.0225\ \text{M} \\
+   [\ce{A-}] &= \frac{0.90}{60.0} = 0.0150\ \text{M}
+   \end{aligned}
+   $$
+
+   This one is an ICE table, because now something is at equilibrium: the ionization of HA. Every value is in M.
+
+   | | HA | H₃O⁺ | A⁻ |
+   |---|---|---|---|
+   | I | 0.0225 | 0 | 0.0150 |
+   | C | −x | +x | +x |
+   | E | 0.0225 − x | x | 0.0150 + x |
+
+5. **Leave $x$ out where it is added to or subtracted from a larger number, and solve.**
+
+   $$
+   \begin{aligned}
+   [\ce{H3O+}] &= x \\
+   &= (1.3 \times 10^{-5}) \times \frac{0.0225}{0.0150} \\
+   &= 1.95 \times 10^{-5}\ \text{M}
+   \end{aligned}
+   $$
+
+   The ratio 0.0225 ÷ 0.0150 is the ratio of the moles, 1.35 ÷ 0.90: the 60.0 mL cancels.
+
+6. **Check the approximation.** $x$ was left out beside two numbers. Test it against the smaller.
+
+   $$
+   \frac{1.95 \times 10^{-5}}{0.0150} \times 100\% = 0.13\%
+   $$
+
+   That is under 5 percent. (Against the larger number it is 0.09%.)
+
+7. **Take the pH.**
+
+   $$
+   \begin{aligned}
+   \text{pH} &= -\log(1.95 \times 10^{-5}) \\
+   &= 4.71
+   \end{aligned}
+   $$
+
+8. **Does it make sense?** There is more HA than A⁻, so the ratio is above 1 and $[\ce{H3O+}]$ comes out a little above $K_a$.
+
+</Worked>
+
+<Worked title="The same flask with more base">
+
+Take the same 50.0 mL of 0.0450 M hexanoic acid, which is 2.25 mmol, now with (a) 25.0 mL and (b) 29.0 mL of the 0.0900 M NaOH. Find the pH of each mixture at 25 °C.
+
+1. **(a) Count and react.** 25.0 mL brings (25.0)(0.0900) = 2.25 mmol of OH⁻, exactly the moles of HA. Every value is in mmol.
+
+   | | HA | OH⁻ | A⁻ |
+   |---|---|---|---|
+   | Before | 2.25 | 2.25 | 0 |
+   | Change | −2.25 | −2.25 | +2.25 |
+   | After | 0 | 0 | 2.25 |
+
+2. **Say what is left.** The hexanoate ion alone, with Na⁺: this is a solution of sodium hexanoate. The hexanoate ion is a weak base, so it takes protons from water.
+
+   $$
+   \begin{aligned}
+   &\ce{C6H11O2-(aq) + H2O(l) <=>} \\
+   &\quad \ce{HC6H11O2(aq) + OH-(aq)}
+   \end{aligned}
+   $$
+
+3. **Get its $K_b$ and its concentration.** Hexanoic acid and the hexanoate ion are a conjugate pair, so their two constants multiply to $K_w$ (topic 8.3).
+
+   $$
+   \begin{aligned}
+   K_b &= \frac{1.0 \times 10^{-14}}{1.3 \times 10^{-5}} \\
+   &= 7.69 \times 10^{-10}
+   \end{aligned}
+   $$
+
+   The total volume is 50.0 + 25.0 = 75.0 mL.
+
+   $$
+   \begin{aligned}
+   [\ce{A-}] &= \frac{2.25}{75.0} \\
+   &= 0.0300\ \text{M}
+   \end{aligned}
+   $$
+
+4. **ICE table, with $x$ as $[\ce{OH-}]$.** Every value is in M.
+
+   | | A⁻ | HA | OH⁻ |
+   |---|---|---|---|
+   | I | 0.0300 | 0 | 0 |
+   | C | −x | +x | +x |
+   | E | 0.0300 − x | x | x |
+
+   Leave $x$ out beside 0.0300:
+
+   $$
+   \begin{aligned}
+   \frac{x^2}{0.0300} &= 7.69 \times 10^{-10} \\
+   x &= 4.80 \times 10^{-6}\ \text{M}
+   \end{aligned}
+   $$
+
+5. **Check.**
+
+   $$
+   \frac{4.80 \times 10^{-6}}{0.0300} \times 100\% = 0.016\%
+   $$
+
+   That is far under 5 percent.
+
+6. **pOH first, then pH.**
+
+   $$
+   \begin{aligned}
+   \text{pOH} &= -\log(4.80 \times 10^{-6}) \\
+   &= 5.32
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   \text{pH} &= 14.00 - 5.32 \\
+   &= 8.68
+   \end{aligned}
+   $$
+
+   The acid has been exactly neutralized, and the solution is not neutral.
+
+7. **(b) Count and react.** 29.0 mL brings (29.0)(0.0900) = 2.61 mmol of OH⁻. Every value is in mmol.
+
+   | | HA | OH⁻ | A⁻ |
+   |---|---|---|---|
+   | Before | 2.25 | 2.61 | 0 |
+   | Change | −2.25 | −2.25 | +2.25 |
+   | After | 0 | 0.36 | 2.25 |
+
+8. **Say what is left.** A strong base, left over: 0.36 mmol of OH⁻. The total volume is 50.0 + 29.0 = 79.0 mL.
+
+   $$
+   \begin{aligned}
+   [\ce{OH-}] &= \frac{0.36}{79.0} \\
+   &= 0.00456\ \text{M}
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   \text{pOH} &= -\log(0.00456) \\
+   &= 2.34
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   \text{pH} &= 14.00 - 2.34 \\
+   &= 11.66
+   \end{aligned}
+   $$
+
+9. **What about the hexanoate ion?** It is still a base. But in part (a), with the flask to itself, it made only 4.80 × 10⁻⁶ M of OH⁻. Beside 0.00456 M that is nothing, so it is left out.
+
+Here are the three flasks side by side:
+
+| NaOH added | pH |
+|---|---|
+| 10.0 mL | 4.71 |
+| 25.0 mL | 8.68 |
+| 29.0 mL | 11.66 |
+
+One acid, one base, one reaction, and three methods. What was left in the flask chose the method each time.
+
+</Worked>
+
+<Check
+  answer={3}
+  misses={{
+    1: "A buffer needs lactic acid left over. Milliliters times molarity gives the millimoles of each reactant: compare them.",
+    2: "Lactate alone needs equal moles of acid and base. Milliliters times molarity gives the millimoles of each: compare them.",
+    4: "The acid has the larger volume, but volume does not count particles. Find the millimoles of each reactant and compare them.",
+  }}
+>
+24.0 mL of 0.150 M lactic acid, HC₃H₅O₃, a weak acid with one acidic proton, is mixed with 20.0 mL of 0.250 M potassium hydroxide, KOH. What sets the pH of the mixture?
+
+- Lactic acid and lactate ion together, because the mixture is a buffer
+- Lactate ion alone, acting as a weak base in water
+- Hydroxide ion left over after all of the lactic acid has reacted
+- Lactic acid left over after all of the hydroxide ion has reacted
+
+<div slot="why">
+
+Count the millimoles of each.
+
+$$
+\begin{aligned}
+\text{lactic acid}&: (24.0)(0.150) = 3.60 \\
+\ce{OH-}&: (20.0)(0.250) = 5.00
+\end{aligned}
+$$
+
+The base has the smaller volume and the larger number of moles. All of the acid reacts, and 5.00 − 3.60 = 1.40 mmol of OH⁻ is left in 24.0 + 20.0 = 44.0 mL, with 3.60 mmol of lactate ion. A leftover strong base sets the pH:
+
+$$
+\begin{aligned}
+[\ce{OH-}] &= \frac{1.40}{44.0} \\
+&= 0.0318\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(0.0318) \\
+&= 1.50
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 1.50 \\
+&= 12.50
+\end{aligned}
+$$
+
+The lactate ion is a weak base too, but what it adds is far too small to show beside that. A buffer would need acid left over, and lactate alone would need equal moles.
+
+</div>
+</Check>
+
+## A weak base with a strong acid: the mirror image
+
+Turn everything around. In water alone, only a small share of a weak base's molecules have taken a proton (topic 8.3). But H₃O⁺ is a far stronger acid than water, and a molecule of the base, B, takes its proton essentially every time:
+
+$$
+\begin{aligned}
+&\ce{B(aq) + H3O+(aq) ->} \\
+&\quad \ce{HB+(aq) + H2O(l)}
+\end{aligned}
+$$
+
+Topic 4.2 wrote an equation of this kind for pyridine, as
+
+$$
+\begin{aligned}
+&\ce{C5H5N(aq) + H+(aq) ->} \\
+&\quad \ce{C5H5NH+(aq)}
+\end{aligned}
+$$
+
+and it is the same reaction with another base.
+
+The example here is hydroxylamine, NH₂OH, a weak base whose conjugate acid is the hydroxylammonium ion, NH₃OH⁺. For hydroxylamine, $K_b$ = 1.1 × 10⁻⁸, so the constant of its reaction with H₃O⁺ is
+
+$$
+\begin{aligned}
+\frac{K_b}{K_w} &= \frac{1.1 \times 10^{-8}}{1.0 \times 10^{-14}} \\
+&= 1.1 \times 10^{6}
+\end{aligned}
+$$
+
+which is large enough to treat the reaction as complete.
+
+The three outcomes are the mirror image of the weak acid's:
+
+| H₃O⁺ added, against B | Left in the flask | Which is |
+|---|---|---|
+| Fewer moles | B and HB⁺ | a buffer |
+| Equal moles | HB⁺ alone | a weak acid |
+| More moles | H₃O⁺ left over | a strong acid |
+
+For the buffer, the acid of the pair is HB⁺, so the constant to use is the $K_a$ of HB⁺, which is $K_w / K_b$:
+
+$$
+[\ce{H3O+}] = K_a \times \frac{\text{moles of HB}^+}{\text{moles of B}}
+$$
+
+For equal moles, HB⁺ gives protons to water:
+
+$$
+\begin{aligned}
+&\ce{HB+(aq) + H2O(l) <=>} \\
+&\quad \ce{B(aq) + H3O+(aq)}
+\end{aligned}
+$$
+
+and the solution is acidic. Here $x$ is $[\ce{H3O+}]$, so its negative logarithm is the pH itself.
+
+<Check
+  answer={2}
+  misses={{
+    1: "Weak describes how hydroxylamine acts on water. H₃O⁺ is a far stronger acid than water. What happens when it meets a hydroxylamine molecule?",
+    3: "Compare the millimoles of the two reactants. Is there enough H₃O⁺ to reach every hydroxylamine molecule?",
+    4: "A proton that leaves H₃O⁺ has to end up somewhere. Write the equation for the reaction and look at what it forms.",
+  }}
+>
+A flask holds 3.00 mmol of hydroxylamine, NH₂OH, a weak base, dissolved in water. Then 1.20 mmol of hydrochloric acid, HCl, a strong acid, is added. Once the reaction is over, what does the flask hold in large amounts, besides water?
+
+- Hydroxylamine, H₃O⁺ and Cl⁻: a weak base leaves the ions of the acid untouched
+- Hydroxylamine, NH₃OH⁺ and Cl⁻: part of the base is now its conjugate acid
+- NH₃OH⁺ and Cl⁻ only: all of the hydroxylamine is now its conjugate acid
+- Hydroxylamine and Cl⁻ only: the H₃O⁺ is used up and leaves nothing behind
+
+<div slot="why">
+
+The reaction is 1 to 1 and goes to completion. All 1.20 mmol of H₃O⁺ reacts with 1.20 mmol of hydroxylamine and makes 1.20 mmol of NH₃OH⁺. That leaves 3.00 − 1.20 = 1.80 mmol of hydroxylamine. The Cl⁻ ions, 1.20 mmol of them, are spectators. So the flask holds a weak base and its conjugate acid together: a buffer.
+
+"Weak" says how hydroxylamine acts on water, not on H₃O⁺. There is not enough acid to reach every hydroxylamine molecule. And a proton that leaves H₃O⁺ ends up on a hydroxylamine molecule; it does not vanish.
+
+</div>
+</Check>
+
+<Check
+  numeric="3.69"
+  tolerance={0.6}
+  slips={{
+    "7.00": "Did you take equal moles to mean neutral? Neither reactant is left over, but the flask still holds an ion that acts on water. Which ion, and how?",
+    "4.65": "Did you use the Kb of hydroxylamine? The flask holds its conjugate acid, NH₃OH⁺, so the constant needed is the Ka of that ion, found from Kw.",
+    "9.35": "Did you treat the flask as a solution of hydroxylamine? The hydroxylamine has all reacted. What is left is its conjugate acid, which needs a Ka.",
+    "3.58": "Did you use 0.0750 M for the ion? The mixture has a larger volume than the hydroxylamine solution had. Divide the millimoles by the total volume.",
+    "3.48": "Did you divide by 40.0 mL? The ion is spread through both solutions, so divide the millimoles by the total volume.",
+    "1.34": "That is the pH if every NH₃OH⁺ ion gave up its proton. The ion is a weak acid, so set up its equilibrium with its Ka.",
+  }}
+>
+64.0 mL of 0.0750 M hydroxylamine, NH₂OH, a weak base, is mixed with 40.0 mL of 0.120 M hydrochloric acid, HCl, a strong acid. For hydroxylamine, $K_b$ = 1.1 × 10⁻⁸. What is the pH of the mixture at 25 °C? Give two decimal places.
+
+<div slot="why">
+
+Count the millimoles of each.
+
+$$
+\begin{aligned}
+\ce{NH2OH}&: (64.0)(0.0750) = 4.80 \\
+\ce{H3O+}&: (40.0)(0.120) = 4.80
+\end{aligned}
+$$
+
+Equal moles, so both are used up. Write B for hydroxylamine and HB⁺ for NH₃OH⁺. Every value is in mmol.
+
+| | B | H₃O⁺ | HB⁺ |
+|---|---|---|---|
+| Before | 4.80 | 4.80 | 0 |
+| Change | −4.80 | −4.80 | +4.80 |
+| After | 0 | 0 | 4.80 |
+
+The flask holds 4.80 mmol of NH₃OH⁺, with Cl⁻, in 64.0 + 40.0 = 104.0 mL.
+
+$$
+\begin{aligned}
+[\ce{HB+}] &= \frac{4.80}{104.0} \\
+&= 0.0462\ \text{M}
+\end{aligned}
+$$
+
+That ion is a weak acid. It is the conjugate acid of hydroxylamine, so its $K_a$ comes from $K_w$:
+
+$$
+\begin{aligned}
+K_a &= \frac{1.0 \times 10^{-14}}{1.1 \times 10^{-8}} \\
+&= 9.1 \times 10^{-7}
+\end{aligned}
+$$
+
+Now the ICE table, with $x$ as $[\ce{H3O+}]$. Every value is in M.
+
+| | HB⁺ | B | H₃O⁺ |
+|---|---|---|---|
+| I | 0.0462 | 0 | 0 |
+| C | −x | +x | +x |
+| E | 0.0462 − x | x | x |
+
+Leave $x$ out beside 0.0462:
+
+$$
+\begin{aligned}
+\frac{x^2}{0.0462} &= 9.1 \times 10^{-7} \\
+x &= 2.05 \times 10^{-4}\ \text{M}
+\end{aligned}
+$$
+
+Check the approximation:
+
+$$
+\frac{2.05 \times 10^{-4}}{0.0462} \times 100\% = 0.44\%
+$$
+
+That is under 5 percent. Then
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(2.05 \times 10^{-4}) \\
+&= 3.69
+\end{aligned}
+$$
+
+</div>
+</Check>
+
+## Why a salt solution can be acidic or basic
+
+The two equal-moles flasks above are nothing more than salt solutions: sodium hexanoate in water, and hydroxylammonium chloride in water. Dissolve either solid salt in water to the same concentration and you get the same solution, with the same pH, as by neutralizing. So a salt solution does not have to be neutral.
+
+To judge a salt, split it into its ions (topic 4.2) and ask of each one: is it the conjugate of something weak?
+
+- The conjugate base of a weak acid, such as the hexanoate ion, takes protons from water and makes the solution basic.
+- The conjugate acid of a weak base, such as NH₃OH⁺, gives protons to water and makes the solution acidic.
+- The anion of a strong acid (Cl⁻, Br⁻, I⁻, NO₃⁻, ClO₄⁻) and the cation of a strong base (the group 1 ions, Ca²⁺, Sr²⁺, Ba²⁺) do neither. Topic 4.8 gave the reason for the anions: a strong acid's conjugate base is so weak that it essentially never takes a proton from water.
+
+A salt whose ions are all of the third kind gives a neutral solution. If both of its ions react with water, set the cation's $K_a$ beside the anion's $K_b$. The solution is acidic if the $K_a$ is bigger and basic if the $K_b$ is bigger.
+
+The calculation, when a question asks for it, is one you have met twice already, for the hexanoate ion and for NH₃OH⁺: an ICE table for the ion that reacts, with the constant found from $K_w$.
+
+<Check
+  answer={4}
+  misses={{
+    1: "Na⁺ comes from a strong base and ClO₄⁻ from a strong acid. Does either ion give a proton to water or take one from it?",
+    2: "One of its ions does react with water. Decide whether CH₃NH₃⁺ gives a proton to water or takes one from it.",
+    3: "Sr²⁺ comes from a strong base and I⁻ from a strong acid. Does either ion give a proton to water or take one from it?",
+  }}
+>
+Four salts are each dissolved in water to make a 0.050 M solution at 25 °C. Lactic acid is a weak acid and methylamine is a weak base. HClO₄, HNO₃ and HI are strong acids, and NaOH, KOH and Sr(OH)₂ are strong bases. Which solution has a pH above 7?
+
+- Sodium perchlorate, NaClO₄
+- Methylammonium nitrate, CH₃NH₃NO₃
+- Strontium iodide, SrI₂
+- Potassium lactate, KC₃H₅O₃
+
+<div slot="why">
+
+Split each salt into its ions. Na⁺ and ClO₄⁻, and Sr²⁺ and I⁻, all come from strong partners, so none of them reacts with water and both solutions are neutral.
+
+In methylammonium nitrate, NO₃⁻ does nothing and CH₃NH₃⁺ is the conjugate acid of a weak base, so it gives protons to water: that solution is acidic (pH 5.97 at this concentration).
+
+In potassium lactate, K⁺ does nothing and the lactate ion is the conjugate base of a weak acid, so it takes protons from water and makes OH⁻: that solution is basic (pH 8.28).
+
+</div>
+</Check>
+
+## A weak acid with a weak base
+
+When neither is strong, the reaction is not sure to go to completion. A weak acid and a weak base pass a proton back and forth until the mixture settles at an equilibrium, with all four species present. How far it goes depends on the two acids.
+
+$$
+\begin{aligned}
+&\ce{HA(aq) + B(aq) <=>} \\
+&\quad \ce{A-(aq) + HB+(aq)}
+\end{aligned}
+$$
+
+Which side is favored is topic 4.8's question, and it has topic 4.8's answer: there is an acid on each side, HA and HB⁺, and the side with the weaker acid is favored. Now you can compare the two acids by their $K_a$ values.
+
+Take hexanoic acid and hydroxylamine:
+
+$$
+\begin{aligned}
+&\ce{HC6H11O2(aq) + NH2OH(aq) <=>} \\
+&\quad \ce{C6H11O2-(aq) + NH3OH+(aq)}
+\end{aligned}
+$$
+
+The acids are hexanoic acid ($K_a$ = 1.3 × 10⁻⁵) on the left and NH₃OH⁺ ($K_a$ = 9.1 × 10⁻⁷) on the right. The weaker acid is on the right, so the products are favored. The equation is hexanoic acid's ionization added to the reverse of the hydroxylammonium ion's (topic 7.6), so its constant is the first $K_a$ divided by the second:
+
+$$
+\frac{1.3 \times 10^{-5}}{9.1 \times 10^{-7}} \approx 14
+$$
+
+That is nothing like 10⁹. With equal amounts mixed, about a fifth of each reactant is still there when the mixture has settled.
+
+This unit stops at the equilibrium and its direction, and does not calculate the pH of such a mixture.
+
+<Check
+  answer={1}
+  misses={{
+    2: "Find the acid on each side of the equation and compare the two Ka values. Which side holds the weaker acid?",
+    3: "OH⁻ takes essentially every proton because it is a strong base. Is the hexanoate ion a strong base? Compare the two Ka values.",
+    4: "A spectator ion neither gives nor takes a proton. NH₃OH⁺ is a weak acid and the hexanoate ion is a weak base.",
+  }}
+>
+Equal volumes of 0.050 M sodium hexanoate, NaC₆H₁₁O₂, and 0.050 M hydroxylammonium chloride, NH₃OHCl, are mixed. $K_a$ is 1.3 × 10⁻⁵ for hexanoic acid and 9.1 × 10⁻⁷ for the hydroxylammonium ion, NH₃OH⁺. What happens in the mixture?
+
+- A minor share of the NH₃OH⁺ ions pass a proton to hexanoate ions; most do not
+- Most of the NH₃OH⁺ ions pass a proton to hexanoate ions; a minor share do not
+- Essentially every NH₃OH⁺ ion passes a proton to a hexanoate ion, as each would to an OH⁻ ion
+- No proton passes at all, because the ions of two dissolved salts are spectators
+
+<div slot="why">
+
+The mixture holds a weak acid, NH₃OH⁺, and a weak base, the hexanoate ion, so they react to an equilibrium:
+
+$$
+\begin{aligned}
+&\ce{NH3OH+(aq) + C6H11O2-(aq) <=>} \\
+&\quad \ce{NH2OH(aq) + HC6H11O2(aq)}
+\end{aligned}
+$$
+
+The acid on the left is NH₃OH⁺ and the acid on the right is hexanoic acid. Hexanoic acid has the larger $K_a$, so it is the stronger acid, and the weaker acid is on the left: the reactants are favored. The constant is
+
+$$
+\frac{9.1 \times 10^{-7}}{1.3 \times 10^{-5}} = 0.070
+$$
+
+and about a fifth of the ions react.
+
+Neither ion is strong, so the reaction is not sure to go to completion, and with a constant of 0.070 it stops far short. And these two ions are not spectators: Na⁺ and Cl⁻ are.
+
+</div>
+</Check>
+
+## Reading the flask
+
+After the complete reaction, look at what is left. There are four answers, and each has its own way to the pH. A salt dissolved in water gets the same treatment.
+
+- **A strong acid or a strong base left over.** Its concentration in the total volume gives the pH.
+- **A weak acid alone or a weak base alone, an ion included.** An ICE table with $K_a$ or $K_b$ gives the pH.
+- **Both members of a conjugate pair.** $K_a$ times the ratio of moles gives $[\ce{H3O+}]$.
+- **Only ions from strong partners.** The solution is neutral.
+
+<KeyIdea>
+
+Once every complete reaction is over, say what the flask holds. That answer picks the method, and the numbers come after it.
+
+</KeyIdea>
+
+<Trap>
+
+Seven mistakes come up again and again on this topic:
+
+- **Treating a strong base or a strong acid as part of an equilibrium.** It is used up first, in a table of moles. An ICE table is for what is left.
+- **Comparing volumes when the moles decide.** Milliliters times molarity, every time.
+- **Dividing by the volume of one solution.** After mixing, every concentration uses the total volume.
+- **Calling equal moles "neutral".** A weak acid exactly neutralized by a strong base leaves a weak base, and the pH is above 7 at 25 °C. A weak base exactly neutralized leaves a weak acid.
+- **Using the acid's $K_a$ for its conjugate base.** The hexanoate ion needs $K_b = K_w / K_a$. The hydroxylammonium ion needs $K_a = K_w / K_b$.
+- **Stopping at the pOH.** When $x$ is $[\ce{OH-}]$, the pH is 14.00 minus the pOH at 25 °C.
+- **Treating Cl⁻, ClO₄⁻ or Na⁺ as an acid or a base.** Ions from strong acids and strong bases do not react with water.
+
+</Trap>
+
+<KeyPoints>
+
+- A strong acid or a strong base reacts to completion. Count and react in a table of moles first. Any equilibrium that is left comes after.
+- A strong acid with a strong base leaves whichever was in excess, and its concentration in the total volume gives the pH. Equal moles give pH 7.00 at 25 °C.
+- A weak acid with a strong base, in which HA and $\ce{OH-}$ give $\ce{A-}$ and water, leaves one of three things: HA and $\ce{A-}$ together (a buffer), $\ce{A-}$ alone (a weak base, pH above 7 at 25 °C) or leftover $\ce{OH-}$.
+- A buffer holds large amounts of both members of a conjugate pair. Its $[\ce{H3O+}]$ is $K_a$ times the moles of the acid form over the moles of the base form.
+- A weak base with a strong acid is the mirror image. Equal moles leave the conjugate acid alone, so the pH is below 7 at 25 °C.
+- A salt solution is acidic or basic when one of its ions is the conjugate of a weak acid or a weak base, and neutral when every ion comes from a strong one.
+- A weak acid and a weak base react to an equilibrium that favors the side with the weaker acid.
+
+</KeyPoints>
+
+<PracticeNext />

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 314" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Four rows on the baselines y = 48, 118, 188, 258 (70 apart). In each: the swapped atom centered at x = 40 in a ring of r = 14 whose center is 6 above the baseline (y = 42, 112, 182, 252); a bond x = 54 to 62; CH2COOH from x = 64; the name from x = 176; the pKa from x = 314. Above each halogen row, 28 above its baseline (y = 90, 160, 230), an arrow from x = 96 to its tip at x = 40: shaft 2, 4, 8 wide; head 10, 14, 20 tall and 9, 12, 16 long. Each arrow is at least 4 from its own ring and at least 23 from the ring of the row above, so it reads as belonging to the row under it. The long arrow at x = 412 runs y = 30 to 274. -->
+  <rect width="480" height="314" fill="#FDFCF9"/>
+
+  <!-- acetic acid: baseline y = 48, ring center y = 42. -->
+  <circle cx="40" cy="42" r="14" fill="none" stroke="#4F706C" stroke-width="2"/>
+  <path d="M54 42H62" stroke="#26231F" stroke-width="2"/>
+  <g fill="#26231F">
+    <text x="40" y="48" text-anchor="middle">H</text>
+    <text x="64" y="48">CH&#8322;COOH</text>
+    <text x="176" y="48">acetic</text>
+    <text x="314" y="48">pKa 4.76</text>
+  </g>
+  <!-- iodoacetic acid: baseline y = 118, ring center y = 112. -->
+  <circle cx="40" cy="112" r="14" fill="none" stroke="#4F706C" stroke-width="2"/>
+  <path d="M54 112H62" stroke="#26231F" stroke-width="2"/>
+  <g fill="#26231F">
+    <text x="40" y="118" text-anchor="middle">I</text>
+    <text x="64" y="118">CH&#8322;COOH</text>
+    <text x="176" y="118">iodoacetic</text>
+    <text x="314" y="118">pKa 3.18</text>
+  </g>
+  <path d="M96 90H48" stroke="#4F706C" stroke-width="2"/>
+  <path d="M40 90L49 85V95Z" fill="#4F706C"/>
+  <!-- bromoacetic acid: baseline y = 188, ring center y = 182. -->
+  <circle cx="40" cy="182" r="14" fill="none" stroke="#4F706C" stroke-width="2"/>
+  <path d="M54 182H62" stroke="#26231F" stroke-width="2"/>
+  <g fill="#26231F">
+    <text x="40" y="188" text-anchor="middle">Br</text>
+    <text x="64" y="188">CH&#8322;COOH</text>
+    <text x="176" y="188">bromoacetic</text>
+    <text x="314" y="188">pKa 2.90</text>
+  </g>
+  <path d="M96 160H51" stroke="#4F706C" stroke-width="4"/>
+  <path d="M40 160L52 153V167Z" fill="#4F706C"/>
+  <!-- fluoroacetic acid: baseline y = 258, ring center y = 252. -->
+  <circle cx="40" cy="252" r="14" fill="none" stroke="#4F706C" stroke-width="2"/>
+  <path d="M54 252H62" stroke="#26231F" stroke-width="2"/>
+  <g fill="#26231F">
+    <text x="40" y="258" text-anchor="middle">F</text>
+    <text x="64" y="258">CH&#8322;COOH</text>
+    <text x="176" y="258">fluoroacetic</text>
+    <text x="314" y="258">pKa 2.59</text>
+  </g>
+  <path d="M96 230H55" stroke="#4F706C" stroke-width="8"/>
+  <path d="M40 230L56 220V240Z" fill="#4F706C"/>
+
+  <!-- Stronger acid, downward. -->
+  <path d="M412 30V272" stroke="#6B655D" stroke-width="2"/>
+  <path d="M412 274L406 262H418Z" fill="#6B655D"/>
+  <text x="412" y="296" text-anchor="middle" fill="#6B655D">stronger acid</text>
+</svg>

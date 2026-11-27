@@ -828,6 +828,54 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   stroke-dasharray: 10 3 2 3;
 }
 
+/* The titration-curve explorer: a graph of pH over bars of what is in the
+   flask. Both drawings are 320 units wide with 12-unit text and are stacked
+   at every width (the shared .diagram-panels rules), so they need no layout
+   of their own. An indicator's range is a hatched band; the buffer region is
+   a broad untextured stroke along the curve, so the two differ by pattern as
+   well as by color. The curves and the buffer region are named in a key
+   under the graph (the shared ".molecule-key"), so no text stands inside the
+   plot, where the marker moves. */
+.titration-curve-band {
+  stroke: var(--muted);
+  stroke-width: 1;
+}
+.titration-curve-hatch-line {
+  stroke: var(--muted);
+  stroke-width: 1.5;
+  opacity: 0.6;
+}
+.titration-curve-buffer {
+  fill: none;
+  stroke: var(--u);
+  stroke-opacity: 0.35;
+  stroke-width: 12;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+/* The band's two colors, named in words right of the plot. */
+.titration-curve-band-name {
+  fill: var(--ink);
+  font-weight: 600;
+}
+.titration-curve-bar-name {
+  fill: var(--ink);
+}
+.titration-curve-bar-value {
+  fill: var(--ink);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.diagram .titration-curve-key {
+  margin-top: 0.3rem;
+  justify-content: center;
+}
+.diagram .titration-curve-key svg {
+  flex: none;
+  width: 2.25rem;
+  height: 0.875rem;
+}
+
 @media print {
   .diagram-controls {
     display: none;

@@ -1,0 +1,597 @@
+---
+topic: "8.5"
+minutes: 22
+summary: "How the pH changes through a titration, what each stretch of a weak acid's curve shows, why pH equals pKa halfway to the equivalence point, and how to read the curve of a weak base."
+---
+
+In topic 4.6 a flask of lactic acid stayed yellow while 15 mL of sodium hydroxide ran in, and then turned blue within a couple of drops. The color reports one moment. Put a pH probe in the same flask, write down the reading after every addition, and the whole run shows: a quick climb at the start, a long stretch where the pH hardly moves, and then a leap of more than six pH units between 14.5 mL and 15.5 mL.
+
+## The titration curve
+
+A **titration curve** is a graph of the pH of the flask, up the side, against the volume of titrant added, along the bottom. It is the titration of topic 4.6 with every moment recorded, not only the last.
+
+You already know how to find any point on it. Each portion of titrant reacts to completion with what is in the flask (topic 8.4). So every point on the curve is one of topic 8.4's flasks: count the moles, react, see what is left, find the pH.
+
+Where the equivalence point lies along the bottom is a matter of moles and the balanced equation, as in topic 4.6, and of nothing else. Take the flask of topic 4.6's diagram. It holds 20.0 mL of 0.150 M lactic acid:
+
+$$
+(20.0)(0.150) = 3.00\ \text{mmol}
+$$
+
+The reaction is 1 to 1, so the equivalence point needs 3.00 mmol of OH⁻. From 0.200 M NaOH that is
+
+$$
+\frac{3.00}{0.200} = 15.0\ \text{mL}
+$$
+
+On the curve, the equivalence point is in the middle of the steepest part of the rise.
+
+<Check
+  numeric="18.0"
+  unit="mL"
+  slips={{
+    "34.7": "Did you divide by 0.108 and multiply by 0.150? Find the millimoles of acid first, then divide by the molarity of the base.",
+    "9.0": "Did you stop at half of the acid? At the equivalence point the moles of OH⁻ added equal all of the moles of acid in the flask.",
+    "2.70": "That is the millimoles of acid in the flask. One more step turns it into a volume of the 0.150 M base.",
+    "0.0180": "That is the volume in liters. The question asks for milliliters.",
+  }}
+>
+25.0 mL of 0.108 M propanoic acid, HC₃H₅O₂, a weak acid with one acidic proton, is titrated with 0.150 M potassium hydroxide, KOH. What volume of the KOH solution, in mL, brings the titration to its equivalence point?
+
+<div slot="why">
+
+Find the millimoles of acid in the flask:
+
+$$
+(25.0)(0.108) = 2.70
+$$
+
+The reaction is 1 to 1, so the equivalence point needs 2.70 mmol of OH⁻. Divide by the base's 0.150 mmol in each mL:
+
+$$
+\frac{2.70}{0.150} = 18.0
+$$
+
+That is 18.0 mL. That the acid is weak changes nothing here: the moles decide.
+
+</div>
+</Check>
+
+## Four stretches of a weak acid's curve
+
+Write HA for the weak acid and A⁻ for its conjugate base; the titrant is a strong base. What the flask holds changes as the base goes in, and so does the method that gives the pH.
+
+| Stretch | The flask holds | What sets the pH |
+|---|---|---|
+| Before any base | HA alone | the weak acid's equilibrium (topic 8.3) |
+| Before the equivalence point | HA and A⁻ | $K_a$ × moles of HA ÷ moles of A⁻ (topic 8.4) |
+| At the equivalence point | A⁻ alone | the weak base's equilibrium, with $K_b$ (topic 8.4) |
+| After it | A⁻ and leftover OH⁻ | the leftover OH⁻ in the total volume |
+
+The curve is the methods of topics 8.3 and 8.4, used one after another. What a curve adds is the handover: the volume at which one method stops and the next takes over.
+
+## Halfway there: pH = pKa
+
+The **half-equivalence point** is the point at half of the equivalence volume. Half of the acid's moles have been turned into A⁻ and half are still HA, so the moles of HA and of A⁻ are equal. Topic 8.4's line, $K_a$ times the moles of HA divided by the moles of A⁻, then reads $[\ce{H3O+}] = K_a \times 1$:
+
+$$
+[\ce{H3O+}] = K_a \quad\text{so}\quad \text{pH} = \text{p}K_a
+$$
+
+This is not on the equation sheet, and it is worth knowing by heart, because it works backward. Read the pH at half of the equivalence volume and you have the acid's p$K_a$, and from it
+
+$$
+K_a = 10^{-\text{p}K_a}
+$$
+
+With a buret and a pH probe, this measures the $K_a$ of an acid whose value you do not know.
+
+Around the half-equivalence point the curve is nearly level. The flask holds comparable amounts of HA and A⁻, which makes it a buffer (topic 8.4), and this stretch of the curve is called the **buffer region**. Topic 8.8 explains why the pH moves so little there.
+
+Halve the equivalence volume, and only that. The volume of acid in the flask and the total volume of the mixture do not come into it.
+
+One caution. The result leans on topic 8.4's approximation, that the amounts in the flask are far larger than the $[\ce{H3O+}]$, which holds for lactic acid and propanoic acid here. For the made-up acid of the last section, whose first proton is a stronger acid than either, the reading halfway to its first rise comes out two hundredths of a pH unit above the p$K_a$.
+
+<KeyIdea>
+
+At the half-equivalence point of a weak acid, half of the acid has become its conjugate base, the two are equal in amount, and pH = p$K_a$. The volume there is half of the equivalence volume.
+
+</KeyIdea>
+
+<Check
+  answer={2}
+  misses={{
+    1: "Before any base, the flask holds the acid alone, nearly all of it un-ionized. A pKa is read where the acid and its conjugate base are equal in amount.",
+    3: "12.5 mL is half of the volume of acid in the flask. Which volume of base has turned half of the moles of acid into its conjugate base?",
+    4: "Find the volume of base that reacts with all of the acid, and ask what the flask holds there. A pKa is read where half of the acid has reacted.",
+  }}
+>
+25.0 mL of 0.108 M propanoic acid is titrated with 0.150 M KOH (the titration of the Check above), with a pH probe in the flask. Here are four of the readings.
+
+| KOH added (mL) | pH |
+|---|---|
+| 0.0, before any base is added | 2.92 |
+| 9.0 | 4.87 |
+| 12.5 | 5.23 |
+| 18.0 | 8.83 |
+
+What is the p$K_a$ of propanoic acid?
+
+- 2.92, the reading before any base is added
+- 4.87, the reading at 9.0 mL
+- 5.23, the reading at 12.5 mL
+- 8.83, the reading at 18.0 mL
+
+<div slot="why">
+
+The flask holds 2.70 mmol of acid, and the base brings 0.150 mmol in each mL:
+
+$$
+\begin{aligned}
+(25.0)(0.108) &= 2.70 \\[4pt]
+\frac{2.70}{0.150} &= 18.0
+\end{aligned}
+$$
+
+So the equivalence point is at 18.0 mL and the half-equivalence point is at 9.0 mL. There, 1.35 mmol of propanoic acid and 1.35 mmol of propanoate ion are in the flask, and pH = p$K_a$ = 4.87.
+
+Before any base the flask holds the acid alone, and 2.92 is the pH of a weak acid solution, not a p$K_a$. 12.5 mL is half of the 25.0 mL of acid, which has nothing to do with the moles. At 18.0 mL all of the acid has reacted, and 8.83 is the pH of a solution of the propanoate ion.
+
+</div>
+</Check>
+
+## At the equivalence point: not pH 7
+
+The equivalence point is the point of equal moles (topic 4.6). Whether the flask is acidic, neutral or basic there is a different question. The pH there depends on what the flask holds, and for a weak acid titrated with a strong base it holds the conjugate base alone, a weak base. So the pH is above 7 at 25 °C.
+
+For a strong acid titrated with a strong base, the flask at the equivalence point holds water and spectator ions, and of the titrations in this unit, only then is the pH 7.00 at 25 °C.
+
+<Worked title="The equivalence point of lactic acid, by hand">
+
+20.0 mL of 0.150 M lactic acid, HC₃H₅O₃, is titrated with 0.200 M NaOH. The p$K_a$ of lactic acid is 3.86. What is the pH at the equivalence point, at 25 °C? Write HA for lactic acid and A⁻ for the lactate ion, C₃H₅O₃⁻.
+
+1. **Find the equivalence volume.** The flask holds 3.00 mmol of HA, which needs 3.00 mmol of OH⁻. The volumes are in mL.
+
+   $$
+   \begin{aligned}
+   (20.0)(0.150) &= 3.00 \\[4pt]
+   \frac{3.00}{0.200} &= 15.0
+   \end{aligned}
+   $$
+
+   The equivalence point is at 15.0 mL.
+
+2. **React to completion.** Every value is in mmol.
+
+   | | HA | OH⁻ | A⁻ |
+   |---|---|---|---|
+   | Before | 3.00 | 3.00 | 0 |
+   | Change | −3.00 | −3.00 | +3.00 |
+   | After | 0 | 0 | 3.00 |
+
+3. **Say what is left.** The lactate ion alone, a weak base. It takes protons from water.
+
+   $$
+   \begin{aligned}
+   &\ce{C3H5O3-(aq) + H2O(l) <=>} \\
+   &\quad \ce{HC3H5O3(aq) + OH-(aq)}
+   \end{aligned}
+   $$
+
+4. **Find its concentration in the total volume.** The flask now holds 20.0 + 15.0 = 35.0 mL.
+
+   $$
+   \begin{aligned}
+   [\ce{A-}] &= \frac{3.00}{35.0} \\
+   &= 0.0857\ \text{M}
+   \end{aligned}
+   $$
+
+5. **Find $K_b$.** The question gives the p$K_a$ of lactic acid, so undo the logarithm.
+
+   $$
+   \begin{aligned}
+   K_a &= 10^{-3.86} \\
+   &= 1.38 \times 10^{-4}
+   \end{aligned}
+   $$
+
+   For lactic acid and its own conjugate base, the lactate ion, $K_a \times K_b = K_w$, and $K_w$ is 1.0 × 10⁻¹⁴ at 25 °C.
+
+   $$
+   \begin{aligned}
+   K_b &= \frac{K_w}{K_a} \\
+   &= \frac{1.0 \times 10^{-14}}{10^{-3.86}} \\
+   &= 7.24 \times 10^{-11}
+   \end{aligned}
+   $$
+
+6. **Set up the table, with $x$ as $[\ce{OH-}]$.** Every value is in M.
+
+   | | A⁻ | HA | OH⁻ |
+   |---|---|---|---|
+   | I | 0.0857 | 0 | 0 |
+   | C | −x | +x | +x |
+   | E | 0.0857 − x | x | x |
+
+   Leave $x$ out beside 0.0857:
+
+   $$
+   \begin{aligned}
+   \frac{x^2}{0.0857} &= 7.24 \times 10^{-11} \\
+   x &= 2.49 \times 10^{-6}\ \text{M}
+   \end{aligned}
+   $$
+
+7. **Check the approximation.**
+
+   $$
+   \frac{2.49 \times 10^{-6}}{0.0857} \times 100\% = 0.0029\%
+   $$
+
+   That is far under 5 percent.
+
+8. **pOH first, then pH.** $x$ is $[\ce{OH-}]$.
+
+   $$
+   \begin{aligned}
+   \text{pOH} &= -\log(2.49 \times 10^{-6}) \\
+   &= 5.60
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   \text{pH} &= 14.00 - 5.60 \\
+   &= 8.40
+   \end{aligned}
+   $$
+
+</Worked>
+
+No sodium hydroxide is left over and no lactic acid is left over, and the flask is still basic, because of what the acid left behind. The explorer below shows the same 8.40.
+
+The diagram is the flask of topic 4.6's diagram, 20.0 mL of a 0.150 M acid titrated with 0.200 M sodium hydroxide, this time with its pH.
+
+<TitrationCurve />
+
+Do six things with it, and predict before each move.
+
+1. **Read the start.** Lactic acid, 0.0 mL: the flask holds 3.00 mmol of lactic acid and the pH is 2.35. For the careful reader: topic 8.3's shortcut gives $x$ = 4.55 × 10⁻³ M and pH 2.34, with a check of 3.0 percent. The explorer solves the equilibrium without any shortcut, so its pH can differ from one found by hand: by a hundredth here and at some settings in the buffer region, and by more in the first 2.5 mL, where little lactate ion has formed yet.
+
+2. **Predict the pH at the half-equivalence point, then go there.** At 7.5 mL you should see the two bars equal, 1.50 mmol each, and a pH of 3.86, the p$K_a$.
+
+3. **Cross the buffer region.** From 5.0 mL to 10.0 mL, a third of all the base the acid can take, the pH only goes from 3.56 to 4.16: a change of 0.60.
+
+4. **Predict the pH at the equivalence point, then go there.** At 15.0 mL the acid's bar is gone and the pH is 8.40, as the worked example found. One step before, at 14.5 mL, it was 5.32; one step after, at 15.5 mL, it is 11.45.
+
+5. **Switch to hydrobromic acid, a strong acid, and predict first what will stay the same.** The equivalence point is still at 15.0 mL, because the moles of acid are the same. Everything before it sits lower: you should see 0.82 at the start, 1.26 at 7.5 mL, 2.54 at 14.5 mL, and 7.00 at the equivalence point. Past it, the two curves are one curve: 11.45 at 15.5 mL for both acids, because by then the same leftover OH⁻ sets the pH in both flasks.
+
+6. **Lay an indicator over the curve.** Choose bromocresol green with lactic acid: its color starts to change at 6.96 mL and is not done until 14.58 mL, a change smeared over 7.6 mL of base and finished before the equivalence point. With hydrobromic acid the same indicator changes between 14.97 mL and 15.00 mL. Now try thymol blue: between 15.00 mL and 15.01 mL on both curves. (Thymol blue changes color twice, and the band on the graph is its second change, from yellow to blue.) An indicator is useful only if its color change falls on the steep part of the curve. Why each indicator changes where it does is topic 8.7.
+
+**Strong against weak.** Both acids reach the equivalence point at 15.0 mL. The volume comes from the moles of acid, and OH⁻ takes the proton off a weak acid's molecules too (topic 4.8). Strength shows up in three other places: where the curve starts, how high it runs before the equivalence point, and the pH at the equivalence point, 8.40 against 7.00 here. And a strong acid's curve has no half-equivalence reading to give a p$K_a$: at 7.5 mL the hydrobromic acid flask holds no conjugate pair, only leftover H₃O⁺.
+
+<Check
+  answer={3}
+  misses={{
+    1: "Equal concentrations do not make equal pH values. The two ions differ in Kb, and each Kb comes from the Ka of its own acid.",
+    2: "Used up does not mean neutral. Ask what each flask holds at the equivalence point and how that ion acts on water.",
+    4: "At the equivalence point the acid itself is gone. What does the flask hold there, and what decides how basic that ion is?",
+  }}
+>
+Suppose the explorer's flask held 20.0 mL of 0.150 M propanoic acid (p$K_a$ = 4.87) in place of the lactic acid (p$K_a$ = 3.86), titrated with the same 0.200 M NaOH. Both titrations reach the equivalence point at 15.0 mL. How do the pH values at the two equivalence points compare?
+
+- The same, and above 7, because both flasks hold 3.00 mmol of a weak base in 35.0 mL
+- Both 7.00, because the acid and the base have exactly used each other up
+- Higher for propanoic acid, because the propanoate ion is the stronger base
+- Higher for lactic acid, because lactic acid is the stronger of the two acids
+
+<div slot="why">
+
+At each equivalence point the flask holds 3.00 mmol of the acid's conjugate base in 35.0 mL, and nothing else that matters. The two ions are not equally strong bases. Propanoic acid has the higher p$K_a$, so it is the weaker acid, and the weaker acid has the stronger conjugate base (topic 4.8).
+
+In numbers: $K_b$ is 7.2 × 10⁻¹¹ for the lactate ion and 7.4 × 10⁻¹⁰ for the propanoate ion, about ten times larger, and the pH at the equivalence point is 8.90 for propanoic acid against 8.40 for lactic acid.
+
+</div>
+</Check>
+
+One more flask from the propanoic acid titration, this one past its equivalence point.
+
+<Check
+  numeric="12.11"
+  tolerance={0.18}
+  slips={{
+    "1.89": "That is the pOH. The ion left over is OH⁻, so one more step takes the pOH to the pH at 25 °C.",
+    "12.38": "Did you divide by 25.0 mL? The leftover OH⁻ is spread through the acid solution and all of the base added. Use the total volume.",
+    "12.44": "Did you divide by 22.0 mL? The leftover OH⁻ is spread through the acid solution and all of the base added. Use the total volume.",
+    "12.85": "Did you count all of the OH⁻ that was added? Most of it reacted with the acid. Only what is left over sets the pH.",
+    "13.18": "That is the pH of the KOH solution in the buret. In the flask, the leftover OH⁻ is diluted by everything else there.",
+    "8.81": "Did you use the Kb of the propanoate ion? Past the equivalence point OH⁻ is left over, and it swamps what the weak base adds.",
+  }}
+>
+In the titration of 25.0 mL of 0.108 M propanoic acid with 0.150 M KOH, what is the pH of the flask after 22.0 mL of the KOH solution has been added, at 25 °C? Give two decimal places.
+
+<div slot="why">
+
+The OH⁻ added, in mmol:
+
+$$
+(22.0)(0.150) = 3.30
+$$
+
+The acid was 2.70 mmol. Write HA for propanoic acid and A⁻ for the propanoate ion, and react to completion. Every value is in mmol.
+
+| | HA | OH⁻ | A⁻ |
+|---|---|---|---|
+| Before | 2.70 | 3.30 | 0 |
+| Change | −2.70 | −2.70 | +2.70 |
+| After | 0 | 0.60 | 2.70 |
+
+All of the acid has reacted and 0.60 mmol of OH⁻ is left over. The total volume is 25.0 + 22.0 = 47.0 mL.
+
+$$
+\begin{aligned}
+[\ce{OH-}] &= \frac{0.60}{47.0} \\
+&= 0.0128\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(0.0128) \\
+&= 1.89
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 1.89 \\
+&= 12.11
+\end{aligned}
+$$
+
+The propanoate ion is a weak base too, but what it adds is far too small to show beside the leftover OH⁻.
+
+</div>
+</Check>
+
+## A weak base titrated with a strong acid
+
+Turn the titration around: a weak base, B, in the flask and a strong acid in the buret. The flask starts basic, and each portion of acid turns some B into HB⁺ (topic 8.4):
+
+$$
+\begin{aligned}
+&\ce{B(aq) + H3O+(aq) ->} \\
+&\quad \ce{HB+(aq) + H2O(l)}
+\end{aligned}
+$$
+
+So the curve falls.
+
+It has the same four stretches, mirrored: B alone; B and HB⁺ together, a buffer region; HB⁺ alone at the equivalence point; leftover H₃O⁺ after it.
+
+At the half-equivalence point the moles of B and HB⁺ are equal, so $[\ce{H3O+}]$ equals the $K_a$ of HB⁺, and the pH equals the p$K_a$ of the conjugate acid, HB⁺. It is the conjugate acid's p$K_a$ that is read from the curve, never a p$K_b$.
+
+At the equivalence point the flask holds HB⁺ alone, a weak acid, so the pH is below 7 at 25 °C.
+
+<Worked title="Methylamine with nitric acid">
+
+30.0 mL of 0.100 M methylamine, CH₃NH₂, a weak base, is titrated with 0.150 M nitric acid, HNO₃, a strong acid. The p$K_a$ of the methylammonium ion, CH₃NH₃⁺, is 10.64. Find (a) the equivalence volume, (b) the pH at the half-equivalence point and (c) the pH at the equivalence point, at 25 °C.
+
+1. **(a) Moles decide the volume.** The flask holds 3.00 mmol of CH₃NH₂, which needs 3.00 mmol of H₃O⁺. The volumes are in mL.
+
+   $$
+   \begin{aligned}
+   (30.0)(0.100) &= 3.00 \\[4pt]
+   \frac{3.00}{0.150} &= 20.0
+   \end{aligned}
+   $$
+
+   The equivalence point is at 20.0 mL.
+
+2. **(b) Halfway is 10.0 mL.** By then 1.50 mmol of CH₃NH₂ has become CH₃NH₃⁺ and 1.50 mmol is left. Equal amounts of the pair, so pH = p$K_a$ of CH₃NH₃⁺ = 10.64.
+
+3. **(c) React to completion.** At 20.0 mL, with every value in mmol:
+
+   | | CH₃NH₂ | H₃O⁺ | CH₃NH₃⁺ |
+   |---|---|---|---|
+   | Before | 3.00 | 3.00 | 0 |
+   | Change | −3.00 | −3.00 | +3.00 |
+   | After | 0 | 0 | 3.00 |
+
+   The nitrate ion, NO₃⁻, is a spectator.
+
+4. **Say what is left.** The methylammonium ion alone, a weak acid.
+
+   $$
+   \begin{aligned}
+   &\ce{CH3NH3+(aq) + H2O(l) <=>} \\
+   &\quad \ce{CH3NH2(aq) + H3O+(aq)}
+   \end{aligned}
+   $$
+
+5. **Concentration and constant.** The total volume is 30.0 + 20.0 = 50.0 mL.
+
+   $$
+   \begin{aligned}
+   [\ce{CH3NH3+}] &= \frac{3.00}{50.0} \\
+   &= 0.0600\ \text{M}
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   K_a &= 10^{-10.64} \\
+   &= 2.29 \times 10^{-11}
+   \end{aligned}
+   $$
+
+6. **Set up the table, with $x$ as $[\ce{H3O+}]$.** Write HB⁺ for CH₃NH₃⁺ and B for CH₃NH₂. Every value is in M.
+
+   | | HB⁺ | B | H₃O⁺ |
+   |---|---|---|---|
+   | I | 0.0600 | 0 | 0 |
+   | C | −x | +x | +x |
+   | E | 0.0600 − x | x | x |
+
+   Leave $x$ out beside 0.0600:
+
+   $$
+   \begin{aligned}
+   \frac{x^2}{0.0600} &= 2.29 \times 10^{-11} \\
+   x &= 1.17 \times 10^{-6}\ \text{M}
+   \end{aligned}
+   $$
+
+7. **Check the approximation.**
+
+   $$
+   \frac{1.17 \times 10^{-6}}{0.0600} \times 100\% = 0.0020\%
+   $$
+
+   That is far under 5 percent.
+
+8. **Take the pH.** Here $x$ is $[\ce{H3O+}]$.
+
+   $$
+   \begin{aligned}
+   \text{pH} &= -\log(1.17 \times 10^{-6}) \\
+   &= 5.93
+   \end{aligned}
+   $$
+
+   Below 7, with no nitric acid left over: the conjugate acid did it.
+
+</Worked>
+
+Here is the whole curve of that titration.
+
+<Figure
+  src="/figures/8-5-weak-base-curve.svg"
+  alt="A titration curve: pH from 0 to 14 against the volume of nitric acid added, from 0 to 30 mL, for a methylamine solution. The curve starts near pH 11.8 and falls gently. A hollow circle at 10 mL is labeled halfway, pH equals pKa equals 10.64. The curve drops steeply at 20 mL, where a diamond is labeled equivalence, pH 5.93, below a dashed line at pH 7. After that it levels off near pH 2."
+  caption="A weak base titrated with a strong acid. The curve falls, the pH halfway to the equivalence point is the pKa of the conjugate acid, and the equivalence point is below pH 7."
+/>
+
+<Check
+  answer={4}
+  misses={{
+    1: "A gently sloping stretch shows that something weak is in the flask. Look at which way the pH moves as the titrant goes in.",
+    2: "A pKa is read where half of the substance in the flask has reacted. Is that the point where all of it has reacted?",
+    3: "At the equivalence point neither reactant is left over. Ask what the flask does hold there and how that ion acts on water.",
+  }}
+>
+A pH probe follows a titration at 25 °C. The flask holds 40.0 mL of a 0.0900 M solution of one substance, and the buret holds a 0.150 M solution of another. The reading starts at 10.93, is 8.90 after 12.0 mL, falls steeply through 5.07 at 24.0 mL, and levels off near 1.9 by 30.0 mL. Which statement fits these readings?
+
+- The flask held a weak acid, because the curve has a gently sloping stretch before its steep part
+- The equivalence point is at 12.0 mL, because the reading there equals a pKa
+- The pH is below 7 at the equivalence point because strong acid is left over there
+- The flask held a weak base, and the pKa of its conjugate acid is 8.90
+
+<div slot="why">
+
+The pH falls as the titrant goes in, so an acid is being added to a base. The steep fall at 24.0 mL is the equivalence point. The flask held 3.60 mmol, and 24.0 mL of the 0.150 M acid brings 3.60 mmol of H₃O⁺:
+
+$$
+\begin{aligned}
+(40.0)(0.0900) &= 3.60 \\
+(24.0)(0.150) &= 3.60
+\end{aligned}
+$$
+
+Half of that volume is 12.0 mL, where the base and its conjugate acid are equal in amount, so the reading there, 8.90, is the p$K_a$ of the conjugate acid.
+
+At the equivalence point nothing is left over: the flask holds the conjugate acid alone, a weak acid, and that is why the reading is 5.07 and not 7.00. A strong base at 0.0900 M would have started at pH 12.95 and passed through 7.00 at its equivalence point. The leveling near 1.9 is leftover H₃O⁺.
+
+</div>
+</Check>
+
+## A curve with two rises
+
+Some acids have two acidic protons, and a strong base takes them one after the other. To see the pattern at its plainest, this section uses an acid made up for the purpose. Call it H₂A, and give it p$K_{a1}$ = 3.00 and p$K_{a2}$ = 8.00. H₂A is not a real substance: real acids with two acidic protons behave in the same way, with less tidy numbers.
+
+$$
+\begin{aligned}
+&\ce{H2A(aq) + OH-(aq) ->} \\
+&\quad \ce{HA-(aq) + H2O(l)}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\ce{HA-(aq) + OH-(aq) ->} \\
+&\quad \ce{A^2-(aq) + H2O(l)}
+\end{aligned}
+$$
+
+The first proton is far more acidic than the second: the two p$K_a$ values are five units apart. So essentially every molecule has lost its first proton before the second ones start to go. The curve shows it: two steep rises, one for each proton.
+
+Here is the curve for 20.0 mL of 0.120 M H₂A, titrated with 0.200 M NaOH.
+
+<Figure
+  src="/figures/8-5-two-rises.svg"
+  alt="A titration curve for H₂A, an acid with two acidic protons, titrated with sodium hydroxide: pH from 0 to 14 against volume added, from 0 to 36 mL. The curve starts near pH 2 and has two steep rises, at 12 mL and at 24 mL, each marked by a dashed line. The stretch before the first rise is labeled H₂A and HA⁻, the stretch between the rises HA⁻ and A²⁻, and the stretch after the second rise A²⁻ and OH⁻. A circle on the curve halfway to the first rise, at 6 mL, is labeled pH 3.02, and a circle halfway between the rises, at 18 mL, is labeled pH 8.00."
+  caption="Two rises, so two acidic protons. Each stretch is labeled with the forms of the acid that the flask holds there, and the pH at each halfway point gives one of the acid's two pKa values, 3.00 and 8.00 (the first to within 0.02)."
+/>
+
+Read such a curve in four moves:
+
+- **Count the rises.** Each rise marks one proton removed from every molecule. Two rises: two acidic protons.
+- **Read the volumes.** Each proton takes the same moles of OH⁻. The flask holds (20.0)(0.120) = 2.40 mmol of acid, so the first rise is at 2.40 ÷ 0.200 = 12.0 mL and the second at twice that, 24.0 mL.
+- **Name what the flask holds.** Before the first rise: H₂A and HA⁻. At the first rise: nearly all HA⁻. Between the rises: HA⁻ and A²⁻. At the second rise: nearly all A²⁻. After it: A²⁻ and leftover OH⁻. Within a stretch the main form changes at the halfway point: before the first rise it is H₂A until 6.0 mL and HA⁻ after that, and between the rises it is HA⁻ until 18.0 mL and A²⁻ after that.
+- **Find a p$K_a$ at each halfway point.** Halfway to the first rise, at 6.0 mL, H₂A and HA⁻ are very nearly equal in amount, and the pH there is very nearly p$K_{a1}$: the curve reads 3.02, two hundredths above 3.00 for the reason given in "Halfway there". Halfway between the two rises, at 18.0 mL, HA⁻ and A²⁻ are equal in amount, and the pH there is p$K_{a2}$: the curve reads 8.00. So each halfway reading gives one p$K_a$, the first reading the first proton's and the second reading the second proton's.
+
+**Beyond the exam:** the concentration of each form of the acid at a point on a curve like this can be calculated, but the exam asks you only to read the curve: how many protons, which forms, which p$K_a$.
+
+<Check
+  answer={1}
+  misses={{
+    2: "At 32.0 mL the second proton has left every molecule, so the flask holds nearly all one form. What must the flask hold for the pH to equal a pKa?",
+    3: "Find the millimoles of OH⁻ that each proton takes. By 20.0 mL, how much of the second proton has been removed, and how much HA⁻ is left?",
+    4: "H₂A has two acidic protons, and OH⁻ takes them one after the other. How much OH⁻ does each of them need?",
+  }}
+>
+The acid H₂A of the figure (p$K_{a1}$ = 3.00, p$K_{a2}$ = 8.00) is titrated again. This time the flask holds 1.60 mmol of it, and the buret holds 0.100 M NaOH. Which statement about this titration is right?
+
+- The pH equals pKa2 at 24.0 mL, where HA⁻ and A²⁻ are equal in amount
+- The pH equals pKa2 at 32.0 mL, where the second proton has left every molecule
+- At 20.0 mL the main form of the acid is A²⁻, because the first rise is already past
+- The curve has a single rise, at 16.0 mL, because 1.60 mmol of acid takes 1.60 mmol of OH⁻
+
+<div slot="why">
+
+H₂A has two acidic protons, so its curve has two rises. Each proton takes 1.60 mmol of OH⁻, which is 16.0 mL of the 0.100 M base, so the rises are at 16.0 mL and 32.0 mL.
+
+Between them the flask holds HA⁻ and A²⁻. Halfway between them, at 24.0 mL, the two are equal in amount, and the reading there is p$K_{a2}$, 8.00. At 32.0 mL the second proton has left every molecule: the flask holds nearly all A²⁻, and the curve is in the middle of its second rise, far above 8.
+
+At 20.0 mL, (20.0)(0.100) = 2.00 mmol of OH⁻ has gone in: 1.60 mmol took the first proton and only 0.40 mmol has gone to the second. So 1.20 mmol of HA⁻ is left beside 0.40 mmol of A²⁻, and HA⁻ is still the main form. (The reading that gives p$K_{a1}$ is the one halfway to the first rise, at 8.0 mL.)
+
+</div>
+</Check>
+
+<Trap>
+
+Eight mistakes come up again and again on this topic:
+
+- **Taking pH 7 for every equivalence point.** Of the titrations in this unit, it is 7.00 at 25 °C only for a strong acid with a strong base. A weak acid ends above 7 and a weak base below.
+- **Halving the wrong volume.** Half-equivalence is the middle of the stretch from zero to the equivalence volume. The acid's volume in the flask, or the total volume, is the wrong thing to halve.
+- **Expecting a weaker acid to need less base.** The moles of acid and the balanced equation set the volume. Strength changes the pH before and at the equivalence point.
+- **Dividing by the volume of the flask alone.** Every concentration after mixing uses the total volume.
+- **Reading a p$K_a$ off a strong acid's curve.** There is no conjugate pair in the flask to be equal.
+- **Using a p$K_b$ at a weak base's half-equivalence point.** The reading there is the p$K_a$ of the conjugate acid.
+- **Reading a p$K_a$ at a rise.** On a curve with two rises, each p$K_a$ is read halfway to its rise, where two forms are equal in amount. At a rise the flask holds nearly all one form.
+- **Stopping at the pOH** past the equivalence point of an acid. The leftover ion is OH⁻, and the pH takes one more step.
+
+</Trap>
+
+<KeyPoints>
+
+- A titration curve is pH against volume of titrant added, and every point on it is a flask of topic 8.4: react in moles, see what is left, find the pH.
+- The equivalence volume comes from moles and the balanced equation, the same for a strong acid and a weak one.
+- A weak acid's curve has four stretches, set in turn by the weak acid alone, by both members of the pair, by the conjugate base alone and by leftover OH⁻.
+- At the half-equivalence point, at half of the equivalence volume, the two members of the pair are equal in amount and pH = p$K_a$, which is how a p$K_a$ is read from a curve.
+- At the equivalence point the pH is above 7 for a weak acid titrated with a strong base, below 7 for a weak base titrated with a strong acid, and, of the titrations in this unit, 7.00 at 25 °C only when both are strong.
+- A curve with two rises belongs to an acid with two acidic protons. The second rise comes at twice the volume of the first, the pH halfway to the first rise is the first p$K_a$, and the pH halfway between the rises is the second.
+
+</KeyPoints>
+
+<PracticeNext />

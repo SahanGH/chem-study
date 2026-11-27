@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 330" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Five bars, each from x = 106 to x = 386 (280 wide) and 30 tall, with top edges at y = 70, 118, 166, 214 and 262. The left, hatched part of each bar is the acid form, HA; the right, plain part is the base form. Hatched width = 280 × the fraction in the acid form: 280 × 100/101 = 277.2, 280 × 10/11 = 254.5, 280 × 1/2 = 140.0, 280 × 1/11 = 25.5, 280 × 1/101 = 2.8. So the two parts meet at x = 383.2, 360.5, 246.0, 131.5 and 108.8. Labels are centered on each bar: baseline = top edge + 21. -->
+  <defs>
+    <pattern id="hatch-8-7-form" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#E3EAE9"/>
+      <path d="M0 0V6" fill="none" stroke="#4F706C" stroke-width="1.8"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="330" fill="#FDFCF9"/>
+
+  <text x="96" y="52" text-anchor="end" fill="#26231F">pH =</text>
+  <text x="106" y="52" fill="#26231F">acid form, HA</text>
+  <text x="396" y="52" fill="#26231F">A⁻ : HA</text>
+
+  <!-- pH = pKa − 2: 100 parts in 101 in the acid form -->
+  <rect x="106" y="70" width="277.2" height="30" fill="url(#hatch-8-7-form)"/>
+  <rect x="106" y="70" width="280" height="30" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <line x1="383.2" y1="70" x2="383.2" y2="100" stroke="#26231F" stroke-width="1.5"/>
+  <text x="96" y="91" text-anchor="end" fill="#26231F">pKa − 2</text>
+  <text x="396" y="91" fill="#26231F">1 : 100</text>
+
+  <!-- pH = pKa − 1: 10 parts in 11 -->
+  <rect x="106" y="118" width="254.5" height="30" fill="url(#hatch-8-7-form)"/>
+  <rect x="106" y="118" width="280" height="30" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <line x1="360.5" y1="118" x2="360.5" y2="148" stroke="#26231F" stroke-width="1.5"/>
+  <text x="96" y="139" text-anchor="end" fill="#26231F">pKa − 1</text>
+  <text x="396" y="139" fill="#26231F">1 : 10</text>
+
+  <!-- pH = pKa: 1 part in 2 -->
+  <rect x="106" y="166" width="140" height="30" fill="url(#hatch-8-7-form)"/>
+  <rect x="106" y="166" width="280" height="30" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <line x1="246" y1="166" x2="246" y2="196" stroke="#26231F" stroke-width="1.5"/>
+  <text x="96" y="187" text-anchor="end" fill="#26231F">pKa</text>
+  <text x="396" y="187" fill="#26231F">1 : 1</text>
+
+  <!-- pH = pKa + 1: 1 part in 11 -->
+  <rect x="106" y="214" width="25.5" height="30" fill="url(#hatch-8-7-form)"/>
+  <rect x="106" y="214" width="280" height="30" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <line x1="131.5" y1="214" x2="131.5" y2="244" stroke="#26231F" stroke-width="1.5"/>
+  <text x="96" y="235" text-anchor="end" fill="#26231F">pKa + 1</text>
+  <text x="396" y="235" fill="#26231F">10 : 1</text>
+
+  <!-- pH = pKa + 2: 1 part in 101 -->
+  <rect x="106" y="262" width="2.8" height="30" fill="url(#hatch-8-7-form)"/>
+  <rect x="106" y="262" width="280" height="30" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <line x1="108.8" y1="262" x2="108.8" y2="292" stroke="#26231F" stroke-width="1.5"/>
+  <text x="96" y="283" text-anchor="end" fill="#26231F">pKa + 2</text>
+  <text x="396" y="283" fill="#26231F">100 : 1</text>
+
+  <text x="386" y="316" text-anchor="end" fill="#26231F">base form, A⁻</text>
+</svg>
