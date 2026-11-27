@@ -4,7 +4,7 @@ minutes: 22
 summary: "How the standard free energy change of a reaction fixes its equilibrium constant, how to turn one into the other, and why a positive value still leaves some product."
 ---
 
-Topic 7.5 said that at 25 °C the equilibrium constant for carbon dioxide falling apart into carbon monoxide and oxygen is about 10⁻⁹⁰, so small that you would need tens of millions of liters of the gas to expect to find one CO molecule. Nobody found that number by counting molecules. It was worked out from a table of free energies, with one equation. This lesson is about that equation.
+Topic 7.5 gave the equilibrium constant for carbon dioxide falling apart into carbon monoxide and oxygen at 25 °C as about 10⁻⁹⁰, which says that the gas at equilibrium is, for every practical purpose, all carbon dioxide. Nobody found that number by counting molecules. It was worked out from a table of free energies, with one equation. This lesson is about that equation.
 
 ## Which side of 1
 
@@ -22,7 +22,7 @@ The other two cases go the same way. If ΔG° is above zero, the standard mixtur
 
 In topic 7.5's terms: with $K$ above 1 the top of the $K$ fraction, the products, is the larger at equilibrium, and with $K$ below 1 the bottom is.
 
-So "thermodynamically favored" and "$K$ is greater than 1" are one statement. This is the first thing to check in any calculation: the sign of ΔG° tells you the side of 1 that $K$ must land on.
+So ΔG° below zero and $K$ above 1 always go together. Make that your first check in any calculation: the sign of ΔG° tells you whether $K$ must come out above or below 1.
 
 <KeyIdea>
 
@@ -50,7 +50,7 @@ $$
 
 This form is not on the equation sheet.
 
-**The unit trap of this topic.** $R$ is in joules, so $RT$ is in joules per mole, and ΔG° must be in joules per mole too. But tables and topic 9.3 give ΔG° in kilojoules, and nothing on the equation sheet reminds you. Convert on a line of its own, every time: into joules before ΔG° goes into the exponent, and back into kilojoules after it comes out of $-RT\ln K$.
+**Watch the units here.** $R$ is in joules, so $RT$ is in joules per mole, and ΔG° must be in joules per mole too. But tables and topic 9.3 give ΔG° in kilojoules, and nothing on the equation sheet reminds you. Whenever this equation turns up, give the conversion a line of its own: into joules before ΔG° goes into the exponent, and back into kilojoules after it comes out of $-RT\ln K$.
 
 **Which K.** The $K$ of this equation is the one written with pressures in atm for gases ($K_p$) and molarities for solutes ($K_c$), as topic 7.3 writes them, because those are the standard states that ΔG° is defined for. A question says which one it is. $K$ has no unit.
 
@@ -340,7 +340,7 @@ The reaction is made up, and for a real reaction ΔG° itself changes with tempe
 
 ## A positive ΔG° is not a zero
 
-The explorer at +5 kJ/mol held 12 particles of B in every 100, and the iodine jar holds vapor. "Thermodynamically unfavored" does not mean that no product forms. It means that $K$ is below 1: starting from reactants alone, the reaction runs forward until $Q$ reaches $K$, and the net change ends there, with the top of the $K$ fraction smaller than the bottom.
+The explorer at +5 kJ/mol held 12 particles of B in every 100, and the iodine jar holds vapor. Even a reaction that is "thermodynamically unfavored" makes some product. A flask of reactants alone has $Q = 0$, which is below any $K$, so the mixture runs forward until $Q$ climbs to $K$. Since $K$ is below 1, it stops with the top of the $K$ fraction smaller than the bottom.
 
 How much smaller depends on the size of ΔG° beside $RT$. At +5 kJ/mol the product is about an eighth of the mixture. At +60 kJ/mol it is a trace too small to find: 60 ÷ 5.7 is between 10 and 11 factors of ten, so $K$ is near 10⁻¹¹.
 
@@ -624,11 +624,11 @@ At 298 K this $K_p$ was 4 × 10¹⁷. At 1,000 K it is 6.5, small enough that th
 
 Eight mistakes cost points on this topic:
 
-- **Leaving ΔG° in kilojoules inside $e^{-\Delta G^\circ/RT}$.** $R$ is in joules. With kilojoules the exponent comes out a thousand times too small and $K$ lands next to 1, whatever the reaction.
+- **Leaving ΔG° in kilojoules inside $e^{-\Delta G^\circ/RT}$.** $R$ is in joules. In kilojoules the exponent is only a thousandth of what it should be, so $K$ lands next to 1 for any ordinary reaction.
 - **Reporting the joules that $-RT\ln K$ gives as kilojoules.** Convert on a line of its own.
-- **Losing the sign.** Decide from the sign of ΔG° which side of 1 the $K$ must be on before you compute, and from $K$ which sign ΔG° must have.
+- **Losing the sign.** Before you compute, say whether $K$ should come out above or below 1 for the ΔG° you were given, and whether ΔG° should be positive or negative for the $K$ you were given. Then hold your answer to that.
 - **Using the log key for ln,** or reading $\ln K$ as the power of ten.
-- **Saying ΔG° = 0 at equilibrium.** ΔG° is fixed for an equation at a temperature. It is zero only if $K = 1$.
+- **Putting ΔG° = 0 on a mixture that has reached equilibrium.** ΔG° stays where the equation and the temperature put it, and it is zero only for a reaction whose $K$ is exactly 1.
 - **Reading a positive ΔG° as "no reaction".** It means $K$ below 1: some product forms, and how much depends on the size of ΔG° beside $RT$.
 - **Reading a negative ΔG° as "goes to completion" or as "fast".** $K$ is never infinite, and speed is topic 9.4's subject.
 - **Using the 298 K value of ΔG° at another temperature,** or 298 in $RT$ when $K$ is wanted at another temperature.
