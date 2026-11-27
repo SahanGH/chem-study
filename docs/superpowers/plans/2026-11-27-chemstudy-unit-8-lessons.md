@@ -2138,7 +2138,7 @@ No atomic mass is used. Propanoic acid's p$K_a$ is given as 4.87 here and in les
 
 Branch: `topic/unit-8-buffers-and-solubility`, from `topic/unit-8-reactions-and-titrations`.
 
-> **As carried out.** The buffer explorer on Opus, four writers on Fable, then the same checks. One sentence of lesson 8.9 was true only for a rise in the ratio and was changed; no other fact-check found an error. With all eleven lessons in, the check-feedback data file holds 67 Checks, the sweep tried 238 wrong answers and every one showed its message, and Unit 8 went on `BALANCED_UNITS`. Task 12's list for the teacher is the "As built" section of the design.
+> **As carried out.** The buffer explorer on Opus, four writers on Fable, then the same checks. One sentence of lesson 8.9 was true only for a rise in the ratio and was changed; no other fact-check found an error. The originality check of the prose had 15 passages reworded, and two headings changed with them (lesson 8.10's first, now "One pH, two sizes of buffer", and lesson 8.11's "Which anions react with acid"). With all eleven lessons in, the check-feedback data file holds 67 Checks, the sweep tried 238 wrong answers and every one showed its message, and Unit 8 went on `BALANCED_UNITS`. Task 12's list for the teacher is the "As built" section of the design.
 
 Lesson 8.10's brief holds the "Diagram data" of the buffer explorer. With all eleven lessons in, Unit 8 goes on `BALANCED_UNITS`, and the last task closes the unit out.
 

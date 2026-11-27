@@ -6,7 +6,7 @@ summary: "Why two buffers with the same pH can take very different amounts of ac
 
 Bacteria growing in a flask of sugary broth give off acids as they feed. Microbiologists put a buffer in the broth to hold its pH, and for a while it does. Then, if the buffer was made too weak, the pH falls quickly and the culture stops growing. The buffer did not stop being a buffer by accident: it ran out. How much acid or base can a buffer take, and what decides that?
 
-## Same pH, different staying power
+## One pH, two sizes of buffer
 
 A buffer has two members. Its acid form reacts with added OH⁻, and its base form reacts with added H₃O⁺ (topic 8.8). Its pH follows the ratio of the two forms (topic 8.9):
 
@@ -16,7 +16,7 @@ $$
 
 Both forms are in the same solution, so the ratio of their concentrations is the ratio of their moles (topic 8.9).
 
-Look at what that equation holds. The amounts of the two forms are in it only as a ratio. A liter holding 0.20 mol of each form and a liter holding 0.020 mol of each have the same ratio, 1, and the same pH, which is the p$K_a$. A pH meter cannot tell them apart.
+Look at what that equation holds. The amounts of the two forms are in it only as a ratio. A liter holding 0.20 mol of each form and a liter holding 0.020 mol of each have the same ratio, 1, and the same pH, which is the p$K_a$. Put a pH meter in each and the two readings match.
 
 An addition can. Each mole of OH⁻ that goes in turns one mole of acid form into base form (topic 8.8). Take 0.015 mol of OH⁻. From 0.20 mol of acid form it removes 7.5 percent, less than a tenth, and the ratio barely moves. From 0.020 mol it removes 75 percent, three-quarters, and the ratio moves a long way.
 
@@ -26,7 +26,7 @@ Add water to a buffer and its pH hardly changes, because both forms are diluted 
 
 <KeyIdea>
 
-The ratio of base form to acid form sets a buffer's pH. The amounts of the two forms set its capacity. More of both at the same ratio means the same pH, and more acid or base taken up before the pH changes much.
+A buffer's pH follows the ratio of base form to acid form. How much it can take is a matter of how many moles of the two forms it holds. More of both at the same ratio means the same pH, and more acid or base taken up before the pH changes much.
 
 </KeyIdea>
 
@@ -223,17 +223,13 @@ The acid form is the conjugate acid of Tris, HB⁺. OH⁻ reacts with it to comp
 
 A buffer works only while both members are there. Keep adding strong base and the acid form is used up, mole for mole, until none is left. From then on, added OH⁻ has nothing to react with, and it stays in the solution as OH⁻.
 
-What the solution is depends on how far you have gone. This is the list of topic 8.4, met again:
-
-- **Less OH⁻ than acid form.** Both members remain, the solution is a buffer, and the ratio sets the pH.
-- **Exactly as much OH⁻ as acid form.** Only the base form is left. The solution is a weak base in water, and at 25 °C its pH is above 7 (topic 8.4).
-- **More OH⁻ than acid form.** The OH⁻ left over sets the pH, and the weak base beside it hardly counts.
+What the solution is depends on how far you have gone, and topic 8.4 sorted the cases by comparing the moles of OH⁻ with the moles of acid form. With less OH⁻ than acid form, both members remain and the ratio sets the pH. With exactly as much, only the base form is left, a weak base in water, and at 25 °C its pH is above 7. With more, the OH⁻ left over sets the pH, and the weak base beside it hardly counts.
 
 The same happens on the other side: add more H₃O⁺ than there is base form, and the H₃O⁺ left over sets the pH.
 
 The pH does not wait for the last mole. As a member gets scarce, the ratio runs away from 1. Once there is ten times as much base form as acid form, the pH is already a full unit above the p$K_a$ (topic 8.7), and each further millimole of base moves it more than the one before. That is why capacity is defined by a sharp change in pH, and not by the last mole.
 
-So a buffer does not keep the pH constant. It resists a change, by an amount that depends on how much of each member it holds, and then it is used up.
+So the pH of a buffer is never quite fixed. How well it resists a change depends on how much of each member it holds, and when one member is gone the resistance goes with it.
 
 <Check
   answer={4}
@@ -426,16 +422,16 @@ Six mistakes come up again and again on this topic:
 
 - **Reading capacity from the pH.** Two buffers with the same pH can differ tenfold in capacity. Count the moles of each form.
 - **Saying that extra acid form helps against added acid.** The acid form meets added base; the base form meets added acid.
-- **Putting the added strong base into an ICE table.** It reacts to completion first, in a table of moles. The equilibrium comes after.
+- **Letting the added hydroxide join an equilibrium table.** It reacts with the acid form until one of them runs out, and that is counted in moles. Only what is left goes into an equation with a $K$ or a logarithm.
 - **Using the Henderson–Hasselbalch equation after a member has run out.** With no acid form left there is no ratio; what is left over sets the pH.
-- **Believing a buffer holds its pH constant.** It resists a change until one member is nearly used up.
+- **Believing a buffer holds its pH constant.** The pH moves a little with every addition, and it moves a lot once one member is nearly gone.
 - **Choosing a pair by its name and not by its p$K_a$.** The p$K_a$ must be within about one unit of the wanted pH, or one member will be scarce.
 
 </Trap>
 
 <KeyPoints>
 
-- The ratio of base form to acid form sets a buffer's pH, and the amounts of the two forms set its buffer capacity: the amount of strong acid or strong base it can take before its pH changes sharply.
+- A buffer's pH follows the ratio of base form to acid form. Its buffer capacity, the amount of strong acid or strong base it can take before its pH changes sharply, follows the amounts of the two forms.
 - Two buffers with the same ratio have the same pH, and the one holding more moles of both forms has the larger capacity.
 - Added base is met by the acid form and added acid by the base form, so a buffer with more acid form has more capacity for base, and one with more base form has more capacity for acid.
 - An added strong acid or base reacts completely first, in moles. When it is more than the member it reacts with, that member runs out and the strong acid or base left over sets the pH.
