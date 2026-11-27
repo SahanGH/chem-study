@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 420" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Two drawings of a small body (6 filled particles, shaded) touching a large body (10 open particles) along the wall at x = 210. Each particle has one streak whose length stands for its kinetic energy. Before: small body 24, 28, 32, 32, 24, 28 (total 168, average 28); large body 8, 12, 16, 8, 12, 16, 8, 12, 16, 12 (total 120, average 12). At thermal equilibrium: small body 14, 18, 22, 22, 14, 18 (total 108, average 18); large body 14, 18, 22, 14, 18, 22, 14, 18, 22, 18 (total 180, average 18). The total is 288 in both drawings. Streak ends are computed; none touches a wall, a particle or another streak. -->
+  <rect width="480" height="420" fill="#FDFCF9"/>
+
+  <text x="60" y="30" fill="#26231F" font-weight="600">Before</text>
+  <rect x="60" y="45" width="150" height="120" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="210" y="45" width="210" height="120" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <line x1="85.0" y1="86.0" x2="85.0" y2="110.0" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="130.8" y1="75.8" x2="111.0" y2="56.0" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="179.8" y1="83.0" x2="152.1" y2="99.0" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="90.2" y1="133.0" x2="117.9" y2="149.0" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="129.2" y1="128.4" x2="106.0" y2="122.2" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="188.0" y1="124.8" x2="202.0" y2="100.6" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="230.8" y1="75.8" x2="225.1" y2="70.1" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="279.2" y1="75.8" x2="287.7" y2="67.3" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="318.0" y1="85.2" x2="326.0" y2="99.1" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="361.0" y1="80.0" x2="369.0" y2="80.0" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="389.8" y1="83.0" x2="379.4" y2="89.0" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="236.6" y1="124.2" x2="240.7" y2="108.7" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="273.4" y1="135.8" x2="271.4" y2="143.5" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="309.8" y1="127.0" x2="299.4" y2="121.0" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="359.2" y1="125.8" x2="370.6" y2="114.4" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="390.8" y1="125.8" x2="382.3" y2="117.3" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <circle cx="85" cy="80" r="6" fill="#26231F"/>
+  <circle cx="135" cy="80" r="6" fill="#26231F"/>
+  <circle cx="185" cy="80" r="6" fill="#26231F"/>
+  <circle cx="85" cy="130" r="6" fill="#26231F"/>
+  <circle cx="135" cy="130" r="6" fill="#26231F"/>
+  <circle cx="185" cy="130" r="6" fill="#26231F"/>
+  <circle cx="235" cy="80" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="275" cy="80" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="315" cy="80" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="355" cy="80" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="395" cy="80" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="235" cy="130" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="275" cy="130" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="315" cy="130" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="355" cy="130" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="395" cy="130" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <text x="135" y="190" text-anchor="middle" fill="#26231F">warmer</text>
+  <text x="315" y="190" text-anchor="middle" fill="#26231F">cooler</text>
+  <line x1="180" y1="184" x2="240" y2="184" stroke="#26231F" stroke-width="2"/>
+  <polygon points="250,184 238,178 238,190" fill="#26231F"/>
+  <text x="215" y="214" text-anchor="middle" fill="#26231F">net energy transfer</text>
+
+  <text x="60" y="250" fill="#26231F" font-weight="600">At thermal equilibrium</text>
+  <rect x="60" y="260" width="150" height="120" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+  <rect x="210" y="260" width="210" height="120" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <line x1="86.6" y1="289.2" x2="90.2" y2="275.7" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="138.0" y1="300.2" x2="147.0" y2="315.8" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="180.8" y1="290.8" x2="165.2" y2="275.2" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="88.0" y1="339.8" x2="99.0" y2="320.8" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="133.4" y1="350.8" x2="129.8" y2="364.3" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="179.8" y1="342.0" x2="164.2" y2="333.0" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="240.8" y1="293.4" x2="254.3" y2="289.8" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="270.8" y1="299.2" x2="258.0" y2="312.0" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="316.6" y1="300.8" x2="322.2" y2="322.0" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="352.0" y1="300.2" x2="345.0" y2="312.3" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="389.0" y1="295.0" x2="371.0" y2="295.0" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="240.2" y1="348.0" x2="259.2" y2="359.0" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="280.2" y1="342.0" x2="292.3" y2="335.0" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="313.4" y1="339.2" x2="308.8" y2="321.8" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="349.2" y1="343.4" x2="328.0" y2="337.8" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <line x1="396.6" y1="350.8" x2="401.2" y2="368.2" stroke="#4F706C" stroke-width="3" stroke-linecap="butt"/>
+  <circle cx="85" cy="295" r="6" fill="#26231F"/>
+  <circle cx="135" cy="295" r="6" fill="#26231F"/>
+  <circle cx="185" cy="295" r="6" fill="#26231F"/>
+  <circle cx="85" cy="345" r="6" fill="#26231F"/>
+  <circle cx="135" cy="345" r="6" fill="#26231F"/>
+  <circle cx="185" cy="345" r="6" fill="#26231F"/>
+  <circle cx="235" cy="295" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="275" cy="295" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="315" cy="295" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="355" cy="295" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="395" cy="295" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="235" cy="345" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="275" cy="345" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="315" cy="345" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="355" cy="345" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <circle cx="395" cy="345" r="6" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+  <text x="240" y="406" text-anchor="middle" fill="#26231F">same average kinetic energy</text>
+</svg>

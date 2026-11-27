@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="system-ui, sans-serif" font-size="18">
+  <rect width="480" height="300" fill="#FDFCF9"/>
+
+  <!-- Left panel: exothermic -->
+  <text x="120" y="28" text-anchor="middle" fill="#26231F" font-weight="600">Exothermic</text>
+  <path d="M45 240V58" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M45 50L40 60H50z" fill="#26231F"/>
+  <text x="28" y="145" text-anchor="middle" fill="#26231F" transform="rotate(-90 28 145)">energy</text>
+
+  <path d="M60 90H130" fill="none" stroke="#26231F" stroke-width="4"/>
+  <text x="60" y="80" fill="#26231F">reactants</text>
+  <path d="M130 90H145" fill="none" stroke="#6B655D" stroke-width="1" stroke-dasharray="4 3"/>
+  <path d="M135 200H150" fill="none" stroke="#6B655D" stroke-width="1" stroke-dasharray="4 3"/>
+<path d="M150 200H220" fill="none" stroke="#26231F" stroke-width="4"/>
+  <text x="150" y="224" fill="#26231F">products</text>
+
+  <path d="M140 94V186" fill="none" stroke="#4F706C" stroke-width="2.5"/>
+  <path d="M140 196L134 184H146z" fill="#4F706C"/>
+  <text x="120" y="272" text-anchor="middle" fill="#26231F">energy released</text>
+
+  <!-- Right panel: endothermic -->
+  <text x="360" y="28" text-anchor="middle" fill="#26231F" font-weight="600">Endothermic</text>
+  <path d="M285 240V58" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M285 50L280 60H290z" fill="#26231F"/>
+  <text x="268" y="145" text-anchor="middle" fill="#26231F" transform="rotate(-90 268 145)">energy</text>
+
+  <path d="M300 200H370" fill="none" stroke="#26231F" stroke-width="4"/>
+<path d="M370 200H385" fill="none" stroke="#6B655D" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="300" y="224" fill="#26231F">reactants</text>
+  <path d="M375 90H390" fill="none" stroke="#6B655D" stroke-width="1" stroke-dasharray="4 3"/>
+  <path d="M390 90H460" fill="none" stroke="#26231F" stroke-width="4"/>
+  <text x="390" y="80" fill="#26231F">products</text>
+
+  <path d="M380 196V104" fill="none" stroke="#4F706C" stroke-width="2.5"/>
+  <path d="M380 94L374 106H386z" fill="#4F706C"/>
+  <text x="360" y="272" text-anchor="middle" fill="#26231F">energy absorbed</text>
+</svg>

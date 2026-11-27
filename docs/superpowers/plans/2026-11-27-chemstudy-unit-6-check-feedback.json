@@ -1,0 +1,394 @@
+{
+  "unit": 6,
+  "written": "2026-11-27",
+  "note": "Feedback for the Checks of Unit 6, read from the lesson files, where it was written with the lessons (docs/superpowers/specs/2026-11-27-chemstudy-unit-6-lessons-design.md). The option with no message is the answer. tests/e2e/check-feedback.spec.ts compares each lesson page with this file.",
+  "checks": [
+    {
+      "lesson": "6.1",
+      "file": "src/content/lessons/unit-6/6-1-endothermic-and-exothermic-processes.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Wet concrete (the system) warming the wooden forms around it as it cures",
+          "message": "The forms are surroundings, and they warm. Which way did energy go between them and the concrete?"
+        },
+        {
+          "text": "A pat of butter (the system) melting in a warm pan",
+          "message": null
+        },
+        {
+          "text": "A baked loaf of bread (the system) cooling on a rack",
+          "message": "As the loaf's temperature falls, is its own energy rising or falling? Endothermic means the system's energy rises."
+        },
+        {
+          "text": "Water vapor (the system) turning to frost on a cold windshield",
+          "message": "Compare the vapor with the frost. In which are the molecules held more firmly? Settling into attractions releases energy."
+        }
+      ]
+    },
+    {
+      "lesson": "6.1",
+      "file": "src/content/lessons/unit-6/6-1-endothermic-and-exothermic-processes.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "The wax takes in energy from the hand as it hardens, so hardening is endothermic for the wax.",
+          "message": "If the wax took energy from the hand, would the hand feel warm or cool? Check the direction against what the patient feels."
+        },
+        {
+          "text": "The wax keeps getting hotter while it hardens, so it has more and more energy to pass on to the hand.",
+          "message": "Nothing is heating the wax once the hand leaves the bath. Ask what happens to a liquid's energy as it becomes a solid."
+        },
+        {
+          "text": "The hand is warmer than the room, so it supplies the energy that turns the liquid wax into a solid.",
+          "message": "The hand ends up warmer, not cooler, so it was not the supplier. Which way did energy cross between the wax and the hand?"
+        },
+        {
+          "text": "Hardening is exothermic for the wax: its energy falls, and the hand gains the energy it gives up.",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "6.1",
+      "file": "src/content/lessons/unit-6/6-1-endothermic-and-exothermic-processes.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "The iron and oxygen released energy as they reacted, and the thermometer gained it: exothermic.",
+          "message": null
+        },
+        {
+          "text": "Oxygen gas is warmer than nitrogen gas, so letting the air in is what warmed the thermometer's bulb.",
+          "message": "Both gases came from the same room at 21 °C. What can oxygen do with iron that nitrogen cannot?"
+        },
+        {
+          "text": "Traces of vinegar on the steel wool warmed the thermometer, and the gas in the jar played no part.",
+          "message": "The vinegar was on the wool the whole time. Did the reading move while the jar held only nitrogen?"
+        },
+        {
+          "text": "The reaction took energy in from the thermometer, and a thermometer shows that as a higher reading.",
+          "message": "A thermometer that loses energy cools, and its reading falls. Which way did this reading go?"
+        }
+      ]
+    },
+    {
+      "lesson": "6.1",
+      "file": "src/content/lessons/unit-6/6-1-endothermic-and-exothermic-processes.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "The attractions between the ions in solid potassium chloride are too weak to matter.",
+          "message": "Ions in a crystal attract one another strongly (topic 2.3). Compare the energy taken in with the energy released."
+        },
+        {
+          "text": "Forming attractions between ions and water released more energy than pulling particles apart took.",
+          "message": "If more energy were released than taken in, the extra would go into the water. Does that match the reading?"
+        },
+        {
+          "text": "Pulling the particles apart took more energy than the new ion–water attractions released.",
+          "message": null
+        },
+        {
+          "text": "No attractions formed between the ions and the water molecules, so no energy was released at all.",
+          "message": "The salt dissolved, so ions and water molecules do attract (topic 3.10). How does what that released compare with what was needed?"
+        }
+      ]
+    },
+    {
+      "lesson": "6.1",
+      "file": "src/content/lessons/unit-6/6-1-endothermic-and-exothermic-processes.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Its energy rose by 950 J, so the dissolving is endothermic.",
+          "message": "The water is surroundings, and it gained the 950 J. Can the system and the surroundings both gain energy?"
+        },
+        {
+          "text": "Its energy fell by 950 J, so the dissolving is exothermic.",
+          "message": null
+        },
+        {
+          "text": "Its energy did not change, because energy is conserved.",
+          "message": "Conserved means the total for system plus surroundings stays constant. Either part can change if the other changes the opposite way."
+        },
+        {
+          "text": "Its energy fell by more than 950 J, because warming the water used up extra energy on top of that.",
+          "message": "Warming the water is where the 950 J went. With no energy passing to the cup or the air, where could any extra have gone?"
+        }
+      ]
+    },
+    {
+      "lesson": "6.2",
+      "file": "src/content/lessons/unit-6/6-2-energy-diagrams.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "A rise, because the products have 80 kJ more energy to pass on to the water.",
+          "message": "Check which side ends with more energy. Can the system gain 80 kJ and also hand 80 kJ to the water?"
+        },
+        {
+          "text": "A rise, because a reaction releases the amount of energy shown by the gap.",
+          "message": "A gap can be energy released or energy absorbed. Which way does the arrow run when the products' level is the higher one?"
+        },
+        {
+          "text": "A fall, because the system takes the energy it gains from the water.",
+          "message": null
+        },
+        {
+          "text": "No change, because energy is conserved and the two levels cancel out.",
+          "message": "Conservation covers the system and the surroundings together. The system's own energy changes by the gap between the levels."
+        }
+      ]
+    },
+    {
+      "lesson": "6.2",
+      "file": "src/content/lessons/unit-6/6-2-energy-diagrams.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "-175",
+      "unit": "kJ",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "175",
+          "message": "Did you leave off the sign, or take starting minus final? A change is final minus starting."
+        },
+        {
+          "value": "445",
+          "message": "Did you add the two levels? A change is the final level minus the starting level."
+        },
+        {
+          "value": "-445",
+          "message": "Is that the two levels added? The gap between them is the final level minus the starting level."
+        }
+      ]
+    },
+    {
+      "lesson": "6.2",
+      "file": "src/content/lessons/unit-6/6-2-energy-diagrams.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Liquid tin on the upper level, solid tin on the lower level, and the arrow pointing down",
+          "message": null
+        },
+        {
+          "text": "Solid tin on the upper level, liquid tin on the lower level, and the arrow pointing down",
+          "message": "An arrow runs from the start to the finish. Follow this one: which form of tin does it start from?"
+        },
+        {
+          "text": "Liquid tin on the lower level, solid tin on the upper level, and the arrow pointing up",
+          "message": "This has the tin gaining energy as it hardens. Topic 6.1 put freezing among the exothermic changes. Does the system's energy rise or fall?"
+        },
+        {
+          "text": "Liquid tin and solid tin on one level, because the temperature stays at 232 °C throughout",
+          "message": "A steady temperature does not mean a steady energy. Energy still leaves the tin as it hardens."
+        }
+      ]
+    },
+    {
+      "lesson": "6.2",
+      "file": "src/content/lessons/unit-6/6-2-energy-diagrams.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Levels at 25 and 140 kJ/mol, with the arrow pointing up: 115 kJ/mol absorbed",
+          "message": "140 kJ/mol is the top of the hill. An energy diagram keeps the start and the finish. Which two numbers are those?"
+        },
+        {
+          "text": "Levels at 140 and 70 kJ/mol, with the arrow pointing down: 70 kJ/mol released",
+          "message": "A diagram of a change begins at the level where the change begins. Where do the reactants sit on this profile?"
+        },
+        {
+          "text": "Levels at 25 and 70 kJ/mol, with the arrow pointing down: 45 kJ/mol released",
+          "message": "A change runs from its starting level to its final level. Which level of this profile is the start, and is the finish above it or below it?"
+        },
+        {
+          "text": "Levels at 25 and 70 kJ/mol, with the arrow pointing up: 45 kJ/mol absorbed",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "6.2",
+      "file": "src/content/lessons/unit-6/6-2-energy-diagrams.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "The reaction is fast, because the drop in energy is large.",
+          "message": "The size of the drop is an amount of energy. What on a profile from topic 5.6 decides how fast a reaction goes?"
+        },
+        {
+          "text": "The system releases 200 kJ to its surroundings as the reaction happens.",
+          "message": null
+        },
+        {
+          "text": "The reaction needs no energy to get it started, because it runs downhill.",
+          "message": "Burning paper runs downhill too, yet a sheet can sit in air for years (topic 5.6). Is the hill drawn on this diagram?"
+        },
+        {
+          "text": "The products end up colder than the reactants were, because they have less energy.",
+          "message": "The levels show the system's energy, not a temperature. A lower level does not say that the products are cold."
+        }
+      ]
+    },
+    {
+      "lesson": "6.3",
+      "file": "src/content/lessons/unit-6/6-3-heat-transfer-and-thermal-equilibrium.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "The oil's is greater, because the particles of a liquid are free to move around.",
+          "message": "Free to move around is about how the particles are arranged. What does the temperature of a body measure?"
+        },
+        {
+          "text": "The glass's is zero, because particles that are held in place in a solid do not move.",
+          "message": "Particles in a solid vibrate about fixed positions (topic 3.5), and that motion is kinetic energy."
+        },
+        {
+          "text": "Whichever of the two has the greater mass, the oil or the bottle, has the greater average.",
+          "message": "An average is per particle. Would pouring more oil into the bottle change the temperature of the oil?"
+        },
+        {
+          "text": "They are equal, because the oil and the glass are at the same temperature.",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "6.3",
+      "file": "src/content/lessons/unit-6/6-3-heat-transfer-and-thermal-equilibrium.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Cold flows out of the can into the skin until the skin's particles have slowed down.",
+          "message": "Nothing called cold travels. Ask what the particles on each side of the surface are doing, and which have more kinetic energy."
+        },
+        {
+          "text": "Particles of the skin collide with particles of the can and, on balance, pass kinetic energy to them.",
+          "message": null
+        },
+        {
+          "text": "Fast particles leave the skin and move into the can's wall, carrying their kinetic energy across with them.",
+          "message": "Skin does not move into aluminum. Energy can cross a surface without any particle crossing it. How?"
+        },
+        {
+          "text": "Collisions swap energy back and forth until the hand and the can each hold the same total amount of energy.",
+          "message": "Check the stopping point. A hand and a can are different sizes. What has to match for the net transfer to stop?"
+        }
+      ]
+    },
+    {
+      "lesson": "6.3",
+      "file": "src/content/lessons/unit-6/6-3-heat-transfer-and-thermal-equilibrium.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Energy still passes both ways between probe and meat in collisions, in equal amounts.",
+          "message": null
+        },
+        {
+          "text": "Collisions between the particles of the probe and the particles of the meat have stopped.",
+          "message": "Particles at 74 °C are still moving, so they still collide. A steady reading needs something less drastic."
+        },
+        {
+          "text": "The probe and the chicken now hold equal amounts of energy, which keeps the reading steady.",
+          "message": "A small probe and a whole chicken are at one temperature. Compare how many particles each has. Can their total energies match?"
+        },
+        {
+          "text": "The particles of the steel probe now move at the same average speed as the particles of the meat.",
+          "message": "Equal temperatures mean equal average kinetic energies. Iron atoms and water molecules differ in mass, so what follows for speed?"
+        }
+      ]
+    },
+    {
+      "lesson": "6.3",
+      "file": "src/content/lessons/unit-6/6-3-heat-transfer-and-thermal-equilibrium.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "From the lake to the swimmer, because the lake holds far more energy in total.",
+          "message": "The total depends on how much water there is. Does a lake's size decide how hard each molecule hits the swimmer's skin?"
+        },
+        {
+          "text": "Neither way, because a lake is far too large for one swimmer to change its temperature.",
+          "message": "A change too small to measure is still a transfer. Can 33 °C skin touch 18 °C water with no net flow of energy?"
+        },
+        {
+          "text": "From the swimmer to the lake, because the skin's particles have the greater average kinetic energy.",
+          "message": null
+        },
+        {
+          "text": "Both ways in equal amounts from the first moment, because collisions pass energy in both directions.",
+          "message": "Equal amounts both ways describes thermal equilibrium. Are the swimmer and the lake at the same temperature yet?"
+        }
+      ]
+    },
+    {
+      "lesson": "6.3",
+      "file": "src/content/lessons/unit-6/6-3-heat-transfer-and-thermal-equilibrium.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "The glass cools and the juice warms until they share one temperature between 6 °C and 60 °C.",
+          "message": null
+        },
+        {
+          "text": "The glass cools to 6 °C while the juice stays at 6 °C, because a cold liquid holds its temperature.",
+          "message": "The energy the glass loses has to go somewhere. What happens to the juice's particles as more energetic ones keep striking them?"
+        },
+        {
+          "text": "Both end at exactly 33 °C, because thermal equilibrium is always halfway between the starting temperatures.",
+          "message": "Halfway is a special case. A thin glass and a lot of juice need not change by the same number of degrees."
+        },
+        {
+          "text": "The glass cools and the juice warms until each holds the same amount of energy, at two different temperatures.",
+          "message": "What two bodies share at thermal equilibrium is the thing a thermometer reads. Is that their total energy?"
+        }
+      ]
+    }
+  ]
+}
