@@ -121,11 +121,18 @@ That is the measured rate law, so the mechanism is consistent with the evidence.
 
 </Worked>
 
-<Check answer={2}>
+<Check
+  answer={1}
+  misses={{
+    2: "Being at equilibrium does not mean that anything has stopped. The step is fast in both directions.",
+    3: "The first step is the fast one here. The second step is the slow one.",
+    4: "The step runs in both directions, so its reactants keep being made again. They are not all used up.",
+  }}
+>
 In the pre-equilibrium approximation, what is assumed about the fast first step?
 
-- It has stopped.
 - Its forward and reverse rates are equal.
+- It has stopped.
 - It is slower than the second step.
 - It has used up all of its reactants.
 
@@ -145,7 +152,14 @@ Then look at what is left. A finished rate law may contain only reactants, produ
 
 One thing carries over from topic 5.8. A step that comes after the slow step adds nothing to the rate law.
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "That is the rate law of the slow step, but C is an intermediate. Use step 1 to replace [C].",
+    3: "That copies the coefficients of the overall equation. Check which particles enter after the slow step.",
+    4: "That looks like step 1 alone. The rate comes from the slow step, with [C] replaced by what step 1 gives.",
+  }}
+>
 A reaction has this mechanism.
 
 | Step | Equation |
@@ -219,7 +233,14 @@ Oxygen is a product, and it sits in the denominator. The more $\ce{O2}$ there is
 
 </Worked>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "That would put [O₂] on top of the rate law. Look at where it sits in the rate law for the ozone mechanism.",
+    2: "A product can appear in a rate law, and here it does. Look at the rate law for the ozone mechanism.",
+    4: "That would need [O₂] squared. Check the power of [O₂] in the rate law for the ozone mechanism.",
+  }}
+>
 For the ozone mechanism above, what happens to the rate if $[\ce{O2}]$ is doubled while $[\ce{O3}]$ is held the same?
 
 - It doubles.

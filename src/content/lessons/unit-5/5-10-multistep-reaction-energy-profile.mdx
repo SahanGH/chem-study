@@ -80,7 +80,14 @@ Find the number of steps, the activation energy of each step and the overall ene
 
 </Worked>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "That is the count for a profile with two peaks. Count the gaps between neighboring peaks here.",
+    3: "That is the number of peaks, and so of steps. A valley lies between two neighboring peaks.",
+    4: "There cannot be more valleys than peaks. Each valley lies between two neighboring peaks.",
+  }}
+>
 An energy profile has three peaks. How many valleys, each an intermediate stage, lie between the reactants and the products?
 
 - One
@@ -93,7 +100,16 @@ An energy profile has three peaks. How many valleys, each an intermediate stage,
 
 You can also work the other way, from the steps to the picture.
 
-<Check numeric="55" unit="kJ/mol">
+<Check
+  numeric="55"
+  unit="kJ/mol"
+  slips={{
+    "35": "That is the height of the climb in step 2. Where does that climb start? Step 2 does not start at 0 kJ/mol.",
+    "95": "Did you add the two activation energies? Step 2 starts at the intermediate, not at the first peak.",
+    "15": "Did you subtract the energy change of step 1? Its sign is +, so the intermediate lies above the reactants.",
+    "115": "Did you add all three numbers? Step 1 ends at the intermediate, not at its peak, and step 2 climbs from there.",
+  }}
+>
 The reactants of a two-step reaction are at 0 kJ/mol. Step 1 has an activation energy of 60 kJ/mol and an energy change of +20 kJ/mol. Step 2 has an activation energy of 35 kJ/mol. At what energy is the second peak?
 
 <div slot="why">Step 1 ends at the intermediate, 20 kJ/mol above the reactants. Step 2 climbs 35 kJ/mol from there, so the second peak is at $20 + 35 = 55\ \text{kJ/mol}$.</div>
@@ -113,13 +129,30 @@ The profile and the rate law are two views of the same mechanism. In topic 5.8 y
 
 Try both ideas on a new profile.
 
-<Check numeric="85" unit="kJ/mol">
+<Check
+  numeric="85"
+  unit="kJ/mol"
+  slips={{
+    "110": "That measures from the reactants. A later step starts at the valley before its peak.",
+    "60": "That measures from the first peak. A step starts at a valley, not at a peak.",
+    "125": "That is the climb from the products, which is step 2 run backward. Measure from where step 2 starts.",
+    "130": "That is the energy of the second peak. An activation energy is a climb: the peak minus the level where the step starts.",
+    "50": "That is the activation energy of step 1. The question asks about step 2.",
+  }}
+>
 On a two-step profile the reactants are at 20 kJ/mol, the first peak at 70, the intermediate at 45, the second peak at 130 and the products at 5. What is the activation energy of step 2?
 
 <div slot="why">Step 2 starts from the intermediate, so $E_a = 130 - 45 = 85\ \text{kJ/mol}$.</div>
 </Check>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Coming first does not make a step the slow one. Compare the climbs of the two steps.",
+    3: "The overall energy change says nothing about speed. Compare the activation energies of the steps.",
+    4: "The two steps do not have the same climb. Measure each activation energy from the level where its step starts.",
+  }}
+>
 For the profile in the last question, which step is rate limiting?
 
 - Step 1, because it comes first

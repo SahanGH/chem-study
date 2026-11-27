@@ -85,7 +85,14 @@ The three numbers are different, but they all describe the same reaction. Divide
 
 </Worked>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "That is one third of the H₂ rate, which is how fast N₂ is used up. Compare the coefficients of NH₃ and H₂.",
+    3: "That has NH₃ forming exactly as fast as H₂ is used up. Their coefficients in the equation are not the same.",
+    4: "The ratio of the coefficients is upside down. Fewer NH₃ form than H₂ are used up.",
+  }}
+>
 In $\ce{N2(g) + 3H2(g) -> 2NH3(g)}$, $\ce{H2}$ is used up at 0.090 M/s. How fast does $\ce{NH3}$ form?
 
 - 0.030 M/s
@@ -112,7 +119,17 @@ That gives you a rate for a single moment and not just for a stretch of time. Th
 
 Two readings cannot give you the rate at one moment. What they give you is the average rate over the time between them.
 
-<Check numeric="0.0050" unit="M/s">
+<Check
+  numeric="0.0050"
+  unit="M/s"
+  slips={{
+    "0.15": "That is the change in concentration. A rate is a change divided by the time it took.",
+    "4.5": "Did you multiply by the time? The units should come out as M/s, so the seconds go underneath.",
+    "200": "That is the time divided by the change in concentration. Follow the units: the answer is in M/s.",
+    "0.0117": "Did you divide the final concentration by the time? A rate uses the change in concentration.",
+    "0.0167": "Did you divide the starting concentration by the time? A rate uses the change in concentration.",
+  }}
+>
 The concentration of a reactant falls from 0.50 M to 0.35 M in 30 s. What is the average rate at which it is used up?
 
 <div slot="why">
@@ -138,7 +155,14 @@ Go back to the antacid tablet. Hot water and crushing changed the speed without 
 
 Other conditions can matter too. Light, for example, sets some reactions going. But these four are the ones this course keeps returning to. Topic 5.5 explains the temperature effect properly, and topic 5.11 does the same for catalysts.
 
-<Check answer={4}>
+<Check
+  answer={4}
+  misses={{
+    1: "Powder has more surface area than one piece, so more of the zinc meets the acid at once.",
+    2: "A higher temperature makes a reaction faster. Look for the change that leaves the particles meeting no more often.",
+    3: "More concentrated acid has more acid particles in each bit of solution, so they meet the zinc more often.",
+  }}
+>
 A piece of zinc reacts with hydrochloric acid. Which change does **not** make the reaction start faster?
 
 - Grinding the zinc into powder

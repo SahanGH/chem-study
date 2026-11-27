@@ -40,13 +40,20 @@ A catalyst lowers the activation energy by providing a different mechanism. It d
 
 </KeyIdea>
 
-<Check answer={2}>
+<Check
+  answer={4}
+  misses={{
+    1: "The reactants and the products are the same substances with or without the catalyst, so the energy difference between them is the same.",
+    2: "A catalyst gets the reaction to the same end sooner. It does not change how much product that end holds.",
+    3: "The products are the same substances as before, so their energy is the same. Think about the path that leads to them.",
+  }}
+>
 Which of these does a catalyst change?
 
 - The overall energy change of the reaction
-- The activation energy
-- The energy of the products
 - How much product there is in the end
+- The energy of the products
+- The activation energy
 
 <div slot="why">The catalyst opens a path with a lower barrier. The reactants and the products are the same substances as before, so the energy difference between them is the same. A catalyst gets the reaction to the same end sooner; it does not change how much product that end holds.</div>
 </Check>
@@ -77,7 +84,18 @@ Both barriers fell by the same 40 kJ/mol. A catalyst cannot help one direction w
 
 </Worked>
 
-<Check numeric="105" unit="kJ/mol">
+<Check
+  numeric="105"
+  unit="kJ/mol"
+  slips={{
+    "35": "That is how far the catalyst lowers the peak. The question asks for the reverse activation energy with the catalyst.",
+    "140": "Both directions climb to the same peak, and the catalyst lowers that peak. The reverse barrier cannot stay as it was.",
+    "175": "Did you add the change to the reverse barrier? The catalyst lowers the peak, and both directions climb to it.",
+    "80": "Did you subtract the new forward activation energy? Find how far the peak dropped first.",
+    "45": "That is the energy difference between the reactants and the products, which a catalyst does not change.",
+    "88.4": "Did you scale the barrier by a ratio? The peak drops by the same number of kJ/mol for both directions.",
+  }}
+>
 A catalyst lowers a reaction's forward activation energy from 95 kJ/mol to 60 kJ/mol. Without the catalyst the reverse activation energy is 140 kJ/mol. What is it with the catalyst?
 
 <div slot="why">The peak of the catalyzed path is $95 - 60 = 35\ \text{kJ/mol}$ lower than the old one, and both directions climb to it. So the reverse barrier is $140 - 35 = 105\ \text{kJ/mol}$.</div>
@@ -136,7 +154,14 @@ The catalytic converter of a car, which you met in topic 5.1, works the same way
 
 The three ways look different, but each one does the same thing. The catalyst creates new intermediates and new elementary steps. That is to say, it creates a new mechanism.
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "An enzyme is a protein that holds its reactant in an active site. Platinum is a metal.",
+    2: "Acid–base catalysis works by moving a proton. Nothing here gives or takes a proton.",
+    4: "A catalyst can be a solid. What matters is that it makes the reaction faster and is not used up.",
+  }}
+>
 Hydrogen and ethene react quickly on a piece of platinum, where both gases first stick to the metal. What kind of catalysis is this?
 
 - Enzyme catalysis

@@ -40,7 +40,14 @@ Make all three plots from your data. The one that comes out straight tells you t
 
 </KeyIdea>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "For zero order, the straight-line plot is [A] against time. Check which plot goes with which order.",
+    2: "For first order, the straight-line plot is ln[A] against time. Check which plot goes with which order.",
+    4: "One straight plot is enough. Each order has its own straight-line plot, and for the other orders that plot is a curve.",
+  }}
+>
 For a reaction, a plot of $1/[\ce{A}]$ against time is a straight line. What is the order in A?
 
 - 0
@@ -94,7 +101,18 @@ The line in step 2 drops 0.693 for every 100 s, so its slope is $-6.93 \times 10
 
 </Worked>
 
-<Check numeric="30.0" unit="min">
+<Check
+  numeric="30.0"
+  unit="min"
+  slips={{
+    "0.0160": "Did you multiply 0.693 by k? The units should come out as minutes, so k goes underneath.",
+    "0.0333": "That is what k divided by 0.693 gives. Follow the units: the answer should come out in minutes.",
+    "43.3": "That is what 1 divided by k gives. Check the number on top in the half-life equation.",
+    "21.6": "Did you put 0.5 on top? The number in the half-life equation is ln 2, not one half.",
+    "13.0": "Did you use the log key? The number on top is the natural log of 2.",
+    "1800": "Did you change the answer to seconds? k is given in units of 1/min, so the half-life comes out in minutes.",
+  }}
+>
 A first-order reaction has $k = 0.0231\ \text{min}^{-1}$. What is its half-life?
 
 <div slot="why">
@@ -129,7 +147,17 @@ Check that the answer makes sense. The concentration started at 0.50 M and A is 
 
 </Worked>
 
-<Check numeric="0.40" unit="M">
+<Check
+  numeric="0.40"
+  unit="M"
+  slips={{
+    "0.20": "That is how much A has been used up in 10 s. The question asks how much is left.",
+    "0.80": "Did you add where the equation subtracts? A is a reactant, so its concentration falls.",
+    "0.58": "Did you leave out the time? The rate constant is multiplied by the 10 s.",
+    "0.49": "That is what the first-order equation gives. This reaction is zero order, so [A] falls along a straight line.",
+    "0.536": "That is what the second-order equation gives. This reaction is zero order, so [A] falls along a straight line.",
+  }}
+>
 A zero-order reaction starts at $[\ce{A}]_0 = 0.60\ \text{M}$ with $k = 0.020\ \text{M/s}$. What is $[\ce{A}]$ after 10 s?
 
 <div slot="why">
@@ -148,7 +176,14 @@ $$
 
 Every radioactive decay is a first-order process. So each radioactive isotope has one fixed half-life, whether the sample is large or small, and that is why half-life is the number quoted for it.
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "That is what is left after one half-life. Compare 24 days with the half-life.",
+    2: "Dividing the times gives the number of half-lives, not the fraction left. Each half-life cuts what is left in half again.",
+    4: "That is 1 over the number of days. Count the half-lives in 24 days instead, and halve what is left for each one.",
+  }}
+>
 A radioactive isotope has a half-life of 8.0 days. What fraction of the isotope is left after 24 days?
 
 - 1/2

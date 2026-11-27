@@ -26,13 +26,20 @@ A collision counts only if it is hard enough and aimed right. Miss either one an
 
 </KeyIdea>
 
-<Check answer={2}>
+<Check
+  answer={4}
+  misses={{
+    1: "Temperature matters through energy, and this collision had more than the activation energy. More energy would not have helped.",
+    2: "A slow collision is one with little energy, and this one had more than the activation energy.",
+    3: "The activation energy belongs to the reaction. It does not change during a collision.",
+  }}
+>
 Two molecules collide with more than the activation energy but do not react. What is the most likely reason?
 
 - The temperature is too low.
-- They met in the wrong orientation.
-- The activation energy rose during the collision.
 - The collision was too slow.
+- The activation energy rose during the collision.
+- They met in the wrong orientation.
 
 <div slot="why">Energy was not the problem, so the other condition failed. The atoms that needed to meet were not facing each other.</div>
 </Check>
@@ -55,7 +62,14 @@ Warm the sample and the average energy of its particles goes up. The curve chang
   caption="Only the particles beyond the activation energy have enough energy to react. Warming the sample puts many more of them there."
 />
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "A curve that is higher everywhere would hold more particles. The sample holds the same particles as before.",
+    2: "Area under the curve stands for particles, and warming adds none. The total area stays the same.",
+    4: "The activation energy belongs to the reaction and does not move when the sample is warmed. The curve is what changes.",
+  }}
+>
 A sample is warmed. What happens to its Maxwell–Boltzmann curve?
 
 - The whole curve moves up.
@@ -102,7 +116,14 @@ The first two rows are changes you can make in the lab. The third is not a chang
 
 The first row is also why the rate law of an elementary step in topic 5.4 has concentrations in it. More particles in the same space means more collisions.
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "That is what raising the temperature does. Concentration does not change how hard the particles hit.",
+    3: "The activation energy belongs to the reaction. Changing a concentration does not move it.",
+    4: "Orientation is set by the shapes of the particles, and concentration does not change their shapes.",
+  }}
+>
 Doubling the concentration of a gas reactant speeds a reaction up because:
 
 - Its particles collide more often.

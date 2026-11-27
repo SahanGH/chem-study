@@ -86,7 +86,14 @@ CO does not enter until step 2, after the slow step. That is why changing $[\ce{
 
 </Worked>
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "That copies the coefficients of the overall equation. Look at which particles collide in the slow step.",
+    3: "That is the rate law of step 2, the fast step. The rate of the reaction is the rate of the slow step.",
+    4: "More than one particle collides in the slow step. Each one puts its concentration into the rate law.",
+  }}
+>
 A reaction has this two-step mechanism. What rate law does the mechanism predict?
 
 | Step | Equation |
@@ -165,7 +172,14 @@ Look at what the overall equation alone would have told you. It has a 2 in front
 
 </Worked>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "This step predicts rate = k[X][Y]. The measured rate law has no Y in it.",
+    3: "One X on its own predicts rate = k[X]. Compare that with the exponent in the measured rate law.",
+    4: "This step predicts rate = k[X][Y]². The measured rate law has no Y in it.",
+  }}
+>
 A reaction has the measured rate law $\text{rate} = k[\ce{X}]^2$. Which slow first step is consistent with it?
 
 - $\ce{X + Y -> products}$
@@ -176,7 +190,14 @@ A reaction has the measured rate law $\text{rate} = k[\ce{X}]^2$. Which slow fir
 <div slot="why">A step in which two X particles collide has the rate law $k[\ce{X}]^2$. The others predict $k[\ce{X}][\ce{Y}]$, $k[\ce{X}]$ and $k[\ce{X}][\ce{Y}]^2$.</div>
 </Check>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "That is the effect of doubling one concentration. Both are doubled, and each one is in the rate law.",
+    2: "Each doubled concentration multiplies the rate by its own factor. Find the factor for each concentration, then multiply the two factors.",
+    4: "That uses the coefficients of the overall equation as the orders. The orders come from the slow step.",
+  }}
+>
 For the mechanism of $\ce{2NO2 + F2 -> 2NO2F}$ above, both $[\ce{NO2}]$ and $[\ce{F2}]$ are doubled. By what factor is the rate multiplied?
 
 - 2
