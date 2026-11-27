@@ -84,3 +84,18 @@ Every Check with options has four options. 18 typed-number Checks have no `unit`
   - one message that still confirmed half of the answer;
   - one that assumed the student's working.
 - **The sweep:** 88 wrong answers tried, no problems. The build has no problems; the browser tests that touch Checks pass.
+
+### Unit 3
+
+- **The writer:** 187 messages (120 for options, 67 slips across 18 typed-number Checks), with 5 moves. Answers at options 1 to 4 went from 10, 15, 11, 4 to 10, 10, 11, 9.
+  - **Moves:** lesson 3.1 Check 3; 3.3 Check 2; 3.5 Check 4; 3.7 Check 1; 3.10 Check 1.
+  - Two moves would have reached the range; the other three even the counts.
+  - No tolerance and no changed sentence.
+- **The first fact-check** confirmed every answer, move and slip value. It found 3 messages that left one option standing:
+  - lesson 3.5 Check 1;
+  - lesson 3.6 Check 3, two options ("as well" confirmed half of the answer);
+  - lesson 3.10 Check 3 (the message stated the deciding rule).
+
+  It also found 4 points of wording, two of them messages that did not fit their option (lesson 3.11 Check 1; lesson 3.5 Check 2's slip 0.25). All were rewritten.
+- **The second check** passed 6 of the 8 rewrites and corrected two. One gave a slip without its units; one made a general claim about units that is not true.
+- **The sweep:** 187 wrong answers tried, no problems.

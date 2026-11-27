@@ -49,7 +49,14 @@ In every gas calculation, temperature goes in kelvin. Add 273.15 to a Celsius te
 
 </KeyIdea>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Doubling the Celsius number does not double the kelvin temperature. Convert both temperatures first.",
+    3: "The piston slides freely, so the volume is free to change. At constant pressure, volume follows kelvin temperature.",
+    4: "Warming a gas at constant pressure does not shrink it. Volume is proportional to kelvin temperature.",
+  }}
+>
 A gas is held in a cylinder with a freely sliding piston, which keeps its pressure constant. It is warmed from 20 °C to 40 °C. What happens to its volume?
 
 - It doubles.
@@ -205,7 +212,16 @@ A syringe holds 40.0 mL of air at 1.00 atm and 20.0 °C. Its tip is sealed. The 
 
 </Worked>
 
-<Check numeric="0.856" unit="atm">
+<Check
+  numeric="0.856"
+  unit="atm"
+  slips={{
+    "-0.72": "That is what Celsius temperatures give. A pressure cannot be negative: change both temperatures to kelvin.",
+    "0.72": "Did you use the Celsius temperatures? Pressure is proportional to kelvin temperature.",
+    "1.17": "The air got colder, so should the pressure rise? Check which temperature is on top of the ratio.",
+    "0.977": "Did you miss the minus sign? The freezer is at −18 °C, which is below 273 K.",
+  }}
+>
 A sealed, rigid bottle of air is at 1.00 atm and 25 °C. It is put in a freezer at −18 °C. The bottle does not change size. What is the pressure inside it once the air is as cold as the freezer?
 
 <div slot="why">
@@ -260,7 +276,14 @@ On a Celsius axis the same line is still straight, but it reaches zero volume at
 
 Two more graphs are straight lines through the origin: pressure against kelvin temperature at constant volume, and volume against moles at constant temperature and pressure.
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Pressure against volume is a curve, not a straight line.",
+    3: "That line is straight, but check where it reaches zero. Is the volume zero at 0 °C?",
+    4: "That line is straight, but it reaches zero at −273.15 °C, not at 0 °C.",
+  }}
+>
 For a fixed amount of gas, which graph is a straight line through the origin?
 
 - Pressure against volume, at constant temperature
@@ -390,7 +413,17 @@ A 5.00 L cylinder of welding shielding gas at 22.0 °C holds argon and carbon di
 
 </Worked>
 
-<Check numeric="1.08" unit="atm">
+<Check
+  numeric="1.08"
+  unit="atm"
+  slips={{
+    "0.900": "That is methane's mole fraction. One more step takes it to a partial pressure.",
+    "0.648": "Did you multiply methane's moles by the total pressure? Turn the moles into a mole fraction first.",
+    "1.20": "That is the total pressure. Methane is not the only gas in the sample.",
+    "1.33": "A partial pressure cannot be more than the total pressure. Did you divide by the mole fraction?",
+    "0.120": "Is that the share of the ethane and propane? The question asks about the methane.",
+  }}
+>
 A sample of natural gas at a total pressure of 1.20 atm contains 0.540 mol of methane, 0.045 mol of ethane and 0.015 mol of propane. What is the partial pressure of the methane?
 
 <div slot="why">
@@ -418,7 +451,14 @@ $$
 </div>
 </Check>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "The total pressure does rise, but a partial pressure belongs to one gas. Write P = nRT/V for the oxygen alone.",
+    2: "The mole fraction does fall, but the total pressure changes at the same time. Work out what happens to their product.",
+    4: "In an ideal gas, what the other particles are, and how heavy they are, does not matter.",
+  }}
+>
 Helium is pumped into a rigid flask that holds oxygen, and the temperature does not change. What happens to the partial pressure of the oxygen?
 
 - It rises, because the total pressure rises.

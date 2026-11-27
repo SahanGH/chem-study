@@ -22,7 +22,17 @@ $$
 
 Because $c$ is fixed, wavelength and frequency are inversely proportional. Halve the wavelength and the frequency doubles.
 
-<Check numeric="0.122" unit="m">
+<Check
+  numeric="0.122"
+  unit="m"
+  slips={{
+    "8.17": "That looks upside down. Follow the units: m/s over s⁻¹ leaves meters.",
+    "1.22e8": "Did you use 2.45 as the frequency? Giga is a power of ten: change GHz to s⁻¹ first.",
+    "12.2": "Is that in centimeters? The question asks for meters.",
+    "122": "Check the power of ten. Look up giga on the equation sheet, and give the answer in meters.",
+    "7.35e17": "Did you multiply c by the frequency? Rearrange c = λν for the wavelength first.",
+  }}
+>
 A microwave oven works at a frequency of 2.45 GHz. What is the wavelength of its microwaves, in meters?
 
 <div slot="why">
@@ -134,7 +144,15 @@ A black light gives out ultraviolet light of wavelength 365 nm. A dye in the fab
 
 </Worked>
 
-<Check numeric="3.45e-20" unit="J">
+<Check
+  numeric="3.45e-20"
+  unit="J"
+  slips={{
+    "7.85e46": "Did you divide by h? The photon's energy is h times its frequency.",
+    "1.27e-47": "Did you divide h by the frequency? The photon's energy is h times its frequency.",
+    "5.77e-6": "Is that the photon's wavelength in meters? The question asks for an energy, in joules.",
+  }}
+>
 A bond in a made-up molecule, Y, absorbs an infrared photon with a frequency of $5.20 \times 10^{13}\ \text{s}^{-1}$ and vibrates more. By how much does the molecule's energy go up? (To type a power of ten such as 2.5 × 10⁻³, write 2.5e-3 or 2.5 x 10^-3.)
 
 <div slot="why">
@@ -153,7 +171,14 @@ $$
 </div>
 </Check>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "Energy is inversely proportional to wavelength. Which photon has the shorter wavelength?",
+    2: "The 64 is 8 squared. Does energy go as 1/λ or as 1/λ²?",
+    4: "Both do travel at the speed of light. That sets the link between wavelength and frequency, not the energy.",
+  }}
+>
 Photon A has a wavelength of 300 nm (ultraviolet). Photon B has a wavelength of 2400 nm (infrared). Which carries more energy, and how many times as much?
 
 - B, 8 times as much
@@ -198,7 +223,14 @@ $$
 
 Now back to the T-shirt. The brightener's blue photon carries less energy than the ultraviolet photon it absorbed. That does not break the rule. Part of the absorbed energy went to the molecule's neighbors as heat along the way, so the drop that made the blue photon was a smaller one.
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "That happens when part of the energy leaves as heat along the way, as in the T-shirt. This molecule drops straight back.",
+    3: "The molecule's energy rose by 3.1 × 10⁻¹⁹ J. Can it give out more than it took in?",
+    4: "Brighter light has more photons, not more energetic ones. The question is about one photon.",
+  }}
+>
 A molecule in its lowest energy level absorbs a photon carrying $3.1 \times 10^{-19}\ \text{J}$. It then drops straight back to its lowest level by giving out a single photon. What is the energy of that photon?
 
 - 3.1 × 10⁻¹⁹ J, the same as the photon absorbed
@@ -209,7 +241,16 @@ A molecule in its lowest energy level absorbs a photon carrying $3.1 \times 10^{
 <div slot="why">Absorbing raised the molecule's energy by exactly 3.1 × 10⁻¹⁹ J. Dropping straight back to the same level lowers it by the same amount, and the single photon carries all of it. The T-shirt's photon carried less energy, because that molecule lost part of its energy as heat along the way. This one did not.</div>
 </Check>
 
-<Check numeric="621" unit="nm">
+<Check
+  numeric="621"
+  unit="nm"
+  slips={{
+    "6.21e-7": "That is the wavelength in meters. The question asks for nanometers.",
+    "1.61e6": "That looks upside down. Rearranged for the wavelength, hc goes on top and E underneath.",
+    "4.83e14": "Is that the frequency, E/h? The question asks for the wavelength.",
+    "6.21e-16": "Check the last step. A nanometer is smaller than a meter, so the number in nanometers is larger.",
+  }}
+>
 Two energy levels in an atom of element X are $3.20 \times 10^{-19}\ \text{J}$ apart. What wavelength of light, in nanometers, does the atom give out when it drops from the higher level to the lower one?
 
 <div slot="why">

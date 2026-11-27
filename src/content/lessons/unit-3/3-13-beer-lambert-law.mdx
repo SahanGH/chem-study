@@ -50,7 +50,14 @@ Absorbance is proportional to the number of absorbing particles in the light's p
 
 </KeyIdea>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "A longer path puts more absorbing particles in the beam, not fewer.",
+    2: "Absorbance depends on the path length. Which of ε, b and c changed?",
+    4: "Absorbance is proportional to b, not to b squared. By what factor did the path length change?",
+  }}
+>
 A dye solution has an absorbance of 0.270 in a 1.00 cm cuvette. The same solution is poured into a 2.00 cm cuvette and measured at the same wavelength. What does it read?
 
 - 0.135
@@ -69,7 +76,16 @@ $$
 </div>
 </Check>
 
-<Check numeric="835" unit="M⁻¹ cm⁻¹">
+<Check
+  numeric="835"
+  unit="M⁻¹ cm⁻¹"
+  slips={{
+    "1670": "Did you leave out the path length? The cuvette is 2.00 cm, not 1.00 cm.",
+    "3340": "Did you multiply by the path length? Rearrange A = εbc: both b and c go underneath.",
+    "0.334": "Did you leave out the concentration? Rearrange A = εbc: both b and c go underneath.",
+    "0.00120": "That looks upside down. Rearranged for ε, A goes on top.",
+  }}
+>
 A 4.00 × 10⁻⁴ M solution of substance Z has an absorbance of 0.668 in a 2.00 cm cuvette, measured at the wavelength that Z absorbs most strongly. What is the molar absorptivity of Z at that wavelength?
 
 <div slot="why">
@@ -117,7 +133,14 @@ Move the wavelength across this made-up dye's spectrum and watch its calibration
 
 <AbsorbanceExplorer />
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "The slope is εb. At 560 nm the molar absorptivity is smaller, not larger.",
+    3: "The slope is εb, whatever the standards are. What happened to ε?",
+    4: "A = εbc is still a straight line through the origin at 560 nm. Look at its slope.",
+  }}
+>
 Substance Q absorbs most strongly at 610 nm. At 560 nm its molar absorptivity is half as large. A chemist makes the calibration line at 560 nm instead of 610 nm, in the same cuvette. Compared with a line made at 610 nm, the line at 560 nm is:
 
 - twice as steep, so the measurement is more sensitive
@@ -217,7 +240,15 @@ The concentrations are in µM, micromolar. 1 µM is 10⁻⁶ M, and the prefix m
 
 </Worked>
 
-<Check numeric="2.40" unit="µM">
+<Check
+  numeric="2.40"
+  unit="µM"
+  slips={{
+    "0.0406": "Did you multiply by the slope? Follow the units: the answer should come out in µM.",
+    "0.417": "That looks upside down. The absorbance goes on top and the slope underneath.",
+    "2.40e-6": "Is that in M? The answer box is in µM, the unit of the calibration line.",
+  }}
+>
 Using the same calibration line, a second blue drink reads 0.312 at 630 nm in the same cuvette. What is its dye concentration, in µM?
 
 <div slot="why">
@@ -269,7 +300,14 @@ Two more cases are worth knowing. Suppose every reading, the standards and the u
 
 And if everything, standards and unknown alike, is measured at the same wrong wavelength, the result is not pushed either way. The measurement is just less sensitive.
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "Water left and the dye stayed behind. Is the solution in the cuvette now more concentrated, or less?",
+    3: "The amount of dye is unchanged, but the line relates absorbance to concentration. What happened to the volume?",
+    4: "Correct standards do not protect the unknown's reading. What did the evaporation do to the unknown?",
+  }}
+>
 A student leaves the unknown sitting uncovered in its cuvette, and some of the water evaporates before the reading is taken. Is the concentration the student calculates for the unknown too high, too low, or unaffected?
 
 - Too high

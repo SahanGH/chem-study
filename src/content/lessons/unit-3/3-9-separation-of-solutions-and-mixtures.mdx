@@ -16,7 +16,14 @@ Separating a solution takes a difference in intermolecular forces between its co
 
 Evaporating the water from a salt solution uses such a difference too. Water molecules escape into the air. The ions, held by strong attractions, stay behind.
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "Boiling works: the water escapes as vapor and the ions stay behind. Look for the method that fails.",
+    3: "Evaporation works: the water leaves and the solid stays in the dish. Look for the method that fails.",
+    4: "Distilling works: the water leaves as vapor and the solid stays in the flask. Look for the method that fails.",
+  }}
+>
 A student wants to get solid copper(II) sulfate back from a blue copper(II) sulfate solution. Which method will **not** work?
 
 - Pouring the solution through filter paper
@@ -87,7 +94,14 @@ A mixture of three dyes, labeled A, B and C, is spotted on a silica plate and ru
   caption="Measure both distances from the start line. On a polar plate run with a less polar solvent, the most polar dye, C, moves least."
 />
 
-<Check numeric="0.36">
+<Check
+  numeric="0.36"
+  slips={{
+    "2.78": "A spot cannot travel farther than the solvent that carries it, so this ratio is below 1. Check which distance is on top.",
+    "4.8": "That is the gap between the spot and the solvent front. The value asked for is a ratio of two distances.",
+    "0.64": "Did you measure the spot from the solvent front? Both distances are measured from the start line.",
+  }}
+>
 On another plate the solvent front moves 7.5 cm from the start line, and a spot moves 2.7 cm from the start line. What is the spot's $R_f$ value?
 
 <div slot="why">
@@ -103,7 +117,14 @@ The units cancel, so $R_f$ has none.
 </div>
 </Check>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "The silica is polar. Would a compound that it holds strongly move far up the plate, or only a little?",
+    3: "On one plate, two compounds of the same polarity would move the same fraction of the way. These did not.",
+    4: "Both were spotted on the same start line, so where they started cannot explain the difference.",
+  }}
+>
 Two compounds are run on a silica plate with a less polar solvent. Compound X gives $R_f$ = 0.70 and compound Y gives $R_f$ = 0.20, both spotted on the same start line. Which statement is best supported?
 
 - X is more polar than Y.
@@ -138,7 +159,14 @@ A salt solution is the extreme case. The ions have practically no vapor pressure
   caption="The first liquid to collect is richer in the component with the weaker attractions, and so the higher vapor pressure."
 />
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "At one temperature, larger molecules do not have more energy. Compare the boiling points: which liquid turns to vapor more easily?",
+    3: "A hydrogen bond needs an H bonded to N, O or F. Neither compound has one.",
+    4: "Forces between molecules are attractions. Stronger ones hold molecules in the liquid; they do not push them out.",
+  }}
+>
 A mixture of pentane, C₅H₁₂ (boiling point 36 °C), and octane, C₈H₁₈ (boiling point 126 °C), is distilled. Which liquid makes up most of the first distillate, and why?
 
 - Pentane, because its smaller molecules have weaker London dispersion forces, so it has the higher vapor pressure.

@@ -33,7 +33,14 @@ A wavelength may be given in millimeters, micrometers or nanometers:
 
 Each step down the table is a step to shorter wavelengths, so it is also a step up in energy per photon. A microwave photon carries the least energy of the four, and an ultraviolet photon the most. The same rule holds inside the visible band. Its violet end, near 400 nm, carries more energy per photon than its red end, near 700 nm.
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "Put all four wavelengths in one unit. Is 550 nm the shortest of them?",
+    2: "Put all four in one unit: 2 cm is 2 × 10⁷ nm. Does the longest wavelength carry the most energy per photon, or the least?",
+    4: "Put all four in one unit: 3 µm is 3000 nm. The number alone does not show which wavelength is shortest when the units differ.",
+  }}
+>
 Which photon carries the most energy?
 
 - One with a wavelength of 550 nm
@@ -76,7 +83,14 @@ The size of the step decides the region. A small step needs a low-energy, long-w
 
 </KeyIdea>
 
-<Check answer={4}>
+<Check
+  answer={4}
+  misses={{
+    1: "A longer wavelength means less energy per photon, not more. Find each wavelength's region first.",
+    2: "Vibrations go with the infrared. Find the region for 3 cm and the region for 300 nm: is either one infrared?",
+    3: "Match each kind of change to the size of its step. Which energy steps are the biggest, and which the smallest?",
+  }}
+>
 A molecule absorbs light at a wavelength of 3 cm and also at 300 nm. Which statement is right?
 
 - The 3 cm absorption is by far the bigger energy step, because its wavelength is longer. It moves an electron to a higher level, and the 300 nm absorption changes how the molecule rotates.
@@ -113,7 +127,14 @@ Each match works in reverse for emission. A molecule dropping to a lower level g
   caption="Microwaves change rotation, infrared changes vibration, and visible and ultraviolet light both move electrons. The regions are not drawn to scale."
 />
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Spinning faster goes with microwaves. Find the region that 15 µm falls in.",
+    3: "Electronic transitions go with ultraviolet and visible light. Find the region that 15 µm falls in.",
+    4: "Find the region that 15 µm falls in, then what photons of that region change in a molecule.",
+  }}
+>
 Carbon dioxide gas absorbs strongly at a wavelength of 15 µm. What happens to a molecule that absorbs one of these photons?
 
 - It spins faster.
@@ -124,7 +145,14 @@ Carbon dioxide gas absorbs strongly at a wavelength of 15 µm. What happens to 
 <div slot="why">15 µm is 15,000 nm, which is inside the infrared (about 1 mm to 700 nm). Infrared photons change vibrations. This absorption happens to be the bending vibration of CO₂, but you do not need to know which vibration it is.</div>
 </Check>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "Spinning faster goes with microwaves. Blue light is visible light.",
+    2: "More vibration goes with the infrared. Blue light is visible light.",
+    4: "The question says the dye absorbs blue light, so the photon's energy goes into the molecule.",
+  }}
+>
 A dye dissolved in water looks orange because it absorbs blue light. What happens in a dye molecule when it absorbs a photon of blue light?
 
 - It spins faster.
