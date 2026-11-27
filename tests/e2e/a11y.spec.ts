@@ -160,7 +160,9 @@ test('an answered check still passes in both of its states', async ({ page }) =>
   };
 
   await first.locator('.check-option').nth(0).click();
-  await expect(first.locator('.check-feedback')).toHaveText('Not quite. Try another.');
+  await expect(first.locator('.check-feedback')).toHaveText(
+    'Not quite. Zero order means the rate does not change when the concentration of A changes. Here it does.',
+  );
   await expect(first.locator('.check-option.is-wrong')).toHaveCount(1);
   expect(await violationsInChecks(), 'after a wrong answer').toEqual([]);
 

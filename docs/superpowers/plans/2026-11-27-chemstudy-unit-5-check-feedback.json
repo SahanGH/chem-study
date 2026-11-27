@@ -1,0 +1,1018 @@
+{
+  "unit": 5,
+  "written": "2026-11-27",
+  "note": "Feedback for the Checks of Unit 5. The design is docs/superpowers/specs/2026-11-26-chemstudy-us-english-and-unit-1-check-feedback-design.md. Options are listed in the order they are to have on the page; the option with no message is the answer.",
+  "checks": [
+    {
+      "lesson": "5.1",
+      "file": "src/content/lessons/unit-5/5-1-reaction-rates.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "0.030 M/s",
+          "message": "That is one third of the H₂ rate, which is how fast N₂ is used up. Compare the coefficients of NH₃ and H₂."
+        },
+        {
+          "text": "0.060 M/s",
+          "message": null
+        },
+        {
+          "text": "0.090 M/s",
+          "message": "That has NH₃ forming exactly as fast as H₂ is used up. Their coefficients in the equation are not the same."
+        },
+        {
+          "text": "0.135 M/s",
+          "message": "The ratio of the coefficients is upside down. Fewer NH₃ form than H₂ are used up."
+        }
+      ]
+    },
+    {
+      "lesson": "5.1",
+      "file": "src/content/lessons/unit-5/5-1-reaction-rates.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "0.0050",
+      "unit": "M/s",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.15",
+          "from": "stopped at the change in concentration",
+          "message": "That is the change in concentration. A rate is a change divided by the time it took."
+        },
+        {
+          "value": "4.5",
+          "from": "change multiplied by the time",
+          "message": "Did you multiply by the time? The units should come out as M/s, so the seconds go underneath."
+        },
+        {
+          "value": "200",
+          "from": "time divided by the change",
+          "message": "That is the time divided by the change in concentration. Follow the units: the answer is in M/s."
+        },
+        {
+          "value": "0.0117",
+          "from": "final concentration divided by the time",
+          "message": "Did you divide the final concentration by the time? A rate uses the change in concentration."
+        },
+        {
+          "value": "0.0167",
+          "from": "starting concentration divided by the time",
+          "message": "Did you divide the starting concentration by the time? A rate uses the change in concentration."
+        }
+      ]
+    },
+    {
+      "lesson": "5.1",
+      "file": "src/content/lessons/unit-5/5-1-reaction-rates.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Grinding the zinc into powder",
+          "message": "Powder has more surface area than one piece, so more of the zinc meets the acid at once."
+        },
+        {
+          "text": "Warming the acid",
+          "message": "A higher temperature makes a reaction faster. Look for the change that leaves the particles meeting no more often."
+        },
+        {
+          "text": "Using more concentrated acid",
+          "message": "More concentrated acid has more acid particles in each bit of solution, so they meet the zinc more often."
+        },
+        {
+          "text": "Using a larger volume of the same acid",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "5.10",
+      "file": "src/content/lessons/unit-5/5-10-multistep-reaction-energy-profile.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "One",
+          "message": "That is the count for a profile with two peaks. Count the gaps between neighboring peaks here."
+        },
+        {
+          "text": "Two",
+          "message": null
+        },
+        {
+          "text": "Three",
+          "message": "That is the number of peaks, and so of steps. A valley lies between two neighboring peaks."
+        },
+        {
+          "text": "Four",
+          "message": "There cannot be more valleys than peaks. Each valley lies between two neighboring peaks."
+        }
+      ]
+    },
+    {
+      "lesson": "5.10",
+      "file": "src/content/lessons/unit-5/5-10-multistep-reaction-energy-profile.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "55",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "35",
+          "from": "activation energy of step 2 measured from the reactants",
+          "message": "That is the height of the climb in step 2. Where does that climb start? Step 2 does not start at 0 kJ/mol."
+        },
+        {
+          "value": "95",
+          "from": "the two activation energies added",
+          "message": "Did you add the two activation energies? Step 2 starts at the intermediate, not at the first peak."
+        },
+        {
+          "value": "15",
+          "from": "energy change of step 1 subtracted",
+          "message": "Did you subtract the energy change of step 1? Its sign is +, so the intermediate lies above the reactants."
+        },
+        {
+          "value": "115",
+          "from": "60 + 20 + 35",
+          "message": "Did you add all three numbers? Step 1 ends at the intermediate, not at its peak, and step 2 climbs from there."
+        }
+      ]
+    },
+    {
+      "lesson": "5.10",
+      "file": "src/content/lessons/unit-5/5-10-multistep-reaction-energy-profile.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "85",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "110",
+          "from": "measured from the reactants",
+          "message": "That measures from the reactants. A later step starts at the valley before its peak."
+        },
+        {
+          "value": "60",
+          "from": "measured from the first peak",
+          "message": "That measures from the first peak. A step starts at a valley, not at a peak."
+        },
+        {
+          "value": "125",
+          "from": "measured from the products",
+          "message": "That is the climb from the products, which is step 2 run backward. Measure from where step 2 starts."
+        },
+        {
+          "value": "130",
+          "from": "energy of the second peak",
+          "message": "That is the energy of the second peak. An activation energy is a climb: the peak minus the level where the step starts."
+        },
+        {
+          "value": "50",
+          "from": "activation energy of step 1",
+          "message": "That is the activation energy of step 1. The question asks about step 2."
+        }
+      ]
+    },
+    {
+      "lesson": "5.10",
+      "file": "src/content/lessons/unit-5/5-10-multistep-reaction-energy-profile.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Step 1, because it comes first",
+          "message": "Coming first does not make a step the slow one. Compare the climbs of the two steps."
+        },
+        {
+          "text": "Step 2, because its activation energy is larger",
+          "message": null
+        },
+        {
+          "text": "Neither, because the reaction is exothermic",
+          "message": "The overall energy change says nothing about speed. Compare the activation energies of the steps."
+        },
+        {
+          "text": "Both equally",
+          "message": "The two steps do not have the same climb. Measure each activation energy from the level where its step starts."
+        }
+      ]
+    },
+    {
+      "lesson": "5.11",
+      "file": "src/content/lessons/unit-5/5-11-catalysis.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 4,
+      "moved": true,
+      "options": [
+        {
+          "text": "The overall energy change of the reaction",
+          "message": "The reactants and the products are the same substances with or without the catalyst, so the energy difference between them is the same."
+        },
+        {
+          "text": "How much product there is in the end",
+          "message": "A catalyst gets the reaction to the same end sooner. It does not change how much product that end holds."
+        },
+        {
+          "text": "The energy of the products",
+          "message": "The products are the same substances as before, so their energy is the same. Think about the path that leads to them."
+        },
+        {
+          "text": "The activation energy",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "5.11",
+      "file": "src/content/lessons/unit-5/5-11-catalysis.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "105",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "35",
+          "from": "stopped at the drop in the peak",
+          "message": "That is how far the catalyst lowers the peak. The question asks for the reverse activation energy with the catalyst."
+        },
+        {
+          "value": "140",
+          "from": "reverse barrier left unchanged",
+          "message": "Both directions climb to the same peak, and the catalyst lowers that peak. The reverse barrier cannot stay as it was."
+        },
+        {
+          "value": "175",
+          "from": "the drop added to the reverse barrier",
+          "message": "Did you add the change to the reverse barrier? The catalyst lowers the peak, and both directions climb to it."
+        },
+        {
+          "value": "80",
+          "from": "140 - 60",
+          "message": "Did you subtract the new forward activation energy? Find how far the peak dropped first."
+        },
+        {
+          "value": "45",
+          "from": "140 - 95, the energy difference between reactants and products",
+          "message": "That is the energy difference between the reactants and the products, which a catalyst does not change."
+        },
+        {
+          "value": "88.4",
+          "from": "reverse barrier scaled by 60/95",
+          "message": "Did you scale the barrier by a ratio? The peak drops by the same number of kJ/mol for both directions."
+        }
+      ]
+    },
+    {
+      "lesson": "5.11",
+      "file": "src/content/lessons/unit-5/5-11-catalysis.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Enzyme catalysis",
+          "message": "An enzyme is a protein that holds its reactant in an active site. Platinum is a metal."
+        },
+        {
+          "text": "Acid–base catalysis",
+          "message": "Acid–base catalysis works by moving a proton. Nothing here gives or takes a proton."
+        },
+        {
+          "text": "Surface catalysis",
+          "message": null
+        },
+        {
+          "text": "It is not catalysis, because platinum is a solid",
+          "message": "A catalyst can be a solid. What matters is that it makes the reaction faster and is not used up."
+        }
+      ]
+    },
+    {
+      "lesson": "5.2",
+      "file": "src/content/lessons/unit-5/5-2-rate-law.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "0",
+          "message": "Zero order means the rate does not change when the concentration of A changes. Here it does."
+        },
+        {
+          "text": "1",
+          "message": "First order means that doubling the concentration doubles the rate. Here the rate rises by more than that."
+        },
+        {
+          "text": "2",
+          "message": null
+        },
+        {
+          "text": "4",
+          "message": "Four is the factor the rate is multiplied by, not the order. The order is the power that 2 is raised to."
+        }
+      ]
+    },
+    {
+      "lesson": "5.2",
+      "file": "src/content/lessons/unit-5/5-2-rate-law.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "$\\text{s}^{-1}$",
+          "message": "Those are the units of k when the overall order is 1. Add up the orders in this rate law first."
+        },
+        {
+          "text": "$\\text{M}^{-1}\\,\\text{s}^{-1}$",
+          "message": null
+        },
+        {
+          "text": "$\\text{M}^{-2}\\,\\text{s}^{-1}$",
+          "message": "Those go with an overall order of 3. Divide M/s by one M for each concentration in the rate law."
+        },
+        {
+          "text": "$\\text{M}\\,\\text{s}^{-1}$",
+          "message": "Those are the units of the rate itself. Here k is multiplied by two concentrations to give the rate."
+        }
+      ]
+    },
+    {
+      "lesson": "5.2",
+      "file": "src/content/lessons/unit-5/5-2-rate-law.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "0.020",
+      "unit": "M/s",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.10",
+          "from": "the square left out",
+          "message": "Did you leave out the square? The rate law has the concentration of A squared."
+        },
+        {
+          "value": "0.20",
+          "from": "the concentration doubled, not squared",
+          "message": "Did you double the concentration of A where the rate law squares it? Squaring means the concentration times itself."
+        },
+        {
+          "value": "0.010",
+          "from": "k times the concentration, all squared",
+          "message": "Did you square k as well? The exponent belongs to the concentration of A alone."
+        },
+        {
+          "value": "0.040",
+          "from": "the concentration squared, k left out",
+          "message": "That is what the concentration of A squared gives on its own. Is k in your product?"
+        },
+        {
+          "value": "0.080",
+          "from": "the concentration squared divided by k",
+          "message": "Did you divide by k? In a rate law, k multiplies the concentration term."
+        }
+      ]
+    },
+    {
+      "lesson": "5.3",
+      "file": "src/content/lessons/unit-5/5-3-concentration-changes-over-time.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "0",
+          "message": "For zero order, the straight-line plot is [A] against time. Check which plot goes with which order."
+        },
+        {
+          "text": "1",
+          "message": "For first order, the straight-line plot is ln[A] against time. Check which plot goes with which order."
+        },
+        {
+          "text": "2",
+          "message": null
+        },
+        {
+          "text": "it cannot be told from one plot",
+          "message": "One straight plot is enough. Each order has its own straight-line plot, and for the other orders that plot is a curve."
+        }
+      ]
+    },
+    {
+      "lesson": "5.3",
+      "file": "src/content/lessons/unit-5/5-3-concentration-changes-over-time.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "30.0",
+      "unit": "min",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.0160",
+          "from": "0.693 multiplied by k",
+          "message": "Did you multiply 0.693 by k? The units should come out as minutes, so k goes underneath."
+        },
+        {
+          "value": "0.0333",
+          "from": "k divided by 0.693",
+          "message": "That is what k divided by 0.693 gives. Follow the units: the answer should come out in minutes."
+        },
+        {
+          "value": "43.3",
+          "from": "1/k",
+          "message": "That is what 1 divided by k gives. Check the number on top in the half-life equation."
+        },
+        {
+          "value": "21.6",
+          "from": "0.5/k",
+          "message": "Did you put 0.5 on top? The number in the half-life equation is ln 2, not one half."
+        },
+        {
+          "value": "13.0",
+          "from": "log base 10 of 2 in place of ln 2",
+          "message": "Did you use the log key? The number on top is the natural log of 2."
+        },
+        {
+          "value": "1800",
+          "from": "answer changed to seconds",
+          "message": "Did you change the answer to seconds? k is given in units of 1/min, so the half-life comes out in minutes."
+        }
+      ]
+    },
+    {
+      "lesson": "5.3",
+      "file": "src/content/lessons/unit-5/5-3-concentration-changes-over-time.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "0.40",
+      "unit": "M",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.20",
+          "from": "stopped at kt, the amount used up",
+          "message": "That is how much A has been used up in 10 s. The question asks how much is left."
+        },
+        {
+          "value": "0.80",
+          "from": "kt added",
+          "message": "Did you add where the equation subtracts? A is a reactant, so its concentration falls."
+        },
+        {
+          "value": "0.58",
+          "from": "the time left out",
+          "message": "Did you leave out the time? The rate constant is multiplied by the 10 s."
+        },
+        {
+          "value": "0.49",
+          "from": "first-order equation",
+          "message": "That is what the first-order equation gives. This reaction is zero order, so [A] falls along a straight line."
+        },
+        {
+          "value": "0.536",
+          "from": "second-order equation",
+          "message": "That is what the second-order equation gives. This reaction is zero order, so [A] falls along a straight line."
+        }
+      ]
+    },
+    {
+      "lesson": "5.3",
+      "file": "src/content/lessons/unit-5/5-3-concentration-changes-over-time.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "1/2",
+          "message": "That is what is left after one half-life. Compare 24 days with the half-life."
+        },
+        {
+          "text": "1/3",
+          "message": "Dividing the times gives the number of half-lives, not the fraction left. Each half-life cuts what is left in half again."
+        },
+        {
+          "text": "1/8",
+          "message": null
+        },
+        {
+          "text": "1/24",
+          "message": "That is 1 over the number of days. Count the half-lives in 24 days instead, and halve what is left for each one."
+        }
+      ]
+    },
+    {
+      "lesson": "5.4",
+      "file": "src/content/lessons/unit-5/5-4-elementary-reactions.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "$\\text{rate} = k[\\ce{Cl}]$",
+          "message": "The rate law of an elementary step counts each particle that collides in it. Is Cl the only one?"
+        },
+        {
+          "text": "$\\text{rate} = k[\\ce{O3}]$",
+          "message": "The rate law of an elementary step counts each particle that collides in it. Is O₃ the only one?"
+        },
+        {
+          "text": "$\\text{rate} = k[\\ce{Cl}][\\ce{O3}]$",
+          "message": null
+        },
+        {
+          "text": "$\\text{rate} = k[\\ce{ClO}][\\ce{O2}]$",
+          "message": "ClO and O₂ are the products of the step. Products never appear in the rate law of a step."
+        }
+      ]
+    },
+    {
+      "lesson": "5.4",
+      "file": "src/content/lessons/unit-5/5-4-elementary-reactions.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Unimolecular",
+          "message": "Molecularity counts particles, not kinds of substance. Look at the coefficient of NO."
+        },
+        {
+          "text": "Bimolecular",
+          "message": null
+        },
+        {
+          "text": "Termolecular",
+          "message": "Count the particles that collide, on the left of the arrow. The product is not counted."
+        },
+        {
+          "text": "It depends on the temperature",
+          "message": "Molecularity is a count of the particles that collide in the step. Temperature changes the rate, not that count."
+        }
+      ]
+    },
+    {
+      "lesson": "5.4",
+      "file": "src/content/lessons/unit-5/5-4-elementary-reactions.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 1,
+      "moved": true,
+      "options": [
+        {
+          "text": "The rate law of an elementary step can be written from its coefficients.",
+          "message": null
+        },
+        {
+          "text": "The rate law of any balanced equation can be written from its coefficients.",
+          "message": "The word any is too wide. An overall equation may stand for several steps, and then its orders have to be measured."
+        },
+        {
+          "text": "Termolecular steps cannot happen.",
+          "message": "Termolecular steps are rare, not impossible."
+        },
+        {
+          "text": "The molecularity of a step can be a fraction.",
+          "message": "A molecularity counts the particles that collide, so it is a whole number."
+        }
+      ]
+    },
+    {
+      "lesson": "5.5",
+      "file": "src/content/lessons/unit-5/5-5-collision-model.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 4,
+      "moved": true,
+      "options": [
+        {
+          "text": "The temperature is too low.",
+          "message": "Temperature matters through energy, and this collision had more than the activation energy. More energy would not have helped."
+        },
+        {
+          "text": "The collision was too slow.",
+          "message": "A slow collision is one with little energy, and this one had more than the activation energy."
+        },
+        {
+          "text": "The activation energy rose during the collision.",
+          "message": "The activation energy belongs to the reaction. It does not change during a collision."
+        },
+        {
+          "text": "They met in the wrong orientation.",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "5.5",
+      "file": "src/content/lessons/unit-5/5-5-collision-model.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "The whole curve moves up.",
+          "message": "A curve that is higher everywhere would hold more particles. The sample holds the same particles as before."
+        },
+        {
+          "text": "The area under the curve grows.",
+          "message": "Area under the curve stands for particles, and warming adds none. The total area stays the same."
+        },
+        {
+          "text": "The peak gets lower and moves to higher energy.",
+          "message": null
+        },
+        {
+          "text": "The activation energy moves to the left.",
+          "message": "The activation energy belongs to the reaction and does not move when the sample is warmed. The curve is what changes."
+        }
+      ]
+    },
+    {
+      "lesson": "5.5",
+      "file": "src/content/lessons/unit-5/5-5-collision-model.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Its particles collide more often.",
+          "message": null
+        },
+        {
+          "text": "A larger fraction of collisions have enough energy.",
+          "message": "That is what raising the temperature does. Concentration does not change how hard the particles hit."
+        },
+        {
+          "text": "The activation energy falls.",
+          "message": "The activation energy belongs to the reaction. Changing a concentration does not move it."
+        },
+        {
+          "text": "The particles line up better.",
+          "message": "Orientation is set by the shapes of the particles, and concentration does not change their shapes."
+        }
+      ]
+    },
+    {
+      "lesson": "5.6",
+      "file": "src/content/lessons/unit-5/5-6-reaction-energy-profile.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "The highest-energy arrangement of atoms along the path, which cannot be isolated",
+          "message": null
+        },
+        {
+          "text": "A substance that forms in one step and is used up in a later one",
+          "message": "That describes an intermediate, which topic 5.7 covers. Where on the energy profile is a transition state?"
+        },
+        {
+          "text": "The reactants at the moment they are mixed",
+          "message": "The reactants are where the profile starts. The transition state lies farther along the path."
+        },
+        {
+          "text": "The products just after they form",
+          "message": "The products are where the profile ends. The transition state comes before them on the path."
+        }
+      ]
+    },
+    {
+      "lesson": "5.6",
+      "file": "src/content/lessons/unit-5/5-6-reaction-energy-profile.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "110",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "50",
+          "from": "80 - 30",
+          "message": "Did you subtract the 30? Sketch the profile: a step that releases energy ends below where it started."
+        },
+        {
+          "value": "80",
+          "from": "forward activation energy typed back",
+          "message": "The reverse climb starts from the products, and they are not at the same energy as the reactants."
+        },
+        {
+          "value": "30",
+          "from": "the energy released typed back",
+          "message": "That is the energy difference between the reactants and the products. An activation energy is a climb to the transition state."
+        }
+      ]
+    },
+    {
+      "lesson": "5.6",
+      "file": "src/content/lessons/unit-5/5-6-reaction-energy-profile.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "55",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "135",
+          "from": "95 + 40",
+          "message": "Did you add the 40? Sketch the profile: a step that absorbs energy ends above where it started."
+        },
+        {
+          "value": "95",
+          "from": "forward activation energy typed back",
+          "message": "The reverse climb starts from the products, and they are not at the same energy as the reactants."
+        },
+        {
+          "value": "40",
+          "from": "the energy absorbed typed back",
+          "message": "That is the energy difference between the reactants and the products. An activation energy is a climb to the transition state."
+        }
+      ]
+    },
+    {
+      "lesson": "5.6",
+      "file": "src/content/lessons/unit-5/5-6-reaction-energy-profile.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 4,
+      "moved": true,
+      "options": [
+        {
+          "text": "Y, because it has more energy",
+          "message": "A larger activation energy is a higher barrier to get over, not more energy to react with."
+        },
+        {
+          "text": "They are equally fast, because the temperature is the same",
+          "message": "The same temperature gives both reactions the same spread of collision energies. Their barriers are not the same."
+        },
+        {
+          "text": "It depends on which releases more energy",
+          "message": "The energy released says where the products end up, not how high the barrier is."
+        },
+        {
+          "text": "X, because more collisions can get over its lower barrier",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "5.7",
+      "file": "src/content/lessons/unit-5/5-7-introduction-to-reaction-mechanisms.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "$\\ce{A + B -> D}$",
+          "message": "Count the A particles in both steps before you add the steps together."
+        },
+        {
+          "text": "$\\ce{2A + B -> D}$",
+          "message": null
+        },
+        {
+          "text": "$\\ce{A + B + C -> D}$",
+          "message": "C is made in step 1 and used up in step 2. Check what happens to a substance that is on both sides."
+        },
+        {
+          "text": "$\\ce{2A + B -> C + D}$",
+          "message": "C is made in step 1 and used up in step 2. Check what happens to a substance that is on both sides."
+        }
+      ]
+    },
+    {
+      "lesson": "5.7",
+      "file": "src/content/lessons/unit-5/5-7-introduction-to-reaction-mechanisms.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 4,
+      "moved": true,
+      "options": [
+        {
+          "text": "$\\ce{Cl2}$",
+          "message": "Cl₂ is there at the start, and no step makes it. An intermediate is made in one step and used up in a later one."
+        },
+        {
+          "text": "$\\ce{CHCl3}$",
+          "message": "CHCl₃ is used up in step 2, but no step makes it. That makes it a reactant."
+        },
+        {
+          "text": "$\\ce{HCl}$",
+          "message": "HCl is made in step 2, but no later step uses it up. That makes it a product."
+        },
+        {
+          "text": "$\\ce{CCl3}$",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "5.7",
+      "file": "src/content/lessons/unit-5/5-7-introduction-to-reaction-mechanisms.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 1,
+      "moved": true,
+      "options": [
+        {
+          "text": "Catalyst",
+          "message": null
+        },
+        {
+          "text": "Intermediate",
+          "message": "An intermediate is made first and used up later. Look at the order in which Cl is used and made."
+        },
+        {
+          "text": "Reactant",
+          "message": "A reactant is consumed. Check whether the Cl used in step 1 comes back in a later step."
+        },
+        {
+          "text": "Product",
+          "message": "A product is left over at the end. Cl is made in step 2, but step 1 used the same amount."
+        }
+      ]
+    },
+    {
+      "lesson": "5.8",
+      "file": "src/content/lessons/unit-5/5-8-reaction-mechanism-and-rate-law.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "$\\text{rate} = k[\\ce{A}][\\ce{B}]$",
+          "message": null
+        },
+        {
+          "text": "$\\text{rate} = k[\\ce{A}][\\ce{B}]^2$",
+          "message": "That copies the coefficients of the overall equation. Look at which particles collide in the slow step."
+        },
+        {
+          "text": "$\\text{rate} = k[\\ce{C}][\\ce{B}]$",
+          "message": "That is the rate law of step 2, the fast step. The rate of the reaction is the rate of the slow step."
+        },
+        {
+          "text": "$\\text{rate} = k[\\ce{A}]$",
+          "message": "More than one particle collides in the slow step. Each one puts its concentration into the rate law."
+        }
+      ]
+    },
+    {
+      "lesson": "5.8",
+      "file": "src/content/lessons/unit-5/5-8-reaction-mechanism-and-rate-law.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "$\\ce{X + Y -> products}$",
+          "message": "This step predicts rate = k[X][Y]. The measured rate law has no Y in it."
+        },
+        {
+          "text": "$\\ce{2X -> products}$",
+          "message": null
+        },
+        {
+          "text": "$\\ce{X -> products}$",
+          "message": "One X on its own predicts rate = k[X]. Compare that with the exponent in the measured rate law."
+        },
+        {
+          "text": "$\\ce{X + 2Y -> products}$",
+          "message": "This step predicts rate = k[X][Y]². The measured rate law has no Y in it."
+        }
+      ]
+    },
+    {
+      "lesson": "5.8",
+      "file": "src/content/lessons/unit-5/5-8-reaction-mechanism-and-rate-law.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "2",
+          "message": "That is the effect of doubling one concentration. Both are doubled, and each one is in the rate law."
+        },
+        {
+          "text": "3",
+          "message": "Each doubled concentration multiplies the rate by its own factor. Find the factor for each concentration, then multiply the two factors."
+        },
+        {
+          "text": "4",
+          "message": null
+        },
+        {
+          "text": "8",
+          "message": "That uses the coefficients of the overall equation as the orders. The orders come from the slow step."
+        }
+      ]
+    },
+    {
+      "lesson": "5.9",
+      "file": "src/content/lessons/unit-5/5-9-pre-equilibrium-approximation.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 1,
+      "moved": true,
+      "options": [
+        {
+          "text": "Its forward and reverse rates are equal.",
+          "message": null
+        },
+        {
+          "text": "It has stopped.",
+          "message": "Being at equilibrium does not mean that anything has stopped. The step is fast in both directions."
+        },
+        {
+          "text": "It is slower than the second step.",
+          "message": "The first step is the fast one here. The second step is the slow one."
+        },
+        {
+          "text": "It has used up all of its reactants.",
+          "message": "The step runs in both directions, so its reactants keep being made again. They are not all used up."
+        }
+      ]
+    },
+    {
+      "lesson": "5.9",
+      "file": "src/content/lessons/unit-5/5-9-pre-equilibrium-approximation.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "$\\text{rate} = k[\\ce{C}][\\ce{A}]$",
+          "message": "That is the rate law of the slow step, but C is an intermediate. Use step 1 to replace [C]."
+        },
+        {
+          "text": "$\\text{rate} = k[\\ce{A}]^2[\\ce{B}]$",
+          "message": null
+        },
+        {
+          "text": "$\\text{rate} = k[\\ce{A}]^2[\\ce{B}]^2$",
+          "message": "That copies the coefficients of the overall equation. Check which particles enter after the slow step."
+        },
+        {
+          "text": "$\\text{rate} = k[\\ce{A}][\\ce{B}]$",
+          "message": "That looks like step 1 alone. The rate comes from the slow step, with [C] replaced by what step 1 gives."
+        }
+      ]
+    },
+    {
+      "lesson": "5.9",
+      "file": "src/content/lessons/unit-5/5-9-pre-equilibrium-approximation.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "It doubles.",
+          "message": "That would put [O₂] on top of the rate law. Look at where it sits in the rate law for the ozone mechanism."
+        },
+        {
+          "text": "It does not change.",
+          "message": "A product can appear in a rate law, and here it does. Look at the rate law for the ozone mechanism."
+        },
+        {
+          "text": "It halves.",
+          "message": null
+        },
+        {
+          "text": "It falls to a quarter.",
+          "message": "That would need [O₂] squared. Check the power of [O₂] in the rate law for the ozone mechanism."
+        }
+      ]
+    }
+  ]
+}

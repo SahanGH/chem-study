@@ -113,3 +113,20 @@ Every Check with options has four options. 18 typed-number Checks have no `unit`
   - lesson 4.3 Check 3.
 - **The second check** passed all four.
 - **The sweep:** 137 wrong answers tried, no problems.
+
+### Unit 5
+
+- **The writer:** 123 messages (81 for options, 42 slips across 9 typed-number Checks). No Check in lesson 5.2 was moved, because the browser tests click its options by position.
+  - **Moves:** 6 at first; the session asked for two more to even the counts; the fact-check undid one (below). That leaves 7: lesson 5.4 Check 3; 5.5 Check 1; 5.6 Check 4; 5.7 Checks 2 and 3; 5.9 Check 1; 5.11 Check 1.
+  - Answers went from 3, 12, 11, 1 to 6, 8, 8, 5.
+  - No tolerance and no changed sentence.
+- **The first fact-check** found no MUST finding. It made four points, all taken:
+  - lesson 5.8 Check 3: "the effects are not added" misled, since adding the right factors happens to give the answer;
+  - lesson 5.3 Check 4: the message for 1/24 did not fit its mistake;
+  - lesson 5.5 Check 1: a message left only one option standing;
+  - lesson 5.11 Check 3: the extra move put "It is not catalysis" between the kinds of catalysis. The move was undone.
+- **The second check** found that lesson 5.5 Check 1's rewrite, and the message beside it, still left one option standing. Both were rewritten.
+- **Tests that changed:**
+  - `tests/unit/check-dist.test.ts` built its sample lessons in topic 5.2. With Unit 5 on the list they would need messages, so they moved to topic 6.2, a unit with no lessons. The test of the list now asks about Unit 6.
+  - The two browser tests that click lesson 5.2's first Check (`lesson.spec.ts`, `a11y.spec.ts`) expect that option's message.
+- **The sweep:** 123 wrong answers tried, no problems.

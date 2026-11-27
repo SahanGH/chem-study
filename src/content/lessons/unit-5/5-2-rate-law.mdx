@@ -68,7 +68,14 @@ Try it. Set an order, then move a concentration and see what the rate does.
 
 <RateLawExplorer />
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "Zero order means the rate does not change when the concentration of A changes. Here it does.",
+    2: "First order means that doubling the concentration doubles the rate. Here the rate rises by more than that.",
+    4: "Four is the factor the rate is multiplied by, not the order. The order is the power that 2 is raised to.",
+  }}
+>
 Doubling $[\ce{A}]$ makes a reaction four times faster. What is the order in A?
 
 - 0
@@ -138,7 +145,14 @@ A rate is a concentration divided by a time. Here that is M/s. For the two sides
 
 This works in reverse too. If you are told that $k$ has units of $\text{s}^{-1}$, the reaction must be first order overall.
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Those are the units of k when the overall order is 1. Add up the orders in this rate law first.",
+    3: "Those go with an overall order of 3. Divide M/s by one M for each concentration in the rate law.",
+    4: "Those are the units of the rate itself. Here k is multiplied by two concentrations to give the rate.",
+  }}
+>
 A rate law is $\text{rate} = k[\ce{A}][\ce{B}]$. What are the units of $k$?
 
 - $\text{s}^{-1}$
@@ -159,7 +173,17 @@ Three mistakes cost the most points on this topic:
 
 </Trap>
 
-<Check numeric="0.020" unit="M/s">
+<Check
+  numeric="0.020"
+  unit="M/s"
+  slips={{
+    "0.10": "Did you leave out the square? The rate law has the concentration of A squared.",
+    "0.20": "Did you double the concentration of A where the rate law squares it? Squaring means the concentration times itself.",
+    "0.010": "Did you square k as well? The exponent belongs to the concentration of A alone.",
+    "0.040": "That is what the concentration of A squared gives on its own. Is k in your product?",
+    "0.080": "Did you divide by k? In a rate law, k multiplies the concentration term.",
+  }}
+>
 A reaction has the rate law $\text{rate} = k[\ce{A}]^2$ with $k = 0.50\ \text{M}^{-1}\,\text{s}^{-1}$. What is the rate when $[\ce{A}] = 0.20\ \text{M}$?
 
 <div slot="why">

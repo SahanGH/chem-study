@@ -95,7 +95,14 @@ In all three you looked only at the left side of the arrow. The products never c
 
 </Worked>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "The rate law of an elementary step counts each particle that collides in it. Is Cl the only one?",
+    2: "The rate law of an elementary step counts each particle that collides in it. Is O₃ the only one?",
+    4: "ClO and O₂ are the products of the step. Products never appear in the rate law of a step.",
+  }}
+>
 Here is an elementary step:
 
 $$
@@ -112,7 +119,14 @@ Which rate law does it have?
 <div slot="why">One Cl atom and one $\ce{O3}$ molecule collide, so each concentration appears once. Products never appear in the rate law of a step.</div>
 </Check>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Molecularity counts particles, not kinds of substance. Look at the coefficient of NO.",
+    3: "Count the particles that collide, on the left of the arrow. The product is not counted.",
+    4: "Molecularity is a count of the particles that collide in the step. Temperature changes the rate, not that count.",
+  }}
+>
 What is the molecularity of the elementary step $\ce{2NO(g) -> N2O2(g)}$?
 
 - Unimolecular
@@ -131,11 +145,18 @@ Particles work the same way. Two of them meeting happens all the time. A third a
 
 That has a consequence. A balanced equation with four or more particles on the left cannot be a single event. The reaction must happen in several steps, one after another, and that is where topic 5.7 picks up. The reverse is not safe: $\ce{NO2 + CO}$ from topic 5.2 has only two particles on the left and still is not one step.
 
-<Check answer={2}>
+<Check
+  answer={1}
+  misses={{
+    2: "The word any is too wide. An overall equation may stand for several steps, and then its orders have to be measured.",
+    3: "Termolecular steps are rare, not impossible.",
+    4: "A molecularity counts the particles that collide, so it is a whole number.",
+  }}
+>
 Which statement is true?
 
-- The rate law of any balanced equation can be written from its coefficients.
 - The rate law of an elementary step can be written from its coefficients.
+- The rate law of any balanced equation can be written from its coefficients.
 - Termolecular steps cannot happen.
 - The molecularity of a step can be a fraction.
 

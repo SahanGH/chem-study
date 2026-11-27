@@ -22,7 +22,14 @@ An energy profile is a graph of that journey. The vertical axis is energy (exam 
 
 Read the curve from left to right. It starts level, at the energy of the reactants. It climbs to a peak, which is the transition state. Then it falls to the energy of the products. In this figure the products finish lower than the reactants started.
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "That describes an intermediate, which topic 5.7 covers. Where on the energy profile is a transition state?",
+    3: "The reactants are where the profile starts. The transition state lies farther along the path.",
+    4: "The products are where the profile ends. The transition state comes before them on the path.",
+  }}
+>
 Which describes a transition state?
 
 - The highest-energy arrangement of atoms along the path, which cannot be isolated
@@ -91,13 +98,29 @@ Check the three numbers against each other: $125 - 150 = -25$, which is the over
 
 </Worked>
 
-<Check numeric="110" unit="kJ/mol">
+<Check
+  numeric="110"
+  unit="kJ/mol"
+  slips={{
+    "50": "Did you subtract the 30? Sketch the profile: a step that releases energy ends below where it started.",
+    "80": "The reverse climb starts from the products, and they are not at the same energy as the reactants.",
+    "30": "That is the energy difference between the reactants and the products. An activation energy is a climb to the transition state.",
+  }}
+>
 A step has a forward activation energy of 80 kJ/mol and releases 30 kJ/mol overall. What is the activation energy of the reverse step?
 
 <div slot="why">The products are 30 kJ/mol below the reactants, so the climb back up to the transition state is $80 + 30 = 110\ \text{kJ/mol}$.</div>
 </Check>
 
-<Check numeric="55" unit="kJ/mol">
+<Check
+  numeric="55"
+  unit="kJ/mol"
+  slips={{
+    "135": "Did you add the 40? Sketch the profile: a step that absorbs energy ends above where it started.",
+    "95": "The reverse climb starts from the products, and they are not at the same energy as the reactants.",
+    "40": "That is the energy difference between the reactants and the products. An activation energy is a climb to the transition state.",
+  }}
+>
 A step has a forward activation energy of 95 kJ/mol and absorbs 40 kJ/mol overall. What is the activation energy of the reverse step?
 
 <div slot="why">The products are 40 kJ/mol above the reactants, so the climb back from the products to the transition state is shorter: $95 - 40 = 55\ \text{kJ/mol}$.</div>
@@ -124,13 +147,20 @@ Here $T$ is the temperature in kelvins, $R$ is the gas constant and $A$ is a con
 
 **Beyond the exam:** calculating with the Arrhenius equation is not assessed on the AP Exam, so learn what the equation shows and leave the number work alone.
 
-<Check answer={3}>
+<Check
+  answer={4}
+  misses={{
+    1: "A larger activation energy is a higher barrier to get over, not more energy to react with.",
+    2: "The same temperature gives both reactions the same spread of collision energies. Their barriers are not the same.",
+    3: "The energy released says where the products end up, not how high the barrier is.",
+  }}
+>
 Two reactions run at the same temperature and are alike except for their activation energies: 50 kJ/mol for X and 90 kJ/mol for Y. Which is faster?
 
 - Y, because it has more energy
 - They are equally fast, because the temperature is the same
-- X, because more collisions can get over its lower barrier
 - It depends on which releases more energy
+- X, because more collisions can get over its lower barrier
 
 <div slot="why">At one temperature the spread of collision energies is the same for both, so the lower barrier is crossed by a larger fraction of collisions.</div>
 </Check>

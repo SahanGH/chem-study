@@ -73,7 +73,14 @@ Show that the two-step mechanism for $\ce{NO2}$ and CO adds up to the overall eq
 
 </Worked>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Count the A particles in both steps before you add the steps together.",
+    3: "C is made in step 1 and used up in step 2. Check what happens to a substance that is on both sides.",
+    4: "C is made in step 1 and used up in step 2. Check what happens to a substance that is on both sides.",
+  }}
+>
 A reaction has this mechanism.
 
 | Step | Equation |
@@ -97,7 +104,14 @@ $\ce{NO3}$ is the pattern to remember. An intermediate is made in one step and u
 
 An intermediate is still a real substance. Its particles are in the mixture while the reaction runs, though they are usually short-lived and present in tiny amounts. That is what separates an intermediate from the transition state of topic 5.6. A transition state is not a substance. It is an arrangement of atoms at the top of an energy hill, and it lasts only an instant.
 
-<Check answer={3}>
+<Check
+  answer={4}
+  misses={{
+    1: "Cl₂ is there at the start, and no step makes it. An intermediate is made in one step and used up in a later one.",
+    2: "CHCl₃ is used up in step 2, but no step makes it. That makes it a reactant.",
+    3: "HCl is made in step 2, but no later step uses it up. That makes it a product.",
+  }}
+>
 A reaction has this mechanism.
 
 | Step | Equation |
@@ -110,8 +124,8 @@ Which of these is an intermediate?
 
 - $\ce{Cl2}$
 - $\ce{CHCl3}$
-- $\ce{CCl3}$
 - $\ce{HCl}$
+- $\ce{CCl3}$
 
 <div slot="why">$\ce{CCl3}$ is made in step 2 and used up in step 3, so it cancels out of the overall equation, $\ce{Cl2 + CHCl3 -> HCl + CCl4}$. Cl atoms are an intermediate too: step 1 makes two of them, and steps 2 and 3 use one each.</div>
 </Check>
@@ -147,7 +161,14 @@ That order is the whole rule:
 
 Both cancel out of the overall equation, so the order is what tells them apart. Of the substances that cancel completely, an intermediate first shows up on the right of an arrow and a catalyst first shows up on the left. And remember $\ce{NO2}$ in the worked example: count before you call something a catalyst. It has to come back in full.
 
-<Check answer={3}>
+<Check
+  answer={1}
+  misses={{
+    2: "An intermediate is made first and used up later. Look at the order in which Cl is used and made.",
+    3: "A reactant is consumed. Check whether the Cl used in step 1 comes back in a later step.",
+    4: "A product is left over at the end. Cl is made in step 2, but step 1 used the same amount.",
+  }}
+>
 A reaction has this mechanism.
 
 | Step | Equation |
@@ -157,9 +178,9 @@ A reaction has this mechanism.
 
 What is the role of Cl in the overall reaction?
 
-- Reactant
-- Intermediate
 - Catalyst
+- Intermediate
+- Reactant
 - Product
 
 <div slot="why">Cl is used in step 1 and made again, in full, in step 2, so none is consumed and it cancels out of the overall equation, $\ce{O3 + O -> 2O2}$. That makes it a catalyst, not a reactant. ClO is made in step 1 and then used up in step 2, so it is the intermediate.</div>
