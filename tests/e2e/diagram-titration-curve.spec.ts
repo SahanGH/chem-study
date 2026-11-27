@@ -640,6 +640,10 @@ test('the order is the graph and the bars, the slider, the choice of acid, the c
 test('at 320 × 568 the graph and the slider are on the screen together', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 568 });
   const diagram = await openDiagram(page, PAGE, NAME);
+  // Thymol blue adds the fourth line to the key under the graph (lactic acid shows four), the
+  // tallest the stack of graph, key, bars and slider gets.
+  await chooseIndicator(diagram, 'thymolBlue');
+  await expect(graph(diagram).locator('[data-key]')).toHaveCount(4);
   await graph(diagram).evaluate((element) => {
     window.scrollTo(0, element.getBoundingClientRect().top + window.scrollY - 8);
   });

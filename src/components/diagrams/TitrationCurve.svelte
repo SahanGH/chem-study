@@ -55,6 +55,12 @@
   // bar is 3.00 mmol, the most there can be.
   const BARS = { width: 320, height: 108 };
   const BAR = { nameRight: 120, left: 128, maxWidth: 120, height: 20, valueGap: 6, rows: [18, 54, 90] as const };
+  /** The y of a bar's row; a row that does not exist is an error, never a bar drawn at the top. */
+  function barRowY(index: number): number {
+    const y = BAR.rows[index];
+    if (y === undefined) throw new RangeError(`The bars have no row ${index}; they have ${BAR.rows.length}.`);
+    return y;
+  }
 
   // The ids are unique to this instance, so that two explorers on one page
   // cannot share a hatching or a group of radio buttons. $props.id() gives the
@@ -95,7 +101,7 @@
 
 {#snippet hatch(id: string)}
   <pattern {id} width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-    <line class="titration-curve-hatch-line" x1="0" y1="0" x2="0" y2="6" />
+    <line class="titration-curve-hatch-line" x1="3" y1="0" x2="3" y2="6" />
   </pattern>
 {/snippet}
 
@@ -220,7 +226,7 @@
         <line class="diagram-axis" x1={BAR.left} y1="4" x2={BAR.left} y2={BARS.height - 4} />
         {#each flask.rows as row, i (row.id)}
           <!-- Hydrobromic acid's OH⁻ bar keeps the third place, so that it lines up with lactic acid's. -->
-          {@const y = BAR.rows[row.id === 'excess' ? 2 : i] ?? 0}
+          {@const y = barRowY(row.id === 'excess' ? 2 : i)}
           {@const width = barWidth(row.micromoles)}
           <text class="diagram-label titration-curve-bar-name" data-bar-name={row.id} x={BAR.nameRight} {y} dy="0.35em" text-anchor="end"
             >{row.name}</text
@@ -231,7 +237,7 @@
           >
         {/each}
         {#if flask.spectators}
-          <text class="diagram-label" data-spectators x={BAR.left + BAR.valueGap} y={BAR.rows[1]} dy="0.35em">{flask.spectators}</text>
+          <text class="diagram-label" data-spectators x={BAR.left + BAR.valueGap} y={barRowY(1)} dy="0.35em">{flask.spectators}</text>
         {/if}
       </svg>
     </figure>

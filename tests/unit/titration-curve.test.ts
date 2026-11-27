@@ -458,6 +458,32 @@ describe('the model', () => {
     }
   });
 
+  it('has a pH at every setting that satisfies the charge balance, found here by a plain bisection, to 1e-6 in pH', () => {
+    // Written out in this file, from the lesson's numbers alone: 3,000 micromoles of acid in 20.0 mL,
+    // 200 micromoles of OH⁻ per mL, pKa 3.86, Kw 1e-14, volumes adding. The charge balance is
+    //   h + Na = Kw/h + A⁻, with A⁻ = C Ka/(Ka + h) for lactic acid and A⁻ = C for hydrobromic acid.
+    const ka = 10 ** -3.86;
+    const kw = 1e-14;
+    const residual = (acid: AcidId, h: number, c: number, na: number) =>
+      h + na - kw / h - (acid === 'lactic' ? (c * ka) / (ka + h) : c);
+    for (const { acid, volume } of everyState) {
+      const total = 20 + volume; // mL
+      const c = 3 / total; // mol/L: 3.000 mmol over the total volume
+      const na = (0.2 * volume) / total; // mol/L
+      // The residual rises with h, so bisect on the pH between 0 and 14 (h = 10^-pH): at pH 0 it is
+      // positive and at pH 14 negative.
+      let acidic = 0;
+      let basic = 14;
+      for (let i = 0; i < 200; i++) {
+        const mid = (acidic + basic) / 2;
+        if (residual(acid, 10 ** -mid, c, na) > 0) acidic = mid;
+        else basic = mid;
+      }
+      const expected = (acidic + basic) / 2;
+      expect(Math.abs(state(acid, volume).pH - expected), `${acid} at ${volume} mL: ${state(acid, volume).pH} against ${expected}`).toBeLessThan(1e-6);
+    }
+  });
+
   it('pHAt gives the same pH as the state at every setting, and is continuous between settings', () => {
     for (const { acid, volume } of everyState) expect(pHAt(acid, volume)).toBe(state(acid, volume).pH);
     expect(pHAt('lactic', 7.25)).toBeGreaterThan(state('lactic', 7).pH);
@@ -729,7 +755,8 @@ describe('the graph', () => {
     const inside = curve('lactic').filter((p) => p.volume > 15 / 11 && p.volume < 150 / 11);
     expect(mark).toHaveLength(inside.length + 2);
     // Near pKa − 1 and pKa + 1 at the two ends (the brief gives no pH there; these are the module's
-    // values, 2.90 and 4.86, a little off 2.86 and 4.86 where the acid's own ionization counts).
+    // values: 2.90 against 2.86 at the first end, where the acid's own ionization counts, and
+    // 4.86 against 4.86 at the second).
     expect(shownPH(mark[0]?.pH ?? 0)).toBe('2.90');
     expect(shownPH(mark.at(-1)?.pH ?? 0)).toBe('4.86');
     expect(Math.abs((mark[0]?.pH ?? 0) - (LACTIC_PKA - 1))).toBeLessThan(0.05);

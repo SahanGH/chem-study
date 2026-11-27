@@ -5,9 +5,12 @@
  * (`titration.ts`, which this module reads and does not change). No DOM
  * here, so it is testable directly.
  *
- * Amounts are kept in whole micromoles and volumes in whole microliters, as
- * in `titration.ts`: the slider moves in steps of 0.5 mL, which is 100
- * micromoles of OH⁻, so every amount is exact. They are divided only to form
+ * Amounts are kept in whole micromoles, as in `titration.ts`: the slider
+ * moves in steps of 0.5 mL, which is 100 micromoles of OH⁻, so every amount
+ * at a setting is exact. Volumes are in mL and are turned into microliters
+ * by multiplying by 1,000; between settings (the curve's points every 0.01
+ * mL) a volume is a float, so these microliters are floats too, which
+ * changes no pH by as much as 1e-11. The amounts are divided only to form
  * the concentrations the shared solver (`acid-base.ts`) takes, and micromoles
  * over microliters is moles per liter. The solver finds [H₃O⁺] from the one
  * charge balance, water's own ions included, so no stretch of the curve has a
