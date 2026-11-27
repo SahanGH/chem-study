@@ -1,0 +1,380 @@
+---
+title: "Free-response set"
+kind: free-response
+order: 6
+topics: ["6.1", "6.2", "6.3", "6.4", "6.5", "6.7", "6.8", "6.9"]
+summary: Five free-response questions on Unit 6, two long and three short, each with a worked answer and its scoring rubric.
+points: 32
+minutes: 50
+---
+
+This set covers Unit 6: topics 6.1 to 6.5 and 6.7 to 6.9. Unit 6 is worth 7 to 9 percent of the AP exam.
+
+There are 5 questions worth 32 points. Give yourself about 50 minutes. You may use a calculator. Write out each answer in full before you open the worked answer and the scoring rubric.
+
+Use these values for water, $\ce{H2O}$:
+
+- specific heat capacity, $c$: 4.18 J/(g·°C)
+- enthalpy of fusion, $\Delta H_\text{fus}$: 334 J/g
+- enthalpy of vaporization, $\Delta H_\text{vap}$: 2,260 J/g
+
+The last two are for one gram. They are water's molar values, 6.02 and 40.7 kJ/mol, divided by its molar mass, 18.02 g/mol, and rounded to three significant figures.
+
+A $\Delta H$ written beside an equation is for the equation as written.
+
+The difference between enthalpy and the energy of the system is not on the AP exam, and nothing here asks for it. Hess's law itself is on the exam.
+
+## Questions
+
+<Question number={1} title="Calorimetry" topic="6.3, 6.4" points={10}>
+
+A 75.0 g block of an unknown metal is heated to 98.0 °C and dropped into 150.0 g of water at 22.0 °C in an insulated calorimeter. The final temperature of both is 24.6 °C.
+
+<Part label="a">
+
+State the direction of heat flow and the sign of $q$ for the water and for the metal.
+
+<Answer>
+
+Heat flows from the **metal** (hotter) to the **water** (cooler), until both reach the same temperature. $q_\text{water}$ is **positive**: it gains energy. $q_\text{metal}$ is **negative**: it loses the same amount.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the heat gained by the water.
+
+<Answer>
+
+$$
+\begin{aligned}
+\Delta T &= 24.6 - 22.0 \\
+&= 2.6\ \text{°C}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+q &= mc\Delta T \\
+&= (150.0)(4.18)(2.6) \\
+&= \mathbf{1.63 \times 10^{3}}\ \text{J}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate the specific heat capacity of the metal.
+
+<Answer>
+
+The metal lost what the water gained, so its $q$ is negative:
+
+$$
+\begin{aligned}
+q_\text{metal} &= -q_\text{water} \\
+&= -1{,}630\ \text{J}
+\end{aligned}
+$$
+
+The metal cooled from 98.0 °C to 24.6 °C. Its temperature change is final minus initial:
+
+$$
+\begin{aligned}
+\Delta T &= 24.6 - 98.0 \\
+&= -73.4\ \text{°C}
+\end{aligned}
+$$
+
+That is a fall of 73.4 °C, *not* 2.6 °C.
+
+$$
+\begin{aligned}
+c &= \frac{q}{m\Delta T} \\
+&= \frac{-1{,}630}{(75.0)(-73.4)} \\
+&= \mathbf{0.296}\ \text{J/(g·°C)}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+The water's temperature rose only 2.6 °C while the metal fell 73.4 °C, for the same quantity of heat. Explain.
+
+<Answer>
+
+Water has a much larger specific heat capacity, about fourteen times the metal's, and there is twice as much of it by mass. The same energy therefore produces a far smaller temperature change in the water. The water's $m \times c$, the energy needed to warm the whole sample by 1 °C, is much the larger of the two.
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+State one assumption made in this calculation.
+
+<Answer>
+
+That the calorimeter is perfectly insulated, so all the heat lost by the metal is gained by the water and none escapes to the surroundings or is absorbed by the container.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the direction of flow; 1 point for both signs.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $mc\Delta T$ with $\Delta T = 2.6$; 1 point for $1.63 \times 10^{3}\ \text{J}$.</RubricLine>
+<RubricLine part="c" points={3}>1 point for equating heat lost to heat gained; 1 point for using the metal's own temperature change, a fall of 73.4 °C; 1 point for 0.296 J/(g·°C). Using 2.6 °C for the metal caps this part at 1.</RubricLine>
+<RubricLine part="d" points={2}>1 point for water's larger specific heat capacity; 1 point for the larger mass or the larger $mc$.</RubricLine>
+<RubricLine part="e" points={1}>Any valid isolation assumption.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={2} title="Hess's law, formation and bond enthalpies" topic="6.7, 6.8, 6.9" points={10}>
+
+Consider these data at 298 K:
+
+| Reaction | $\Delta H^\circ$ (kJ) |
+|---|---|
+| $\ce{N2(g) + O2(g) -> 2NO(g)}$ | $+180.5$ |
+| $\ce{2NO(g) + O2(g) -> 2NO2(g)}$ | $-114.1$ |
+
+<Part label="a">
+
+Use Hess's law to find $\Delta H^\circ$ for this reaction:
+
+$$
+\ce{N2(g) + 2O2(g) -> 2NO2(g)}
+$$
+
+<Answer>
+
+The two equations add directly. The $\ce{2NO}$ produced by the first is consumed by the second and cancels, and the oxygens sum to $\ce{2O2}$:
+
+$$
+\begin{aligned}
+\Delta H^\circ &= (+180.5) + (-114.1) \\
+&= \mathbf{+66.4}\ \text{kJ}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Hence determine $\Delta H_f^\circ$ for $\ce{NO2(g)}$, and explain the relationship.
+
+<Answer>
+
+The reaction in part (a) forms **two** moles of $\ce{NO2}$ from its elements in their standard states, so its enthalpy change equals $2\,\Delta H_f^\circ(\ce{NO2})$.
+
+$$
+\begin{aligned}
+\Delta H_f^\circ &= \frac{66.4\ \text{kJ}}{2\ \text{mol}} \\
+&= \mathbf{+33.2}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+State $\Delta H^\circ$ for this reaction and justify:
+
+$$
+\ce{2NO2(g) -> 2NO(g) + O2(g)}
+$$
+
+<Answer>
+
+$\Delta H^\circ$ is $+114.1$ kJ. Reversing a reaction reverses the direction of energy flow, so the size is unchanged and the sign flips.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Using these values from a table of average bond enthalpies, $\ce{N#N}$ 941, $\ce{O=O}$ 495 and, for the bond in $\ce{NO}$, the table's value for a nitrogen–oxygen double bond, 607 kJ/mol, estimate $\Delta H$ for the reaction below and compare with the tabulated $+180.5$ kJ.
+
+$$
+\ce{N2(g) + O2(g) -> 2NO(g)}
+$$
+
+<Answer>
+
+Bonds broken:
+
+$$
+941 + 495 = 1{,}436\ \text{kJ}
+$$
+
+Bonds formed:
+
+$$
+2(607) = 1{,}214\ \text{kJ}
+$$
+
+$$
+\begin{aligned}
+\Delta H &\approx 1{,}436 - 1{,}214 \\
+&= \mathbf{+222}\ \text{kJ}
+\end{aligned}
+$$
+
+That is about 40 kJ above the tabulated $+180.5$ kJ. The gap comes from the value used for the bond in $\ce{NO}$. It is a table's average for a nitrogen–oxygen double bond in other compounds, and the bond in $\ce{NO}$ itself is stronger, so the value does not fit this molecule well. The values for the bonds in nitrogen and oxygen are those molecules' own. So a value computed this way is only an estimate: the sign and rough size are right, the precise figure is not.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the equations adding with $\ce{NO}$ canceling; 1 point for $+66.4$ kJ.</RubricLine>
+<RubricLine part="b" points={3}>1 point for recognizing that the reaction forms 2 mol from elements in standard states; 1 point for dividing by 2; 1 point for $+33.2$ kJ/mol.</RubricLine>
+<RubricLine part="c" points={2}>1 point for $+114.1$ kJ; 1 point for the sign-reversal reason.</RubricLine>
+<RubricLine part="d" points={3}>1 point for the bonds broken; 1 point for the bonds formed and the subtraction in the correct sense; 1 point for noting that a table value is an average, or does not fit this molecule, so the result is an estimate. Reversing the subtraction gives $-222$ and caps this at 1.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={3} title="An endothermic process and its energy diagram" topic="6.1, 6.2" points={4}>
+
+Barium hydroxide octahydrate and ammonium chloride are mixed in a beaker. The beaker becomes so cold that it freezes to a wet block of wood.
+
+<Part label="a">
+
+State the sign of $\Delta H$ and explain the direction of heat flow.
+
+<Answer>
+
+$\Delta H$ is **positive**: the process is endothermic. Energy flows *from* the surroundings (the beaker, the wood, the air) *into* the reacting mixture, so the surroundings lose energy and their temperature falls.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Describe the energy diagram for this reaction.
+
+<Answer>
+
+The products lie **above** the reactants, since the system absorbed energy. The vertical gap between them is $\Delta H$, and it is positive. An arrow from the reactants' level to the products' level points up.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for positive or endothermic; 1 point for heat flowing from the surroundings into the system. "It releases cold" earns 0.</RubricLine>
+<RubricLine part="b" points={2}>1 point for products above reactants; 1 point for the gap identified as $\Delta H$.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={4} title="Energy of phase changes" topic="6.5" points={4}>
+
+<Part label="a">
+
+Calculate the total energy needed to convert 25.0 g of ice at 0 °C into steam at 100 °C.
+
+<Answer>
+
+Melt the ice:
+
+$$
+\begin{aligned}
+(25.0)(334) &= 8{,}350\ \text{J} \\
+&= 8.35\ \text{kJ}
+\end{aligned}
+$$
+
+Heat the water from 0 to 100 °C:
+
+$$
+\begin{aligned}
+&(25.0)(4.18)(100) \\
+&= 10{,}450\ \text{J} \\
+&= 10.45\ \text{kJ}
+\end{aligned}
+$$
+
+Vaporize the water:
+
+$$
+\begin{aligned}
+(25.0)(2{,}260) &= 56{,}500\ \text{J} \\
+&= 56.5\ \text{kJ}
+\end{aligned}
+$$
+
+The total of the three steps is $\mathbf{75.3}$ kJ.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+State which step requires the most energy and why.
+
+<Answer>
+
+**Vaporization.** Melting only breaks up the ordered arrangement of the ice, and the molecules stay in contact. Vaporizing must separate them completely, overcoming essentially all the remaining intermolecular attractions.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for each of the three steps computed correctly, with each phase-change term as grams times a per-gram value, or moles times a molar value, and no $\Delta T$.</RubricLine>
+<RubricLine part="b" points={1}>Vaporization, justified by having to separate the molecules completely.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={5} title="Heat transfer and thermal equilibrium" topic="6.3" points={4}>
+
+<Part label="a">
+
+Two blocks at different temperatures are placed in contact and isolated. Describe what happens at the particle level until they reach thermal equilibrium.
+
+<Answer>
+
+Particles of the hotter block have the greater average kinetic energy. At the boundary they collide with particles of the cooler block and transfer energy to them. The hotter block's average kinetic energy falls and the cooler block's rises, until both have the same average kinetic energy, which means the same temperature. Collisions continue, but with no further *net* transfer.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+State whether the two blocks must contain the same amount of thermal energy at equilibrium, and why.
+
+<Answer>
+
+No. They share the same *temperature*, but total thermal energy also depends on mass and specific heat capacity, which may differ between the blocks.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for energy transferred by particle collisions at the boundary; 1 point for equal average kinetic energy defining equilibrium.</RubricLine>
+<RubricLine part="b" points={2}>1 point for "no"; 1 point for temperature not being the same thing as total thermal energy.</RubricLine>
+</Rubric>
+
+</Question>
