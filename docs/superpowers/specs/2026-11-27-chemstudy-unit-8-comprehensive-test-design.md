@@ -352,3 +352,51 @@ build check already exist.
 - Both pages fit a phone at 320 px with every answer open, no equation
   scrolls in its box, and both pass the browser tests' accessibility checks.
 - `npm test` passes, the American-English check among it.
+
+## 11. As built (2026-11-27)
+
+- **The two pages:** session 1 has 20 questions and 103 points in 105
+  minutes (Parts A to D, topics 8.1 to 8.5); session 2 has 19 questions and
+  91 points in 95 minutes (Parts E to H, topics 8.6 to 8.11). Part D came
+  out one point over its target because question 19 needs two full
+  calculations in two of its parts.
+- **Beyond the exam:** one part only, question 14(d) of session 2 (the pH
+  of a ready-made buffer after an addition), labeled on the page.
+- **What the checks found.** Each part had a fact-check, an originality
+  check and a second check of the corrected text. No fact-check found a
+  wrong number or wrong chemistry in an answer. The corrections were:
+  rubric ranges that shut out an answer an earlier line accepted; stems
+  that printed what an earlier part asked for; a one-sided error in
+  question 16 of session 1 that let the molar mass alone decide; a
+  definition in question 18 of session 2 that read two ways.
+- **Rewritten after the originality check:** session 1, question 16(b)
+  (the reading is now at 9.00 mL, not at the halfway point) and question
+  19(a) and (c); session 2, question 4(c) (two rival counts tested on every
+  pair), question 9(b) (two samples poured together), question 17 (now
+  three parts, with a solubility product found from the table) and
+  question 19(d).
+- **Layout:** five chemical equations with long formulas are set on three
+  rows so that they fit a 320 px phone.
+- **Values the checkers could not confirm to the last figure** (all from
+  memory; no answer depends on the last figure):
+
+| Where | Value | Doubt |
+|---|---|---|
+| Session 1, question 8 | dimethylamine K_b 5.4 × 10⁻⁴ | textbooks range from 5.1 to 5.9 |
+| Session 1, question 10 | mandelic acid, 3.1 percent ionized (K_a 4.0 × 10⁻⁴) | 3.9 × 10⁻⁴ in one table |
+| Session 1, question 13 | imidazolium ion pK_a 6.99 (not printed) | 6.95 to 7.05 |
+| Session 1, question 16 | butanoic acid pK_a 4.82; hexanoic acid 4.88 | 4.82 to 4.83; 4.85 to 4.88 |
+| Session 1, question 18 | diethanolammonium ion pK_a 8.88 | 8.88 to 8.96 |
+| Session 2, question 4 | periodic acid pK_a 3.29; telluric acid 7.68; arsenic acid about 2.2 | one handbook lists 1.64 for periodic acid; 7.68 is at 18 °C |
+| Session 2, question 7 | ranges of cresol red, thymolphthalein, alizarin yellow R | tables differ by 0.1 to 0.2 |
+| Session 2, question 17 | HSCN "behaves as a strong acid"; zinc carbonate's solubility is made up | sources disagree on HSCN's pK_a |
+| Session 2, question 18 | HSO₃⁻ pK_a 7.20; HBrO₃ taken as strong | 7.17 to 7.21 |
+| Session 2, question 19 | Mn(OH)₂ K_sp 2.0 × 10⁻¹³, with "take" | 1.6 to 2.1 × 10⁻¹³ |
+
+- **Simplifications a question states:** question 17 of session 2 follows
+  chromate only as far as HCrO₄⁻ (with dichromate the acid-column value
+  would be about 8 percent higher); question 18 follows sulfite only as
+  far as HSO₃⁻.
+- **For the tests to come:** an assembler should take its output folder as
+  an argument from the first run; a display that holds a chemical equation
+  with a formula in parentheses needs a row per species at 320 px.

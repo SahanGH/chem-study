@@ -1,0 +1,3657 @@
+---
+title: "Comprehensive test, session 1: acids, bases and their reactions"
+kind: test
+order: 8
+topics: ["8.1", "8.2", "8.3", "8.4", "8.5"]
+summary: Twenty scored free-response questions on water and pH, strong and weak acids and bases, acid–base reactions and titrations, each with a worked answer and its scoring rubric.
+points: 103
+minutes: 105
+---
+
+This is the first of two sittings that together test all of Unit 8. It covers topics 8.1 to 8.5: water, pH and pOH, strong acids and strong bases, weak acids and weak bases, what a flask holds after an acid meets a base, and titrations. Session 2 covers molecular structure, pH and p$K_a$, indicators, buffers, buffer capacity, and pH and solubility.
+
+There are 20 questions worth 103 points. Give yourself about 105 minutes, and use a calculator, the periodic table and the equation sheet, as on the AP exam. Every question gives the values it needs. Every solution is at 25 °C unless a question says otherwise, so $K_w = 1.0 \times 10^{-14}$. This site writes H₃O⁺; the exam's equation sheet writes H⁺ for the same ion, and either is accepted. Try each part on paper before you open its answer, then score yourself with the rubric.
+
+## Part A: Water, pH, and strong acids and bases
+
+Five questions on water's own equilibrium and on solutions of strong acids and strong bases. You will find a $K_w$ from a meter reading, test a log sheet for entries that cannot both be right, mix and dilute solutions to reach a wanted pH, and rank three bases in two ways.
+
+<Question number={1} title="Pure water in a cold room" topic="8.1" points={5}>
+
+A purifying unit stands in a cold room and delivers very pure water. A pH meter dipped into the water as it leaves the unit reads 7.08. The water is at the temperature of the room, and it holds nothing but water.
+
+Use these values of $K_w$.
+
+| Temperature | $K_w$ |
+|---|---|
+| 10 °C | $2.9 \times 10^{-15}$ |
+| 20 °C | $6.8 \times 10^{-15}$ |
+| 25 °C | $1.0 \times 10^{-14}$ |
+| 30 °C | $1.5 \times 10^{-14}$ |
+| 40 °C | $2.9 \times 10^{-14}$ |
+
+<Part label="a">
+
+Calculate $[\ce{H3O+}]$ in the water, and calculate $K_w$ at the temperature of the room.
+
+<Answer>
+
+Undo the logarithm.
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= 10^{-7.08} \\
+&= \mathbf{8.3 \times 10^{-8}}\ \text{M}
+\end{aligned}
+$$
+
+The water is pure. Every H₃O⁺ ion in it was made together with one OH⁻ ion, when one water molecule passed a proton to another. So $[\ce{OH-}]$ is $8.3 \times 10^{-8}$ M too.
+
+$K_w$ is the product of the two concentrations. Keep the unrounded $8.32 \times 10^{-8}$:
+
+$$
+\begin{aligned}
+K_w &= [\ce{H3O+}][\ce{OH-}] \\
+&= (8.32 \times 10^{-8})^2 \\
+&= \mathbf{6.9 \times 10^{-15}}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Identify the temperature in the table that the room is nearest. Then state whether the water is acidic, basic or neutral, and justify that with the two concentrations.
+
+<Answer>
+
+The room is nearest **20 °C**. The value found, $6.9 \times 10^{-15}$, lies between the rows for 10 °C and 25 °C, and it is almost the 20 °C row's $6.8 \times 10^{-15}$. The small gap comes from the meter, which reads to two decimal places: neutral water with a $K_w$ of $6.8 \times 10^{-15}$ has a pH of 7.08 too.
+
+The water is **neutral**. Its $[\ce{H3O+}]$ and its $[\ce{OH-}]$ are equal, $8.3 \times 10^{-8}$ M each, and equal concentrations are what neutral means.
+
+The reading of 7.08 does not make the water basic. A neutral solution has a pH of 7.00 only where $K_w$ is $1.0 \times 10^{-14}$, at 25 °C. In this room, 7.08 is the pH of neutral water.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A trace of nitric acid gets into a sample of this water. The temperature does not change, and $[\ce{H3O+}]$ rises to $3.0 \times 10^{-6}$ M. Using your $K_w$ from part a, calculate $[\ce{OH-}]$, the pH and the pOH of the sample. Then add the pH and the pOH, and explain why the sum is not 14.00.
+
+<Answer>
+
+The product of the two concentrations is still $K_w$ for this temperature. Keep the unrounded $6.92 \times 10^{-15}$:
+
+$$
+\begin{aligned}
+[\ce{OH-}] &= \frac{K_w}{[\ce{H3O+}]} \\
+&= \frac{6.92 \times 10^{-15}}{3.0 \times 10^{-6}} \\
+&= \mathbf{2.3 \times 10^{-9}}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(3.0 \times 10^{-6}) \\
+&= \mathbf{5.52}
+\end{aligned}
+$$
+
+The pOH comes from $[\ce{OH-}]$, with the unrounded $2.31 \times 10^{-9}$:
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(2.31 \times 10^{-9}) \\
+&= \mathbf{8.64}
+\end{aligned}
+$$
+
+The sum:
+
+$$
+5.52 + 8.64 = \mathbf{14.16}
+$$
+
+The pH and the pOH of a solution add to $\text{p}K_w$, the negative logarithm of $K_w$. That is 14.00 only where $K_w$ is $1.0 \times 10^{-14}$, at 25 °C. Here $K_w$ is smaller, so $\text{p}K_w$ is larger:
+
+$$
+\begin{aligned}
+\text{p}K_w &= -\log(6.92 \times 10^{-15}) \\
+&= 14.16
+\end{aligned}
+$$
+
+The meter said the same thing before any acid was there. In the pure water the pH and the pOH were both 7.08, and twice 7.08 is 14.16.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $[\ce{H3O+}]$ of $8.3 \times 10^{-8}$ M; 1 point for $K_w$ of $6.9 \times 10^{-15}$, found by squaring that concentration because the two ions are equal in pure water (or as 10 raised to the power −14.16, because the pOH equals the pH). A value copied from the table with no calculation does not earn the second point.</RubricLine>
+<RubricLine part="b" points={1}>1 point for 20 °C together with neutral, justified by the equal concentrations of the two ions (or by the ions of pure water being made in pairs). "Neutral because the pH is close to 7" and "basic because the pH is above 7" earn 0 points.</RubricLine>
+<RubricLine part="c" points={2}>1 point for $[\ce{OH-}]$ of $2.3 \times 10^{-9}$ M, from the $K_w$ of part a divided by $3.0 \times 10^{-6}$ M (the 20 °C row's value gives the same two figures and earns the point; using $1.0 \times 10^{-14}$ gives $3.3 \times 10^{-9}$ M and does not); 1 point for the pH, 5.52, the pOH, 8.64, and their sum, 14.16, each within 0.02, with the reason that the sum is $\text{p}K_w$ for this temperature and is 14.00 only at 25 °C. A pOH found as 14.00 minus the pH (8.48) does not earn the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={2} title="A log sheet that does not add up" topic="8.1" points={5}>
+
+A technician at a plating shop tests the rinse water from four tanks. The log sheet says that every sample was at 25 °C. For each sample the sheet has two entries. (The entries are made up for this question.)
+
+- Sample 1: a pH of 8.30, and $[\ce{OH-}]$ of $2.0 \times 10^{-6}$ M
+- Sample 2: $[\ce{H3O+}]$ of $4.0 \times 10^{-5}$ M, and a pOH of 9.60
+- Sample 3: a pH of 6.80, and a pOH of 6.80
+- Sample 4: $[\ce{H3O+}]$ of $2.5 \times 10^{-9}$ M, and $[\ce{OH-}]$ of $4.0 \times 10^{-6}$ M
+
+Use these values: $K_w$ is $2.9 \times 10^{-15}$ at 10 °C, $1.0 \times 10^{-14}$ at 25 °C, $1.5 \times 10^{-14}$ at 30 °C and $2.9 \times 10^{-14}$ at 40 °C.
+
+<Part label="a">
+
+For each sample, test whether its two entries agree with each other at 25 °C. Identify the sample whose entries do not.
+
+<Answer>
+
+At 25 °C the two concentrations multiply to $1.0 \times 10^{-14}$, and the pH and the pOH add to 14.00. Either test will do. Use whichever is one step away from the entries.
+
+Sample 1. The hydroxide entry gives a pOH:
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(2.0 \times 10^{-6}) \\
+&= 5.70
+\end{aligned}
+$$
+
+$$
+8.30 + 5.70 = 14.00
+$$
+
+Sample 2. The hydronium entry gives a pH:
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(4.0 \times 10^{-5}) \\
+&= 4.40
+\end{aligned}
+$$
+
+$$
+4.40 + 9.60 = 14.00
+$$
+
+Sample 3. Both entries are ready to add:
+
+$$
+6.80 + 6.80 = 13.60
+$$
+
+Sample 4. Both entries are ready to multiply:
+
+$$
+\begin{aligned}
+&(2.5 \times 10^{-9})(4.0 \times 10^{-6}) \\
+&= 1.0 \times 10^{-14}
+\end{aligned}
+$$
+
+Samples 1, 2 and 4 agree with $K_w$ at 25 °C. **Sample 3 does not:** its pH and pOH add to 13.60, not 14.00.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Rank the four samples from the highest $[\ce{OH-}]$ to the lowest. Show the value for each, taken from the sample's hydroxide entry or its pOH entry.
+
+<Answer>
+
+Samples 1 and 4 have $[\ce{OH-}]$ on the sheet. Samples 2 and 3 have a pOH, and undoing the logarithm gives the concentration.
+
+Sample 2:
+
+$$
+\begin{aligned}
+[\ce{OH-}] &= 10^{-9.60} \\
+&= 2.5 \times 10^{-10}\ \text{M}
+\end{aligned}
+$$
+
+Sample 3:
+
+$$
+\begin{aligned}
+[\ce{OH-}] &= 10^{-6.80} \\
+&= 1.6 \times 10^{-7}\ \text{M}
+\end{aligned}
+$$
+
+| Sample | $[\ce{OH-}]$ in M |
+|---|---|
+| 4 | $4.0 \times 10^{-6}$ |
+| 1 | $2.0 \times 10^{-6}$ |
+| 3 | $1.6 \times 10^{-7}$ |
+| 2 | $2.5 \times 10^{-10}$ |
+
+From highest to lowest: **sample 4, sample 1, sample 3, sample 2**.
+
+None of these four values needed $K_w$. Each came from a hydroxide entry or from a pOH, so the ranking stands whatever the temperature of sample 3 was.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The technician tests sample 3 again and finds that both of its entries are right. So something else on the sheet is wrong for that sample. Calculate $K_w$ for sample 3. State whether the sample was warmer or colder than 25 °C, and whether it was acidic, basic or neutral. Justify each.
+
+<Answer>
+
+The pH and the pOH of any water solution add to $\text{p}K_w$. For sample 3 that is 13.60, so:
+
+$$
+\begin{aligned}
+K_w &= 10^{-13.60} \\
+&= \mathbf{2.5 \times 10^{-14}}
+\end{aligned}
+$$
+
+The same value comes from the concentrations. A pH of 6.80 and a pOH of 6.80 each mean $1.6 \times 10^{-7}$ M, and the square of the unrounded $1.58 \times 10^{-7}$ is $2.5 \times 10^{-14}$.
+
+The sample was **warmer than 25 °C**. Its $K_w$ is larger than $1.0 \times 10^{-14}$, and the values given show $K_w$ rising with temperature. It lies between the values for 30 °C and 40 °C, so the sample was between those two temperatures.
+
+The sample was **neutral**. Its pH equals its pOH, so $[\ce{H3O+}]$ equals $[\ce{OH-}]$. A pH of 6.80 would be acidic at 25 °C. In this warm sample it is the pH of neutral water.
+
+So the wrong entry was the temperature. The two readings were right all along.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for a sound test shown for the samples that agree: the pH and the pOH adding to 14.00, or the two concentrations multiplying to $1.0 \times 10^{-14}$ (all three of samples 1, 2 and 4 tested; either route may be used for each); 1 point for naming sample 3 with its sum, 13.60, or with its product, $2.5 \times 10^{-14}$. Naming sample 3 with its sum and testing no other sample earns the second point only.</RubricLine>
+<RubricLine part="b" points={1}>1 point for the order 4, 1, 3, 2 with the hydroxide concentrations of samples 3 and 2 shown ($1.6 \times 10^{-7}$ M and $2.5 \times 10^{-10}$ M). Ranking by pOH from lowest to highest, with the four pOH values shown (5.40, 5.70, 6.80, 9.60), also earns the point. The order with no values earns 0 points.</RubricLine>
+<RubricLine part="c" points={2}>1 point for $K_w$ of $2.5 \times 10^{-14}$, from the sum 13.60 or from the square of $1.6 \times 10^{-7}$ M (the rounded concentration gives $2.6 \times 10^{-14}$, which is accepted); 1 point for both warmer, because this $K_w$ is larger than the value at 25 °C, and neutral, because the pH equals the pOH or the two concentrations are equal. "Acidic because the pH is below 7" does not earn the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={3} title="Two etching baths, mixed" topic="8.2" points={4}>
+
+An etcher keeps two baths of nitric acid, $\ce{HNO3}$, a strong acid. Bath 1 has a pH of 1.00. Bath 2 has a pH of 3.00. Both are at 25 °C. When the two are mixed, take the volumes to add.
+
+<Part label="a">
+
+A helper mixes 50.0 mL of bath 1 with 50.0 mL of bath 2 and expects a pH of 2.00, halfway between the two. Calculate the pH of the mixture, and state what the helper averaged that cannot be averaged.
+
+<Answer>
+
+Nitric acid is strong, so each bath's $[\ce{H3O+}]$ comes straight from its pH: 0.10 M in bath 1 and 0.0010 M in bath 2.
+
+Count the H₃O⁺ that each bath brings. A molarity times a volume in mL is an amount in mmol.
+
+$$
+0.10 \times 50.0 = 5.0\ \text{mmol}
+$$
+
+$$
+0.0010 \times 50.0 = 0.050\ \text{mmol}
+$$
+
+Together that is 5.05 mmol, in a total volume of 100.0 mL:
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= \frac{5.05}{100.0} \\
+&= 0.0505\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(0.0505) \\
+&= \mathbf{1.30}
+\end{aligned}
+$$
+
+The helper **averaged the two pH values**. A pH is an exponent, and exponents are not what mixes. Amounts of H₃O⁺ are. Mixing equal volumes averages the two concentrations, and 0.0505 M is the average of 0.10 M and 0.0010 M.
+
+Bath 1 holds 100 times as much H₃O⁺ in each milliliter as bath 2. So the mixture is very nearly bath 1 diluted to twice its volume, and its pH is only 0.30 above bath 1's.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Determine the volume of bath 2 that must be mixed with 10.0 mL of bath 1 to give a pH of 2.00. Check your answer by calculating the pH of that mixture.
+
+<Answer>
+
+A pH of 2.00 means $[\ce{H3O+}]$ of 0.010 M. Let $V$ be the volume of bath 2, in mL.
+
+The H₃O⁺ from the two baths, in mmol, is $1.0 + 0.0010V$: bath 1 brings 0.10 M times 10.0 mL, and bath 2 brings 0.0010 M times $V$. The total volume is $10.0 + V$ mL. The amount is the wanted concentration times that volume:
+
+$$
+\begin{aligned}
+&1.0 + 0.0010V \\
+&= 0.010(10.0 + V) \\
+&= 0.10 + 0.010V
+\end{aligned}
+$$
+
+Collect the terms in $V$ on one side:
+
+$$
+\begin{aligned}
+0.90 &= 0.0090V \\
+V &= \mathbf{100}\ \text{mL}
+\end{aligned}
+$$
+
+It takes ten volumes of bath 2 for each volume of bath 1, not one for one.
+
+Check. Bath 1 brings 1.0 mmol, and bath 2 brings 0.0010 M times 100 mL, which is 0.10 mmol. The total volume is 110 mL.
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= \frac{1.10}{110} \\
+&= 0.0100\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(0.0100) \\
+&= 2.00
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for a pH of 1.30 (1.29 to 1.31), from the total amount of H₃O⁺ over the total volume or from the average of the two concentrations; 1 point for saying that the pH values were averaged where the concentrations (or the amounts of H₃O⁺) should have been. Dividing the total amount by 50.0 mL does not earn the first point.</RubricLine>
+<RubricLine part="b" points={2}>1 point for a setup that puts the H₃O⁺ from both baths over the total volume and sets it to 0.010 M; 1 point for 100 mL with a check that returns a pH of 2.00. A volume found by trial and shown by the check to give a pH of 2.00 earns both points. Leaving out the H₃O⁺ of bath 2 gives 90 mL: that earns the first point only if the total volume is used and the result is set to 0.010 M, and it does not earn the second.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={4} title="Three strong bases, by mass and by molarity" topic="8.2" points={5}>
+
+A technician makes three solutions at 25 °C. Each holds 1.00 g of one strong base, dissolved in water and made up to 1.00 L. All of each solid dissolves.
+
+Use these molar masses.
+
+| Base | Molar mass (g/mol) |
+|---|---|
+| $\ce{NaOH}$ | 40.00 |
+| $\ce{KOH}$ | 56.11 |
+| $\ce{Ba(OH)2}$ | 171.35 |
+
+<Part label="a">
+
+Calculate the pH of each of the three solutions, and rank them from the highest pH to the lowest.
+
+<Answer>
+
+Each solution has a volume of 1.00 L, so the molarity of each base is its number of moles in 1.00 g.
+
+**Sodium hydroxide.**
+
+$$
+\frac{1.00}{40.00} = 0.0250\ \text{M}
+$$
+
+Each $\ce{NaOH}$ gives one OH⁻, so $[\ce{OH-}]$ is 0.0250 M.
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(0.0250) \\
+&= 1.60
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 1.60 \\
+&= \mathbf{12.40}
+\end{aligned}
+$$
+
+**Potassium hydroxide.**
+
+$$
+\frac{1.00}{56.11} = 0.0178\ \text{M}
+$$
+
+Each $\ce{KOH}$ gives one OH⁻, so $[\ce{OH-}]$ is 0.0178 M.
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(0.0178) \\
+&= 1.75
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 1.75 \\
+&= \mathbf{12.25}
+\end{aligned}
+$$
+
+**Barium hydroxide.**
+
+$$
+\frac{1.00}{171.35} = 0.00584\ \text{M}
+$$
+
+Each formula unit gives two OH⁻:
+
+$$
+\begin{aligned}
+&\ce{Ba(OH)2(s) ->} \\
+&\quad \ce{Ba^2+(aq) + 2OH-(aq)}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{OH-}] &= 2 \times 0.00584 \\
+&= 0.0117\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(0.0117) \\
+&= 1.93
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 1.93 \\
+&= \mathbf{12.07}
+\end{aligned}
+$$
+
+From highest pH to lowest: **sodium hydroxide, potassium hydroxide, barium hydroxide**.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The technician then makes three more solutions at 25 °C, each 0.0200 M in one of the same three bases. Calculate the pH of each, and rank them.
+
+<Answer>
+
+Sodium hydroxide and potassium hydroxide each give one OH⁻, so $[\ce{OH-}]$ is 0.0200 M in both.
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(0.0200) \\
+&= 1.70
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 1.70 \\
+&= \mathbf{12.30}
+\end{aligned}
+$$
+
+Barium hydroxide gives two:
+
+$$
+\begin{aligned}
+[\ce{OH-}] &= 2 \times 0.0200 \\
+&= 0.0400\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(0.0400) \\
+&= 1.40
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 1.40 \\
+&= \mathbf{12.60}
+\end{aligned}
+$$
+
+**Barium hydroxide has the highest pH, 12.60. The other two are equal, at 12.30.**
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Barium hydroxide is last in part a and first in part b. Explain both ranks, using the formulas and the molar masses.
+
+<Answer>
+
+What sets the pH is how many moles of OH⁻ are in each liter. The two parts count out the bases in different ways.
+
+**By mass (part a).** A gram of barium hydroxide holds the fewest moles of OH⁻ of the three. Its formula unit carries two OH⁻, but its molar mass is more than four times that of sodium hydroxide and more than three times that of potassium hydroxide, so a gram holds far fewer formula units. Per mole of OH⁻, it takes 40.00 g of $\ce{NaOH}$, 56.11 g of $\ce{KOH}$ and about 85.7 g of $\ce{Ba(OH)2}$, which is half of 171.35 g. The second OH⁻ does not make up for the mass of the barium. So 1.00 g gives $[\ce{OH-}]$ of only 0.0117 M, against 0.0250 M and 0.0178 M.
+
+**By molarity (part b).** Now each liter holds the same number of formula units, 0.0200 mol, and the molar masses play no part. Each formula unit of barium hydroxide gives two OH⁻ where the others give one. Its $[\ce{OH-}]$ is twice theirs, and its pH is higher by 0.30, the logarithm of 2.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the three hydroxide concentrations, 0.0250 M, 0.0178 M and 0.0117 M, with the factor of two for barium hydroxide and for no other; 1 point for the three pH values, 12.40, 12.25 and 12.07 (each within 0.02), in that order. Leaving out the factor of two gives 11.77 for barium hydroxide and loses the first point only. A pOH reported as a pH loses the second point.</RubricLine>
+<RubricLine part="b" points={1}>1 point for 12.30, 12.30 and 12.60 (each within 0.02), with barium hydroxide highest and the other two equal.</RubricLine>
+<RubricLine part="c" points={2}>1 point for the rank by mass: a gram of barium hydroxide supplies the fewest moles of OH⁻, because its molar mass is more than twice either of the others', so that two OH⁻ in the formula do not make up for it (a comparison of grams per mole of OH⁻, or of moles of OH⁻ per gram, earns the point); 1 point for the rank by molarity: equal numbers of formula units in each liter, and two OH⁻ from each formula unit of barium hydroxide. "It has two OH" with nothing about equal numbers of formula units earns 0 points for the second point, and it never earns the first.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={5} title="Water to reach a wanted pH" topic="8.2" points={4}>
+
+Hydrochloric acid is a strong acid, and barium hydroxide, $\ce{Ba(OH)2}$, is a strong base. Every solution in this question is at 25 °C. When water is added to a solution, take the volumes to add.
+
+<Part label="a">
+
+Calculate the volume of water that must be added to 25.0 mL of hydrochloric acid with a pH of 1.60 to bring its pH to 2.30.
+
+<Answer>
+
+Find $[\ce{H3O+}]$ before and after.
+
+$$
+\begin{aligned}
+[\ce{H3O+}]_{\text{before}} &= 10^{-1.60} \\
+&= 0.025\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{H3O+}]_{\text{after}} &= 10^{-2.30} \\
+&= 0.0050\ \text{M}
+\end{aligned}
+$$
+
+The concentration must fall to one-fifth:
+
+$$
+\frac{0.025}{0.0050} = 5.0
+$$
+
+Adding water does not change the amount of H₃O⁺ from the acid. So the same amount has to be spread through 5.0 times the volume.
+
+$$
+5.0 \times 25.0 = 125\ \text{mL}
+$$
+
+That is the final volume. The acid already fills 25.0 mL of it:
+
+$$
+125 - 25.0 = \mathbf{100}\ \text{mL}
+$$
+
+A shorter route to the factor: the pH rises by 0.70, and 10 raised to the power 0.70 is 5.0.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+A solution of barium hydroxide has a pH of 12.90. Calculate the molarity of the barium hydroxide. Then calculate the volume of water that must be added to 20.0 mL of this solution to bring its pH to 12.20.
+
+<Answer>
+
+**The molarity.** For a base, go through the pOH.
+
+$$
+\begin{aligned}
+\text{pOH} &= 14.00 - 12.90 \\
+&= 1.10
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{OH-}] &= 10^{-1.10} \\
+&= 0.0794\ \text{M}
+\end{aligned}
+$$
+
+That is 0.079 M to two figures. The third figure is carried into the next steps. Each $\ce{Ba(OH)2}$ gave two of those OH⁻ ions, so there is half as much barium hydroxide:
+
+$$
+\begin{aligned}
+[\ce{Ba(OH)2}] &= \frac{0.0794}{2} \\
+&= \mathbf{0.040}\ \text{M}
+\end{aligned}
+$$
+
+**The water.** At a pH of 12.20:
+
+$$
+\begin{aligned}
+\text{pOH} &= 14.00 - 12.20 \\
+&= 1.80
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{OH-}] &= 10^{-1.80} \\
+&= 0.0158\ \text{M}
+\end{aligned}
+$$
+
+That is 0.016 M to two figures. Divide the carried values:
+
+$$
+\frac{0.0794}{0.0158} = 5.0
+$$
+
+$[\ce{OH-}]$ must fall to one-fifth, so the volume must become 5.0 times as large.
+
+$$
+5.0 \times 20.0 = 100\ \text{mL}
+$$
+
+$$
+100 - 20.0 = \mathbf{80}\ \text{mL}
+$$
+
+The factor of two is needed for the molarity and not for the water. Dilution divides $[\ce{OH-}]$ and the concentration of the barium hydroxide by the same 5.0.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A student plans to keep adding water to the hydrochloric acid of part a until its pH is 7.50. Calculate the $[\ce{H3O+}]$ that a pH of 7.50 means, and use it to explain why no volume of water brings the acid to that pH.
+
+<Answer>
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= 10^{-7.50} \\
+&= 3.2 \times 10^{-8}\ \text{M}
+\end{aligned}
+$$
+
+That is less H₃O⁺ than the water being added holds. Pure water at 25 °C has $[\ce{H3O+}]$ of $1.0 \times 10^{-7}$ M, about three times as much.
+
+Water brings H₃O⁺ and OH⁻ in equal amounts, and the acid's H₃O⁺ comes on top of that. So however much water is added, the mixture holds more H₃O⁺ than OH⁻. Its $[\ce{H3O+}]$ stays above $1.0 \times 10^{-7}$ M, and its pH stays below 7.00.
+
+**No volume of water works.** Adding water takes the pH from 1.60 up toward 7.00 and never past it. A pH of 7.50 at 25 °C belongs to a basic solution, with more OH⁻ than H₃O⁺, and nothing in the plan adds a base.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for 100 mL of water (99 mL to 101 mL), with the factor of 5.0 shown, from the two concentrations or from 10 raised to the power 0.70. Giving the final volume, 125 mL, as the water to add does not earn the point.</RubricLine>
+<RubricLine part="b" points={2}>1 point for 0.040 M barium hydroxide (0.039 M to 0.040 M), half of an $[\ce{OH-}]$ of 0.079 M (giving 0.079 M, or doubling to 0.16 M, earns 0 points here); 1 point for 80 mL of water (78 mL to 81 mL), from the factor of 5.0 in $[\ce{OH-}]$ or from the pOH rising by 0.70. Giving the final volume, 100 mL, does not earn the second point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for $[\ce{H3O+}]$ of $3.2 \times 10^{-8}$ M with a reason from it: that is below the $1.0 \times 10^{-7}$ M of water itself, so adding water cannot bring the acid's $[\ce{H3O+}]$ that low (or: a pH of 7.50 means more OH⁻ than H₃O⁺, which an acid and water cannot give). "Dilution never crosses 7" with no reason earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part B: Weak acids and weak bases
+
+Five questions on acids and bases that ionize only in part. You will work from a pH back to a molarity or a constant, put a weak acid into a solution that already holds hydronium ions, name a base from one reading, and follow two unlabeled acids through a dilution.
+
+<Question number={6} title="Two solutions with one pH" topic="8.3" points={6}>
+
+Acrylic acid, $\ce{HC3H3O2}$, is a weak acid with one acidic proton. It is a liquid that mixes with water, and it is the starting material of many plastics and paints. Use this value, for 25 °C:
+
+$$
+K_a = 5.6 \times 10^{-5}
+$$
+
+A technician has two solutions at 25 °C. One is acrylic acid in water. The other is nitric acid, $\ce{HNO3}$, a strong acid, in water. A pH meter reads 2.80 in each of them.
+
+<Part label="a">
+
+Calculate the molarity of the nitric acid solution.
+
+<Answer>
+
+Nitric acid is a strong acid, so essentially every molecule has given its proton to water:
+
+$$
+\begin{aligned}
+&\ce{HNO3(aq) + H2O(l) ->} \\
+&\quad \ce{H3O+(aq) + NO3-(aq)}
+\end{aligned}
+$$
+
+Its molarity is therefore its hydronium concentration, and the pH gives that.
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= 10^{-2.80} \\
+&= 1.585 \times 10^{-3}\ \text{M}
+\end{aligned}
+$$
+
+A pH with two decimal places gives two figures, so the nitric acid is $\mathbf{1.6 \times 10^{-3}}$ **M**. Carry $1.585 \times 10^{-3}$ M into the steps below.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the molarity of the acrylic acid solution, with no approximation, and the percent ionization of the acrylic acid in it.
+
+<Answer>
+
+Write HA for acrylic acid and A⁻ for its conjugate base, the acrylate ion, $\ce{C3H3O2-}$.
+
+$$
+\begin{aligned}
+&\ce{HA(aq) + H2O(l) <=>} \\
+&\quad \ce{H3O+(aq) + A-(aq)}
+\end{aligned}
+$$
+
+The meter reads the same pH, so this solution has the same $[\ce{H3O+}]$, $1.585 \times 10^{-3}$ M. Each molecule that ionizes makes one $\ce{H3O+}$ and one $\ce{A-}$, so $[\ce{A-}]$ is $1.585 \times 10^{-3}$ M as well. Call both $x$. The $K_a$ expression then has one unknown, the concentration of the acid that is still whole:
+
+$$
+\begin{aligned}
+[\ce{HA}] &= \frac{x^2}{K_a} \\
+&= \frac{(1.585 \times 10^{-3})^2}{5.6 \times 10^{-5}} \\
+&= 0.04486\ \text{M}
+\end{aligned}
+$$
+
+The molarity of the solution counts all of the acid that was dissolved, whole and ionized together:
+
+$$
+\begin{aligned}
+&0.04486 + 0.001585 \\
+&= 0.0464\ \text{M}
+\end{aligned}
+$$
+
+To two figures the acrylic acid is $\mathbf{0.046}$ **M**. Nothing was left out, because $x$ was measured, so there is no approximation to check.
+
+The percent ionization is the hydronium concentration over the molarity of the acid:
+
+$$
+\begin{aligned}
+&\frac{1.585 \times 10^{-3}}{0.0464} \times 100\% \\
+&\quad = \mathbf{3.4\%}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A 25.0 mL sample of each solution is titrated with 0.0500 M sodium hydroxide, $\ce{NaOH}$. Calculate the volume of the $\ce{NaOH}$ solution that brings each sample to its equivalence point.
+
+<Answer>
+
+Sodium hydroxide is a strong base, so each reaction goes to completion, 1 to 1. In the nitric acid sample the acid is all $\ce{H3O+}$:
+
+$$
+\begin{aligned}
+&\ce{H3O+(aq) + OH-(aq) ->} \\
+&\quad \ce{2H2O(l)}
+\end{aligned}
+$$
+
+In the acrylic acid sample the hydroxide ion takes the proton straight off the acid's molecules, the whole ones as well as the ionized ones, until none is left (topic 8.4). The overall reaction is
+
+$$
+\begin{aligned}
+&\ce{HA(aq) + OH-(aq) ->} \\
+&\quad \ce{A-(aq) + H2O(l)}
+\end{aligned}
+$$
+
+**Nitric acid.** Millimoles are milliliters times molarity.
+
+$$
+\begin{aligned}
+&(25.0)(1.585 \times 10^{-3}) \\
+&= 0.0396\ \text{mmol}
+\end{aligned}
+$$
+
+The equivalence point needs 0.0396 mmol of $\ce{OH-}$, and each milliliter of the base brings 0.0500 mmol.
+
+$$
+\frac{0.0396}{0.0500} = \mathbf{0.79}\ \text{mL}
+$$
+
+**Acrylic acid.** Use the carried molarity, 0.0464 M.
+
+$$
+\begin{aligned}
+&(25.0)(0.0464) \\
+&= 1.16\ \text{mmol}
+\end{aligned}
+$$
+
+$$
+\frac{1.16}{0.0500} = \mathbf{23.2}\ \text{mL}
+$$
+
+The rounded 0.046 M gives 23 mL, which is the same answer to two figures.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+A student says: "The two solutions have the same pH, so equal volumes of them take the same amount of base." Use your results to decide whether the student is right.
+
+<Answer>
+
+The student is **not right**. The acrylic acid sample takes 23.2 mL of the base and the nitric acid sample takes 0.79 mL:
+
+$$
+\frac{23.2}{0.79} = 29
+$$
+
+That is about 29 times as much base for the same volume at the same pH.
+
+The two measurements count different things. A pH counts only the $\ce{H3O+}$ ions in the solution at that moment, and the two solutions have the same number of those in each liter. A strong base reacts with all of the acid, whole molecules included. In the nitric acid every molecule is ionized, so the pH has counted all of the acid. In the acrylic acid only 3.4 percent of the molecules are ionized, so the pH has counted 3.4 molecules in every 100, and the base reacts with all 100. The ratio of all the acid to the ionized part is the ratio of the two volumes:
+
+$$
+\frac{0.0464}{1.585 \times 10^{-3}} = 29
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for $1.6 \times 10^{-3}$ M, found from the pH and given as the molarity of the acid because a strong acid is fully ionized. A value of $1.58 \times 10^{-3}$ M or $1.59 \times 10^{-3}$ M earns the point.</RubricLine>
+<RubricLine part="b" points={2}>1 point for 0.046 M, found by putting the measured hydronium concentration into the $K_a$ expression for the un-ionized acid and then adding the ionized part; 0.047 M, which comes from the rounded $1.6 \times 10^{-3}$ M, also earns it. The un-ionized acid alone does not earn this point: it is 0.045 M, or 0.046 M from the rounded $1.6 \times 10^{-3}$ M, so the addition must be shown. 1 point for 3.4 percent as the hydronium concentration over the molarity of the acid, times 100 percent; a value from 3.3 to 3.6 percent that agrees with the student's own molarity earns it.</RubricLine>
+<RubricLine part="c" points={2}>1 point for the nitric acid sample, 0.79 mL (0.80 mL from the rounded molarity earns it); 1 point for the acrylic acid sample, 23.2 mL (any value from 23 mL to 23.7 mL, or one that agrees with the student's molarity from part (b), earns it). Each volume must come from the millimoles of acid in 25.0 mL and the 1 to 1 reaction with hydroxide. A student who gives the same volume for both samples earns only the point for the sample that volume is right for.</RubricLine>
+<RubricLine part="d" points={1}>1 point for rejecting the claim with evidence from part (c), the two volumes or their ratio of about 29, and the reason: the base reacts with all of the acid, whole molecules and ions, while the pH counts only the hydronium ions, and most of the acrylic acid is not ionized. Rejecting the claim with no values, or with values and no reason, earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={7} title="A weak acid in a strong acid's solution" topic="8.3, 8.4" points={5}>
+
+Use the value of $K_a$ for acrylic acid, $\ce{HC3H3O2}$, a weak acid with one acidic proton, at 25 °C:
+
+$$
+K_a = 5.6 \times 10^{-5}
+$$
+
+Two solutions are made at 25 °C.
+
+- **Solution 1** is 0.10 M acrylic acid in water.
+- **Solution 2** is 0.10 M in acrylic acid and also 0.020 M in nitric acid, $\ce{HNO3}$, a strong acid.
+
+Write HA for acrylic acid and A⁻ for the acrylate ion, $\ce{C3H3O2-}$.
+
+<Part label="a">
+
+For solution 1, calculate $[\ce{H3O+}]$, the pH and the percent ionization of the acrylic acid.
+
+<Answer>
+
+$$
+\begin{aligned}
+&\ce{HA(aq) + H2O(l) <=>} \\
+&\quad \ce{H3O+(aq) + A-(aq)}
+\end{aligned}
+$$
+
+Every value is in M. The rows are labeled I, C and E, for Initial, Change and Equilibrium:
+
+| | HA | H₃O⁺ | A⁻ |
+|---|---|---|---|
+| I | 0.10 | 0 | 0 |
+| C | −x | +x | +x |
+| E | 0.10 − x | x | x |
+
+$$
+\begin{aligned}
+K_a &= \frac{x^2}{0.10 - x} \\
+&= 5.6 \times 10^{-5}
+\end{aligned}
+$$
+
+Leave $x$ out beside 0.10.
+
+$$
+\begin{aligned}
+x^2 &= (5.6 \times 10^{-5})(0.10) \\
+&= 5.6 \times 10^{-6} \\
+x &= 2.37 \times 10^{-3}\ \text{M}
+\end{aligned}
+$$
+
+Here $x$ is kept to three figures for the steps that use it. Do the check this site uses:
+
+$$
+\frac{2.37 \times 10^{-3}}{0.10} \times 100\% = 2.4\%
+$$
+
+That is under 5 percent, so leaving $x$ out was fair. So $[\ce{H3O+}]$ is $\mathbf{2.4 \times 10^{-3}}$ **M**.
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(2.37 \times 10^{-3}) \\
+&= \mathbf{2.63}
+\end{aligned}
+$$
+
+For a weak acid alone in water, the check and the percent ionization are the same division, so the acid is $\mathbf{2.4}$ **percent** ionized.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+For solution 2, calculate $[\ce{A-}]$, the percent ionization of the acrylic acid and the pH. Justify any $x$ that you leave out with its percentage.
+
+<Answer>
+
+The nitric acid is fully ionized, so the solution holds 0.020 M of $\ce{H3O+}$ before any acrylic acid ionizes. That goes in the starting row. Nothing reacts to completion here, so no table of moles is needed. Every value is in M:
+
+| | HA | H₃O⁺ | A⁻ |
+|---|---|---|---|
+| I | 0.10 | 0.020 | 0 |
+| C | −x | +x | +x |
+| E | 0.10 − x | 0.020 + x | x |
+
+$$
+\begin{aligned}
+K_a &= \frac{(0.020 + x)(x)}{0.10 - x} \\
+&= 5.6 \times 10^{-5}
+\end{aligned}
+$$
+
+Leave $x$ out beside 0.020 and beside 0.10.
+
+$$
+\begin{aligned}
+&\frac{(0.020)(x)}{0.10} = 5.6 \times 10^{-5} \\
+&x = \frac{(5.6 \times 10^{-5})(0.10)}{0.020} \\
+&x = 2.8 \times 10^{-4}\ \text{M}
+\end{aligned}
+$$
+
+There is no square root, because $x$ appears once. Check $x$ against the smaller of the two numbers it was left out beside, 0.020 M:
+
+$$
+\frac{2.8 \times 10^{-4}}{0.020} \times 100\% = 1.4\%
+$$
+
+That is under 5 percent, so leaving $x$ out was fair in both places. In this table $x$ is the acrylate ion's concentration:
+
+$$
+[\ce{A-}] = \mathbf{2.8 \times 10^{-4}}\ \text{M}
+$$
+
+The percent ionization is the acid that ionized over the acid that was dissolved. Here it is not the same division as the check.
+
+$$
+\frac{2.8 \times 10^{-4}}{0.10} \times 100\% = \mathbf{0.28\%}
+$$
+
+The hydronium ion comes from both acids:
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= 0.020 + 0.00028 \\
+&= 0.0203\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(0.0203) \\
+&= \mathbf{1.69}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+State which acid sets the pH of solution 2, with evidence from part (b). Then picture solution 1 at equilibrium, with a little concentrated nitric acid stirred into it: enough to add 0.020 M of $\ce{H3O+}$, and too little to change the volume. Calculate $Q$ for the ionization of acrylic acid at that instant, compare it with $K_a$, and state which way the equilibrium shifts.
+
+<Answer>
+
+**The nitric acid sets the pH.** Of the 0.0203 M of $\ce{H3O+}$ in solution 2, 0.020 M is the nitric acid's and 0.00028 M is the acrylic acid's. Nitric acid alone at 0.020 M has
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(0.020) \\
+&= 1.70
+\end{aligned}
+$$
+
+A solution that is 0.10 M in acrylic acid moves that by 0.01.
+
+**The value of Q.** Just before the nitric acid goes in, solution 1 holds the concentrations of part (a): $[\ce{H3O+}]$ and $[\ce{A-}]$ are each 0.00237 M, and $[\ce{HA}]$ is 0.10 − 0.00237 = 0.0976 M. The nitric acid raises $[\ce{H3O+}]$ to 0.020 + 0.00237 = 0.0224 M. The other two have not yet changed.
+
+$$
+\begin{aligned}
+Q &= \frac{[\ce{H3O+}][\ce{A-}]}{[\ce{HA}]} \\
+&= \frac{(0.0224)(0.00237)}{0.0976} \\
+&= 5.4 \times 10^{-4}
+\end{aligned}
+$$
+
+$Q$ is about ten times $K_a$, which is $5.6 \times 10^{-5}$. With $Q$ above $K$, the equilibrium **shifts toward the un-ionized acid**: acrylate ions take protons back from $\ce{H3O+}$ until $Q$ has fallen to $K_a$. Part (b) shows where it settles. $[\ce{A-}]$ falls from $2.4 \times 10^{-3}$ M to $2.8 \times 10^{-4}$ M, and the percent ionization falls from 2.4 to 0.28. $K_a$ has not changed.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for all three: $[\ce{H3O+}]$ of $2.4 \times 10^{-3}$ M, a pH of 2.63 (2.61 to 2.65 earns it) and 2.4 percent ionized, from $x$ squared set equal to $K_a$ times 0.10. The check with its percentage is expected but earns no separate point in this part.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $[\ce{A-}]$ of $2.8 \times 10^{-4}$ M, from a table whose starting row has 0.020 M of hydronium ion, with the check of $x$ against 0.020 M (1.4 percent, under 5 percent); without the percentage the point is not earned, unless no $x$ was left out. 1 point for both 0.28 percent ionized and a pH of 1.69 (1.67 to 1.71 earns it, but only with the hydronium ion from both acids added, or with a statement that the acrylic acid's share is too small to change it). A table that starts with no hydronium ion, as in part (a), earns 0 points for this part.</RubricLine>
+<RubricLine part="c" points={2}>1 point for naming nitric acid with evidence: 0.020 M of the 0.0203 M of hydronium ion is its own, or the pH would be 1.70 without the acrylic acid. 1 point for $Q$ of about $5.4 \times 10^{-4}$ (5.3 to 5.5 earns it), larger than $K_a$, so the equilibrium shifts toward the un-ionized acid. A direction argued from Le Châtelier's principle with no value of $Q$ does not earn the second point, because the part asks for $Q$.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={8} title="Naming an amine from one reading" topic="8.3" points={6}>
+
+A bottle in a stockroom is labeled only "0.150 M amine in water." The records say the amine is one of three weak bases. Use these values, for 25 °C.
+
+| Amine | Formula | $K_b$ |
+|---|---|---|
+| Piperidine | $\ce{C5H11N}$ | $1.3 \times 10^{-3}$ |
+| Dimethylamine | $\ce{(CH3)2NH}$ | $5.4 \times 10^{-4}$ |
+| Benzylamine | $\ce{C6H5CH2NH2}$ | $2.2 \times 10^{-5}$ |
+
+A pH meter reads 11.94 in the solution at 25 °C.
+
+Write B for an amine and HB⁺ for its conjugate acid.
+
+<Part label="a">
+
+Calculate $[\ce{OH-}]$ in the solution.
+
+<Answer>
+
+At 25 °C the pH and the pOH add to 14.00.
+
+$$
+\begin{aligned}
+\text{pOH} &= 14.00 - 11.94 \\
+&= 2.06
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{OH-}] &= 10^{-2.06} \\
+&= 8.71 \times 10^{-3}\ \text{M}
+\end{aligned}
+$$
+
+To two figures, $[\ce{OH-}]$ is $\mathbf{8.7 \times 10^{-3}}$ **M**. Carry $8.71 \times 10^{-3}$ M.
+
+The other route gives the same value: $[\ce{H3O+}]$ is $10^{-11.94}$, which is $1.15 \times 10^{-12}$ M, and $K_w$ divided by it is $8.7 \times 10^{-3}$ M.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $K_b$ for the amine, with no approximation, and identify the amine.
+
+<Answer>
+
+$$
+\begin{aligned}
+&\ce{B(aq) + H2O(l) <=>} \\
+&\quad \ce{HB+(aq) + OH-(aq)}
+\end{aligned}
+$$
+
+Each molecule of B that takes a proton makes one $\ce{HB+}$ and one $\ce{OH-}$. So the measured $[\ce{OH-}]$ is the $x$ of the table, and all three equilibrium concentrations are known. In M:
+
+- $[\ce{OH-}]$ is 0.00871
+- $[\ce{HB+}]$ is 0.00871
+- $[\ce{B}]$ is 0.150 − 0.00871 = 0.141
+
+$$
+\begin{aligned}
+K_b &= \frac{[\ce{HB+}][\ce{OH-}]}{[\ce{B}]} \\
+&= \frac{(0.00871)^2}{0.141} \\
+&= \mathbf{5.4 \times 10^{-4}}
+\end{aligned}
+$$
+
+That is the table's value for **dimethylamine**. The other two values are far from it: piperidine's is more than twice as large, and benzylamine's is more than twenty times smaller.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Explain why the calculation in part (b) needed no small-$x$ check. Then suppose the question had run the other way, from your $K_b$ and 0.150 M to a pH, with $x$ left out beside 0.150. Show whether that shortcut would pass the check this site uses.
+
+<Answer>
+
+**Part (b) left nothing out.** There $x$ was measured, through the pH, and not solved for. The base that is still whole was found by subtracting, 0.150 − 0.00871, so no term was dropped and there is nothing to check.
+
+Dropping the $x$ in part (b) would have changed the answer:
+
+$$
+\frac{(0.00871)^2}{0.150} = 5.1 \times 10^{-4}
+$$
+
+That is not a value in the table.
+
+**Run forward, the shortcut fails.**
+
+$$
+\begin{aligned}
+x^2 &= (5.4 \times 10^{-4})(0.150) \\
+&= 8.1 \times 10^{-5} \\
+x &= 9.0 \times 10^{-3}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\frac{9.0 \times 10^{-3}}{0.150} \times 100\% = \mathbf{6.0\%}
+$$
+
+That is over 5 percent, so the shortcut **does not pass**. A pH for this solution would have to come from the equation with $x$ left in, and the question avoided that by giving the reading.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Calculate the pH that a pH meter would read in 0.150 M benzylamine in water at 25 °C, and compare it with the bottle's reading.
+
+<Answer>
+
+The equilibrium is the same, with benzylamine as B. Every value is in M:
+
+| | B | HB⁺ | OH⁻ |
+|---|---|---|---|
+| I | 0.150 | 0 | 0 |
+| C | −x | +x | +x |
+| E | 0.150 − x | x | x |
+
+Leave $x$ out beside 0.150.
+
+$$
+\begin{aligned}
+x^2 &= (2.2 \times 10^{-5})(0.150) \\
+&= 3.3 \times 10^{-6} \\
+x &= 1.82 \times 10^{-3}\ \text{M}
+\end{aligned}
+$$
+
+The check:
+
+$$
+\frac{1.82 \times 10^{-3}}{0.150} \times 100\% = 1.2\%
+$$
+
+That is under 5 percent, so the shortcut holds for this weaker base. For a base, $x$ is $[\ce{OH-}]$, so its negative logarithm is the pOH.
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(1.82 \times 10^{-3}) \\
+&= 2.74
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 2.74 \\
+&= \mathbf{11.26}
+\end{aligned}
+$$
+
+That is 0.68 below the bottle's reading of 11.94, a gap no pH meter would miss.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for $[\ce{OH-}]$ of $8.7 \times 10^{-3}$ M, by either route: the pOH (2.06) first, or $[\ce{H3O+}]$ and then $K_w$. A value from $8.3 \times 10^{-3}$ M to $9.1 \times 10^{-3}$ M earns it (the ends come from a hydronium concentration rounded to two figures or rounded twice, $1.1 \times 10^{-12}$ M or $1.2 \times 10^{-12}$ M). Giving $10^{-11.94}$ M as the hydroxide concentration earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for $K_b$ of $5.4 \times 10^{-4}$, from the hydroxide concentration squared over 0.150 minus that concentration (5.3 to 5.5 earns it, and so does a value that follows from a hydroxide concentration that earned the point in part (a), from 4.9 to 5.9; in every case the subtraction must be shown); 1 point for naming dimethylamine because its $K_b$ matches or is the nearest value. A $K_b$ found with the subtraction left out, whatever its value ($5.1 \times 10^{-4}$ or $5.0 \times 10^{-4}$ from $8.7 \times 10^{-3}$ M, $5.5 \times 10^{-4}$ from $9.1 \times 10^{-3}$ M), does not earn the first point but can earn the second if dimethylamine is named as the nearest value. The name with no constant earns 0 points.</RubricLine>
+<RubricLine part="c" points={2}>1 point for the reason: $x$ came from the measured pH and nothing was left out of the expression, so there is no approximation to test. 1 point for the shortcut's $x$ of $9.0 \times 10^{-3}$ M and its percentage, 6.0 percent, with the statement that it is over 5 percent and fails; a percentage that follows from the student's own $K_b$ in part (b), or 5.8 from the measured $8.7 \times 10^{-3}$ M over 0.150 M, with the same conclusion, also earns it. "It fails" with no percentage does not earn the second point.</RubricLine>
+<RubricLine part="d" points={1}>1 point for a pH of 11.26 (11.24 to 11.28 earns it), with $x$ treated as the hydroxide concentration and the pOH (2.74) found before the pH. The check (1.2 percent) is expected but earns no separate point in this part. An answer of 2.74 given as the pH earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={9} title="Two bottles, one label" topic="8.3" points={5}>
+
+Two bottles in a prep room carry the same label and nothing else: "0.080 M acid, one acidic proton." The acids are not named, and the readings below are made up for this question.
+
+At 25 °C a pH meter reads 1.10 in the acid from bottle 1 and 2.85 in the acid from bottle 2.
+
+Then 25.0 mL of each acid is diluted with water to 100.0 mL.
+
+<Part label="a">
+
+Decide whether each acid is strong or weak. Justify each decision with a hydronium concentration.
+
+<Answer>
+
+A strong acid with one proton is fully ionized, so at 0.080 M it would have $[\ce{H3O+}]$ = 0.080 M:
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(0.080) \\
+&= 1.10
+\end{aligned}
+$$
+
+**Bottle 1 holds a strong acid.** Its reading is the one a fully ionized acid gives. Run the other way, the reading gives $10^{-1.10}$ = 0.079 M, which is the label's molarity to within the last figure of the pH.
+
+**Bottle 2 holds a weak acid.** Its reading gives
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= 10^{-2.85} \\
+&= 1.41 \times 10^{-3}\ \text{M}
+\end{aligned}
+$$
+
+That is far below 0.080 M. Only a small share of the molecules is ionized:
+
+$$
+\frac{1.41 \times 10^{-3}}{0.080} \times 100\% = 1.8\%
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $K_a$ for the weak acid, with no approximation.
+
+<Answer>
+
+Write HA for the weak acid.
+
+$$
+\begin{aligned}
+&\ce{HA(aq) + H2O(l) <=>} \\
+&\quad \ce{H3O+(aq) + A-(aq)}
+\end{aligned}
+$$
+
+The measured $[\ce{H3O+}]$ is $x$: $[\ce{H3O+}]$ and $[\ce{A-}]$ are each 0.00141 M, and $[\ce{HA}]$ is 0.080 − 0.00141 = 0.0786 M.
+
+$$
+\begin{aligned}
+K_a &= \frac{(0.00141)^2}{0.0786} \\
+&= \mathbf{2.5 \times 10^{-5}}
+\end{aligned}
+$$
+
+Nothing was left out, so there is nothing to check.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Predict the reading of the pH meter in each diluted solution.
+
+<Answer>
+
+Each dilution takes 25.0 mL to 100.0 mL, four times the volume, so each acid's molarity falls to a quarter:
+
+$$
+\begin{aligned}
+&0.080 \times \frac{25.0}{100.0} \\
+&= 0.020\ \text{M}
+\end{aligned}
+$$
+
+**Bottle 1.** The strong acid is still fully ionized, so $[\ce{H3O+}]$ is 0.020 M.
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(0.020) \\
+&= \mathbf{1.70}
+\end{aligned}
+$$
+
+**Bottle 2.** The weak acid comes to a new equilibrium, with the same $K_a$. Every value is in M:
+
+| | HA | H₃O⁺ | A⁻ |
+|---|---|---|---|
+| I | 0.020 | 0 | 0 |
+| C | −x | +x | +x |
+| E | 0.020 − x | x | x |
+
+Leave $x$ out beside 0.020.
+
+$$
+\begin{aligned}
+x^2 &= (2.5 \times 10^{-5})(0.020) \\
+&= 5.0 \times 10^{-7} \\
+x &= 7.07 \times 10^{-4}\ \text{M}
+\end{aligned}
+$$
+
+The check this site uses:
+
+$$
+\frac{7.07 \times 10^{-4}}{0.020} \times 100\% = 3.5\%
+$$
+
+That is under 5 percent, so leaving $x$ out was fair.
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(7.07 \times 10^{-4}) \\
+&= \mathbf{3.15}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Calculate the change in pH that the dilution causes for each acid. Use the hydronium concentrations and the percent ionization before and after to explain why one change is smaller.
+
+<Answer>
+
+For bottle 1:
+
+$$
+1.70 - 1.10 = \mathbf{0.60}
+$$
+
+For bottle 2:
+
+$$
+3.15 - 2.85 = \mathbf{0.30}
+$$
+
+The weak acid's pH rises half as far.
+
+**Bottle 1.** Every molecule was ionized before the water went in and every molecule is ionized after. The same ions are spread through four times the volume, so $[\ce{H3O+}]$ falls from 0.080 M to 0.020 M, by a factor of 4. The logarithm of 4 is 0.60.
+
+**Bottle 2.** $[\ce{H3O+}]$ falls from $1.41 \times 10^{-3}$ M to $7.07 \times 10^{-4}$ M:
+
+$$
+\frac{1.41 \times 10^{-3}}{7.07 \times 10^{-4}} = 2.0
+$$
+
+It falls only by a factor of 2, and the logarithm of 2 is 0.30. The water alone would have cut it to a quarter. But just after the water goes in, $Q$ is below $K_a$, so more of the acid ionizes. The percent ionization shows it: 1.8 percent before, from part (a), and 3.5 percent after, from part (c). Twice the share of the molecules is ionized, so the concentration falls to a half and not to a quarter.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for both decisions with evidence: bottle 1 is strong because 0.080 M fully ionized gives pH 1.10 (or because its reading gives 0.079 M, the label's molarity); bottle 2 is weak because its reading gives $1.4 \times 10^{-3}$ M, far below 0.080 M (or about 1.8 percent ionized). "Bottle 1 has the lower pH" with no concentration earns 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for $K_a$ of $2.5 \times 10^{-5}$, from the hydronium concentration squared over the acid left; 2.4 to 2.6 earns it, with or without the subtraction, since both round to the same value here.</RubricLine>
+<RubricLine part="c" points={2}>1 point for bottle 1, pH 1.70 from 0.020 M (1.68 to 1.72 earns it). 1 point for bottle 2, pH 3.15 from $x$ squared set equal to $K_a$ times 0.020 (3.13 to 3.17 earns it; a value that follows from the student's $K_a$ in part (b) also earns it). The check for bottle 2 (3.5 percent) is expected but earns no separate point in this part. Using 0.080 M for either diluted solution earns 0 points for that bottle.</RubricLine>
+<RubricLine part="d" points={1}>1 point for both changes, 0.60 and 0.30 (or changes that follow from the student's readings in part (c)), with the reason from the data: the strong acid's hydronium concentration falls by the full factor of 4, while the weak acid's falls by a factor of about 2 because its percent ionization rises, from 1.8 to 3.5. The two changes with no reason earn 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={10} title="From a percent ionization to a constant" topic="8.3" points={4}>
+
+Mandelic acid, $\ce{HC8H7O3}$, is a weak acid with one acidic proton. It is a solid that dissolves well in water, and it was first made from bitter almonds.
+
+In a 0.40 M solution of mandelic acid at 25 °C, 3.1 percent of the acid is ionized.
+
+<Part label="a">
+
+Calculate $[\ce{H3O+}]$ in the 0.40 M solution and $K_a$ for mandelic acid, with no approximation.
+
+<Answer>
+
+Write HA for mandelic acid and A⁻ for its conjugate base.
+
+$$
+\begin{aligned}
+&\ce{HA(aq) + H2O(l) <=>} \\
+&\quad \ce{H3O+(aq) + A-(aq)}
+\end{aligned}
+$$
+
+The percent ionization is $[\ce{H3O+}]$ over the starting concentration, so
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= (0.031)(0.40) \\
+&= 0.0124\ \text{M}
+\end{aligned}
+$$
+
+To two figures that is $\mathbf{0.012}$ **M**. Carry 0.0124 M.
+
+This is the $x$ of the table: $[\ce{A-}]$ is 0.0124 M too, and the acid still whole is 0.40 − 0.0124 = 0.388 M.
+
+$$
+\begin{aligned}
+K_a &= \frac{(0.0124)^2}{0.388} \\
+&= \mathbf{4.0 \times 10^{-4}}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+With your $K_a$, calculate the percent ionization and the pH of 0.20 M mandelic acid. Leave $x$ out, and state whether that passes the check this site uses.
+
+<Answer>
+
+The table's last row is 0.20 − x, x and x. Leave $x$ out beside 0.20.
+
+$$
+\begin{aligned}
+x^2 &= (4.0 \times 10^{-4})(0.20) \\
+&= 8.0 \times 10^{-5} \\
+x &= 8.94 \times 10^{-3}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\frac{8.94 \times 10^{-3}}{0.20} \times 100\% = \mathbf{4.5\%}
+$$
+
+For a weak acid alone in water this one division is both the check and the percent ionization. It is under 5 percent, so the shortcut **passes**, though not by much.
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(8.94 \times 10^{-3}) \\
+&= \mathbf{2.05}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Without setting up another table, decide whether the shortcut would pass its check for 0.050 M mandelic acid. Use your percentage from part (b).
+
+<Answer>
+
+It **would not pass**.
+
+With the shortcut, $x^2$ is $K_a$ times the starting concentration, $C$. Divide $x$ by $C$ and the check becomes
+
+$$
+\frac{x}{C} = \sqrt{\frac{K_a}{C}}
+$$
+
+From 0.20 M to 0.050 M the concentration falls to a quarter, so $K_a$ over $C$ becomes 4 times as large, and its square root becomes 2 times as large. The percentage doubles:
+
+$$
+2 \times 4.5\% = 9\%
+$$
+
+About 9 percent is well over 5 percent. The 0.20 M solution passed narrowly, and diluting it raises the percentage further.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $[\ce{H3O+}]$ of 0.012 M, as 3.1 percent of 0.40 M. 1 point for $K_a$ of $4.0 \times 10^{-4}$, from the hydronium concentration squared over the acid left; a value from $3.7 \times 10^{-4}$ to $4.0 \times 10^{-4}$ earns it ($3.7 \times 10^{-4}$ comes from the rounded 0.012 M). A value of $3.8 \times 10^{-4}$ found with the subtraction left out does not earn this point, because the part says "with no approximation".</RubricLine>
+<RubricLine part="b" points={1}>1 point for both 4.5 percent, said to be under 5 percent so that the shortcut passes, and a pH of 2.05. Values that follow from the student's $K_a$ in part (a) earn the point (4.3 to 4.5 percent; a pH from 2.03 to 2.09). The percentage with no comparison to 5 percent does not earn the point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for "does not pass" with the reason: a quarter of the concentration doubles the shortcut's percentage, to about 9 percent, which is over 5 percent. A full shortcut calculation for 0.050 M that reaches about 8.9 percent also earns the point. "It fails because it is more dilute", with no size, earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part C: Acid–base reactions
+
+Five questions on what a flask holds once an acid has met a base. You will find the volume of base that gives a wanted mixture, show that different recipes give one solution, match salt solutions to their readings, decide which of two bases takes a proton, and keep the books for three solutions poured into one flask.
+
+<Question number={11} title="A wanted mixture, and two flasks that overshoot it" topic="8.4" points={6}>
+
+A flask holds 100.0 mL of 0.0200 M benzoic acid, $\ce{HC7H5O2}$, a weak acid with one acidic proton. A buret holds 0.0500 M sodium hydroxide, $\ce{NaOH}$. Use this value for benzoic acid:
+
+$$
+K_a = 6.3 \times 10^{-5}
+$$
+
+A student wants to stop adding base when the mixture has $[\ce{H3O+}]$ = $2.1 \times 10^{-5}$ M, which is a pH of 4.68.
+
+<Part label="a">
+
+Calculate the ratio the mixture must have: the moles of benzoate ion, $\ce{C7H5O2-}$, divided by the moles of benzoic acid.
+
+<Answer>
+
+Write HA for benzoic acid and A⁻ for the benzoate ion. A mixture that holds both obeys the acid's $K_a$ expression:
+
+$$
+K_a = \frac{[\ce{H3O+}][\ce{A-}]}{[\ce{HA}]}
+$$
+
+Solve it for the ratio that is asked for:
+
+$$
+\begin{aligned}
+\frac{[\ce{A-}]}{[\ce{HA}]} &= \frac{K_a}{[\ce{H3O+}]} \\
+&= \frac{6.3 \times 10^{-5}}{2.1 \times 10^{-5}} \\
+&= \mathbf{3.0}
+\end{aligned}
+$$
+
+HA and A⁻ share one flask, so the volume cancels and the ratio of the moles is also 3.0. The mixture needs **three benzoate ions for every benzoic acid molecule**.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the volume of the 0.0500 M NaOH that gives this ratio. Show the table of moles.
+
+<Answer>
+
+The flask starts with
+
+$$
+(100.0)(0.0200) = 2.00\ \text{mmol}
+$$
+
+of HA. Hydroxide takes the proton off the acid, and the reaction goes to completion:
+
+$$
+\begin{aligned}
+&\ce{HC7H5O2(aq) + OH-(aq) ->} \\
+&\quad \ce{C7H5O2-(aq) + H2O(l)}
+\end{aligned}
+$$
+
+Each OH⁻ ion turns one HA into one A⁻, so the two together always add up to 2.00 mmol. A ratio of 3.0 to 1 splits that total into four shares, three of them A⁻:
+
+$$
+\begin{aligned}
+\text{A}^- &= \frac{3.0}{4.0} \times 2.00 \\
+&= 1.50\ \text{mmol}
+\end{aligned}
+$$
+
+That leaves 0.50 mmol of HA. Making 1.50 mmol of A⁻ takes 1.50 mmol of OH⁻. Every value in the table is in mmol.
+
+| | HA | OH⁻ | A⁻ |
+|---|---|---|---|
+| Before | 2.00 | 1.50 | 0 |
+| Change | −1.50 | −1.50 | +1.50 |
+| After | 0.50 | 0 | 1.50 |
+
+The volume of NaOH that brings 1.50 mmol of OH⁻:
+
+$$
+\frac{1.50}{0.0500} = \mathbf{30.0}\ \text{mL}
+$$
+
+Part a used the After row's amounts as if they were the amounts at equilibrium, which leaves out the $x$ of the acid's ionization. This site checks that every time. The total volume is 130.0 mL, so the smaller concentration is
+
+$$
+\begin{aligned}
+[\ce{HA}] &= \frac{0.50}{130.0} \\
+&= 0.00385\ \text{M}
+\end{aligned}
+$$
+
+$$
+\frac{2.1 \times 10^{-5}}{0.00385} \times 100\% = 0.55\%
+$$
+
+That is under 5 percent, so the ratio stands.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A second student runs in 40.0 mL of the NaOH instead. State what the flask then holds in large amounts, and calculate the pH of the mixture.
+
+<Answer>
+
+40.0 mL brings (40.0)(0.0500) = 2.00 mmol of OH⁻, exactly the moles of HA. Every value is in mmol.
+
+| | HA | OH⁻ | A⁻ |
+|---|---|---|---|
+| Before | 2.00 | 2.00 | 0 |
+| Change | −2.00 | −2.00 | +2.00 |
+| After | 0 | 0 | 2.00 |
+
+The flask holds **the benzoate ion alone**, with Na⁺: a solution of sodium benzoate. No acid is left, so the mixture the first student wanted is gone. The benzoate ion is a weak base:
+
+$$
+\begin{aligned}
+&\ce{C7H5O2-(aq) + H2O(l) <=>} \\
+&\quad \ce{HC7H5O2(aq) + OH-(aq)}
+\end{aligned}
+$$
+
+Its $K_b$ comes from $K_w$, because benzoic acid and the benzoate ion are a conjugate acid–base pair:
+
+$$
+\begin{aligned}
+K_b &= \frac{1.0 \times 10^{-14}}{6.3 \times 10^{-5}} \\
+&= 1.59 \times 10^{-10}
+\end{aligned}
+$$
+
+The total volume is 100.0 + 40.0 = 140.0 mL.
+
+$$
+\begin{aligned}
+[\ce{A-}] &= \frac{2.00}{140.0} \\
+&= 0.0143\ \text{M}
+\end{aligned}
+$$
+
+Now the ICE table, with $x$ as $[\ce{OH-}]$. Every value is in M.
+
+| | A⁻ | HA | OH⁻ |
+|---|---|---|---|
+| I | 0.0143 | 0 | 0 |
+| C | −x | +x | +x |
+| E | 0.0143 − x | x | x |
+
+Leave $x$ out beside 0.0143:
+
+$$
+\begin{aligned}
+\frac{x^2}{0.0143} &= 1.59 \times 10^{-10} \\
+x &= 1.51 \times 10^{-6}\ \text{M}
+\end{aligned}
+$$
+
+The check this site uses:
+
+$$
+\frac{1.51 \times 10^{-6}}{0.0143} \times 100\% = 0.011\%
+$$
+
+That is far under 5 percent. Here $x$ is $[\ce{OH-}]$, so the pOH comes first:
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(1.51 \times 10^{-6}) \\
+&= 5.82
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 5.82 \\
+&= \mathbf{8.18}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+A third student runs in 46.0 mL of the NaOH. Calculate the pH of that mixture.
+
+<Answer>
+
+46.0 mL brings (46.0)(0.0500) = 2.30 mmol of OH⁻, more than the 2.00 mmol of HA. Every value is in mmol.
+
+| | HA | OH⁻ | A⁻ |
+|---|---|---|---|
+| Before | 2.00 | 2.30 | 0 |
+| Change | −2.00 | −2.00 | +2.00 |
+| After | 0 | 0.30 | 2.00 |
+
+A strong base is left over, 0.30 mmol of OH⁻, and it sets the pH. The total volume is 100.0 + 46.0 = 146.0 mL.
+
+$$
+\begin{aligned}
+[\ce{OH-}] &= \frac{0.30}{146.0} \\
+&= 0.00205\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(0.00205) \\
+&= 2.69
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 2.69 \\
+&= \mathbf{11.31}
+\end{aligned}
+$$
+
+The benzoate ion is still a weak base, but in part c, with the flask to itself, it made only $1.51 \times 10^{-6}$ M of OH⁻. Beside 0.00205 M that does not show.
+
+The three flasks ran from pH 4.68 to 8.18 to 11.31 over 16.0 mL of base, so the first student has to stop well short of 40.0 mL.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for the ratio 3.0, benzoate ion to benzoic acid, from $K_a$ divided by $[\ce{H3O+}]$. The Henderson–Hasselbalch equation with the pH of 4.68 and a p$K_a$ of 4.20 gives 3.0 too and earns the point. An answer of 0.33 earns the point only if it is labeled as benzoic acid to benzoate ion.</RubricLine>
+<RubricLine part="b" points={2}>1 point for 1.50 mmol of OH⁻, from splitting the 2.00 mmol of acid into 1.50 mmol of benzoate ion and 0.50 mmol of benzoic acid, with the table of moles or the same bookkeeping in words; 1 point for 30.0 mL, or for the volume that follows from the student's own millimoles of OH⁻ divided by 0.0500 M. The small-x check is expected but earns no separate point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for saying that the flask holds the benzoate ion alone (sodium benzoate), a weak base, from equal millimoles of acid and base; 1 point for a pH of 8.18 (8.16 to 8.20 is accepted) from $K_b$ of the benzoate ion and its concentration in 140.0 mL. Finding $[\ce{H3O+}]$ through $K_w$ in place of the pOH also earns the second point. The check with its percentage is expected but earns no separate point. A pH of 7.00, or the pOH of 5.82 given as the pH, does not earn the second point.</RubricLine>
+<RubricLine part="d" points={1}>1 point for a pH of 11.31 (11.29 to 11.33 is accepted) from the 0.30 mmol of OH⁻ left over in 146.0 mL. Dividing by 46.0 mL or by 100.0 mL earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={12} title="Four recipes" topic="8.4" points={5}>
+
+A shelf holds four solutions:
+
+- 0.0200 M benzoic acid, $\ce{HC7H5O2}$
+- 0.0200 M sodium benzoate, $\ce{NaC7H5O2}$
+- 0.0250 M sodium hydroxide, $\ce{NaOH}$
+- 0.0250 M hydrochloric acid, $\ce{HCl}$
+
+Four mixtures are made from them.
+
+| Mixture | Made from |
+|---|---|
+| 1 | 50.0 mL of the benzoic acid and 20.0 mL of the NaOH |
+| 2 | 25.0 mL of the benzoic acid and 25.0 mL of the sodium benzoate |
+| 3 | 50.0 mL of the sodium benzoate and 20.0 mL of the HCl |
+| 4 | 50.0 mL of the sodium benzoate and 80.0 mL of the HCl |
+
+Use this value for benzoic acid:
+
+$$
+K_a = 6.3 \times 10^{-5}
+$$
+
+<Part label="a">
+
+Determine the millimoles of benzoic acid and of benzoate ion, $\ce{C7H5O2-}$, that each mixture holds once any reaction is over. Show a table of moles for each mixture in which a reaction takes place.
+
+<Answer>
+
+Write HA for benzoic acid and A⁻ for the benzoate ion. Milliliters times molarity gives millimoles. Every value in the tables is in mmol.
+
+**Mixture 1.** (50.0)(0.0200) = 1.00 mmol of HA meets (20.0)(0.0250) = 0.50 mmol of OH⁻.
+
+$$
+\begin{aligned}
+&\ce{HC7H5O2(aq) + OH-(aq) ->} \\
+&\quad \ce{C7H5O2-(aq) + H2O(l)}
+\end{aligned}
+$$
+
+| | HA | OH⁻ | A⁻ |
+|---|---|---|---|
+| Before | 1.00 | 0.50 | 0 |
+| Change | −0.50 | −0.50 | +0.50 |
+| After | 0.50 | 0 | 0.50 |
+
+**Mixture 2.** Nothing strong is present, so no reaction runs to completion and no table is needed. The flask holds (25.0)(0.0200) = 0.50 mmol of HA and (25.0)(0.0200) = 0.50 mmol of A⁻, as poured.
+
+**Mixture 3.** (50.0)(0.0200) = 1.00 mmol of A⁻ meets (20.0)(0.0250) = 0.50 mmol of H₃O⁺. The benzoate ion is a base, and it takes the proton of the strong acid:
+
+$$
+\begin{aligned}
+&\ce{C7H5O2-(aq)} \\
+&{}+ \ce{H3O+(aq) ->} \\
+&\ce{HC7H5O2(aq) + H2O(l)}
+\end{aligned}
+$$
+
+| | A⁻ | H₃O⁺ | HA |
+|---|---|---|---|
+| Before | 1.00 | 0.50 | 0 |
+| Change | −0.50 | −0.50 | +0.50 |
+| After | 0.50 | 0 | 0.50 |
+
+**Mixture 4.** (50.0)(0.0200) = 1.00 mmol of A⁻ meets (80.0)(0.0250) = 2.00 mmol of H₃O⁺. The same reaction runs as in mixture 3, but now the acid is in excess.
+
+| | A⁻ | H₃O⁺ | HA |
+|---|---|---|---|
+| Before | 1.00 | 2.00 | 0 |
+| Change | −1.00 | −1.00 | +1.00 |
+| After | 0 | 1.00 | 1.00 |
+
+Side by side:
+
+| Mixture | HA (mmol) | A⁻ (mmol) |
+|---|---|---|
+| 1 | **0.50** | **0.50** |
+| 2 | **0.50** | **0.50** |
+| 3 | **0.50** | **0.50** |
+| 4 | **1.00** | **0** |
+
+Three different recipes end with the same amounts of the same pair. Mixture 4 also holds 1.00 mmol of H₃O⁺ left over.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the pH of mixtures 1, 2 and 3. Then give the millimoles of Na⁺ and of Cl⁻ in each of the three, and state whether those ions change the pH.
+
+<Answer>
+
+Each of the three holds both members of the pair, so $K_a$ times the ratio of the moles gives $[\ce{H3O+}]$. The ratio is the same in all three:
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= K_a \times \frac{\text{moles of HA}}{\text{moles of A}^-} \\
+&= (6.3 \times 10^{-5}) \times \frac{0.50}{0.50} \\
+&= 6.3 \times 10^{-5}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(6.3 \times 10^{-5}) \\
+&= \mathbf{4.20}
+\end{aligned}
+$$
+
+All three have a pH of 4.20.
+
+The check this site uses divides what was left out by the smaller concentration. Of these three, mixtures 1 and 3 are the more dilute, at 70.0 mL each, so each member of the pair is at 0.50 ÷ 70.0 = 0.00714 M:
+
+$$
+\frac{6.3 \times 10^{-5}}{0.00714} \times 100\% = 0.88\%
+$$
+
+That is under 5 percent. Mixture 2, at 50.0 mL, holds 0.0100 M of each, and its check gives 0.63 percent.
+
+The ions that came along:
+
+| Mixture | Na⁺ (mmol) | Cl⁻ (mmol) |
+|---|---|---|
+| 1 | 0.50 | 0 |
+| 2 | 0.50 | 0 |
+| 3 | 1.00 | 0.50 |
+
+In mixture 1 the Na⁺ came with the NaOH. In mixtures 2 and 3 it came with the sodium benzoate. Only mixture 3 holds Cl⁻, from the HCl, and it holds twice the Na⁺ of the others.
+
+**These ions do not change the pH.** Na⁺ is the cation of a strong base and Cl⁻ is the anion of a strong acid. Neither gives a proton to water or takes one from it, so neither appears in the $K_a$ expression. The total volumes differ too (70.0, 50.0 and 70.0 mL), and that does not matter either, because the volume cancels in the ratio.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Mixture 4 is made from the same two solutions as mixture 3, with four times the HCl. State what it holds in large amounts, and calculate its pH.
+
+<Answer>
+
+Mixture 4 holds 1.00 mmol of benzoic acid and 1.00 mmol of H₃O⁺ in large amounts. A strong acid is left over, and it sets the pH. The total volume is 50.0 + 80.0 = 130.0 mL.
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= \frac{1.00}{130.0} \\
+&= 7.69 \times 10^{-3}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(7.69 \times 10^{-3}) \\
+&= \mathbf{2.11}
+\end{aligned}
+$$
+
+The benzoic acid is still a weak acid, but beside 0.00769 M of H₃O⁺ what it adds does not show. Benzoic acid and the H₃O⁺ left over are both at 0.00769 M, so the acid's $K_a$ expression puts the benzoate ion it makes, and the H₃O⁺ it adds, at about $K_a$ itself, $6.3 \times 10^{-5}$ M. The check is:
+
+$$
+\frac{6.3 \times 10^{-5}}{0.00769} \times 100\% = 0.82\%
+$$
+
+That is under 5 percent, so the H₃O⁺ left over sets the pH.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the millimoles before any reaction in all four mixtures (1.00 and 0.50; 0.50 and 0.50; 1.00 and 0.50; 1.00 and 2.00); 1 point for what is left: 0.50 mmol of benzoic acid and 0.50 mmol of benzoate ion in each of mixtures 1, 2 and 3, and 1.00 mmol of benzoic acid with no benzoate ion in mixture 4 (the 1.00 mmol of H₃O⁺ left over there need not be stated in this part). Tables of moles or the same bookkeeping in words both earn the points. A table for mixture 2 is not needed.</RubricLine>
+<RubricLine part="b" points={2}>1 point for a pH of 4.20 for all three (4.18 to 4.22 is accepted), from $K_a$ times the moles of acid over the moles of base or from the Henderson–Hasselbalch equation; the small-x check is expected but earns no separate point. 1 point for the ions (0.50 mmol of Na⁺ in mixtures 1 and 2; 1.00 mmol of Na⁺ and 0.50 mmol of Cl⁻ in mixture 3) with the statement that they do not change the pH because neither reacts with water. An answer that gives no millimoles but says that mixture 3 alone holds Cl⁻ and that Na⁺ and Cl⁻ do not change the pH, because neither reacts with water, earns the second point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for a pH of 2.11 (2.09 to 2.13 is accepted) from the 1.00 mmol of H₃O⁺ left over in 130.0 mL. Dividing by 80.0 mL or by 50.0 mL earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={13} title="Four salt solutions, four readings" topic="8.4" points={5}>
+
+Four bottles have lost their labels. Each holds a 0.20 M solution of one of these salts at 25 °C:
+
+- potassium bromide, $\ce{KBr}$
+- sodium benzoate, $\ce{NaC7H5O2}$
+- triethylammonium chloride, $\ce{(C2H5)3NHCl}$
+- imidazolium chloride, $\ce{C3H4N2HCl}$
+
+Each salt is fully separated into one cation and one anion in water. A pH meter gives these readings:
+
+| Bottle | pH |
+|---|---|
+| W | 8.75 |
+| X | 3.84 |
+| Y | 7.00 |
+| Z | 5.72 |
+
+Some facts about the acids and bases the ions come from:
+
+- Benzoic acid, $\ce{HC7H5O2}$, is a weak acid.
+- Triethylamine, $\ce{(C2H5)3N}$, and imidazole, $\ce{C3H4N2}$, are weak bases. Triethylamine is by far the stronger base of the two.
+- HCl and HBr are strong acids. NaOH and KOH are strong bases.
+
+<Part label="a">
+
+Identify the salt in bottle W and the salt in bottle Y. For each, name the ion that sets the pH, or explain why no ion does.
+
+<Answer>
+
+Split each salt into its ions and ask whether each ion is the conjugate of something weak.
+
+**Bottle Y is potassium bromide.** K⁺ is the cation of the strong base KOH, and Br⁻ is the anion of the strong acid HBr. Neither gives a proton to water or takes one from it, so the solution is neutral, and 7.00 is the neutral reading at 25 °C.
+
+**Bottle W is sodium benzoate.** Na⁺ does nothing. The **benzoate ion** is the conjugate base of a weak acid, so it takes protons from water and makes OH⁻:
+
+$$
+\begin{aligned}
+&\ce{C7H5O2-(aq) + H2O(l) <=>} \\
+&\quad \ce{HC7H5O2(aq) + OH-(aq)}
+\end{aligned}
+$$
+
+Sodium benzoate is the only one of the four salts with an ion that takes protons from water, and 8.75 is the only reading above 7.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Identify the salt in bottle X and the salt in bottle Z. Justify the order of their two readings.
+
+<Answer>
+
+**Bottle X (3.84) is imidazolium chloride, and bottle Z (5.72) is triethylammonium chloride.**
+
+Both salts hold Cl⁻, which does nothing, and a cation that is the conjugate acid of a weak base. Each cation gives protons to water, so both solutions are acidic. For the triethylammonium ion:
+
+$$
+\begin{aligned}
+&\ce{(C2H5)3NH+(aq)} \\
+&{}+ \ce{H2O(l) <=>} \\
+&\ce{(C2H5)3N(aq) + H3O+(aq)}
+\end{aligned}
+$$
+
+What separates them is the strength of the two cations as acids. The $K_a$ of a conjugate acid times the $K_b$ of its base is $K_w$, so the stronger base has the weaker conjugate acid. Triethylamine is by far the stronger base, so the triethylammonium ion is by far the weaker acid. At the same 0.20 M it makes less H₃O⁺, and its solution has the higher pH of the two: 5.72. Imidazole is the weaker base, so the imidazolium ion is the stronger acid and its solution has the lower pH: 3.84.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Use the reading of the imidazolium chloride solution to calculate $K_a$ of the imidazolium ion, $\ce{C3H4N2H+}$. Then calculate $K_b$ of imidazole.
+
+<Answer>
+
+The ion's equilibrium with water:
+
+$$
+\begin{aligned}
+&\ce{C3H4N2H+(aq) + H2O(l) <=>} \\
+&\quad \ce{C3H4N2(aq) + H3O+(aq)}
+\end{aligned}
+$$
+
+The reading gives $x$, which is $[\ce{H3O+}]$ and also $[\ce{C3H4N2}]$:
+
+$$
+\begin{aligned}
+x &= 10^{-3.84} \\
+&= 1.445 \times 10^{-4}\ \text{M}
+\end{aligned}
+$$
+
+To two figures that is $1.4 \times 10^{-4}$ M. The extra figures are carried into the next step. The imidazolium ion left is 0.20 − 0.00014, which is still 0.20 M. Nothing has to be left out or checked, because $x$ was measured.
+
+$$
+\begin{aligned}
+K_a &= \frac{x^2}{0.20} \\
+&= \frac{(1.445 \times 10^{-4})^2}{0.20} \\
+&= 1.04 \times 10^{-7}
+\end{aligned}
+$$
+
+To two figures, $K_a$ of the imidazolium ion is $\mathbf{1.0 \times 10^{-7}}$.
+
+Imidazole and the imidazolium ion are a conjugate acid–base pair, so
+
+$$
+\begin{aligned}
+K_b &= \frac{K_w}{K_a} \\
+&= \frac{1.0 \times 10^{-14}}{1.04 \times 10^{-7}} \\
+&= \mathbf{9.6 \times 10^{-8}}
+\end{aligned}
+$$
+
+A $K_b$ that small fits a base far weaker than triethylamine, as the stem says.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for potassium bromide in bottle Y, with the reason that neither K⁺ nor Br⁻ reacts with water (both come from strong partners); 1 point for sodium benzoate in bottle W, with the benzoate ion named as the base that sets the pH. A correct match with no ion or reason earns 0 points for that bottle.</RubricLine>
+<RubricLine part="b" points={1}>1 point for imidazolium chloride in bottle X and triethylammonium chloride in bottle Z, with the reason: the stronger base has the weaker conjugate acid, so the triethylammonium solution is the less acidic. The match with no reason, or the reason "the stronger base gives the higher pH" with no mention of the conjugate acids, earns 0 points.</RubricLine>
+<RubricLine part="c" points={2}>1 point for $K_a$ = $1.0 \times 10^{-7}$ from the square of $10^{-3.84}$ over 0.20 M (answers from $9.8 \times 10^{-8}$ to $1.1 \times 10^{-7}$ are accepted, as rounding $x$ early or late gives them); 1 point for $K_b$ as $K_w$ divided by the student's $K_a$ ($9.6 \times 10^{-8}$ here; $9.1 \times 10^{-8}$ to $1.0 \times 10^{-7}$ is accepted). A student who matched 5.72 to imidazolium chloride in part b and works from it correctly ($K_a$ = $1.8 \times 10^{-11}$, $K_b$ about $5.5 \times 10^{-4}$) earns both points here.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={14} title="Two bases and not enough acid" topic="8.4" points={5}>
+
+A solution holds 2.00 mmol of sodium benzoate, $\ce{NaC7H5O2}$, and 2.00 mmol of triethylamine, $\ce{(C2H5)3N}$, a weak base. Both the benzoate ion, $\ce{C7H5O2-}$, and triethylamine can take a proton. Use these values, for 25 °C:
+
+| Acid | p$K_a$ |
+|---|---|
+| Benzoic acid, $\ce{HC7H5O2}$ | 4.20 |
+| Triethylammonium ion, $\ce{(C2H5)3NH+}$ | 10.75 |
+
+Hydrochloric acid, $\ce{HCl}$, is a strong acid.
+
+<Part label="a">
+
+2.00 mmol of HCl is added to the solution. Identify the base that takes the protons, with a reason from the table, and state what the flask then holds in large amounts.
+
+<Answer>
+
+**Triethylamine takes the protons.**
+
+The table compares the two conjugate acids. The triethylammonium ion has the larger p$K_a$, so it is the weaker acid: it holds on to its proton far more tightly than benzoic acid does. The weaker acid has the stronger conjugate base, so triethylamine is the stronger base of the two, and the protons end up on it.
+
+The H₃O⁺ of the strong acid reacts to completion:
+
+$$
+\begin{aligned}
+&\ce{(C2H5)3N(aq)} \\
+&{}+ \ce{H3O+(aq) ->} \\
+&\ce{(C2H5)3NH+(aq) + H2O(l)}
+\end{aligned}
+$$
+
+There are 2.00 mmol of H₃O⁺ and 2.00 mmol of triethylamine, so both are used up. The flask then holds **2.00 mmol of the triethylammonium ion and 2.00 mmol of the benzoate ion**, with the spectators: 2.00 mmol of Na⁺ and 2.00 mmol of Cl⁻. Essentially no triethylamine and essentially no benzoic acid are there.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Write the equation for a triethylammonium ion passing its proton to a benzoate ion, and calculate its equilibrium constant. State what the size of the constant says about your answer to part a.
+
+<Answer>
+
+Write B for triethylamine and HB⁺ for the triethylammonium ion. Neither reactant is strong, so the arrow is double:
+
+$$
+\begin{aligned}
+&\ce{HB+(aq) + C7H5O2-(aq) <=>} \\
+&\quad \ce{B(aq) + HC7H5O2(aq)}
+\end{aligned}
+$$
+
+This equation is the ionization of HB⁺ added to the reverse of the ionization of benzoic acid. So its constant is the first $K_a$ divided by the second. With each $K_a$ written as 10 to the power of minus its p$K_a$:
+
+$$
+\begin{aligned}
+K &= \frac{10^{-10.75}}{10^{-4.20}} \\
+&= 10^{-6.55} \\
+&= \mathbf{2.8 \times 10^{-7}}
+\end{aligned}
+$$
+
+A constant that far below 1 means the equilibrium lies almost entirely on the left: the side with the weaker acid, HB⁺. Once the protons are on the amine, almost none of them move on to benzoate ions. That **confirms part a**: the flask holds triethylammonium ions and benzoate ions, and only traces of triethylamine and benzoic acid.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Suppose that only 1.00 mmol of HCl had been added to the original solution, and that the mixture then had a volume of 50.0 mL. State what the flask would hold, and state the value that its pH would be near, with a reason. No further calculation is needed.
+
+<Answer>
+
+The stronger base still takes the protons first. 1.00 mmol of H₃O⁺ reacts with 1.00 mmol of the 2.00 mmol of triethylamine. Every value is in mmol, with B for triethylamine and HB⁺ for the triethylammonium ion.
+
+| | B | H₃O⁺ | HB⁺ |
+|---|---|---|---|
+| Before | 2.00 | 1.00 | 0 |
+| Change | −1.00 | −1.00 | +1.00 |
+| After | 1.00 | 0 | 1.00 |
+
+The flask would hold **1.00 mmol of triethylamine and 1.00 mmol of the triethylammonium ion**, both members of one conjugate acid–base pair, and the 2.00 mmol of benzoate ion, untouched, with Na⁺ and Cl⁻.
+
+The pair sets the pH. For a mixture of both members, $[\ce{H3O+}]$ is the $K_a$ of the acid form times the moles of the acid form over the moles of the base form. The two amounts are equal, so the ratio is 1 and $[\ce{H3O+}]$ is close to $K_a$. The pH is **near 10.75**, the p$K_a$ of the triethylammonium ion.
+
+It is "near" and not "exactly" because the After row stands in for the amounts at equilibrium. At a pH of 10.75 the solution holds $5.6 \times 10^{-4}$ M of OH⁻, which the amine made by turning into its conjugate acid. In 50.0 mL each member of the pair is at 1.00 ÷ 50.0 = 0.0200 M, and $5.6 \times 10^{-4}$ M is 2.8 percent of that. That is under 5 percent by the check this site uses, so the After row's amounts stand.
+
+The benzoate ion does not disturb this. At a pH near 10.75, far above benzoic acid's p$K_a$ of 4.20, essentially all of it stays as the benzoate ion.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for triethylamine, with a reason from the table (its conjugate acid has the larger p$K_a$ and is the weaker acid, so triethylamine is the stronger base), and for saying that the flask then holds the triethylammonium ion and the benzoate ion. Na⁺ and Cl⁻ need not be named. An answer that has the benzoate ion take the protons, or share them equally, earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the equation with a double arrow and a state symbol on every species (full formulas or defined symbols); 1 point for a constant of $2.8 \times 10^{-7}$ ($2.8 \times 10^{-7}$ to $2.9 \times 10^{-7}$ is accepted, as rounding each $K_a$ first gives the larger) with the statement that so small a constant leaves the protons on the amine. The reverse equation with its constant of about $3.5 \times 10^{6}$, read correctly, earns both points.</RubricLine>
+<RubricLine part="c" points={2}>1 point for 1.00 mmol of triethylamine and 1.00 mmol of the triethylammonium ion, with the benzoate ion left as it was; 1 point for a pH near 10.75 (an answer of 10.75, or "about 10.7 to 10.8", is accepted) with the reason that the two members of the pair are present in equal amounts, so $[\ce{H3O+}]$ is close to the $K_a$ of the triethylammonium ion. A pH near 4.20, or near 7, earns 0 points for the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={15} title="Three solutions in one flask" topic="8.4" points={4}>
+
+Three solutions are poured into one flask:
+
+- 25.0 mL of 0.0400 M sodium benzoate, $\ce{NaC7H5O2}$
+- 10.0 mL of 0.0600 M hydrochloric acid, $\ce{HCl}$
+- 10.0 mL of 0.0200 M sodium hydroxide, $\ce{NaOH}$
+
+Use this value for benzoic acid, $\ce{HC7H5O2}$:
+
+$$
+K_a = 6.3 \times 10^{-5}
+$$
+
+<Part label="a">
+
+Determine the millimoles of benzoic acid and of benzoate ion, $\ce{C7H5O2-}$, in the flask once every reaction that goes to completion is over. Let the strong acid and the strong base react with each other first.
+
+<Answer>
+
+Write HA for benzoic acid and A⁻ for the benzoate ion. Count the millimoles of each thing that can react:
+
+$$
+\begin{aligned}
+\text{A}^- &: (25.0)(0.0400) = 1.00 \\
+\ce{H3O+} &: (10.0)(0.0600) = 0.60 \\
+\ce{OH-} &: (10.0)(0.0200) = 0.20
+\end{aligned}
+$$
+
+**Strong with strong.** Every value is in mmol.
+
+$$
+\begin{aligned}
+&\ce{H3O+(aq) + OH-(aq) ->} \\
+&\quad \ce{2H2O(l)}
+\end{aligned}
+$$
+
+| | H₃O⁺ | OH⁻ |
+|---|---|---|
+| Before | 0.60 | 0.20 |
+| Change | −0.20 | −0.20 |
+| After | 0.40 | 0 |
+
+**What is left of the strong acid, with the benzoate ion.** Every value is in mmol.
+
+$$
+\begin{aligned}
+&\ce{C7H5O2-(aq)} \\
+&{}+ \ce{H3O+(aq) ->} \\
+&\ce{HC7H5O2(aq) + H2O(l)}
+\end{aligned}
+$$
+
+| | A⁻ | H₃O⁺ | HA |
+|---|---|---|---|
+| Before | 1.00 | 0.40 | 0 |
+| Change | −0.40 | −0.40 | +0.40 |
+| After | 0.60 | 0 | 0.40 |
+
+The flask holds **0.40 mmol of benzoic acid and 0.60 mmol of benzoate ion**, both members of the pair, with Na⁺ and Cl⁻.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the pH of the mixture.
+
+<Answer>
+
+Both members of the pair are there, so $K_a$ times the ratio of the moles gives $[\ce{H3O+}]$:
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= K_a \times \frac{\text{moles of HA}}{\text{moles of A}^-} \\
+&= (6.3 \times 10^{-5}) \times \frac{0.40}{0.60} \\
+&= 4.2 \times 10^{-5}\ \text{M}
+\end{aligned}
+$$
+
+The check this site uses: the total volume is 25.0 + 10.0 + 10.0 = 45.0 mL, so the smaller concentration is
+
+$$
+\begin{aligned}
+[\ce{HA}] &= \frac{0.40}{45.0} \\
+&= 0.00889\ \text{M}
+\end{aligned}
+$$
+
+$$
+\frac{4.2 \times 10^{-5}}{0.00889} \times 100\% = 0.47\%
+$$
+
+That is under 5 percent.
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(4.2 \times 10^{-5}) \\
+&= \mathbf{4.38}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Determine whether the answer to part a changes if the HCl is poured onto the sodium benzoate first and the NaOH is added last. Then state what the flask would hold in large amounts if the NaOH were 0.0600 M and not 0.0200 M.
+
+<Answer>
+
+**The order does not change the answer.** Do the books the other way. Every value is in mmol.
+
+First the HCl onto the benzoate ion:
+
+| | A⁻ | H₃O⁺ | HA |
+|---|---|---|---|
+| Before | 1.00 | 0.60 | 0 |
+| Change | −0.60 | −0.60 | +0.60 |
+| After | 0.40 | 0 | 0.60 |
+
+Then the NaOH. No H₃O⁺ is left for it, so the OH⁻ takes protons from benzoic acid:
+
+| | HA | OH⁻ | A⁻ |
+|---|---|---|---|
+| Before | 0.60 | 0.20 | 0.40 |
+| Change | −0.20 | −0.20 | +0.20 |
+| After | 0.40 | 0 | 0.60 |
+
+The flask again holds 0.40 mmol of benzoic acid and 0.60 mmol of benzoate ion. Either way, 0.20 mmol of the acid's protons end up in water molecules with the OH⁻, and the other 0.40 mmol end up on benzoate ions.
+
+**With 0.0600 M NaOH**, the base brings (10.0)(0.0600) = 0.60 mmol of OH⁻, exactly the 0.60 mmol of H₃O⁺. The strong acid and the strong base use each other up, and nothing is left to react with the benzoate ion. The flask would hold **1.00 mmol of the benzoate ion alone**, with Na⁺ and Cl⁻ as spectators and no benzoic acid: a solution of sodium benzoate and sodium chloride. The benzoate ion is a weak base, so that solution would be basic, with a pH above 7.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for 0.40 mmol of benzoic acid and 0.60 mmol of benzoate ion, reached through the 0.40 mmol of H₃O⁺ left after the strong acid and the strong base react. Tables of moles or the same bookkeeping in words both earn it. An answer of 0.60 mmol of benzoic acid and 0.40 mmol of benzoate ion, which leaves out the NaOH, earns 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for a pH of 4.38 (4.36 to 4.40 is accepted), from $K_a$ times the moles of acid over the moles of base or from the Henderson–Hasselbalch equation. The small-x check is expected but earns no separate point. A correct pH from wrong amounts in part a (for example 4.02 from 0.60 and 0.40 mmol) earns the point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for saying that the order does not change the amounts, shown by the bookkeeping in the other order or by the reason that the 0.60 mmol of H₃O⁺ and the 0.20 mmol of OH⁻ leave a net 0.40 mmol of protons for the benzoate ion either way; 1 point for the benzoate ion alone (a solution of sodium benzoate, with sodium chloride), because 0.60 mmol of OH⁻ uses up all 0.60 mmol of H₃O⁺. "A neutral solution" earns 0 points for the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part D: Titrations
+
+Five questions on titration curves, each given as a few readings of a pH probe. You will name an acid from one run, find the reading that was copied wrong, get a constant from readings that are not at the halfway point, follow extra water through a whole curve, and read a curve that falls twice.
+
+<Question number={16} title="Naming an acid from one titration" topic="8.5, 8.7" points={7}>
+
+A bottle holds a carboxylic acid with one acidic proton, and its label is gone. A student weighs out a 0.3099 g sample and dissolves it in water. Take the volume of the solution as 50.0 mL. The student titrates it with 0.1500 M NaOH, with a pH probe in the flask.
+
+- The equivalence point is at 24.00 mL.
+- The reading at 9.00 mL is 4.47.
+
+The acid is one of these four. Use these values.
+
+| Acid | Molar mass (g/mol) | p$K_a$ |
+|---|---|---|
+| Crotonic acid | 86.09 | 4.69 |
+| Butanoic acid | 88.10 | 4.82 |
+| Lactic acid | 90.08 | 3.86 |
+| Hexanoic acid | 116.16 | 4.88 |
+
+The balance and the buret each have a small error, so the student trusts a molar mass found this way only to within 3 percent, too high or too low. The probe's reading is good to within 0.05.
+
+Two indicators are on hand.
+
+| Indicator | Acid form to base form | Changes over pH |
+|---|---|---|
+| Bromocresol purple | yellow to purple | 5.2 to 6.8 |
+| Cresol red | yellow to red | 7.2 to 8.8 |
+
+Write HA for the acid and A⁻ for its conjugate base.
+
+<Part label="a">
+
+Calculate the moles of acid in the sample and the molar mass of the acid.
+
+<Answer>
+
+The hydroxide ion takes the proton off each acid molecule, one for one:
+
+$$
+\begin{aligned}
+&\ce{HA(aq) + OH-(aq) ->} \\
+&\quad \ce{A-(aq) + H2O(l)}
+\end{aligned}
+$$
+
+At the equivalence point the moles of OH⁻ added equal the moles of acid in the sample. Milliliters times molarity gives millimoles:
+
+$$
+\begin{aligned}
+&(24.00)(0.1500) \\
+&= 3.600\ \text{mmol of OH}^-
+\end{aligned}
+$$
+
+So the sample held **3.600 mmol** of acid, which is 3.600 × 10⁻³ mol. The molar mass is the grams divided by the moles:
+
+$$
+\begin{aligned}
+&\frac{0.3099}{3.600 \times 10^{-3}} \\
+&= \mathbf{86.08}\ \text{g/mol}
+\end{aligned}
+$$
+
+The 50.0 mL of water does not come into it. Water changes the volume of the solution, not the moles of acid in the flask.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Set up a table of moles for the flask at 9.00 mL, and use the reading there to determine the p$K_a$ of the acid.
+
+<Answer>
+
+The half-equivalence point is at 12.00 mL, so the reading at 9.00 mL is not the p$K_a$ itself. The moles in the flask say how far from it the reading is. The base added by then is (9.00)(0.1500) = 1.350 mmol of OH⁻. Every value is in mmol.
+
+| | HA | OH⁻ | A⁻ |
+|---|---|---|---|
+| Before | 3.600 | 1.350 | 0 |
+| Change | −1.350 | −1.350 | +1.350 |
+| After | 2.250 | 0 | 1.350 |
+
+Both members of the pair are in the flask, so the ionization of HA is at equilibrium:
+
+$$
+\begin{aligned}
+&\ce{HA(aq) + H2O(l) <=>} \\
+&\quad \ce{H3O+(aq) + A-(aq)}
+\end{aligned}
+$$
+
+$$
+K_a = \frac{[\ce{H3O+}][\ce{A-}]}{[\ce{HA}]}
+$$
+
+HA and A⁻ share one flask, so the ratio of their concentrations is the ratio of their moles:
+
+$$
+K_a = [\ce{H3O+}] \times \frac{\text{mol A}^-}{\text{mol HA}}
+$$
+
+The reading gives the hydronium ion concentration:
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= 10^{-4.47} \\
+&= 3.39 \times 10^{-5}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+K_a &= (3.39 \times 10^{-5}) \times \frac{1.350}{2.250} \\
+&= 2.03 \times 10^{-5}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{p}K_a &= -\log(2.03 \times 10^{-5}) \\
+&= \mathbf{4.69}
+\end{aligned}
+$$
+
+The p$K_a$ is 0.22 above the reading, because the flask at 9.00 mL still holds more HA than A⁻. The concentrations of HA and A⁻ in the flask (0.0229 M at the least, in 59.0 mL) are far larger than $[\ce{H3O+}]$, so the After row can go straight into the expression.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Identify the acid. State which of the four candidates the molar mass rules out by itself, and which the p$K_a$ rules out by itself.
+
+<Answer>
+
+**The molar mass by itself.** Three percent of 86.08 g/mol is
+
+$$
+(0.03)(86.08) = 2.58\ \text{g/mol}
+$$
+
+so the acid's molar mass lies between 83.50 g/mol and 88.66 g/mol. Lactic acid (90.08) and hexanoic acid (116.16) lie outside and are ruled out. Crotonic acid (86.09) and butanoic acid (88.10) both lie inside. The molar mass cannot choose between those two.
+
+**The p$K_a$ by itself.** The reading is good to within 0.05, and the moles in the table do not depend on it, so the p$K_a$ found from it is good to within 0.05 as well: it lies between 4.64 and 4.74. Butanoic acid (4.82), lactic acid (3.86) and hexanoic acid (4.88) lie outside and are ruled out. Only crotonic acid (4.69) fits.
+
+The acid is **crotonic acid**. It is the one candidate that both results allow. The molar mass alone leaves butanoic acid in, and the p$K_a$ is what removes it.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Calculate the pH at the equivalence point.
+
+<Answer>
+
+React to completion first. Every value is in mmol.
+
+| | HA | OH⁻ | A⁻ |
+|---|---|---|---|
+| Before | 3.600 | 3.600 | 0 |
+| Change | −3.600 | −3.600 | +3.600 |
+| After | 0 | 0 | 3.600 |
+
+The flask holds the conjugate base, A⁻, alone, with the spectator ion Na⁺. A⁻ is a weak base, and it takes protons from water:
+
+$$
+\begin{aligned}
+&\ce{A-(aq) + H2O(l) <=>} \\
+&\quad \ce{HA(aq) + OH-(aq)}
+\end{aligned}
+$$
+
+The total volume is 50.0 + 24.00 = 74.0 mL.
+
+$$
+\begin{aligned}
+[\ce{A-}] &= \frac{3.600}{74.0} \\
+&= 0.0486\ \text{M}
+\end{aligned}
+$$
+
+Get $K_a$ from crotonic acid's p$K_a$ in the table, 4.69, and then $K_b$ of A⁻, since $K_a \times K_b = K_w$ for a conjugate acid–base pair:
+
+$$
+\begin{aligned}
+K_a &= 10^{-4.69} \\
+&= 2.04 \times 10^{-5}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+K_b &= \frac{1.0 \times 10^{-14}}{2.04 \times 10^{-5}} \\
+&= 4.90 \times 10^{-10}
+\end{aligned}
+$$
+
+Now the equilibrium, in its own table, with $x$ as $[\ce{OH-}]$. Every value is in M. The rows are labeled I, C and E, for Initial, Change and Equilibrium.
+
+| | A⁻ | HA | OH⁻ |
+|---|---|---|---|
+| I | 0.0486 | 0 | 0 |
+| C | −x | +x | +x |
+| E | 0.0486 − x | x | x |
+
+Leave $x$ out beside 0.0486:
+
+$$
+\begin{aligned}
+\frac{x^2}{0.0486} &= 4.90 \times 10^{-10} \\
+x &= 4.88 \times 10^{-6}\ \text{M}
+\end{aligned}
+$$
+
+The check this site uses:
+
+$$
+\begin{aligned}
+&\frac{4.88 \times 10^{-6}}{0.0486} \times 100\% \\
+&= 0.010\%
+\end{aligned}
+$$
+
+That is far under 5 percent, so the shortcut holds. Here $x$ is $[\ce{OH-}]$, so take the pOH first:
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(4.88 \times 10^{-6}) \\
+&= 5.31
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 5.31 \\
+&= \mathbf{8.69}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+Choose the indicator that marks the equivalence point of this titration, and justify the choice with the pH values.
+
+<Answer>
+
+**Cresol red.** The pH at the equivalence point is 8.69, and cresol red's range, 7.2 to 8.8, holds it. Its color goes from yellow to red on the steep part of the curve, within a drop or two of 24.00 mL.
+
+Bromocresol purple changes from pH 5.2 to pH 6.8, and all of that range lies below 8.69. It would be fully purple before the equivalence point. It would also start too soon. At pH 5.2,
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= 10^{-5.2} \\
+&= 6.3 \times 10^{-6}\ \text{M}
+\end{aligned}
+$$
+
+and the ratio of the moles of HA to the moles of A⁻ is $[\ce{H3O+}]$ divided by $K_a$:
+
+$$
+\frac{6.3 \times 10^{-6}}{2.04 \times 10^{-5}} = 0.31
+$$
+
+That is 0.31 parts of HA in every 1.31 parts of the pair, so about a quarter of the acid has not reacted yet when the first purple shows.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for 3.600 mmol of acid (or $3.600 \times 10^{-3}$ mol), found from the volume and molarity of the NaOH with the 1 to 1 ratio; 1 point for the molar mass, 86.08 g/mol, as the mass divided by the moles (86.1 g/mol is accepted). A molar mass found with 50.0 mL or 74.0 mL in place of the 24.00 mL of base earns 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for a p$K_a$ of 4.69 (4.67 to 4.71 is accepted) from the reading and the moles left at 9.00 mL, 2.250 mmol of the acid and 1.350 mmol of its conjugate base. Either route earns the point: the $K_a$ expression with the hydronium ion concentration from the reading, or the Henderson–Hasselbalch equation. A p$K_a$ taken as the reading itself, 4.47, earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for crotonic acid with both lists: the molar mass rules out lactic acid and hexanoic acid but not butanoic acid, and the p$K_a$ rules out butanoic acid, lactic acid and hexanoic acid. The name with only one of the two lists earns 0 points.</RubricLine>
+<RubricLine part="d" points={2}>1 point for saying that the flask holds the conjugate base alone, at 0.0486 M in the total volume of 74.0 mL, with $K_b$ = $4.9 \times 10^{-10}$ from $K_w$ divided by $K_a$; 1 point for the pH, 8.69, by way of the pOH (8.67 to 8.71 is accepted). A pH of 5.31 earns the first point only. The small-x check with its percentage is expected but earns no separate point.</RubricLine>
+<RubricLine part="e" points={1}>1 point for cresol red with the reason that its range, 7.2 to 8.8, holds the pH at the equivalence point, 8.69, or that bromocresol purple's range ends at 6.8, below it. A choice that follows correctly from a wrong pH in part d earns the point. The name alone earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={17} title="Three readings, one of them wrong" topic="8.5" points={5}>
+
+A student titrates 25.0 mL of a 0.0500 M solution of a weak acid, HA, with 0.0500 M NaOH. HA has one acidic proton. It is made up for this question, and so are the readings. The student's notebook has three of them.
+
+| NaOH added (mL) | pH |
+|---|---|
+| 0.0, before any base | 2.65 |
+| 12.5 | 6.00 |
+| 25.0 | 9.20 |
+
+One of the three was copied wrong. The volumes and the molarities are right.
+
+<Part label="a">
+
+Use the reading at 12.5 mL to determine $K_a$ of HA. Then calculate the pH that this $K_a$ predicts before any base is added.
+
+<Answer>
+
+Find the equivalence volume first. The flask holds
+
+$$
+\begin{aligned}
+&(25.0)(0.0500) \\
+&= 1.25\ \text{mmol of HA}
+\end{aligned}
+$$
+
+and the reaction with OH⁻ is 1 to 1, so the equivalence point needs 1.25 mmol of OH⁻:
+
+$$
+\frac{1.25}{0.0500} = 25.0\ \text{mL}
+$$
+
+So 12.5 mL is the half-equivalence point. The moles of HA and of A⁻ are equal there, and pH = p$K_a$. If the reading 6.00 is right, the p$K_a$ is 6.00 and
+
+$$
+\begin{aligned}
+K_a &= 10^{-6.00} \\
+&= \mathbf{1.0 \times 10^{-6}}
+\end{aligned}
+$$
+
+Before any base, the flask holds HA alone:
+
+$$
+\begin{aligned}
+&\ce{HA(aq) + H2O(l) <=>} \\
+&\quad \ce{H3O+(aq) + A-(aq)}
+\end{aligned}
+$$
+
+Every value is in M. The rows are labeled I, C and E, for Initial, Change and Equilibrium.
+
+| | HA | H₃O⁺ | A⁻ |
+|---|---|---|---|
+| I | 0.0500 | 0 | 0 |
+| C | −x | +x | +x |
+| E | 0.0500 − x | x | x |
+
+Leave $x$ out beside 0.0500:
+
+$$
+\begin{aligned}
+\frac{x^2}{0.0500} &= 1.0 \times 10^{-6} \\
+x &= 2.24 \times 10^{-4}\ \text{M}
+\end{aligned}
+$$
+
+The check this site uses:
+
+$$
+\begin{aligned}
+&\frac{2.24 \times 10^{-4}}{0.0500} \times 100\% \\
+&= 0.45\%
+\end{aligned}
+$$
+
+That is under 5 percent, so the shortcut holds.
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(2.24 \times 10^{-4}) \\
+&= \mathbf{3.65}
+\end{aligned}
+$$
+
+The notebook says 2.65.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The first two readings disagree. Explain why these two readings alone cannot show which of them is wrong. Support your answer with the $K_a$ that the first reading would give.
+
+<Answer>
+
+Part a took the reading 6.00 on trust and found that 2.65 does not fit it. The same test can be run the other way. Take 2.65 on trust:
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= 10^{-2.65} \\
+&= 2.24 \times 10^{-3}\ \text{M}
+\end{aligned}
+$$
+
+This is $x$ in the table of part a, and no shortcut is needed to work backward:
+
+$$
+\begin{aligned}
+K_a &= \frac{x^2}{0.0500 - x} \\
+&= \frac{(2.24 \times 10^{-3})^2}{0.0478} \\
+&= 1.05 \times 10^{-4}
+\end{aligned}
+$$
+
+An acid with that $K_a$ has a p$K_a$ of 3.98, so its reading at 12.5 mL would be 3.98, not 6.00.
+
+So there are two stories, and each hangs together:
+
+- $K_a$ is 1.0 × 10⁻⁶. Then 6.00 is right, and the first reading should have been 3.65.
+- $K_a$ is 1.05 × 10⁻⁴. Then 2.65 is right, and the second reading should have been 3.98.
+
+Either reading is a possible reading for some weak acid at this concentration. Two readings that disagree show only that one of them is wrong. A third reading that depends on $K_a$ is needed to choose.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Use the reading at 25.0 mL to settle it. Calculate the pH that $K_a = 1.0 \times 10^{-6}$ predicts at 25.0 mL, and identify the reading that was copied wrong.
+
+<Answer>
+
+25.0 mL is the equivalence point. React to completion. Every value is in mmol.
+
+| | HA | OH⁻ | A⁻ |
+|---|---|---|---|
+| Before | 1.25 | 1.25 | 0 |
+| Change | −1.25 | −1.25 | +1.25 |
+| After | 0 | 0 | 1.25 |
+
+The flask holds A⁻ alone, a weak base, in a total volume of 25.0 + 25.0 = 50.0 mL.
+
+$$
+\begin{aligned}
+[\ce{A-}] &= \frac{1.25}{50.0} \\
+&= 0.0250\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+K_b &= \frac{1.0 \times 10^{-14}}{1.0 \times 10^{-6}} \\
+&= 1.0 \times 10^{-8}
+\end{aligned}
+$$
+
+A⁻ takes protons from water:
+
+$$
+\begin{aligned}
+&\ce{A-(aq) + H2O(l) <=>} \\
+&\quad \ce{HA(aq) + OH-(aq)}
+\end{aligned}
+$$
+
+Now the equilibrium, in its own table, with $x$ as $[\ce{OH-}]$. Every value is in M.
+
+| | A⁻ | HA | OH⁻ |
+|---|---|---|---|
+| I | 0.0250 | 0 | 0 |
+| C | −x | +x | +x |
+| E | 0.0250 − x | x | x |
+
+Leave $x$ out beside 0.0250:
+
+$$
+\begin{aligned}
+\frac{x^2}{0.0250} &= 1.0 \times 10^{-8} \\
+x &= 1.58 \times 10^{-5}\ \text{M}
+\end{aligned}
+$$
+
+The check this site uses:
+
+$$
+\begin{aligned}
+&\frac{1.58 \times 10^{-5}}{0.0250} \times 100\% \\
+&= 0.063\%
+\end{aligned}
+$$
+
+That is far under 5 percent.
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(1.58 \times 10^{-5}) \\
+&= 4.80
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 4.80 \\
+&= \mathbf{9.20}
+\end{aligned}
+$$
+
+The notebook says 9.20. So the readings at 12.5 mL and at 25.0 mL agree with each other, and **the first reading, 2.65, is the one copied wrong**. It should be near 3.65.
+
+The other story fails this test. With $K_a$ = 1.05 × 10⁻⁴, the same steps give
+
+$$
+\begin{aligned}
+K_b &= 9.52 \times 10^{-11} \\
+x &= 1.54 \times 10^{-6}\ \text{M} \\
+\text{pOH} &= 5.81
+\end{aligned}
+$$
+
+and a pH of 8.19 at the equivalence point, a whole unit below the reading.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $K_a$ = $1.0 \times 10^{-6}$, with 12.5 mL identified as half of the equivalence volume, where pH equals p$K_a$; 1 point for the predicted pH, 3.65 (3.63 to 3.67 is accepted), from the weak acid alone at 0.0500 M. The small-x check with its percentage is expected but earns no separate point.</RubricLine>
+<RubricLine part="b" points={1}>1 point for saying that either reading could be the wrong one, supported by the first reading's own constant: 2.65 fits an acid with $K_a$ near $1 \times 10^{-4}$ (a value from $1.0 \times 10^{-4}$ to $1.1 \times 10^{-4}$ is accepted, or a p$K_a$ near 4), so each reading fits some weak acid and the pair cannot choose. "Both are measurements" with no $K_a$ earns 0 points.</RubricLine>
+<RubricLine part="c" points={2}>1 point for the predicted pH at the equivalence point, 9.20 (9.18 to 9.22 is accepted), from the conjugate base alone at 0.0250 M in 50.0 mL, by way of the pOH; 1 point for naming 2.65 as the wrong reading because the reading at 25.0 mL agrees with the $K_a$ from the reading at 12.5 mL. The pH for the other $K_a$, 8.19, is not required. Naming 2.65 with no prediction earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={18} title="A constant from two readings off the halfway point" topic="8.5" points={6}>
+
+20.0 mL of 0.200 M diethanolamine, $\ce{(HOC2H4)2NH}$, a weak base, is titrated with 0.250 M HCl. A pH probe gives two readings on the way.
+
+| HCl added (mL) | pH |
+|---|---|
+| 4.0 | 9.36 |
+| 12.0 | 8.40 |
+
+Write B for diethanolamine and HB⁺ for its conjugate acid, $\ce{(HOC2H4)2NH2+}$. No constant is given: you will find it.
+
+<Part label="a">
+
+Calculate the volume of HCl at the equivalence point.
+
+<Answer>
+
+HCl is a strong acid, so the buret delivers H₃O⁺. Each H₃O⁺ gives its proton to one molecule of B:
+
+$$
+\begin{aligned}
+&\ce{B(aq) + H3O+(aq) ->} \\
+&\quad \ce{HB+(aq) + H2O(l)}
+\end{aligned}
+$$
+
+The flask holds
+
+$$
+\begin{aligned}
+&(20.0)(0.200) \\
+&= 4.00\ \text{mmol of B}
+\end{aligned}
+$$
+
+which needs 4.00 mmol of H₃O⁺:
+
+$$
+\frac{4.00}{0.250} = \mathbf{16.0}\ \text{mL}
+$$
+
+Neither reading is at the equivalence point, and neither is at the half-equivalence point, which is at 8.0 mL.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+For each reading, set up a table of moles and give the ratio of the moles of B to the moles of HB⁺. Then determine the p$K_a$ of HB⁺ from each reading.
+
+<Answer>
+
+**At 4.0 mL.** The acid added is (4.0)(0.250) = 1.00 mmol of H₃O⁺. Every value is in mmol.
+
+| | B | H₃O⁺ | HB⁺ |
+|---|---|---|---|
+| Before | 4.00 | 1.00 | 0 |
+| Change | −1.00 | −1.00 | +1.00 |
+| After | 3.00 | 0 | 1.00 |
+
+The ratio of B to HB⁺ is **3 to 1**.
+
+**At 12.0 mL.** The acid added is (12.0)(0.250) = 3.00 mmol of H₃O⁺. Every value is in mmol.
+
+| | B | H₃O⁺ | HB⁺ |
+|---|---|---|---|
+| Before | 4.00 | 3.00 | 0 |
+| Change | −3.00 | −3.00 | +3.00 |
+| After | 1.00 | 0 | 3.00 |
+
+The ratio of B to HB⁺ is **1 to 3**.
+
+Both members of the pair are in the flask each time, so the ionization of HB⁺ is at equilibrium:
+
+$$
+\begin{aligned}
+&\ce{HB+(aq) + H2O(l) <=>} \\
+&\quad \ce{B(aq) + H3O+(aq)}
+\end{aligned}
+$$
+
+$$
+K_a = \frac{[\ce{B}][\ce{H3O+}]}{[\ce{HB+}]}
+$$
+
+B and HB⁺ share one flask, so the ratio of their concentrations is the ratio of their moles:
+
+$$
+K_a = [\ce{H3O+}] \times \frac{\text{mol B}}{\text{mol HB}^+}
+$$
+
+From the reading at 4.0 mL:
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= 10^{-9.36} \\
+&= 4.37 \times 10^{-10}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+K_a &= (4.37 \times 10^{-10}) \times \frac{3.00}{1.00} \\
+&= 1.31 \times 10^{-9}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{p}K_a &= -\log(1.31 \times 10^{-9}) \\
+&= \mathbf{8.88}
+\end{aligned}
+$$
+
+From the reading at 12.0 mL:
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= 10^{-8.40} \\
+&= 3.98 \times 10^{-9}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+K_a &= (3.98 \times 10^{-9}) \times \frac{1.00}{3.00} \\
+&= 1.33 \times 10^{-9}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{p}K_a &= -\log(1.33 \times 10^{-9}) \\
+&= \mathbf{8.88}
+\end{aligned}
+$$
+
+The two readings are almost a whole pH unit apart, and they give the same p$K_a$. The concentrations of B and HB⁺ in the flask (0.031 M at the least) are far larger than $[\ce{H3O+}]$ or $[\ce{OH-}]$ (2.3 × 10⁻⁵ M at the most), so the After rows can go straight into the expression.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate $K_b$ of diethanolamine and the pH of the flask before any acid is added.
+
+<Answer>
+
+B and HB⁺ are a conjugate acid–base pair, so $K_a \times K_b = K_w$.
+
+$$
+\begin{aligned}
+K_a &= 10^{-8.88} \\
+&= 1.32 \times 10^{-9}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+K_b &= \frac{1.0 \times 10^{-14}}{1.32 \times 10^{-9}} \\
+&= 7.58 \times 10^{-6}
+\end{aligned}
+$$
+
+To two figures, $K_b$ is **7.6 × 10⁻⁶**.
+
+Before any acid, the flask holds B alone at 0.200 M:
+
+$$
+\begin{aligned}
+&\ce{B(aq) + H2O(l) <=>} \\
+&\quad \ce{HB+(aq) + OH-(aq)}
+\end{aligned}
+$$
+
+With $x$ as $[\ce{OH-}]$, every value is in M. The rows are labeled I, C and E, for Initial, Change and Equilibrium.
+
+| | B | HB⁺ | OH⁻ |
+|---|---|---|---|
+| I | 0.200 | 0 | 0 |
+| C | −x | +x | +x |
+| E | 0.200 − x | x | x |
+
+Leave $x$ out beside 0.200:
+
+$$
+\begin{aligned}
+\frac{x^2}{0.200} &= 7.58 \times 10^{-6} \\
+x &= 1.23 \times 10^{-3}\ \text{M}
+\end{aligned}
+$$
+
+The check this site uses:
+
+$$
+\begin{aligned}
+&\frac{1.23 \times 10^{-3}}{0.200} \times 100\% \\
+&= 0.6\%
+\end{aligned}
+$$
+
+That is under 5 percent, so the shortcut holds. Here $x$ is $[\ce{OH-}]$, so take the pOH first:
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(1.23 \times 10^{-3}) \\
+&= 2.91
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 2.91 \\
+&= \mathbf{11.09}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Calculate the pH at the equivalence point.
+
+<Answer>
+
+At 16.0 mL the H₃O⁺ added is 4.00 mmol. Every value is in mmol.
+
+| | B | H₃O⁺ | HB⁺ |
+|---|---|---|---|
+| Before | 4.00 | 4.00 | 0 |
+| Change | −4.00 | −4.00 | +4.00 |
+| After | 0 | 0 | 4.00 |
+
+The flask holds HB⁺ alone, a weak acid, with the spectator ion Cl⁻. The total volume is 20.0 + 16.0 = 36.0 mL.
+
+$$
+\begin{aligned}
+[\ce{HB+}] &= \frac{4.00}{36.0} \\
+&= 0.111\ \text{M}
+\end{aligned}
+$$
+
+HB⁺ ionizes as in part b, and its $K_a$ is 1.32 × 10⁻⁹. With $x$ as $[\ce{H3O+}]$, every value is in M.
+
+| | HB⁺ | B | H₃O⁺ |
+|---|---|---|---|
+| I | 0.111 | 0 | 0 |
+| C | −x | +x | +x |
+| E | 0.111 − x | x | x |
+
+Leave $x$ out beside 0.111:
+
+$$
+\begin{aligned}
+\frac{x^2}{0.111} &= 1.32 \times 10^{-9} \\
+x &= 1.21 \times 10^{-5}\ \text{M}
+\end{aligned}
+$$
+
+The check this site uses:
+
+$$
+\begin{aligned}
+&\frac{1.21 \times 10^{-5}}{0.111} \times 100\% \\
+&= 0.011\%
+\end{aligned}
+$$
+
+That is far under 5 percent.
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(1.21 \times 10^{-5}) \\
+&= \mathbf{4.92}
+\end{aligned}
+$$
+
+The pH is below 7 with no HCl left over, because the flask holds the conjugate acid of a weak base.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for 16.0 mL, from 4.00 mmol of the base and the 1 to 1 reaction with the acid.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the two ratios of B to HB⁺ from the moles left after the reaction, 3 to 1 at 4.0 mL and 1 to 3 at 12.0 mL; 1 point for a p$K_a$ of 8.88 from each reading (8.86 to 8.90 is accepted). Either route earns the second point: the $K_a$ expression with the hydronium ion concentration from each reading, or the Henderson–Hasselbalch equation. A p$K_a$ taken as one of the readings themselves earns 0 points for the second point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for $K_b$ = $7.6 \times 10^{-6}$, as $K_w$ divided by the $K_a$ of the conjugate acid ($7.5 \times 10^{-6}$ to $7.7 \times 10^{-6}$ is accepted); 1 point for the pH, 11.09 (11.07 to 11.11 is accepted), by way of the pOH. A pH of 2.91 earns 0 points for the second point. The small-x check with its percentage is expected but earns no separate point.</RubricLine>
+<RubricLine part="d" points={1}>1 point for the pH, 4.92 (4.90 to 4.94 is accepted), from the conjugate acid alone at 0.111 M in the total volume of 36.0 mL, with its $K_a$. A concentration found with 20.0 mL or 16.0 mL in place of the total volume earns 0 points. The small-x check with its percentage is expected but earns no separate point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={19} title="Water in the flask" topic="8.5" points={6}>
+
+Pivalic acid, $\ce{HC5H9O2}$, is a weak acid with one acidic proton. Use this value: its p$K_a$ is 5.03.
+
+Two students each pipet 20.0 mL of 0.150 M pivalic acid into a flask and titrate it with 0.100 M NaOH.
+
+- Student 1 titrates the 20.0 mL as it is.
+- Student 2 first adds 30.0 mL of water to the flask, and then titrates.
+
+Write HA for pivalic acid and A⁻ for its conjugate base. For each quantity below, state whether student 2's value is higher than, lower than or the same as student 1's, give both values, and justify the comparison.
+
+<Part label="a">
+
+The total volume of the solution in the flask at the equivalence point.
+
+<Answer>
+
+**Higher for student 2: 80.0 mL against 50.0 mL.** The total is everything that has gone into the flask, so find the volume of NaOH first. Student 1's flask holds
+
+$$
+\begin{aligned}
+&(20.0)(0.150) \\
+&= 3.00\ \text{mmol of HA}
+\end{aligned}
+$$
+
+Student 2 pipetted the same 20.0 mL of the same solution, and water adds no acid, so that flask holds 3.00 mmol too. The reaction with OH⁻ is 1 to 1, so each flask needs 3.00 mmol of OH⁻:
+
+$$
+\frac{3.00}{0.100} = 30.0\ \text{mL}
+$$
+
+Both students read 30.0 mL on the buret. Now add up what each flask holds. For student 1:
+
+$$
+20.0 + 30.0 = \mathbf{50.0}\ \text{mL}
+$$
+
+For student 2, with the water:
+
+$$
+\begin{aligned}
+&20.0 + 30.0 + 30.0 \\
+&= \mathbf{80.0}\ \text{mL}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The pH before any base is added.
+
+<Answer>
+
+**Higher for student 2: 3.13 against 2.93.**
+
+Both flasks hold HA alone, so both need its $K_a$:
+
+$$
+\begin{aligned}
+K_a &= 10^{-5.03} \\
+&= 9.33 \times 10^{-6}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\ce{HA(aq) + H2O(l) <=>} \\
+&\quad \ce{H3O+(aq) + A-(aq)}
+\end{aligned}
+$$
+
+**Student 1.** The acid is at 0.150 M. With $x$ as $[\ce{H3O+}]$, every value is in M. The rows are labeled I, C and E, for Initial, Change and Equilibrium.
+
+| | HA | H₃O⁺ | A⁻ |
+|---|---|---|---|
+| I | 0.150 | 0 | 0 |
+| C | −x | +x | +x |
+| E | 0.150 − x | x | x |
+
+Leave $x$ out beside 0.150:
+
+$$
+\begin{aligned}
+\frac{x^2}{0.150} &= 9.33 \times 10^{-6} \\
+x &= 1.18 \times 10^{-3}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\frac{1.18 \times 10^{-3}}{0.150} \times 100\% \\
+&= 0.79\%
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(1.18 \times 10^{-3}) \\
+&= \mathbf{2.93}
+\end{aligned}
+$$
+
+**Student 2.** The 3.00 mmol is now in 20.0 + 30.0 = 50.0 mL:
+
+$$
+\begin{aligned}
+[\ce{HA}] &= \frac{3.00}{50.0} \\
+&= 0.0600\ \text{M}
+\end{aligned}
+$$
+
+The table is the same with 0.0600 in place of 0.150:
+
+$$
+\begin{aligned}
+\frac{x^2}{0.0600} &= 9.33 \times 10^{-6} \\
+x &= 7.48 \times 10^{-4}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\frac{7.48 \times 10^{-4}}{0.0600} \times 100\% \\
+&= 1.2\%
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(7.48 \times 10^{-4}) \\
+&= \mathbf{3.13}
+\end{aligned}
+$$
+
+Both percentages are under 5 percent, so the check this site uses is passed both times.
+
+The diluted acid has less H₃O⁺ in each liter, so its pH is higher. The rise is only 0.20, though. The acid was diluted 2.5 times, and a strong acid diluted 2.5 times would rise by log 2.5, which is 0.40. A weak acid ionizes to a larger extent when it is diluted, and that makes up part of the difference.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+The pH after 10.0 mL of the NaOH has been added.
+
+<Answer>
+
+**The same: 4.73 for both.** The base added is (10.0)(0.100) = 1.00 mmol of OH⁻. Each flask started with 3.00 mmol of HA, so one table of moles serves for both. Every value is in mmol.
+
+| | HA | OH⁻ | A⁻ |
+|---|---|---|---|
+| Before | 3.00 | 1.00 | 0 |
+| Change | −1.00 | −1.00 | +1.00 |
+| After | 2.00 | 0 | 1.00 |
+
+Each flask holds 2.00 mmol of HA and 1.00 mmol of A⁻. The volumes differ: 20.0 + 10.0 = 30.0 mL for student 1, and 20.0 + 30.0 + 10.0 = 60.0 mL for student 2. Both members of the pair are in the flask, so the acid's $K_a$ expression holds:
+
+$$
+[\ce{H3O+}] = K_a \times \frac{[\ce{HA}]}{[\ce{A-}]}
+$$
+
+Find the ratio of the two concentrations in each flask. For student 1:
+
+$$
+\frac{2.00/30.0}{1.00/30.0} = 2.00
+$$
+
+For student 2:
+
+$$
+\frac{2.00/60.0}{1.00/60.0} = 2.00
+$$
+
+The ratio is 2.00 both times, so one calculation gives both values, with $K_a$ from part b:
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= (9.33 \times 10^{-6})(2.00) \\
+&= 1.87 \times 10^{-5}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= -\log(1.87 \times 10^{-5}) \\
+&= \mathbf{4.73}
+\end{aligned}
+$$
+
+The After row stood in for the amounts at equilibrium. The check this site uses divides $[\ce{H3O+}]$ by the smaller concentration. That is student 2's A⁻, at 1.00 ÷ 60.0 = 0.0167 M, and $1.87 \times 10^{-5}$ M is 0.11 percent of it (0.056 percent of student 1's 0.0333 M). Both are far under 5 percent. Student 2's flask holds each member of the pair at half of student 1's concentration, and the pH does not show it. This is not the half-equivalence point, which is at 15.0 mL, so the pH is not the p$K_a$: it is 0.30 below 5.03, in both flasks.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+The pH at the equivalence point.
+
+<Answer>
+
+**Lower for student 2: 8.80 against 8.90.**
+
+React to completion. The table is the same for both flasks. Every value is in mmol.
+
+| | HA | OH⁻ | A⁻ |
+|---|---|---|---|
+| Before | 3.00 | 3.00 | 0 |
+| Change | −3.00 | −3.00 | +3.00 |
+| After | 0 | 0 | 3.00 |
+
+Each flask holds A⁻ alone, a weak base, with the spectator ion Na⁺:
+
+$$
+\begin{aligned}
+&\ce{A-(aq) + H2O(l) <=>} \\
+&\quad \ce{HA(aq) + OH-(aq)}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+K_b &= \frac{1.0 \times 10^{-14}}{9.33 \times 10^{-6}} \\
+&= 1.07 \times 10^{-9}
+\end{aligned}
+$$
+
+**Student 1.** The total volume is 20.0 + 30.0 = 50.0 mL.
+
+$$
+\begin{aligned}
+[\ce{A-}] &= \frac{3.00}{50.0} \\
+&= 0.0600\ \text{M}
+\end{aligned}
+$$
+
+Now the equilibrium, in its own table, with $x$ as $[\ce{OH-}]$. Every value is in M.
+
+| | A⁻ | HA | OH⁻ |
+|---|---|---|---|
+| I | 0.0600 | 0 | 0 |
+| C | −x | +x | +x |
+| E | 0.0600 − x | x | x |
+
+Leave $x$ out beside 0.0600:
+
+$$
+\begin{aligned}
+\frac{x^2}{0.0600} &= 1.07 \times 10^{-9} \\
+x &= 8.01 \times 10^{-6}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\frac{8.01 \times 10^{-6}}{0.0600} \times 100\% \\
+&= 0.013\%
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(8.01 \times 10^{-6}) \\
+&= 5.10
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 5.10 \\
+&= \mathbf{8.90}
+\end{aligned}
+$$
+
+**Student 2.** The total volume is 20.0 + 30.0 + 30.0 = 80.0 mL.
+
+$$
+\begin{aligned}
+[\ce{A-}] &= \frac{3.00}{80.0} \\
+&= 0.0375\ \text{M}
+\end{aligned}
+$$
+
+The table is the same with 0.0375 in place of 0.0600:
+
+$$
+\begin{aligned}
+\frac{x^2}{0.0375} &= 1.07 \times 10^{-9} \\
+x &= 6.33 \times 10^{-6}\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\frac{6.33 \times 10^{-6}}{0.0375} \times 100\% \\
+&= 0.017\%
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(6.33 \times 10^{-6}) \\
+&= 5.20
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 5.20 \\
+&= \mathbf{8.80}
+\end{aligned}
+$$
+
+Both percentages are far under 5 percent.
+
+Student 2's flask holds the same 3.00 mmol of A⁻ in more water, so it has less OH⁻ in each liter and a lower pH. Put the results together: the extra water left the volume of NaOH at the equivalence point and the reading at 10.0 mL where they were, and it moved the start and the equivalence point toward 7: the start up from 2.93 to 3.13, and the equivalence point down from 8.90 to 8.80.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for "higher for student 2", with 50.0 mL and 80.0 mL, each the sum of everything put into the flask, including 30.0 mL of NaOH found from 3.00 mmol of acid in each flask. Totals that leave out the NaOH (20.0 mL and 50.0 mL) earn 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the two values, 2.93 and 3.13 (each within 0.02), with student 2's acid at 0.0600 M in 50.0 mL; 1 point for "higher for student 2" with the reason that the diluted acid has a lower hydronium ion concentration. The small-x check with its percentage is expected for each value but earns no separate point. "Higher" with a reason and no values earns the second point only.</RubricLine>
+<RubricLine part="c" points={1}>1 point for "the same", 4.73 for both (4.71 to 4.75 is accepted), from a table of moles that leaves 2.00 mmol of the acid and 1.00 mmol of its conjugate base in each flask. Either route earns the point: the $K_a$ expression with the ratio of the pair, or the Henderson–Hasselbalch equation. The small-x check is expected but earns no separate point. A pH of 5.03, the p$K_a$, earns 0 points, and so does "the same" with no value.</RubricLine>
+<RubricLine part="d" points={2}>1 point for the two values, 8.90 and 8.80 (each within 0.02), from the conjugate base at 0.0600 M in 50.0 mL and at 0.0375 M in 80.0 mL, each by way of the pOH; 1 point for "lower for student 2" with the reason that the same moles of the conjugate base in a larger volume give a lower hydroxide ion concentration. Two values that are both pOH values (5.10 and 5.20) earn 0 points for the first point. "Lower" with a reason and no values earns the second point only.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={20} title="A curve that falls twice" topic="8.5" points={5}>
+
+Sodium carbonate, $\ce{Na2CO3}$, is a soluble salt, and the carbonate ion, $\ce{CO3^2-}$, is a base that can take two protons, one after the other:
+
+$$
+\begin{aligned}
+&\ce{CO3^2-(aq) + H3O+(aq) ->} \\
+&\quad \ce{HCO3-(aq) + H2O(l)}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\ce{HCO3-(aq) + H3O+(aq) ->} \\
+&\quad \ce{H2CO3(aq) + H2O(l)}
+\end{aligned}
+$$
+
+25.0 mL of 0.0800 M sodium carbonate is titrated with 0.100 M HCl. The flask is closed, so no carbon dioxide escapes, and all of the dissolved carbon dioxide is counted as $\ce{H2CO3}$. A pH probe gives these readings.
+
+| HCl added (mL) | pH |
+|---|---|
+| 0.0 | 11.61 |
+| 10.0 | 10.32 |
+| 20.0 | 8.34 |
+| 30.0 | 6.35 |
+| 40.0 | 3.93 |
+| 45.0 | 2.15 |
+
+Use these values for carbonic acid: p$K_{a1}$ = 6.35, for $\ce{H2CO3}$ giving up a proton, and p$K_{a2}$ = 10.33, for $\ce{HCO3-}$ giving up a proton.
+
+<Part label="a">
+
+State how many steep falls the full curve has. Calculate the volume of HCl at each, and explain why the second volume is twice the first.
+
+<Answer>
+
+**Two steep falls, at 20.0 mL and at 40.0 mL.** Each fall marks one proton taken by every carbonate ion, and a carbonate ion takes two.
+
+The flask holds
+
+$$
+\begin{aligned}
+&(25.0)(0.0800) \\
+&= 2.00\ \text{mmol of } \ce{CO3^2-}
+\end{aligned}
+$$
+
+The first step needs 2.00 mmol of H₃O⁺:
+
+$$
+\frac{2.00}{0.100} = \mathbf{20.0}\ \text{mL}
+$$
+
+The first step turns the 2.00 mmol of $\ce{CO3^2-}$ into 2.00 mmol of $\ce{HCO3-}$. The second step is also 1 to 1, so it needs another 2.00 mmol of H₃O⁺, which is another 20.0 mL. The second fall is at
+
+$$
+20.0 + 20.0 = \mathbf{40.0}\ \text{mL}
+$$
+
+The second volume is twice the first because each step uses the same number of moles of H₃O⁺: one for every carbonate ion that was in the flask at the start.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+For each of the six readings, identify the carbon-containing form or forms that the flask mainly holds: $\ce{CO3^2-}$, $\ce{HCO3-}$ or $\ce{H2CO3}$. Where two forms are present in equal amounts, say so.
+
+<Answer>
+
+Count the H₃O⁺ added by each reading (the middle column), and spend it on the first step until 2.00 mmol is used, then on the second.
+
+| HCl (mL) | H₃O⁺ (mmol) | Mainly holds |
+|---|---|---|
+| 0.0 | 0 | CO₃²⁻ |
+| 10.0 | 1.00 | CO₃²⁻, HCO₃⁻ (equal) |
+| 20.0 | 2.00 | HCO₃⁻ |
+| 30.0 | 3.00 | HCO₃⁻, H₂CO₃ (equal) |
+| 40.0 | 4.00 | H₂CO₃ |
+| 45.0 | 4.50 | H₂CO₃ |
+
+- At 10.0 mL, 1.00 mmol of H₃O⁺ has turned 1.00 mmol of $\ce{CO3^2-}$ into $\ce{HCO3-}$, and 1.00 mmol of $\ce{CO3^2-}$ is left. That is halfway to the first fall.
+- At 20.0 mL, the first fall, every carbonate ion has taken one proton: 2.00 mmol of $\ce{HCO3-}$.
+- At 30.0 mL, the third millimole of H₃O⁺ has turned 1.00 mmol of $\ce{HCO3-}$ into $\ce{H2CO3}$, and 1.00 mmol of $\ce{HCO3-}$ is left. That is halfway between the falls.
+- At 40.0 mL, the second fall, every ion has taken its second proton: 2.00 mmol of $\ce{H2CO3}$.
+- At 45.0 mL the carbon is still all $\ce{H2CO3}$. The extra 0.50 mmol of H₃O⁺ has nothing left to react with.
+
+So the forms come in the order $\ce{CO3^2-}$, then $\ce{HCO3-}$, then $\ce{H2CO3}$: one more proton at each fall.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Match each p$K_a$ to the reading that shows it. Then explain why the larger p$K_a$ is met first in this titration.
+
+<Answer>
+
+A pH equals a p$K_a$ where the acid and the base of that pair are equal in amount.
+
+- **p$K_{a2}$ = 10.33 goes with the reading at 10.0 mL.** There $\ce{HCO3-}$ and $\ce{CO3^2-}$ are equal in amount, and that pair's acid is $\ce{HCO3-}$. The reading, 10.32, is within a hundredth of 10.33.
+- **p$K_{a1}$ = 6.35 goes with the reading at 30.0 mL.** There $\ce{H2CO3}$ and $\ce{HCO3-}$ are equal in amount, and that pair's acid is $\ce{H2CO3}$. The reading is 6.35.
+
+The larger p$K_a$ comes first because this titration starts from the base end. The flask starts with $\ce{CO3^2-}$, the form with no acidic proton left. The first acid that the HCl makes from it is $\ce{HCO3-}$, the weaker of the two acids, with the larger p$K_a$. So the first pair in the flask is $\ce{HCO3-}$ with $\ce{CO3^2-}$, and its p$K_a$ is p$K_{a2}$. The pair with $\ce{H2CO3}$ in it cannot appear until the first fall is past.
+
+The readings agree: the pH falls all the way through an acid's addition, so the higher of the two halfway readings has to come first. If carbonic acid were titrated with a strong base, the curve would rise, and p$K_{a1}$ would be met first.
+
+(The reading at 10.0 mL is a hundredth below p$K_{a2}$ because the carbonate ion is a strong enough base to take a few protons from water, which the count of moles leaves out.)
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+The reading at 40.0 mL is below 7. Use the moles to decide whether HCl is left over at 40.0 mL, and explain the reading. Then say what sets the pH at 45.0 mL.
+
+<Answer>
+
+**No HCl is left over at 40.0 mL.** The acid added is (40.0)(0.100) = 4.00 mmol of H₃O⁺. The two steps use 2.00 mmol each, 4.00 mmol in all, so every H₃O⁺ from the buret has been used.
+
+What the flask holds there is 2.00 mmol of $\ce{H2CO3}$, with the spectator ions Na⁺ and Cl⁻. $\ce{H2CO3}$ is a weak acid, and a small part of it ionizes:
+
+$$
+\begin{aligned}
+&\ce{H2CO3(aq) + H2O(l) <=>} \\
+&\quad \ce{HCO3-(aq) + H3O+(aq)}
+\end{aligned}
+$$
+
+That H₃O⁺ puts the pH below 7, at 3.93. It is the mirror of a weak acid's equivalence point above 7: the flask is acidic because of what the base has become, not because of anything left over.
+
+**At 45.0 mL, leftover H₃O⁺ sets the pH.** The acid added is (45.0)(0.100) = 4.50 mmol, and only 4.00 mmol can react, so 0.50 mmol of H₃O⁺ is left over in 25.0 + 45.0 = 70.0 mL. Leftover strong acid in a known volume is topic 8.2's case, and it gives the reading, 2.15. The strong acid alone accounts for it, and the little that $\ce{H2CO3}$ adds does not show.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for two falls, at 20.0 mL and 40.0 mL, with the reason that each of the two steps takes the same moles of the acid (2.00 mmol), one proton for each carbonate ion at each step. The two volumes with no reason earn 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for all six: carbonate ion at 0.0 mL; carbonate ion and hydrogen carbonate ion in equal amounts at 10.0 mL; hydrogen carbonate ion at 20.0 mL; hydrogen carbonate ion and carbonic acid in equal amounts at 30.0 mL; carbonic acid at 40.0 mL and at 45.0 mL. One slip among the six still earns the point. Dissolved carbon dioxide is accepted for carbonic acid.</RubricLine>
+<RubricLine part="c" points={2}>1 point for matching 10.33 to the reading at 10.0 mL and 6.35 to the reading at 30.0 mL, with the pair that is equal in amount at each; 1 point for the reason that the titration starts from the carbonate ion, so the first pair in the flask is the hydrogen carbonate ion with the carbonate ion, whose acid is the weaker one. The reason that the pH only falls, so the higher halfway reading must come first, also earns the second point.</RubricLine>
+<RubricLine part="d" points={1}>1 point for showing with moles that no HCl is left over at 40.0 mL (4.00 mmol added, 4.00 mmol used) and that the flask holds carbonic acid, a weak acid that ionizes a little, with leftover hydronium ion (0.50 mmol) setting the pH at 45.0 mL. The pH at 45.0 mL, 2.15, is not required.</RubricLine>
+</Rubric>
+
+</Question>
