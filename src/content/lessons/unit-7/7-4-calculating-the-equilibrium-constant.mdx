@@ -87,7 +87,15 @@ A 5.00 L nickel reactor, held at a certain high temperature, is found to contain
 
 </Worked>
 
-<Check numeric="150">
+<Check
+  numeric="150"
+  slips={{
+    "500": "Did you leave off the exponent? The coefficient 2 on IBr becomes an exponent on its pressure.",
+    "1000": "Did you double the IBr pressure? A coefficient becomes an exponent. It does not multiply.",
+    "600": "Did you double the IBr pressure and square it as well? A coefficient becomes an exponent and nothing else.",
+    "6.67e-3": "Is your fraction upside down? The product, IBr, goes on top.",
+  }}
+>
 Iodine and bromine react reversibly:
 
 $$
@@ -204,7 +212,16 @@ The vessel starts with no NO and no Cl₂. At equilibrium, the concentration of 
 
 The same table works in atm when the data are partial pressures and the constant you want is $K_p$. In a sealed container at a constant temperature, each gas's partial pressure is proportional to its moles (topic 3.4), so the pressures change in the ratio of the coefficients too.
 
-<Check numeric="3.0e-3">
+<Check
+  numeric="3.0e-3"
+  slips={{
+    "7.62e-4": "Did you forget that each I₂ gives two atoms? Check the moles of I that formed.",
+    "6.10e-3": "Did you use moles? Divide each amount by the 2.00 L before it goes into the expression.",
+    "2.56e-3": "Did you use the starting amount of I₂? The expression takes the amount left at equilibrium.",
+    "2.6e-3": "Did you use the starting amount of I₂? The expression takes the amount left at equilibrium.",
+    "0.381": "Did you forget the square? The coefficient 2 on I becomes an exponent.",
+  }}
+>
 A 2.00 L quartz bulb is sealed with 0.0500 mol of iodine, I₂, inside and heated in a furnace. At a certain high temperature all of the iodine is vapor, and some of the molecules split into atoms:
 
 $$
@@ -264,7 +281,14 @@ If you got 7.6 × 10⁻⁴, you did not double the iodine atoms. If you got 6.1 
 
 In topic 7.3, three tubes held three different mixtures, and all three gave one value of $K$. So a measurement on any one equilibrium mixture gives the $K$ for every mixture of that reaction at that temperature. What a different starting mixture changes is where the concentrations settle.
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "K does not depend on how much you start with. What does it depend on?",
+    3: "Try it: put the doubled concentrations, 0.300 M, 0.180 M and 0.0900 M, into the expression. Do they give 0.0162?",
+    4: "A smaller fraction does break down, but that changes the concentrations. Does it change K?",
+  }}
+>
 The sealed vessel of the second worked example started with 0.240 M NOCl and reached equilibrium at 0.150 M NOCl, 0.0900 M NO and 0.0450 M Cl₂, giving $K_c$ = 0.0162. A second vessel at the same temperature starts with twice as much, 0.480 M NOCl. What is true of the second vessel at equilibrium?
 
 - $K_c$ is twice as large, because there is twice as much NOCl.

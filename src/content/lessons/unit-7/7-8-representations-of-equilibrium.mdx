@@ -62,7 +62,14 @@ For a reaction like this one, with the same number of particles on each side of 
 
 </KeyIdea>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "More product than reactant does not mean equilibrium. Work out Q from the counts and compare it with K.",
+    2: "Check the exponent. The count of XY is squared in Q.",
+    4: "The volume cancels for this reaction, so the counts can go straight into Q.",
+  }}
+>
 At the temperature of the figure, $K$ = 16 for X₂(g) + Y₂(g) ⇌ 2 XY(g). Another box at that temperature holds 2 X₂, 2 Y₂ and 14 XY. What happens next?
 
 - Nothing happens, because XY already outnumbers the other molecules and the box is at equilibrium.
@@ -151,7 +158,15 @@ At the same temperature, where $K$ = 16, a box holds 3 X₂, 6 Y₂ and 4 XY. Is
 
 A real sample holds an enormous number of molecules, so its equilibrium does not have to land on whole numbers. Drawings are built so that it does. With real concentrations you would use the table with x from topic 7.7.
 
-<Check numeric="8" unit="molecules">
+<Check
+  numeric="8"
+  unit="molecules"
+  slips={{
+    "10": "Did you stop after one event? Work out Q for that box and compare it with K.",
+    "6": "That goes one event too far. Work out Q for that box: is it above K or below it?",
+    "12": "That is the box at the start. Can a box with no X₂ or Y₂ be at equilibrium?",
+  }}
+>
 At the same temperature, where $K$ = 16, a box starts with 12 XY molecules and nothing else. How many XY molecules does it hold at equilibrium?
 
 <div slot="why">
@@ -218,7 +233,15 @@ The bare counts would have given 5/10² = 0.050, a hundred times too small. That
 
 Here is the habit to build. Before you count, add up the coefficients on each side of the equation, for the species that appear in $Q$. (A pure solid or a pure liquid is not in $Q$, so it does not count.) For X₂ + Y₂ ⇌ 2 XY that is 2 on the left and 2 on the right. Equal: the counts are enough. For 2 Z ⇌ Z₂ it is 2 and 1. Unequal: change the counts to concentrations first.
 
-<Check numeric="50">
+<Check
+  numeric="50"
+  slips={{
+    "0.50": "Did you put in the bare counts? Each particle stands for 0.010 M. If you used concentrations, check which one is on top and where the exponent goes.",
+    "2.0": "Did you leave off the exponent, or turn the fraction over? Z₂ goes on top, and the coefficient 2 becomes an exponent on [Z].",
+    "0.020": "Is your fraction upside down? The product, Z₂, goes on top.",
+    "1.0": "Did you double the Z where it should be squared? A coefficient becomes an exponent and nothing else.",
+  }}
+>
 The sample in the figure is cooled to a different temperature, in the same box, and comes to equilibrium again. Now the box holds 4 Z and 8 Z₂. Each particle still stands for 0.010 M. What is $K_c$ for 2 Z(g) ⇌ Z₂(g) at the new temperature?
 
 <div slot="why">
@@ -245,7 +268,14 @@ If you got 0.50, you most likely put in the bare counts, 8 and 4, and your answe
 
 $K$ is a ratio, so you cannot judge it by eye from how many product molecules a box holds. To compare two equilibrium drawings, work out $K$ for each. One reaction has one $K$ at one temperature. If two equilibrium drawings of the same reaction give different values, they were made at different temperatures.
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "More XY is not enough. Box 2 also holds more X₂ and Y₂, and K is a ratio. Work it out for each box.",
+    3: "A reaction has one K at one temperature. These boxes are at different temperatures.",
+    4: "The boxes are separate samples, so they do not need the same atoms. Work out K from the counts in each box.",
+  }}
+>
 Two boxes show X₂(g) + Y₂(g) ⇌ 2 XY(g) at equilibrium, at two different temperatures. Box 1 holds 1 X₂, 1 Y₂ and 6 XY. Box 2 holds 4 X₂, 4 Y₂ and 8 XY. Which box is at the temperature where $K$ is larger?
 
 - Box 1, because the counts give a larger ratio there.

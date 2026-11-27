@@ -78,7 +78,13 @@ The mixture above is in the cylinder with its piston locked, so the volume is fi
 
 </Worked>
 
-<Check numeric="87.5">
+<Check
+  numeric="87.5"
+  slips={{
+    "140": "That is what the old [SCN⁻] gives, and it is K. Use [SCN⁻] after the crystals dissolve.",
+    "0.0114": "Is your fraction upside down? The product, FeSCN²⁺, goes on top.",
+  }}
+>
 Iron(III) ions and thiocyanate ions join to make a red ion:
 
 $$
@@ -162,7 +168,14 @@ The reasoning works for any reaction. When the volume changes, every concentrati
 - Solids and pure liquids are not in $Q$, which is why topic 7.9 did not count them.
 - The same holds for $Q_p$ when the volume changes at constant temperature: halving the volume doubles every partial pressure.
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "Doubling is what a squeeze to half the volume would do. Here the volume doubles, so every concentration is halved.",
+    3: "Q stays unchanged only when both sides have the same number of moles of gas. Count them here.",
+    4: "One eighth is what the top of the fraction alone does. The bottom changes too.",
+  }}
+>
 At a very high temperature, steam is partly split into its elements:
 
 $$
@@ -207,7 +220,15 @@ $$
 
 $Q$ has one concentration on top and two underneath. The top is halved once and the bottom twice, so $Q$ doubles. Now $Q$ is greater than $K$, and the reaction runs toward reactants, the side with more dissolved particles, as topic 7.9 said. Liquid water is not in $Q$, so it brings no factor of its own.
 
-<Check numeric="16">
+<Check
+  numeric="16"
+  slips={{
+    "2": "Did you leave out the exponent on [Cl⁻]? The coefficient 4 becomes an exponent in Q.",
+    "0.0625": "Is your fraction upside down? The product, CoCl₄²⁻, goes on top.",
+    "32": "That is what the bottom of the fraction alone does. The top is halved too.",
+    "0.5": "Each concentration is halved, but Q is a fraction built from them. Follow the one half through the top and the bottom.",
+  }}
+>
 A violet solution holds two kinds of cobalt ion at equilibrium. Co(H₂O)₆²⁺ is pink and CoCl₄²⁻ is blue:
 
 $$
@@ -272,7 +293,14 @@ Here is every kind of disturbance, with what it does to each number:
 
 The last row is why those three shift nothing: neither number moves, so $Q$ still equals $K$.
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "Nothing has reacted yet, so no concentration has changed. Can Q already equal the new K?",
+    2: "Cooling changes no concentration, but K depends on temperature. The question gives its new value.",
+    4: "Compare Q with K. When Q is less than K, which way does the reaction run?",
+  }}
+>
 A red solution of FeSCN²⁺ is at equilibrium, with $K_c$ = 140:
 
 $$
@@ -312,7 +340,15 @@ Suppose two things change at once: extra N₂O₄ and extra NO₂ are both injec
 
 $Q$ settles it. The principle reasons from what was done to the mixture. $Q$ needs only the concentrations as they now stand, whatever happened before. Put them into the fraction, compare the result with $K$, and you have the direction. Topic 7.7 did exactly that for a mixture that had only just been made. So when the principle cannot decide, calculate.
 
-<Check numeric="0.460">
+<Check
+  numeric="0.460"
+  slips={{
+    "2.05": "Did you leave out the exponent? The coefficient 2 on NO₂ becomes an exponent in Q.",
+    "2.17": "Is your fraction upside down? The product, NO₂, goes on top.",
+    "0.490": "That matches K. Build Q from the two new concentrations, with the product on top and its coefficient as an exponent.",
+    "4.09": "Did you multiply [NO₂] by 2? A coefficient becomes an exponent, not a multiplier.",
+  }}
+>
 The N₂O₄ and NO₂ mixture of this lesson is at equilibrium, with $K_c$ = 0.490. Both gases are injected at the same moment, with the volume unchanged, which brings [N₂O₄] to 0.110 M and [NO₂] to 0.225 M. What is $Q$ at that moment?
 
 <div slot="why">
