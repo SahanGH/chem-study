@@ -1,0 +1,657 @@
+---
+topic: "9.3"
+minutes: 22
+summary: "How the Gibbs free energy change puts enthalpy and entropy into one number, two ways to calculate it, and how its sign depends on the temperature."
+---
+
+Magnesium hydride is a light gray powder, a solid that is part hydrogen, and engineers study it as a way to carry hydrogen without a high-pressure tank. Sealed in a dry can at room temperature, it stays magnesium hydride. Heat it enough and the hydrogen comes back out as a gas, leaving magnesium metal behind. Nothing was added, and the reaction takes in the same energy hot or cold. This lesson builds the one number that says which way a change is favored, and shows why that number can change its sign when the temperature does.
+
+## One number for two tendencies
+
+Two things work for a change. One is releasing energy: a negative ΔH° (Unit 6). The other is an increase in entropy: a positive ΔS° (topics 9.1 and 9.2). When both point the same way, the verdict is easy. Often they disagree. The xylitol of topic 6.1 takes energy in as it dissolves, and dissolves anyway. Magnesium hydride giving up its hydrogen takes energy in and gains entropy, because a solid gives a gas. Something has to weigh the two.
+
+The **Gibbs free energy**, $G$, is a property of a system that combines its enthalpy and its entropy, and what matters is its change. The **standard free energy change**, $\Delta G^\circ$, is the change in free energy when the reactants turn into the products with every substance in its standard state. From here on, this lesson just says "free energy".
+
+The circle means what it meant in topic 6.8: each substance pure and at 1 bar (very nearly 1 atm). One thing is added here: for a dissolved substance, the standard state is a concentration of 1 M. Tables give values for 25 °C.
+
+Now the rule. A process is **thermodynamically favored** when $\Delta G^\circ < 0$. It is **thermodynamically unfavored** when $\Delta G^\circ > 0$, and then the reverse process is the favored one, because reversing a process reverses the sign of its $\Delta G^\circ$, as it does for ΔH° (topic 6.9).
+
+What does "favored" mean? Starting from everything in its standard state, the change can go forward by itself, with nothing driving it from outside. It does not mean that the change is fast: topic 9.4 takes that up. And it does not mean that the reactants are all used up: how far a favored change goes is topic 9.5's question.
+
+Older books call a thermodynamically favored process "spontaneous". The word means the same thing, but it sounds like "sudden", and ΔG° says nothing about speed, so this course and the exam say "thermodynamically favored". Some exam questions write "thermodynamically favorable", which means exactly the same.
+
+Like ΔH°, ΔG° goes with the equation as written, so its unit is $\text{kJ/mol}_\text{rxn}$ (topic 6.6). Tables, questions and the answer boxes in this lesson shorten that to kJ/mol, and J/(mol·K) is short for joules per kelvin for each mole of reaction: this is the shortening topic 6.6 described. The sign of ΔG° is part of it, and a plus sign is written.
+
+<KeyIdea>
+
+$\Delta G^\circ < 0$: thermodynamically favored. $\Delta G^\circ > 0$: thermodynamically unfavored, and the reverse is favored. The sign tells you the direction. It does not tell you the speed.
+
+</KeyIdea>
+
+## ΔG° from a table
+
+The first way to get ΔG° is the way topic 6.8 got ΔH°. The **standard free energy of formation**, $\Delta G_f^\circ$, of a compound is the free energy change for forming one mole of it from its elements in their standard states. Tables list it in kJ/mol at 25 °C.
+
+An element in its standard state has $\Delta G_f^\circ = 0$, for the reason its $\Delta H_f^\circ$ is zero: forming it from itself changes nothing. It goes into the sum as zero. This is not true of its $S^\circ$, which is never zero at 25 °C (topic 9.2).
+
+<KeyIdea>
+
+The standard free energy change of a reaction is the products' total minus the reactants' total:
+
+$$
+\begin{aligned}
+\Delta G^\circ ={} & \textstyle\sum n\,\Delta G_f^\circ(\text{products}) \\
+& - \textstyle\sum n\,\Delta G_f^\circ(\text{reactants})
+\end{aligned}
+$$
+
+Here $n$ is each substance's coefficient in the balanced equation.
+
+</KeyIdea>
+
+The equation sheet prints this sum without the $n$, as it does the enthalpy sum, and the coefficients are yours to put in. No value of $\Delta G_f^\circ$ is on the sheet: a question gives each one it needs.
+
+One limit: tables of $\Delta G_f^\circ$ are for 25 °C, so this route gives ΔG° at 25 °C and at no other temperature.
+
+<Worked title="Magnesium hydride from the table">
+
+Is this reaction thermodynamically favored at 25 °C?
+
+$$
+\ce{MgH2(s) -> Mg(s) + H2(g)}
+$$
+
+$\Delta G_f^\circ$ of MgH₂(s) is −35.9 kJ/mol.
+
+1. **Write a value under every substance.** All are in kJ/mol.
+
+   - MgH₂(s): −35.9
+   - Mg(s): 0, an element in its standard state
+   - H₂(g): 0, the same
+
+2. **Add up the products, with coefficients.**
+
+   $$
+   1(0) + 1(0) = 0\ \text{kJ}
+   $$
+
+3. **Add up the reactants, with coefficients.**
+
+   $$
+   1(-35.9) = -35.9\ \text{kJ}
+   $$
+
+4. **Products minus reactants.**
+
+   $$
+   \begin{aligned}
+   \Delta G^\circ &= 0 - (-35.9) \\
+   &= +35.9\ \text{kJ/mol}_\text{rxn}
+   \end{aligned}
+   $$
+
+5. **Read the sign.** It is positive: at 25 °C, magnesium hydride giving up its hydrogen is thermodynamically unfavored. The reverse, magnesium taking up hydrogen to make the hydride, is the favored direction at this temperature, with $\Delta G^\circ$ of −35.9 $\text{kJ/mol}_\text{rxn}$.
+
+</Worked>
+
+<Check
+  numeric="-606.5"
+  unit="kJ/mol"
+  slips={{
+    "-377.9": "Did you count the water once? The equation makes 2 mol of H₂O(g), so its value goes in twice.",
+    "606.5": "Check the order of the subtraction: products minus reactants. The sign is part of the answer.",
+    "-307.9": "Did you add hydrazine's +149.3? It is a reactant, so its total is subtracted.",
+    "-457.2": "That is the products' total alone. Hydrazine is a compound, not an element, so its value is not zero.",
+  }}
+>
+Hydrazine, N₂H₄, is a liquid fuel. It burns in oxygen to give nitrogen and water vapor:
+
+$$
+\begin{aligned}
+&\ce{N2H4(l) + O2(g) ->} \\
+&\quad \ce{N2(g) + 2H2O(g)}
+\end{aligned}
+$$
+
+The standard free energies of formation at 25 °C are +149.3 kJ/mol for N₂H₄(l) and −228.6 kJ/mol for H₂O(g). Find ΔG° for the reaction as written, in kJ/mol, with its sign.
+
+<div slot="why">
+
+The two elements, O₂(g) and N₂(g), go in as zero. The products' total:
+
+$$
+1(0) + 2(-228.6) = -457.2\ \text{kJ}
+$$
+
+The reactants' total:
+
+$$
+1(+149.3) + 1(0) = +149.3\ \text{kJ}
+$$
+
+Products minus reactants:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -457.2 - (+149.3) \\
+&= -606.5\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+The reaction is strongly favored at 25 °C.
+
+</div>
+</Check>
+
+## ΔG° from ΔH° and ΔS°
+
+The second way shows where free energy comes from.
+
+$$
+\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ
+$$
+
+Here $T$ is the temperature in kelvins. This equation is on the equation sheet.
+
+Read it as two terms. $\Delta H^\circ$ is the enthalpy term: it is negative when the reaction releases energy, and a negative value pulls ΔG° down. $-T\Delta S^\circ$ is the entropy term: when ΔS° is positive this term is negative, and it too pulls ΔG° down. So the equation says what the first section said in words: releasing energy works for a change, and so does gaining entropy. When the two disagree, the larger term wins.
+
+"Exothermic" is not "favored". A reaction can release energy and still be unfavored, if it loses enough entropy and the temperature is high enough. One can take energy in and still be favored. The sign that decides is the sign of ΔG°.
+
+There is a trap in the units. Tables give ΔH° in kilojoules and S° in joules per kelvin, so ΔS° comes out in J/(mol·K). The two terms cannot be subtracted until they are in the same unit, and nothing on the equation sheet reminds you. **Turn ΔS° into kJ/K first, on a line of its own, before you do anything else with it:** divide by 1,000.
+
+<KeyIdea>
+
+$\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$, with $T$ in kelvins and both terms in kilojoules. Convert ΔS° from J/K to kJ/K before you multiply by $T$.
+
+</KeyIdea>
+
+<Worked title="The same reaction from ΔH° and ΔS°">
+
+For magnesium hydride giving up its hydrogen,
+
+$$
+\ce{MgH2(s) -> Mg(s) + H2(g)}
+$$
+
+topic 6.8's sum gives the first value below and topic 9.2's sum gives the second. Find ΔG° at 25 °C.
+
+$$
+\begin{aligned}
+\Delta H^\circ &= +75.3\ \text{kJ/mol}_\text{rxn} \\
+\Delta S^\circ &= +132.3\ \text{J/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+1. **Put the temperature in kelvins.** 25 °C is 298 K.
+
+2. **Put ΔS° in kilojoules.**
+
+   $$
+   \frac{132.3\ \text{J/K}}{1{,}000} = 0.1323\ \text{kJ/K}
+   $$
+
+3. **Find the entropy term.**
+
+   $$
+   \begin{aligned}
+   T\Delta S^\circ &= (298)(0.1323) \\
+   &= 39.4\ \text{kJ}
+   \end{aligned}
+   $$
+
+4. **Subtract.**
+
+   $$
+   \begin{aligned}
+   \Delta G^\circ &= 75.3 - 39.4 \\
+   &= +35.9\ \text{kJ/mol}_\text{rxn}
+   \end{aligned}
+   $$
+
+5. **Compare the two routes.** The table of free energies of formation gave +35.9, and so does this route. The two do not have to match to the last figure: every table value is rounded to one decimal place, so for other reactions the routes can come out a tenth or two apart. Both say the same thing here: unfavored at 25 °C. The enthalpy term, +75.3, works against the reaction. The entropy term, −39.4, works for it. At 25 °C the enthalpy term is the larger.
+
+6. **Look at the size.** Skip step 2 and the arithmetic reads like this:
+
+   $$
+   \begin{aligned}
+   &75.3 - (298)(132.3) \\
+   &\quad = -39{,}350.1
+   \end{aligned}
+   $$
+
+   That has the wrong sign, and so the wrong verdict. Here ΔH° is 75.3, and the entropy term, 39,425, is hundreds of times larger. A ΔG° of that size cannot be right: go back to step 2.
+
+</Worked>
+
+<Check
+  numeric="-91.2"
+  unit="kJ/mol"
+  slips={{
+    "84784": "Did you leave ΔS° in joules? ΔH° is in kilojoules, so turn ΔS° into kJ/K before you multiply by T.",
+    "-261.2": "Check the signs in the entropy term. ΔS° is negative here, so subtracting TΔS° adds a positive amount.",
+    "-169.1": "Did you use 25 for the temperature? T in this equation is in kelvins.",
+    "91.2": "The size is right and the sign is not. Follow each minus sign through the subtraction once more.",
+    "6951": "Two things to check: T must be in kelvins, and ΔS° must be in kJ/K before it meets ΔH°.",
+  }}
+>
+Hold the open mouths of a bottle of concentrated ammonia solution and a bottle of concentrated hydrochloric acid near each other, and a white smoke of solid ammonium chloride forms where the two gases meet:
+
+$$
+\ce{NH3(g) + HCl(g) -> NH4Cl(s)}
+$$
+
+For this reaction ΔH° = −176.2 kJ/mol and ΔS° = −285.1 J/(mol·K). Find ΔG° at 298 K, in kJ/mol, with its sign.
+
+<div slot="why">
+
+ΔS° in kilojoules:
+
+$$
+\frac{-285.1\ \text{J/K}}{1{,}000} = -0.2851\ \text{kJ/K}
+$$
+
+The entropy term:
+
+$$
+\begin{aligned}
+T\Delta S^\circ &= (298)(-0.2851) \\
+&= -84.96\ \text{kJ}
+\end{aligned}
+$$
+
+Then:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -176.2 - (-84.96) \\
+&= -176.2 + 84.96 \\
+&= -91.2\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+The reaction loses entropy, two gases becoming a solid, so the entropy term works against it. But at 298 K the enthalpy term is about twice as large, and the smoke forms.
+
+</div>
+</Check>
+
+## Heat it, and only one term moves
+
+Look at the equation again. $T$ multiplies ΔS° and nothing else. Over the temperatures of a problem, ΔH° and ΔS° themselves change very little, and this course treats them as constant. That is an approximation. So when the temperature goes up, the enthalpy term stays where it is and the entropy term grows.
+
+For magnesium hydride that is the whole story of the opening. Its entropy term works for the reaction. Cold, that term is too small to beat the +75.3 kJ of the enthalpy term. Hot enough, it is not.
+
+The route by formation values cannot follow this: its table is for 25 °C. $\Delta H^\circ - T\Delta S^\circ$ works at any temperature.
+
+The temperature at which the verdict changes is the temperature at which $\Delta G^\circ = 0$. Set the equation to zero and solve:
+
+$$
+\begin{aligned}
+0 &= \Delta H^\circ - T\Delta S^\circ \\
+T &= \frac{\Delta H^\circ}{\Delta S^\circ}
+\end{aligned}
+$$
+
+Both must be in the same energy unit, so that the answer is in kelvins.
+
+<Worked title="How hot for magnesium hydride?">
+
+Above what temperature is this reaction thermodynamically favored?
+
+$$
+\ce{MgH2(s) -> Mg(s) + H2(g)}
+$$
+
+Use the values of the last example, and take them as constant.
+
+$$
+\begin{aligned}
+\Delta H^\circ &= +75.3\ \text{kJ/mol}_\text{rxn} \\
+\Delta S^\circ &= +132.3\ \text{J/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+1. **Match the units.**
+
+   $$
+   \frac{132.3\ \text{J/K}}{1{,}000} = 0.1323\ \text{kJ/K}
+   $$
+
+2. **Set ΔG° to zero and solve for $T$.**
+
+   $$
+   T = \frac{75.3}{0.1323} = 569\ \text{K}
+   $$
+
+   It is 569.2 before rounding. That is 296 °C.
+
+3. **Decide which side is the favored one.** ΔS° is positive, so the entropy term grows more negative as $T$ rises: the reaction is favored above 569 K and unfavored below it.
+
+4. **Test a temperature on each side.** At 400 K, in kJ:
+
+   $$
+   \begin{aligned}
+   \Delta G^\circ &= 75.3 - (400)(0.1323) \\
+   &= +22.4
+   \end{aligned}
+   $$
+
+   Unfavored. At 700 K the entropy term is (700)(0.1323) = 92.6 kJ, so, in kJ:
+
+   $$
+   \Delta G^\circ = 75.3 - 92.6 = -17.3
+   $$
+
+   Favored.
+
+5. **Check the unit.** Dividing 75.3 by 132.3, kilojoules by joules, gives 0.569, a temperature a fraction of a degree above absolute zero. An answer like that means the units were not matched.
+
+</Worked>
+
+The calculation puts the change of sign at 296 °C, and in the laboratory magnesium hydride does release its hydrogen when it is heated to about 300 °C.
+
+The figure shows the two terms as bars. At 298 K the bar for ΔH° is the taller one. At 700 K (427 °C) the bar for TΔS° has passed it, and ΔH° has not moved.
+
+<Figure
+  src="/figures/9-3-magnesium-hydride-bars.svg"
+  alt="Two pairs of bars for magnesium hydride giving up its hydrogen. At 298 K a hatched bar labeled ΔH°, 75.3, stands taller than a plain bar labeled TΔS°, 39.4, and the words under them read ΔG° = +35.9 kJ, unfavored. At 700 K the hatched bar is the same height, 75.3, and the plain bar has grown taller than it, to 92.6; the words read ΔG° = −17.3 kJ, favored."
+  caption="ΔG° is the first bar minus the second, in kJ for each mole of reaction. Heating leaves ΔH° where it is and makes TΔS° grow. Above 569 K the second bar is the taller one."
+/>
+
+<Check
+  numeric="531"
+  unit="K"
+  slips={{
+    "0.531": "Did you divide kilojoules by joules? Put ΔH° and ΔS° in the same energy unit before you divide.",
+    "258": "That is the temperature in °C. The question asks for kelvins.",
+    "1882": "That is ΔS° divided by ΔH°. Set ΔG° equal to zero and solve for T again.",
+    "1.88": "That is ΔS° over ΔH°, with joules and kilojoules mixed as well. Set ΔG° to zero and solve for T.",
+    "35.6": "That is ΔG° at 298 K, in kJ. The question asks for the temperature at which ΔG° reaches zero.",
+  }}
+>
+Magnesium hydroxide is mixed into the plastic insulation of some electric cables as a flame retardant. When a fire heats it, it breaks down, taking in energy and giving off water vapor:
+
+$$
+\begin{aligned}
+&\ce{Mg(OH)2(s) ->} \\
+&\quad \ce{MgO(s) + H2O(g)}
+\end{aligned}
+$$
+
+For this reaction ΔH° = +81.1 kJ/mol and ΔS° = +152.6 J/(mol·K). Taking both as constant, above what temperature, in K, is ΔG° negative?
+
+<div slot="why">
+
+ΔS° in kilojoules:
+
+$$
+\frac{152.6\ \text{J/K}}{1{,}000} = 0.1526\ \text{kJ/K}
+$$
+
+Setting ΔG° to zero:
+
+$$
+T = \frac{81.1}{0.1526} = 531\ \text{K}
+$$
+
+It is 531.5 before rounding. ΔS° is positive, so the entropy term works for the reaction and grows with $T$: ΔG° is negative above 531 K and positive below it. That is 258 °C: the filler sits unchanged in the cable at ordinary temperatures and takes in energy only in a fire.
+
+</div>
+</Check>
+
+## Four combinations of signs
+
+ΔH° can be negative or positive, and so can ΔS°. That makes four combinations, and the equation settles each one. You do not need to memorize them. Reason each one out from a single fact: temperature multiplies only the entropy term.
+
+**Both terms negative** (ΔH° negative, ΔS° positive). The reaction releases energy and gains entropy. Nothing works against it. ΔG° is negative at every temperature.
+
+**Both terms positive** (ΔH° positive, ΔS° negative). The reaction takes in energy and loses entropy. Nothing works for it. ΔG° is positive at every temperature, and the reverse reaction is the favored one at every temperature.
+
+**ΔH° positive and ΔS° positive.** The enthalpy term works against the reaction, the entropy term works for it, and heating strengthens the entropy term. The reaction is favored at high temperature, above ΔH°/ΔS°. Magnesium hydride is this case.
+
+**ΔH° negative and ΔS° negative.** The enthalpy term works for the reaction, the entropy term works against it, and heating strengthens the entropy term. The reaction is favored at low temperature, below ΔH°/ΔS°. The white smoke of ammonium chloride is this case.
+
+A word of care: "at every temperature" is a statement about the equation, with ΔH° and ΔS° taken as constant and each substance in the state the equation gives it.
+
+The ratio ΔH°/ΔS° means something only when the two signs match. With unlike signs it comes out negative, and no temperature in kelvins is negative: that is the equation's way of saying that the sign of ΔG° never changes.
+
+<KeyIdea>
+
+Temperature multiplies only the entropy term, so heating strengthens whichever way entropy points. If ΔS° is positive, heating helps the reaction. If ΔS° is negative, heating hurts it.
+
+</KeyIdea>
+
+The diagram below has four real reactions, one for each combination of signs, and a slider for the temperature. The graph shows ΔG° against temperature for all four, with the chosen one drawn heavy. The three bars show ΔH°, −TΔS° and their sum, ΔG°. The slider moves in steps of 25 K, so its nearest stop to 25 °C is 300 K, and the numbers there differ a little from a table's values for 298 K.
+
+<FreeEnergy />
+
+Do four things with it, and predict before each move. All the values are in $\text{kJ/mol}_\text{rxn}$.
+
+1. **Read the starting state.** Methane with steam, the reaction that makes most of the world's hydrogen, at 300 K. You should see ΔH° = +205.9, −TΔS° = −64.4 and ΔG° = +141.5. Unfavored. Before you touch the slider, predict which of the three bars will move when you do.
+
+2. **Heat it.** Slide up. The ΔH° bar stays. The entropy bar grows downward and drags ΔG° with it. At 950 K you should see the entropy bar read −204.0 and ΔG° read +1.9. One stop on, at 975 K, ΔG° is −3.4. The guide on the graph marks where the line meets zero: 959 K. Hydrogen plants run this reaction in tubes heated to more than 1,000 K.
+
+3. **Now predict a whole line.** Choose methanol from carbon monoxide:
+
+   $$
+   \ce{CO(g) + 2H2(g) -> CH3OH(g)}
+   $$
+
+   Three moles of gas become one, so ΔS° is negative, and the reaction releases energy. Before you slide: at which end of the slider is it favored? You should see that at 300 K the entropy bar points up, +65.8, and ΔG° is −24.7. Heating makes that bar grow: ΔG° is −2.8 at 400 K and +2.7 at 425 K. The line meets zero at 413 K, and this time the favored side is the cold side.
+
+4. **The two that never change their verdict.** Nitrous oxide breaking down has both bars pointing down: you should see ΔG° = −208.6 at 300 K, where the entropy bar is −44.5, and −371.9 at 1,400 K. Ozone forming from oxygen has both pointing up: +326.7 at 300 K, where the entropy bar is +41.3, and +478.3 at 1,400 K. Look at the four lines together. Where a line starts depends mostly on ΔH°, and whether it slopes down or up depends on the sign of ΔS°. A line that slopes down has a positive ΔS°.
+
+Nitrous oxide's ΔH° of −164.1 $\text{kJ/mol}_\text{rxn}$ is the −164 of topic 6.6 with one more figure. Ozone forming is unfavored at every temperature, and ozone is made all the same, with energy from outside: topic 9.7 shows how.
+
+<Figure
+  src="/figures/9-3-four-cases.svg"
+  alt="Four small graphs of ΔG° against temperature, from 200 K to 1,400 K, each with one straight line and a zero line. Top left, ΔH° below zero and ΔS° above zero, N₂O breaking down: the line lies below zero all the way and slopes down, a hatched band runs under the whole graph, and the label reads favored at every T. Top right, ΔH° above zero and ΔS° below zero, ozone forming: the line lies above zero all the way and slopes up, there is no band, and the label reads favored at no T. Bottom left, both above zero, methane with steam: the line starts above zero, slopes down and crosses zero, a hatched band runs under the right-hand part, and the label reads favored above 959 K. Bottom right, both below zero, methanol forming: the line starts below zero, slopes up and crosses zero, a hatched band runs under the left-hand end, and the label reads favored below 413 K."
+  caption="The four combinations of signs, each shown by one of the explorer's reactions. The hatched band marks the temperatures at which ΔG° is negative. All four graphs share one scale, from −400 to +500 kJ for each mole of reaction, and ΔH° and ΔS° are taken as constant."
+/>
+
+| ΔH° | ΔS° | Thermodynamically favored | In the explorer |
+|---|---|---|---|
+| − | + | at every temperature | nitrous oxide breaking down |
+| + | − | at no temperature | ozone forming |
+| + | + | at high temperature, above ΔH°/ΔS° | methane with steam, above 959 K |
+| − | − | at low temperature, below ΔH°/ΔS° | methanol forming, below 413 K |
+
+This table is not on the equation sheet, and you do not need it there, because each row can be read off $\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$ in a few seconds.
+
+<Check
+  answer={1}
+  misses={{
+    2: "That is the pattern when ΔH° is positive. This reaction releases energy, so which way does ΔH° point?",
+    3: "Heating strengthens the entropy term. One mole of gas becomes three: does that term work for the reaction or against it?",
+    4: "Both terms positive would mean a reaction that takes in energy and loses entropy. Check each sign against the question.",
+  }}
+>
+Hydrazine burning releases energy, and it turns one mole of gas into three:
+
+$$
+\begin{aligned}
+&\ce{N2H4(l) + O2(g) ->} \\
+&\quad \ce{N2(g) + 2H2O(g)}
+\end{aligned}
+$$
+
+Take ΔH° and ΔS° as constant. Over which temperatures is the reaction thermodynamically favored?
+
+- At every temperature, because both terms of ΔG° are negative
+- Only above some temperature, where the entropy term outgrows ΔH°
+- Only below some temperature, because heating works against it
+- At no temperature, because both terms of ΔG° are positive
+
+<div slot="why">
+
+The reaction releases energy, so ΔH° is negative. One mole of gas becomes three, so ΔS° is positive, and −TΔS° is negative at every temperature. Two negative terms add to a negative ΔG° whatever $T$ is.
+
+The second option is the pattern for a reaction that takes energy in and gains entropy. The third is for one that releases energy and loses entropy. The fourth is for one that takes energy in and loses entropy.
+
+The statement holds for as long as the substances are in the states the equation gives them.
+
+</div>
+</Check>
+
+<Check
+  answer={4}
+  misses={{
+    1: "This lesson takes ΔH° as the same at every temperature. Which term of the equation has T in it?",
+    2: "Heating makes collisions more energetic and reactions faster. This is a question of which direction is favored, not of rate.",
+    3: "Count the moles of gas on each side of the equation as written. What sign does that give ΔS°?",
+  }}
+>
+The white smoke of ammonium chloride forms when ammonia and hydrogen chloride meet at room temperature:
+
+$$
+\ce{NH3(g) + HCl(g) -> NH4Cl(s)}
+$$
+
+Pass the same two gases together through a glass tube kept at 700 K, and no smoke forms in the tube. Which explanation fits?
+
+- ΔH° turns positive in a hot tube, so the reaction now takes in energy
+- Molecules in a hot tube move too fast to react, so the smoke forms too slowly
+- ΔS° is positive, and heating strengthens whichever way entropy points
+- The entropy term works against the smoke, and at 700 K it outweighs ΔH°
+
+<div slot="why">
+
+Two moles of gas become a solid, so ΔS° is negative and the entropy term, −TΔS°, is positive: it works against the reaction, and it grows with the temperature. ΔH° is negative, works for the reaction, and stays where it is.
+
+Use the values ΔH° = −176.2 kJ/mol and ΔS° = −285.1 J/(mol·K). ΔS° in kilojoules is −0.2851 kJ/K, so at 700 K:
+
+$$
+\begin{aligned}
+T\Delta S^\circ &= (700)(-0.2851) \\
+&= -199.6\ \text{kJ}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -176.2 + 199.6 \\
+&= +23.4\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Unfavored. The sign changes at this temperature:
+
+$$
+T = \frac{176.2}{0.2851} = 618\ \text{K}
+$$
+
+ΔH° does not change sign: it is taken as constant. Heating makes reactions faster, never too fast to happen. The third option has the sign of ΔS° backward. It would be right for the reverse reaction, a solid turning into two gases, which is why ammonium chloride comes apart into ammonia and hydrogen chloride when it is heated strongly.
+
+</div>
+</Check>
+
+## Choosing a route
+
+Look at what the question hands you. A table of free energies of formation and a temperature of 25 °C call for the sum. Anything else calls for $\Delta H^\circ - T\Delta S^\circ$: a given ΔH° and ΔS°, enthalpies of formation with standard entropies, or a temperature other than 25 °C. At 25 °C the two routes agree up to the rounding in the tables. For magnesium hydride both gave +35.9. For other reactions they can differ by a tenth or two.
+
+A positive ΔG° does not mean that nothing can be done. The reverse is favored, a different temperature may change the sign, and topic 9.7 shows how an unfavored reaction can be driven.
+
+**Beyond the exam:** the energy a reaction releases spreads out into the surroundings and raises their entropy, by $-\Delta H^\circ/T$. Add the system's own ΔS° to that and you get $-\Delta G^\circ/T$, so a negative ΔG° is another way of saying that the entropy of the system and its surroundings together goes up.
+
+<Check
+  answer={2}
+  misses={{
+    1: "Line 1 divides −285.1 J/K by 1,000. Work that out and compare it with what the classmate wrote.",
+    3: "Line 3 adds the two terms it was handed, and the sum is done correctly. Look at where those terms came from.",
+    4: "A negative ΔG° does mean favored, so line 4 reads its number correctly. Find the first line where a number goes wrong.",
+  }}
+>
+A classmate finds ΔG° at 298 K for
+
+$$
+\ce{NH3(g) + HCl(g) -> NH4Cl(s)}
+$$
+
+from ΔH° = −176.2 kJ/mol and ΔS° = −285.1 J/(mol·K). The work has four lines:
+
+Line 1:
+
+$$
+\Delta S^\circ = -0.2851\ \text{kJ/K}
+$$
+
+Line 2:
+
+$$
+\begin{aligned}
+-T\Delta S^\circ &= -(298)(-0.2851) \\
+&= -84.96\ \text{kJ}
+\end{aligned}
+$$
+
+Line 3:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -176.2 + (-84.96) \\
+&= -261.2\ \text{kJ/mol}
+\end{aligned}
+$$
+
+Line 4: ΔG° is negative, so the white smoke is favored at 298 K.
+
+Which is the first line that has a mistake in it?
+
+- Line 1, where ΔS° is put into kJ/K
+- Line 2, where the entropy term is found
+- Line 3, where the two terms are combined
+- Line 4, where the sign of ΔG° is read
+
+<div slot="why">
+
+Line 1 is right: −285.1 J/K is −0.2851 kJ/K. Line 2 is where it goes wrong. The entropy term is −TΔS°, and ΔS° is negative, so the term is a negative times a negative:
+
+$$
+\begin{aligned}
+-T\Delta S^\circ &= -(298)(-0.2851) \\
+&= +84.96\ \text{kJ}
+\end{aligned}
+$$
+
+It is not −84.96. You can see that it must be positive without any arithmetic: two moles of gas become a solid, entropy is lost, and a loss of entropy works against a reaction.
+
+Line 3 adds the two terms it was given without a slip, and line 4 reads a negative number correctly, so neither is the first mistake. With line 2 put right:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -176.2 + 84.96 \\
+&= -91.2\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Notice that the classmate's verdict came out right all the same, since −261.2 and −91.2 are both negative. A right verdict does not show that the number behind it is right.
+
+</div>
+</Check>
+
+<Trap>
+
+Eight mistakes cost points on this topic:
+
+- **Subtracting joules from kilojoules.** ΔS° comes out of the tables in J/K. Turn it into kJ/K on its own line, and go back to that line if the entropy term comes out hundreds of times larger than ΔH°.
+- **Putting $T$ in °C.** The equation needs kelvins: 25 °C is 298 K.
+- **Losing the double negative.** When ΔS° is negative, −TΔS° is positive and works against the reaction.
+- **Reading "exothermic" as "favored".** The sign of ΔG° decides, and the entropy term can outweigh ΔH°.
+- **Entering an element's $\Delta G_f^\circ$ as anything but zero, or leaving out a coefficient.** Elements in their standard states go in as zero, and every value is multiplied by its coefficient.
+- **Using a table of $\Delta G_f^\circ$ at another temperature.** Those values are for 25 °C. Use $\Delta H^\circ - T\Delta S^\circ$ elsewhere.
+- **Dividing ΔH° by ΔS° when their signs differ.** The answer is negative and means nothing: the sign of ΔG° never changes.
+- **Reading "favored" as "fast".** ΔG° says nothing about speed (topic 9.4).
+
+</Trap>
+
+<KeyPoints>
+
+- The standard free energy change, $\Delta G^\circ$, is the free energy change with every substance in its standard state: pure at 1 bar, and solutes at 1 M. A process is thermodynamically favored when $\Delta G^\circ < 0$ and thermodynamically unfavored when $\Delta G^\circ > 0$, in which case its reverse is favored.
+- At 25 °C, ΔG° is the sum of $n\,\Delta G_f^\circ$ for the products minus the sum for the reactants, with every element in its standard state entered as zero.
+- At any temperature, ΔG° is ΔH° minus $T\Delta S^\circ$, with $T$ in kelvins and ΔS° turned from J/K into kJ/K before it is multiplied by $T$.
+- Temperature multiplies only the entropy term, so heating helps a reaction whose ΔS° is positive and hurts one whose ΔS° is negative.
+- When ΔH° and ΔS° are taken as constant, a reaction with a negative ΔH° and a positive ΔS° is favored at every temperature, and one with a positive ΔH° and a negative ΔS° is favored at none.
+- When ΔH° and ΔS° have the same sign, ΔG° changes sign at the temperature ΔH° divided by ΔS°: the reaction is favored above that temperature if both are positive, and below it if both are negative.
+
+</KeyPoints>
+
+<PracticeNext />

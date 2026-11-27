@@ -1,0 +1,486 @@
+---
+topic: "9.2"
+minutes: 17
+summary: "Why tables list the entropy itself for every substance, elements included, and how to find the entropy change of a reaction from those values."
+---
+
+Topic 9.1 said that when iron rusts the entropy falls, because three moles of oxygen gas end up locked in a solid. How far does it fall? Answering takes numbers, and the numbers for entropy differ from Unit 6's numbers for enthalpy in one way that costs students points every year.
+
+## A scale that starts at the bottom
+
+Start from topic 9.1: cooling a substance leaves its particles fewer ways to share their energy, so its entropy falls. Follow that all the way down. At absolute zero, 0 K, in a perfect crystal, every particle sits in its one place and there is only one way to arrange things. The entropy of that crystal is zero. Not zero by agreement: zero because there is nothing left to spread.
+
+That gives entropy a bottom to count up from. The **standard molar entropy** of a substance, $S^\circ$, is the entropy of one mole of it in its standard state (topic 6.8). Tables give it at 25 °C, in joules per mole per kelvin, J/(mol·K). It is also called the **absolute entropy**, because it is an amount of entropy, counted up from that bottom, and not a change. From here on this lesson says "standard entropy", or just $S^\circ$.
+
+Think of the two temperature scales of topic 3.4. Zero on the Celsius scale is a mark that people chose, the freezing point of water, and plenty of things are colder. Zero on the kelvin scale is the bottom, and nothing is colder.
+
+The two columns of numbers in this unit differ in the same way. $S^\circ$ is the kelvin kind: its zero is the bottom. Topic 6.8's $\Delta H_f^\circ$ is the Celsius kind. Nobody can drain a substance of all its enthalpy to find a bottom, so chemists agreed on a mark, the elements in their standard states, and every $\Delta H_f^\circ$ is a change counted from that mark. A zero in the $\Delta H_f^\circ$ column says "this is the mark". It does not say "nothing here".
+
+Here are both kinds of value, at 25 °C, for the three substances in rusting.
+
+| Substance | ΔH°f (kJ/mol) | S° (J/(mol·K)) |
+|---|---|---|
+| Fe(s) | 0 | 27.3 |
+| O₂(g) | 0 | 205.2 |
+| Fe₂O₃(s) | −824.2 | 87.4 |
+
+Three things to read off it:
+
+1. **Read iron's row across.** It says 0, then 27.3. The 0 is the agreed mark: iron is an element in its standard state. The 27.3 is an amount: at 25 °C the atoms in a piece of iron are vibrating, and that energy is shared among them in a great many ways. Being an element earns no zero in the entropy column. The same goes for oxygen, the other element in the table.
+2. **The unit is joules, not kilojoules.** $S^\circ$ is in J/(mol·K), while $\Delta H_f^\circ$ is in kJ/mol. Topic 9.3 has to bring the two together, and that is where the trouble starts. For now, keep entropies in joules.
+3. **The gas stands far above the solids**, as topic 9.1 said it would: a mole of oxygen has 7.5 times the entropy of a mole of iron.
+
+And 25 °C is 298 K above the bottom of the scale, so no pure substance at 25 °C has an $S^\circ$ of zero or less.
+
+<KeyIdea>
+
+The standard entropy, $S^\circ$, is the entropy of one mole of a substance in its standard state, counted up from the zero of a perfect crystal at 0 K. Its unit is J/(mol·K). Every pure substance at 25 °C has an $S^\circ$ above zero, and an element is no exception: the zero in an element's row is its $\Delta H_f^\circ$, an agreed mark.
+
+</KeyIdea>
+
+## From the table to a reaction
+
+The entropy change of a reaction is the entropy of everything it ends with minus the entropy of everything it starts with.
+
+<KeyIdea>
+
+The standard entropy change of a reaction is the products' total minus the reactants' total:
+
+$$
+\begin{aligned}
+\Delta S^\circ ={} & \textstyle\sum n\,S^\circ(\text{products}) \\
+& - \textstyle\sum n\,S^\circ(\text{reactants})
+\end{aligned}
+$$
+
+Here $n$ is each substance's coefficient in the balanced equation.
+
+</KeyIdea>
+
+This formula is on the equation sheet, printed without the $n$, just as the enthalpy sum is: the coefficients are yours to put in. The order is the order of topic 6.8, products minus reactants. The answer is for the equation as written, in $\text{J/(mol}_\text{rxn}\text{·K)}$. Tables and questions shorten that to J/(mol·K) or J/K, as they shorten $\text{kJ/mol}_\text{rxn}$ (topic 6.6).
+
+There is one difference from topic 6.8. There, an element went in as zero. Here every substance, element or compound, brings a value of its own.
+
+**Predict the sign first.** Before any arithmetic, count the moles of gas on each side (topic 9.1) and write down the sign you expect. If the arithmetic then gives the other sign, the arithmetic is what to distrust.
+
+<Worked title="How far does entropy fall when iron rusts?">
+
+Find $\Delta S^\circ$ for the rusting of iron from the table above.
+
+$$
+\ce{4Fe(s) + 3O2(g) -> 2Fe2O3(s)}
+$$
+
+1. **Predict the sign.** Gas before: 3 mol of O₂. Gas after: none. Expect a negative $\Delta S^\circ$, and a large one.
+
+2. **Write a value under every substance.** All are in J/(mol·K).
+
+   - Fe(s): 27.3
+   - O₂(g): 205.2
+   - Fe₂O₃(s): 87.4
+
+   No zeros: the two elements have entropies like anything else.
+
+3. **Add up the products, with coefficients.**
+
+   $$
+   2(87.4) = 174.8\ \text{J/K}
+   $$
+
+4. **Add up the reactants, with coefficients.**
+
+   $$
+   \begin{aligned}
+   &4(27.3) + 3(205.2) \\
+   &\quad = 109.2 + 615.6 \\
+   &\quad = 724.8\ \text{J/K}
+   \end{aligned}
+   $$
+
+5. **Products minus reactants.**
+
+   $$
+   \begin{aligned}
+   \Delta S^\circ &= 174.8 - 724.8 \\
+   &= -550.0\ \text{J/(mol}_\text{rxn}\text{·K)}
+   \end{aligned}
+   $$
+
+6. **Check it against the prediction.** Negative, as expected, and large. Look where the entropy was: 615.6 of the reactants' 724.8 J/K, 85 percent, belonged to the three moles of oxygen gas. The product has no gas at all.
+
+</Worked>
+
+The figure draws the same tally to scale.
+
+<Figure
+  src="/figures/9-2-rusting-tally.svg"
+  alt="A bar chart of entropy for the rusting of iron, drawn to scale. The reactants' bar is a stack of four thin hatched blocks for iron, 4 times 27.3, under three tall blocks for oxygen gas, 3 times 205.2, and it reaches 724.8 joules per kelvin. The product's bar is two blocks for iron(III) oxide, 2 times 87.4, and reaches only 174.8. A heavy arrow falls from the level of the first bar to the level of the second, labeled delta S standard equals minus 550.0."
+  caption="Rusting as a tally, drawn to scale. Most of the reactants' entropy is in the three moles of oxygen gas, and the product has no gas, so the total falls by 550.0 J/K for each mole of reaction."
+/>
+
+<Check
+  numeric="-120.8"
+  unit="J/(mol·K)"
+  slips={{
+    "120.8": "The size is right, but check the sign. ΔS° is the products' total minus the reactants' total.",
+    "9.9": "Did you enter hydrogen as zero? An element's ΔH°f is zero, but its S° is not. Use 130.7 for H₂.",
+    "579.2": "That is all three entropies added together. Subtract the reactants' total from the product's value.",
+  }}
+>
+Ethene gas takes up hydrogen to become ethane, the reaction of topic 7.5:
+
+$$
+\ce{C2H4(g) + H2(g) -> C2H6(g)}
+$$
+
+Standard entropies at 25 °C:
+
+| Substance | S° (J/(mol·K)) |
+|---|---|
+| C₂H₄(g) | 219.3 |
+| H₂(g) | 130.7 |
+| C₂H₆(g) | 229.2 |
+
+Calculate $\Delta S^\circ$ for the reaction, in J/(mol·K), with its sign.
+
+<div slot="why">
+
+Predict first: 2 mol of gas become 1 mol, so expect a negative answer.
+
+The product's total, in J/K:
+
+$$
+1(229.2) = 229.2
+$$
+
+The reactants' total:
+
+$$
+1(219.3) + 1(130.7) = 350.0
+$$
+
+Products minus reactants:
+
+$$
+\begin{aligned}
+\Delta S^\circ &= 229.2 - 350.0 \\
+&= -120.8\ \text{J/(mol·K)}
+\end{aligned}
+$$
+
+It is negative, as predicted. Hydrogen is an element, and its 130.7 goes in like any other value.
+
+</div>
+</Check>
+
+<Check
+  answer={3}
+  misses={{
+    1: "Try it: 87.4 − (27.3 + 205.2). Does that come to +174.8?",
+    2: "Reactants minus products gives the right size with the wrong sign. Is 174.8 the size of the right answer?",
+    4: "Changing joules to kilojoules moves the decimal point three places and cannot change a sign. Where could 174.8 come from?",
+  }}
+>
+A student calculates $\Delta S^\circ$ for the rusting of iron, from the table at the top of this lesson, and reports +174.8 J/(mol·K). What did the student most likely do?
+
+- Left out the coefficients 4, 3 and 2
+- Subtracted the products from the reactants
+- Entered S° of both elements as zero
+- Gave the answer in kJ/(mol·K) by mistake
+
+<div slot="why">
+
+174.8 is the products' total, 2(87.4), with nothing subtracted from it. That happens when the reactants' total comes to zero, and here both reactants are elements: the student gave iron and oxygen the zero that belongs to $\Delta H_f^\circ$.
+
+Leaving out the coefficients gives this:
+
+$$
+87.4 - (27.3 + 205.2) = -145.1
+$$
+
+Subtracting the wrong way around gives +550.0. Kilojoules would give −0.5500.
+
+The prediction would have caught the mistake at once: three moles of gas disappear, so a positive answer cannot be right.
+
+</div>
+</Check>
+
+## An element among the products
+
+Elements turn up on the product side too, and a reaction can keep some gas and lose some. The method does not change.
+
+<Worked title="Sulfur at a volcano's vent">
+
+Around the vents of a volcano, hydrogen sulfide and sulfur dioxide in the escaping gases react with each other, and this is one way the crusts of yellow sulfur on the rock are made. Find $\Delta S^\circ$.
+
+$$
+\begin{aligned}
+&\ce{2H2S(g) + SO2(g) ->} \\
+&\quad \ce{3S(s) + 2H2O(g)}
+\end{aligned}
+$$
+
+Standard entropies at 25 °C:
+
+| Substance | S° (J/(mol·K)) |
+|---|---|
+| H₂S(g) | 205.8 |
+| SO₂(g) | 248.2 |
+| S(s) | 32.1 |
+| H₂O(g) | 188.8 |
+
+1. **Predict the sign.** Gas before: 2 + 1 = 3 mol. Gas after: 2 mol of water vapor. One mole of gas fewer: expect a negative $\Delta S^\circ$, smaller in size than rusting's, where three moles were lost.
+
+2. **Add up the products.**
+
+   $$
+   \begin{aligned}
+   &3(32.1) + 2(188.8) \\
+   &\quad = 96.3 + 377.6 \\
+   &\quad = 473.9\ \text{J/K}
+   \end{aligned}
+   $$
+
+   Sulfur is an element, and it goes in at 32.1, not at zero.
+
+3. **Add up the reactants.**
+
+   $$
+   \begin{aligned}
+   &2(205.8) + 1(248.2) \\
+   &\quad = 411.6 + 248.2 \\
+   &\quad = 659.8\ \text{J/K}
+   \end{aligned}
+   $$
+
+4. **Products minus reactants.**
+
+   $$
+   \begin{aligned}
+   \Delta S^\circ &= 473.9 - 659.8 \\
+   &= -185.9\ \text{J/(mol}_\text{rxn}\text{·K)}
+   \end{aligned}
+   $$
+
+5. **Check it.** Negative, as predicted. Notice what a zero for sulfur would have done:
+
+   $$
+   377.6 - 659.8 = -282.2
+   $$
+
+   That is a wrong answer with the right sign. The sign check catches a reversed subtraction. It cannot catch every slip, so write a value under every substance.
+
+</Worked>
+
+<Check
+  numeric="242.8"
+  unit="J/(mol·K)"
+  slips={{
+    "54.0": "Did you leave out the coefficient of water? The equation makes 2 moles of H₂O(g), so its S° counts twice.",
+    "256.4": "Did you enter O₂ and N₂ as zero? An element's S° is not zero. Use 205.2 and 191.6.",
+    "-242.8": "That is the reactants' total minus the products' total. ΔS° is products minus reactants.",
+    "895.6": "That is every entropy added together. Subtract the reactants' total from the products' total.",
+  }}
+>
+Liquid hydrazine burns in oxygen:
+
+$$
+\begin{aligned}
+&\ce{N2H4(l) + O2(g) ->} \\
+&\quad \ce{N2(g) + 2H2O(g)}
+\end{aligned}
+$$
+
+Standard entropies at 25 °C:
+
+| Substance | S° (J/(mol·K)) |
+|---|---|
+| N₂H₄(l) | 121.2 |
+| O₂(g) | 205.2 |
+| N₂(g) | 191.6 |
+| H₂O(g) | 188.8 |
+
+Calculate $\Delta S^\circ$ for the reaction, in J/(mol·K), with its sign.
+
+<div slot="why">
+
+Predict first: 1 mol of gas before (the hydrazine is a liquid) and 1 + 2 = 3 mol after, so expect a positive answer.
+
+The products' total, in J/K:
+
+$$
+1(191.6) + 2(188.8) = 569.2
+$$
+
+The reactants' total:
+
+$$
+1(121.2) + 1(205.2) = 326.4
+$$
+
+Products minus reactants:
+
+$$
+\begin{aligned}
+\Delta S^\circ &= 569.2 - 326.4 \\
+&= +242.8\ \text{J/(mol·K)}
+\end{aligned}
+$$
+
+Oxygen and nitrogen are both elements, and both go in at their table values.
+
+</div>
+</Check>
+
+## When no gas is gained or lost
+
+Topic 9.1 could not finish one kind of problem: when the moles of gas do not change, it could say only that $\Delta S^\circ$ is small and that its sign needs data. Now you have the data.
+
+<Check
+  numeric="-38.5"
+  unit="J/(mol·K)"
+  slips={{
+    "38.5": "The size is right, but check the sign. ΔS° is the products' total minus the reactants' total.",
+    "-36.5": "Did you enter aluminum and iron as zero? An element's S° is not zero. Use 28.3 and 27.3.",
+    "-37.5": "Did you leave out the coefficients? The equation has 2 Al and 2 Fe, so each of those entropies counts twice.",
+    "249.5": "That is every entropy added together. Subtract the reactants' total from the products' total.",
+  }}
+>
+Aluminum powder reacts with iron(III) oxide. This is the thermite reaction, and here every substance is taken as the solid at 25 °C:
+
+$$
+\begin{aligned}
+&\ce{2Al(s) + Fe2O3(s) ->} \\
+&\quad \ce{Al2O3(s) + 2Fe(s)}
+\end{aligned}
+$$
+
+Standard entropies at 25 °C:
+
+| Substance | S° (J/(mol·K)) |
+|---|---|
+| Al(s) | 28.3 |
+| Fe₂O₃(s) | 87.4 |
+| Al₂O₃(s) | 50.9 |
+| Fe(s) | 27.3 |
+
+Calculate $\Delta S^\circ$ for the reaction, in J/(mol·K), to one decimal place, with its sign.
+
+<div slot="why">
+
+There is no gas on either side, so the gas count predicts only that the change is small.
+
+The products' total, in J/K:
+
+$$
+1(50.9) + 2(27.3) = 105.5
+$$
+
+The reactants' total:
+
+$$
+2(28.3) + 1(87.4) = 144.0
+$$
+
+Products minus reactants:
+
+$$
+\begin{aligned}
+\Delta S^\circ &= 105.5 - 144.0 \\
+&= -38.5\ \text{J/(mol·K)}
+\end{aligned}
+$$
+
+It is small: less than a tenth of the size of rusting's −550.0, where three moles of gas were lost. Its sign had to come from the table.
+
+The ways of going wrong land close by here (−37.5 without the coefficients, −36.5 with the elements as zero), so a nearly right number is not proof of a right method.
+
+</div>
+</Check>
+
+The same subtraction serves for a physical change. For a liquid evaporating, $\Delta S^\circ$ is the $S^\circ$ of the vapor minus the $S^\circ$ of the liquid, with each state looked up as its own entry, the way topic 6.8 keeps two entries for water.
+
+<Check
+  answer={1}
+  misses={{
+    2: "One mole of gas goes into a solid here. Compare the change in the moles of gas in all four equations.",
+    3: "Count the moles of gas: 6 before and 7 after. Compare that change with the change in each of the other equations.",
+    4: "A solid gives off 5 moles of gas here. Is that a small change in entropy or a large one?",
+  }}
+>
+Without a table, decide which of these reactions has the $\Delta S^\circ$ nearest to zero.
+
+**A.** Nitrogen and oxygen combining in the hot cylinder of an engine:
+
+$$
+\ce{N2(g) + O2(g) -> 2NO(g)}
+$$
+
+**B.** Magnesium ribbon burning:
+
+$$
+\ce{2Mg(s) + O2(g) -> 2MgO(s)}
+$$
+
+**C.** Propane burning in a gas grill:
+
+$$
+\begin{aligned}
+&\ce{C3H8(g) + 5O2(g) ->} \\
+&\quad \ce{3CO2(g) + 4H2O(g)}
+\end{aligned}
+$$
+
+**D.** Orange ammonium dichromate breaking down once it is lit:
+
+$$
+\begin{aligned}
+&\ce{(NH4)2Cr2O7(s) ->} \\
+&\quad \ce{Cr2O3(s) + N2(g) + 4H2O(g)}
+\end{aligned}
+$$
+
+- Equation A
+- Equation B
+- Equation C
+- Equation D
+
+<div slot="why">
+
+Count the moles of gas.
+
+- A: 2 before and 2 after, no change.
+- B: 1 before and none after.
+- C: 1 + 5 = 6 before and 3 + 4 = 7 after.
+- D: none before and 1 + 4 = 5 after.
+
+Only A keeps its moles of gas, so its $\Delta S^\circ$ is the small one. Tables agree: +24.8 J/(mol·K) for A, against about −217 for B and about +100 for C, and D, with five moles of gas made from a solid, is far larger still.
+
+</div>
+</Check>
+
+<Trap>
+
+Six mistakes cost points on this topic:
+
+- **Giving an element a zero in an entropy sum.** An element's zero is its $\Delta H_f^\circ$, an agreed mark. Its $S^\circ$ is an amount: 27.3 J/(mol·K) for iron.
+- **Dropping the coefficients.** The sheet's formula shows none, so they are yours to add: 3 mol of oxygen means 3 times its $S^\circ$.
+- **Subtracting the wrong way around.** It is products minus reactants. Predict the sign from the moles of gas first, and distrust arithmetic that disagrees.
+- **Writing the answer in kilojoules.** Entropies are in joules: J/(mol·K). Enthalpies of formation are in kJ/mol.
+- **Picking the wrong row for a substance.** Water vapor and liquid water have different entropies. Take the row for the state written in the equation.
+- **Trusting a right sign too far.** A zero for an element among the products can leave the sign right and the number wrong.
+
+</Trap>
+
+<KeyPoints>
+
+- Entropy is counted up from zero for a perfect crystal at 0 K, so tables list the standard entropy $S^\circ$ itself, in J/(mol·K), and no pure substance at 25 °C has a value of zero or less.
+- An element in its standard state has a $\Delta H_f^\circ$ of zero, but its $S^\circ$ is not zero, and it goes into the sum at its table value.
+- $\Delta S^\circ$ of a reaction is the sum of $n\,S^\circ$ for the products minus the sum of $n\,S^\circ$ for the reactants, where $n$ is each coefficient, which the equation sheet leaves out.
+- The answer is in joules per kelvin for the equation as written, $\text{J/(mol}_\text{rxn}\text{·K)}$, not kilojoules.
+- Predict the sign from the moles of gas before calculating, and check the answer against it.
+- When no gas is gained or lost, $\Delta S^\circ$ is small, and the table gives its sign.
+
+</KeyPoints>
+
+<PracticeNext />

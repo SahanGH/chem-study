@@ -27,7 +27,7 @@ export const REQUIRED_PARTS = {
  * is added when its messages are written. Unit numbers as text.
  * @type {Set<string>}
  */
-export const FEEDBACK_UNITS = new Set(['1', '2', '3', '4', '5', '6', '7', '8']);
+export const FEEDBACK_UNITS = new Set(['1', '2', '3', '4', '5', '6', '7', '8', '9']);
 
 /** @param {string | undefined} json a data attribute written by Check.astro @returns {string[]} its keys */
 function feedbackKeys(json) {

@@ -1,0 +1,589 @@
+{
+  "unit": 9,
+  "written": "2026-11-27",
+  "note": "Feedback for the Checks of Unit 9, read from the lesson files, where it was written with the lessons (docs/superpowers/specs/2026-11-27-chemstudy-unit-6-lessons-design.md). The option with no message is the answer. tests/e2e/check-feedback.spec.ts compares each lesson page with this file.",
+  "checks": [
+    {
+      "lesson": "9.1",
+      "file": "src/content/lessons/unit-9/9-1-introduction-to-entropy.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Helium leaving a pressurized cylinder to fill a party balloon",
+          "message": "In the cylinder the helium atoms were squeezed into a small volume. Do they have more room in the balloon, or less?"
+        },
+        {
+          "text": "Water vapor in a cloud condensing into raindrops",
+          "message": null
+        },
+        {
+          "text": "A puddle on a sidewalk drying up on a sunny afternoon",
+          "message": "Drying is the liquid turning into vapor. Compare the room a water molecule has in the puddle with the room it has in the air."
+        },
+        {
+          "text": "Wax beside a candle's wick melting into a clear pool",
+          "message": "Melting frees the wax molecules from their fixed places. Does that give them more ways to be arranged, or fewer?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.1",
+      "file": "src/content/lessons/unit-9/9-1-introduction-to-entropy.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Positive, because each molecule in the second drawing is larger",
+          "message": "A larger molecule is still one particle. Count the separately moving particles in each drawing."
+        },
+        {
+          "text": "Zero, because the atoms, the volume and the temperature are unchanged",
+          "message": "The atoms are the same, but are they grouped into the same number of separately moving particles?"
+        },
+        {
+          "text": "Negative, because some of the atoms have left the sealed box",
+          "message": "Count the atoms in each drawing: 8 × 2 and 4 × 4. The box is sealed."
+        },
+        {
+          "text": "Negative, because the same atoms now make up fewer gas particles",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "9.1",
+      "file": "src/content/lessons/unit-9/9-1-introduction-to-entropy.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "It is large and positive, because two new substances are formed",
+          "message": "New substances form in every reaction. What sets the size of ΔS is the room the particles gain or lose. Count the moles of gas."
+        },
+        {
+          "text": "It is exactly zero, because 2 moles of gas become 2 moles of gas",
+          "message": "The count is right: 2 moles of gas on each side. But are the four gases the same substance, with the same entropy for each mole?"
+        },
+        {
+          "text": "It is small, and counting moles of gas cannot give its sign",
+          "message": null
+        },
+        {
+          "text": "Nothing can be said about its size or its sign without a table",
+          "message": "Start with what you can count. How many moles of gas are on each side, and what does that say about the size of the change?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.1",
+      "file": "src/content/lessons/unit-9/9-1-introduction-to-entropy.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Equation A",
+          "message": "This one makes 1 mole of gas from none. Find the change in the moles of gas for each of the other equations too."
+        },
+        {
+          "text": "Equation B",
+          "message": "No gas appears on either side here, so the entropy changes little. Find the change in the moles of gas for each equation."
+        },
+        {
+          "text": "Equation C",
+          "message": "It makes 10 moles of gas, but it starts with 9. What counts is the change in the moles of gas."
+        },
+        {
+          "text": "Equation D",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "9.1",
+      "file": "src/content/lessons/unit-9/9-1-introduction-to-entropy.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "It rises, because the atoms' kinetic energies range more widely",
+          "message": null
+        },
+        {
+          "text": "It rises, because each neon atom now has more room to move in",
+          "message": "The cylinder is rigid. Has the volume open to the atoms changed at all?"
+        },
+        {
+          "text": "It stays the same, because neither the volume nor the amount changes",
+          "message": "Volume and amount are the matter side of entropy. What does warming do to the energies of the atoms (topic 3.5)?"
+        },
+        {
+          "text": "It falls, because the pressure of the gas goes up as it warms",
+          "message": "The pressure rises because the atoms move faster. Ask how warming changes the way the energy is shared among the atoms."
+        }
+      ]
+    },
+    {
+      "lesson": "9.1",
+      "file": "src/content/lessons/unit-9/9-1-introduction-to-entropy.mdx",
+      "check": 6,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "A block of camphor left in a closet slowly shrinks until none is left",
+          "message": "This change happens by itself, but which way does the entropy of the camphor go when a solid becomes a gas?"
+        },
+        {
+          "text": "Ammonia gas and hydrogen chloride gas meet and form a white solid",
+          "message": null
+        },
+        {
+          "text": "Camphor vapor in a warm closet does not gather back into a solid block",
+          "message": "This change would lower the entropy, and it does not happen. Does that argue against the claim, or agree with it?"
+        },
+        {
+          "text": "A heap of rust on a shelf does not turn back into iron and oxygen gas",
+          "message": "Rust turning into iron and oxygen would make a gas from a solid. Is that a fall in entropy? And does it happen?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.2",
+      "file": "src/content/lessons/unit-9/9-2-absolute-entropy-and-entropy-change.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "-120.8",
+      "unit": "J/(mol·K)",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "120.8",
+          "message": "The size is right, but check the sign. ΔS° is the products' total minus the reactants' total."
+        },
+        {
+          "value": "9.9",
+          "message": "Did you enter hydrogen as zero? An element's ΔH°f is zero, but its S° is not. Use 130.7 for H₂."
+        },
+        {
+          "value": "579.2",
+          "message": "That is all three entropies added together. Subtract the reactants' total from the product's value."
+        }
+      ]
+    },
+    {
+      "lesson": "9.2",
+      "file": "src/content/lessons/unit-9/9-2-absolute-entropy-and-entropy-change.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Left out the coefficients 4, 3 and 2",
+          "message": "Try it: 87.4 − (27.3 + 205.2). Does that come to +174.8?"
+        },
+        {
+          "text": "Subtracted the products from the reactants",
+          "message": "Reactants minus products gives the right size with the wrong sign. Is 174.8 the size of the right answer?"
+        },
+        {
+          "text": "Entered S° of both elements as zero",
+          "message": null
+        },
+        {
+          "text": "Gave the answer in kJ/(mol·K) by mistake",
+          "message": "Changing joules to kilojoules moves the decimal point three places and cannot change a sign. Where could 174.8 come from?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.2",
+      "file": "src/content/lessons/unit-9/9-2-absolute-entropy-and-entropy-change.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "242.8",
+      "unit": "J/(mol·K)",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "54.0",
+          "message": "Did you leave out the coefficient of water? The equation makes 2 moles of H₂O(g), so its S° counts twice."
+        },
+        {
+          "value": "256.4",
+          "message": "Did you enter O₂ and N₂ as zero? An element's S° is not zero. Use 205.2 and 191.6."
+        },
+        {
+          "value": "-242.8",
+          "message": "That is the reactants' total minus the products' total. ΔS° is products minus reactants."
+        },
+        {
+          "value": "895.6",
+          "message": "That is every entropy added together. Subtract the reactants' total from the products' total."
+        }
+      ]
+    },
+    {
+      "lesson": "9.2",
+      "file": "src/content/lessons/unit-9/9-2-absolute-entropy-and-entropy-change.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "-38.5",
+      "unit": "J/(mol·K)",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "38.5",
+          "message": "The size is right, but check the sign. ΔS° is the products' total minus the reactants' total."
+        },
+        {
+          "value": "-36.5",
+          "message": "Did you enter aluminum and iron as zero? An element's S° is not zero. Use 28.3 and 27.3."
+        },
+        {
+          "value": "-37.5",
+          "message": "Did you leave out the coefficients? The equation has 2 Al and 2 Fe, so each of those entropies counts twice."
+        },
+        {
+          "value": "249.5",
+          "message": "That is every entropy added together. Subtract the reactants' total from the products' total."
+        }
+      ]
+    },
+    {
+      "lesson": "9.2",
+      "file": "src/content/lessons/unit-9/9-2-absolute-entropy-and-entropy-change.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Equation A",
+          "message": null
+        },
+        {
+          "text": "Equation B",
+          "message": "One mole of gas goes into a solid here. Compare the change in the moles of gas in all four equations."
+        },
+        {
+          "text": "Equation C",
+          "message": "Count the moles of gas: 6 before and 7 after. Compare that change with the change in each of the other equations."
+        },
+        {
+          "text": "Equation D",
+          "message": "A solid gives off 5 moles of gas here. Is that a small change in entropy or a large one?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.3",
+      "file": "src/content/lessons/unit-9/9-3-gibbs-free-energy-and-thermodynamic-favorability.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "-606.5",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "-377.9",
+          "message": "Did you count the water once? The equation makes 2 mol of H₂O(g), so its value goes in twice."
+        },
+        {
+          "value": "606.5",
+          "message": "Check the order of the subtraction: products minus reactants. The sign is part of the answer."
+        },
+        {
+          "value": "-307.9",
+          "message": "Did you add hydrazine's +149.3? It is a reactant, so its total is subtracted."
+        },
+        {
+          "value": "-457.2",
+          "message": "That is the products' total alone. Hydrazine is a compound, not an element, so its value is not zero."
+        }
+      ]
+    },
+    {
+      "lesson": "9.3",
+      "file": "src/content/lessons/unit-9/9-3-gibbs-free-energy-and-thermodynamic-favorability.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "-91.2",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "84784",
+          "message": "Did you leave ΔS° in joules? ΔH° is in kilojoules, so turn ΔS° into kJ/K before you multiply by T."
+        },
+        {
+          "value": "-261.2",
+          "message": "Check the signs in the entropy term. ΔS° is negative here, so subtracting TΔS° adds a positive amount."
+        },
+        {
+          "value": "-169.1",
+          "message": "Did you use 25 for the temperature? T in this equation is in kelvins."
+        },
+        {
+          "value": "91.2",
+          "message": "The size is right and the sign is not. Follow each minus sign through the subtraction once more."
+        },
+        {
+          "value": "6951",
+          "message": "Two things to check: T must be in kelvins, and ΔS° must be in kJ/K before it meets ΔH°."
+        }
+      ]
+    },
+    {
+      "lesson": "9.3",
+      "file": "src/content/lessons/unit-9/9-3-gibbs-free-energy-and-thermodynamic-favorability.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "531",
+      "unit": "K",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.531",
+          "message": "Did you divide kilojoules by joules? Put ΔH° and ΔS° in the same energy unit before you divide."
+        },
+        {
+          "value": "258",
+          "message": "That is the temperature in °C. The question asks for kelvins."
+        },
+        {
+          "value": "1882",
+          "message": "That is ΔS° divided by ΔH°. Set ΔG° equal to zero and solve for T again."
+        },
+        {
+          "value": "1.88",
+          "message": "That is ΔS° over ΔH°, with joules and kilojoules mixed as well. Set ΔG° to zero and solve for T."
+        },
+        {
+          "value": "35.6",
+          "message": "That is ΔG° at 298 K, in kJ. The question asks for the temperature at which ΔG° reaches zero."
+        }
+      ]
+    },
+    {
+      "lesson": "9.3",
+      "file": "src/content/lessons/unit-9/9-3-gibbs-free-energy-and-thermodynamic-favorability.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "At every temperature, because both terms of ΔG° are negative",
+          "message": null
+        },
+        {
+          "text": "Only above some temperature, where the entropy term outgrows ΔH°",
+          "message": "That is the pattern when ΔH° is positive. This reaction releases energy, so which way does ΔH° point?"
+        },
+        {
+          "text": "Only below some temperature, because heating works against it",
+          "message": "Heating strengthens the entropy term. One mole of gas becomes three: does that term work for the reaction or against it?"
+        },
+        {
+          "text": "At no temperature, because both terms of ΔG° are positive",
+          "message": "Both terms positive would mean a reaction that takes in energy and loses entropy. Check each sign against the question."
+        }
+      ]
+    },
+    {
+      "lesson": "9.3",
+      "file": "src/content/lessons/unit-9/9-3-gibbs-free-energy-and-thermodynamic-favorability.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "ΔH° turns positive in a hot tube, so the reaction now takes in energy",
+          "message": "This lesson takes ΔH° as the same at every temperature. Which term of the equation has T in it?"
+        },
+        {
+          "text": "Molecules in a hot tube move too fast to react, so the smoke forms too slowly",
+          "message": "Heating makes collisions more energetic and reactions faster. This is a question of which direction is favored, not of rate."
+        },
+        {
+          "text": "ΔS° is positive, and heating strengthens whichever way entropy points",
+          "message": "Count the moles of gas on each side of the equation as written. What sign does that give ΔS°?"
+        },
+        {
+          "text": "The entropy term works against the smoke, and at 700 K it outweighs ΔH°",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "9.3",
+      "file": "src/content/lessons/unit-9/9-3-gibbs-free-energy-and-thermodynamic-favorability.mdx",
+      "check": 6,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Line 1, where ΔS° is put into kJ/K",
+          "message": "Line 1 divides −285.1 J/K by 1,000. Work that out and compare it with what the classmate wrote."
+        },
+        {
+          "text": "Line 2, where the entropy term is found",
+          "message": null
+        },
+        {
+          "text": "Line 3, where the two terms are combined",
+          "message": "Line 3 adds the two terms it was handed, and the sum is done correctly. Look at where those terms came from."
+        },
+        {
+          "text": "Line 4, where the sign of ΔG° is read",
+          "message": "A negative ΔG° does mean favored, so line 4 reads its number correctly. Find the first line where a number goes wrong."
+        }
+      ]
+    },
+    {
+      "lesson": "9.4",
+      "file": "src/content/lessons/unit-9/9-4-thermodynamic-and-kinetic-control.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "The exact value of ΔG°, because a more negative ΔG° means a faster reaction",
+          "message": "ΔG° compares the two ends of the reaction. Does anything in it describe the path between them?"
+        },
+        {
+          "text": "The value of ΔH°, because a reaction that releases energy needs none to begin",
+          "message": "ΔH° also compares only the two ends. Does the energy a reaction releases overall say anything about how it begins?"
+        },
+        {
+          "text": "The activation energy, because the change needs that much energy to start",
+          "message": null
+        },
+        {
+          "text": "Nothing more, because years with no change show the mixture is at equilibrium",
+          "message": "No change can mean two things. With ΔG° this negative, what would the jar hold if the reaction had gone as far as it can?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.4",
+      "file": "src/content/lessons/unit-9/9-4-thermodynamic-and-kinetic-control.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Gray tin is favored at 5 °C, but the change has a high activation energy",
+          "message": null
+        },
+        {
+          "text": "At 5 °C the two forms are at equilibrium, so neither one turns into the other",
+          "message": "The two forms can sit in balance at one temperature only. What does the question say about ΔG° at 5 °C?"
+        },
+        {
+          "text": "ΔG° must really be positive at 5 °C, or the bars would have crumbled by now",
+          "message": "The question gives the sign of ΔG° at 5 °C as negative. A bar that has not changed does not overturn it."
+        },
+        {
+          "text": "The change must be endothermic, and a cold storeroom has too little energy to give",
+          "message": "The energy a change takes in or gives out is already counted in ΔG°. What sign does the question give ΔG° at 5 °C?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.4",
+      "file": "src/content/lessons/unit-9/9-4-thermodynamic-and-kinetic-control.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "It was at equilibrium, and the catalyst moved the equilibrium toward carbon dioxide",
+          "message": "A catalyst speeds up the forward and the reverse reaction alike. Could it change a mixture in which the two already balance?"
+        },
+        {
+          "text": "The change was unfavored there, and the catalyst made it favored",
+          "message": "Hopcalite is not a reactant or a product. Can something outside the equation change which direction is favored?"
+        },
+        {
+          "text": "It was far from equilibrium, and only a slow reaction kept it there",
+          "message": null
+        },
+        {
+          "text": "It was at equilibrium, and the hopcalite was used up changing the gas",
+          "message": "A catalyst is still there, unchanged, at the end (topic 5.11). Which gas in the air supplied the extra oxygen atoms?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.4",
+      "file": "src/content/lessons/unit-9/9-4-thermodynamic-and-kinetic-control.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Mostly carbon monoxide and oxygen, since the catalyst can run the reaction either way",
+          "message": "A catalyst does speed up both directions. Does speeding up both tell you which way a mixture moves?"
+        },
+        {
+          "text": "Carbon dioxide, as good as unchanged, since $K$ is still about 10⁻⁹⁰",
+          "message": null
+        },
+        {
+          "text": "Carbon monoxide and oxygen, slowly, since a catalyst cannot speed up a reverse reaction",
+          "message": "A catalyst speeds up the reverse reaction by the same factor as the forward one. What else, besides speed, decides what comes out?"
+        },
+        {
+          "text": "It cannot be said until the activation energy on hopcalite is known",
+          "message": "The activation energy sets how fast a change goes. Is speed the only thing that decides what comes out?"
+        }
+      ]
+    },
+    {
+      "lesson": "9.4",
+      "file": "src/content/lessons/unit-9/9-4-thermodynamic-and-kinetic-control.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "The share of collisions with enough energy to react",
+          "message": "Warming a gas moves its collisions toward higher energies (topic 5.5). Would the share with enough energy to react stay where it was?"
+        },
+        {
+          "text": "The equilibrium constant of the breakdown",
+          "message": "This reaction is exothermic. Topic 7.9 says what heating does to K for an exothermic reaction."
+        },
+        {
+          "text": "The value of ΔG° for the breakdown",
+          "message": "ΔG° = ΔH° − TΔS°, and T has gone from 298 K to 900 K. This reaction makes 3 moles of gas from 2. Is ΔS° zero?"
+        },
+        {
+          "text": "The activation energy of the breakdown",
+          "message": null
+        }
+      ]
+    }
+  ]
+}

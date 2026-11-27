@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 228" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Three boxes 148 by 148 at x = 8, 166 and 324, top at y = 44. Each holds the same 12 particles of radius 8. Solid: a 4 by 3 block of touching particles, centers 16 apart, resting on the floor (lowest centers at y = 182, floor at y = 192 less the radius and the stroke). Liquid: a touching pile not in rows. Gas: scattered through the box, none touching. Centers are the ones the lesson plan lists. -->
+  <rect width="480" height="228" fill="#FDFCF9"/>
+  <text x="82" y="30" text-anchor="middle" fill="#26231F" font-weight="600">Solid</text>
+  <rect x="8" y="44" width="148" height="148" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="82" y="216" text-anchor="middle" fill="#26231F">least room</text>
+  <text x="240" y="30" text-anchor="middle" fill="#26231F" font-weight="600">Liquid</text>
+  <rect x="166" y="44" width="148" height="148" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="240" y="216" text-anchor="middle" fill="#26231F">a little more</text>
+  <text x="398" y="30" text-anchor="middle" fill="#26231F" font-weight="600">Gas</text>
+  <rect x="324" y="44" width="148" height="148" rx="10" fill="none" stroke="#6B655D" stroke-width="1.5"/>
+  <text x="398" y="216" text-anchor="middle" fill="#26231F">far more room</text>
+  <circle cx="58" cy="182" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="74" cy="182" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="90" cy="182" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="106" cy="182" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="58" cy="166" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="74" cy="166" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="90" cy="166" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="106" cy="166" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="58" cy="150" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="74" cy="150" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="90" cy="150" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="106" cy="150" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="203" cy="182" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="219" cy="182" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="237" cy="182" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="253" cy="182" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="271" cy="182" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="211" cy="168.1" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="229" cy="168.1" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="245" cy="168.1" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="262" cy="168.8" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="221" cy="154.3" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="238" cy="153.8" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="254" cy="154.9" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="346" cy="64" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="394" cy="58" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="442" cy="72" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="364" cy="96" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="416" cy="92" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="454" cy="114" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="342" cy="132" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="388" cy="128" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="432" cy="144" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="358" cy="168" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="404" cy="172" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+  <circle cx="450" cy="176" r="8" fill="#4F706C" stroke="#26231F" stroke-width="1"/>
+</svg>
