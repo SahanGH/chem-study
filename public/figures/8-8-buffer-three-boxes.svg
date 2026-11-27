@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 470" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Three boxes of a buffer's particles, each 200 wide and 130 tall. Top box (x 140 to 340, y 44 to 174): 6 HA and 6 A-. Lower left box (x 20 to 220, y 270 to 400): 8 HA and 4 A-, after 2 H3O+ turned 2 A- into 2 HA. Lower right box (x 260 to 460, y 270 to 400): 4 HA and 8 A-, after 2 OH- turned 2 HA into 2 A-. Every box holds 12 particles of the pair. Each box has a grid of four columns (box x + 25, 75, 125, 175) and three rows (box y + 25, 65, 105); each particle is moved off its cell center by at most 2 units each way, by the same amount in all three boxes, so a particle keeps its place from box to box and only the two that reacted change shape (first row, second place and second row, fourth place on the left; first row, fourth place and second row, third place on the right). HA reaches 17.7 units from its center (13 + the dot of radius 5 centered 18 away at 45 degrees), so it stays at least 5 units inside its box and clear of its neighbors. Water, the added H3O+ and OH- ions and spectator ions are not drawn. The minus sign inside A- is a line 10 units long, not text. Arrows: from (195, 180) to (140, 262) and, mirrored about x = 240, from (285, 180) to (340, 262); each head is 12 long and 14 wide. -->
+  <defs>
+    <g id="ha">
+      <circle r="13" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="12.73" cy="-12.73" r="5" fill="#26231F"/>
+    </g>
+    <g id="a">
+      <circle r="13" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+      <line x1="-5" y1="0" x2="5" y2="0" stroke="#26231F" stroke-width="2"/>
+    </g>
+  </defs>
+  <rect width="480" height="470" fill="#FDFCF9"/>
+
+  <text x="240" y="30" text-anchor="middle" fill="#26231F" font-weight="600">Buffer: 6 HA, 6 A⁻</text>
+  <rect x="140" y="44" width="200" height="130" rx="10" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <use href="#ha" x="167" y="68"/>
+  <use href="#a" x="213" y="71"/>
+  <use href="#a" x="266" y="70"/>
+  <use href="#ha" x="314" y="67"/>
+  <use href="#a" x="163" y="110"/>
+  <use href="#ha" x="217" y="111"/>
+  <use href="#ha" x="264" y="108"/>
+  <use href="#a" x="316" y="107"/>
+  <use href="#ha" x="166" y="151"/>
+  <use href="#a" x="213" y="148"/>
+  <use href="#ha" x="267" y="150"/>
+  <use href="#a" x="314" y="151"/>
+
+  <line x1="195" y1="180" x2="146.7" y2="252" stroke="#4F706C" stroke-width="3"/>
+  <polygon points="140,262 152.5,255.9 140.9,248.1" fill="#4F706C"/>
+  <text x="146" y="226" text-anchor="end" fill="#26231F">+ 2 H₃O⁺</text>
+  <line x1="285" y1="180" x2="333.3" y2="252" stroke="#4F706C" stroke-width="3"/>
+  <polygon points="340,262 327.5,255.9 339.1,248.1" fill="#4F706C"/>
+  <text x="334" y="226" fill="#26231F">+ 2 OH⁻</text>
+
+  <rect x="20" y="270" width="200" height="130" rx="10" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <use href="#ha" x="47" y="294"/>
+  <use href="#ha" x="93" y="297"/>
+  <use href="#a" x="146" y="296"/>
+  <use href="#ha" x="194" y="293"/>
+  <use href="#a" x="43" y="336"/>
+  <use href="#ha" x="97" y="337"/>
+  <use href="#ha" x="144" y="334"/>
+  <use href="#ha" x="196" y="333"/>
+  <use href="#ha" x="46" y="377"/>
+  <use href="#a" x="93" y="374"/>
+  <use href="#ha" x="147" y="376"/>
+  <use href="#a" x="194" y="377"/>
+  <text x="120" y="424" text-anchor="middle" fill="#26231F">8 HA, 4 A⁻</text>
+
+  <rect x="260" y="270" width="200" height="130" rx="10" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <use href="#ha" x="287" y="294"/>
+  <use href="#a" x="333" y="297"/>
+  <use href="#a" x="386" y="296"/>
+  <use href="#a" x="434" y="293"/>
+  <use href="#a" x="283" y="336"/>
+  <use href="#ha" x="337" y="337"/>
+  <use href="#a" x="384" y="334"/>
+  <use href="#a" x="436" y="333"/>
+  <use href="#ha" x="286" y="377"/>
+  <use href="#a" x="333" y="374"/>
+  <use href="#ha" x="387" y="376"/>
+  <use href="#a" x="434" y="377"/>
+  <text x="360" y="424" text-anchor="middle" fill="#26231F">4 HA, 8 A⁻</text>
+
+  <!-- The key, on one line, drawn with the same shapes. -->
+  <use href="#ha" x="40" y="451"/>
+  <text x="64" y="457" fill="#26231F">HA, acid form</text>
+  <use href="#a" x="268" y="451"/>
+  <text x="289" y="457" fill="#26231F">A⁻, base form</text>
+</svg>

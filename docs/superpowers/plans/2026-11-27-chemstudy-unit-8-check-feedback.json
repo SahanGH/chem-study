@@ -1173,6 +1173,656 @@
           "message": "An indicator responds to pH, not to amounts. Each one changes where the curve crosses its own range, wherever that is."
         }
       ]
+    },
+    {
+      "lesson": "8.8",
+      "file": "src/content/lessons/unit-8/8-8-properties-of-buffers.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Equation A",
+          "message": "That is pyridine reacting with water, which makes OH⁻. The question asks for the reaction that uses up OH⁻ that was added."
+        },
+        {
+          "text": "Equation B",
+          "message": "This buffer holds only a trace of H₃O⁺, far too little to take up the added base. Look for a reaction of one of the buffer's two members."
+        },
+        {
+          "text": "Equation C",
+          "message": null
+        },
+        {
+          "text": "Equation D",
+          "message": "Pyridine is the base form of this pair. Would a base give a proton to OH⁻?"
+        }
+      ]
+    },
+    {
+      "lesson": "8.8",
+      "file": "src/content/lessons/unit-8/8-8-properties-of-buffers.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "6",
+      "unit": "HA molecules",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "12",
+          "message": "Did you add the 3 to the HA molecules? OH⁻ takes a proton from HA, so each OH⁻ ion uses up one HA molecule."
+        },
+        {
+          "value": "8",
+          "message": "That is the number of A⁻ ions afterward. The question asks for the HA molecules."
+        },
+        {
+          "value": "9",
+          "message": "That is the count before the reaction. Each OH⁻ ion reacts with one member of the pair. Which one has a proton to give?"
+        },
+        {
+          "value": "2",
+          "message": "Did you take the 3 from the A⁻ ions? A⁻ is the base form, and OH⁻ does not react with it."
+        },
+        {
+          "value": "3",
+          "message": "That is how many HA molecules reacted. The question asks how many are left."
+        }
+      ]
+    },
+    {
+      "lesson": "8.8",
+      "file": "src/content/lessons/unit-8/8-8-properties-of-buffers.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "0.20 mol of formic acid with 0.20 mol of KOH",
+          "message": "React them first. With equal moles of formic acid and a strong base, how much formic acid is left afterward?"
+        },
+        {
+          "text": "0.20 mol of sodium formate with 0.050 mol of KOH",
+          "message": "Formate ion is the base form, and OH⁻ is a base too. Do they react? Then ask which member of the pair is missing."
+        },
+        {
+          "text": "0.20 mol of formic acid with 0.050 mol of HBr",
+          "message": "Formic acid and HBr are both acids, so nothing here turns formic acid into formate. Which member of the pair is missing?"
+        },
+        {
+          "text": "0.20 mol of sodium formate with 0.050 mol of HBr",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "8.8",
+      "file": "src/content/lessons/unit-8/8-8-properties-of-buffers.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "The OH⁻ reacted with formic acid, and the two amounts are still nearly equal",
+          "message": null
+        },
+        {
+          "text": "The OH⁻ reacted with formate ions, which are present in a large amount",
+          "message": "Formate ion is the base form of the pair. A base does not use up another base. Which member has a proton to give to OH⁻?"
+        },
+        {
+          "text": "The OH⁻ stayed in solution, but a liter of buffer diluted it too far to matter",
+          "message": "If 4 mmol of OH⁻ stayed free in a liter, the pH would be near 11.6. The OH⁻ did not stay as OH⁻. What did it react with?"
+        },
+        {
+          "text": "The buffer replaced the formic acid that reacted, so neither amount changed",
+          "message": "Nothing replaces what reacts: 4 mmol of one member became 4 mmol of the other. Work out the two new amounts."
+        }
+      ]
+    },
+    {
+      "lesson": "8.8",
+      "file": "src/content/lessons/unit-8/8-8-properties-of-buffers.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "About 4.75, because every concentration has been cut in half",
+          "message": "That is what this dilution does to a strong acid alone. In a buffer, [H₃O⁺] is set by Ka and the two amounts. Which of those did the water change?"
+        },
+        {
+          "text": "Still about 4.45, because both members were diluted alike",
+          "message": null
+        },
+        {
+          "text": "About 5.7, halfway to 7, because half of the liquid is now water",
+          "message": "Water does not pull a buffer toward 7 in proportion to its volume. [H₃O⁺] is set by Ka and the two amounts. Which of those did the water change?"
+        },
+        {
+          "text": "About 4.15, because the added water brings in more H₃O⁺",
+          "message": "Pure water holds far less H₃O⁺ than this buffer does, so it cannot make it more acidic. Ask what sets [H₃O⁺] in a buffer."
+        }
+      ]
+    },
+    {
+      "lesson": "8.8",
+      "file": "src/content/lessons/unit-8/8-8-properties-of-buffers.mdx",
+      "check": 6,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "90 mmol of Tris and 30 mmol of its conjugate acid, and the pH is a little higher",
+          "message": "H₃O⁺ is an acid, so it reacts with the member that can take a proton. Is that Tris or its conjugate acid? That member goes down."
+        },
+        {
+          "text": "70 mmol of Tris and 40 mmol of its conjugate acid, and the pH is a little lower",
+          "message": "Add up this answer's two amounts. Each H₃O⁺ that reacts turns one particle of one member into one of the other. Can the total of 120 mmol change?"
+        },
+        {
+          "text": "80 mmol of Tris and 40 mmol of its conjugate acid, as before, and the pH has not moved",
+          "message": "A buffer does not stop the reaction. Its hold on the pH comes from the reaction: 10 mmol of H₃O⁺ reacted with one member. Which one?"
+        },
+        {
+          "text": "70 mmol of Tris and 50 mmol of its conjugate acid, and the pH is a little lower",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "8.9",
+      "file": "src/content/lessons/unit-8/8-9-henderson-hasselbalch-equation.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Between 7.07 and 8.07, below the pKa",
+          "message": null
+        },
+        {
+          "text": "Between 8.07 and 9.07, above the pKa",
+          "message": "Decide which member is the acid form before you compare. Tris is the base, so its conjugate acid is the acid form. Which is there more of?"
+        },
+        {
+          "text": "Exactly 8.07, equal to the pKa",
+          "message": "The pH equals the pKa only when the two amounts are equal. Here they are 0.025 mol and 0.070 mol."
+        },
+        {
+          "text": "Between 5.93 and 6.93, near 14.00 − 8.07",
+          "message": "14.00 − 8.07 is the pKb of Tris. The equation takes the pKa of the acid form as it is, with nothing subtracted from 14."
+        }
+      ]
+    },
+    {
+      "lesson": "8.9",
+      "file": "src/content/lessons/unit-8/8-9-henderson-hasselbalch-equation.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "3.35",
+      "tolerance": 0.6,
+      "slips": [
+        {
+          "value": "4.15",
+          "message": "Is the ratio upside down? The base form, formate ion, goes on top, and formic acid goes underneath."
+        },
+        {
+          "value": "3.75",
+          "message": "That is the pKa alone. The pH equals the pKa only when the two amounts are equal. Add the logarithm of the ratio."
+        },
+        {
+          "value": "2.29",
+          "message": "That is the pH of 0.15 M formic acid with no formate present. The formate ion is there in a large amount, so this is a buffer."
+        },
+        {
+          "value": "2.83",
+          "message": "Did you use the natural logarithm? The equation takes the logarithm to base 10, the log key."
+        },
+        {
+          "value": "-0.40",
+          "message": "That is the logarithm of the ratio alone. Add it to the pKa, 3.75."
+        },
+        {
+          "value": "3.4",
+          "message": "Did you round to one decimal place? The pKa has two, so give the pH to two decimal places."
+        }
+      ]
+    },
+    {
+      "lesson": "8.9",
+      "file": "src/content/lessons/unit-8/8-9-henderson-hasselbalch-equation.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "5.23 + log(0.080 ÷ 0.24), with the pyridinium ion on top",
+          "message": "Which of the two is the base form? The equation puts the base form over the acid form, whatever charge each one carries."
+        },
+        {
+          "text": "8.77 + log(0.24 ÷ 0.080), with 8.77 from −log Kb",
+          "message": "−log Kb is the pKb of pyridine. The equation is built on the acid form of the pair. Whose pK does it need?"
+        },
+        {
+          "text": "5.23 + log(0.24 ÷ 0.080), with pyridine on top",
+          "message": null
+        },
+        {
+          "text": "1.7 × 10⁻⁹ + log(0.24 ÷ 0.080), with Kb as the first term",
+          "message": "Kb is a K, not a pK, and the equation is written in logarithms. It needs a pK, and it must be the pK of the pair's acid form."
+        }
+      ]
+    },
+    {
+      "lesson": "8.9",
+      "file": "src/content/lessons/unit-8/8-9-henderson-hasselbalch-equation.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Both. Each mixture is made from the same two bottles, so the ratio is 1.5 in each",
+          "message": "The bottles are the same, but the volumes poured are not. Find the millimoles of each form in each mixture, milliliters times molarity, and compare the two ratios."
+        },
+        {
+          "text": "Only the first. Equal volumes dilute the two solutions alike",
+          "message": null
+        },
+        {
+          "text": "Only the second. In 120.0 mL each solution is diluted less than in 80.0 mL",
+          "message": "Follow each solution into the second mixture: 40.0 mL goes into 120.0 mL, and 80.0 mL goes into 120.0 mL. Are the two diluted alike?"
+        },
+        {
+          "text": "Neither. Mixing dilutes both solutions, so the bottles' numbers cannot give the ratio",
+          "message": "Mixing does lower both concentrations. The equation takes their ratio. Can two concentrations both fall while their ratio stays where it was?"
+        }
+      ]
+    },
+    {
+      "lesson": "8.9",
+      "file": "src/content/lessons/unit-8/8-9-henderson-hasselbalch-equation.mdx",
+      "check": 5,
+      "kind": "numeric",
+      "answer": "4.03",
+      "tolerance": 0.4,
+      "slips": [
+        {
+          "value": "3.63",
+          "message": "Is the ratio upside down? Glycolate ion, the base form, goes on top."
+        },
+        {
+          "value": "3.43",
+          "message": "Did you use 0.200 and 0.500, the concentrations before mixing? Each solution dilutes the other. Find the moles of each member in the mixture."
+        },
+        {
+          "value": "4.23",
+          "message": "Did you use the concentrations before mixing, with the acid's on top? Find the moles of each member in the mixture, and put the base form on top."
+        },
+        {
+          "value": "4.43",
+          "message": "Did you use the two volumes as the ratio? The ratio is of amounts. Multiply each volume by its molarity to get millimoles."
+        },
+        {
+          "value": "3.83",
+          "message": "That is the pKa alone. The two amounts are not equal here, so the logarithm of the ratio is not zero."
+        },
+        {
+          "value": "4.0",
+          "message": "Did you round to one decimal place? The pKa has two, so give the pH to two decimal places."
+        }
+      ]
+    },
+    {
+      "lesson": "8.9",
+      "file": "src/content/lessons/unit-8/8-9-henderson-hasselbalch-equation.mdx",
+      "check": 6,
+      "kind": "numeric",
+      "answer": "0.25",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "3.98",
+          "message": "Is the ratio upside down? The wanted pH is below the pKa. Should there be more Tris than conjugate acid, or less?"
+        },
+        {
+          "value": "-0.60",
+          "message": "That is the logarithm of the ratio. Raise 10 to that power to get the ratio itself."
+        },
+        {
+          "value": "0.926",
+          "message": "Did you divide the pH by the pKa? Subtract the pKa from the pH first, then raise 10 to that power."
+        },
+        {
+          "value": "0.60",
+          "message": "Is that pH − pKa without its sign? The wanted pH is below the pKa, so the logarithm is negative. Then raise 10 to that power."
+        }
+      ]
+    },
+    {
+      "lesson": "8.10",
+      "file": "src/content/lessons/unit-8/8-10-buffer-capacity.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "P can take more of both, because it holds more moles in all",
+          "message": "A total is not what an addition meets. Added OH⁻ reacts with one member of the pair only, and added H₃O⁺ with the other. Count each member on its own."
+        },
+        {
+          "text": "P can take more base, and Q can take more acid",
+          "message": "Added OH⁻ is a base. Which member of a buffer does a base react with, the acid form or the base form? Then compare the moles of that member."
+        },
+        {
+          "text": "P can take more acid, and Q can take more base",
+          "message": null
+        },
+        {
+          "text": "It cannot be decided without the pKa of formic acid",
+          "message": "A pKa would give each buffer's pH. This question is about amounts: how many moles does each buffer hold of the member that the addition uses up?"
+        }
+      ]
+    },
+    {
+      "lesson": "8.10",
+      "file": "src/content/lessons/unit-8/8-10-buffer-capacity.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Strong base: it holds more of the member that reacts with OH⁻",
+          "message": null
+        },
+        {
+          "text": "Strong acid: Tris is a base, and a base is what reacts with an acid",
+          "message": "Tris does react with acid, but count it: 30 mmol. How much is there of the other member, and what does that one react with?"
+        },
+        {
+          "text": "The same of either: a buffer holds both members, so it guards both ways alike",
+          "message": "Both ways, yes, but not alike. Each member can use up only as many moles as there are of it. Compare 30 mmol with 90 mmol."
+        },
+        {
+          "text": "Strong base: the solution is already basic, so more OH⁻ changes it little",
+          "message": "Capacity is not read from the pH. It is counted in moles: how much of each member is there, and what does each one react with?"
+        }
+      ]
+    },
+    {
+      "lesson": "8.10",
+      "file": "src/content/lessons/unit-8/8-10-buffer-capacity.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "65",
+      "unit": "mmol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "115",
+          "message": "Did you add the 25 mmol to the acid form? OH⁻ uses up the acid form. Which member grows instead?"
+        },
+        {
+          "value": "55",
+          "message": "That is the Tris after the reaction, which is the base form. The question asks for the acid form."
+        },
+        {
+          "value": "5",
+          "message": "Did you take the 25 mmol from the Tris? OH⁻ reacts with the acid form, which here is the conjugate acid of Tris."
+        },
+        {
+          "value": "90",
+          "message": "That is the acid form before the reaction. The OH⁻ reacts with it, mole for mole."
+        },
+        {
+          "value": "0.065",
+          "message": "That is in moles. The question asks for millimoles."
+        }
+      ]
+    },
+    {
+      "lesson": "8.10",
+      "file": "src/content/lessons/unit-8/8-10-buffer-capacity.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "The buffer's ratio of base form to acid form, which the addition has made larger",
+          "message": "A ratio needs both members. Make the table of moles: how much HA is left after the OH⁻ has reacted?"
+        },
+        {
+          "text": "The 120 mmol of A⁻ alone, a weak base reacting with water",
+          "message": "A⁻ is there, but it is a weak base. Look at the table of moles again for anything stronger that is left."
+        },
+        {
+          "text": "The 42 mmol of OH⁻ that was added, all of which is still in the solution",
+          "message": "Not all of it is still there. OH⁻ reacts with HA until one of them runs out. Which runs out, and how much of the other is left?"
+        },
+        {
+          "text": "The 12 mmol of OH⁻ left over once the HA has run out",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "8.10",
+      "file": "src/content/lessons/unit-8/8-10-buffer-capacity.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Close to 4.87, because a buffer holds its pH",
+          "message": "A buffer needs both members. Make the table of moles: how much propanoic acid is left after 20 mmol of OH⁻ has reacted?"
+        },
+        {
+          "text": "Between 8 and 9, because a weak base alone is left",
+          "message": null
+        },
+        {
+          "text": "Exactly 7, because the acid has been exactly neutralized",
+          "message": "Matched in moles does not mean neutral. Look at what is in the solution after the reaction, and ask whether that ion reacts with water."
+        },
+        {
+          "text": "Above 12, because the water beside it goes above 12",
+          "message": "The water goes that high because its OH⁻ has nothing to react with. Here all 20 mmol of OH⁻ reacted. What is left to set the pH?"
+        }
+      ]
+    },
+    {
+      "lesson": "8.10",
+      "file": "src/content/lessons/unit-8/8-10-buffer-capacity.mdx",
+      "check": 6,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "H₂PO₄⁻ with HPO₄²⁻, with somewhat more of the acid form",
+          "message": null
+        },
+        {
+          "text": "H₂PO₄⁻ with HPO₄²⁻, with somewhat more of the base form",
+          "message": "More base form than acid form puts a buffer's pH above its pKa. Where would this recipe land, and where is 6.90?"
+        },
+        {
+          "text": "Tris with its conjugate acid, with about fifteen times as much acid form",
+          "message": "This pair could reach pH 6.90, but with so little Tris a small addition of acid would use the base form up. Look for a pKa nearer 6.90."
+        },
+        {
+          "text": "Propanoic acid with propanoate ion, with about a hundred times as much base form",
+          "message": "A hundred to one leaves almost no acid form to meet added base. A buffer works best within about one pH unit of its pKa."
+        }
+      ]
+    },
+    {
+      "lesson": "8.11",
+      "file": "src/content/lessons/unit-8/8-11-ph-and-solubility.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Thallium(I) bromide, TlBr",
+          "message": "Bromide is the conjugate base of HBr, a strong acid. Would Br⁻ take a proton from H₃O⁺?"
+        },
+        {
+          "text": "Silver iodide, AgI",
+          "message": "Iodide is the conjugate base of HI, a strong acid. Would I⁻ take a proton from H₃O⁺?"
+        },
+        {
+          "text": "Calcium oxalate, CaC₂O₄",
+          "message": null
+        },
+        {
+          "text": "All three, because nitric acid is a strong acid",
+          "message": "The strength of the acid added is not the test. For each solid, ask whether its anion is a base that H₃O⁺ can react with."
+        }
+      ]
+    },
+    {
+      "lesson": "8.11",
+      "file": "src/content/lessons/unit-8/8-11-ph-and-solubility.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Oxalate is the conjugate base of a weak acid, and acids react with bases",
+          "message": "That statement stops before the solid comes into it. A complete explanation goes on to say what changes in the solution and why more solid dissolves."
+        },
+        {
+          "text": "Oxalate is a weak base, so H₃O⁺ turns it into HC₂O₄⁻, Q falls below Ksp and more solid dissolves",
+          "message": null
+        },
+        {
+          "text": "The acid raises the Ksp of calcium oxalate, so the water can hold a larger product of ion concentrations than before",
+          "message": "Ksp is a constant at a given temperature, whatever else is in the water. The acid changes a concentration. Which one?"
+        },
+        {
+          "text": "H₃O⁺ reacts with the calcium ions and removes them, so more solid dissolves",
+          "message": "A calcium ion does not take a proton, so H₃O⁺ leaves it alone. Which ion of the solid is a base?"
+        }
+      ]
+    },
+    {
+      "lesson": "8.11",
+      "file": "src/content/lessons/unit-8/8-11-ph-and-solubility.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "[Ni²⁺] is higher, [OH⁻] is lower and Ksp is the same",
+          "message": null
+        },
+        {
+          "text": "[Ni²⁺] is higher, [OH⁻] is higher and Ksp is larger",
+          "message": "The acid used up OH⁻, and Ksp is fixed at a given temperature. With those two facts, can both concentrations be higher?"
+        },
+        {
+          "text": "[Ni²⁺] and [OH⁻] are both back where they started, and Ksp is the same",
+          "message": "If both concentrations were unchanged, no extra solid would have dissolved. What does each formula unit that dissolves put into the solution?"
+        },
+        {
+          "text": "[Ni²⁺] is higher, [OH⁻] is the same and Ksp is larger",
+          "message": "Look again at Ksp: what would have to change for it to change? Then ask whether [OH⁻] can stay put while acid is using OH⁻ up."
+        }
+      ]
+    },
+    {
+      "lesson": "8.11",
+      "file": "src/content/lessons/unit-8/8-11-ph-and-solubility.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "At pH 10.0, because a hydroxide is most at home in a basic solution",
+          "message": "OH⁻ is one of the ions this solid gives when it dissolves. What does an ion already in the solution do to a salt's solubility (topic 7.12)?"
+        },
+        {
+          "text": "At pH 8.0, because that buffer holds the least OH⁻",
+          "message": null
+        },
+        {
+          "text": "The same in all three, because Ksp is the same in all three",
+          "message": "Ksp is the same in all three, but Ksp is a product of two concentrations. If [OH⁻] differs from buffer to buffer, can [Co²⁺] be the same?"
+        },
+        {
+          "text": "None dissolves in any of them, because all three buffers are basic",
+          "message": "Basic does not mean saturated. Solid dissolves until the product of the ion concentrations reaches Ksp, and each buffer fixes a different [OH⁻]."
+        }
+      ]
+    },
+    {
+      "lesson": "8.11",
+      "file": "src/content/lessons/unit-8/8-11-ph-and-solubility.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Nickel(II) hydroxide, Ni(OH)₂, is more soluble in dilute nitric acid than in water",
+          "message": "That is true, and it is a hydroxide whose solubility depends on the pH, just as the claim says. Look for a case the claim says cannot happen."
+        },
+        {
+          "text": "Cobalt(II) hydroxide, Co(OH)₂, is less soluble in a buffer at pH 10 than in one at pH 8",
+          "message": "True, and it is again a hydroxide answering to the pH, as the claim allows. What kind of solid would the claim be wrong about?"
+        },
+        {
+          "text": "Silver iodide, AgI, is essentially no more soluble in dilute nitric acid than in water",
+          "message": "True, but a solid that is not a hydroxide and ignores the pH is just what the claim expects. Which of these facts would surprise the classmate?"
+        },
+        {
+          "text": "Strontium fluoride, SrF₂, is more soluble in dilute nitric acid than in water",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "8.11",
+      "file": "src/content/lessons/unit-8/8-11-ph-and-solubility.mdx",
+      "check": 6,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "[F⁻] is four times what it was, because each PbF₂ that dissolves gives two F⁻",
+          "message": "Each formula unit does give two fluoride ions, but do they all stay as F⁻ in an acidic solution? Then try your answer in the Ksp expression."
+        },
+        {
+          "text": "[F⁻] is what it was, because more solid dissolved to replace what the acid took",
+          "message": "If [F⁻] were unchanged while [Pb²⁺] went up four times, the product in the Ksp expression would be four times as large. Can it be, at one temperature?"
+        },
+        {
+          "text": "[F⁻] is half what it was, because Ksp has not changed",
+          "message": null
+        },
+        {
+          "text": "[F⁻] is a quarter of what it was, because [Pb²⁺] times [F⁻] is fixed",
+          "message": "Write the Ksp expression for PbF₂ and look at the power on [F⁻]. Then try your answer in it: does the product come out unchanged?"
+        }
+      ]
     }
   ]
 }

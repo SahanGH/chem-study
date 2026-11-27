@@ -1,0 +1,391 @@
+---
+topic: "8.11"
+minutes: 22
+summary: "How a change in pH changes the solubility of a salt whose anion is a weak base or a hydroxide ion, explained with Le Châtelier's principle, and why other salts are not affected."
+---
+
+The steel tanks of a brewery slowly grow a hard, chalky crust that brewers call beerstone. Hot water and scrubbing barely touch it. An acid cleaner takes it off. Beerstone is mostly calcium oxalate, a salt that hardly dissolves in water.
+
+Why should acid help? And why does acid do almost nothing for some other salts that hardly dissolve?
+
+## Taking an ion away
+
+Start with what you know. A saturated solution with solid lying in it is an equilibrium (topic 7.11). For strontium fluoride:
+
+$$
+\ce{SrF2(s) <=> Sr^2+(aq) + 2F-(aq)}
+$$
+
+$$
+\begin{aligned}
+K_{sp} &= [\ce{Sr^2+}][\ce{F-}]^2 \\
+&= 4.33 \times 10^{-9}
+\end{aligned}
+$$
+
+That value is for 25 °C, and it is the one in topic 7.11's table.
+
+Topic 7.12 put more of one ion into a solution like this, and less solid dissolved. Now do the opposite: take an ion away.
+
+Acid can take an ion away if that ion is a base. The fluoride ion is the conjugate base of hydrofluoric acid, HF, which is a weak acid. The conjugate base of a weak acid is itself a weak base (topics 4.8 and 8.4), so F⁻ takes a proton from H₃O⁺:
+
+$$
+\begin{aligned}
+&\ce{F-(aq) + H3O+(aq) ->} \\
+&\quad \ce{HF(aq) + H2O(l)}
+\end{aligned}
+$$
+
+Follow what happens next with $Q$ (topics 7.10 and 7.11).
+
+$$
+Q = [\ce{Sr^2+}][\ce{F-}]^2
+$$
+
+Some F⁻ has become HF, so [F⁻] is lower, and $Q$ is now less than $K_{sp}$. The solution is no longer saturated. More solid dissolves, and it goes on dissolving until $Q$ is back up to $K_{sp}$.
+
+Le Châtelier's principle (topic 7.9) tells the same story. F⁻ is a product of the dissolving equation. Take away a product and the equilibrium shifts toward products: more solid becomes ions.
+
+Look at where it ends. More strontium is in solution than before, so strontium fluoride is **more soluble in the acidic solution** than in pure water. With enough acid, most of the fluorine that has dissolved is in HF molecules.
+
+The figure shows the same saturated solution before and after some nitric acid, a strong acid.
+
+<Figure
+  src="/figures/8-11-acid-pulls-the-anion.svg"
+  alt="Two boxes, each a saturated solution of strontium fluoride with a block of solid on the bottom. Strontium ions are small dark circles and fluoride ions are larger pale circles. In the left box, labeled in water, the solid is made of 5 strontium ions and 10 fluoride ions, and 1 strontium ion and 2 fluoride ions are dissolved above it. In the right box, labeled after 7 H3O plus, the solid is smaller, 2 strontium ions and 4 fluoride ions, and above it are 4 strontium ions, 1 fluoride ion and 7 HF molecules, each drawn as a fluoride-sized circle with a small circle attached. Under the left box it says 1 times 2 squared equals 4, and under the right box 4 times 1 squared equals 4."
+  caption="Acid turns fluoride ions into HF, and more solid dissolves to replace them. The number of strontium ions times the square of the number of fluoride ions is the same in both boxes, because the solubility-product constant has not changed. Water molecules, nitrate ions and the H₃O⁺ ions that have not reacted are not drawn, and far more ions are drawn than really dissolve."
+/>
+
+<KeyIdea>
+
+When the anion of a slightly soluble salt is a weak base, acid makes the salt more soluble. H₃O⁺ turns the anion into its conjugate acid, the concentration of the anion falls, and more solid dissolves to replace it.
+
+</KeyIdea>
+
+## The question that decides
+
+H₃O⁺ can take away only an ion that it reacts with. So one question decides whether acid changes a salt's solubility: **is the anion a base?**
+
+An anion that is the conjugate base of a weak acid is a base, and acid raises the solubility of its salts. Fluoride and oxalate are two such anions, and so are carbonate, phosphate and sulfide.
+
+An anion that is the conjugate base of a strong acid is not a base to any degree that matters. Cl⁻, Br⁻, I⁻, NO₃⁻ and ClO₄⁻ essentially never take a proton in water (topic 4.8). H₃O⁺ has nothing to react with, no ion is taken away, $Q$ stays at $K_{sp}$, and the solubility is essentially the same in acid as in water.
+
+Notice what decides: the anion in the solid, not how strong the acid in the bottle is. Any strong acid supplies the H₃O⁺. This lesson uses nitric acid, because its nitrate ion takes no part. An acid that brought one of the salt's own ions would also act as a common ion (topic 7.12).
+
+When a question asks you to explain, a full answer says three things:
+
+1. Name the anion and say that it is a base, the conjugate base of a weak acid.
+2. Say what H₃O⁺ does to it.
+3. Say how the dissolving equilibrium responds: $Q$ falls below $K_{sp}$, or the equilibrium shifts toward the ions, so more solid dissolves.
+
+Naming the anion alone is a third of an answer.
+
+<Worked title="Two lead salts and a little nitric acid">
+
+Two beakers hold saturated solutions at 25 °C, each with solid on the bottom: lead(II) fluoride, PbF₂, in one and lead(II) bromide, PbBr₂, in the other. A few drops of nitric acid, a strong acid, go into each, so the volume hardly changes. HF is a weak acid and HBr is a strong acid. In which beaker does the acid make more of the solid dissolve?
+
+1. **Write each dissolving equation and find the anion.**
+
+   $$
+   \ce{PbF2(s) <=> Pb^2+(aq) + 2F-(aq)}
+   $$
+
+   $$
+   \ce{PbBr2(s) <=> Pb^2+(aq) + 2Br-(aq)}
+   $$
+
+   The cation is the same in both, so whatever differs between the beakers is the anion's doing. The anions are F⁻ and Br⁻.
+
+2. **Ask whether each anion is a base.** F⁻ is the conjugate base of a weak acid, HF, so it is a weak base. Br⁻ is the conjugate base of a strong acid, HBr, so it is not.
+
+3. **Lead(II) fluoride.** H₃O⁺ turns F⁻ into HF, by the equation of the first section. [F⁻] falls, so $Q$ drops below $K_{sp}$:
+
+   $$
+   Q = [\ce{Pb^2+}][\ce{F-}]^2
+   $$
+
+   More PbF₂ dissolves until $Q$ equals $K_{sp}$ again.
+
+4. **Lead(II) bromide.** H₃O⁺ does not react with Br⁻, and it does not react with Pb²⁺. Nothing is taken away, $Q$ still equals $K_{sp}$, and essentially no more PbBr₂ dissolves.
+
+5. **The nitrate ions.** The nitrate ions that came with the acid take no part in either beaker: lead(II) nitrate is soluble (topic 4.7's rule).
+
+6. **$K_{sp}$.** Each solid has its own, and each is the same after the acid as before. The temperature has not changed.
+
+The acid makes more solid dissolve in the beaker of lead(II) fluoride. In the beaker of lead(II) bromide it makes essentially no difference.
+
+</Worked>
+
+<Check
+  answer={3}
+  misses={{
+    1: "Bromide is the conjugate base of HBr, a strong acid. Would Br⁻ take a proton from H₃O⁺?",
+    2: "Iodide is the conjugate base of HI, a strong acid. Would I⁻ take a proton from H₃O⁺?",
+    4: "The strength of the acid added is not the test. For each solid, ask whether its anion is a base that H₃O⁺ can react with.",
+  }}
+>
+Each of these three solids is only slightly soluble in water. HBr and HI are strong acids. The hydrogen oxalate ion, HC₂O₄⁻, is a weak acid. Which solid is more soluble in dilute nitric acid than in pure water?
+
+- Thallium(I) bromide, TlBr
+- Silver iodide, AgI
+- Calcium oxalate, CaC₂O₄
+- All three, because nitric acid is a strong acid
+
+<div slot="why">
+
+The test is the anion. The oxalate ion, C₂O₄²⁻, is the conjugate base of the weak acid HC₂O₄⁻, so it takes a proton from H₃O⁺:
+
+$$
+\begin{aligned}
+&\ce{C2O4^2-(aq) + H3O+(aq) ->} \\
+&\quad \ce{HC2O4-(aq) + H2O(l)}
+\end{aligned}
+$$
+
+That lowers [C₂O₄²⁻], $Q$ falls below $K_{sp}$, and more calcium oxalate dissolves.
+
+Br⁻ and I⁻ are the conjugate bases of strong acids, so they do not take protons from H₃O⁺, and thallium(I) bromide and silver iodide are essentially no more soluble in the acid than in water. How strong the added acid is does not decide anything: what decides is whether the solid's anion is a base.
+
+</div>
+</Check>
+
+<Check
+  answer={2}
+  misses={{
+    1: "That statement stops before the solid comes into it. A complete explanation goes on to say what changes in the solution and why more solid dissolves.",
+    3: "Ksp is a constant at a given temperature, whatever else is in the water. The acid changes a concentration. Which one?",
+    4: "A calcium ion does not take a proton, so H₃O⁺ leaves it alone. Which ion of the solid is a base?",
+  }}
+>
+Back to the brewery. Beerstone is mostly calcium oxalate, CaC₂O₄, and the hydrogen oxalate ion, HC₂O₄⁻, is a weak acid. Which of these is a complete explanation of why an acid cleaner takes the crust off?
+
+- Oxalate is the conjugate base of a weak acid, and acids react with bases
+- Oxalate is a weak base, so H₃O⁺ turns it into HC₂O₄⁻, Q falls below Ksp and more solid dissolves
+- The acid raises the Ksp of calcium oxalate, so the water can hold a larger product of ion concentrations than before
+- H₃O⁺ reacts with the calcium ions and removes them, so more solid dissolves
+
+<div slot="why">
+
+The crust is in equilibrium with a little dissolved calcium and oxalate:
+
+$$
+\begin{aligned}
+&\ce{CaC2O4(s) <=>} \\
+&\quad \ce{Ca^2+(aq) + C2O4^2-(aq)}
+\end{aligned}
+$$
+
+The oxalate ion is a weak base, so H₃O⁺ from the cleaner turns it into HC₂O₄⁻. With less oxalate ion in the solution, $Q$ is below $K_{sp}$, and more of the crust dissolves. As long as fresh acid keeps arriving, the oxalate ion keeps being taken away and the crust keeps dissolving. With enough strong acid the hydrogen oxalate ion takes a second proton and becomes oxalic acid, H₂C₂O₄, which is a weak acid too.
+
+The first option is true and names the right ion, but it stops before saying what happens to the equilibrium. $K_{sp}$ does not change: it is a constant at a given temperature. And a calcium ion is not a base, so H₃O⁺ does nothing to it.
+
+</div>
+</Check>
+
+## Hydroxides: the pH works both ways
+
+In a slightly soluble hydroxide the anion is the hydroxide ion itself, a strong base. H₃O⁺ reacts with it essentially completely:
+
+$$
+\ce{H3O+(aq) + OH-(aq) -> 2H2O(l)}
+$$
+
+And for a hydroxide the pH is more than a way of adding acid. The pH is itself a measure of [OH⁻] (topic 8.1): a higher pH means more OH⁻ in the solution, and OH⁻ is one of the ions the solid gives. So raising the pH works on a hydroxide as a common ion does (topic 7.12), and lowers its solubility.
+
+For a hydroxide such as nickel(II) hydroxide:
+
+- Lower the pH, and it is more soluble.
+- Raise the pH, and it is less soluble.
+
+<Worked title="Nickel out of a spent battery, and back">
+
+The positive plate of a nickel–metal hydride cell, the common rechargeable AA battery, holds nickel(II) hydroxide, Ni(OH)₂, once the cell has run down. It is a pale green solid that is very slightly soluble in water. A recycler wants the nickel in solution, away from the rest of the cell, and later wants it back as a solid. Explain how a change in pH does each.
+
+1. **Write the equilibrium.**
+
+   $$
+   \begin{aligned}
+   &\ce{Ni(OH)2(s) <=>} \\
+   &\quad \ce{Ni^2+(aq) + 2OH-(aq)}
+   \end{aligned}
+   $$
+
+   $$
+   K_{sp} = [\ce{Ni^2+}][\ce{OH-}]^2
+   $$
+
+2. **Lower the pH to dissolve it.** Added acid supplies H₃O⁺, which reacts with OH⁻ to make water. [OH⁻] falls, $Q$ drops below $K_{sp}$, and more solid dissolves. With enough acid all of it dissolves:
+
+   $$
+   \begin{aligned}
+   &\ce{Ni(OH)2(s) + 2H3O+(aq) ->} \\
+   &\quad \ce{Ni^2+(aq) + 4H2O(l)}
+   \end{aligned}
+   $$
+
+3. **Raise the pH to bring it back.** One way to get the nickel back is to raise the pH. Adding a strong base to the nickel solution raises [OH⁻]. Once enough has gone in, $Q$ is above $K_{sp}$, and Ni(OH)₂ precipitates until $Q$ has fallen to $K_{sp}$ (topic 7.11). The more OH⁻ in the solution, the less Ni²⁺ can stay in it.
+
+4. **One equilibrium did both.** Acid takes OH⁻ away and the solid dissolves. Base adds OH⁻ and the solid forms. $K_{sp}$ is the same throughout.
+
+</Worked>
+
+<Check
+  answer={1}
+  misses={{
+    2: "The acid used up OH⁻, and Ksp is fixed at a given temperature. With those two facts, can both concentrations be higher?",
+    3: "If both concentrations were unchanged, no extra solid would have dissolved. What does each formula unit that dissolves put into the solution?",
+    4: "Look again at Ksp: what would have to change for it to change? Then ask whether [OH⁻] can stay put while acid is using OH⁻ up.",
+  }}
+>
+A saturated solution of nickel(II) hydroxide has solid Ni(OH)₂ on the bottom. A little nitric acid is added at constant temperature, and some solid is still there when equilibrium returns. Compared with before the acid went in, what is true of the solution?
+
+- [Ni²⁺] is higher, [OH⁻] is lower and Ksp is the same
+- [Ni²⁺] is higher, [OH⁻] is higher and Ksp is larger
+- [Ni²⁺] and [OH⁻] are both back where they started, and Ksp is the same
+- [Ni²⁺] is higher, [OH⁻] is the same and Ksp is larger
+
+<div slot="why">
+
+The acid used up OH⁻, and more solid dissolved to replace some of it. Every formula unit that dissolved put a nickel ion into the solution, so [Ni²⁺] is higher than before.
+
+$$
+K_{sp} = [\ce{Ni^2+}][\ce{OH-}]^2
+$$
+
+$K_{sp}$ is a constant at a given temperature, and the temperature did not change. If the product is the same and [Ni²⁺] is higher, [OH⁻] must be lower than before, which is to say the pH is lower. Solid is still there, so the solution is saturated again, at a new pair of concentrations.
+
+</div>
+</Check>
+
+<Check
+  answer={2}
+  misses={{
+    1: "OH⁻ is one of the ions this solid gives when it dissolves. What does an ion already in the solution do to a salt's solubility (topic 7.12)?",
+    3: "Ksp is the same in all three, but Ksp is a product of two concentrations. If [OH⁻] differs from buffer to buffer, can [Co²⁺] be the same?",
+    4: "Basic does not mean saturated. Solid dissolves until the product of the ion concentrations reaches Ksp, and each buffer fixes a different [OH⁻].",
+  }}
+>
+Solid cobalt(II) hydroxide, Co(OH)₂, is stirred into three buffers, at pH 8.0, pH 9.0 and pH 10.0, until no more dissolves. Each buffer holds its pH, and nothing in the buffers reacts with Co²⁺. In which buffer is the concentration of dissolved Co²⁺ highest?
+
+- At pH 10.0, because a hydroxide is most at home in a basic solution
+- At pH 8.0, because that buffer holds the least OH⁻
+- The same in all three, because Ksp is the same in all three
+- None dissolves in any of them, because all three buffers are basic
+
+<div slot="why">
+
+The equilibrium is
+
+$$
+\begin{aligned}
+&\ce{Co(OH)2(s) <=>} \\
+&\quad \ce{Co^2+(aq) + 2OH-(aq)}
+\end{aligned}
+$$
+
+$$
+K_{sp} = [\ce{Co^2+}][\ce{OH-}]^2
+$$
+
+Each buffer fixes [OH⁻]: at 25 °C it is 1.0 × 10⁻⁶ M at pH 8.0, 1.0 × 10⁻⁵ M at pH 9.0 and 1.0 × 10⁻⁴ M at pH 10.0. $K_{sp}$ is the same in all three, so where [OH⁻] is smallest, [Co²⁺] must be largest: at pH 8.0.
+
+OH⁻ is a common ion for a hydroxide (topic 7.12), and the more of it there is, the less solid dissolves. Some solid dissolves in each buffer, because a basic solution is not a saturated one.
+
+</div>
+</Check>
+
+## What does not change, and what is not true
+
+$K_{sp}$ does not change when the pH does. It is a constant for the solid at a given temperature, whatever else is in the water. Topic 7.12 said the same of a common ion. A change in pH changes a concentration, so it changes $Q$, and the solid dissolves or forms until $Q$ equals the same $K_{sp}$ again. What changes is the solubility: how much solid a liter of that solution can dissolve.
+
+"Acid dissolves things" is not a rule. Acid raises the solubility of a solid whose anion H₃O⁺ reacts with, and leaves the others essentially alone.
+
+**Beyond the exam:** how much more soluble a salt becomes at a given pH can be calculated, by combining $K_{sp}$ with the $K_a$ of the anion's conjugate acid. The exam does not ask for that. It asks which way the solubility moves, and why.
+
+<Check
+  answer={4}
+  misses={{
+    1: "That is true, and it is a hydroxide whose solubility depends on the pH, just as the claim says. Look for a case the claim says cannot happen.",
+    2: "True, and it is again a hydroxide answering to the pH, as the claim allows. What kind of solid would the claim be wrong about?",
+    3: "True, but a solid that is not a hydroxide and ignores the pH is just what the claim expects. Which of these facts would surprise the classmate?",
+  }}
+>
+A classmate says: "The pH is about H₃O⁺ and OH⁻, so the only solids whose solubility depends on the pH are hydroxides." HF is a weak acid and HI is a strong acid. Which fact shows that the claim is false?
+
+- Nickel(II) hydroxide, Ni(OH)₂, is more soluble in dilute nitric acid than in water
+- Cobalt(II) hydroxide, Co(OH)₂, is less soluble in a buffer at pH 10 than in one at pH 8
+- Silver iodide, AgI, is essentially no more soluble in dilute nitric acid than in water
+- Strontium fluoride, SrF₂, is more soluble in dilute nitric acid than in water
+
+<div slot="why">
+
+One case that goes against a claim is enough to show it false, and the case must be a solid that is not a hydroxide and whose solubility still depends on the pH. Strontium fluoride is one: F⁻ is a weak base, so H₃O⁺ turns it into HF, [F⁻] falls, and more solid dissolves.
+
+The two hydroxides do just what the claim says hydroxides do, so they cannot go against it. Silver iodide is not a hydroxide, and its solubility does not depend on the pH, because I⁻ is the conjugate base of a strong acid. That agrees with the claim too.
+
+All four statements are true; only one of them is a case the claim says cannot happen.
+
+</div>
+</Check>
+
+<Check
+  answer={3}
+  misses={{
+    1: "Each formula unit does give two fluoride ions, but do they all stay as F⁻ in an acidic solution? Then try your answer in the Ksp expression.",
+    2: "If [F⁻] were unchanged while [Pb²⁺] went up four times, the product in the Ksp expression would be four times as large. Can it be, at one temperature?",
+    4: "Write the Ksp expression for PbF₂ and look at the power on [F⁻]. Then try your answer in it: does the product come out unchanged?",
+  }}
+>
+Solid lead(II) fluoride, PbF₂, sits at the bottom of its saturated solution. A little nitric acid is stirred in at constant temperature. When equilibrium returns, some solid is still there, and [Pb²⁺] is four times what it was before the acid. HF is a weak acid. What is true of the fluoride ion concentration now?
+
+- [F⁻] is four times what it was, because each PbF₂ that dissolves gives two F⁻
+- [F⁻] is what it was, because more solid dissolved to replace what the acid took
+- [F⁻] is half what it was, because Ksp has not changed
+- [F⁻] is a quarter of what it was, because [Pb²⁺] times [F⁻] is fixed
+
+<div slot="why">
+
+The acid does not change $K_{sp}$, which is fixed at a given temperature, and solid is still there, so the solution is saturated again. The product in the expression has the value it had before:
+
+$$
+K_{sp} = [\ce{Pb^2+}][\ce{F-}]^2
+$$
+
+If [Pb²⁺] is 4 times as large, [F⁻]² must be one-quarter as large, and [F⁻] itself one-half:
+
+$$
+4 \times \left(\frac{1}{2}\right)^2 = 1
+$$
+
+What the acid did change is where the fluorine is. Every PbF₂ that dissolved did give two fluoride ions, but H₃O⁺ turned most of them into HF, so [F⁻] did not rise with [Pb²⁺].
+
+Nor is [F⁻] unchanged: with four times the [Pb²⁺], that would make the product four times $K_{sp}$. And a quarter forgets that the fluoride concentration is squared in the expression.
+
+</div>
+</Check>
+
+<Trap>
+
+Six mistakes cost points on this topic:
+
+- **Judging by the acid and not by the anion.** The question is whether the solid's anion is a base. If it is the conjugate base of a strong acid, acid changes essentially nothing.
+- **Saying that $K_{sp}$ changes.** The pH changes a concentration and so changes $Q$. $K_{sp}$ is fixed at a given temperature.
+- **Stopping at "the anion is a base".** A full answer also says that H₃O⁺ takes the anion away and that more solid dissolves to restore the equilibrium.
+- **Having H₃O⁺ react with the metal ion.** Sr²⁺, Ca²⁺ and Ni²⁺ are not bases. The anion is what reacts.
+- **Getting a hydroxide backward.** A higher pH means more OH⁻, a common ion, so less of a hydroxide dissolves.
+- **Calculating a solubility from a pH.** The question asks for a direction and a reason.
+
+</Trap>
+
+<KeyPoints>
+
+- A saturated solution with solid in it is an equilibrium, and anything that takes one of its ions away makes more solid dissolve.
+- A slightly soluble salt whose anion is a weak base, the conjugate base of a weak acid, is more soluble in acid than in water, because H₃O⁺ turns the anion into its conjugate acid.
+- A salt whose anion is the conjugate base of a strong acid, such as Cl⁻, Br⁻, I⁻ or NO₃⁻, is essentially no more soluble in acid.
+- A slightly soluble hydroxide such as Ni(OH)₂ or Co(OH)₂ is more soluble at a lower pH and less soluble at a higher pH, where OH⁻ acts as a common ion.
+- A change in pH can change $Q$. It never changes $K_{sp}$, which is fixed at a given temperature.
+- A full explanation names the ion that is a base, says what H₃O⁺ or OH⁻ does to its concentration, and says which way the dissolving equilibrium shifts.
+
+</KeyPoints>
+
+<PracticeNext />

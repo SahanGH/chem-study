@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 370" font-family="system-ui, sans-serif" font-size="18">
+  <!-- One saturated solution of strontium fluoride, before and after some acid. Water molecules and nitrate ions are not drawn.
+       Sr2+: small dark circle (radius 8). F-: larger pale circle (radius 11). HF: a fluoride-sized pale circle with a small circle (radius 5) touching it at the upper right, its center 13 to the right of and 8 above the large circle's center (distance 15.3, under 11 + 5 = 16, so the two touch).
+       Left box, "In water": solid, 3 rows of 5 on a grid 22 apart (5 Sr2+ and 10 F-); dissolved, 1 Sr2+ and 2 F-.
+       Right box, "After 7 H3O+": solid, 2 rows of 3 (2 Sr2+ and 4 F-); dissolved, 4 Sr2+, 1 F- and 7 HF.
+       Strontium: 5 + 1 = 6 and 2 + 4 = 6. Fluorine: 10 + 2 = 12 and 4 + 1 + 7 = 12.
+       Charge in solution: left +2 and -2; right +8 and -1, with the 7 nitrate ions that are not drawn making up the other -7.
+       Dissolved Sr2+ times dissolved F- squared: 1 x 2^2 = 4 and 4 x 1^2 = 4.
+       Lowest circle edge in a solid: 251 + 11 = 262, above the box's floor at 264. Font size 18 keeps text at 12 px when the figure is 320 px wide. -->
+  <defs>
+    <circle id="ion-sr" r="8" fill="#26231F" stroke="#26231F" stroke-width="1.5"/>
+    <circle id="ion-f" r="11" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+    <g id="mol-hf">
+      <circle r="11" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="13" cy="-8" r="5" fill="#FFFFFF" stroke="#26231F" stroke-width="1.5"/>
+    </g>
+  </defs>
+  <rect width="480" height="370" fill="#FDFCF9"/>
+
+  <!-- Left box: in water. -->
+  <text x="120" y="30" text-anchor="middle" fill="#26231F" font-weight="600">In water</text>
+  <rect x="20" y="44" width="200" height="220" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+  <!-- Dissolved: 1 Sr2+ and 2 F-. -->
+  <use href="#ion-sr" x="70" y="100"/>
+  <use href="#ion-f" x="150" y="80"/>
+  <use href="#ion-f" x="170" y="150"/>
+  <!-- Solid, top row: F, Sr, F, F, Sr. -->
+  <use href="#ion-f" x="76" y="207"/>
+  <use href="#ion-sr" x="98" y="207"/>
+  <use href="#ion-f" x="120" y="207"/>
+  <use href="#ion-f" x="142" y="207"/>
+  <use href="#ion-sr" x="164" y="207"/>
+  <!-- Middle row: F, F, Sr, F, F. -->
+  <use href="#ion-f" x="76" y="229"/>
+  <use href="#ion-f" x="98" y="229"/>
+  <use href="#ion-sr" x="120" y="229"/>
+  <use href="#ion-f" x="142" y="229"/>
+  <use href="#ion-f" x="164" y="229"/>
+  <!-- Bottom row: Sr, F, F, Sr, F. -->
+  <use href="#ion-sr" x="76" y="251"/>
+  <use href="#ion-f" x="98" y="251"/>
+  <use href="#ion-f" x="120" y="251"/>
+  <use href="#ion-sr" x="142" y="251"/>
+  <use href="#ion-f" x="164" y="251"/>
+  <text x="120" y="292" text-anchor="middle" fill="#26231F">1 × 2² = 4</text>
+
+  <!-- Right box: after 7 H3O+. -->
+  <text x="360" y="30" text-anchor="middle" fill="#26231F" font-weight="600">After 7 H₃O⁺</text>
+  <rect x="260" y="44" width="200" height="220" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+  <!-- Dissolved: 4 Sr2+. -->
+  <use href="#ion-sr" x="335" y="64"/>
+  <use href="#ion-sr" x="292" y="118"/>
+  <use href="#ion-sr" x="336" y="174"/>
+  <use href="#ion-sr" x="432" y="172"/>
+  <!-- Dissolved: 1 F-. -->
+  <use href="#ion-f" x="385" y="118"/>
+  <!-- Dissolved: 7 HF. -->
+  <use href="#mol-hf" x="290" y="72"/>
+  <use href="#mol-hf" x="385" y="74"/>
+  <use href="#mol-hf" x="432" y="66"/>
+  <use href="#mol-hf" x="337" y="124"/>
+  <use href="#mol-hf" x="430" y="122"/>
+  <use href="#mol-hf" x="288" y="168"/>
+  <use href="#mol-hf" x="384" y="166"/>
+  <!-- Solid, top row: F, Sr, F. -->
+  <use href="#ion-f" x="338" y="229"/>
+  <use href="#ion-sr" x="360" y="229"/>
+  <use href="#ion-f" x="382" y="229"/>
+  <!-- Bottom row: Sr, F, F. -->
+  <use href="#ion-sr" x="338" y="251"/>
+  <use href="#ion-f" x="360" y="251"/>
+  <use href="#ion-f" x="382" y="251"/>
+  <text x="360" y="292" text-anchor="middle" fill="#26231F">4 × 1² = 4</text>
+
+  <!-- Key. -->
+  <use href="#ion-sr" x="86" y="334"/>
+  <text x="102" y="340" fill="#26231F">Sr²⁺</text>
+  <use href="#ion-f" x="206" y="334"/>
+  <text x="225" y="340" fill="#26231F">F⁻</text>
+  <use href="#mol-hf" x="318" y="334"/>
+  <text x="344" y="340" fill="#26231F">HF</text>
+</svg>
