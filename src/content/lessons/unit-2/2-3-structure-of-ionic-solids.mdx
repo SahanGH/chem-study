@@ -74,13 +74,20 @@ Each fix comes straight from the key idea above. Run through its list whenever y
 
 </Worked>
 
-<Check answer={2}>
+<Check
+  answer={4}
+  misses={{
+    1: "An ionic solid has no molecules. Its formula gives the ratio of the ions in the crystal.",
+    2: "Ions are free to move in the liquid, which is why melted salt conducts. Ask what holds them in place in the solid.",
+    3: "The particles of an ionic solid are ions, and no shared pair joins one ion to the next. Ask what melting has to do to those ions.",
+  }}
+>
 Why do ionic solids generally have high melting points?
 
 - Their molecules are very heavy.
-- Melting requires overcoming strong attractions between many oppositely charged ions.
-- Their covalent bonds must be broken to melt them.
 - Ions cannot move even in a liquid.
+- Their covalent bonds must be broken to melt them.
+- Melting requires overcoming strong attractions between many oppositely charged ions.
 
 <div slot="why">In the solid, every ion is held by its attractions to all of its oppositely charged neighbors. Melting means pulling the ions free of that arrangement, and that takes a lot of energy. The same attractions, pulling in every direction, are what make the solid hard.</div>
 </Check>
@@ -97,7 +104,14 @@ A sharp blow can push one layer of ions sideways, past the layer below it. Move 
   caption="Shift one layer and like charges meet. The crystal cracks instead of bending."
 />
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "Potassium chloride is made of K⁺ and Cl⁻ ions. There are no covalent bonds in the crystal to break.",
+    2: "A blow does not turn ions into atoms; they stay ions. Ask what the blow does to the pattern of charges in the crystal.",
+    4: "Delocalized electrons belong to metals. An ionic crystal is made of ions locked in place.",
+  }}
+>
 A crystal of potassium chloride shatters when struck with a hammer. Why?
 
 - The hammer breaks the covalent bonds inside the crystal.
@@ -110,7 +124,14 @@ A crystal of potassium chloride shatters when struck with a hammer. Why?
 
 An ionic solid is full of charged particles, so you might expect it to carry an electric current. It does not. A current needs charges that can move, and in the solid every ion is locked in place by its neighbors. Melt the solid, or dissolve it in water, and the ions are free to move. Now they can carry a current.
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "A current needs charges that can move. In the solid, every ion is locked in place by its neighbors.",
+    3: "A current needs charges that can move. Check whether the ions can move in each state.",
+    4: "Electrons are not the only charges that can carry a current. Ions can too, when they are free to move.",
+  }}
+>
 When does sodium chloride conduct electricity?
 
 - Only as a solid.

@@ -96,7 +96,14 @@ Predict the shape of ammonia, NH₃, and its H–N–H bond angle.
 
 </Worked>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "The Lewis diagram is drawn flat, so its angles mean nothing. Count all the domains on sulfur, lone pairs included.",
+    3: "A trigonal pyramidal shape has three bonds and one lone pair. Count the bonds on sulfur.",
+    4: "That is the electron geometry. The molecular shape is named from the positions of the atoms only.",
+  }}
+>
 The Lewis diagram of $\ce{H2S}$ has two S–H bonds and two lone pairs on sulfur. What is the molecular shape?
 
 - linear
@@ -123,7 +130,14 @@ With more than four domains, you name the shape and stop there. The exam asks fo
 
 </Worked>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "Tetrahedral goes with four domains. Xenon has six here, and the lone pairs take up positions too.",
+    2: "Seesaw comes from five domains: four bonds and one lone pair. Xenon has six domains here.",
+    4: "That is the electron geometry for six domains. The shape is named from the atoms only, and two of the domains are lone pairs.",
+  }}
+>
 $\ce{XeF4}$ has six electron domains around xenon: four bonds and two lone pairs. What is its shape?
 
 - tetrahedral
@@ -144,13 +158,20 @@ A molecule is nonpolar when every outer atom is the same and the bonds are sprea
 
 Compare SO₂ and SO₃. SO₃ is trigonal planar, and its three equal S–O dipoles cancel, so it is nonpolar. SO₂ is bent by its lone pair, so its dipoles do not cancel, and it is polar.
 
-<Check answer={3}>
+<Check
+  answer={4}
+  misses={{
+    1: "Its bonds are polar, but they point in opposite directions along a straight line. What do the two dipoles do?",
+    2: "It is trigonal planar, with three identical outer atoms spread evenly. Check whether its bond dipoles cancel.",
+    3: "It is tetrahedral, with four identical outer atoms spread evenly. Check whether its bond dipoles cancel.",
+  }}
+>
 Which molecule is polar?
 
 - $\ce{CO2}$
 - $\ce{BF3}$
-- $\ce{NH3}$
 - $\ce{CH4}$
+- $\ce{NH3}$
 
 <div slot="why">$\ce{NH3}$ is trigonal pyramidal, so its three N–H dipoles all point partly the same way and do not cancel. The other three are symmetrical, with identical outer atoms.</div>
 </Check>
@@ -223,13 +244,27 @@ How many sigma and pi bonds are in hydrogen cyanide, H–C≡N, and what is the 
 
 </Worked>
 
-<Check numeric="2">
+<Check
+  numeric="2"
+  slips={{
+    "4": "That is what counting every line in O=C=O gives. Some of those lines are σ bonds.",
+    "1": "Did you count one double bond? Draw the Lewis diagram of CO₂ and count them.",
+    "0": "Did you draw CO₂ with single bonds? Carbon would have fewer than eight electrons around it.",
+  }}
+>
 How many pi bonds are there in a molecule of $\ce{CO2}$?
 
 <div slot="why">O=C=O has two double bonds, and each is made of one σ bond and one π bond.</div>
 </Check>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "sp goes with two domains. Count the domains on one carbon: its bonds to hydrogen and its bond to the other carbon.",
+    3: "Did you count the double bond as two domains? Any bond, single, double or triple, is one domain.",
+    4: "Hybridization follows from the number of domains on the atom, and the Lewis diagram gives you that.",
+  }}
+>
 What is the hybridization of each carbon atom in ethene, H₂C=CH₂?
 
 - sp

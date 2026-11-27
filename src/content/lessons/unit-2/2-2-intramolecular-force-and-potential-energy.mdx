@@ -39,13 +39,20 @@ Find the bottom of the valley. Drop straight down to the distance axis for the b
 
 </KeyIdea>
 
-<Check answer={2}>
+<Check
+  answer={4}
+  misses={{
+    1: "Zero is the energy of the atoms when they are far apart. Ask instead where two bonded atoms settle.",
+    2: "The steep part is where the nuclei are pushed too close and repel. The atoms do not stay there.",
+    3: "At the far right the atoms are far apart and do not interact. That is not a bond.",
+  }}
+>
 On a graph of potential energy against distance between two nuclei, where do you read the bond length?
 
 - Where the curve crosses zero
-- At the lowest point of the curve
-- At the far right, where the curve levels off
 - Where the curve is steepest
+- At the far right, where the curve levels off
+- At the lowest point of the curve
 
 <div slot="why">The bond length is the distance at which the energy is lowest. That is where the atoms settle.</div>
 </Check>
@@ -78,7 +85,14 @@ Choose a bond and move the nuclei.
 
 <BondEnergyCurve />
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "A single bond shares one pair. What does sharing more pairs do to the distance between the nuclei?",
+    2: "Bond order sets the length. Compare the number of shared pairs in each of the three bonds.",
+    4: "The same two atoms can sit at different distances. The number of shared pairs changes how tightly the nuclei are held.",
+  }}
+>
 Carbon and oxygen can be joined by a single, a double or a triple bond. Which is the shortest?
 
 - The single bond
@@ -116,7 +130,14 @@ Rank MgO, NaF and NaCl by the strength of attraction between their ions.
 
 </Worked>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "K⁺ and Br⁻ are large ions, so their centers stay far apart. And before sizes, compare the charges of the ions in each compound.",
+    2: "Look at the charges of the ions in each compound before you compare sizes. A change in charge usually matters more.",
+    4: "Small ions help, but size is the second thing to compare. Write the charge of each ion in all four compounds first.",
+  }}
+>
 Which compound has the strongest attraction between its ions?
 
 - KBr
@@ -127,7 +148,14 @@ Which compound has the strongest attraction between its ions?
 <div slot="why">CaO is made of 2+ and 2− ions; the other three are made of 1+ and 1− ions. The larger charges win.</div>
 </Check>
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "Larger ions keep their centers farther apart. What does Coulomb's law say more distance does to the attraction?",
+    3: "Check the charges: Mg²⁺ and Ca²⁺ are both 2+. Something other than charge has to decide.",
+    4: "The charges tie, but charge is one of two things in Coulomb's law. Compare the distances between the ions' centers.",
+  }}
+>
 MgO and CaO are both made of 2+ and 2− ions. Which has the stronger attraction between its ions, and why?
 
 - MgO, because $\ce{Mg^2+}$ is smaller than $\ce{Ca^2+}$

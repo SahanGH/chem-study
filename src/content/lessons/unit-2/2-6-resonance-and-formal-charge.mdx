@@ -102,7 +102,14 @@ Only the double bond moves from one diagram to the next. Every atom stays where 
 
 </Worked>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "A single diagram puts the double bond on one oxygen atom. Could it just as well go on another?",
+    2: "Draw each structure out. Have you tried the double bond in every place it could go?",
+    4: "Resonance structures keep every atom in place and move only electron pairs. Count the places the double bond can go.",
+  }}
+>
 How many equivalent resonance structures does the carbonate ion, $\ce{CO3^2-}$, have?
 
 - 1
@@ -113,7 +120,14 @@ How many equivalent resonance structures does the carbonate ion, $\ce{CO3^2-}$, 
 <div slot="why">Carbonate is drawn like nitrate: a central atom, three oxygens, and one double bond. The double bond can go to any one of the three oxygen atoms, so there are three structures.</div>
 </Check>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "That is the order of a single bond in one diagram. The real ion is the average of all its resonance structures.",
+    3: "That is ozone's value: three bonding pairs spread over two bonds. Count the bonding pairs and the bonds in carbonate.",
+    4: "That is the order of the double bond in one diagram. The real ion is the average of all its resonance structures.",
+  }}
+>
 What is the average bond order of the C–O bonds in the carbonate ion?
 
 - 1
@@ -186,7 +200,14 @@ The first diagram shows no numbers because every formal charge in it is zero.
 
 </Worked>
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "Work out the formal charge on N and on C in this arrangement: valence electrons minus nonbonding electrons minus bonds.",
+    3: "Check each arrangement atom by atom. Carbon and nitrogen bring different numbers of valence electrons, so swapping them changes the result.",
+    4: "Work out each atom's formal charge: valence electrons minus nonbonding electrons minus bonds. A triple bond counts 3.",
+  }}
+>
 Which arrangement gives every atom a formal charge of zero?
 
 - H–C≡N, with one lone pair on N
@@ -197,7 +218,14 @@ Which arrangement gives every atom a formal charge of zero?
 <div slot="why">In H–C≡N, carbon has $4 - 0 - 4 = 0$ and nitrogen $5 - 2 - 3 = 0$. In H–N≡C, nitrogen has $5 - 0 - 4 = +1$ and carbon $4 - 2 - 3 = -1$.</div>
 </Check>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Use the formula: valence electrons minus nonbonding electrons minus bonds. Count nitrogen's bonds and lone pairs in this ion, not in NH₃.",
+    3: "Check the order of the subtraction. Start from nitrogen's valence electrons, then take away its nonbonding electrons and its bonds.",
+    4: "That is the number of bonds. Formal charge starts from the valence electrons and takes the nonbonding electrons and the bonds away.",
+  }}
+>
 What is the formal charge on nitrogen in the ammonium ion, $\ce{NH4+}$?
 
 - 0
@@ -243,7 +271,14 @@ Here the rules disagree with the evidence. Formal charge alone would put the odd
 
 So the Lewis model has limits. Resonance itself is one sign of them: a single diagram is not enough to describe the molecule. And NO₂ shows that the rules for picking a diagram are guides, not laws.
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "Being in the second period keeps an atom from holding more than eight. It does not keep it from reaching eight.",
+    2: "Electronegativity helps decide where a formal charge goes. It does not decide whether every atom can reach eight.",
+    4: "Ozone and the nitrate ion have resonance structures too, and every atom in them has eight. Resonance is not what leaves an atom short.",
+  }}
+>
 Why can't every atom in NO₂ be given an octet?
 
 - Nitrogen is in the second period.
