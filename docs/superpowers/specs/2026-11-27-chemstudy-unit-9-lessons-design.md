@@ -413,7 +413,9 @@ leaves the $-2.9$ kJ/mol alone:
 
    with
 
-   > Ethene and hydrogen are such a case: for $\ce{C2H4(g) + H2(g) <=> C2H6(g)}$, $K$ is greater than 10¹⁷ at 25 °C, yet with no catalyst a bulb of the two gases holds no detectable ethane a year later (topic 7.5).
+   > Ethene and hydrogen are such a case: for ethene gas and hydrogen gas forming ethane gas, $K$ is greater than 10¹⁷ at 25 °C, yet with no catalyst a bulb of the two gases holds no detectable ethane a year later (topic 7.5).
+
+   (As first written the sentence carried the equation as inline math, which cannot wrap and ran 5 px past a narrow phone's screen; it is in words.)
 
    The sentences before and after it stay. The replacement is the site's
    own example, from the Check of lesson 7.5 (lines 218 to 235), and
