@@ -49,7 +49,14 @@ Read the two boxes against the rules.
 
 That is also how you read a pair of drawings backward, into an equation. Count what was used up and what formed, leave out what is the same in both boxes, and reduce to the smallest whole numbers.
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "Some O₂ molecules are in both drawings and did not react. Do they belong in the equation?",
+    2: "Count the O atoms on each side of this equation.",
+    4: "Check the direction. Which substance do the drawings show forming?",
+  }}
+>
 Lightning turns some of the oxygen in air into ozone, O₃. A drawing of a sample of pure oxygen before a spark shows 9 O₂ molecules. The drawing after the spark shows 4 O₃ molecules and 3 O₂ molecules. Which equation do the two drawings represent?
 
 $$
@@ -146,7 +153,17 @@ A box of the manganese(II) sulfate solution is drawn with 3 formula units, and a
   caption="Before mixing, every ion is on its own. After, two Mn²⁺ and two CO₃²⁻ are packed into a solid, one Mn²⁺ is left over, and the spectator ions are still dissolved. Water molecules are left out."
 />
 
-<Check numeric="15" unit="ions">
+<Check
+  numeric="15"
+  unit="ions"
+  slips={{
+    "14": "Did you count the spectator ions alone? Check whether either ion of the solid has some left over.",
+    "20": "That is every ion in the two boxes. Some of them are in the solid now.",
+    "16": "Did you take one Ba²⁺ for each PO₄³⁻? Use the ratio in the equation.",
+    "5": "That is the number of ions in the solid. The question asks for the ions still dissolved.",
+    "1": "Did you count the leftover ions of the solid alone? Spectator ions are still dissolved too.",
+  }}
+>
 A box of barium nitrate solution is drawn with 4 Ba²⁺ ions and 8 NO₃⁻ ions. A box of sodium phosphate solution is drawn with 6 Na⁺ ions and 2 PO₄³⁻ ions. The two are mixed, and insoluble barium phosphate forms:
 
 $$
@@ -207,7 +224,14 @@ $$
 
 The −2 that was lost when a carbonate was drawn as uncharged atoms happens to cancel the +2 of the two missing sodium ions. So a check of the charge alone would have passed this drawing. Count the atoms as well: there are 2 Na where there should be 4.
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "Count the silver in each box, ions and atoms together. A silver ion that takes an electron is still silver.",
+    3: "Spectator ions take no part in the reaction, so they stay dissolved. They do not leave the box.",
+    4: "Matching atoms is one test, and not the only one. Run the rest of the checks the lesson makes on a drawing before you accept this box.",
+  }}
+>
 To recover silver from a solution of silver nitrate, a jeweler hangs a strip of zinc in it. Each zinc atom gives up two electrons, and each silver ion takes one:
 
 $$
@@ -253,7 +277,14 @@ The nitrate ions took no part, so all 4 are drawn in the box after the reaction,
 
 A physical process can have an equation too (topic 4.2), and it can be drawn as particles before and after. In a physical process, the particles in the "after" box are the same ones that were in the "before" box. The exam can ask for that drawing as well.
 
-<Check answer={4}>
+<Check
+  answer={4}
+  misses={{
+    1: "Gas molecules keep moving. What happens once the valve is open and each gas can reach more space?",
+    2: "Every atom is there, but in new molecules. That would be a reaction, and these two gases do not react at room temperature.",
+    3: "More space means the molecules are farther apart. Does it change how many there are?",
+  }}
+>
 Two glass bulbs are joined by a closed valve. One bulb holds methane, CH₄, and the other holds carbon dioxide, CO₂. At room temperature these two gases do not react with each other. A drawing of the bulbs shows 4 CH₄ molecules in the left bulb and 4 CO₂ molecules in the right bulb. The valve is opened, and the bulbs are left for a long time. Which drawing shows the two bulbs then?
 
 - 4 CH₄ molecules still in the left bulb and 4 CO₂ molecules still in the right

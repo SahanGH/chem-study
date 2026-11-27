@@ -64,7 +64,14 @@ In the titration below the flask holds lactic acid, with one proton to give, or 
 
 <Titration />
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Work out the millimoles of OH⁻ added so far, and compare them with the 2.40 mmol of acid.",
+    3: "Compare the two amounts again. Which is larger: the acid in the sample, or the base added so far?",
+    4: "Where a titration stands is a matter of amounts. The indicator only shows it, and the amounts here can be worked out.",
+  }}
+>
 A yogurt maker's laboratory is titrating a sample that contains 2.40 mmol of lactic acid, which has one proton to give. So far, 12.00 mL of 0.150 M NaOH has run in from the buret. Where does the titration stand?
 
 - At the equivalence point, with no acid left and no extra base in the flask
@@ -180,7 +187,18 @@ A technician measures 20.00 mL of a white wine into a flask, adds bromothymol bl
 
 </Worked>
 
-<Check numeric="2.32e-3" unit="M">
+<Check
+  numeric="2.32e-3"
+  unit="M"
+  slips={{
+    "1.16e-3": "That is what a 1 : 1 ratio gives. Check the coefficients of H₂SO₄ and NaHCO₃ in the equation.",
+    "5.80e-4": "Is the mole ratio upside down? Check which substance has the coefficient 2.",
+    "0.0200": "Did you divide by the buret volume? The NaHCO₃ was in the 100.0 mL sample.",
+    "2.08e-3": "Did you divide by the two volumes added together? The NaHCO₃ was in the 100.0 mL sample.",
+    "2.32": "Check the units of the two numbers you divided. Millimoles divided by liters is not molarity.",
+    "2.32e-4": "That is the moles of NaHCO₃ in the sample. Divide by the volume of the sample for the concentration.",
+  }}
+>
 Pool water is kept slightly basic with dissolved sodium hydrogen carbonate, NaHCO₃, whose hydrogen carbonate ion, HCO₃⁻, is a weak base (topic 4.2). A pool technician measures it by titrating a sample with sulfuric acid, a strong acid that gives up both of its protons in this reaction:
 
 $$
@@ -238,7 +256,18 @@ Using milliliters for both volumes is not a slip. Millimoles divided by millilit
 
 Nothing in the idea of a titration says acid or base. Any reaction will do if it is fast and complete, reacts with the analyte alone and gives a change you can see at the right moment. Many titrations use reactions in which electrons pass from one substance or ion to another (topics 4.7 and 4.9). The equation is given, and the arithmetic is the same four steps.
 
-<Check numeric="0.0880" unit="M">
+<Check
+  numeric="0.0880"
+  unit="M"
+  slips={{
+    "0.0352": "That is what a 1 : 1 ratio gives. The ratio comes from the coefficients of MnO₄⁻ and H₂O₂ in the equation.",
+    "0.0141": "Is the mole ratio upside down? Check which species has the 5 and which has the 2.",
+    "0.0500": "Did you divide by the buret volume? The H₂O₂ was in the 10.00 mL sample.",
+    "0.0319": "Did you divide by the two volumes added together? The H₂O₂ was in the 10.00 mL sample.",
+    "8.80e-4": "That is the moles of H₂O₂ in the sample. Divide by the volume of the sample, in liters.",
+    "88.0": "Check the units of the two numbers you divided. Millimoles divided by liters is not molarity.",
+  }}
+>
 A dairy sterilizes its cartons with hydrogen peroxide, H₂O₂, before filling them. Its laboratory checks a diluted sample of the peroxide solution by titrating it with potassium permanganate, KMnO₄. The permanganate ion, MnO₄⁻, is deep purple, and what it turns into here is almost colorless:
 
 $$
@@ -320,13 +349,20 @@ $$
 
 That is about 4 percent too high. The number the slip changed was the titrant's molarity. The calculation used a value larger than the true one, so every number after it came out too large.
 
-<Check answer={3}>
+<Check
+  answer={4}
+  misses={{
+    1: "The concentration of the wine did not change, but the amount of acid in the flask did. Was 20.00 mL the volume that was titrated?",
+    2: "Less acid to react with changes how much base is used. Follow that through: the titrant volume, the moles found, then the moles divided by 20.00 mL.",
+    3: "The indicator did its job. But the equivalence point is set by the amount of analyte in the flask, and that amount changed.",
+  }}
+>
 In the wine titration of the worked example, a little of the 20.00 mL sample splashes out of the flask before any base is added. The technician carries on, and uses 20.00 mL in the calculation. How does the reported acid concentration compare with the true one?
 
 - It is unchanged, because the concentration of a solution does not depend on how much of it you have
 - It is too high, because the base had less acid to react with
-- It is too low, because the flask held less acid than the calculation assumes
 - It is unchanged, because the indicator still changes color at the equivalence point
+- It is too low, because the flask held less acid than the calculation assumes
 
 <div slot="why">
 
