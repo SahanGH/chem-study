@@ -12,9 +12,13 @@
  * mJ/°C, temperatures in tenths of a degree. Only the shown numbers are
  * rounded, each half up: the final temperature to 0.1 °C and the energy to the
  * nearest joule. The energy comes from the exact expression, never from the
- * rounded final temperature, so the two bars are always the same number. The
- * two temperature changes are taken from the shown final temperature, so the
- * drawing and the readout agree.
+ * rounded final temperature, so the two bars are always the same number.
+ *
+ * The readout shows each temperature change to 0.01 °C, from the exact final
+ * temperature, so that a student who multiplies a shown heat capacity by a
+ * shown change gets the shown energy to within display rounding in every state.
+ * A change taken from the final temperature rounded to 0.1 °C would not: 0.2 °C
+ * for 794 J/°C of water is 159 J, against 196 J moved.
  */
 
 export const METALS = {
@@ -75,6 +79,12 @@ export interface CalorimetryState {
   /** How far each temperature moved, from the shown final temperature, in tenths of a degree. */
   readonly metalChangeTenths: number;
   readonly waterChangeTenths: number;
+  /**
+   * How far each temperature moved, from the exact final temperature, rounded half up to
+   * hundredths of a degree. These are what the readout shows.
+   */
+  readonly metalChangeHundredths: number;
+  readonly waterChangeHundredths: number;
 }
 
 const MILLIJOULES_PER_JOULE = 1000;
@@ -125,7 +135,8 @@ export function state(settings: Settings): CalorimetryState {
   const waterStartTenths = WATER.startTenths;
   const total = metalHeatCapacity + waterHeatCapacity;
   // Every product here is below 2^53 (the largest is about 1.4 × 10^14), so it is exact.
-  const finalTenths = divideHalfUp(metalHeatCapacity * metalStartTenths + waterHeatCapacity * waterStartTenths, total);
+  const finalTenthsTimesTotal = metalHeatCapacity * metalStartTenths + waterHeatCapacity * waterStartTenths;
+  const finalTenths = divideHalfUp(finalTenthsTimesTotal, total);
   // mJ/°C × mJ/°C / (mJ/°C) × tenths of a degree is 0.1 mJ: 10,000 of them to a joule.
   const energy = divideHalfUp(
     metalHeatCapacity * waterHeatCapacity * (metalStartTenths - waterStartTenths),
@@ -140,6 +151,9 @@ export function state(settings: Settings): CalorimetryState {
     energy,
     metalChangeTenths: metalStartTenths - finalTenths,
     waterChangeTenths: finalTenths - waterStartTenths,
+    // In hundredths, the exact final temperature is 10 × finalTenthsTimesTotal / total.
+    waterChangeHundredths: divideHalfUp(10 * (finalTenthsTimesTotal - waterStartTenths * total), total),
+    metalChangeHundredths: divideHalfUp(10 * (metalStartTenths * total - finalTenthsTimesTotal), total),
   };
 }
 
@@ -153,6 +167,12 @@ function assertWhole(value: number, what: string, least = 0): void {
 export function shownTemperature(tenths: number): string {
   assertWhole(tenths, 'A temperature in tenths of a degree');
   return `${Math.floor(tenths / TENTHS_PER_DEGREE)}.${tenths % TENTHS_PER_DEGREE}`;
+}
+
+/** Hundredths of a degree with two decimal places: 667 is "6.67", 23 is "0.23". */
+export function shownChange(hundredths: number): string {
+  assertWhole(hundredths, 'A temperature change in hundredths of a degree');
+  return `${Math.floor(hundredths / 100)}.${String(hundredths % 100).padStart(2, '0')}`;
 }
 
 /** A whole number with a comma for thousands: 2789 is "2,789". */
@@ -194,8 +214,8 @@ export function readout(settings: Settings): string {
   const energy = shownEnergy(s.energy);
   return (
     `Both end at ${shownTemperature(s.finalTenths)} °C. The ${name} lost ${energy} J and the water gained ${energy} J. ` +
-    `The water's temperature changed less, by ${shownTemperature(s.waterChangeTenths)} °C against ` +
-    `${shownTemperature(s.metalChangeTenths)} °C, because its heat capacity is larger: ` +
+    `The water's temperature changed less, by ${shownChange(s.waterChangeHundredths)} °C against ` +
+    `${shownChange(s.metalChangeHundredths)} °C (to 0.01 °C), because its heat capacity is larger: ` +
     `${shownHeatCapacity(s.waterHeatCapacity)} J/°C against ${shownHeatCapacity(s.metalHeatCapacity)} J/°C.`
   );
 }

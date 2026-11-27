@@ -66,9 +66,13 @@
   const NAME_BELOW_AXIS = 18;
   const ENERGY_TICKS = Array.from({ length: ENERGY_AXIS.max / ENERGY_AXIS.step + 1 }, (_, i) => i * ENERGY_AXIS.step);
 
-  const CLIP_ID = 'calorimetry-inner-clip';
-  const HATCH_CUP = 'calorimetry-hatch-cup';
-  const HATCH_BAR = 'calorimetry-hatch-bar';
+  // The ids of the clip paths and the hatching are unique to this instance, so
+  // that two explorers on one page cannot take each other's. $props.id() gives
+  // the same id when the page is built and when the script takes over.
+  const uid = $props.id();
+  const CLIP_ID = `calorimetry-${uid}-inner-clip`;
+  const HATCH_CUP = `calorimetry-${uid}-hatch-cup`;
+  const HATCH_BAR = `calorimetry-${uid}-hatch-bar`;
 
   let metal = $state<MetalId>(START.metal);
   let metalMass = $state<number>(START.metalMass);

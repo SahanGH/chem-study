@@ -8,16 +8,16 @@ const NAME = 'calorimetry';
 // The sentences below are written out from the lesson's brief, apart from the module under test.
 const START_READOUT =
   'Both end at 26.7 °C. The titanium lost 2,789 J and the water gained 2,789 J. ' +
-  "The water's temperature changed less, by 6.7 °C against 53.3 °C, because its heat capacity is larger: 418 J/°C against 52.3 J/°C.";
+  "The water's temperature changed less, by 6.67 °C against 53.33 °C (to 0.01 °C), because its heat capacity is larger: 418 J/°C against 52.3 J/°C.";
 const TUNGSTEN_READOUT =
   'Both end at 21.8 °C. The tungsten lost 768 J and the water gained 768 J. ' +
-  "The water's temperature changed less, by 1.8 °C against 58.2 °C, because its heat capacity is larger: 418 J/°C against 13.2 J/°C.";
+  "The water's temperature changed less, by 1.84 °C against 58.16 °C (to 0.01 °C), because its heat capacity is larger: 418 J/°C against 13.2 J/°C.";
 const TIN_READOUT =
   'Both end at 23.1 °C. The tin lost 1,297 J and the water gained 1,297 J. ' +
-  "The water's temperature changed less, by 3.1 °C against 56.9 °C, because its heat capacity is larger: 418 J/°C against 22.8 J/°C.";
+  "The water's temperature changed less, by 3.10 °C against 56.90 °C (to 0.01 °C), because its heat capacity is larger: 418 J/°C against 22.8 J/°C.";
 const MORE_WATER_READOUT =
   'Both end at 23.5 °C. The titanium lost 2,953 J and the water gained 2,953 J. ' +
-  "The water's temperature changed less, by 3.5 °C against 56.5 °C, because its heat capacity is larger: 836 J/°C against 52.3 J/°C.";
+  "The water's temperature changed less, by 3.53 °C against 56.47 °C (to 0.01 °C), because its heat capacity is larger: 836 J/°C against 52.3 J/°C.";
 const CAPTION =
   'A heated piece of titanium, tin or tungsten, 50 to 200 g at 50 to 100 °C, goes into 50 to 200 g of water at 20.0 °C in an insulated cup. ' +
   'Specific heat capacities in J/(g·°C): titanium 0.523, tin 0.228, tungsten 0.132, water 4.18. ' +
@@ -49,6 +49,7 @@ const START = setting('titanium', 100, 80, 100);
 const C_MJ: Record<Metal, bigint> = { titanium: 523n, tin: 228n, tungsten: 132n };
 const halfUp = (n: bigint, d: bigint) => (2n * n + d) / (2n * d);
 const tenthsText = (tenths: bigint) => `${tenths / 10n}.${tenths % 10n}`;
+const hundredthsText = (hundredths: bigint) => `${hundredths / 100n}.${String(hundredths % 100n).padStart(2, '0')}`;
 const commas = (n: bigint) => {
   const digits = String(n);
   let out = '';
@@ -73,6 +74,10 @@ function expected({ metal, metalMass, metalTemperature, waterMass }: Setting) {
   const cw = BigInt(waterMass) * 4180n;
   const tm = BigInt(metalTemperature) * 10n;
   const finalTenths = halfUp(cm * tm + cw * 200n, cm + cw);
+  // The changes come from the exact final temperature, in hundredths of a degree.
+  const exactHundredths = { n: 10n * (cm * tm + cw * 200n), d: cm + cw };
+  const waterChange = halfUp(exactHundredths.n - 2000n * exactHundredths.d, exactHundredths.d);
+  const metalChange = halfUp(10n * tm * exactHundredths.d - exactHundredths.n, exactHundredths.d);
   const energy = halfUp(cm * cw * (tm - 200n), (cm + cw) * 10000n);
   const joules = commas(energy);
   return {
@@ -82,7 +87,7 @@ function expected({ metal, metalMass, metalTemperature, waterMass }: Setting) {
     metalStart: tenthsText(tm),
     readout:
       `Both end at ${tenthsText(finalTenths)} °C. The ${metal} lost ${joules} J and the water gained ${joules} J. ` +
-      `The water's temperature changed less, by ${tenthsText(finalTenths - 200n)} °C against ${tenthsText(tm - finalTenths)} °C, ` +
+      `The water's temperature changed less, by ${hundredthsText(waterChange)} °C against ${hundredthsText(metalChange)} °C (to 0.01 °C), ` +
       `because its heat capacity is larger: ${threeFigures(cw)} J/°C against ${threeFigures(cm)} J/°C.`,
   };
 }
@@ -343,6 +348,40 @@ test('the numbers drawn and the readout equal the exact model over a sweep of se
     checked += 1;
   }
   expect(checked).toBe(12 + 36);
+});
+
+// The reviewer's case: a change taken from the rounded final temperature (0.2 °C) would give
+// 794 × 0.2 = 159 J against the 196 J shown; to 0.01 °C it is 0.25 °C, and 794 × 0.25 = 198.5 J.
+test('the readout shows the changes to 0.01 °C, so that heat capacity × change gives the energy shown', async ({ page }) => {
+  const diagram = await openDiagram(page, PAGE, NAME);
+
+  await setAll(diagram, setting('tungsten', 50, 50, 190));
+  await expect(status(diagram)).toHaveText(
+    'Both end at 20.2 °C. The tungsten lost 196 J and the water gained 196 J. ' +
+      "The water's temperature changed less, by 0.25 °C against 29.75 °C (to 0.01 °C), because its heat capacity is larger: 794 J/°C against 6.60 J/°C.",
+  );
+});
+
+test('every clip path and hatching the drawings use is their own, with an id no other element on the page has', async ({ page }) => {
+  const diagram = await openDiagram(page, PAGE, NAME);
+
+  const found = await diagram.evaluate((root) => {
+    const references = [...root.querySelectorAll('[fill^="url(#"], [clip-path^="url(#"]')].map((element) => {
+      const value = element.getAttribute('fill')?.startsWith('url(') ? element.getAttribute('fill') : element.getAttribute('clip-path');
+      return /^url\(#([^)]+)\)$/.exec(value ?? '')?.[1] ?? '';
+    });
+    return references.map((id) => ({
+      id,
+      onPage: document.querySelectorAll(`[id="${id}"]`).length,
+      inDiagram: root.querySelectorAll(`[id="${id}"]`).length,
+    }));
+  });
+  expect(found.length, 'the block twice, the metal bar and the two cups').toBe(5);
+  for (const reference of found) {
+    expect(reference.id, 'an id of this diagram').toMatch(/^calorimetry-.+/);
+    expect(reference.onPage, `#${reference.id} is unique on the page`).toBe(1);
+    expect(reference.inDiagram, `#${reference.id} is inside this diagram`).toBe(1);
+  }
 });
 
 test('the two bars differ by pattern as well as color: the metal hatched like the block, the water plain', async ({ page }) => {

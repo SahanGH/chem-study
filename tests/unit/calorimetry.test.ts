@@ -15,6 +15,7 @@ import {
   massText,
   readout,
   shownEnergy,
+  shownChange,
   shownHeatCapacity,
   shownTemperature,
   state,
@@ -121,6 +122,8 @@ describe('state, at the worked states of the brief', () => {
       energy: 2789,
       metalChangeTenths: 533,
       waterChangeTenths: 67,
+      metalChangeHundredths: 5333,
+      waterChangeHundredths: 667,
     });
   });
 
@@ -196,6 +199,51 @@ describe('over all 8,448 states', () => {
     }
   });
 
+  it('gives each change in hundredths of a degree from the exact final temperature, rounded half up', () => {
+    for (const input of everyState) {
+      const result = state(input);
+      const { finalTenths } = exact(input);
+      const tm = BigInt(input.metalTemperature);
+      // In hundredths: T_f is 10 n / d, so the water rose 10 n / d − 2000 and the metal fell 100 T_m − 10 n / d.
+      const water = roundHalfUp({ n: 10n * finalTenths.n - 2000n * finalTenths.d, d: finalTenths.d });
+      const metal = roundHalfUp({ n: 100n * tm * finalTenths.d - 10n * finalTenths.n, d: finalTenths.d });
+      expect(result.waterChangeHundredths, JSON.stringify(input)).toBe(water);
+      expect(result.metalChangeHundredths, JSON.stringify(input)).toBe(metal);
+    }
+  });
+
+  // The check a student makes: heat capacity × temperature change = energy, with each number as the
+  // readout shows it. Each shown number is off from the exact one by at most half its last digit:
+  // the heat capacity by u/2 (u is its last shown figure: 1, 0.1 or 0.01 J/°C), the change by
+  // 0.005 °C and the energy by 0.5 J. So |C_shown × ΔT_shown − E_shown| can be at most
+  // (u/2) × ΔT_shown + C_shown × 0.005 + (u/2) × 0.005 + 0.5 J, and the test holds every state to
+  // exactly that bound, for the water and for the metal.
+  it('lets heat capacity × change, as shown, give the shown energy to within display rounding, in every state', () => {
+    let worstWater = 0;
+    let worstMetal = 0;
+    for (const input of everyState) {
+      const result = state(input);
+      const shownEnergyJ = result.energy;
+      for (const side of ['water', 'metal'] as const) {
+        const capacityText = shownHeatCapacity(side === 'water' ? result.waterHeatCapacity : result.metalHeatCapacity);
+        const capacity = Number(capacityText);
+        const decimals = capacityText.includes('.') ? (capacityText.split('.')[1] ?? '').length : 0;
+        const halfUnit = 0.5 * 10 ** -decimals;
+        const change = Number(shownChange(side === 'water' ? result.waterChangeHundredths : result.metalChangeHundredths));
+        const bound = halfUnit * change + capacity * 0.005 + halfUnit * 0.005 + 0.5;
+        const miss = Math.abs(capacity * change - shownEnergyJ);
+        expect(miss, `${side}, ${JSON.stringify(input)}: ${capacityText} × ${change} against ${shownEnergyJ} J`).toBeLessThanOrEqual(bound + 1e-9);
+        const relative = miss / shownEnergyJ;
+        if (side === 'water') worstWater = Math.max(worstWater, relative);
+        else worstMetal = Math.max(worstMetal, relative);
+      }
+    }
+    // As a fraction of the energy: the water's side is never off by more than 2.2 percent (a change of
+    // about 0.23 °C read to 0.01 °C), the metal's by more than 0.6 percent.
+    expect(worstWater).toBeLessThan(0.022);
+    expect(worstMetal).toBeLessThan(0.006);
+  });
+
   it('is never hotter than 46.7 °C nor cooler than 20.2 °C, at the states the brief names', () => {
     const finals = everyState.map((input) => state(input).finalTenths);
     expect(Math.max(...finals)).toBe(467);
@@ -210,6 +258,8 @@ describe('over all 8,448 states', () => {
       expect(result.waterHeatCapacity > result.metalHeatCapacity, JSON.stringify(input)).toBe(true);
       expect(result.waterChangeTenths < result.metalChangeTenths, JSON.stringify(input)).toBe(true);
       expect(result.waterChangeTenths > 0, JSON.stringify(input)).toBe(true);
+      expect(result.waterChangeHundredths < result.metalChangeHundredths, JSON.stringify(input)).toBe(true);
+      expect(result.waterChangeHundredths > 0, JSON.stringify(input)).toBe(true);
     }
   });
 
@@ -240,7 +290,9 @@ describe('over all 8,448 states', () => {
       const sentence = readout(input);
       const name = METALS[input.metal].name;
       expect(sentence.startsWith(`Both end at ${shownTemperature(result.finalTenths)} °C. The ${name} lost ${shownEnergy(result.energy)} J and the water gained ${shownEnergy(result.energy)} J.`), sentence).toBe(true);
-      expect(sentence).toContain(`by ${shownTemperature(result.waterChangeTenths)} °C against ${shownTemperature(result.metalChangeTenths)} °C`);
+      expect(sentence).toContain(
+        `by ${shownChange(result.waterChangeHundredths)} °C against ${shownChange(result.metalChangeHundredths)} °C (to 0.01 °C)`,
+      );
     }
   });
 });
@@ -289,6 +341,22 @@ describe('shown numbers', () => {
     expect(() => shownHeatCapacity(99)).toThrow(RangeError);
   });
 
+  it.each([
+    [667, '6.67'],
+    [5333, '53.33'],
+    [310, '3.10'],
+    [23, '0.23'],
+    [5, '0.05'],
+    [8000, '80.00'],
+  ])('shows a change of %s hundredths of a degree as %s', (hundredths, text) => {
+    expect(shownChange(hundredths)).toBe(text);
+  });
+
+  it('refuses a change it cannot show', () => {
+    expect(() => shownChange(-1)).toThrow(RangeError);
+    expect(() => shownChange(1.5)).toThrow(RangeError);
+  });
+
   it('writes the sliders as spoken', () => {
     expect(massText(100)).toBe('100 g');
     expect(temperatureText(80)).toBe('80 °C');
@@ -299,29 +367,36 @@ describe('readout', () => {
   it('says the starting state in the words of the brief', () => {
     expect(readout(START)).toBe(
       'Both end at 26.7 °C. The titanium lost 2,789 J and the water gained 2,789 J. ' +
-        "The water's temperature changed less, by 6.7 °C against 53.3 °C, because its heat capacity is larger: 418 J/°C against 52.3 J/°C.",
+        "The water's temperature changed less, by 6.67 °C against 53.33 °C (to 0.01 °C), because its heat capacity is larger: 418 J/°C against 52.3 J/°C.",
     );
   });
 
   it('says the three other states the lesson walks through', () => {
     expect(readout(settings('tungsten', 100, 80, 100))).toBe(
       'Both end at 21.8 °C. The tungsten lost 768 J and the water gained 768 J. ' +
-        "The water's temperature changed less, by 1.8 °C against 58.2 °C, because its heat capacity is larger: 418 J/°C against 13.2 J/°C.",
+        "The water's temperature changed less, by 1.84 °C against 58.16 °C (to 0.01 °C), because its heat capacity is larger: 418 J/°C against 13.2 J/°C.",
     );
     expect(readout(settings('tin', 100, 80, 100))).toBe(
       'Both end at 23.1 °C. The tin lost 1,297 J and the water gained 1,297 J. ' +
-        "The water's temperature changed less, by 3.1 °C against 56.9 °C, because its heat capacity is larger: 418 J/°C against 22.8 J/°C.",
+        "The water's temperature changed less, by 3.10 °C against 56.90 °C (to 0.01 °C), because its heat capacity is larger: 418 J/°C against 22.8 J/°C.",
     );
     expect(readout(settings('titanium', 100, 80, 200))).toBe(
       'Both end at 23.5 °C. The titanium lost 2,953 J and the water gained 2,953 J. ' +
-        "The water's temperature changed less, by 3.5 °C against 56.5 °C, because its heat capacity is larger: 836 J/°C against 52.3 J/°C.",
+        "The water's temperature changed less, by 3.53 °C against 56.47 °C (to 0.01 °C), because its heat capacity is larger: 836 J/°C against 52.3 J/°C.",
+    );
+  });
+
+  it('makes the water side add up where a rounded final temperature would not: 794 J/°C × 0.25 °C is near 196 J', () => {
+    expect(readout(settings('tungsten', 50, 50, 190))).toBe(
+      'Both end at 20.2 °C. The tungsten lost 196 J and the water gained 196 J. ' +
+        "The water's temperature changed less, by 0.25 °C against 29.75 °C (to 0.01 °C), because its heat capacity is larger: 794 J/°C against 6.60 J/°C.",
     );
   });
 
   it('shows a small heat capacity with three figures', () => {
     expect(readout(settings('tungsten', 50, 50, 200))).toBe(
       'Both end at 20.2 °C. The tungsten lost 196 J and the water gained 196 J. ' +
-        "The water's temperature changed less, by 0.2 °C against 29.8 °C, because its heat capacity is larger: 836 J/°C against 6.60 J/°C.",
+        "The water's temperature changed less, by 0.23 °C against 29.77 °C (to 0.01 °C), because its heat capacity is larger: 836 J/°C against 6.60 J/°C.",
     );
   });
 
