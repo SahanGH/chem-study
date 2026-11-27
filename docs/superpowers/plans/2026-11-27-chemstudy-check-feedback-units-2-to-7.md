@@ -99,3 +99,17 @@ Every Check with options has four options. 18 typed-number Checks have no `unit`
   It also found 4 points of wording, two of them messages that did not fit their option (lesson 3.11 Check 1; lesson 3.5 Check 2's slip 0.25). All were rewritten.
 - **The second check** passed 6 of the 8 rewrites and corrected two. One gave a slip without its units; one made a general claim about units that is not true.
 - **The sweep:** 187 wrong answers tried, no problems.
+
+### Unit 4
+
+- **The writer:** 137 messages (90 for options, 47 slips across 9 typed-number Checks), with 3 moves. Answers went from 7, 6, 11, 6 to 7, 8, 8, 7.
+  - **Moves:** lesson 4.4 Check 1; 4.5 Check 1; 4.6 Check 4.
+  - One move would have reached the range; the other two even the counts.
+  - No tolerance and no changed sentence.
+- **The first fact-check** found no false message and no wrong slip value. Four messages gave too much away and were rewritten:
+  - lesson 4.4 Check 2 (stated half of the answer);
+  - lesson 4.7 Check 5 (named the answer's method);
+  - lesson 4.2 Check 2;
+  - lesson 4.3 Check 3.
+- **The second check** passed all four.
+- **The sweep:** 137 wrong answers tried, no problems.
