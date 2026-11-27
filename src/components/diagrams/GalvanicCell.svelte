@@ -338,13 +338,13 @@
         <label class="diagram-select galvanic-cell-metal">
           <span>{LABELS.metal}</span>
           {#if side === 'left'}
-            <select bind:value={left}>
+            <select bind:value={left} aria-label={`${LABELS.leftSide} ${LABELS.metal.toLowerCase()}`}>
               {#each METAL_IDS as id (id)}
                 <option value={id}>{METALS[id].label}</option>
               {/each}
             </select>
           {:else}
-            <select bind:value={right}>
+            <select bind:value={right} aria-label={`${LABELS.rightSide} ${LABELS.metal.toLowerCase()}`}>
               {#each METAL_IDS as id (id)}
                 <option value={id}>{METALS[id].label}</option>
               {/each}
@@ -362,6 +362,7 @@
               min={CONCENTRATION.min}
               max={CONCENTRATION.max}
               step={CONCENTRATION.step}
+              aria-label={`${LABELS.leftSide} ${LABELS.concentration.toLowerCase()}`}
               aria-valuetext={concentrationValueText(leftExponent)}
               bind:value={leftExponent}
             />
@@ -371,6 +372,7 @@
               min={CONCENTRATION.min}
               max={CONCENTRATION.max}
               step={CONCENTRATION.step}
+              aria-label={`${LABELS.rightSide} ${LABELS.concentration.toLowerCase()}`}
               aria-valuetext={concentrationValueText(rightExponent)}
               bind:value={rightExponent}
             />
@@ -381,5 +383,5 @@
   </div>
 
   <p class="diagram-readout" role="status">{readout(left, leftExponent, right, rightExponent)}</p>
-  <p class="diagram-detail galvanic-cell-flow" data-flow>{flowText(current)}</p>
+  <p class="diagram-detail galvanic-cell-flow" data-flow aria-live="polite">{flowText(current)}</p>
 </div>
