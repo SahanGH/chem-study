@@ -1,0 +1,2874 @@
+---
+title: "Comprehensive test, session 1: entropy and free energy"
+kind: test
+order: 8
+topics: ["9.1", "9.2", "9.3", "9.4", "9.5", "9.6", "9.7"]
+summary: Nineteen scored free-response questions on entropy, free energy and favorability, kinetic control, equilibrium, dissolving and coupled reactions, each with a worked answer and its scoring rubric.
+points: 88
+minutes: 95
+---
+
+This is the first of two sittings that together test all of Unit 9. It covers topics 9.1 to 9.7: entropy and how to calculate its change, Gibbs free energy and thermodynamic favorability, kinetic control, free energy and the equilibrium constant, the free energy of dissolving, and coupled reactions. Session 2 covers electrochemistry: galvanic and electrolytic cells, cell potential and free energy, cells away from standard conditions, and Faraday's law.
+
+There are 19 questions worth 88 points. Give yourself about 95 minutes, and use a calculator, the periodic table and the equation sheet, as on the AP exam. Every question gives the values it needs. Try each part on paper before you open its answer, then score yourself with the rubric.
+
+## Part A: Entropy
+
+Five questions on entropy. In the first two you compare samples of one gas by the room its particles have and by how widely their energy is shared, and you say what those comparisons do not decide. In the last three you work with standard entropies: backward from an entropy change, with a table that has gaps, and for three liquids that vaporize.
+
+<Question number={1} title="Four flasks of krypton" topic="9.1" points={4}>
+
+Four sealed, rigid flasks each hold 1.00 mol of krypton gas. Each flask has settled at the temperature shown.
+
+| Flask | Volume (L) | Temperature (K) |
+|---|---|---|
+| A | 5.0 | 250 |
+| B | 15.0 | 250 |
+| C | 5.0 | 350 |
+| D | 15.0 | 200 |
+
+No value of entropy is given, and none is needed.
+
+<Part label="a">
+
+Three pairs of flasks differ in only one thing: A and B, A and C, and B and D. For each pair, identify the flask whose krypton has the higher entropy, and justify your choice.
+
+<Answer>
+
+Every flask holds the same amount of the same gas, so only the volume and the temperature can make a difference.
+
+- **A and B: flask B is higher.** Both are at 250 K. Flask B has 15.0 L and flask A has 5.0 L, so each atom in B can be found anywhere in three times the space. More room means more ways to arrange the atoms, and so more entropy.
+- **A and C: flask C is higher.** Both have 5.0 L, so the atoms have the same room. Flask C is at 350 K and flask A is at 250 K. At the higher temperature the atoms' kinetic energies range more widely, so there are more ways to share the energy among them.
+- **B and D: flask B is higher.** Both have 15.0 L. Flask B is at 250 K and flask D is at 200 K, so the energy in B is shared more widely, for the same reason as in the pair above.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Four flasks make six pairs. Identify the three pairs that part (a) did not compare, and explain why the reasoning of part (a) cannot say which flask of each pair has the higher entropy.
+
+<Answer>
+
+The other three pairs are **A and D**, **B and C**, and **C and D**. In each of them one flask has more room and the other is warmer:
+
+| Pair | More room | Warmer |
+|---|---|---|
+| A and D | D (15.0 L) | A (250 K) |
+| B and C | B (15.0 L) | C (350 K) |
+| C and D | D (15.0 L) | C (350 K) |
+
+More room raises the entropy, and so does a higher temperature. In these pairs the two work in opposite directions. The reasoning of part (a) tells you which way each one pushes, but not how large each one is, so it cannot tell you which wins. That takes values of the entropy, or an equation that this course does not use, and neither is given here.
+
+The answers to part (a) do not settle these pairs either. For example, flask B is above both A and D, and that says nothing about A against D.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Using only the comparisons of part (a), identify every flask that they do not rule out as the highest in entropy of the four, and every flask that they do not rule out as the lowest. Justify your answer.
+
+<Answer>
+
+Part (a) gave three results: B is above A, C is above A, and B is above D.
+
+**Highest: flask B or flask C.** Flask A is below B, and flask D is below B, so neither A nor D can be the highest. None of the three results puts any flask above B or above C, and they do not rank B against C, so they leave either as the highest.
+
+**Lowest: flask A or flask D.** Flask B is above A, and flask C is above A, so neither B nor C can be the lowest. None of the three results puts any flask below A or below D, and they do not rank A against D, so they leave either as the lowest.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for flask B in the pair A and B, because the same amount of gas at the same temperature has more volume (more room, more ways to arrange the atoms); 1 point for flask C in the pair A and C and flask B in the pair B and D, because at the same volume the warmer gas has its energy shared more widely (a wider range of kinetic energies). Three right choices with no reason earn 1 point in all.</RubricLine>
+<RubricLine part="b" points={1}>1 point for the three pairs (A and D, B and C, C and D) with the reason: in each, one flask has the larger volume and the other the higher temperature, the two effects work in opposite directions, and the reasoning of part (a) does not give their sizes. The three pairs with no reason, or the reason with a pair missing or wrong, earn 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for both: the highest is B or C, and the lowest is A or D, each drawn from the comparisons of part (a) (A and D each lie below B; B and C each lie above A). An answer that names one flask as the highest, or one as the lowest, claims more than the comparisons of part (a) decide and earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={2} title="A notebook of kinetic energies" topic="9.1" points={4}>
+
+A sample of a gas is sealed in a rigid container. A student's notebook has three columns, X, Y and Z. Each is meant to show the percent of the sample's molecules whose kinetic energy lies in each of five bands, with the sample steady at one temperature. The temperature is different for each column, and the notebook does not say what it was.
+
+The numbers are made up for this question, and the energies are in made-up units.
+
+| Kinetic energy (units) | X | Y | Z |
+|---|---|---|---|
+| 0 to 10 | 46 | 28 | 30 |
+| 10 to 20 | 30 | 27 | 30 |
+| 20 to 30 | 14 | 19 | 20 |
+| 30 to 40 | 6 | 12 | 15 |
+| above 40 | 4 | 14 | 15 |
+
+<Part label="a">
+
+One column cannot be a correct record, whatever the temperature was. Identify it, and justify your choice with a calculation.
+
+<Answer>
+
+Every molecule is in exactly one band, so the five percentages in a column must add up to 100. Add each column:
+
+$$
+\begin{aligned}
+\text{X: } &46 + 30 + 14 + 6 + 4 \\
+&= 100
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{Y: } &28 + 27 + 19 + 12 + 14 \\
+&= 100
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{Z: } &30 + 30 + 20 + 15 + 15 \\
+&= 110
+\end{aligned}
+$$
+
+**Column Z cannot be right.** It accounts for 110 percent of the molecules. At least one of its entries is wrong, so nothing can be read from it.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Identify which of columns X and Y was recorded at the higher temperature. Justify your choice with numbers from the table.
+
+<Answer>
+
+**Column Y was recorded at the higher temperature.**
+
+Compare where the molecules are. In the lowest band, X has 46 percent of the molecules and Y has only 28 percent. In the three bands from 20 units up:
+
+$$
+\begin{aligned}
+\text{X: } &14 + 6 + 4 = 24 \\
+\text{Y: } &19 + 12 + 14 = 45
+\end{aligned}
+$$
+
+So 45 percent of the molecules in Y have a kinetic energy of 20 units or more, against 24 percent in X. Fewer molecules at low energy and more at high energy means a higher average kinetic energy. The kelvin temperature of a sample measures the average kinetic energy of its particles, so Y is the hotter record.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Identify which of columns X and Y shows the sample with the higher entropy. Justify your choice from the way the kinetic energies are spread, and state why the room the molecules have plays no part in your choice.
+
+<Answer>
+
+**Column Y shows the higher entropy.**
+
+In X the molecules are crowded into the low bands: the two lowest hold
+
+$$
+46 + 30 = 76
+$$
+
+percent of them, and the highest band holds only 4 percent. In Y the two lowest bands hold
+
+$$
+28 + 27 = 55
+$$
+
+percent, and no band holds fewer than 12 percent. The kinetic energies in Y are spread more evenly over a wider range. There is more energy to share and there are more ways to share it among the molecules, and that is a higher entropy.
+
+The room plays no part because it is the same for both columns: the same sample, sealed in the same rigid container, has the same number of molecules in the same volume. Only the way the energy is shared differs.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Later the sample is moved, with no gas added or removed, into a rigid container with three times the volume. It settles at the temperature it had for column Y. Write the five percentages that a correct record would now show. Then rank the entropy of the sample in three states, from lowest to highest: as recorded in column X, as recorded in column Y, and after the move.
+
+<Answer>
+
+**The percentages are those of column Y: 28, 27, 19, 12 and 14.** The percentages show how the kinetic energy is shared among the molecules, and that goes with the temperature. The temperature is the same as it was for column Y, so the record is the same, whatever the volume.
+
+**From lowest to highest: X, Y, after the move.**
+
+- Y is above X by part (c): the same room, and the energy shared more widely.
+- After the move the sample is above Y. The energy is shared exactly as before, as the equal percentages show, but each molecule can now be found anywhere in three times the space. More room means more ways to arrange the molecules.
+
+After the move the sample is above Y, and Y is above X, so it is the highest of the three. The two columns alone do not show this last step: the record after the move is column Y again, and only the volume tells the two states apart.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for column Z with the reason that its percentages add up to 110, when the percentages of one sample must add up to 100. Column Z with no sum earns 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for column Y, justified with numbers: a smaller share of the molecules in the lowest band (28 percent against 46), or a larger share in the higher bands (45 percent against 24 from 20 units up, or 14 percent against 4 in the highest band), so a higher average kinetic energy. Column Y with no numbers from the table earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for column Y because its kinetic energies are spread more widely or more evenly (more ways to share the energy), with the statement that the volume is the same for both columns (the same sample in the same sealed, rigid container). "Y is hotter, and warming a gas at a fixed volume raises its entropy" also earns the point. A reason that gives the molecules in Y more room earns 0 points.</RubricLine>
+<RubricLine part="d" points={1}>1 point for both: the percentages of column Y unchanged (28, 27, 19, 12 and 14), because the temperature is the same; and the order X, Y, after the move, with the last place justified by three times the volume at the same temperature. New percentages, or the order with no reason for the last place, earn 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={3} title="A smudged entry in an entropy table" topic="9.2" points={4}>
+
+Natural gas that contains hydrogen sulfide is called sour gas. Sour gas can also carry a little carbonyl sulfide, $\ce{COS}$. Carbonyl sulfide can be burned in a flare (reaction 1), or it can be changed by steam over a catalyst (reaction 2).
+
+Reaction 1:
+
+$$
+\begin{aligned}
+&\ce{2COS(g) + 3O2(g) ->} \\
+&\quad \ce{2CO2(g) + 2SO2(g)}
+\end{aligned}
+$$
+
+Reaction 2:
+
+$$
+\begin{aligned}
+&\ce{COS(g) + H2O(g) ->} \\
+&\quad \ce{CO2(g) + H2S(g)}
+\end{aligned}
+$$
+
+A printed table of standard entropies at 25 °C has a smudge over the entry for carbonyl sulfide. Use these values.
+
+| Substance | $S^\circ$ in J/(mol·K) |
+|---|---|
+| $\ce{O2(g)}$ | 205.2 |
+| $\ce{CO2(g)}$ | 213.8 |
+| $\ce{SO2(g)}$ | 248.2 |
+| $\ce{H2O(g)}$ | 188.8 |
+| $\ce{H2S(g)}$ | 205.8 |
+| $\ce{COS(g)}$ | (smudged) |
+
+For reaction 1 as written, at 25 °C:
+
+$$
+\Delta S^\circ = -154.8\ \text{J/(mol}_\text{rxn}\text{·K)}
+$$
+
+For reaction 2 as written, at 25 °C:
+
+$$
+\Delta S^\circ = -0.8\ \text{J/(mol}_\text{rxn}\text{·K)}
+$$
+
+<Part label="a">
+
+Using only the equation of reaction 1, predict the sign of its $\Delta S^\circ$. State whether the value given agrees with your prediction.
+
+<Answer>
+
+Count the moles of gas on each side.
+
+- Before: 2 mol of $\ce{COS}$ and 3 mol of $\ce{O2}$, 5 mol of gas.
+- After: 2 mol of $\ce{CO2}$ and 2 mol of $\ce{SO2}$, 4 mol of gas.
+
+Five moles of gas become four, so the matter ends with less room and $\Delta S^\circ$ should be **negative**. The value given, $-154.8$ J/(mol·K), is negative, so it **agrees**.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Use reaction 1 to calculate the standard entropy of $\ce{COS(g)}$, the smudged entry.
+
+<Answer>
+
+$\Delta S^\circ$ is the products' total minus the reactants' total, each $S^\circ$ multiplied by its coefficient. Call the missing entry $x$. Every total below is in J/K.
+
+The products' total can be found in full:
+
+$$
+\begin{aligned}
+&2(213.8) + 2(248.2) \\
+&\quad = 427.6 + 496.4 \\
+&\quad = 924.0
+\end{aligned}
+$$
+
+The reactants' total holds the unknown:
+
+$$
+\begin{aligned}
+&2x + 3(205.2) \\
+&\quad = 2x + 615.6
+\end{aligned}
+$$
+
+Products minus reactants is the value given:
+
+$$
+\begin{aligned}
+&924.0 - (2x + 615.6) \\
+&\quad = -154.8
+\end{aligned}
+$$
+
+Solve for $x$:
+
+$$
+\begin{aligned}
+2x &= 924.0 - 615.6 \\
+&\quad + 154.8 \\
+&= 463.2 \\
+x &= \mathbf{231.6}\ \text{J/(mol·K)}
+\end{aligned}
+$$
+
+The standard entropy of $\ce{COS(g)}$ is **231.6 J/(mol·K)**.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A student says: "Oxygen is an element, so its entry is zero and could have been left out of the sum." Calculate the value of $S^\circ$ for $\ce{COS(g)}$ that the student would get from reaction 1. Then calculate the entry from reaction 2, which has no oxygen gas in it, and state which of the two values for reaction 1 it agrees with: yours or the student's.
+
+<Answer>
+
+With oxygen entered as zero, the student's total for the reactants of reaction 1, in J/K, is
+
+$$
+2x + 3(0) = 2x
+$$
+
+The products' total is 924.0 J/K, as in part (b):
+
+$$
+924.0 - 2x = -154.8
+$$
+
+$$
+\begin{aligned}
+2x &= 924.0 + 154.8 \\
+&= 1{,}078.8 \\
+x &= \mathbf{539.4}\ \text{J/(mol·K)}
+\end{aligned}
+$$
+
+Now reaction 2. Every substance in it but carbonyl sulfide has an entry, and none of them is oxygen, so the student's claim changes nothing here. The products' total, in J/K:
+
+$$
+213.8 + 205.8 = 419.6
+$$
+
+The reactants' total is $x + 188.8$. Products minus reactants is the value given:
+
+$$
+\begin{aligned}
+&419.6 - (x + 188.8) \\
+&\quad = -0.8
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+x &= 419.6 - 188.8 + 0.8 \\
+&= \mathbf{231.6}\ \text{J/(mol·K)}
+\end{aligned}
+$$
+
+Reaction 2 gives 231.6 J/(mol·K). That **agrees with the value of part (b)**, and not with the student's 539.4 J/(mol·K). One substance has one entry, so the two reactions must give the same value, and they do only when oxygen is counted at 205.2 J/(mol·K).
+
+So the entry for oxygen cannot be left out. The zero that an element has is its $\Delta H_f^\circ$, an agreed mark. Its $S^\circ$ is an amount like any other.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for a negative sign predicted from the moles of gas (5 mol before, 4 mol after), with the statement that the given value agrees. "Negative" with no count of the gas earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for a sum set up as products minus reactants with every coefficient and with oxygen at 205.2 (totals of 924.0 J/K for the products and twice the unknown plus 615.6 J/K for the reactants); 1 point for 231.6 J/(mol·K), or 232 J/(mol·K). An answer of 76.8 J/(mol·K), which comes from reactants minus products or from 154.8 entered without its minus sign, earns the first point only, and only if every coefficient and oxygen's 205.2 are in the sum.</RubricLine>
+<RubricLine part="c" points={1}>1 point for both: the student's value of 539.4 J/(mol·K) from reaction 1, and 231.6 J/(mol·K) from reaction 2, which agrees with the value found with oxygen at 205.2 and not with the student's. The student's value alone, or "elements do not have zero entropy" with no value from reaction 2, earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={4} title="Which values are enough?" topic="9.2" points={4}>
+
+A table of standard entropies at 25 °C has only these nine entries. The entry for bromine is for its vapor, and reaction 3 is written with bromine as a gas. Use these values.
+
+| Substance | $S^\circ$ in J/(mol·K) |
+|---|---|
+| $\ce{CH4(g)}$ | 186.3 |
+| $\ce{CO2(g)}$ | 213.8 |
+| $\ce{CO(g)}$ | 197.7 |
+| $\ce{H2(g)}$ | 130.7 |
+| $\ce{O2(g)}$ | 205.2 |
+| $\ce{HCl(g)}$ | 186.9 |
+| $\ce{Cl2(g)}$ | 223.1 |
+| $\ce{Br2(g)}$ | 245.5 |
+| $\ce{KCl(s)}$ | 82.6 |
+
+Three reactions are of interest.
+
+Reaction 1:
+
+$$
+\begin{aligned}
+&\ce{CH4(g) + CO2(g) ->} \\
+&\quad \ce{2CO(g) + 2H2(g)}
+\end{aligned}
+$$
+
+Reaction 2:
+
+$$
+\begin{aligned}
+&\ce{2KClO3(s) ->} \\
+&\quad \ce{2KCl(s) + 3O2(g)}
+\end{aligned}
+$$
+
+Reaction 3:
+
+$$
+\begin{aligned}
+&\ce{2HBr(g) + Cl2(g) ->} \\
+&\quad \ce{2HCl(g) + Br2(g)}
+\end{aligned}
+$$
+
+<Part label="a">
+
+Identify each reaction whose $\Delta S^\circ$ can be calculated from this table, and calculate it. For each of the others, state what is missing.
+
+<Answer>
+
+A sum needs an entry for every substance in the equation, elements included.
+
+- Reaction 1 needs $\ce{CH4(g)}$, $\ce{CO2(g)}$, $\ce{CO(g)}$ and $\ce{H2(g)}$. All four are in the table.
+- Reaction 2 needs $\ce{KClO3(s)}$, which is **not in the table**.
+- Reaction 3 needs $\ce{HBr(g)}$, which is **not in the table**.
+
+So **only reaction 1** can be calculated. The products' total, in J/K:
+
+$$
+\begin{aligned}
+&2(197.7) + 2(130.7) \\
+&\quad = 395.4 + 261.4 \\
+&\quad = 656.8
+\end{aligned}
+$$
+
+The reactants' total, in J/K:
+
+$$
+186.3 + 213.8 = 400.1
+$$
+
+Products minus reactants:
+
+$$
+\begin{aligned}
+\Delta S^\circ &= 656.8 - 400.1 \\
+&= \mathbf{+256.7}\ \text{J/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+The sign fits the equation: 2 mol of gas become 4 mol.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+For each reaction whose $\Delta S^\circ$ you could not calculate in part (a), decide whether the equation alone gives its sign. Where it does, give the sign. Where it does not, calculate the value of the missing entry at which $\Delta S^\circ$ would be exactly zero, and state the sign of $\Delta S^\circ$ if the entry is larger than that.
+
+<Answer>
+
+Count the moles of gas on each side.
+
+**Reaction 2: the equation gives the sign, and it is positive.** There is no gas before and 3 mol of $\ce{O2}$ after. Three moles of gas made from a solid is a large gain of room, so $\Delta S^\circ$ is positive, and large. The missing entry would be needed for the number, not for the sign.
+
+**Reaction 3: the equation does not give the sign.** There are 2 + 1 = 3 mol of gas before and 2 + 1 = 3 mol after. The moles of gas do not change, so $\Delta S^\circ$ is small, and its sign hangs on the missing entry. Call that entry $x$. The products' total, in J/K, is
+
+$$
+\begin{aligned}
+&2(186.9) + 245.5 \\
+&\quad = 373.8 + 245.5 \\
+&\quad = 619.3
+\end{aligned}
+$$
+
+and the reactants' total is $2x + 223.1$. $\Delta S^\circ$ is zero when the two totals are equal:
+
+$$
+\begin{aligned}
+2x + 223.1 &= 619.3 \\
+2x &= 396.2 \\
+x &= \mathbf{198.1}
+\end{aligned}
+$$
+
+The entry is in J/(mol·K). An entry larger than 198.1 J/(mol·K) makes the reactants' total the larger one, so $\Delta S^\circ$ is **negative**. A smaller entry makes it positive. The table as it stands cannot say which.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+One more entry is found: $S^\circ$ of $\ce{HBr(g)}$ is 198.7 J/(mol·K). Calculate $\Delta S^\circ$ for reaction 3.
+
+<Answer>
+
+The products' total, in J/K:
+
+$$
+\begin{aligned}
+&2(186.9) + 245.5 \\
+&\quad = 373.8 + 245.5 \\
+&\quad = 619.3
+\end{aligned}
+$$
+
+The reactants' total, in J/K:
+
+$$
+\begin{aligned}
+&2(198.7) + 223.1 \\
+&\quad = 397.4 + 223.1 \\
+&\quad = 620.5
+\end{aligned}
+$$
+
+Products minus reactants:
+
+$$
+\begin{aligned}
+\Delta S^\circ &= 619.3 - 620.5 \\
+&= \mathbf{-1.2}\ \text{J/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+It is small, as part (b) said it would be: about one two-hundredth of the size of reaction 1's. Its sign is negative, and nothing short of the four values could have shown that.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for reaction 1 alone, with the missing entries named (potassium chlorate for reaction 2, hydrogen bromide for reaction 3); 1 point for $+256.7$ J/(mol·K), or $+257$ J/(mol·K), from products minus reactants with the coefficients. The value with no sign shown still earns the second point; a negative value does not.</RubricLine>
+<RubricLine part="b" points={1}>1 point for both: reaction 2 is positive, because 3 mol of gas form from a solid; and for reaction 3, where 3 mol of gas become 3 mol and the equation gives no sign, an entry of 198.1 J/(mol·K), or 198 J/(mol·K), for a change of zero, with a negative change for a larger entry. A sign for reaction 3 read from the equation, or "zero" for reaction 3, earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for $-1.2$ J/(mol·K), from totals of 619.3 J/K for the products and 620.5 J/K for the reactants. A value of $+1.2$ (reactants minus products) earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={5} title="Three liquids that vaporize" topic="9.2" points={4}>
+
+Bromine, methanol and mercury are all liquids at 25 °C. The table gives the standard entropy of each as a liquid and as a gas, at 25 °C, in J/(mol·K). Each gas entry is for the vapor at standard pressure, as tables list it. Use these values.
+
+| Substance | Liquid | Gas |
+|---|---|---|
+| $\ce{Br2}$ | 152.2 | 245.5 |
+| $\ce{CH3OH}$ | 126.8 | 239.9 |
+| $\ce{Hg}$ | 75.9 | 175.0 |
+
+<Part label="a">
+
+Calculate $\Delta S^\circ$ for the vaporizing of 1 mol of each liquid at 25 °C. Give each with its sign.
+
+<Answer>
+
+Vaporizing is a change like any other, so $\Delta S^\circ$ is the final entry minus the initial one: the gas's $S^\circ$ minus the liquid's. For bromine the change is
+
+$$
+\ce{Br2(l) -> Br2(g)}
+$$
+
+and the other two are written the same way. Each result is in J/(mol·K).
+
+$$
+\begin{aligned}
+&\text{bromine:} \\
+&\quad 245.5 - 152.2 = \mathbf{+93.3} \\
+&\text{methanol:} \\
+&\quad 239.9 - 126.8 = \mathbf{+113.1} \\
+&\text{mercury:} \\
+&\quad 175.0 - 75.9 = \mathbf{+99.1}
+\end{aligned}
+$$
+
+All three are positive, as they must be when a liquid becomes a gas.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+A student claims: "The liquid whose vapor has the highest standard entropy has the largest $\Delta S^\circ$ of vaporizing." Use the table and your results to decide whether the three liquids bear the claim out.
+
+<Answer>
+
+**They do not.** The vapor with the highest standard entropy is bromine's, at 245.5 J/(mol·K). If the claim held, bromine would have the largest $\Delta S^\circ$ of vaporizing. It has the **smallest** of the three: $+93.3$ J/(mol·K), against $+99.1$ for mercury and $+113.1$ for methanol.
+
+$\Delta S^\circ$ is a difference, so it depends on where the liquid starts as well as on where the vapor ends. Bromine's vapor has the highest entry, but its liquid has the highest entry too (152.2), and the gap between the two is the smallest.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Write three orders of the three substances, each from lowest to highest: by $S^\circ$ of the liquid, by $S^\circ$ of the gas, and by $\Delta S^\circ$ of vaporizing. State which orders are the same.
+
+<Answer>
+
+From lowest to highest, in J/(mol·K):
+
+- By $S^\circ$ of the liquid: mercury (75.9), methanol (126.8), bromine (152.2).
+- By $S^\circ$ of the gas: mercury (175.0), methanol (239.9), bromine (245.5).
+- By $\Delta S^\circ$ of vaporizing: bromine ($+93.3$), mercury ($+99.1$), methanol ($+113.1$).
+
+**The order of the liquids and the order of the gases are the same**: mercury, methanol, bromine. **The order of the gains is different from both**: bromine, mercury, methanol. So for these three, neither column of the table shows which liquid has the largest $\Delta S^\circ$ of vaporizing. Only the subtraction does.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the gas's entry minus the liquid's, shown for at least one substance; 1 point for all three values with positive signs: $+93.3$, $+113.1$ and $+99.1$ J/(mol·K). Three right sizes with a negative sign, or with no sign on any of them, earn 1 point in all.</RubricLine>
+<RubricLine part="b" points={1}>1 point for deciding that the claim fails, with the evidence: bromine's vapor has the highest standard entropy (245.5) and bromine's gain is the smallest ($+93.3$), or methanol has the largest gain ($+113.1$) without the highest vapor. "The claim is wrong" with no values earns 0 points. A decision that follows correctly from wrong values in part (a) earns the point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for all three orders (liquids and gases: mercury, methanol, bromine; gains: bromine, mercury, methanol) with the statement that the first two agree and the third differs from both. Orders written from highest to lowest, if labeled, earn the point.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part B: Gibbs free energy and favorability
+
+Five questions on the standard free energy change, $\Delta G^\circ$. You will read two values of $\Delta G^\circ$ back to the enthalpy and entropy behind them, find a rule in a table and test it where it breaks, work out signs from observations, find the one wrong entry on a data sheet, and write one reaction three ways.
+
+<Question number={6} title="Urea, read backward from two temperatures" topic="9.3" points={6}>
+
+Fertilizer plants make urea, $\ce{CO(NH2)2}$, from ammonia and carbon dioxide:
+
+$$
+\begin{aligned}
+&\ce{2NH3(g) + CO2(g) ->} \\
+&\quad \ce{CO(NH2)2(s) + H2O(l)}
+\end{aligned}
+$$
+
+No $\Delta H^\circ$ and no $\Delta S^\circ$ is given for this reaction. Take these two values of $\Delta G^\circ$ for the equation as written, and take $\Delta H^\circ$ and $\Delta S^\circ$ as constant.
+
+| Temperature (K) | $\Delta G^\circ$ ($\text{kJ/mol}_\text{rxn}$) |
+|---|---|
+| 300 | $-6.2$ |
+| 350 | $+15.1$ |
+
+<Part label="a">
+
+Without calculating, determine the sign of $\Delta S^\circ$ from the two values in the table. Then state whether the balanced equation agrees with that sign, and how you can tell.
+
+<Answer>
+
+**$\Delta S^\circ$ is negative.**
+
+In $\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$, the temperature multiplies only the entropy term. $\Delta H^\circ$ is taken as constant, so any change in $\Delta G^\circ$ on heating comes from $-T\Delta S^\circ$.
+
+From 300 K to 350 K, $\Delta G^\circ$ goes up, from $-6.2$ kJ to $+15.1$ kJ. So $-T\Delta S^\circ$ became more positive as $T$ grew. That happens only when $-T\Delta S^\circ$ is a positive term, which means $\Delta S^\circ$ is negative.
+
+**The equation agrees.** On the left there are 3 mol of gas. On the right there is a solid and a liquid, and no gas. Matter that was spread through the whole container as gas ends up in a solid and a liquid, so the entropy falls.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $\Delta S^\circ$ for the reaction, in $\text{J/(mol}_\text{rxn}\text{·K)}$.
+
+<Answer>
+
+Write $\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$ once for each temperature, and subtract the first from the second. $\Delta H^\circ$ is the same in both, so it drops out:
+
+$$
+\begin{aligned}
+&\Delta G^\circ_{350} - \Delta G^\circ_{300} \\
+&\quad = -(350 - 300)\,\Delta S^\circ
+\end{aligned}
+$$
+
+The left side, in kJ:
+
+$$
+15.1 - (-6.2) = +21.3
+$$
+
+The temperatures differ by 50 K, so:
+
+$$
+\begin{aligned}
++21.3\ \text{kJ} &= -(50\ \text{K})\,\Delta S^\circ \\
+\Delta S^\circ &= \frac{-21.3\ \text{kJ}}{50\ \text{K}} \\
+&= -0.426\ \text{kJ/K}
+\end{aligned}
+$$
+
+In joules:
+
+$$
+\begin{aligned}
+&-0.426\ \text{kJ/K} \times 1{,}000 \\
+&\quad = -426\ \text{J/K}
+\end{aligned}
+$$
+
+$$
+\Delta S^\circ = \mathbf{-426}\ \text{J/(mol}_\text{rxn}\text{·K)}
+$$
+
+The sign is the one that part (a) predicted.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate $\Delta H^\circ$ for the reaction, in $\text{kJ/mol}_\text{rxn}$.
+
+<Answer>
+
+Rearrange the equation to $\Delta H^\circ = \Delta G^\circ + T\Delta S^\circ$, and use either row of the table. $\Delta S^\circ$ is already in kJ/K from part (b): $-0.426$ kJ/K.
+
+At 300 K, the product $T\Delta S^\circ$ is:
+
+$$
+(300)(-0.426) = -127.8\ \text{kJ}
+$$
+
+$$
+\begin{aligned}
+\Delta H^\circ &= -6.2 + (-127.8) \\
+&= \mathbf{-134.0}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+The other row is a check. At 350 K:
+
+$$
+(350)(-0.426) = -149.1\ \text{kJ}
+$$
+
+$$
+\begin{aligned}
+\Delta H^\circ &= +15.1 + (-149.1) \\
+&= -134.0\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Both rows give the same value. The reaction releases energy.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Calculate the temperature at which $\Delta G^\circ = 0$. Then state whether the reaction is thermodynamically favored above that temperature or below it, and name the evidence in the table that settles which.
+
+<Answer>
+
+Set $\Delta G^\circ$ to zero, so that $T = \Delta H^\circ / \Delta S^\circ$. Both values are in kilojoules:
+
+$$
+\begin{aligned}
+T &= \frac{-134.0\ \text{kJ}}{-0.426\ \text{kJ/K}} \\
+&= \mathbf{315}\ \text{K}
+\end{aligned}
+$$
+
+It is 314.6 K before rounding.
+
+The reaction is thermodynamically favored **below** 315 K. The table settles it: at 300 K, which is below 315 K, $\Delta G^\circ$ is negative, and at 350 K, which is above, it is positive. This also fits the signs. The enthalpy term works for the reaction and the entropy term works against it, and heating strengthens the entropy term.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for a negative ΔS° with a reason from the table (ΔG° rises as the temperature rises, and only the entropy term changes with temperature) and a statement that the equation agrees because 3 mol of gas become a solid and a liquid. The sign from the equation alone, with no use of the table, earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for a setup that divides the change in ΔG° (21.3 kJ) by the change in temperature (50 K), with or without the sign; 1 point for −426 J/(mol·K), with its sign and in joules. An answer of −0.426 kJ/K, or of +426, earns the first point only.</RubricLine>
+<RubricLine part="c" points={1}>1 point for −134.0 kJ/mol of reaction, from either row with the answer to part (b); −134 earns the point. A value that follows correctly from a wrong answer to part (b) earns the point.</RubricLine>
+<RubricLine part="d" points={2}>1 point for 315 K, from ΔH° divided by ΔS° in matching units (314 to 315 K earns it, and so does a value that follows from the answers to parts (b) and (c)); 1 point for "favored below" with evidence from the table: ΔG° is negative at 300 K, or positive at 350 K. "Below" with no evidence does not earn the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={7} title="Which oxides can hydrogen reduce?" topic="9.3" points={6}>
+
+A stream of hydrogen gas can turn some metal oxides into the metal, and others it cannot. For three oxides the equation has the same form, with M standing for the metal:
+
+$$
+\begin{aligned}
+&\ce{MO(s) + H2(g) ->} \\
+&\quad \ce{M(s) + H2O(g)}
+\end{aligned}
+$$
+
+Use these values of the standard free energy of formation, $\Delta G_f^\circ$, at 25 °C.
+
+| Substance | $\Delta G_f^\circ$ (kJ/mol) |
+|---|---|
+| $\ce{H2O(g)}$ | $-228.6$ |
+| $\ce{CuO(s)}$ | $-129.7$ |
+| $\ce{ZnO(s)}$ | $-320.5$ |
+| $\ce{MgO(s)}$ | $-569.3$ |
+| $\ce{SnO2(s)}$ | $-515.8$ |
+
+This question is about $\Delta G^\circ$ only. How fast a reaction goes is another matter.
+
+<Part label="a">
+
+Calculate $\Delta G^\circ$ at 25 °C for the reaction of hydrogen with copper(II) oxide, with zinc oxide and with magnesium oxide. Identify the oxide or oxides for which the reaction is thermodynamically favored.
+
+<Answer>
+
+$\Delta G^\circ$ is the products' total minus the reactants' total. The metal and the hydrogen are elements in their standard states, so each goes in as zero. That leaves water's value minus the oxide's value.
+
+Copper(II) oxide:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -228.6 - (-129.7) \\
+&= \mathbf{-98.9}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Zinc oxide:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -228.6 - (-320.5) \\
+&= \mathbf{+91.9}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Magnesium oxide:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -228.6 - (-569.3) \\
+&= \mathbf{+340.7}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Only the reaction with **copper(II) oxide** is thermodynamically favored at 25 °C: its $\Delta G^\circ$ is negative. The other two are thermodynamically unfavored.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The three results follow one pattern. State a rule, in terms of the oxide's $\Delta G_f^\circ$, that tells whether hydrogen reducing an oxide MO is thermodynamically favored at 25 °C, without doing the full sum.
+
+<Answer>
+
+For this form of equation, $\Delta G^\circ$ is water's $\Delta G_f^\circ$ minus the oxide's. That difference is negative when the oxide's value is the less negative of the two.
+
+**The rule:** the reaction is favored when the oxide's $\Delta G_f^\circ$ is less negative than that of $\ce{H2O(g)}$, which is $-228.6$ kJ/mol, and unfavored when it is more negative.
+
+The table agrees. Copper(II) oxide, at $-129.7$ kJ/mol, is less negative than water, and its reaction is favored. Zinc oxide, at $-320.5$ kJ/mol, and magnesium oxide, at $-569.3$ kJ/mol, are more negative, and their reactions are unfavored.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Tin(IV) oxide reacts with hydrogen by a different equation:
+
+$$
+\begin{aligned}
+&\ce{SnO2(s) + 2H2(g) ->} \\
+&\quad \ce{Sn(s) + 2H2O(g)}
+\end{aligned}
+$$
+
+A student sets $-515.8$ beside zinc oxide's $-320.5$ and says: "Tin(IV) oxide's value is much more negative than zinc oxide's, so its reaction with hydrogen has a more positive $\Delta G^\circ$ than zinc oxide's."
+
+Calculate $\Delta G^\circ$ at 25 °C for the equation above, and decide whether the student's statement holds. Then show how the rule of part (b) has to be changed for this oxide.
+
+<Answer>
+
+Two moles of water form, so water's value goes in twice:
+
+$$
+2(-228.6) = -457.2\ \text{kJ}
+$$
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -457.2 - (-515.8) \\
+&= \mathbf{+58.6}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+**The statement does not hold.** The reaction is unfavored, but its $\Delta G^\circ$ of $+58.6$ kJ is less positive than zinc oxide's $+91.9$ kJ, not more.
+
+The rule of part (b) came from an equation in which one mole of oxide gives one mole of water. One mole of $\ce{SnO2}$ holds two moles of oxygen atoms and gives two moles of water. So the fair comparison is for each mole of oxygen atoms:
+
+$$
+\frac{-515.8\ \text{kJ}}{2} = -257.9\ \text{kJ}
+$$
+
+Set that beside water's $-228.6$ kJ. Tin(IV) oxide is 29.3 kJ below water for each mole of oxygen atoms, and there are two of them: $2(29.3)$ is 58.6 kJ, the same as the full sum. Zinc oxide is 91.9 kJ below water. Counted this way, tin(IV) oxide is closer to water than zinc oxide is.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+For the reaction of tin(IV) oxide with hydrogen in part (c), use these values, and take them as constant:
+
+$$
+\begin{aligned}
+\Delta H^\circ &= +94.0\ \text{kJ/mol}_\text{rxn} \\
+\Delta S^\circ &= +118.4\ \text{J/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+Calculate the temperature at which $\Delta G^\circ = 0$, and state whether the reaction is thermodynamically favored above it or below it. (Tin melts at 505 K. Leave that out of account here.)
+
+<Answer>
+
+Put $\Delta S^\circ$ in kilojoules first:
+
+$$
+\frac{118.4\ \text{J/K}}{1{,}000} = 0.1184\ \text{kJ/K}
+$$
+
+Set $\Delta G^\circ$ to zero and solve for $T$:
+
+$$
+\begin{aligned}
+T &= \frac{94.0\ \text{kJ}}{0.1184\ \text{kJ/K}} \\
+&= \mathbf{794}\ \text{K}
+\end{aligned}
+$$
+
+It is 793.9 K before rounding.
+
+$\Delta S^\circ$ is positive, so the entropy term works for the reaction and grows with the temperature. The reaction is thermodynamically favored **above** 794 K. That fits part (c): 298 K is below 794 K, and there $\Delta G^\circ$ is positive.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for the three values with their signs, −98.9, +91.9 and +340.7 kJ/mol of reaction, each from water's value minus the oxide's (two correct values with a consistent method earn this point); 1 point for naming copper(II) oxide alone as favored, in agreement with the student's own values. A list of signs with no calculated values earns neither point.</RubricLine>
+<RubricLine part="b" points={1}>1 point for a rule that compares the oxide's ΔG°f with water's: favored when the oxide's value is less negative than −228.6 kJ/mol (or "higher than", or "above"). "Favored when the oxide's value is small", with no comparison with water, earns 0 points.</RubricLine>
+<RubricLine part="c" points={2}>1 point for +58.6 kJ/mol of reaction, with water's value doubled, and a statement that the student is wrong because +58.6 is less positive than +91.9; 1 point for a comparison made for each mole of oxygen atoms (−257.9 against −228.6), or for each mole of water formed, or a clear statement that the full sum with 2 mol of water must be used because one mole of this oxide gives two moles of water. Using water's value once gives +287.2, which does not earn the first point.</RubricLine>
+<RubricLine part="d" points={1}>1 point for 794 K (793 to 794 K earns it) with "favored above". An answer of 0.794, from kilojoules divided by joules, earns 0 points, and so does 794 K with "below" or with no side named.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={8} title="Signs from two tests" topic="9.3" points={4}>
+
+Four reactions, labeled W, X, Y and Z, are each tested at two temperatures. At each temperature the test tells whether the reaction as written is thermodynamically favored, with every substance in its standard state. The reactions and the results are made up for this question. Take $\Delta H^\circ$ and $\Delta S^\circ$ of each reaction as constant.
+
+| Reaction | At 300 K | At 1,000 K |
+|---|---|---|
+| W | favored | unfavored |
+| X | unfavored | favored |
+| Y | favored | favored |
+| Z | unfavored | unfavored |
+
+<Part label="a">
+
+The two results for W fix the signs of its $\Delta H^\circ$ and $\Delta S^\circ$, and the two results for X fix the signs of its own. State the signs for each reaction, and justify the signs of W from its two results.
+
+Then test two sets of values that are proposed for reaction W. Both sets have the signs you stated for W.
+
+Set 1:
+
+$$
+\begin{aligned}
+\Delta H^\circ &= -70.0\ \text{kJ/mol}_\text{rxn} \\
+\Delta S^\circ &= -140.0\ \text{J/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+Set 2:
+
+$$
+\begin{aligned}
+\Delta H^\circ &= -90.0\ \text{kJ/mol}_\text{rxn} \\
+\Delta S^\circ &= -75.0\ \text{J/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+Calculate $\Delta G^\circ$ at 300 K and at 1,000 K for each set, and identify the set that agrees with both of W's results.
+
+<Answer>
+
+- **W:** $\Delta H^\circ$ negative, $\Delta S^\circ$ negative.
+- **X:** $\Delta H^\circ$ positive, $\Delta S^\circ$ positive.
+
+For W, $\Delta G^\circ$ is negative at 300 K and positive at 1,000 K, so it rose on heating. In $\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$ only the entropy term changes with $T$. A term $-T\Delta S^\circ$ that grows more positive as $T$ grows is a positive term, so $\Delta S^\circ$ is negative.
+
+Then $\Delta H^\circ$ must be negative. At 300 K the entropy term is positive, and $\Delta G^\circ$ is negative all the same. Only a negative $\Delta H^\circ$ can make it so.
+
+X is the mirror image. Its $\Delta G^\circ$ fell on heating, so the entropy term is negative and $\Delta S^\circ$ is positive. At 300 K its $\Delta G^\circ$ is positive even with a negative entropy term, so $\Delta H^\circ$ is positive.
+
+**Set 1.** Put $\Delta S^\circ$ in kilojoules first:
+
+$$
+\frac{-140.0\ \text{J/K}}{1{,}000} = -0.1400\ \text{kJ/K}
+$$
+
+At 300 K the product $T\Delta S^\circ$ is $(300)(-0.1400)$, which is $-42.0$ kJ:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -70.0 - (-42.0) \\
+&= -28.0\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+At 1,000 K the product is $(1{,}000)(-0.1400)$, which is $-140.0$ kJ:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -70.0 - (-140.0) \\
+&= +70.0\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+**Set 2.** In kilojoules:
+
+$$
+\frac{-75.0\ \text{J/K}}{1{,}000} = -0.0750\ \text{kJ/K}
+$$
+
+At 300 K the product $T\Delta S^\circ$ is $(300)(-0.0750)$, which is $-22.5$ kJ:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -90.0 - (-22.5) \\
+&= -67.5\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+At 1,000 K the product is $(1{,}000)(-0.0750)$, which is $-75.0$ kJ:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -90.0 - (-75.0) \\
+&= -15.0\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+**Set 1 agrees with both results.** It makes W favored at 300 K and unfavored at 1,000 K, as the table has it.
+
+Set 2 does not agree. It makes W favored at 300 K, but its $\Delta G^\circ$ is still negative at 1,000 K, where the table says unfavored. Both sets have the signs W must have, and only one of them fits. The two tests fix the signs, and they also limit the sizes.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+For W and for X there is a temperature at which $\Delta G^\circ = 0$. State what the table tells you about where that temperature is. Then identify which of the two reactions is thermodynamically favored at 200 K.
+
+<Answer>
+
+For each of W and X, $\Delta G^\circ$ has one sign at 300 K and the other at 1,000 K. With $\Delta H^\circ$ and $\Delta S^\circ$ constant, $\Delta G^\circ$ changes steadily with $T$ and passes through zero once. So for each reaction the temperature at which $\Delta G^\circ = 0$ is **between 300 K and 1,000 K**. The table does not say where in that range, and the two reactions need not share one temperature.
+
+At 200 K, **W is favored** and X is not. W is favored on the cold side of its temperature, and 200 K is colder than 300 K, where W is already favored. X is favored only on the hot side of its temperature, which is above 300 K.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+For Y and for Z the two tests do not fix both signs. For each of these two reactions, identify the one combination of signs of $\Delta H^\circ$ and $\Delta S^\circ$ that the table rules out, and list the combinations that remain possible. For each remaining combination whose verdict changes with the temperature, state where the temperature at which $\Delta G^\circ = 0$ must lie.
+
+<Answer>
+
+**Y** is favored at both temperatures.
+
+- Ruled out: $\Delta H^\circ$ positive with $\Delta S^\circ$ negative. Such a reaction is favored at no temperature.
+- Possible: $\Delta H^\circ$ negative with $\Delta S^\circ$ positive, which is favored at every temperature.
+- Possible: both negative, favored below a temperature that lies above 1,000 K.
+- Possible: both positive, favored above a temperature that lies below 300 K.
+
+**Z** is unfavored at both temperatures.
+
+- Ruled out: $\Delta H^\circ$ negative with $\Delta S^\circ$ positive. Such a reaction is favored at every temperature.
+- Possible: $\Delta H^\circ$ positive with $\Delta S^\circ$ negative, which is favored at no temperature.
+- Possible: both positive, favored only above a temperature that lies above 1,000 K.
+- Possible: both negative, favored only below a temperature that lies below 300 K.
+
+Two tests that agree show only that $\Delta G^\circ$ does not change sign between 300 K and 1,000 K. They do not show what it does outside that range.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Two more facts are found.
+
+- Fact 1: reaction Y releases energy, and it turns a solid into gases.
+- Fact 2: reaction Z takes in energy.
+
+Decide, for each reaction, whether its fact is enough to fix both signs. Where it is enough, state the signs. Where it is not, state the combinations that are still possible.
+
+<Answer>
+
+**Fact 1 is enough for Y.** Releasing energy means $\Delta H^\circ$ is negative. A solid turning into gases spreads matter much more widely, so $\Delta S^\circ$ is positive. Y has $\Delta H^\circ$ negative and $\Delta S^\circ$ positive, the first of the three combinations left in part (c), and it is favored at every temperature.
+
+**Fact 2 is not enough for Z.** Taking in energy means $\Delta H^\circ$ is positive. That removes "both negative" from Z's list in part (c), and two combinations remain:
+
+- $\Delta H^\circ$ positive with $\Delta S^\circ$ negative, favored at no temperature;
+- both positive, favored only above a temperature higher than 1,000 K.
+
+The sign of $\Delta S^\circ$ is still open. Something that fixes it, such as the equation with its states, would settle Z.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for both pairs of signs (W: both negative; X: both positive), with W's justified from the table (ΔG° rises on heating, so ΔS° is negative; ΔG° is negative at 300 K all the same, so ΔH° is negative), together with set 1 as the set that agrees, shown by values of ΔG°: set 1 gives −28.0 kJ at 300 K and +70.0 kJ at 1,000 K, and set 2 gives −67.5 kJ and −15.0 kJ, so set 2 makes W favored at 1,000 K, against the table. The two values at 1,000 K are enough for the choice. The signs with no values of ΔG° earn 0 points, and so does a choice of set with no values.</RubricLine>
+<RubricLine part="b" points={1}>1 point for "between 300 K and 1,000 K" for both reactions, together with W as the one favored at 200 K.</RubricLine>
+<RubricLine part="c" points={1}>1 point for the two combinations ruled out (Y: ΔH° positive with ΔS° negative; Z: ΔH° negative with ΔS° positive) and the three remaining combinations for each reaction, with where the temperature must lie for the two that change their verdict (Y: both negative, above 1,000 K; both positive, below 300 K. Z: both positive, above 1,000 K; both negative, below 300 K). Naming only "favored at every temperature" for Y and "at no temperature" for Z earns 0 points.</RubricLine>
+<RubricLine part="d" points={1}>1 point for both decisions: fact 1 fixes Y as ΔH° negative with ΔS° positive, and fact 2 leaves Z with two combinations, ΔH° positive with ΔS° of either sign (or a statement that the sign of ΔS° is still unknown).</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={9} title="A data sheet with one slip" topic="9.3" points={5}>
+
+Acetone, $\ce{(CH3)2CO}$, can be made from 2-propanol, the alcohol in rubbing alcohol. The vapor of 2-propanol is passed over a hot catalyst, and each molecule gives up two hydrogen atoms:
+
+$$
+\begin{aligned}
+&\ce{(CH3)2CHOH(g) ->} \\
+&\quad \ce{(CH3)2CO(g) + H2(g)}
+\end{aligned}
+$$
+
+A data sheet lists $\Delta G^\circ$ for this equation at five temperatures. Take its values as calculated with $\Delta H^\circ$ and $\Delta S^\circ$ constant, and then copied out by hand. One entry was copied wrong.
+
+| Temperature (K) | $\Delta G^\circ$ ($\text{kJ/mol}_\text{rxn}$) |
+|---|---|
+| 400 | $+8.7$ |
+| 500 | $+3.0$ |
+| 600 | $-14.7$ |
+| 700 | $-26.4$ |
+| 800 | $-38.1$ |
+
+For part (d), use these values of the standard enthalpy of formation, $\Delta H_f^\circ$, at 25 °C.
+
+| Substance | $\Delta H_f^\circ$ (kJ/mol) |
+|---|---|
+| $\ce{(CH3)2CHOH(g)}$ | $-272.6$ |
+| $\ce{(CH3)2CO(g)}$ | $-217.1$ |
+
+<Part label="a">
+
+Calculate the change in $\Delta G^\circ$ from each row of the sheet to the next. Use the four changes to identify the entry that was copied wrong, and justify your choice.
+
+<Answer>
+
+In $\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$, with $\Delta H^\circ$ and $\Delta S^\circ$ constant, only $T$ changes from row to row. Each row is 100 K above the one before it, so each step should change $\Delta G^\circ$ by the same amount.
+
+The four changes, in kJ:
+
+$$
+\begin{aligned}
+&\text{400 K to 500 K:} \\
+&\quad 3.0 - 8.7 = -5.7 \\
+&\text{500 K to 600 K:} \\
+&\quad -14.7 - 3.0 = -17.7 \\
+&\text{600 K to 700 K:} \\
+&\quad -26.4 - (-14.7) = -11.7 \\
+&\text{700 K to 800 K:} \\
+&\quad -38.1 - (-26.4) = -11.7
+\end{aligned}
+$$
+
+The last two changes agree, at $-11.7$ kJ. The first two do not, and they are the two changes that use the 500 K row. **The entry at 500 K is the wrong one.**
+
+The rows on each side of it are sound. If the 400 K entry were wrong, only the first change would be off. If the 600 K entry were wrong, the third change would be off as well. And from 400 K to 600 K the sheet falls by 23.4 kJ, which is two steps of 11.7 kJ.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate the value the wrong entry should have, and decide whether a wrong sign alone accounts for the slip. Then state whether the reaction is thermodynamically favored at 500 K.
+
+<Answer>
+
+One step down from the 400 K row:
+
+$$
+\begin{aligned}
+\Delta G^\circ_{500} &= 8.7 + (-11.7) \\
+&= \mathbf{-3.0}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+One step up from the 600 K row gives the same value:
+
+$$
+-14.7 - (-11.7) = -3.0
+$$
+
+The sheet has $+3.0$ where it should have $-3.0$. The size is right and the sign is not, so **a wrong sign alone accounts for the slip**.
+
+At 500 K the reaction is **thermodynamically favored**, because $\Delta G^\circ$ is negative there. The sheet as it was copied says the opposite.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Identify the two neighboring rows between which $\Delta G^\circ$ changes sign, first on the sheet as it was copied and then on the corrected sheet. Then use the corrected sheet to calculate the temperature at which $\Delta G^\circ = 0$.
+
+<Answer>
+
+- **As copied:** between **500 K and 600 K**, from $+3.0$ kJ to $-14.7$ kJ.
+- **Corrected:** between **400 K and 500 K**, from $+8.7$ kJ to $-3.0$ kJ.
+
+On the corrected sheet $\Delta G^\circ$ falls by 11.7 kJ for each 100 K. For each kelvin that is:
+
+$$
+\frac{11.7\ \text{kJ}}{100\ \text{K}} = 0.117\ \text{kJ/K}
+$$
+
+At 400 K, $\Delta G^\circ$ is $+8.7$ kJ, so it has 8.7 kJ to fall before it reaches zero. That takes:
+
+$$
+\frac{8.7\ \text{kJ}}{0.117\ \text{kJ/K}} = 74.4\ \text{K}
+$$
+
+$$
+\begin{aligned}
+T &= 400 + 74.4 \\
+&= 474.4\ \text{K}
+\end{aligned}
+$$
+
+The temperature at which $\Delta G^\circ = 0$ is **474 K**. It lies between 400 K and 500 K, as it must. The same method on the sheet as it was copied starts from $+3.0$ kJ at 500 K, with a fall of 17.7 kJ for each 100 K, and gives about 517 K, which is more than 40 K too high.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Calculate $\Delta H^\circ$ for the reaction from the $\Delta H_f^\circ$ values. Then use your $\Delta H^\circ$ and the 400 K row of the sheet to calculate $\Delta S^\circ$, in $\text{J/(mol}_\text{rxn}\text{·K)}$. Decide whether your $\Delta S^\circ$ agrees with the 11.7 kJ step of the sheet.
+
+<Answer>
+
+$\Delta H^\circ$ is the products' total minus the reactants' total. Hydrogen is an element in its standard state, so it goes in as zero:
+
+$$
+\begin{aligned}
+\Delta H^\circ &= -217.1 - (-272.6) \\
+&= \mathbf{+55.5}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Rearrange $\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$ to $T\Delta S^\circ = \Delta H^\circ - \Delta G^\circ$. At 400 K:
+
+$$
+\begin{aligned}
+T\Delta S^\circ &= 55.5 - 8.7 \\
+&= 46.8\ \text{kJ}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\Delta S^\circ &= \frac{46.8\ \text{kJ}}{400\ \text{K}} \\
+&= 0.1170\ \text{kJ/K}
+\end{aligned}
+$$
+
+In joules:
+
+$$
+\begin{aligned}
+&0.1170\ \text{kJ/K} \times 1{,}000 \\
+&\quad = 117.0\ \text{J/K}
+\end{aligned}
+$$
+
+$$
+\Delta S^\circ = \mathbf{+117.0}\ \text{J/(mol}_\text{rxn}\text{·K)}
+$$
+
+**It agrees with the sheet.** A rise of 100 K changes $\Delta G^\circ$ by $-(100\ \text{K})\,\Delta S^\circ$:
+
+$$
+\begin{aligned}
+&-(100)(0.1170) \\
+&\quad = -11.7\ \text{kJ}
+\end{aligned}
+$$
+
+That is the step found in part (a). So the sheet and the formation values tell one story, although the sheet holds no enthalpy and the formation values hold no entropy. The positive sign also fits the equation: 1 mol of gas becomes 2 mol of gas.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for the entry at 500 K, justified by the four changes (−5.7, −17.7, −11.7 and −11.7 kJ): equal steps in temperature should give equal changes, and the two changes that are not −11.7 kJ are the two that use the 500 K row. Naming the 500 K entry with no changes calculated earns 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for −3.0 kJ/mol of reaction, one step of 11.7 kJ from the 400 K row or from the 600 K row, together with "a wrong sign alone accounts for it" and "thermodynamically favored at 500 K". The value with no decision about the sign earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for both pairs of rows (as copied, 500 K and 600 K; corrected, 400 K and 500 K) together with 474 K from the corrected sheet (474 to 475 K earns it, by this route or by any other sound route from the corrected rows). A temperature from the sheet as copied, near 517 K, earns 0 points.</RubricLine>
+<RubricLine part="d" points={2}>1 point for +55.5 kJ/mol of reaction, acetone's value minus 2-propanol's with hydrogen as zero; an answer of −55.5 (reactants minus products) does not earn this point. 1 point for +117.0 J/(mol·K), from 55.5 minus 8.7, divided by 400 K, and given in joules, with the decision that it agrees with the step because 100 K times 0.1170 kJ/K is 11.7 kJ (+117 earns it). An answer left as 0.1170 kJ/K, or a value with no decision, does not earn the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={10} title="One reaction, written three ways" topic="9.3" points={4}>
+
+Carbon monoxide can turn into carbon and carbon dioxide. Here is that change written three ways. Equation 2 is equation 1 with every coefficient halved. Equation 3 is equation 1 reversed.
+
+Equation 1:
+
+$$
+\ce{2CO(g) -> C(s) + CO2(g)}
+$$
+
+Equation 2:
+
+$$
+\begin{aligned}
+&\ce{CO(g) ->} \\
+&\quad \ce{1/2 C(s) + 1/2 CO2(g)}
+\end{aligned}
+$$
+
+Equation 3:
+
+$$
+\ce{C(s) + CO2(g) -> 2CO(g)}
+$$
+
+Use these values for equation 1, and take them as constant:
+
+$$
+\begin{aligned}
+\Delta H^\circ &= -172.5\ \text{kJ/mol}_\text{rxn} \\
+\Delta S^\circ &= -175.9\ \text{J/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+<Part label="a">
+
+For equation 1, calculate the temperature at which $\Delta G^\circ = 0$, and state whether equation 1 is thermodynamically favored above that temperature or below it.
+
+<Answer>
+
+Put $\Delta S^\circ$ in kilojoules first:
+
+$$
+\frac{-175.9\ \text{J/K}}{1{,}000} = -0.1759\ \text{kJ/K}
+$$
+
+Set $\Delta G^\circ$ to zero and solve for $T$:
+
+$$
+\begin{aligned}
+T &= \frac{-172.5\ \text{kJ}}{-0.1759\ \text{kJ/K}} \\
+&= \mathbf{980.7}\ \text{K}
+\end{aligned}
+$$
+
+Equation 1 is thermodynamically favored **below** 980.7 K. Its $\Delta H^\circ$ is negative and works for it. Its $\Delta S^\circ$ is negative, so the entropy term works against it, and that term grows with the temperature.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+For equation 2, determine $\Delta H^\circ$ and $\Delta S^\circ$, and calculate the temperature at which $\Delta G^\circ = 0$.
+
+<Answer>
+
+Halving every coefficient halves the amount of everything that reacts, so it halves both values.
+
+$$
+\begin{aligned}
+\Delta H^\circ &= \frac{-172.5}{2} \\
+&= \mathbf{-86.25}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\Delta S^\circ &= \frac{-175.9}{2} \\
+&= \mathbf{-87.95}\ \text{J/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+In kilojoules:
+
+$$
+\frac{-87.95\ \text{J/K}}{1{,}000} = -0.08795\ \text{kJ/K}
+$$
+
+$$
+\begin{aligned}
+T &= \frac{-86.25\ \text{kJ}}{-0.08795\ \text{kJ/K}} \\
+&= \mathbf{980.7}\ \text{K}
+\end{aligned}
+$$
+
+The temperature is the same as for equation 1. Both values were halved, and the two halvings cancel in the ratio.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+For equation 3, determine $\Delta H^\circ$ and $\Delta S^\circ$ and the temperature at which $\Delta G^\circ = 0$, and state whether equation 3 is thermodynamically favored above that temperature or below it. Then identify the one quantity, of all those found in parts (a) to (c), that has the same value for all three equations.
+
+<Answer>
+
+Reversing an equation reverses the sign of each value and keeps its size.
+
+$$
+\begin{aligned}
+\Delta H^\circ &= \mathbf{+172.5}\ \text{kJ/mol}_\text{rxn} \\
+\Delta S^\circ &= \mathbf{+175.9}\ \text{J/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+In kilojoules, $\Delta S^\circ$ is $+0.1759$ kJ/K.
+
+$$
+\begin{aligned}
+T &= \frac{+172.5\ \text{kJ}}{+0.1759\ \text{kJ/K}} \\
+&= \mathbf{980.7}\ \text{K}
+\end{aligned}
+$$
+
+Equation 3 is thermodynamically favored **above** 980.7 K. Its $\Delta S^\circ$ is positive, so now heating helps.
+
+**The temperature at which $\Delta G^\circ = 0$** is the one quantity that is the same for all three equations: 980.7 K. $\Delta H^\circ$ and $\Delta S^\circ$ changed size in equation 2 and changed sign in equation 3. The favored side of the temperature is the same for equations 1 and 2, and it is the opposite side for equation 3.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+In a furnace, carbon dioxide passes over a bed of hot carbon at 1,200 K. Farther on, the gas cools to 700 K in a flue. Calculate $\Delta G^\circ$ for equation 1 at 1,200 K. Then identify which of equations 1 and 3 is thermodynamically favored at 1,200 K and which at 700 K, and so which carbon-containing gas is favored over the hot carbon.
+
+<Answer>
+
+For equation 1 at 1,200 K, the product $T\Delta S^\circ$ is:
+
+$$
+\begin{aligned}
+T\Delta S^\circ &= (1{,}200)(-0.1759) \\
+&= -211.08\ \text{kJ}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -172.5 - (-211.08) \\
+&= \mathbf{+38.6}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Equation 1 is unfavored at 1,200 K, so its reverse is favored: **equation 3 at 1,200 K**, with $\Delta G^\circ$ of $-38.6$ kJ. That fits part (c), because 1,200 K is above 980.7 K.
+
+700 K is below 980.7 K, so **equation 1 is favored at 700 K**.
+
+Over the hot carbon at 1,200 K, the favored gas is **carbon monoxide**, $\ce{CO}$: equation 3 turns carbon dioxide and carbon into it. In the cooler flue the favored direction is the other one, carbon monoxide turning into carbon dioxide and solid carbon, which is soot. Whether soot forms quickly there is a question of rate, which $\Delta G^\circ$ does not answer.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for 980.7 K (980 to 981 K earns it), with ΔS° in kJ/K, together with "favored below".</RubricLine>
+<RubricLine part="b" points={1}>1 point for both halved values, −86.25 kJ/mol of reaction and −87.95 J/(mol·K) (each is an exact tie, so −86.2 or −86.3 with −87.9 or −88.0 earns it), with the same temperature as in part (a), calculated or argued from the ratio.</RubricLine>
+<RubricLine part="c" points={1}>1 point for +172.5 kJ/mol of reaction and +175.9 J/(mol·K) with "favored above", together with naming the temperature at which ΔG° = 0 as the quantity that is the same for all three equations.</RubricLine>
+<RubricLine part="d" points={1}>1 point for +38.6 kJ/mol of reaction for equation 1 at 1,200 K (+38.5 to +38.6, or +39, earns it; so does −38.6 if it is clearly given for equation 3), together with equation 3 at 1,200 K, equation 1 at 700 K, and carbon monoxide as the favored gas over the hot carbon.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part C: Kinetic control, and free energy and equilibrium
+
+Five questions on what thermodynamics settles and what it leaves to the rate, and on the tie between $\Delta G^\circ$ and $K$. You will read tables in which the two pull against each other, find entries that cannot be right, and turn a measured mixture back into a free energy.
+
+<Question number={11} title="A converter's two demands" topic="9.4" points={5}>
+
+A sulfuric acid plant passes sulfur dioxide and oxygen through a converter to make sulfur trioxide:
+
+$$
+\begin{aligned}
+&\ce{2SO2(g) + O2(g) <=>} \\
+&\quad \ce{2SO3(g)}
+\end{aligned}
+$$
+
+The table gives $K_p$ for this equation at four temperatures, and the time a mixture of the two reactants takes to come to equilibrium, with no catalyst and over a vanadium(V) oxide catalyst. The $K_p$ values are calculated from tabulated data. The times are made up for illustration.
+
+| $T$ (K) | $K_p$ | No catalyst (h) | Catalyst (h) |
+|---|---|---|---|
+| 298 | $7 \times 10^{24}$ | over $10^6$ | over $10^6$ |
+| 700 | $9 \times 10^{4}$ | 2,000 | 0.5 |
+| 900 | 46 | 30 | 0.02 |
+| 1,100 | 0.37 | 0.8 | 0.001 |
+
+<Part label="a">
+
+Of the three columns of data, identify the one that thermodynamics fixes and the two that belong to kinetics. Then state which columns would read differently if the plant found a better catalyst.
+
+<Answer>
+
+**The $K_p$ column is thermodynamics.** At a given temperature $K_p$ depends only on the reactants and the products, the two ends of the reaction.
+
+**The two columns of times are kinetics.** How long a mixture takes to reach equilibrium depends on the route between the two ends: on the activation energy, and on how many collisions have that much energy at the temperature.
+
+A better catalyst gives a quicker route between the same two ends. So **only the "Catalyst" column** would change. The $K_p$ column would stay as it is, because the reactants and the products are the same substances. The "No catalyst" column would stay too, because that route has not changed.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Three vessels are filled with the same mixture of the two reactants, sealed, and held at 700 K with no catalyst. One vessel is opened and its gases are measured after 10 hours, one after 1,000 hours and one after 5,000 hours.
+
+- **After 10 hours:** 0.60 atm of sulfur dioxide, 0.30 atm of oxygen and 0.020 atm of sulfur trioxide.
+- **After 1,000 hours:** 0.12 atm of sulfur dioxide, 0.060 atm of oxygen and 0.50 atm of sulfur trioxide.
+- **After 5,000 hours:** 0.020 atm of sulfur dioxide, 0.010 atm of oxygen and 0.60 atm of sulfur trioxide.
+
+Calculate $Q$ for each sample. Then use the table to decide which sample is at equilibrium, and state the direction in which each of the other two is still changing.
+
+<Answer>
+
+The reaction quotient has the same form as $K_p$:
+
+$$
+Q = \frac{(P_{\ce{SO3}})^2}{(P_{\ce{SO2}})^2\,(P_{\ce{O2}})}
+$$
+
+After 10 hours:
+
+$$
+\begin{aligned}
+Q &= \frac{(0.020)^2}{(0.60)^2(0.30)} \\
+&= \frac{4.0 \times 10^{-4}}{0.108} \\
+&= \mathbf{3.7 \times 10^{-3}}
+\end{aligned}
+$$
+
+After 1,000 hours:
+
+$$
+\begin{aligned}
+Q &= \frac{(0.50)^2}{(0.12)^2(0.060)} \\
+&= \frac{0.25}{8.64 \times 10^{-4}} \\
+&= \mathbf{2.9 \times 10^{2}}
+\end{aligned}
+$$
+
+After 5,000 hours:
+
+$$
+\begin{aligned}
+Q &= \frac{(0.60)^2}{(0.020)^2(0.010)} \\
+&= \frac{0.36}{4.0 \times 10^{-6}} \\
+&= \mathbf{9.0 \times 10^{4}}
+\end{aligned}
+$$
+
+At 700 K the table gives $K_p = 9 \times 10^{4}$. Only the sample opened **after 5,000 hours** has $Q$ equal to $K_p$, so it is the one **at equilibrium**. The times agree: with no catalyst a mixture at 700 K needs 2,000 hours, and this one had 5,000.
+
+The other two were opened before 2,000 hours had passed, and each has $Q$ below $K_p$: by more than seven powers of ten after 10 hours, and by a factor of about 300 after 1,000 hours. With $Q$ below $K_p$ the **forward reaction** is still running in both, and sulfur trioxide is still forming. What those two vessels hold is set by how fast the reaction runs, not yet by $K_p$.
+
+Over the catalyst all three samples would have read $9.0 \times 10^{4}$, because 0.5 hour is enough there.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A technician measures $K_p$ again with the catalyst in the converter and records these values. One entry cannot be right.
+
+| $T$ (K) | $K_p$, catalyst in place |
+|---|---|
+| 298 | $7 \times 10^{24}$ |
+| 700 | $9 \times 10^{6}$ |
+| 900 | 46 |
+| 1,100 | 0.37 |
+
+Identify the entry, state what it must be, and justify your answer.
+
+<Answer>
+
+The entry at **700 K** cannot be right. It must be $\mathbf{9 \times 10^{4}}$, the value in the first table.
+
+A catalyst is not a reactant or a product. It changes the route and leaves the two ends where they were, so at each temperature $K_p$ is the same with the catalyst as without it. It speeds up the forward and the reverse reaction alike, so the mixture arrives sooner at the same equilibrium. The other three entries match the first table. The entry at 700 K is a hundred times too large.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+The plant's engineer sets two demands for the converter: $K_p$ above $10^4$, so that nearly all the sulfur dioxide is converted, and equilibrium reached within one hour. A supplier offers a cheaper catalyst. Take each of its times as 100 times the vanadium(V) oxide time at the same temperature. Determine whether any temperature in the table meets both demands with the cheaper catalyst. For each of 700 K, 900 K and 1,100 K, state which demand fails or that both are met.
+
+<Answer>
+
+The cheaper catalyst changes the times and nothing else. $K_p$ at each temperature stays as the table has it. Multiply each "Catalyst" time by 100 and test both demands.
+
+| $T$ (K) | $K_p$ | Cheaper catalyst (h) |
+|---|---|---|
+| 700 | $9 \times 10^{4}$ | 50 |
+| 900 | 46 | 2 |
+| 1,100 | 0.37 | 0.1 |
+
+- **700 K:** $K_p$ is above $10^4$, but 50 hours is not within one hour. The time fails.
+- **900 K:** $K_p$ is 46 and the time is 2 hours. Both fail.
+- **1,100 K:** 0.1 hour is within one hour, but $K_p$ is 0.37. $K_p$ fails.
+
+At 298 K the time is over $10^6$ hours with any of the three routes. So **no temperature in the table meets both demands with the cheaper catalyst**.
+
+The one temperature with a large enough $K_p$ and a time that a catalyst can bring under an hour is 700 K, and only the vanadium(V) oxide catalyst does it, at 0.5 hour. A catalyst's times could be at most twice the vanadium(V) oxide times and still pass, since 0.5 hour times 2 is one hour.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for naming the K column as thermodynamics and both time columns as kinetics, and for saying that a better catalyst changes the "Catalyst" times only. An answer that has the better catalyst change K earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the three values of Q, each with the pressure of sulfur trioxide squared on top and the pressure of sulfur dioxide squared times the pressure of oxygen below: 3.7 × 10⁻³, 2.9 × 10² (290) and 9.0 × 10⁴. 1 point for the decision: only the 5,000-hour sample is at equilibrium, because its Q equals K at 700 K (and 5,000 hours is more than the table's 2,000), and the other two have Q below K, so the forward reaction is still running in both. A decision that compares no value of Q with K does not earn the second point. One value of Q wrong earns the second point only, if the decision follows from the values found.</RubricLine>
+<RubricLine part="c" points={1}>1 point for the entry at 700 K, corrected to 9 × 10⁴, with the reason: a catalyst does not change K (it changes the rate, or the route, and not the reactants or the products). The entry named with no reason earns 0 points.</RubricLine>
+<RubricLine part="d" points={1}>1 point for "none", supported from the table: at 700 K the cheaper catalyst needs 50 hours (K passes, the time fails), at 900 K K is 46 and the time is 2 hours (both fail), and at 1,100 K the time is 0.1 hour but K is 0.37 (K fails). "None" with no values, or an answer that changes K for the cheaper catalyst, earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={12} title="One flash, and a pair of lenses" topic="9.4" points={4}>
+
+Light sets off both of the changes below, but it does not do the same job in each.
+
+**Change 1.** A sealed glass bulb holds a mixture of hydrogen and chlorine gases. In the dark the mixture sits unchanged for weeks. One short flash of bright light, and within a moment all of it has reacted, although the light is already off again:
+
+$$
+\ce{H2(g) + Cl2(g) -> 2HCl(g)}
+$$
+
+**Change 2.** The glass of some eyeglass lenses holds tiny crystals of silver chloride. In the simplest picture, sunlight turns the crystals into specks of silver, which darken the lens, and chlorine, which stays trapped in the glass beside the silver. Model the change with this equation, which writes the chlorine as the gas so that table values can be used:
+
+$$
+\ce{2AgCl(s) -> 2Ag(s) + Cl2(g)}
+$$
+
+The lenses stay dark for as long as the sun shines on them. Indoors they clear again within minutes, as the silver and the chlorine turn back into silver chloride.
+
+Use these values, for 25 °C. The standard free energy of formation of an element in its standard state is zero.
+
+| Substance | $\Delta G^\circ_f$ (kJ/mol) |
+|---|---|
+| $\ce{HCl(g)}$ | $-95.3$ |
+| $\ce{AgCl(s)}$ | $-109.8$ |
+
+<Part label="a">
+
+Calculate $\Delta G^\circ$ for each change as written, and state whether each is thermodynamically favored at 25 °C.
+
+<Answer>
+
+For each, add up the products' values and subtract the reactants'. The elements count zero.
+
+Change 1:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= 2(-95.3) - 0 \\
+&= \mathbf{-190.6}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Negative, so change 1 is **thermodynamically favored**.
+
+Change 2:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= 0 - 2(-109.8) \\
+&= \mathbf{+219.6}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Positive, so change 2 is **thermodynamically unfavored**. The reverse change, silver and chlorine making silver chloride, is the favored one.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+For change 1, state what the flash did. Support your answer with the value from part (a) and one observation from the description.
+
+<Answer>
+
+The flash **started a favored reaction that was under kinetic control**. It did not make the reaction favored.
+
+- **The value.** $\Delta G^\circ$ is $-190.6\ \text{kJ/mol}_\text{rxn}$, so hydrogen chloride was the favored product all along, in the dark as well. The mixture in the dark was not at equilibrium. It was held back by its rate: the reaction has to begin by breaking bonds, and at room temperature almost no collisions have the activation energy.
+- **The observation.** The reaction ran to the end after the light was off. So the light was not paying for the change. It supplied the energy for the first bonds to break, and from there the favored reaction carried on without it.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A classmate says: "The sunlight does for the lenses what the flash did for the bulb." If the classmate were right, predict what a darkened lens would do when it is carried indoors. Then use the value from part (a) and the description to decide whether the classmate is right, and state what the sunlight does.
+
+<Answer>
+
+**The prediction.** The flash started a favored reaction, which then ran to the end without it. If the sunlight did the same job, the silver and the chlorine would be the favored products, and nothing would turn them back. A darkened lens carried indoors would **stay dark**.
+
+**The test.** The description says the lenses clear again within minutes indoors. And $\Delta G^\circ$ is $+219.6\ \text{kJ/mol}_\text{rxn}$: breaking silver chloride into silver and chlorine is thermodynamically unfavored. **The classmate is not right.**
+
+The sunlight is **energy from outside that drives an unfavored change**. The change goes only while something outside supplies the energy, so the lenses darken only while the sun is on them. With the light removed, the reverse change, which has $\Delta G^\circ$ of $-219.6\ \text{kJ/mol}_\text{rxn}$, takes the silver and the chlorine back to silver chloride.
+
+Light did not start a reaction here that then ran without it. It has to keep arriving.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Two made-up colorless compounds, A and C, each turn blue under a lamp: A changes into a blue compound B, and C changes into a blue compound D. No value of $\Delta G^\circ$ is known for either change. The lamp is switched off, and the share of each sample that is the blue compound is measured in the dark.
+
+| Time (min) | Percent B | Percent D |
+|---|---|---|
+| 0 | 90 | 90 |
+| 10 | 30 | 90 |
+| 20 | 10 | 90 |
+
+For each of the two changes, A into B and C into D, determine the sign of $\Delta G^\circ$ if the data decide it, or state that the data do not decide it.
+
+<Answer>
+
+**A into B: $\Delta G^\circ$ is positive.** In the dark, B goes on turning back into A. After 20 minutes the sample holds 10 percent B and 90 percent A, one B for every nine A, and it has moved in that direction the whole time. So the mixture that this pair settles to holds far more A than B. That is a $K$ below 1 for A changing into B, and a $K$ below 1 goes with a positive $\Delta G^\circ$. The lamp was supplying energy from outside, as the sun does for the lenses in change 2.
+
+**C into D: the data do not decide it.** The sample stays at 90 percent D. Two cases fit that.
+
+- C into D is favored, and the lamp only started it, as the flash did in change 1. Then nothing takes D back.
+- C into D is unfavored, and D turning back into C is favored but too slow to see in 20 minutes. That sample is under kinetic control.
+
+A mixture that is not changing does not say which. One more test would: add a catalyst for the change in the dark. If the blue fades until less than half of the sample is D, $\Delta G^\circ$ for C into D is positive. If more than half is still D when the change stops, it is negative.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for both values with their signs, −190.6 and +219.6 kJ for each mole of reaction, with change 1 called favored and change 2 unfavored. One value wrong, or a missing sign, earns 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for saying that the flash started a reaction that was already favored (it got the reaction over its activation energy, or ended kinetic control), supported by the negative ΔG° and by the reaction finishing with the light off. "The light made the reaction favored" earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for the prediction (the lens would stay dark indoors), set against the description (it clears within minutes) and the positive ΔG°, with the conclusion that the classmate is not right and the sunlight supplies energy from outside to an unfavored change. "The light is a catalyst" or "the light gets it over its barrier" earns 0 points.</RubricLine>
+<RubricLine part="d" points={1}>1 point for both decisions with their reasons: ΔG° is positive for A into B, because in the dark B goes on turning into A until the sample is 10 percent B (far more A than B, so K is below 1); and the data do not decide the sign for C into D, because a steady 90 percent fits a favored change that the lamp started as well as an unfavored one whose return is too slow to see. A sign given for C into D, or the sign for A into B with no reason, earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={13} title="Four pairs, two of them impossible" topic="9.5" points={5}>
+
+A student lists $\Delta G^\circ$ and $K$ at 298 K for four made-up reactions, W, X, Y and Z. The four values of $\Delta G^\circ$ are right. Two of the values of $K$ are not.
+
+| Reaction | $\Delta G^\circ$ ($\text{kJ/mol}_\text{rxn}$) | $K$ |
+|---|---|---|
+| W | $-57.1$ | $1 \times 10^{10}$ |
+| X | $+11.4$ | $1 \times 10^{-2}$ |
+| Y | $-45.6$ | $1 \times 10^{-8}$ |
+| Z | $-5.7$ | $1 \times 10^{5}$ |
+
+Use these values: at 298 K, $RT$ is 2.48 kJ/mol, and each 5.7 kJ/mol of $\Delta G^\circ$ is one factor of ten in $K$.
+
+<Part label="a">
+
+Without a calculator, identify the two reactions whose $K$ cannot be right. For each, state whether $K$ is on the wrong side of 1 or is the wrong size.
+
+<Answer>
+
+Test each pair twice: the side of 1 first, then the size.
+
+**The side of 1.** A negative $\Delta G^\circ$ goes with $K$ above 1, and a positive one with $K$ below 1. W, X and Z pass. **Y fails**: its $\Delta G^\circ$ is negative and its $K$, $1 \times 10^{-8}$, is below 1.
+
+**The size.** Divide the size of each $\Delta G^\circ$ by 5.7 kJ to count the factors of ten.
+
+| Reaction | Factors from $\Delta G^\circ$ | Factors listed |
+|---|---|---|
+| W | 57.1 ÷ 5.7 ≈ 10 | 10 |
+| X | 11.4 ÷ 5.7 = 2 | −2 |
+| Y | 45.6 ÷ 5.7 = 8 | −8 |
+| Z | 5.7 ÷ 5.7 = 1 | 5 |
+
+**Z fails**: 5.7 kJ is one factor of ten, and the list has five. Y's $K$ has the right number of factors of ten, on the wrong side of 1.
+
+So **Y is on the wrong side of 1**, and **Z is the wrong size**.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+State what $K$ should be for each of the two reactions you identified.
+
+<Answer>
+
+**Y:** $\Delta G^\circ$ is negative, so $K$ is above 1, and 45.6 kJ is eight factors of ten.
+
+$$
+K = \mathbf{1 \times 10^{8}}
+$$
+
+**Z:** $\Delta G^\circ$ is negative, so $K$ is above 1, and 5.7 kJ is one factor of ten.
+
+$$
+K = \mathbf{10}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+For the reaction whose $K$ you called the wrong size in part (a), calculate $K$ at 298 K from $\Delta G^\circ = -RT\ln K$, with $R$ = 8.314 J/(mol·K), to confirm your value in part (b).
+
+<Answer>
+
+$R$ is in joules, so $\Delta G^\circ$ goes in as joules:
+
+$$
+\begin{aligned}
+&-5.7\ \text{kJ/mol}_\text{rxn} \\
+&\quad = -5{,}700\ \text{J/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Divide both sides of the equation by $-RT$ to get $\ln K$. The two minus signs make a plus.
+
+$$
+\begin{aligned}
+\ln K &= \frac{-\Delta G^\circ}{RT} \\
+&= \frac{5{,}700}{(8.314)(298)} \\
+&= \frac{5{,}700}{2{,}477.6} \\
+&= 2.301
+\end{aligned}
+$$
+
+$$
+K = e^{2.301} = 9.98
+$$
+
+To the two figures of the data, $K = \mathbf{10}$, as the estimate said. The exponent is positive, so $K$ is above 1, which fits a negative $\Delta G^\circ$.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for Y, on the wrong side of 1 (a negative ΔG° needs K above 1). 1 point for Z, the wrong size (5.7 kJ is one factor of ten, not five). A reaction named with no fault stated does not earn its point. Naming W or X as wrong loses 1 of the points earned in this part.</RubricLine>
+<RubricLine part="b" points={1}>1 point for both corrected values: 1 × 10⁸ for Y and 10 for Z. One of the two earns 0 points.</RubricLine>
+<RubricLine part="c" points={2}>1 point for ΔG° in joules (5,700 J) divided by RT with T = 298 K, giving ln K = 2.30 (2.3 is accepted). 1 point for K = 10 (9.9 to 10.1 is accepted). An exponent of 0.0023 from ΔG° left in kilojoules, with K = 1.0, earns 0 points. An exponent of −2.30 with K = 0.10 earns the first point only.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={14} title="Water gas, and a claim about hydrogen" topic="9.5" points={7}>
+
+Steam passed over white-hot coke, which is nearly pure carbon, makes a fuel mixture of carbon monoxide and hydrogen called water gas:
+
+$$
+\begin{aligned}
+&\ce{C(s) + H2O(g) <=>} \\
+&\quad \ce{CO(g) + H2(g)}
+\end{aligned}
+$$
+
+Use these values, and take them as the same at every temperature:
+
+$$
+\begin{aligned}
+\Delta H^\circ &= +131.3\ \text{kJ/mol}_\text{rxn} \\
+\Delta S^\circ &= +133.9\ \text{J/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+The table gives $K_p$ for the equation at four temperatures, calculated from these two values.
+
+| $T$ (K) | $K_p$ |
+|---|---|
+| 800 | 0.026 |
+| 900 | 0.24 |
+| 1,000 | 1.4 |
+| 1,100 | 5.7 |
+
+<Part label="a">
+
+Using only the table of $K_p$, identify the two temperatures between which $\Delta G^\circ$ changes sign, and state its sign at each of the two.
+
+<Answer>
+
+$\Delta G^\circ$ changes sign **between 900 K and 1,000 K**.
+
+$\Delta G^\circ$ is zero where $K_p$ is exactly 1, positive where $K_p$ is below 1 and negative where $K_p$ is above 1. In the table $K_p$ passes 1 between 900 K, where it is 0.24, and 1,000 K, where it is 1.4. So $\Delta G^\circ$ is **positive at 900 K** and **negative at 1,000 K**.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Before rounding, $K_p$ at 900 K is 0.236. Calculate $\Delta G^\circ$ at 900 K from this value, in $\text{kJ/mol}_\text{rxn}$, with $R$ = 8.314 J/(mol·K).
+
+<Answer>
+
+$K_p$ is below 1, so $\Delta G^\circ$ must come out positive. With $R$ in J/(mol·K) the answer comes out in joules.
+
+$$
+\begin{aligned}
+&\Delta G^\circ = -RT\ln K_p \\
+&= -(8.314)(900)\ln(0.236) \\
+&= -(7{,}482.6)(-1.4439) \\
+&= +10{,}804\ \text{J/mol}_\text{rxn}
+\end{aligned}
+$$
+
+In kilojoules:
+
+$$
+\begin{aligned}
+&+10{,}804\ \text{J/mol}_\text{rxn} \\
+&\quad = \mathbf{+10.8}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate $\Delta G^\circ$ at 900 K again, this time from $\Delta H^\circ$ and $\Delta S^\circ$, and state whether the two routes agree.
+
+<Answer>
+
+Put the entropy change in kilojoules first:
+
+$$
+\begin{aligned}
+&+133.9\ \text{J/(mol}_\text{rxn}\text{·K)} \\
+&\quad = +0.1339\ \text{kJ/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+The entropy term at 900 K:
+
+$$
+\begin{aligned}
+T\Delta S^\circ &= (900)(0.1339) \\
+&= 120.5\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+It is 120.51 before rounding. Then
+
+$$
+\begin{aligned}
+\Delta G^\circ &= \Delta H^\circ - T\Delta S^\circ \\
+&= 131.3 - 120.5 \\
+&= \mathbf{+10.8}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+**The two routes agree**: $+10.8\ \text{kJ/mol}_\text{rxn}$ from the equilibrium constant and $+10.8\ \text{kJ/mol}_\text{rxn}$ from the enthalpy and entropy changes.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+A student claims: "At any temperature where $\Delta G^\circ$ is positive, the reaction is thermodynamically unfavored, so no hydrogen forms." Test the claim at 900 K. Steam is passed over coke at 900 K and its pressure is held at 1.0 atm. All the carbon monoxide and hydrogen come from the reaction. Calculate the pressure of hydrogen at equilibrium, using $K_p$ = 0.236, and state whether the claim holds.
+
+<Answer>
+
+Carbon is a pure solid, so it is left out of the $K_p$ expression:
+
+$$
+K_p = \frac{(P_{\ce{CO}})(P_{\ce{H2}})}{P_{\ce{H2O}}}
+$$
+
+The equation makes one $\ce{CO}$ for each $\ce{H2}$, and both come only from the reaction, so their pressures are equal. Call each one $x$. The steam is held at 1.0 atm.
+
+$$
+\begin{aligned}
+0.236 &= \frac{x^2}{1.0} \\
+x &= \sqrt{0.236} \\
+&= 0.486\ \text{atm}
+\end{aligned}
+$$
+
+To two figures, the pressure of hydrogen is **0.49 atm**, and the pressure of carbon monoxide is the same.
+
+**The claim does not hold.** "Unfavored" is right at 900 K: $\Delta G^\circ$ there is $+10.8\ \text{kJ/mol}_\text{rxn}$. But a positive $\Delta G^\circ$ means $K_p$ below 1, not $K_p$ of zero. Steam alone has $Q = 0$, which is below 0.236, so the reaction runs forward until $Q$ reaches $K_p$. At 900 K that leaves hydrogen at nearly half the pressure of the steam.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for between 900 K and 1,000 K, with ΔG° positive at 900 K and negative at 1,000 K, read from K passing 1 (0.24 below 1, 1.4 above 1). The two temperatures with no signs earn 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for the substitution with T = 900 K and the result in joules, about +10,800 J. 1 point for +10.8 kJ for each mole of reaction, with its sign. An answer worked from the table's rounded 0.24 (+10.7 kJ) earns both points. Joules reported as kilojoules, or a negative answer, does not earn the second point.</RubricLine>
+<RubricLine part="c" points={2}>1 point for ΔS° changed to 0.1339 kJ/K before the subtraction, and TΔS° = 120.5 kJ. 1 point for +10.8 kJ for each mole of reaction and the statement that the two routes agree. With ΔS° left in joules (131.3 minus 120,510) the part earns 0 points.</RubricLine>
+<RubricLine part="d" points={2}>1 point for setting K equal to the pressure of carbon monoxide times the pressure of hydrogen, over the pressure of steam, with carbon left out and the two product pressures equal. 1 point for 0.49 atm of hydrogen (0.48 to 0.49 is accepted) and for rejecting the claim. Rejecting the claim with no K expression and no pressure earns 0 points for the part.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={15} title="A mixture of two sugar phosphates" topic="9.5" points={4}>
+
+On the way to breaking down glucose, a living cell turns glucose 6-phosphate (G6P) into fructose 6-phosphate (F6P). Each molecule of one rearranges into one molecule of the other:
+
+$$
+\text{G6P(aq)} \rightleftharpoons \text{F6P(aq)}
+$$
+
+A chemist dissolves pure G6P in water at 25 °C (298 K) with a trace of the enzyme that catalyzes the change. Take the mixture at equilibrium as 67 percent G6P and 33 percent F6P.
+
+<Part label="a">
+
+Calculate $K_c$ for the equation as written.
+
+<Answer>
+
+Both substances are in the same solution, so their concentrations are in the same ratio as their percentages.
+
+$$
+\begin{aligned}
+K_c &= \frac{[\text{F6P}]}{[\text{G6P}]} \\
+&= \frac{33}{67} \\
+&= 0.493
+\end{aligned}
+$$
+
+To two figures, $K_c = \mathbf{0.49}$. Carry 0.493 into part (b).
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $\Delta G^\circ$ for the equation at 298 K, in $\text{kJ/mol}_\text{rxn}$, with $R$ = 8.314 J/(mol·K). Then compare its size with $RT$, which is 2.48 kJ/mol at 298 K, and state what the comparison says about how far $K_c$ is from 1.
+
+<Answer>
+
+$K_c$ is below 1, so $\Delta G^\circ$ must come out positive.
+
+$$
+\begin{aligned}
+&\Delta G^\circ = -RT\ln K_c \\
+&= -(8.314)(298)\ln(0.493) \\
+&= -(2{,}477.6)(-0.7072) \\
+&= +1{,}752\ \text{J/mol}_\text{rxn}
+\end{aligned}
+$$
+
+In kilojoules:
+
+$$
+\begin{aligned}
+&+1{,}752\ \text{J/mol}_\text{rxn} \\
+&\quad = \mathbf{+1.8}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+**Beside $RT$.** The size of $\Delta G^\circ$, 1.8 kJ, is smaller than $RT$, 2.48 kJ. It is about 0.7 of $RT$. When $\Delta G^\circ$ is smaller in size than $RT$, $K$ is **close to 1**: here it is 0.49, within about a factor of two of 1. Neither side wins by much, and the mixture holds a large share of both substances.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A second solution is made at 25 °C with G6P at 0.040 M and F6P at 0.030 M, and the same enzyme. Calculate $Q$ for this mixture, use it to determine which of the two concentrations rises, and calculate both concentrations at equilibrium.
+
+<Answer>
+
+$Q$ has the same form as $K_c$:
+
+$$
+\begin{aligned}
+Q &= \frac{[\text{F6P}]}{[\text{G6P}]} \\
+&= \frac{0.030}{0.040} \\
+&= \mathbf{0.75}
+\end{aligned}
+$$
+
+$Q$ is 0.75 and $K_c$ is 0.49. $Q$ is above $K_c$, so the reaction runs backward, and **the concentration of G6P rises**. It rises although the mixture already holds more G6P than F6P. What decides the direction is $Q$ beside $K_c$, not which substance there is more of.
+
+One molecule turns into one molecule, so the two concentrations always add up to the same total:
+
+$$
+0.040 + 0.030 = 0.070\ \text{M}
+$$
+
+$K_c$ belongs to the equation and the temperature, so this solution ends with the same shares as the first one: 67 percent G6P and 33 percent F6P.
+
+$$
+\begin{aligned}
+[\text{G6P}] &= (0.67)(0.070) \\
+&= 0.0469\ \text{M}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\text{F6P}] &= (0.33)(0.070) \\
+&= 0.0231\ \text{M}
+\end{aligned}
+$$
+
+To two figures, **0.047 M of G6P and 0.023 M of F6P**. Check them against $K_c$:
+
+$$
+\frac{0.0231}{0.0469} = 0.49
+$$
+
+The concentration of G6P has risen from 0.040 M to 0.047 M, and that of F6P has fallen from 0.030 M to 0.023 M, as $Q$ said they would.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for K as the concentration of F6P over the concentration of G6P, 33 over 67, equal to 0.49. The fraction upside down (2.0) earns 0 points.</RubricLine>
+<RubricLine part="b" points={2}>1 point for ΔG° = +1.8 kJ for each mole of reaction (+1.7 to +1.8 is accepted), with its sign, shown in joules first (about +1,750 J). 1 point for saying that 1.8 kJ is smaller than RT (2.48 kJ) and that K is therefore close to 1. A value that follows correctly from an upside-down K in part (a) (−1.8 kJ) earns the first point.</RubricLine>
+<RubricLine part="c" points={1}>1 point for Q = 0.75, above K (0.49), so that the concentration of G6P rises, with 0.047 M of G6P and 0.023 M of F6P at equilibrium, found from the 67 to 33 shares of the total, 0.070 M, or from K with the two concentrations adding up to 0.070 M. Both routes earn the point. A direction given with no Q, or the two values exchanged, earns 0 points.</RubricLine>
+</Rubric>
+
+</Question>
+
+## Part D: Dissolving, and coupled reactions
+
+Four questions on the free energy of dissolving and on reactions that go together. You will set three solids with three patterns of signs side by side and test a claim against them, compare a salt with its own hydrate, ask how many reactions one favored reaction can pay for, and find a coupled pair in a bottle of antacid.
+
+<Question number={16} title="Three solids, three patterns of signs" topic="9.6" points={6}>
+
+Three solids dissolve in water by the equations numbered below.
+
+Equation 1, sodium nitrate:
+
+$$
+\begin{aligned}
+&\ce{NaNO3(s) ->} \\
+&\quad \ce{Na^+(aq) + NO3^-(aq)}
+\end{aligned}
+$$
+
+Equation 2, silver chloride:
+
+$$
+\begin{aligned}
+&\ce{AgCl(s) ->} \\
+&\quad \ce{Ag^+(aq) + Cl^-(aq)}
+\end{aligned}
+$$
+
+Equation 3, calcium hydroxide:
+
+$$
+\begin{aligned}
+&\ce{Ca(OH)2(s) ->} \\
+&\quad \ce{Ca^2+(aq) + 2OH^-(aq)}
+\end{aligned}
+$$
+
+The table gives the enthalpy change and the entropy change of each dissolving at 25 °C, for one mole of the solid. Use these values, with $T$ = 298 K and $R$ = 8.314 J/(mol·K).
+
+| Equation | $\Delta H^\circ$ (kJ/mol) | $\Delta S^\circ$ (J/(mol·K)) |
+|---|---|---|
+| 1, sodium nitrate | $+20.5$ | $+88.9$ |
+| 2, silver chloride | $+65.5$ | $+33.0$ |
+| 3, calcium hydroxide | $-17.6$ | $-158.1$ |
+
+<Part label="a">
+
+Calculate $\Delta G^\circ$ at 298 K for each of the three dissolvings, in $\text{kJ/mol}_\text{rxn}$.
+
+<Answer>
+
+Use $\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$ for each. The entropy change is in joules and the enthalpy change is in kilojoules, so change $\Delta S^\circ$ to kilojoules first, on a line of its own.
+
+**Sodium nitrate.** The entropy change in kilojoules:
+
+$$
+\begin{aligned}
+&+88.9\ \text{J/(mol}_\text{rxn}\text{·K)} \\
+&\quad = +0.0889\ \text{kJ/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+The entropy term:
+
+$$
+\begin{aligned}
+T\Delta S^\circ &= (298)(0.0889) \\
+&= +26.5\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Then:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= 20.5 - 26.5 \\
+&= \mathbf{-6.0}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+**Silver chloride.**
+
+$$
+\begin{aligned}
+&+33.0\ \text{J/(mol}_\text{rxn}\text{·K)} \\
+&\quad = +0.0330\ \text{kJ/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+T\Delta S^\circ &= (298)(0.0330) \\
+&= +9.8\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\Delta G^\circ &= 65.5 - 9.8 \\
+&= \mathbf{+55.7}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+**Calcium hydroxide.** Here $\Delta S^\circ$ is negative, so the entropy term is negative too, and subtracting it adds.
+
+$$
+\begin{aligned}
+&-158.1\ \text{J/(mol}_\text{rxn}\text{·K)} \\
+&\quad = -0.1581\ \text{kJ/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+T\Delta S^\circ &= (298)(-0.1581) \\
+&= -47.1\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -17.6 - (-47.1) \\
+&= \mathbf{+29.5}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The same three solids are stirred into hot water at 80 °C, which is 353 K. Take $\Delta H^\circ$ and $\Delta S^\circ$ to be the same as at 298 K. Identify the one solid whose $\Delta G^\circ$ of dissolving is higher at 353 K than at 298 K, and calculate its $\Delta G^\circ$ at 353 K.
+
+<Answer>
+
+**Calcium hydroxide, with $\Delta G^\circ = +38.2\ \text{kJ/mol}_\text{rxn}$ at 353 K.**
+
+In $\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$ the temperature multiplies only the entropy change. So the sign of $\Delta S^\circ$ decides which way $\Delta G^\circ$ moves when the water is hotter.
+
+- Sodium nitrate and silver chloride have a positive $\Delta S^\circ$. A larger $T$ makes $-T\Delta S^\circ$ more negative, and $\Delta G^\circ$ falls.
+- Calcium hydroxide has a negative $\Delta S^\circ$. A larger $T$ makes $-T\Delta S^\circ$ more positive, and $\Delta G^\circ$ rises.
+
+For calcium hydroxide at 353 K, with $\Delta S^\circ$ in kilojoules as in part (a):
+
+$$
+\begin{aligned}
+T\Delta S^\circ &= (353)(-0.1581) \\
+&= -55.8\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -17.6 - (-55.8) \\
+&= \mathbf{+38.2}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+That is 8.7 kJ/mol higher than the $+29.5$ kJ/mol of part (a). The measurements agree: calcium hydroxide is one of the few common solids that dissolve less in hot water than in cold.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A student says: "A solid that warms the water as it dissolves is always very soluble, and a solid that cools the water is not." Use the table and your values from part (a) to decide whether the claim holds. Name each solid that goes against it.
+
+<Answer>
+
+**The claim does not hold. Calcium hydroxide and sodium nitrate both go against it.**
+
+A solid warms the water when its dissolving releases energy, which is a negative $\Delta H^\circ$. Only calcium hydroxide has one ($-17.6$ kJ/mol). But its $\Delta G^\circ$ of dissolving is $+29.5$ kJ/mol, so its $K$ is below 1 and it dissolves only a little. It warms the water and is not very soluble.
+
+Sodium nitrate goes against the other half of the claim. Its $\Delta H^\circ$ is $+20.5$ kJ/mol, so it cools the water, and it is the only one of the three with a negative $\Delta G^\circ$ ($-6.0$ kJ/mol). It cools the water and dissolves the furthest of the three.
+
+Silver chloride cools the water and has $\Delta G^\circ = +55.7$ kJ/mol, so it agrees with the claim. One case that agrees does not rescue a claim that says "always".
+
+The sign of $\Delta H^\circ$ says whether the water warms or cools. How far the dissolving goes is set by $\Delta G^\circ$, which holds the entropy term as well.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Calculate the equilibrium constant, $K$, of equation 3 at 298 K.
+
+<Answer>
+
+Rearranged, $\Delta G^\circ = -RT\ln K$ is $K = e^{-\Delta G^\circ/RT}$. $R$ is in joules, so $\Delta G^\circ$ goes in as joules:
+
+$$
+\begin{aligned}
+&+29.5\ \text{kJ/mol}_\text{rxn} \\
+&\quad = +29{,}500\ \text{J/mol}_\text{rxn}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+-\frac{\Delta G^\circ}{RT} &= -\frac{29{,}500}{(8.314)(298)} \\
+&= -11.91 \\
+K &= e^{-11.91} \\
+&= \mathbf{6.7 \times 10^{-6}}
+\end{aligned}
+$$
+
+$K$ has no unit. For equation 3 it is $[\ce{Ca^2+}][\ce{OH^-}]^2$, the $K_{sp}$ of calcium hydroxide. It is far below 1, as a positive $\Delta G^\circ$ requires: a saturated solution holds only about a hundredth of a mole of calcium hydroxide in a liter, although the dissolving released energy.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for changing each entropy change to kJ/(mol·K) (or each enthalpy change to joules) before the subtraction, shown for at least one solid; 1 point for all three values with their signs: $-6.0$, $+55.7$ and $+29.5$ kJ/mol ($-5.9$ to $-6.0$, $+55.6$ to $+55.7$, $+29.5$ to $+29.6$). A value of $-64.7$ kJ/mol for calcium hydroxide, from a lost minus sign, does not earn the second point.</RubricLine>
+<RubricLine part="b" points={1}>1 point for calcium hydroxide, chosen because its entropy change is negative (so the entropy term grows more positive as the temperature rises), with its free energy change at 353 K, $+38.2$ kJ/mol. A value of $-73.4$ kJ/mol, from a lost minus sign, earns 0 points. Calcium hydroxide named with no value earns 0 points, and so does a value for any other solid.</RubricLine>
+<RubricLine part="c" points={1}>1 point for saying that the claim fails and naming both solids that go against it, each with its data: calcium hydroxide warms the water (negative enthalpy change) and its free energy change of dissolving is positive, $+29.5$ kJ/mol, so it is not very soluble; sodium nitrate cools the water (positive enthalpy change) and its free energy change is negative, $-6.0$ kJ/mol, so it is the most soluble of the three. Naming silver chloride as going against the claim does not earn the point. "The claim is false" with no solid and no value earns 0 points.</RubricLine>
+<RubricLine part="d" points={2}>1 point for the free energy change in joules (29,500 J/mol) divided by $RT$ with $T$ = 298 K, with the minus sign in the exponent; 1 point for $K = 6.7 \times 10^{-6}$ ($6.6 \times 10^{-6}$ to $6.8 \times 10^{-6}$), or the value that follows correctly from the student's own answer to (a). An answer near 0.99, from leaving the free energy change in kilojoules, earns 0 points for the part.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={17} title="Epsom salt and the dry salt" topic="9.6" points={4}>
+
+Magnesium sulfate is sold in two forms. The anhydrous solid, $\ce{MgSO4}$, is a white powder that chemists use to take traces of water out of other liquids. Epsom salt, sold for bath water, is the hydrate $\ce{MgSO4*7H2O}$: its crystals hold seven water molecules for each magnesium ion.
+
+Both solids dissolve to give the same ions in water.
+
+Equation 1, the anhydrous solid:
+
+$$
+\begin{aligned}
+&\ce{MgSO4(s) ->} \\
+&\quad \ce{Mg^2+(aq) + SO4^2-(aq)}
+\end{aligned}
+$$
+
+Equation 2, Epsom salt:
+
+$$
+\begin{aligned}
+&\ce{MgSO4*7H2O(s) ->} \\
+&\quad \ce{Mg^2+(aq) + SO4^2-(aq)} \\
+&\quad +\ \ce{7H2O(l)}
+\end{aligned}
+$$
+
+At 25 °C, use $\Delta H^\circ = -91.3\ \text{kJ/mol}_\text{rxn}$ for equation 1, and take $\Delta H^\circ = +16.1\ \text{kJ/mol}_\text{rxn}$ for equation 2.
+
+<Part label="a">
+
+A spoonful of each solid is stirred into its own cup of water at 25 °C. State which solid warms its water and which cools it. Justify your answer with the values given.
+
+<Answer>
+
+**The anhydrous solid warms the water, and Epsom salt cools it.**
+
+$\Delta H^\circ$ of equation 1 is negative ($-91.3$ kJ/mol): the dissolving releases energy, the water around it takes that energy in, and its temperature rises.
+
+$\Delta H^\circ$ of equation 2 is positive ($+16.1$ kJ/mol): the dissolving takes energy in from the water, and the water's temperature falls.
+
+The two cups end with the same ions in them. The sign of the temperature change depends on the solid that the ions came from.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+When the dry powder takes up liquid water, it becomes Epsom salt, by equation 3:
+
+$$
+\begin{aligned}
+&\ce{MgSO4(s) + 7H2O(l) ->} \\
+&\quad \ce{MgSO4*7H2O(s)}
+\end{aligned}
+$$
+
+Equation 3 is thermodynamically favored at 25 °C. Take its $\Delta S^\circ$ as $-210$ J/(mol·K). Calculate $T\Delta S^\circ$ for equation 3 at 298 K. Then determine the sign that its $\Delta H^\circ$ must have, and the value that the size of its $\Delta H^\circ$ must be greater than.
+
+<Answer>
+
+**The entropy term is $-62.6\ \text{kJ/mol}_\text{rxn}$, so $\Delta H^\circ$ must be negative and greater in size than 62.6 kJ/mol.**
+
+Change the entropy change to kilojoules first:
+
+$$
+\begin{aligned}
+&-210\ \text{J/(mol}_\text{rxn}\text{·K)} \\
+&\quad = -0.210\ \text{kJ/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+The entropy term:
+
+$$
+\begin{aligned}
+T\Delta S^\circ &= (298)(-0.210) \\
+&= \mathbf{-62.6}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+The reaction is favored, so $\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$ is below zero. Subtracting $-62.6$ adds 62.6:
+
+$$
+\Delta H^\circ + 62.6 < 0
+$$
+
+$$
+\Delta H^\circ < -62.6\ \text{kJ/mol}_\text{rxn}
+$$
+
+The entropy term works against equation 3: seven moles of liquid water take fixed places in a crystal. So the reaction can be favored only if it releases energy, and more than 62.6 kJ for each mole of the dry salt.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Dissolving a salt can be taken as three parts: (1) the ions leave the crystal; (2) water molecules move apart and rearrange to make room; (3) ions and water molecules attract. In a crystal of Epsom salt, six of the seven water molecules are already arranged around each magnesium ion, each with its oxygen atom turned toward the ion.
+
+Identify the part that has largely taken place inside Epsom salt's crystal before the crystal meets any water, and say how the two values of $\Delta H^\circ$ show it. Then predict which solid's dissolving has the more negative $\Delta S^\circ$, and justify your choice.
+
+<Answer>
+
+**Part 3 has largely taken place already, and the anhydrous solid's dissolving has the more negative $\Delta S^\circ$.**
+
+**The part.** Part 3 is the attraction of ions and water molecules. In Epsom salt each magnesium ion already has six water molecules held around it, so much of that attraction formed when the hydrate was made, not when it dissolves.
+
+**What the values show.** Part 3 is the part that releases energy. The anhydrous solid has all of part 3 still to come, and its dissolving releases 91.3 kJ/mol. Epsom salt has much of it behind it, and its dissolving takes in 16.1 kJ/mol: what is left of part 3 no longer covers the energy taken in by parts 1 and 2. The two values differ by more than 100 kJ/mol. That difference is the energy released when the dry salt takes up its water, and it is well over the 62.6 kJ/mol that part (b) requires.
+
+**The entropy.** Both solids end as the same ions, each holding water molecules turned toward it. Water held around an ion has fewer ways to be arranged than free liquid water, and that is the loss of entropy in dissolving.
+
+- For the anhydrous solid, every water molecule that ends up held around an ion was free liquid water before. The whole loss takes place during the dissolving.
+- For Epsom salt, six water molecules for each magnesium ion were already held in fixed places in the crystal. Dissolving costs them no freedom that they still had.
+
+In both, the ions gain room as they leave the crystal. So the same gain is set against a much larger loss for the anhydrous solid, and its $\Delta S^\circ$ of dissolving is the more negative of the two.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for both, each tied to the sign of its enthalpy change: the anhydrous solid warms the water because its enthalpy change of dissolving is negative (energy is released to the water), and Epsom salt cools the water because its enthalpy change is positive. Both solids named with no reference to a sign or a value earns 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for the entropy term, $-62.6$ kJ/mol, from the entropy change in kJ/(mol·K) multiplied by 298 K, with the statement that the enthalpy change must be negative and greater in size than 62.6 kJ/mol (below $-62.6$ kJ/mol). "It must be negative" with no value earns 0 points, and so does a limit of 62,580 kJ/mol, from an entropy change left in joules.</RubricLine>
+<RubricLine part="c" points={2}>1 point for naming part 3, the attraction of ions and water molecules, with a reason from the data: the anhydrous solid's dissolving releases energy because that attraction still has to form, while Epsom salt's takes energy in. 1 point for choosing the anhydrous solid as the one with the more negative entropy change, because all of the water it ends up holding loses its freedom during the dissolving, while much of Epsom salt's water was already held in the crystal. A reason from the negative entropy change of equation 3, which is equation 1 less equation 2, also earns the second point. A choice with no reason does not earn the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={18} title="One donor, how many ATP" topic="9.7" points={4}>
+
+A living cell remakes ATP from ADP and phosphate, a reaction that is thermodynamically unfavored when it is taken alone. One of the compounds that pays for it is phosphoenolpyruvate, which is made near the end of the breakdown of glucose. In words, the two reactions are these.
+
+**Reaction 1:** phosphoenolpyruvate + H₂O → pyruvate + phosphate, with $\Delta G^\circ = -61.9\ \text{kJ/mol}$
+
+**Reaction 2:** ADP + phosphate → ATP + H₂O, with $\Delta G^\circ = +30.5\ \text{kJ/mol}$
+
+Every substance is dissolved in water, and the water is the liquid. Both values are for a neutral solution at 25 °C, the conditions biochemists' tables use. Use these values, with $T$ = 298 K and $R$ = 8.314 J/(mol·K).
+
+<Part label="a">
+
+Suppose one phosphoenolpyruvate were asked to pay for $n$ ATP: reaction 1, taken once, is added to reaction 2, taken $n$ times. Calculate $\Delta G^\circ$ of the overall reaction for $n$ = 1, 2 and 3. Identify the largest $n$ for which the overall reaction is thermodynamically favored.
+
+<Answer>
+
+**The largest is $n$ = 2.**
+
+$\Delta G^\circ$ belongs to an equation as written. Reaction 2 taken $n$ times has $n$ times its value, and when equations are added, their values are added, signs included.
+
+**$n$ = 1.**
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -61.9 + (+30.5) \\
+&= \mathbf{-31.4}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+**$n$ = 2.**
+
+$$
+2(+30.5) = +61.0\ \text{kJ/mol}
+$$
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -61.9 + (+61.0) \\
+&= \mathbf{-0.9}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+**$n$ = 3.**
+
+$$
+3(+30.5) = +91.5\ \text{kJ/mol}
+$$
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -61.9 + (+91.5) \\
+&= \mathbf{+29.6}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+The sums for $n$ = 1 and $n$ = 2 are below zero, so those overall reactions are thermodynamically favored. The sum for $n$ = 3 is above zero, so that one is unfavored. The largest $n$ with a favored sum is 2, and its sum is below zero by less than 1 kJ/mol.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Reaction 1 makes phosphate and reaction 2 uses it. Write the overall reaction in words for $n$ = 1 and for $n$ = 2. Identify the one in which phosphate does not cancel, and state how many moles of phosphate are left in it and on which side.
+
+<Answer>
+
+**In the overall reaction for $n$ = 2, one mole of phosphate is left, among the reactants.**
+
+**$n$ = 1.** Reaction 1 makes one phosphate and reaction 2 uses one. Water goes the other way: used by reaction 1 and made by reaction 2. Both cancel:
+
+**phosphoenolpyruvate + ADP → pyruvate + ATP**
+
+**$n$ = 2.** Taken twice, reaction 2 is 2ADP + 2 phosphate → 2ATP + 2H₂O. Reaction 1 makes one phosphate, and the doubled reaction 2 uses two, so one cancels and one is left as a reactant. In the same way one H₂O is left as a product:
+
+**phosphoenolpyruvate + 2ADP + phosphate → pyruvate + 2ATP + H₂O**
+
+The phosphate left among the reactants shows what the sum of part (a) hides. Phosphoenolpyruvate has one phosphate group to give. The first ATP takes that group. The second ATP shares nothing with reaction 1 and would have to take its phosphate from the solution. A sum below zero is one of the two conditions for coupling, and a shared substance is the other.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate $K$ at 298 K for the overall reaction with $n$ = 1 and for the overall reaction with $n$ = 2. Use the two values of $K$ to decide which of them, at equilibrium, has turned nearly all of the phosphoenolpyruvate into pyruvate.
+
+<Answer>
+
+Use $K = e^{-\Delta G^\circ/RT}$, with $\Delta G^\circ$ in joules.
+
+**One ATP, $n$ = 1.**
+
+$$
+\begin{aligned}
+&-31.4\ \text{kJ/mol} \\
+&\quad = -31{,}400\ \text{J/mol}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+-\frac{\Delta G^\circ}{RT} &= \frac{31{,}400}{(8.314)(298)} \\
+&= 12.67 \\
+K &= e^{12.67} \\
+&= \mathbf{3.2 \times 10^{5}}
+\end{aligned}
+$$
+
+**Two ATP, $n$ = 2.**
+
+$$
+\begin{aligned}
+&-0.9\ \text{kJ/mol} \\
+&\quad = -900\ \text{J/mol}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+-\frac{\Delta G^\circ}{RT} &= \frac{900}{(8.314)(298)} \\
+&= 0.363 \\
+K &= e^{0.363} \\
+&= \mathbf{1.4}
+\end{aligned}
+$$
+
+**The one-ATP reaction is the one that turns nearly all of the phosphoenolpyruvate into pyruvate.** Its $K$ is hundreds of thousands of times larger than 1, so at equilibrium the products are far ahead of the reactants.
+
+The two-ATP reaction has a $K$ of 1.4, which is close to 1. At equilibrium neither side is far ahead, and a large share of the phosphoenolpyruvate is still there.
+
+"Favored" says only that $K$ is above 1. The size of $\Delta G^\circ$ beside $RT$, which is about 2.5 kJ/mol at 298 K, says how far above. Here 31.4 kJ/mol is many times $RT$, and 0.9 kJ/mol is less than half of it.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for the three sums with their signs, $-31.4$, $-0.9$ and $+29.6$ kJ/mol, with 2 named as the largest number of ATP for which the sum is below zero. "Two" with no sums earns 0 points. A first sum of $-92.4$ kJ/mol, from a lost sign, earns 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for the overall reaction for two ATP as the one in which phosphate does not cancel, with one mole of phosphate left among the reactants, because reaction 1 makes one phosphate and reaction 2 taken twice uses two. The point does not need the two overall reactions written in words, since the answer shows them: it is for which reaction leaves phosphate over, how much, and on which side; a slip in the H₂O is not penalized. Phosphate placed among the products earns 0 points.</RubricLine>
+<RubricLine part="c" points={2}>1 point for both values of $K$, each found from its free energy change in joules: $3.2 \times 10^{5}$ for one ATP ($3.1 \times 10^{5}$ to $3.3 \times 10^{5}$) and 1.4 for two ATP (1.4 to 1.5). Values that follow correctly from the student's own sums earn the point. 1 point for choosing the one-ATP reaction, because its $K$ is far above 1 while the other's is close to 1. A choice that is not tied to the two values of $K$ does not earn the second point.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={19} title="An antacid as a coupled pair" topic="9.7" points={4}>
+
+Milk of magnesia is solid magnesium hydroxide stirred into water. Very little of the solid dissolves in the water of the bottle. In the acid of a stomach it dissolves readily. Three equations describe this, with values at 25 °C.
+
+Equation 1, the solid dissolving:
+
+$$
+\begin{aligned}
+&\ce{Mg(OH)2(s) <=>} \\
+&\quad \ce{Mg^2+(aq) + 2OH^-(aq)}
+\end{aligned}
+$$
+
+Equation 2, acid with hydroxide ion:
+
+$$
+\begin{aligned}
+&\ce{H^+(aq) + OH^-(aq) ->} \\
+&\quad \ce{H2O(l)}
+\end{aligned}
+$$
+
+Equation 3, the solid in acid:
+
+$$
+\begin{aligned}
+&\ce{Mg(OH)2(s) + 2H^+(aq) ->} \\
+&\quad \ce{Mg^2+(aq) + 2H2O(l)}
+\end{aligned}
+$$
+
+Use these values. Each $\Delta G^\circ$ was found from its $K$ with $\Delta G^\circ = -RT\ln K$ at 298 K.
+
+| Equation | $K$ | $\Delta G^\circ$ ($\text{kJ/mol}_\text{rxn}$) |
+|---|---|---|
+| 1 | $5.61 \times 10^{-12}$ | $+64.2$ |
+| 2 | $1.0 \times 10^{14}$ | $-79.9$ |
+
+<Part label="a">
+
+Identify the substance that equation 1 and equation 2 share. Determine how many times equation 2 must be taken for the two to add up to equation 3, and show the addition.
+
+<Answer>
+
+**They share the hydroxide ion, and equation 2 must be taken twice.**
+
+Hydroxide ion is a product of equation 1 and a reactant of equation 2. Equation 1 makes two moles of it for each mole of solid, and equation 3 has none in it, so the favored partner has to use up exactly two moles. Equation 2 uses one mole each time it is written, so it is taken twice:
+
+$$
+\begin{aligned}
+&\ce{2H^+(aq) + 2OH^-(aq) ->} \\
+&\quad \ce{2H2O(l)}
+\end{aligned}
+$$
+
+Add this to equation 1. The two moles of $\ce{OH^-(aq)}$ made by equation 1 are the two moles used here, so they cancel:
+
+$$
+\begin{aligned}
+&\ce{Mg(OH)2(s) + 2H^+(aq) ->} \\
+&\quad \ce{Mg^2+(aq) + 2H2O(l)}
+\end{aligned}
+$$
+
+That is equation 3. Check it: 1 Mg, 2 O and 4 H on each side, and a charge of 2+ on each side.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $K$ for equation 3 from the two values of $K$ in the table. Then take a mixture in a stomach: solid magnesium hydroxide is still present, $[\ce{Mg^2+}]$ = 0.10 M, and the acid keeps $[\ce{H^+}]$ at $1.0 \times 10^{-2}$ M. Calculate $Q$ for equation 3, and decide whether more solid dissolves or solid forms.
+
+<Answer>
+
+**$K = 5.6 \times 10^{16}$ and $Q = 1.0 \times 10^{3}$, so more solid dissolves.**
+
+When equations are added, their $K$ values are multiplied. An equation taken twice has its $K$ squared, because doubling the coefficients doubles every exponent in its $K$ expression. So:
+
+$$
+\begin{aligned}
+K_3 &= K_1 \times (K_2)^2 \\
+&= (5.61 \times 10^{-12}) \\
+&\quad \times (1.0 \times 10^{14})^2 \\
+&= (5.61 \times 10^{-12}) \\
+&\quad \times (1.0 \times 10^{28}) \\
+&= \mathbf{5.6 \times 10^{16}}
+\end{aligned}
+$$
+
+The answer has two significant figures, as $1.0 \times 10^{14}$ has.
+
+$Q$ has the form of $K$ for equation 3. The solid and the liquid water are left out:
+
+$$
+\begin{aligned}
+Q &= \frac{[\ce{Mg^2+}]}{[\ce{H^+}]^2} \\
+&= \frac{0.10}{(1.0 \times 10^{-2})^2} \\
+&= \frac{0.10}{1.0 \times 10^{-4}} \\
+&= \mathbf{1.0 \times 10^{3}}
+\end{aligned}
+$$
+
+$Q$ is far below $K$, so equation 3 goes forward: **more solid dissolves.** With $[\ce{H^+}]$ held there, it dissolves until the solid is gone.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A second mixture is slightly basic. Solid magnesium hydroxide is present, $[\ce{Mg^2+}]$ = 0.10 M, and a buffer keeps $[\ce{H^+}]$ at $1.0 \times 10^{-9}$ M. Calculate $Q$ for equation 3, and decide whether more solid dissolves or solid forms.
+
+<Answer>
+
+**$Q = 1.0 \times 10^{17}$, so solid forms.**
+
+$$
+\begin{aligned}
+Q &= \frac{[\ce{Mg^2+}]}{[\ce{H^+}]^2} \\
+&= \frac{0.10}{(1.0 \times 10^{-9})^2} \\
+&= \frac{0.10}{1.0 \times 10^{-18}} \\
+&= \mathbf{1.0 \times 10^{17}}
+\end{aligned}
+$$
+
+Compare it with the $K$ of part (b), $5.6 \times 10^{16}$, which is $0.56 \times 10^{17}$. $Q$ is above $K$, so equation 3 goes in reverse: **solid magnesium hydroxide forms**, and $[\ce{Mg^2+}]$ falls until $Q$ equals $K$.
+
+A $K$ of $5.6 \times 10^{16}$ makes equation 3 strongly favored, and it still does not mean that the solid dissolves in every solution. $[\ce{H^+}]$ is squared in $Q$. Lowering it by seven factors of ten, from $10^{-2}$ M to $10^{-9}$ M, raises $Q$ by fourteen factors of ten, from below $K$ to above it. That is the bottle and the stomach again: little dissolves where there is almost no $\ce{H^+}$, and it dissolves readily in acid.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+A student adds equation 1 and equation 2, each taken once, and reports $\Delta G^\circ = -15.7\ \text{kJ/mol}_\text{rxn}$ for the reaction of milk of magnesia in excess stomach acid. Write the equation that the student's sum belongs to, check the value, and identify the species in that equation which shows that it is not equation 3.
+
+<Answer>
+
+Add equation 1 and equation 2 as they stand. Equation 1 makes two moles of hydroxide ion and equation 2 uses one, so one cancels and one is left as a product:
+
+$$
+\begin{aligned}
+&\ce{Mg(OH)2(s) + H^+(aq) ->} \\
+&\quad \ce{Mg^2+(aq) + OH^-(aq)} \\
+&\quad +\ \ce{H2O(l)}
+\end{aligned}
+$$
+
+The value is right for this equation:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= +64.2 + (-79.9) \\
+&= \mathbf{-15.7}\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+**The species is $\ce{OH^-(aq)}$.** It is still among the products, and equation 3 has none. In excess acid that hydroxide ion meets another $\ce{H^+(aq)}$, which is equation 2 once more:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -15.7 + (-79.9) \\
+&= -95.6\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+That is $\Delta G^\circ$ of equation 3: equation 1 added to equation 2 taken twice, as part (a) found. A sum of $\Delta G^\circ$ values belongs to the equation that the same addition gives, so the equations have to be added first.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={1}>1 point for naming hydroxide ion as the shared substance and saying that equation 2 is taken twice, because equation 1 makes two moles of hydroxide ion and each equation 2 uses one (or by showing the addition with the two hydroxide ions canceled). "Twice, to balance it" with no mention of hydroxide ion earns 0 points.</RubricLine>
+<RubricLine part="b" points={1}>1 point for $K = 5.6 \times 10^{16}$, from the first $K$ multiplied by the square of the second, and $Q = 1.0 \times 10^{3}$, with the decision that more solid dissolves because $Q$ is below $K$. A $K$ of $5.7 \times 10^{16}$, found from the free energy changes of the table with 298 K, also earns the point. A $K$ of $5.6 \times 10^{2}$, from a second $K$ that was not squared, earns 0 points.</RubricLine>
+<RubricLine part="c" points={1}>1 point for $Q = 1.0 \times 10^{17}$ and the decision that solid forms (equation 3 goes in reverse in this mixture) because $Q$ is above $K$. A decision that follows correctly from the student's own $K$ of part (b) earns the point. "Solid forms" with no value of $Q$ earns 0 points, and so does a $Q$ of $1.0 \times 10^{8}$, from a hydrogen ion concentration that was not squared.</RubricLine>
+<RubricLine part="d" points={1}>1 point for the equation with one hydrogen ion on the left and one hydroxide ion left on the right, with hydroxide ion named as the species that equation 3 does not have. The student's value, $-15.7$ kJ/mol, is correct for that equation, and an answer that calls the arithmetic wrong does not earn the point.</RubricLine>
+</Rubric>
+
+</Question>
