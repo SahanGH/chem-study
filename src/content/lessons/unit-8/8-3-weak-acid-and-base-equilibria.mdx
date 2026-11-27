@@ -52,11 +52,11 @@ $$
 \end{aligned}
 $$
 
-The minus sign turns the order around, as it does for pH: **the stronger the acid, the larger its $K_a$ and the smaller its p$K_a$**. One unit of p$K_a$ is a factor of ten in $K_a$. A question may give the p$K_a$ in place of the $K_a$. Go back the way a pH goes back to a concentration (topic 8.1): $K_a = 10^{-\text{p}K_a}$.
+p$K_a$ runs on the same backward scale as pH. **A stronger acid has a bigger $K_a$ and a smaller p$K_a$.** Each step of one in p$K_a$ is a factor of ten in $K_a$. If a question hands you p$K_a$, undo the logarithm just as you did for a pH: $K_a = 10^{-\text{p}K_a}$.
 
 ## From Ka to pH
 
-Nothing here is new. Finding the pH of a weak acid is the problem of topic 7.7: start with reactant alone, let $x$ react, and put the equilibrium row into the $K$ expression. The only changes are that $K$ is now called $K_a$, and that the $x$ you find is $[\ce{H3O+}]$.
+You have solved this problem before. In topic 7.7 you started with the reactant alone, let some of it react, and put the last row of the table into the $K$ expression. A weak acid in water is that problem. The constant has a new name, $K_a$, and the unknown $x$ turns out to be the $[\ce{H3O+}]$ you want.
 
 One thing about the table's starting row: the starting $[\ce{H3O+}]$ is written as 0. Water's own 1.0 × 10⁻⁷ M (topic 8.1) is there, but it is too small to matter beside what the acid makes.
 
@@ -73,7 +73,7 @@ Find the pH of 0.30 M glycolic acid, HC₂H₃O₃, at 25 °C, and the concentra
    \end{aligned}
    $$
 
-2. **Set up the table.** Every value is in M. Water has no column.
+2. **Table, as in topic 7.7.** Every value is in M. Water gets no column.
 
    | | HA | H₃O⁺ | A⁻ |
    |---|---|---|---|
@@ -81,7 +81,7 @@ Find the pH of 0.30 M glycolic acid, HC₂H₃O₃, at 25 °C, and the concentra
    | C | −x | +x | +x |
    | E | 0.30 − x | x | x |
 
-3. **Put the equilibrium row into $K_a$.**
+3. **$K_a$ in terms of $x$.**
 
    $$
    \begin{aligned}
@@ -90,7 +90,7 @@ Find the pH of 0.30 M glycolic acid, HC₂H₃O₃, at 25 °C, and the concentra
    \end{aligned}
    $$
 
-4. **Leave $x$ out beside 0.30.** $K_a$ is small, so $0.30 - x$ is very nearly 0.30.
+4. **Drop the $x$ beside 0.30,** as topic 7.7 does for a small $K$. $0.30 - x$ is very nearly 0.30.
 
    $$
    \begin{aligned}
@@ -100,13 +100,13 @@ Find the pH of 0.30 M glycolic acid, HC₂H₃O₃, at 25 °C, and the concentra
    \end{aligned}
    $$
 
-5. **Check the approximation.**
+5. **Check that dropping $x$ was fair.**
 
    $$
    \frac{6.7 \times 10^{-3}}{0.30} \times 100\% = 2.2\%
    $$
 
-   That is under 5 percent, so leaving $x$ out was justified.
+   Under 5 percent, so it holds.
 
 6. **Take the pH.** $x$ is $[\ce{H3O+}]$.
 
@@ -232,7 +232,7 @@ A 0.30 M solution of glycolic acid is diluted with water to 0.030 M, and the equ
 
 Just after the water goes in, $Q$ is below $K_a$, so more of the acid ionizes and the percent ionization rises: from 2.2 percent to 6.8 percent. But those ions are now spread through ten times the volume, and the extra ionization does not make up for that. $[\ce{H3O+}]$ falls, from 6.6 × 10⁻³ M to 2.0 × 10⁻³ M, so the pH rises, from 2.18 to 2.69. (These four numbers are from the full equation, because at 0.030 M the shortcut does not pass its check.)
 
-Both things are true at once: a larger share ionized, and a less acidic solution. $K_a$ is the same in both.
+Two measures are moving, and they answer different questions. The share of the acid that is ionized went up. The number of ions in each liter went down, because the acid itself is now so spread out. $K_a$ did not move.
 
 </div>
 </Check>
@@ -257,7 +257,7 @@ Diluting a weak acid raises its percent ionization and lowers its $[\ce{H3O+}]$,
 
 </KeyIdea>
 
-**When is the shortcut allowed?** What step 4 showed is what topic 7.7 said: what decides is how large the starting concentration is beside $K$. A concentrated solution of an acid with a small $K_a$ passes easily; a dilute solution, or an acid with a large $K_a$, may not. There is no cutoff worth memorizing, so always do the check, and write the percentage down as part of the answer. If the check fails, the equation has to be solved with $x$ left in. With $C$ for the starting concentration, it is
+**When is the shortcut allowed?** What step 4 showed is what topic 7.7 said: what decides is how large the starting concentration is beside $K$. A concentrated solution of an acid with a small $K_a$ passes easily; a dilute solution, or an acid with a large $K_a$, may not. No cutoff is worth memorizing. Do the division every time and put the percentage in your answer, as topic 7.7 asked. If the check fails, the equation has to be solved with $x$ left in. With $C$ for the starting concentration, it is
 
 $$
 x^2 + K_a x - K_a C = 0
@@ -602,9 +602,9 @@ Take one proton off formic acid, HCHO₂, and what is left is CHO₂⁻, not the
 
 Eight mistakes come up again and again on this topic:
 
-- **Treating a weak acid as strong.** Its $[\ce{H3O+}]$ is not the number on the label. It comes from the table and $K_a$.
-- **Reporting the pOH of a weak base as its pH.** For a base, $x$ is $[\ce{OH-}]$. Take the pOH, then subtract it from 14.00 at 25 °C.
-- **Saying the shortcut is fine without showing it.** Divide $x$ by the starting concentration and write the percentage.
+- **Reading $[\ce{H3O+}]$ from the bottle.** A weak acid's concentration is not its hydronium concentration. The table and $K_a$ give that.
+- **Stopping at the pOH.** For a weak base $x$ is $[\ce{OH-}]$. $-\log x$ is the pOH. Subtract it from 14.00 at 25 °C to get the pH.
+- **Dropping $x$ without a test.** Divide $x$ by the starting concentration, and put the percentage in your answer.
 - **Using an $x$ that failed its check.** An $x$ larger than the starting concentration is a sign, not an answer.
 - **Thinking that dilution lowers a weak acid's pH because more of it ionizes.** The percent ionization rises, $[\ce{H3O+}]$ falls, and the pH rises.
 - **Thinking that a larger percent ionization means a larger $K_a$.** Dilution changes the percent ionization; only temperature changes $K_a$.
@@ -616,7 +616,7 @@ Eight mistakes come up again and again on this topic:
 <KeyPoints>
 
 - A weak acid's ionization is an equilibrium, in which HA and water give $\ce{H3O+}$ and $\ce{A-}$, with $K_a = [\ce{H3O+}][\ce{A-}]/[\ce{HA}]$. The stronger the acid, the larger its $K_a$ and the smaller its p$K_a$.
-- The pH of a weak acid comes from the table of topic 7.7, where $x$ is $[\ce{H3O+}]$. Leaving $x$ out beside the starting concentration is allowed only if $x$ turns out under 5 percent of it, with the percentage written down.
+- The pH of a weak acid comes from the table of topic 7.7, where $x$ is $[\ce{H3O+}]$. Leaving $x$ out beside the starting concentration is allowed only if $x$ turns out under 5 percent of it. Show the percentage.
 - Percent ionization is $[\ce{H3O+}]$ at equilibrium over the starting concentration, times 100 percent. Dilution raises it while it lowers $[\ce{H3O+}]$ and raises the pH, with $K_a$ unchanged.
 - A measured pH gives $x$, and $x$ in the table gives $K_a$.
 - For a weak base, in which B and water give $\ce{HB+}$ and $\ce{OH-}$ with $K_b$, $x$ is $[\ce{OH-}]$, so find the pOH first and then the pH.
