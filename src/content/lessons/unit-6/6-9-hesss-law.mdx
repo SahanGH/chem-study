@@ -1,0 +1,587 @@
+---
+topic: "6.9"
+minutes: 16
+summary: "How the enthalpy change of a process equals the sum of the enthalpy changes of its steps, and how to reverse, scale and add equations to build the one you need."
+---
+
+Heat a little potassium hydrogen carbonate, a white powder used in some fire extinguishers, and it breaks down, giving off carbon dioxide and water. How much energy does that take in? You cannot find out with a thermometer: the powder sits in a flame, and the flame's energy goes everywhere. The value can be had all the same, +96.1 kJ for the equation you will meet below, without ever heating the powder. It comes from two other reactions that are easy to run in a calorimeter. This lesson shows how one enthalpy change can be built out of others.
+
+## A process in steps
+
+You have already done this once. In topic 6.5 you found the energy needed to warm solid iodine until it was a liquid by adding up the energy of each segment of the heating curve. The process was broken into steps, each step had its own energy change, and the steps were added. The same works for chemical reactions.
+
+Take sodium peroxide, Na₂O₂, a bleach for paper pulp. It can be made from sodium and oxygen in one go:
+
+$$
+\begin{aligned}
+&\ce{2Na(s) + O2(g) -> Na2O2(s)} \\
+&\Delta H^\circ = -510.9\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+In industry it is made in two steps. First, sodium is burned in a limited supply of air, which takes it as far as sodium oxide:
+
+$$
+\begin{aligned}
+&\ce{2Na(s) + 1/2 O2(g) -> Na2O(s)} \\
+&\Delta H^\circ = -414.2\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Then the oxide is heated in more oxygen:
+
+$$
+\begin{aligned}
+&\ce{Na2O(s) + 1/2 O2(g) ->} \\
+&\quad \ce{Na2O2(s)} \\
+&\Delta H^\circ = -96.7\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Now add the two steps:
+
+$$
+-414.2 + (-96.7) = -510.9\ \text{kJ}
+$$
+
+That is the same as the direct route, to the last digit.
+
+<Figure
+  src="/figures/6-9-two-routes.svg"
+  alt="An enthalpy diagram. At the top is the starting level, 2 sodium and oxygen. At the bottom is sodium peroxide. On the left, one solid arrow labeled one step, minus 510.9 kilojoules, falls from the top level to the bottom level. On the right, two dashed arrows make the same fall in two parts: the first, labeled minus 414.2 kilojoules, ends at a level for sodium oxide and half an oxygen, and the second, labeled minus 96.7 kilojoules, falls from there to the bottom level."
+  caption="Two routes from the same start to the same end. The two steps on the right add up to the one step on the left."
+/>
+
+This is no accident of these two reactions. It is **Hess's law**: if a process can be written as a sequence of steps, its enthalpy change is the sum of the enthalpy changes of the steps.
+
+Here is why it must be so. Both routes begin with the same substances in the same states and finish with the same substance in the same state. Now suppose their totals differed. Run the route with the more negative total forward and the other route backward: the substances are back where they began, and an amount of energy equal to the difference has been released with nothing used up. Energy is conserved (topic 6.4), so the totals cannot differ. Between a given start and a given end there is one enthalpy change, however the change is carried out.
+
+**Beyond the exam:** a quantity like enthalpy, whose change depends only on where a process starts and ends and not on the route between, is called a state function.
+
+The steps do not even have to be ones that really happen. Any set of steps that adds up to the process will do, real or imagined, and that is what makes the law useful.
+
+<KeyIdea>
+
+The enthalpy change of a process is the sum of the enthalpy changes of its steps. It depends on the start and the end, not on the route.
+
+</KeyIdea>
+
+<Check
+  numeric="57.7"
+  unit="kJ"
+  slips={{
+    "741.3": "That is the two table values added. Which of the two is the total for both steps, and which is one step of it?",
+    "341.8": "That is the step from iron to FeCl₂. The step asked for is what is left of the total after it.",
+    "399.5": "That is the whole change from iron to FeCl₃. Part of it is released before FeCl₂ is reached.",
+    "28.9": "Did you halve it for the ½ Cl₂? The step as written makes one mole of FeCl₃, so nothing is scaled.",
+    "-57.7": "The question asks how much energy is released. Is an amount of energy released written with a minus sign?",
+  }}
+>
+Chlorine gas turns iron(II) chloride into iron(III) chloride, a solid that water-treatment plants use to clear muddy water:
+
+$$
+\begin{aligned}
+&\ce{FeCl2(s) + 1/2 Cl2(g) ->} \\
+&\quad \ce{FeCl3(s)}
+\end{aligned}
+$$
+
+Data tables give two other values:
+
+$$
+\begin{aligned}
+&\ce{Fe(s) + 3/2 Cl2(g) -> FeCl3(s)} \\
+&\Delta H^\circ = -399.5\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\ce{Fe(s) + Cl2(g) -> FeCl2(s)} \\
+&\Delta H^\circ = -341.8\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Think of the first of these as done in two steps: iron to iron(II) chloride, then iron(II) chloride to iron(III) chloride. How much energy, in kJ, is released when one mole of FeCl₃ forms from FeCl₂ and chlorine?
+
+<div slot="why">
+
+The two steps must add up to the one-step reaction. The first step is the reaction that makes FeCl₂. The second step is the one asked for: call its value $\Delta H^\circ_2$.
+
+$$
+-341.8 + \Delta H^\circ_2 = -399.5
+$$
+
+$$
+\begin{aligned}
+\Delta H^\circ_2 &= -399.5 - (-341.8) \\
+&= -57.7\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+The reaction releases 57.7 kJ for each mole of FeCl₃. Most of the energy of making FeCl₃ from iron is released in getting as far as FeCl₂.
+
+</div>
+</Check>
+
+## Three things you may do to an equation
+
+Steps rarely arrive in the form you need. One runs the wrong way, another is written for twice the amount. There are three things you may do to a thermochemical equation, and each does something definite to its $\Delta H$. None of this is on the equation sheet, so it has to be in your head.
+
+**Reverse it: the sign of $\Delta H$ changes.** Going back is the same gap crossed the other way. Take the second step of the peroxide route:
+
+$$
+\begin{aligned}
+&\ce{Na2O(s) + 1/2 O2(g) ->} \\
+&\quad \ce{Na2O2(s)} \\
+&\Delta H^\circ = -96.7\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Reversed, it takes in what it released:
+
+$$
+\begin{aligned}
+&\ce{Na2O2(s) ->} \\
+&\quad \ce{Na2O(s) + 1/2 O2(g)} \\
+&\Delta H^\circ = +96.7\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+You met this in topic 6.5: condensing releases what vaporizing takes in.
+
+**Multiply it by a number: $\Delta H$ is multiplied by the same number.** $\Delta H$ belongs to the equation as written, and twice the amount of reaction is twice the energy (topic 6.6). Take the direct route:
+
+$$
+\begin{aligned}
+&\ce{2Na(s) + O2(g) -> Na2O2(s)} \\
+&\Delta H^\circ = -510.9\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Doubled:
+
+$$
+\begin{aligned}
+&\ce{4Na(s) + 2O2(g) -> 2Na2O2(s)} \\
+&\Delta H^\circ = -1{,}021.8\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+The number can be a fraction: multiplying by ½ halves everything.
+
+**Add it to another: the $\Delta H$ values add.** This is Hess's law. A substance that appears on both sides of the sum, in the same state, cancels, as Na₂O did when step 1 and step 2 were added. The same substance on the same side is collected: ½ O₂ and ½ O₂ made O₂.
+
+| You do this | To the equation | To $\Delta H$ |
+|---|---|---|
+| Reverse | Reactants and products change sides | The sign changes |
+| Multiply by a number | Every coefficient is multiplied | Multiplied by the same number |
+| Add | Cancel what is on both sides | The values are added |
+
+<Check
+  answer={3}
+  misses={{
+    1: "This equation runs the other way from the one given. What does turning a reaction around do to its ΔH?",
+    2: "Compare the coefficient of H₂ in the two equations. ΔH belongs to the equation as written.",
+    4: "Compare the coefficient of H₂ in the two equations. Is the new one a larger amount of reaction or a smaller one?",
+  }}
+>
+Cyclohexane, a starting material for nylon, is made by adding hydrogen to benzene vapor over a nickel catalyst:
+
+$$
+\begin{aligned}
+&\ce{C6H6(g) + 3H2(g) -> C6H12(g)} \\
+&\Delta H^\circ = -206.3\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+At a higher temperature the reaction runs backward and gives the hydrogen back. What is $\Delta H^\circ$ for the backward reaction written for one mole of hydrogen?
+
+$$
+\begin{aligned}
+&\ce{1/3 C6H12(g) ->} \\
+&\quad \ce{1/3 C6H6(g) + H2(g)}
+\end{aligned}
+$$
+
+- −68.8 kJ, energy released
+- +206.3 kJ, energy absorbed
+- +68.8 kJ, energy absorbed
+- +618.9 kJ, energy absorbed
+
+<div slot="why">
+
+The new equation is the given one reversed and multiplied by ⅓. Reversing changes the sign:
+
+$$
+\begin{aligned}
+&\ce{C6H12(g) -> C6H6(g) + 3H2(g)} \\
+&\Delta H^\circ = +206.3\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Multiplying by ⅓ gives the value for one mole of H₂:
+
+$$
+\tfrac{1}{3}(+206.3) = +68.8\ \text{kJ}
+$$
+
+The first option takes a third and does not reverse. The second reverses and does not take a third. The fourth multiplies by 3 where it should divide.
+
+</div>
+</Check>
+
+## Building the equation you want
+
+Most Hess's law questions give you two or three equations with their $\Delta H$ values and ask for the $\Delta H$ of a **target** equation, the one you want. Here is a method that works for almost every question you will meet.
+
+Write the target equation, and under it each given equation with its $\Delta H$. Then give each given equation its job, one at a time:
+
+1. **Find its job.** Choose a substance in the target that only one of the given equations contains. That equation is the one that supplies it.
+2. **Fix the side.** If the substance is on the opposite side in the given equation, reverse the equation and change the sign of its $\Delta H$.
+3. **Fix the amount.** If the coefficient differs from the target's, multiply the whole equation, and its $\Delta H$, by the number that makes them agree.
+4. **Add and cancel.** When every given equation has been through steps 1 to 3, add the adjusted equations. A substance on both sides in the same state cancels.
+5. **Compare.** What is left must be the target and nothing else. A substance that survives and is not in the target means an equation is the wrong way around or wrongly scaled.
+6. **Total.** Add the adjusted $\Delta H$ values.
+
+<Worked title="The powder that cannot be measured directly">
+
+Find $\Delta H^\circ$ for the breakdown of potassium hydrogen carbonate. This is the target:
+
+$$
+\begin{aligned}
+&\ce{2KHCO3(s) ->} \\
+&\quad \ce{K2CO3(s) + H2O(l) + CO2(g)}
+\end{aligned}
+$$
+
+Each of the two solids can be stirred into hydrochloric acid in a calorimeter (topics 6.4 and 6.6). For dilute acid the values are these. Equation 1:
+
+$$
+\begin{aligned}
+&\ce{KHCO3(s) + HCl(aq) ->} \\
+&\quad \ce{KCl(aq) + H2O(l) + CO2(g)} \\
+&\Delta H^\circ = +31.5\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Equation 2:
+
+$$
+\begin{aligned}
+&\ce{K2CO3(s) + 2HCl(aq) ->} \\
+&\quad \ce{2KCl(aq) + H2O(l) + CO2(g)} \\
+&\Delta H^\circ = -33.1\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+1. **Use equation 1 for KHCO₃.** It is in equation 1 only, and on the left, where the target has it. The target needs 2 mol, so double equation 1 and its $\Delta H$.
+
+   $$
+   \begin{aligned}
+   &\ce{2KHCO3(s) + 2HCl(aq) ->} \\
+   &\quad \ce{2KCl(aq) + 2H2O(l)} \\
+   &\quad {} + \ce{2CO2(g)} \\
+   &\Delta H^\circ = 2(+31.5) = +63.0\ \text{kJ}
+   \end{aligned}
+   $$
+
+2. **Use equation 2 for K₂CO₃.** It is in equation 2 only, on the left, but the target has it on the right. Reverse equation 2 and change the sign of its $\Delta H$.
+
+   $$
+   \begin{aligned}
+   &\ce{2KCl(aq) + H2O(l) + CO2(g) ->} \\
+   &\quad \ce{K2CO3(s) + 2HCl(aq)} \\
+   &\Delta H^\circ = +33.1\ \text{kJ}
+   \end{aligned}
+   $$
+
+3. **Add, and cancel.** 2 HCl(aq) is on both sides, and so is 2 KCl(aq): they cancel. One H₂O(l) and one CO₂(g) on the right of the first equation cancel against the H₂O(l) and CO₂(g) on the left of the second, leaving one of each on the right.
+
+<Figure
+  src="/figures/6-9-equations-cancel.svg"
+  alt="Two chemical equations written one above the other, with a line struck through every term that cancels, and their sum below. Equation 1, doubled, plus 63.0 kilojoules: 2 KHCO3 plus 2 HCl gives 2 KCl plus water plus carbon dioxide plus a second water and a second carbon dioxide. Equation 2, reversed, plus 33.1 kilojoules: 2 KCl plus water plus carbon dioxide gives K2CO3 plus 2 HCl. Struck through are 2 HCl and 2 KCl in both equations, and one water and one carbon dioxide in each. The sum, plus 96.1 kilojoules: 2 KHCO3 gives K2CO3 plus water plus carbon dioxide."
+  caption="What appears on both sides of the sum cancels. The doubled equation's two waters and two carbon dioxides are written singly, so that one of each cancels and one of each is left. State symbols are left out."
+/>
+
+4. **Check against the target.** This is what is left:
+
+   $$
+   \begin{aligned}
+   &\ce{2KHCO3(s) ->} \\
+   &\quad \ce{K2CO3(s) + H2O(l) + CO2(g)}
+   \end{aligned}
+   $$
+
+   It is the target, with nothing over.
+
+5. **Add the $\Delta H$ values.**
+
+   $$
+   \begin{aligned}
+   \Delta H^\circ &= +63.0 + 33.1 \\
+   &= +96.1\ \text{kJ/mol}_\text{rxn}
+   \end{aligned}
+   $$
+
+   The breakdown takes energy in.
+
+6. **What the slips would give.** Reverse equation 2 and leave its sign alone, and you get
+
+   $$
+   63.0 - 33.1 = +29.9\ \text{kJ}
+   $$
+
+   Double equation 1 and leave its $\Delta H$ alone, and you get
+
+   $$
+   31.5 + 33.1 = +64.6\ \text{kJ}
+   $$
+
+All three operations were needed: one equation was scaled (step 1), one was reversed (step 2), and the two were added (step 3).
+
+</Worked>
+
+<Check
+  answer={2}
+  misses={{
+    1: "Find Na₂O₂ in the target, then in equation 2. Is it on the same side in both?",
+    3: "Add your two equations and see what is left. Which side does Na₂O₂ end up on, and which side does the target have it?",
+    4: "Count the Na₂O in the target, then in equation 1. Add your two equations and check whether the O₂ cancels.",
+  }}
+>
+Here are two equations for the oxides of sodium. Equation 1:
+
+$$
+\ce{2Na(s) + 1/2 O2(g) -> Na2O(s)}
+$$
+
+Equation 2:
+
+$$
+\ce{2Na(s) + O2(g) -> Na2O2(s)}
+$$
+
+Sodium oxide can also be made by warming sodium peroxide with sodium metal:
+
+$$
+\ce{Na2O2(s) + 2Na(s) -> 2Na2O(s)}
+$$
+
+Which plan turns equations 1 and 2 into this target?
+
+- Reverse equation 1, double equation 2, then add them
+- Double equation 1, reverse equation 2, then add them
+- Double equation 1, leave equation 2 as it is, then add them
+- Leave equation 1 as it is, reverse equation 2, then add them
+
+<div slot="why">
+
+The target has 2 Na₂O on the right. Na₂O is in equation 1 only, on the right, with a coefficient of 1, so double equation 1:
+
+$$
+\begin{aligned}
+&\ce{4Na(s) + O2(g) -> 2Na2O(s)} \\
+&\Delta H^\circ = -828.4\ \text{kJ}
+\end{aligned}
+$$
+
+The target has Na₂O₂ on the left. It is in equation 2 only, on the right, so reverse equation 2:
+
+$$
+\begin{aligned}
+&\ce{Na2O2(s) -> 2Na(s) + O2(g)} \\
+&\Delta H^\circ = +510.9\ \text{kJ}
+\end{aligned}
+$$
+
+Added, the O₂ cancels and 2 of the 4 Na cancel, which leaves the target:
+
+$$
+\begin{aligned}
+\Delta H^\circ &= -828.4 + 510.9 \\
+&= -317.5\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+The third plan leaves Na₂O₂ on the product side. The fourth makes only one Na₂O and leaves ½ O₂ over. The first puts Na₂O on the left and Na₂O₂ on the right, the opposite of the target.
+
+</div>
+</Check>
+
+<Check
+  numeric="-79.3"
+  unit="kJ/mol"
+  slips={{
+    "79.3": "Check the sign of each piece after halving and reversing, then add them again.",
+    "-152.4": "Did the ΔH of equation 1 get halved? Count the CuSO₄ in the target: ΔH scales with the equation.",
+    "-66.9": "Did equation 2 keep its sign? Compare the side the blue solid is on in equation 2 with its side in the target.",
+    "-140.0": "Check both equations against the target: the amount of CuSO₄, and the side the blue solid is on.",
+    "-73.1": "That is equation 1 for one mole of CuSO₄. Equation 2 has to come in as well, turned the right way around.",
+    "66.9": "Did equation 1 get reversed? Compare the side CuSO₄(s) is on in equation 1 with its side in the target.",
+  }}
+>
+Anhydrous copper(II) sulfate is a white powder. It takes up water and turns into the blue solid CuSO₄·5H₂O, which is why it is used as a test for water. This is the target:
+
+$$
+\begin{aligned}
+&\ce{CuSO4(s) + 5H2O(l) ->} \\
+&\quad \ce{CuSO4*5H2O(s)}
+\end{aligned}
+$$
+
+Each solid can be dissolved in a large amount of water, and data tables give these values. Equation 1:
+
+$$
+\begin{aligned}
+&\ce{2CuSO4(s) -> 2CuSO4(aq)} \\
+&\Delta H^\circ = -146.2\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Equation 2:
+
+$$
+\begin{aligned}
+&\ce{CuSO4*5H2O(s) ->} \\
+&\quad \ce{CuSO4(aq) + 5H2O(l)} \\
+&\Delta H^\circ = +6.2\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Find $\Delta H^\circ$ for the target. Give it with its sign.
+
+<div slot="why">
+
+The target has 1 mol of CuSO₄(s) on the left, and equation 1 has 2 mol on the left, so multiply equation 1 by ½:
+
+$$
+\begin{aligned}
+&\ce{CuSO4(s) -> CuSO4(aq)} \\
+&\Delta H^\circ = \tfrac{1}{2}(-146.2) = -73.1\ \text{kJ}
+\end{aligned}
+$$
+
+The blue solid is on the right of the target and on the left of equation 2, so reverse equation 2:
+
+$$
+\begin{aligned}
+&\ce{CuSO4(aq) + 5H2O(l) ->} \\
+&\quad \ce{CuSO4*5H2O(s)} \\
+&\Delta H^\circ = -6.2\ \text{kJ}
+\end{aligned}
+$$
+
+Add them. CuSO₄(aq) cancels and the target is left.
+
+$$
+\begin{aligned}
+\Delta H^\circ &= -73.1 + (-6.2) \\
+&= -79.3\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+</div>
+</Check>
+
+<Check
+  numeric="-840.6"
+  unit="kJ/mol"
+  slips={{
+    "840.6": "Check the sign of each piece after reversing and doubling, then add them again.",
+    "-2449.0": "Did equation 1 keep its sign? Compare the side TiCl₄ is on in equation 1 with its side in the target.",
+    "-18.2": "Did the ΔH of equation 2 get doubled? Count the NaCl in the target: ΔH scales with the equation.",
+    "-1626.6": "Check both equations against the target: the side TiCl₄ is on, and the number of NaCl.",
+    "-2485.4": "Did equation 2 get multiplied by 4? It already makes 2 NaCl. Compare that with the number of NaCl in the target.",
+    "2449.0": "Only an equation whose substances are on the wrong sides for the target is turned around. Check NaCl in equation 2.",
+  }}
+>
+Titanium metal was long made by running liquid titanium(IV) chloride onto sodium in a sealed steel pot. This is the target:
+
+$$
+\begin{aligned}
+&\ce{TiCl4(l) + 4Na(s) ->} \\
+&\quad \ce{Ti(s) + 4NaCl(s)}
+\end{aligned}
+$$
+
+Use these two equations. Equation 1:
+
+$$
+\begin{aligned}
+&\ce{Ti(s) + 2Cl2(g) -> TiCl4(l)} \\
+&\Delta H^\circ = -804.2\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Equation 2:
+
+$$
+\begin{aligned}
+&\ce{2Na(s) + Cl2(g) -> 2NaCl(s)} \\
+&\Delta H^\circ = -822.4\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Find $\Delta H^\circ$ for the target. Give it with its sign.
+
+<div slot="why">
+
+TiCl₄ is on the left of the target and on the right of equation 1, so reverse equation 1:
+
+$$
+\begin{aligned}
+&\ce{TiCl4(l) -> Ti(s) + 2Cl2(g)} \\
+&\Delta H^\circ = +804.2\ \text{kJ}
+\end{aligned}
+$$
+
+The target has 4 NaCl, so double equation 2:
+
+$$
+\begin{aligned}
+&\ce{4Na(s) + 2Cl2(g) -> 4NaCl(s)} \\
+&\Delta H^\circ = 2(-822.4) \\
+&\phantom{\Delta H^\circ} = -1{,}644.8\ \text{kJ}
+\end{aligned}
+$$
+
+Add them. The 2 Cl₂ cancels and the target is left.
+
+$$
+\begin{aligned}
+\Delta H^\circ &= +804.2 + (-1{,}644.8) \\
+&= -840.6\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+</div>
+</Check>
+
+The formula of topic 6.8 is Hess's law used once and for all. A formation reaction is one more equation with its $\Delta H$, and "products minus reactants" is what comes out when you reverse the formation reactions of the reactants, keep those of the products, multiply each by its coefficient, and add.
+
+<Trap>
+
+Six mistakes cost points on this topic:
+
+- **Reversing an equation and keeping the sign of $\Delta H$.** A reversed reaction has a $\Delta H$ of the same size and the opposite sign.
+- **Multiplying the equation and not its $\Delta H$.** $\Delta H$ belongs to the equation as written: double one, double the other.
+- **Reversing every equation, or changing the sign of every $\Delta H$.** Only an equation whose substances are on the wrong side is reversed.
+- **Canceling a substance against itself in a different state.** H₂O(l) and H₂O(g) are not the same entry and do not cancel.
+- **Not checking the sum.** If a substance that is not in the target is left over, an equation is the wrong way around or wrongly scaled.
+- **Adding the $\Delta H$ values as they were given.** Add them only after each has been through the same operations as its equation.
+
+</Trap>
+
+<KeyPoints>
+
+- A process can be written as a sequence of steps, each with its own enthalpy change, and the steps may be real or imagined.
+- Hess's law says that the enthalpy change of a process is the sum of the enthalpy changes of its steps, because energy is conserved.
+- The enthalpy change depends only on the substances and states at the start and at the end, not on the route between.
+- Reversing an equation changes the sign of its $\Delta H$, and multiplying an equation by a number multiplies its $\Delta H$ by that number.
+- When equations are added, substances on both sides in the same state cancel and the $\Delta H$ values are added.
+- To reach a target equation, place each of its substances by reversing and scaling the given equations, add, and check that only the target is left.
+
+</KeyPoints>
+
+<PracticeNext />
