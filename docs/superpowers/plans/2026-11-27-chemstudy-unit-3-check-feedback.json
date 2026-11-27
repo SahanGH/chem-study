@@ -1,0 +1,1576 @@
+{
+  "unit": 3,
+  "written": "2026-11-27",
+  "note": "Feedback for the Checks of Unit 3. The design is docs/superpowers/specs/2026-11-26-chemstudy-us-english-and-unit-1-check-feedback-design.md. Options are listed in the order they are to have on the page; the option with no message is the answer.",
+  "checks": [
+    {
+      "lesson": "3.1",
+      "file": "src/content/lessons/unit-3/3-1-intermolecular-and-interparticle-forces.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Hexane, because its long molecules touch over a larger area, so the London dispersion forces between them are stronger.",
+          "message": null
+        },
+        {
+          "text": "2,2-Dimethylbutane, because compact molecules have more electrons.",
+          "message": "Count the electrons. Both molecules are C₆H₁₄, so can one have more than the other?"
+        },
+        {
+          "text": "Hexane, because its molecules are polar and the branched ones are not.",
+          "message": "Look at the bonds. Both molecules have C–C and C–H bonds alone, so is either one polar?"
+        },
+        {
+          "text": "Neither, because molecules with the same formula always boil at the same temperature.",
+          "message": "The same formula does not mean the same shape, and shape changes how strongly molecules attract one another."
+        }
+      ]
+    },
+    {
+      "lesson": "3.1",
+      "file": "src/content/lessons/unit-3/3-1-intermolecular-and-interparticle-forces.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "BCl₃",
+          "message": "Draw the shape. BCl₃ is trigonal planar, so its three polar bonds cancel."
+        },
+        {
+          "text": "XeF₄",
+          "message": "Draw the shape. XeF₄ is square planar, so its polar bonds cancel."
+        },
+        {
+          "text": "SiH₄",
+          "message": "SiH₄ is tetrahedral and symmetrical, so it has no overall dipole."
+        },
+        {
+          "text": "SCl₂",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "3.1",
+      "file": "src/content/lessons/unit-3/3-1-intermolecular-and-interparticle-forces.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 4,
+      "moved": true,
+      "options": [
+        {
+          "text": "PH₃",
+          "message": "Check what the hydrogens are bonded to. A hydrogen bond needs an H bonded to N, O or F, and phosphorus is none of those."
+        },
+        {
+          "text": "CH₄",
+          "message": "CH₄ has C–H bonds alone. A hydrogen bond needs an H bonded to N, O or F."
+        },
+        {
+          "text": "CH₃Cl",
+          "message": "Check where the hydrogens are. In CH₃Cl each one is bonded to carbon, not to N, O or F."
+        },
+        {
+          "text": "CH₃NH₂",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "3.1",
+      "file": "src/content/lessons/unit-3/3-1-intermolecular-and-interparticle-forces.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Hexane has 50 electrons to HF's 10, so the London forces between hexane molecules outweigh all the attractions between HF molecules.",
+          "message": null
+        },
+        {
+          "text": "Hexane's C–H bonds form hydrogen bonds.",
+          "message": "A hydrogen bond needs an H bonded to N, O or F. Hexane's hydrogens are all on carbon."
+        },
+        {
+          "text": "Hydrogen bonds are weaker than London dispersion forces in every substance.",
+          "message": "That is too broad. Between molecules of similar size, hydrogen bonds win."
+        },
+        {
+          "text": "Hexane is more polar than HF.",
+          "message": "Hexane has C–C and C–H bonds alone, and the question calls it nonpolar. HF is the polar molecule."
+        }
+      ]
+    },
+    {
+      "lesson": "3.1",
+      "file": "src/content/lessons/unit-3/3-1-intermolecular-and-interparticle-forces.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "K⁺",
+          "message": "Coulomb's law depends on charge and on distance. Compare K⁺ with the other ions on both."
+        },
+        {
+          "text": "Na⁺",
+          "message": "Coulomb's law depends on charge as well as distance. Have you compared both for all four ions?"
+        },
+        {
+          "text": "Mg²⁺",
+          "message": null
+        },
+        {
+          "text": "Br⁻",
+          "message": "The sign of the charge does not decide this. Coulomb's law depends on how large the charge is and on distance: compare the four ions on both."
+        }
+      ]
+    },
+    {
+      "lesson": "3.10",
+      "file": "src/content/lessons/unit-3/3-10-solubility.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 4,
+      "moved": true,
+      "options": [
+        {
+          "text": "Because its molecules are too large to fit into the spaces between water molecules.",
+          "message": "Size is not the reason: sucrose molecules are large and dissolve well."
+        },
+        {
+          "text": "Because hydrocarbon molecules and water molecules repel and push each other away.",
+          "message": "The two kinds of molecule do attract a little; they are not repelled. Compare the strengths of the attractions."
+        },
+        {
+          "text": "Because gasoline is less dense than water, so it floats before it can dissolve.",
+          "message": "Density decides which layer is on top. It does not decide whether the two liquids mix."
+        },
+        {
+          "text": "Because mixing would replace water's hydrogen bonds with much weaker attractions.",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "3.10",
+      "file": "src/content/lessons/unit-3/3-10-solubility.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Potassium nitrate, KNO₃",
+          "message": "Potassium nitrate is ionic. Hexane cannot offer attractions strong enough to replace those between its ions."
+        },
+        {
+          "text": "Sucrose, C₁₂H₂₂O₁₁",
+          "message": "Sucrose is held together by hydrogen bonds. Hexane has London dispersion forces alone to offer."
+        },
+        {
+          "text": "Paraffin wax (candle wax, a solid made of long hydrocarbon chains)",
+          "message": null
+        },
+        {
+          "text": "Water",
+          "message": "Water is held together by hydrogen bonds, and hexane cannot offer attractions strong enough to replace them."
+        }
+      ]
+    },
+    {
+      "lesson": "3.10",
+      "file": "src/content/lessons/unit-3/3-10-solubility.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Acetic acid, CH₃COOH",
+          "message": "Acetic acid has the shortest nonpolar chain of the four, and it is miscible with water."
+        },
+        {
+          "text": "Butanoic acid, C₃H₇COOH",
+          "message": "Butanoic acid is miscible with water. Compare the nonpolar chains of the four acids."
+        },
+        {
+          "text": "Hexanoic acid, C₅H₁₁COOH",
+          "message": "Every acid here has the same polar group. Compare the part that differs, and what that part can offer water."
+        },
+        {
+          "text": "Decanoic acid, C₉H₁₉COOH",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "3.11",
+      "file": "src/content/lessons/unit-3/3-11-spectroscopy-and-the-electromagnetic-spectrum.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "One with a wavelength of 550 nm",
+          "message": "Put all four wavelengths in one unit. Is 550 nm the shortest of them?"
+        },
+        {
+          "text": "One with a wavelength of 2 cm",
+          "message": "Put all four in one unit: 2 cm is 2 × 10⁷ nm. Does the longest wavelength carry the most energy per photon, or the least?"
+        },
+        {
+          "text": "One with a wavelength of 250 nm",
+          "message": null
+        },
+        {
+          "text": "One with a wavelength of 3 µm",
+          "message": "Put all four in one unit: 3 µm is 3000 nm. The number alone does not show which wavelength is shortest when the units differ."
+        }
+      ]
+    },
+    {
+      "lesson": "3.11",
+      "file": "src/content/lessons/unit-3/3-11-spectroscopy-and-the-electromagnetic-spectrum.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "The 3 cm absorption is by far the bigger energy step, because its wavelength is longer. It moves an electron to a higher level, and the 300 nm absorption changes how the molecule rotates.",
+          "message": "A longer wavelength means less energy per photon, not more. Find each wavelength's region first."
+        },
+        {
+          "text": "Both absorptions make bonds vibrate more. The two wavelengths belong to two different bonds in the molecule.",
+          "message": "Vibrations go with the infrared. Find the region for 3 cm and the region for 300 nm: is either one infrared?"
+        },
+        {
+          "text": "The 300 nm absorption is by far the bigger energy step, but it changes how the molecule rotates. The 3 cm absorption moves an electron to a higher level.",
+          "message": "Match each kind of change to the size of its step. Which energy steps are the biggest, and which the smallest?"
+        },
+        {
+          "text": "The 300 nm absorption is by far the bigger energy step and moves an electron to a higher level. The 3 cm absorption changes how the molecule rotates.",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "3.11",
+      "file": "src/content/lessons/unit-3/3-11-spectroscopy-and-the-electromagnetic-spectrum.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "It spins faster.",
+          "message": "Spinning faster goes with microwaves. Find the region that 15 µm falls in."
+        },
+        {
+          "text": "Its bonds vibrate more: they stretch or bend with more energy.",
+          "message": null
+        },
+        {
+          "text": "An electron moves to a higher energy level.",
+          "message": "Electronic transitions go with ultraviolet and visible light. Find the region that 15 µm falls in."
+        },
+        {
+          "text": "It breaks apart into a carbon atom and an oxygen molecule.",
+          "message": "Find the region that 15 µm falls in, then what photons of that region change in a molecule."
+        }
+      ]
+    },
+    {
+      "lesson": "3.11",
+      "file": "src/content/lessons/unit-3/3-11-spectroscopy-and-the-electromagnetic-spectrum.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "It spins faster.",
+          "message": "Spinning faster goes with microwaves. Blue light is visible light."
+        },
+        {
+          "text": "Its bonds vibrate more.",
+          "message": "More vibration goes with the infrared. Blue light is visible light."
+        },
+        {
+          "text": "An electron moves to a higher energy level.",
+          "message": null
+        },
+        {
+          "text": "Nothing changes: the light passes straight through.",
+          "message": "The question says the dye absorbs blue light, so the photon's energy goes into the molecule."
+        }
+      ]
+    },
+    {
+      "lesson": "3.12",
+      "file": "src/content/lessons/unit-3/3-12-properties-of-photons.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "0.122",
+      "unit": "m",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "8.17",
+          "from": "frequency divided by c",
+          "message": "That looks upside down. Follow the units: m/s over s⁻¹ leaves meters."
+        },
+        {
+          "value": "1.22e8",
+          "from": "2.45 used as the frequency",
+          "message": "Did you use 2.45 as the frequency? Giga is a power of ten: change GHz to s⁻¹ first."
+        },
+        {
+          "value": "12.2",
+          "from": "answer in centimeters",
+          "message": "Is that in centimeters? The question asks for meters."
+        },
+        {
+          "value": "122",
+          "from": "mega for giga, or millimeters",
+          "message": "Check the power of ten. Look up giga on the equation sheet, and give the answer in meters."
+        },
+        {
+          "value": "7.35e17",
+          "from": "c multiplied by the frequency",
+          "message": "Did you multiply c by the frequency? Rearrange c = λν for the wavelength first."
+        }
+      ]
+    },
+    {
+      "lesson": "3.12",
+      "file": "src/content/lessons/unit-3/3-12-properties-of-photons.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "3.45e-20",
+      "unit": "J",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "7.85e46",
+          "from": "frequency divided by h",
+          "message": "Did you divide by h? The photon's energy is h times its frequency."
+        },
+        {
+          "value": "1.27e-47",
+          "from": "h divided by the frequency",
+          "message": "Did you divide h by the frequency? The photon's energy is h times its frequency."
+        },
+        {
+          "value": "5.77e-6",
+          "from": "wavelength, c/ν",
+          "message": "Is that the photon's wavelength in meters? The question asks for an energy, in joules."
+        }
+      ]
+    },
+    {
+      "lesson": "3.12",
+      "file": "src/content/lessons/unit-3/3-12-properties-of-photons.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "B, 8 times as much",
+          "message": "Energy is inversely proportional to wavelength. Which photon has the shorter wavelength?"
+        },
+        {
+          "text": "A, 64 times as much",
+          "message": "The 64 is 8 squared. Does energy go as 1/λ or as 1/λ²?"
+        },
+        {
+          "text": "A, 8 times as much",
+          "message": null
+        },
+        {
+          "text": "They carry the same energy, because both travel at the speed of light.",
+          "message": "Both do travel at the speed of light. That sets the link between wavelength and frequency, not the energy."
+        }
+      ]
+    },
+    {
+      "lesson": "3.12",
+      "file": "src/content/lessons/unit-3/3-12-properties-of-photons.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "3.1 × 10⁻¹⁹ J, the same as the photon absorbed",
+          "message": null
+        },
+        {
+          "text": "Less than 3.1 × 10⁻¹⁹ J, because some energy is always used up",
+          "message": "That happens when part of the energy leaves as heat along the way, as in the T-shirt. This molecule drops straight back."
+        },
+        {
+          "text": "More than 3.1 × 10⁻¹⁹ J",
+          "message": "The molecule's energy rose by 3.1 × 10⁻¹⁹ J. Can it give out more than it took in?"
+        },
+        {
+          "text": "It depends on how bright the light was.",
+          "message": "Brighter light has more photons, not more energetic ones. The question is about one photon."
+        }
+      ]
+    },
+    {
+      "lesson": "3.12",
+      "file": "src/content/lessons/unit-3/3-12-properties-of-photons.mdx",
+      "check": 5,
+      "kind": "numeric",
+      "answer": "621",
+      "unit": "nm",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "6.21e-7",
+          "from": "left in meters",
+          "message": "That is the wavelength in meters. The question asks for nanometers."
+        },
+        {
+          "value": "1.61e6",
+          "from": "E divided by hc",
+          "message": "That looks upside down. Rearranged for the wavelength, hc goes on top and E underneath."
+        },
+        {
+          "value": "4.83e14",
+          "from": "frequency, E/h",
+          "message": "Is that the frequency, E/h? The question asks for the wavelength."
+        },
+        {
+          "value": "6.21e-16",
+          "from": "meters multiplied by 10⁻⁹",
+          "message": "Check the last step. A nanometer is smaller than a meter, so the number in nanometers is larger."
+        }
+      ]
+    },
+    {
+      "lesson": "3.13",
+      "file": "src/content/lessons/unit-3/3-13-beer-lambert-law.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "0.135",
+          "message": "A longer path puts more absorbing particles in the beam, not fewer."
+        },
+        {
+          "text": "0.270",
+          "message": "Absorbance depends on the path length. Which of ε, b and c changed?"
+        },
+        {
+          "text": "0.540",
+          "message": null
+        },
+        {
+          "text": "1.08",
+          "message": "Absorbance is proportional to b, not to b squared. By what factor did the path length change?"
+        }
+      ]
+    },
+    {
+      "lesson": "3.13",
+      "file": "src/content/lessons/unit-3/3-13-beer-lambert-law.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "835",
+      "unit": "M⁻¹ cm⁻¹",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "1670",
+          "from": "path length left out",
+          "message": "Did you leave out the path length? The cuvette is 2.00 cm, not 1.00 cm."
+        },
+        {
+          "value": "3340",
+          "from": "multiplied by the path length",
+          "message": "Did you multiply by the path length? Rearrange A = εbc: both b and c go underneath."
+        },
+        {
+          "value": "0.334",
+          "from": "A divided by b alone",
+          "message": "Did you leave out the concentration? Rearrange A = εbc: both b and c go underneath."
+        },
+        {
+          "value": "0.00120",
+          "from": "bc divided by A",
+          "message": "That looks upside down. Rearranged for ε, A goes on top."
+        }
+      ]
+    },
+    {
+      "lesson": "3.13",
+      "file": "src/content/lessons/unit-3/3-13-beer-lambert-law.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "twice as steep, so the measurement is more sensitive",
+          "message": "The slope is εb. At 560 nm the molar absorptivity is smaller, not larger."
+        },
+        {
+          "text": "half as steep, so the same change in concentration gives half the change in absorbance",
+          "message": null
+        },
+        {
+          "text": "just as steep, because the standards are the same",
+          "message": "The slope is εb, whatever the standards are. What happened to ε?"
+        },
+        {
+          "text": "curved instead of straight",
+          "message": "A = εbc is still a straight line through the origin at 560 nm. Look at its slope."
+        }
+      ]
+    },
+    {
+      "lesson": "3.13",
+      "file": "src/content/lessons/unit-3/3-13-beer-lambert-law.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "2.40",
+      "unit": "µM",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.0406",
+          "from": "absorbance multiplied by the slope",
+          "message": "Did you multiply by the slope? Follow the units: the answer should come out in µM."
+        },
+        {
+          "value": "0.417",
+          "from": "slope divided by the absorbance",
+          "message": "That looks upside down. The absorbance goes on top and the slope underneath."
+        },
+        {
+          "value": "2.40e-6",
+          "from": "answer in M",
+          "message": "Is that in M? The answer box is in µM, the unit of the calibration line."
+        }
+      ]
+    },
+    {
+      "lesson": "3.13",
+      "file": "src/content/lessons/unit-3/3-13-beer-lambert-law.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Too high",
+          "message": null
+        },
+        {
+          "text": "Too low",
+          "message": "Water left and the dye stayed behind. Is the solution in the cuvette now more concentrated, or less?"
+        },
+        {
+          "text": "Unaffected, because the amount of dye in the cuvette has not changed",
+          "message": "The amount of dye is unchanged, but the line relates absorbance to concentration. What happened to the volume?"
+        },
+        {
+          "text": "Unaffected, because the standards were measured correctly",
+          "message": "Correct standards do not protect the unknown's reading. What did the evaporation do to the unknown?"
+        }
+      ]
+    },
+    {
+      "lesson": "3.2",
+      "file": "src/content/lessons/unit-3/3-2-properties-of-solids.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Graphite is a molecular solid, and diamond is a network solid.",
+          "message": "Both are covalent network solids. Neither is made of separate molecules."
+        },
+        {
+          "text": "The covalent bonds in graphite are weaker than those in diamond.",
+          "message": "The covalent bonds inside a graphite sheet are strong. Bond strength is not what differs."
+        },
+        {
+          "text": "Graphite's sheets can slide over each other; diamond has no direction in which it can give.",
+          "message": null
+        },
+        {
+          "text": "Graphite is a metal, and diamond is a nonmetal.",
+          "message": "Graphite is carbon, a nonmetal, as diamond is. Both are covalent network solids."
+        }
+      ]
+    },
+    {
+      "lesson": "3.2",
+      "file": "src/content/lessons/unit-3/3-2-properties-of-solids.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "The I–I bonds break, leaving separate iodine atoms.",
+          "message": "Iodine is a molecular solid. Which attractions hold its particles in place: bonds inside the molecules, or forces between them?"
+        },
+        {
+          "text": "The I₂ molecules break free of their fixed places; the I–I bonds stay.",
+          "message": null
+        },
+        {
+          "text": "Each I₂ molecule splits into an I⁺ ion and an I⁻ ion.",
+          "message": "Iodine is a molecular solid, not an ionic one. Melting does not make ions."
+        },
+        {
+          "text": "The I–I bonds break, and the atoms join into one network.",
+          "message": "Liquid iodine is not a network. Think about which attractions are overcome at 114 °C."
+        }
+      ]
+    },
+    {
+      "lesson": "3.2",
+      "file": "src/content/lessons/unit-3/3-2-properties-of-solids.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Ionic",
+          "message": "An ionic solid has a high melting point and conducts when melted. Does Q?"
+        },
+        {
+          "text": "Metallic",
+          "message": "A metal conducts electricity as a solid. Q does not."
+        },
+        {
+          "text": "Covalent network",
+          "message": "A covalent network solid would not melt until far above 54 °C."
+        },
+        {
+          "text": "Molecular",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "3.2",
+      "file": "src/content/lessons/unit-3/3-2-properties-of-solids.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "X has the weaker intermolecular forces and the lower boiling point.",
+          "message": null
+        },
+        {
+          "text": "X has the stronger intermolecular forces, because more of it is in the vapor.",
+          "message": "More vapor means molecules escape the liquid more easily. Would stronger attractions make escaping easier or harder?"
+        },
+        {
+          "text": "X has the higher boiling point, because its vapor pushes harder.",
+          "message": "A liquid boils when its vapor pressure equals the pressure above it. Which liquid is already closer to that at 25 °C?"
+        },
+        {
+          "text": "The two must have the same boiling point, because they are at the same temperature.",
+          "message": "The same temperature does not make two liquids alike. Their vapor pressures differ, so the forces holding them differ."
+        }
+      ]
+    },
+    {
+      "lesson": "3.3",
+      "file": "src/content/lessons/unit-3/3-3-solids-liquids-and-gases.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Solid only",
+          "message": "In a solid each particle vibrates about a fixed place. That is not moving past its neighbors."
+        },
+        {
+          "text": "Liquid only",
+          "message": "Liquid particles do slide past one another. Check the other two phases as well."
+        },
+        {
+          "text": "Liquid and gas",
+          "message": null
+        },
+        {
+          "text": "Solid, liquid and gas",
+          "message": "Vibrating is not moving past. In one of these phases each particle stays at a fixed place."
+        }
+      ]
+    },
+    {
+      "lesson": "3.3",
+      "file": "src/content/lessons/unit-3/3-3-solids-liquids-and-gases.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 4,
+      "moved": true,
+      "options": [
+        {
+          "text": "Their particles are arranged in a regular, repeating pattern.",
+          "message": "That describes crystalline solids. An amorphous solid has no regular, repeating pattern."
+        },
+        {
+          "text": "Their particles slide past one another, as in a liquid.",
+          "message": "Sliding past one another is what the particles of a liquid do. What do the particles of a solid do?"
+        },
+        {
+          "text": "Their particles are far apart, with empty space between them.",
+          "message": "That describes a gas. In neither kind of solid are the particles far apart."
+        },
+        {
+          "text": "Each particle stays near one spot; none travels through the solid.",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "3.3",
+      "file": "src/content/lessons/unit-3/3-3-solids-liquids-and-gases.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "108",
+      "unit": "mL/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "99.2",
+          "from": "the solid's density, 1.25 g/cm³",
+          "message": "That is what the solid's density gives. The question asks about the liquid."
+        },
+        {
+          "value": "143",
+          "from": "molar mass multiplied by the density",
+          "message": "Did you multiply by the density? Follow the units: the grams have to cancel and leave mL/mol."
+        },
+        {
+          "value": "0.00927",
+          "from": "density divided by molar mass",
+          "message": "That looks upside down. Follow the units: the answer should come out in mL/mol, not mol/mL."
+        }
+      ]
+    },
+    {
+      "lesson": "3.3",
+      "file": "src/content/lessons/unit-3/3-3-solids-liquids-and-gases.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "They are closer together and hit the walls more often.",
+          "message": null
+        },
+        {
+          "text": "Each particle shrinks to half its size.",
+          "message": "The particles themselves do not change size. Their spacing changes."
+        },
+        {
+          "text": "They slow down, because they have less room.",
+          "message": "Speed goes with temperature, and the temperature has not changed."
+        },
+        {
+          "text": "They stay the same distance apart but collide less often.",
+          "message": "The same particles now share half the space. Can they stay the same distance apart?"
+        }
+      ]
+    },
+    {
+      "lesson": "3.3",
+      "file": "src/content/lessons/unit-3/3-3-solids-liquids-and-gases.mdx",
+      "check": 5,
+      "kind": "numeric",
+      "answer": "92.5",
+      "unit": "torr",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "760",
+          "from": "the pressure at which water boils at 100 °C",
+          "message": "Is that the pressure at which water boils at 100 °C? This water is kept at 50 °C. Use the table."
+        },
+        {
+          "value": "0.122",
+          "from": "92.5 torr changed to atm",
+          "message": "Is that in atm? The answer box is in torr."
+        },
+        {
+          "value": "668",
+          "from": "760 torr minus the vapor pressure",
+          "message": "Did you subtract from 760 torr? The question asks for the pressure above the water, not how far it has fallen."
+        }
+      ]
+    },
+    {
+      "lesson": "3.4",
+      "file": "src/content/lessons/unit-3/3-4-ideal-gas-law.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "It doubles.",
+          "message": "Doubling the Celsius number does not double the kelvin temperature. Convert both temperatures first."
+        },
+        {
+          "text": "It grows by about 7 percent.",
+          "message": null
+        },
+        {
+          "text": "It stays the same.",
+          "message": "The piston slides freely, so the volume is free to change. At constant pressure, volume follows kelvin temperature."
+        },
+        {
+          "text": "It halves.",
+          "message": "Warming a gas at constant pressure does not shrink it. Volume is proportional to kelvin temperature."
+        }
+      ]
+    },
+    {
+      "lesson": "3.4",
+      "file": "src/content/lessons/unit-3/3-4-ideal-gas-law.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "0.856",
+      "unit": "atm",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "-0.72",
+          "from": "Celsius temperatures in the ratio",
+          "message": "That is what Celsius temperatures give. A pressure cannot be negative: change both temperatures to kelvin."
+        },
+        {
+          "value": "0.72",
+          "from": "Celsius temperatures, sign dropped",
+          "message": "Did you use the Celsius temperatures? Pressure is proportional to kelvin temperature."
+        },
+        {
+          "value": "1.17",
+          "from": "temperature ratio upside down",
+          "message": "The air got colder, so should the pressure rise? Check which temperature is on top of the ratio."
+        },
+        {
+          "value": "0.977",
+          "from": "+18 °C in place of −18 °C",
+          "message": "Did you miss the minus sign? The freezer is at −18 °C, which is below 273 K."
+        }
+      ]
+    },
+    {
+      "lesson": "3.4",
+      "file": "src/content/lessons/unit-3/3-4-ideal-gas-law.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Pressure against volume, at constant temperature",
+          "message": "Pressure against volume is a curve, not a straight line."
+        },
+        {
+          "text": "Volume against kelvin temperature, at constant pressure",
+          "message": null
+        },
+        {
+          "text": "Volume against Celsius temperature, at constant pressure",
+          "message": "That line is straight, but check where it reaches zero. Is the volume zero at 0 °C?"
+        },
+        {
+          "text": "Pressure against Celsius temperature, at constant volume",
+          "message": "That line is straight, but it reaches zero at −273.15 °C, not at 0 °C."
+        }
+      ]
+    },
+    {
+      "lesson": "3.4",
+      "file": "src/content/lessons/unit-3/3-4-ideal-gas-law.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "1.08",
+      "unit": "atm",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.900",
+          "from": "stopped at the mole fraction",
+          "message": "That is methane's mole fraction. One more step takes it to a partial pressure."
+        },
+        {
+          "value": "0.648",
+          "from": "moles of methane times total pressure",
+          "message": "Did you multiply methane's moles by the total pressure? Turn the moles into a mole fraction first."
+        },
+        {
+          "value": "1.20",
+          "from": "the total pressure",
+          "message": "That is the total pressure. Methane is not the only gas in the sample."
+        },
+        {
+          "value": "1.33",
+          "from": "total pressure divided by the mole fraction",
+          "message": "A partial pressure cannot be more than the total pressure. Did you divide by the mole fraction?"
+        },
+        {
+          "value": "0.120",
+          "from": "partial pressure of the other gases",
+          "message": "Is that the share of the ethane and propane? The question asks about the methane."
+        }
+      ]
+    },
+    {
+      "lesson": "3.4",
+      "file": "src/content/lessons/unit-3/3-4-ideal-gas-law.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "It rises, because the total pressure rises.",
+          "message": "The total pressure does rise, but a partial pressure belongs to one gas. Write P = nRT/V for the oxygen alone."
+        },
+        {
+          "text": "It falls, because the oxygen's mole fraction falls.",
+          "message": "The mole fraction does fall, but the total pressure changes at the same time. Work out what happens to their product."
+        },
+        {
+          "text": "It stays the same.",
+          "message": null
+        },
+        {
+          "text": "It depends on how heavy a helium atom is compared with an oxygen molecule.",
+          "message": "In an ideal gas, what the other particles are, and how heavy they are, does not matter."
+        }
+      ]
+    },
+    {
+      "lesson": "3.5",
+      "file": "src/content/lessons/unit-3/3-5-kinetic-molecular-theory.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "It triples, because each particle now hits the wall three times as hard.",
+          "message": "How hard a particle hits depends on its speed, and the temperature has not changed."
+        },
+        {
+          "text": "It rises to nine times its value, because the hits are both harder and more frequent.",
+          "message": "Harder hits would need faster particles. Has anything in the question changed how fast the particles move?"
+        },
+        {
+          "text": "It triples, because each part of the wall is hit three times as often, by particles moving at the same speeds.",
+          "message": null
+        },
+        {
+          "text": "It stays the same, because the temperature has not changed.",
+          "message": "The same temperature means the same speeds, not the same pressure. The particles now share a third of the space."
+        }
+      ]
+    },
+    {
+      "lesson": "3.5",
+      "file": "src/content/lessons/unit-3/3-5-kinetic-molecular-theory.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "1.25",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "4",
+          "from": "Celsius temperatures divided",
+          "message": "That is what dividing the Celsius temperatures gives. Kinetic energy is proportional to kelvin temperature."
+        },
+        {
+          "value": "0.799",
+          "from": "ratio upside down",
+          "message": "The gas was warmed, so the factor should be above 1. Check which temperature is on top."
+        },
+        {
+          "value": "75",
+          "from": "difference of the temperatures",
+          "message": "That is the rise in temperature. A factor is a ratio of the two kelvin temperatures."
+        },
+        {
+          "value": "0.25",
+          "from": "the fractional increase, or 25 °C over 100 °C",
+          "message": "Is that the increase as a fraction, or 25 °C over 100 °C? The factor is the ratio of the new kelvin temperature to the old."
+        }
+      ]
+    },
+    {
+      "lesson": "3.5",
+      "file": "src/content/lessons/unit-3/3-5-kinetic-molecular-theory.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "CO₂ molecules have the greater average kinetic energy, and helium atoms move faster.",
+          "message": "Check the energies. Temperature sets the average kinetic energy, and the two gases are at one temperature."
+        },
+        {
+          "text": "Both have the same average kinetic energy, and helium atoms move faster.",
+          "message": null
+        },
+        {
+          "text": "Both have the same average kinetic energy and the same average speed.",
+          "message": "Kinetic energy depends on mass as well as speed. A helium atom is much lighter than a CO₂ molecule, so can both parts of this be true?"
+        },
+        {
+          "text": "Helium atoms have the greater average kinetic energy and move faster.",
+          "message": "Check the energies. Average kinetic energy is proportional to kelvin temperature, and both gases are at 300 K."
+        }
+      ]
+    },
+    {
+      "lesson": "3.5",
+      "file": "src/content/lessons/unit-3/3-5-kinetic-molecular-theory.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 4,
+      "moved": true,
+      "options": [
+        {
+          "text": "The average speed of the molecules",
+          "message": "The long tail of fast molecules drags the average to the right of the peak."
+        },
+        {
+          "text": "The total number of molecules",
+          "message": "The number of molecules is the area under the curve, not a height."
+        },
+        {
+          "text": "The highest speed any molecule has",
+          "message": "The curve runs on past the peak and has no sharp upper limit."
+        },
+        {
+          "text": "The most probable speed",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "3.5",
+      "file": "src/content/lessons/unit-3/3-5-kinetic-molecular-theory.mdx",
+      "check": 5,
+      "kind": "numeric",
+      "answer": "3.73",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "13.9",
+          "from": "ratio of molar masses, no square root",
+          "message": "That is the ratio of the molar masses. Kinetic energy has speed squared in it, so one more step is needed."
+        },
+        {
+          "value": "0.268",
+          "from": "ratio upside down",
+          "message": "That is below 1, which would make H₂ the slower gas. Check which molar mass is on top."
+        },
+        {
+          "value": "0.0719",
+          "from": "molar masses upside down, no square root",
+          "message": "Two things to check: which gas is lighter and so faster, and the speed squared in the kinetic energy."
+        }
+      ]
+    },
+    {
+      "lesson": "3.6",
+      "file": "src/content/lessons/unit-3/3-6-deviation-from-ideal-gas-law.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Attractions between the molecules pull them back from the walls, so the pressure is lower than predicted.",
+          "message": null
+        },
+        {
+          "text": "The molecules take up space, so the volume is larger than predicted.",
+          "message": "Particle volume pushes the ratio above 1. This ratio is below 1."
+        },
+        {
+          "text": "The molecules move faster than the kinetic molecular theory predicts.",
+          "message": "A ratio below 1 means less PV than an ideal gas would have. Would faster molecules give less?"
+        },
+        {
+          "text": "Some of the molecules break apart.",
+          "message": "Nothing in the question points to a chemical change. A ratio below 1 means less PV than an ideal gas would have."
+        }
+      ]
+    },
+    {
+      "lesson": "3.6",
+      "file": "src/content/lessons/unit-3/3-6-deviation-from-ideal-gas-law.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "1.45",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.690",
+          "from": "nRT divided by PV",
+          "message": "That looks upside down. PV goes on top and nRT underneath."
+        },
+        {
+          "value": "37.4",
+          "from": "PV alone",
+          "message": "That is PV alone. Divide it by nRT."
+        },
+        {
+          "value": "0.0143",
+          "from": "R = 8.314",
+          "message": "Did you use 8.314 for R? With pressure in atm and volume in liters, use the R in L·atm/(mol·K)."
+        }
+      ]
+    },
+    {
+      "lesson": "3.6",
+      "file": "src/content/lessons/unit-3/3-6-deviation-from-ideal-gas-law.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "500 K and 1 atm",
+          "message": "Hot and at low pressure, molecules are fast and far apart. That is where a gas is most nearly ideal."
+        },
+        {
+          "text": "250 K and 15 atm",
+          "message": null
+        },
+        {
+          "text": "500 K and 15 atm",
+          "message": "Look at the temperature. Do faster or slower molecules feel their attractions more?"
+        },
+        {
+          "text": "250 K and 1 atm",
+          "message": "Look at the pressure. Do attractions act more strongly when molecules are crowded together or far apart?"
+        }
+      ]
+    },
+    {
+      "lesson": "3.6",
+      "file": "src/content/lessons/unit-3/3-6-deviation-from-ideal-gas-law.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Helium, He",
+          "message": null
+        },
+        {
+          "text": "Chlorine, Cl₂",
+          "message": "Cl₂ has 34 electrons, so its London dispersion forces are far from the weakest here."
+        },
+        {
+          "text": "Butane, C₄H₁₀",
+          "message": "Butane has 34 electrons and large molecules, so both its attractions and its particles' own volume count."
+        },
+        {
+          "text": "Methanol, CH₃OH",
+          "message": "Methanol molecules hydrogen-bond. Strong attractions pull a gas away from ideal behavior."
+        }
+      ]
+    },
+    {
+      "lesson": "3.7",
+      "file": "src/content/lessons/unit-3/3-7-solutions-and-mixtures.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 4,
+      "moved": true,
+      "options": [
+        {
+          "text": "Sterling silver",
+          "message": "Sterling silver is silver with a little copper dissolved in it. It is the same throughout, so it is a solution."
+        },
+        {
+          "text": "Rubbing alcohol mixed with water",
+          "message": "Rubbing alcohol and water make a mixture that is the same throughout. Can you see separate parts in it?"
+        },
+        {
+          "text": "Clear apple juice",
+          "message": "Clear apple juice is the same throughout. A sample from one spot matches a sample from another."
+        },
+        {
+          "text": "Concrete (cement, sand and gravel)",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "3.7",
+      "file": "src/content/lessons/unit-3/3-7-solutions-and-mixtures.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Dissolve 16.4 g of NaC₂H₃O₂ in 1.000 L of water.",
+          "message": "Molarity counts liters of solution, not liters of water. Solute added to 1.000 L of water gives a different volume."
+        },
+        {
+          "text": "Dissolve 16.4 g of NaC₂H₃O₂ in some water in a 1.000-L volumetric flask, then add water up to the line.",
+          "message": null
+        },
+        {
+          "text": "Dissolve 8.20 g of NaC₂H₃O₂ in water in a 1.000-L volumetric flask and fill to the line.",
+          "message": "Check the mass. Work out the moles that 8.20 g is, and the molarity that gives in 1.000 L."
+        },
+        {
+          "text": "Dissolve 16.4 g of NaC₂H₃O₂ in 500 mL of water, then pour in another 500 mL of water.",
+          "message": "Two measured halves of water plus the solute do not make exactly 1.000 L of solution."
+        }
+      ]
+    },
+    {
+      "lesson": "3.7",
+      "file": "src/content/lessons/unit-3/3-7-solutions-and-mixtures.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "0.250",
+      "unit": "M",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "0.0250",
+          "from": "stopped at moles",
+          "message": "That is the moles of glucose. Molarity is moles divided by liters of solution."
+        },
+        {
+          "value": "2.50e-4",
+          "from": "divided by 100.0 mL, not 0.1000 L",
+          "message": "Did you divide by 100.0? Molarity needs the volume in liters."
+        },
+        {
+          "value": "0.00250",
+          "from": "moles multiplied by 0.1000 L",
+          "message": "Did you multiply the moles by the volume? Molarity is moles divided by liters."
+        },
+        {
+          "value": "45.0",
+          "from": "grams divided by liters",
+          "message": "That is grams in each liter. Change the grams to moles first."
+        }
+      ]
+    },
+    {
+      "lesson": "3.7",
+      "file": "src/content/lessons/unit-3/3-7-solutions-and-mixtures.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "5.12e21",
+      "unit": "ions",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "2.56e21",
+          "from": "one Cl⁻ for each CaCl₂",
+          "message": "That counts one chloride ion for each CaCl₂. Look at the subscript in the formula."
+        },
+        {
+          "value": "7.68e21",
+          "from": "all three ions of each CaCl₂",
+          "message": "Did you count all the ions? The question asks for the chloride ions alone."
+        },
+        {
+          "value": "8.50e-3",
+          "from": "stopped at moles of Cl⁻",
+          "message": "That is the moles of chloride ions. One more step takes moles to ions."
+        },
+        {
+          "value": "5.12e24",
+          "from": "volume left in mL",
+          "message": "Check the volume. Molarity is moles in each liter, so the 50.0 mL has to be in liters."
+        },
+        {
+          "value": "1.02e23",
+          "from": "volume left out",
+          "message": "That is the number of chloride ions in a whole liter. The sample is 50.0 mL."
+        }
+      ]
+    },
+    {
+      "lesson": "3.7",
+      "file": "src/content/lessons/unit-3/3-7-solutions-and-mixtures.mdx",
+      "check": 5,
+      "kind": "numeric",
+      "answer": "0.0500",
+      "unit": "M",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "5.00",
+          "from": "volume ratio upside down",
+          "message": "Adding water cannot raise the concentration. Check which volume goes on top."
+        },
+        {
+          "value": "0.00500",
+          "from": "stopped at moles",
+          "message": "That is the moles of copper(II) nitrate the pipet delivered. Divide by the new volume in liters."
+        },
+        {
+          "value": "0.0455",
+          "from": "final volume taken as 110.0 mL",
+          "message": "Did you add the 10.00 mL to the 100.0 mL? The flask is filled to its line, so check the final volume."
+        }
+      ]
+    },
+    {
+      "lesson": "3.8",
+      "file": "src/content/lessons/unit-3/3-8-representations-of-solutions.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "K₃PO₄ units drawn intact, spread through the water",
+          "message": "Potassium phosphate is ionic, and the ions of an ionic compound separate in water."
+        },
+        {
+          "text": "Separate K⁺ ions and PO₄³⁻ ions, three K⁺ for every PO₄³⁻",
+          "message": null
+        },
+        {
+          "text": "Separate K⁺ ions, P atoms and O atoms, three K⁺ for every P",
+          "message": "Phosphate is a polyatomic ion held together by covalent bonds. Does dissolving break those?"
+        },
+        {
+          "text": "Separate K⁺ ions and PO₄³⁻ ions, one K⁺ for every PO₄³⁻",
+          "message": "Add up the charges in that drawing. One K⁺ and one PO₄³⁻ do not come to zero."
+        }
+      ]
+    },
+    {
+      "lesson": "3.8",
+      "file": "src/content/lessons/unit-3/3-8-representations-of-solutions.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "C₂H₅⁺ ions and OH⁻ ions, in equal numbers, spread among the water molecules",
+          "message": "The OH in ethanol is an O–H group bonded to a carbon atom, not a hydroxide ion. Ethanol is a molecular compound."
+        },
+        {
+          "text": "Separate carbon, hydrogen and oxygen atoms spread among the water molecules",
+          "message": "Dissolving leaves every covalent bond in place. Separate atoms would mean the bonds had broken."
+        },
+        {
+          "text": "Whole C₂H₅OH molecules, apart from one another, among the water molecules",
+          "message": null
+        },
+        {
+          "text": "Ethanol molecules gathered in a layer of their own on top of the water",
+          "message": "A separate layer would be ethanol that has not dissolved. The question says it is dissolved."
+        }
+      ]
+    },
+    {
+      "lesson": "3.8",
+      "file": "src/content/lessons/unit-3/3-8-representations-of-solutions.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "10",
+      "unit": "particles",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "6",
+          "from": "CaBr₂ drawn whole, or the glucose left out",
+          "message": "Count again. Each glucose molecule is a solute particle, and each ion from the calcium bromide counts separately."
+        },
+        {
+          "value": "8",
+          "from": "two ions for each CaBr₂",
+          "message": "Look at the subscript in CaBr₂. How many ions does one formula unit come apart into?"
+        },
+        {
+          "value": "5",
+          "from": "one particle for each 0.10 M",
+          "message": "Check the scale. In this lesson a box holds one formula unit, or one molecule, for each 0.05 M."
+        }
+      ]
+    },
+    {
+      "lesson": "3.8",
+      "file": "src/content/lessons/unit-3/3-8-representations-of-solutions.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "20",
+      "unit": "ions",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "5",
+          "from": "stopped at formula units",
+          "message": "That is the number of formula units. Each one comes apart into ions."
+        },
+        {
+          "value": "10",
+          "from": "two ions for each formula unit, as for KBr",
+          "message": "Al(NO₃)₃ does not give the same number of ions as KBr. Count the ions in one formula unit."
+        },
+        {
+          "value": "15",
+          "from": "the nitrate ions alone",
+          "message": "Is that the nitrate ions alone? The question asks for the ions in total."
+        },
+        {
+          "value": "16",
+          "from": "4 formula units, as in the KBr box",
+          "message": "Did you use 4 formula units, as in the KBr box? This solution is 0.25 M, not 0.20 M."
+        },
+        {
+          "value": "65",
+          "from": "atoms counted, not ions",
+          "message": "Did you count atoms? A polyatomic ion stays whole and counts as one ion."
+        }
+      ]
+    },
+    {
+      "lesson": "3.9",
+      "file": "src/content/lessons/unit-3/3-9-separation-of-solutions-and-mixtures.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Pouring the solution through filter paper",
+          "message": null
+        },
+        {
+          "text": "Heating the solution to boil the water away",
+          "message": "Boiling works: the water escapes as vapor and the ions stay behind. Look for the method that fails."
+        },
+        {
+          "text": "Leaving the solution in an open dish until the water evaporates",
+          "message": "Evaporation works: the water leaves and the solid stays in the dish. Look for the method that fails."
+        },
+        {
+          "text": "Distilling off all the water and keeping the solid left in the flask",
+          "message": "Distilling works: the water leaves as vapor and the solid stays in the flask. Look for the method that fails."
+        }
+      ]
+    },
+    {
+      "lesson": "3.9",
+      "file": "src/content/lessons/unit-3/3-9-separation-of-solutions-and-mixtures.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "0.36",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "2.78",
+          "from": "solvent's distance divided by the spot's",
+          "message": "A spot cannot travel farther than the solvent that carries it, so this ratio is below 1. Check which distance is on top."
+        },
+        {
+          "value": "4.8",
+          "from": "the two distances subtracted",
+          "message": "That is the gap between the spot and the solvent front. The value asked for is a ratio of two distances."
+        },
+        {
+          "value": "0.64",
+          "from": "gap to the front divided by the solvent's distance",
+          "message": "Did you measure the spot from the solvent front? Both distances are measured from the start line."
+        }
+      ]
+    },
+    {
+      "lesson": "3.9",
+      "file": "src/content/lessons/unit-3/3-9-separation-of-solutions-and-mixtures.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "X is more polar than Y.",
+          "message": "The silica is polar. Would a compound that it holds strongly move far up the plate, or only a little?"
+        },
+        {
+          "text": "Y is more polar than X, so it is held more strongly by the silica.",
+          "message": null
+        },
+        {
+          "text": "X and Y have the same polarity, since they are on the same plate.",
+          "message": "On one plate, two compounds of the same polarity would move the same fraction of the way. These did not."
+        },
+        {
+          "text": "Y moved less because it was spotted lower on the plate.",
+          "message": "Both were spotted on the same start line, so where they started cannot explain the difference."
+        }
+      ]
+    },
+    {
+      "lesson": "3.9",
+      "file": "src/content/lessons/unit-3/3-9-separation-of-solutions-and-mixtures.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Pentane, because its smaller molecules have weaker London dispersion forces, so it has the higher vapor pressure.",
+          "message": null
+        },
+        {
+          "text": "Octane, because its larger molecules have more energy and escape first.",
+          "message": "At one temperature, larger molecules do not have more energy. Compare the boiling points: which liquid turns to vapor more easily?"
+        },
+        {
+          "text": "Pentane, because its molecules form hydrogen bonds with each other.",
+          "message": "A hydrogen bond needs an H bonded to N, O or F. Neither compound has one."
+        },
+        {
+          "text": "Octane, because its stronger forces push its molecules out of the liquid.",
+          "message": "Forces between molecules are attractions. Stronger ones hold molecules in the liquid; they do not push them out."
+        }
+      ]
+    }
+  ]
+}
