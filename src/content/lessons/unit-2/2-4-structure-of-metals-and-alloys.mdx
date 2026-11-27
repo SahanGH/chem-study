@@ -38,7 +38,14 @@ In an ionic solid, a shift puts like charges side by side. In a metal, the elect
 
 </KeyIdea>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "The size of the particles does not decide whether a solid conducts. A current needs charges that can move.",
+    2: "How strong the bonds are does not decide whether a solid conducts. Ask which charges can move.",
+    4: "Sodium chloride is made of Na⁺ and Cl⁻ ions, so it is full of charge. Ask whether that charge can move in the solid.",
+  }}
+>
 Why does a copper wire conduct electricity as a solid, while solid sodium chloride does not?
 
 - Copper atoms are smaller than sodium ions
@@ -77,7 +84,14 @@ Decide whether each mixture forms a substitutional or an interstitial alloy.
 
 </Worked>
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "A substitutional alloy forms from atoms of similar size. Compare 60 pm with 140 pm.",
+    3: "An alloy is a metal mixed with another element, and it still has its sea of electrons. Compare the two radii to see how the atoms fit.",
+    4: "Atoms of a different size can still fit into a metal's lattice. Compare the two radii to see where they would go.",
+  }}
+>
 A metal's atoms have a radius of 140 pm. Atoms of a second element, with a radius of 60 pm, are added. What kind of alloy forms?
 
 - Interstitial
@@ -94,13 +108,20 @@ In a pure metal every atom is the same size, and layers of atoms slide past each
 
 Steel is harder and stronger than pure iron, and less malleable and ductile, because the carbon atoms in the gaps make it harder for the iron layers to slide. Brass, for the same kind of reason, is harder than pure copper. An alloy still has its sea of electrons, so it still conducts electricity.
 
-<Check answer={2}>
+<Check
+  answer={4}
+  misses={{
+    1: "The sea of electrons is not what changes here. Ask how a metal bends, and what atoms of another size do to that.",
+    2: "Small atoms still take up room in the lattice. Ask how a metal bends, and whether atoms of another size change that.",
+    3: "Steel is still a metal, with its sea of electrons, so it is not ionic. Ask how a metal bends, and what the added carbon does to that.",
+  }}
+>
 Compared with pure iron, how does steel behave when you try to bend it?
 
 - It bends more easily, because carbon adds electrons to the sea
-- It is harder to bend, because carbon atoms in the gaps keep the iron layers from sliding
-- It shatters, because carbon makes it ionic
 - It behaves the same, because carbon atoms are so small
+- It shatters, because carbon makes it ionic
+- It is harder to bend, because carbon atoms in the gaps keep the iron layers from sliding
 
 <div slot="why">The interstitial carbon atoms get in the way when layers of iron try to slide, so steel is harder and stronger than pure iron, and less malleable.</div>
 </Check>

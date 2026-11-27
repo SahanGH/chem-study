@@ -18,7 +18,15 @@ Add them up for every atom in the formula. An ion needs one more step. A negativ
 
 Those electrons are then drawn in pairs. A **bonding pair** is shared between two atoms and is drawn as a line between them. A **lone pair** belongs to one atom and is drawn as two dots beside it.
 
-<Check numeric="32">
+<Check
+  numeric="32"
+  slips={{
+    "30": "That is what the neutral atoms give. Did you count the charge of the ion?",
+    "28": "Did you take two electrons away for the charge? A negative ion has gained electrons.",
+    "14": "That is what one sulfur and one oxygen give, with the charge. Check the subscript on the oxygen.",
+    "50": "That is what counting every electron in the ion gives. A Lewis diagram counts valence electrons only.",
+  }}
+>
 How many valence electrons does the sulfate ion, $\ce{SO4^2-}$, have?
 
 <div slot="why">$6 + 4 \times 6 + 2 = 32$. Sulfur and each oxygen bring 6, and the 2− charge adds two more.</div>
@@ -104,7 +112,14 @@ Check the books: two double bonds hold 8 electrons and four lone pairs hold 8 mo
 
 </Worked>
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "Count the electrons around carbon in this diagram. Both electrons of every bond it is part of count for it.",
+    3: "Count the electrons drawn in this diagram, and compare with the count of valence electrons. Each one has to be somewhere.",
+    4: "Count the electrons around carbon in this diagram. With two single bonds it is well short of eight.",
+  }}
+>
 Which is the correct Lewis diagram for HCN, with carbon in the middle?
 
 - H–C≡N, with one lone pair on N
@@ -115,7 +130,14 @@ Which is the correct Lewis diagram for HCN, with carbon in the middle?
 <div slot="why">HCN has $1 + 4 + 5 = 10$ valence electrons. H–C≡N with one lone pair on N uses all ten and gives C and N eight each. With the double bond, carbon has only six. With no lone pair, only eight electrons are drawn. With single bonds, carbon has only four.</div>
 </Check>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Count the valence electrons, then take away the ones used in the N–H bonds. Any left over go on nitrogen.",
+    3: "Two lone pairs and three bonds would put ten electrons around nitrogen. A second-period atom never holds more than eight.",
+    4: "Three lone pairs and three bonds would put twelve electrons around nitrogen. Compare that with the count of valence electrons.",
+  }}
+>
 How many lone pairs are on the nitrogen atom in ammonia, $\ce{NH3}$?
 
 - 0
@@ -145,7 +167,14 @@ Ammonium, NH₄⁺, has $5 + 4 - 1 = 8$ electrons. Four N–H bonds use all eigh
   ion={1}
 />
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "Try it: with 5 for each oxygen, the atoms would give 4 + 3 × 5 = 19, not 22. Oxygen is in group 16, so 6 is its number.",
+    3: "Carbon is in the second period, so it never holds more than eight. The fault here is in the count, not in the drawing.",
+    4: "Do the count yourself from the formula, CO₃²⁻. Does every part of the formula appear in your sum?",
+  }}
+>
 A student's Lewis diagram of the carbonate ion, $\ce{CO3^2-}$, shows 22 electrons. What went wrong?
 
 - The 2− charge was not counted, and it adds two electrons.
@@ -193,7 +222,14 @@ Atoms of the second period, such as C, N, O and F, never hold more than eight. O
 
 One more kind of molecule cannot follow the rule at all. A molecule with an odd number of electrons, such as NO or NO₂, must leave one electron unpaired, so some atom is left short of eight. Topic 2.6 takes this up.
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "Count around nitrogen: three bonds and one lone pair, with both electrons of each bond counted.",
+    3: "Count around carbon: four bonds, with both electrons of each bond counted.",
+    4: "Count around oxygen: two bonds and two lone pairs, with both electrons of each bond counted.",
+  }}
+>
 In which molecule does the central atom have fewer than eight electrons around it?
 
 - $\ce{BF3}$
