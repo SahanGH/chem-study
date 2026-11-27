@@ -1,0 +1,469 @@
+---
+topic: "8.1"
+minutes: 20
+summary: "What pH and pOH measure, how water's reaction with itself ties the hydronium and hydroxide concentrations together through Kw, and why neutral water has a pH of 7.00 only at 25 °C."
+---
+
+Pure water conducts electricity. Only barely, so that it takes a sensitive meter to see it, but the current is there, and a current through water is carried by ions. The only thing in pure water is water. So the ions must come from the water molecules themselves, and they are the reason every solution in this unit has a pH.
+
+## Water reacts with itself
+
+Topic 4.8 said that an acid gives a proton and a base takes one. A water molecule can do either. When it takes a proton it becomes the hydronium ion, H₃O⁺, and when it gives one up, what is left is the hydroxide ion, OH⁻.
+
+So one water molecule can give a proton to another:
+
+$$
+\begin{aligned}
+&\ce{H2O(l) + H2O(l) <=>} \\
+&\quad \ce{H3O+(aq) + OH-(aq)}
+\end{aligned}
+$$
+
+This is the **autoionization of water**: water forming ions from itself by passing a proton from one molecule to another.
+
+It is an equilibrium, so it has a constant. Water is a pure liquid and is left out of the expression (topic 7.3), which leaves only the two ions:
+
+$$
+K_w = [\ce{H3O+}][\ce{OH-}]
+$$
+
+At 25 °C, $K_w = 1.0 \times 10^{-14}$. That is a very small $K$, so the equilibrium lies far toward the reactants (topic 7.5): nearly all of the water stays as molecules.
+
+**Pure water.** Each proton transfer makes one H₃O⁺ and one OH⁻, so in pure water the two concentrations are equal. Call each $x$. Then, at 25 °C:
+
+$$
+\begin{aligned}
+x^2 &= 1.0 \times 10^{-14} \\
+x &= 1.0 \times 10^{-7}\ \text{M}
+\end{aligned}
+$$
+
+For scale, a liter of water holds about 55 mol of water molecules, so there is roughly one hydronium ion for every 550 million water molecules.
+
+**Two names, one ion.** The exam's equation sheet writes this same constant with H⁺(aq) where this lesson writes H₃O⁺(aq). They are the same ion, and "hydrogen ion" and "hydronium ion" are two names for it: a proton in water is always attached to a water molecule (topic 4.8). The exam accepts either. This site writes H₃O⁺.
+
+**Not only pure water.** The equilibrium is there in every solution made with water. So in any dilute water solution at 25 °C, the product of the two concentrations is 1.0 × 10⁻¹⁴. Add something that raises $[\ce{H3O+}]$, and the equilibrium shifts back toward water (Le Châtelier's principle, topic 7.9), using up OH⁻ until the product is 1.0 × 10⁻¹⁴ again. Raise $[\ce{H3O+}]$ to 5.0 × 10⁻⁶ M, fifty times its value in pure water, and $[\ce{OH-}]$ falls to 2.0 × 10⁻⁹ M, one-fiftieth of its value in pure water.
+
+Neither concentration is ever zero. An acidic solution still holds some OH⁻, and a basic one still holds some H₃O⁺. The three words are about which ion there is more of:
+
+- A solution is **neutral** when $[\ce{H3O+}] = [\ce{OH-}]$.
+- It is **acidic** when $[\ce{H3O+}]$ is the larger of the two.
+- It is **basic** when $[\ce{OH-}]$ is the larger of the two.
+
+<KeyIdea>
+
+In water at 25 °C, whatever is dissolved:
+
+$$
+[\ce{H3O+}] \times [\ce{OH-}] = 1.0 \times 10^{-14}
+$$
+
+Raise one and the other falls.
+
+</KeyIdea>
+
+## pH: counting in powers of ten
+
+The values of $[\ce{H3O+}]$ met in the lab run from more than 1 M down to less than 10⁻¹⁴ M. Numbers spread over a range like that are awkward to compare, so chemists report the exponent:
+
+$$
+\text{pH} = -\log[\ce{H3O+}]
+$$
+
+And the same for hydroxide:
+
+$$
+\text{pOH} = -\log[\ce{OH-}]
+$$
+
+Both are on the equation sheet. A "p" in front of any quantity means "the negative logarithm of": this unit also uses $\text{p}K_w$, and later $\text{p}K_a$.
+
+The minus sign is there so that the usual values come out positive. Its cost is that the scale runs backward: **the higher $[\ce{H3O+}]$, the lower the pH**. Topic 7.9 said this in passing.
+
+Three facts about logarithms are all this unit needs.
+
+1. **The logarithm of a product is a sum.** Take $[\ce{H3O+}] = 4.7 \times 10^{-6}$ M:
+
+   $$
+   \begin{aligned}
+   &-\log(4.7 \times 10^{-6}) \\
+   &= -\log 4.7 - \log 10^{-6} \\
+   &= -0.67 + 6 \\
+   &= 5.33
+   \end{aligned}
+   $$
+
+   So the pH of a concentration $a \times 10^{-b}$ M, with $a$ between 1 and 10, lies between $b - 1$ and $b$. That is a check you can do with no calculator: 4.7 × 10⁻⁶ M must have a pH between 5 and 6.
+
+2. **Going back undoes the logarithm.**
+
+   $$
+   [\ce{H3O+}] = 10^{-\text{pH}}
+   $$
+
+   $$
+   [\ce{OH-}] = 10^{-\text{pOH}}
+   $$
+
+3. **One pH unit is a factor of ten.** A solution at pH 4 has ten times the hydronium concentration of a solution at pH 5, and 1,000 times that of a solution at pH 7.
+
+In the figure, read across a row to see one solution three ways, and read down to see each step change both concentrations by a factor of ten, in opposite directions.
+
+<Figure
+  src="/figures/8-1-ph-rulers.svg"
+  alt="Three vertical rulers side by side, each with fifteen marks. The first is pH, from 0 at the top to 14 at the bottom. The second is the hydronium ion concentration, from 1 M at the top down to 10 to the minus 14 M at the bottom. The third is the hydroxide ion concentration, running the other way, from 10 to the minus 14 M at the top to 1 M at the bottom. The row at pH 7, where both concentrations are 10 to the minus 7 M, is shaded and marked as neutral at 25 °C. A note says that one step down divides the hydronium concentration by 10 and multiplies the hydroxide concentration by 10."
+  caption="pH and the two concentrations at 25 °C. In every row the two concentrations multiply to 10⁻¹⁴."
+/>
+
+**How many digits.** In pH 5.33, the 5 only says which power of ten, as the exponent does in 4.7 × 10⁻⁶. The digits after the decimal point carry the 4.7. So the digits after the decimal point are a pH's significant figures: a concentration with two significant figures gives a pH with two decimal places. Going back, a pH with two decimal places gives a concentration with two significant figures. Nearly every constant in this unit has two significant figures, so nearly every pH in it has two decimal places.
+
+<Check
+  numeric="3.8e-4"
+  unit="M"
+  slips={{
+    "2.6e-11": "That is the hydroxide ion concentration of this drink. The question asks for the hydronium ion concentration.",
+    "2.63e-11": "That is the hydroxide ion concentration of this drink. The question asks for the hydronium ion concentration.",
+    "2630": "Did you leave the minus sign out of the exponent? A pH between 3 and 4 goes with a concentration between 10⁻⁴ and 10⁻³ M.",
+    "2600": "Did you leave the minus sign out of the exponent? A pH between 3 and 4 goes with a concentration between 10⁻⁴ and 10⁻³ M.",
+    "0.534": "That is the logarithm of 3.42. Going from a pH to a concentration undoes a logarithm. It does not take another one.",
+    "3.42e-4": "Did you copy the digits of the pH into the concentration? The whole pH, 3.42, is an exponent.",
+    "0.0327": "Did you use the e key? A pH is a base-ten logarithm, so going back takes 10 raised to the power, not e.",
+  }}
+>
+A sports drink has a pH of 3.42. What is its hydronium ion concentration, in M?
+
+<div slot="why">
+
+Undo the logarithm.
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= 10^{-3.42} \\
+&= 3.8 \times 10^{-4}\ \text{M}
+\end{aligned}
+$$
+
+The pH has two decimal places, so the concentration has two significant figures. A quick check: a pH between 3 and 4 means a concentration between 10⁻⁴ and 10⁻³ M, and 3.8 × 10⁻⁴ M is.
+
+</div>
+</Check>
+
+<Check
+  answer={4}
+  misses={{
+    1: "Ask which digits of a pH are significant. The digit before the decimal point only tells you the power of ten.",
+    2: "The concentration is known to two figures, and the pH cannot be known better than that. Which digits of a pH count as significant figures?",
+    3: "A whole-number pH says only that the concentration is near 10⁻² M. The digits 7.2 have to leave their mark on the pH too.",
+  }}
+>
+A solution has $[\ce{H3O+}]$ = 0.0072 M. A calculator shows 2.142668 for −log(0.0072). How should the pH be reported?
+
+- 2.1, because 0.0072 has two significant figures
+- 2.143, because extra digits make an answer more exact
+- 2, because the zeros in 0.0072 are not significant
+- 2.14, because 0.0072 has two significant figures
+
+<div slot="why">
+
+0.0072 is 7.2 × 10⁻³, with two significant figures. In a pH, the digit before the decimal point only locates the power of ten, so the two significant figures are the two digits after the decimal point: 2.14.
+
+Writing 2.1 keeps one significant figure and throws away part of what was measured. Writing 2.143 claims a digit the measurement does not support. Writing 2 says only that the concentration is near 10⁻² M.
+
+</div>
+</Check>
+
+<Check
+  answer={3}
+  misses={{
+    1: "Dividing one pH by the other treats a pH as a plain amount. A pH is an exponent. What does a difference between two exponents mean?",
+    2: "Each unit does stand for a factor of ten, but factors of ten are not added up. Think about what part of a unit means for a power of ten.",
+    4: "1.5 is how far the pH moved, in pH units. The question asks about the concentration, and a pH is an exponent. What does 1.5 do as a power of ten?",
+  }}
+>
+Each spring, melting snow carries acid into a mountain pond, and the pH of the pond's water falls from 6.8 to 5.3 within a few days. By what factor does $[\ce{H3O+}]$ rise?
+
+- About 1.3 times, the ratio of 6.8 to 5.3
+- About 15 times, ten for a whole unit times 1.5 units
+- About 32 times, 10 raised to the power 1.5
+- About 1.5 times, the difference between the two readings
+
+<div slot="why">
+
+The pH fell by 6.8 − 5.3 = 1.5 units. A pH is an exponent, so a difference of 1.5 in pH is a factor of 10 raised to the power 1.5 in concentration.
+
+$$
+10^{1.5} = 31.6
+$$
+
+That is about 32. One whole unit is a factor of 10, and the extra half unit is another factor of 3.2.
+
+Dividing one pH by the other, or reading the difference itself as the factor, treats pH as a plain amount. Multiplying 10 by 1.5 adds the factors up, and factors of ten multiply.
+
+</div>
+</Check>
+
+## pH and pOH add to 14.00
+
+Take the negative logarithm of both sides of $K_w$'s expression at 25 °C:
+
+$$
+[\ce{H3O+}][\ce{OH-}] = 1.0 \times 10^{-14}
+$$
+
+The logarithm of a product is a sum (fact 1), so the left side becomes the pH plus the pOH. At 25 °C:
+
+$$
+\text{pH} + \text{pOH} = 14.00
+$$
+
+The 14.00 is $\text{p}K_w$, the negative logarithm of $K_w$. This line is on the equation sheet, as 14 = pH + pOH.
+
+So there are two ways from an $[\ce{OH-}]$ to a pH: through $[\ce{H3O+}]$ with $K_w$, or through the pOH. Both give the same answer.
+
+At 25 °C, pure water has a pH of 7.00 and a pOH of 7.00. At that temperature an acidic solution has a pH below 7.00 and a pOH above it, and a basic solution has a pH above 7.00 and a pOH below it.
+
+<Worked title="A soil extract">
+
+Blueberry bushes grow well only in acidic soil. A grower shakes a soil sample with pure water and filters it. At 25 °C the clear extract has $[\ce{H3O+}] = 4.7 \times 10^{-6}$ M. Find the pH, $[\ce{OH-}]$ and the pOH of the extract.
+
+1. **pH from the hydronium concentration.**
+
+   $$
+   \begin{aligned}
+   \text{pH} &= -\log(4.7 \times 10^{-6}) \\
+   &= 5.33
+   \end{aligned}
+   $$
+
+   This is the value worked out in fact 1.
+
+2. **$[\ce{OH-}]$ from $K_w$.**
+
+   $$
+   \begin{aligned}
+   [\ce{OH-}] &= \frac{K_w}{[\ce{H3O+}]} \\
+   &= \frac{1.0 \times 10^{-14}}{4.7 \times 10^{-6}} \\
+   &= 2.1 \times 10^{-9}\ \text{M}
+   \end{aligned}
+   $$
+
+3. **pOH, two ways.** From the concentration, keeping the unrounded 2.13 × 10⁻⁹:
+
+   $$
+   \begin{aligned}
+   \text{pOH} &= -\log(2.13 \times 10^{-9}) \\
+   &= 8.67
+   \end{aligned}
+   $$
+
+   From the pH:
+
+   $$
+   \begin{aligned}
+   \text{pOH} &= 14.00 - 5.33 \\
+   &= 8.67
+   \end{aligned}
+   $$
+
+   They agree.
+
+4. **Say what it means.** $[\ce{H3O+}]$ is larger than $[\ce{OH-}]$, by a factor of about 2,200, so the extract is acidic: right for blueberries.
+
+</Worked>
+
+<Check
+  numeric="8.15"
+  tolerance={0.25}
+  slips={{
+    "5.85": "That is the pOH: the concentration you were given is hydroxide. One more step takes a pOH to a pH at 25 °C.",
+    "8.1": "Did you round to one decimal place? The concentration has two significant figures, so the pH takes two digits after the decimal point.",
+    "8.2": "Did you round to one decimal place? The concentration has two significant figures, so the pH takes two digits after the decimal point.",
+    "7.1e-9": "That is the hydronium ion concentration. The question asks for the pH, which is its negative logarithm.",
+  }}
+>
+The water in a freshwater aquarium at 25 °C has $[\ce{OH-}] = 1.4 \times 10^{-6}$ M. What is the pH of the water?
+
+<div slot="why">
+
+The concentration given is hydroxide, so its negative logarithm is the pOH.
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(1.4 \times 10^{-6}) \\
+&= 5.85
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 5.85 \\
+&= 8.15
+\end{aligned}
+$$
+
+The water holds more OH⁻ than H₃O⁺, so it is basic, and its pH must come out above 7.
+
+</div>
+</Check>
+
+<Check
+  answer={1}
+  misses={{
+    2: "Dividing Kw by this hydronium concentration gives a hydroxide concentration of 4.0 × 10⁻⁵ M. Put the other three samples in the same form before you compare.",
+    3: "This sample is the easy one to read, because it is already a hydroxide concentration. Convert the other three to the same form and compare.",
+    4: "A pH of 9.20 is basic, but the other three samples are basic too. Find the hydroxide concentration of each before you compare.",
+  }}
+>
+Four water samples are at 25 °C. Which sample has the highest concentration of hydroxide ions?
+
+- The sample with a pOH of 4.30
+- The sample with [H₃O⁺] = 2.5 × 10⁻¹⁰ M
+- The sample with [OH⁻] = 2.0 × 10⁻⁵ M
+- The sample with a pH of 9.20
+
+<div slot="why">
+
+Put all four in the same form. The first is 10 raised to the power −4.30. The second is 1.0 × 10⁻¹⁴ divided by 2.5 × 10⁻¹⁰. The third is as given. For the fourth, the pOH is 14.00 − 9.20 = 4.80.
+
+| Sample | [OH⁻] in M |
+|---|---|
+| pOH 4.30 | 5.0 × 10⁻⁵ |
+| [H₃O⁺] = 2.5 × 10⁻¹⁰ M | 4.0 × 10⁻⁵ |
+| [OH⁻] = 2.0 × 10⁻⁵ M | 2.0 × 10⁻⁵ |
+| pH 9.20 | 1.6 × 10⁻⁵ |
+
+The first sample has the most hydroxide. All four are basic, so "which one is basic" does not settle it.
+
+</div>
+</Check>
+
+## Pure water at other temperatures
+
+$K_w$ is an equilibrium constant, and like any $K$ it changes with temperature (topic 7.9). Pulling a proton off one water molecule and putting it on another takes energy: the autoionization of water is endothermic. So $K_w$ rises when water is warmed and falls when it is cooled. These are measured values:
+
+| Temperature | $K_w$ |
+|---|---|
+| 10 °C | 2.9 × 10⁻¹⁵ |
+| 25 °C | 1.0 × 10⁻¹⁴ |
+| 40 °C | 2.9 × 10⁻¹⁴ |
+
+The matching digits at 10 °C and 40 °C are a coincidence. The two values differ by a factor of ten.
+
+Neutral is a comparison, and the comparison does not change with temperature: is there as much H₃O⁺ as OH⁻? What moves is the pH where the answer is yes.
+
+<Worked title="Cold water">
+
+A bottle of pure water is cooled to 10 °C, where $K_w = 2.9 \times 10^{-15}$. Find $[\ce{H3O+}]$, $[\ce{OH-}]$ and the pH. Is the water still neutral?
+
+1. **It is still pure water.** Every H₃O⁺ was made together with one OH⁻, so the two concentrations are equal. Call each $x$.
+
+2. **Use $K_w$ for this temperature.**
+
+   $$
+   \begin{aligned}
+   x^2 &= 2.9 \times 10^{-15} \\
+   x &= 5.4 \times 10^{-8}\ \text{M}
+   \end{aligned}
+   $$
+
+   That is both $[\ce{H3O+}]$ and $[\ce{OH-}]$.
+
+3. **Take the pH,** from the unrounded 5.39 × 10⁻⁸.
+
+   $$
+   \begin{aligned}
+   \text{pH} &= -\log(5.39 \times 10^{-8}) \\
+   &= 7.27
+   \end{aligned}
+   $$
+
+4. **Answer the question.** The water is neutral, because the two concentrations are equal. Its pH is 7.27, not 7.00, because cold water has ionized less. Its pOH is 7.27 too, and the two add to 14.54, which is $\text{p}K_w$ at 10 °C. The sum is 14.00 only at 25 °C.
+
+</Worked>
+
+<Figure
+  src="/figures/8-1-neutral-at-three-temperatures.svg"
+  alt="A bar chart of the hydronium and hydroxide ion concentrations in pure water at three temperatures. At 10 °C the two bars are equal, each about 5.4 times 10 to the minus 8 M, and the pH is 7.27. At 25 °C the two bars are equal at 10 times 10 to the minus 8 M, and the pH is 7.00. At 40 °C the two bars are equal at about 17 times 10 to the minus 8 M, and the pH is 6.77. Hydronium bars are plain and hydroxide bars are hatched."
+  caption="Pure water is neutral at every temperature: the two concentrations are equal. Only the pH at which that happens changes."
+/>
+
+<KeyIdea>
+
+Neutral is about the two concentrations being equal, and cold or hot water passes that test. The pH it shows then depends on $K_w$ at that temperature. Only at 25 °C is it 7.00.
+
+</KeyIdea>
+
+<Check
+  answer={2}
+  misses={{
+    1: "A pH of 7.00 marks neutral only at 25 °C. Use the Kw given for 40 °C to find the hydroxide concentration, then compare the two.",
+    3: "Warm water does hold more H₃O⁺ than cold water, and more OH⁻ too. What decides acidic or basic is which of the two is larger in this solution.",
+    4: "The product equals Kw in every water solution, whether acidic, basic or neutral. Neutral needs the two concentrations to be equal. Are they?",
+  }}
+>
+A water solution at 40 °C has a pH of 7.00. At 40 °C, $K_w = 2.9 \times 10^{-14}$. Is the solution acidic, basic or neutral?
+
+- Neutral, because its pH is exactly 7.00
+- Basic, because [OH⁻] is larger than [H₃O⁺]
+- Acidic, because warm water holds more H₃O⁺ than cold water does
+- Neutral, because [H₃O⁺] × [OH⁻] still equals Kw
+
+<div slot="why">
+
+A pH of 7.00 means $[\ce{H3O+}] = 1.0 \times 10^{-7}$ M. Then, with the $K_w$ for 40 °C:
+
+$$
+\begin{aligned}
+[\ce{OH-}] &= \frac{2.9 \times 10^{-14}}{1.0 \times 10^{-7}} \\
+&= 2.9 \times 10^{-7}\ \text{M}
+\end{aligned}
+$$
+
+There is almost three times as much OH⁻ as H₃O⁺, so the solution is basic. At 40 °C a neutral solution has pH 6.77, so 7.00 is on the basic side.
+
+The product of the two concentrations equals $K_w$ in every water solution, acidic, basic or neutral, so that says nothing about which this one is. Warm water does hold more H₃O⁺ than cold water, and more OH⁻ as well.
+
+</div>
+</Check>
+
+<Trap>
+
+Five mistakes cost points on this topic:
+
+- **Reading pH 7 as "neutral" when the water is not at 25 °C.** Compare the two concentrations instead. If the question gives a $K_w$ other than 1.0 × 10⁻¹⁴, that is the one to use, and 14.00 is no longer the sum of pH and pOH.
+- **Reporting the pOH as the pH.** The negative logarithm of a hydroxide concentration is the pOH. A basic solution at 25 °C must come out above 7.
+- **Reading a pH difference as a plain ratio.** A solution at pH 4 has 1,000 times the hydronium concentration of one at pH 7, not about twice.
+- **Thinking an acidic solution has no OH⁻.** Both ions are in every water solution. What differs is which concentration is larger.
+- **Giving a pH the wrong number of digits.** Two significant figures in the concentration, two decimal places in the pH.
+
+</Trap>
+
+<KeyPoints>
+
+- Water passes protons between its own molecules:
+
+  $$
+  \begin{aligned}
+  &\ce{2H2O(l) <=>} \\
+  &\quad \ce{H3O+(aq) + OH-(aq)}
+  \end{aligned}
+  $$
+
+  At 25 °C, in every dilute water solution:
+
+  $$
+  \begin{aligned}
+  K_w &= [\ce{H3O+}][\ce{OH-}] \\
+  &= 1.0 \times 10^{-14}
+  \end{aligned}
+  $$
+
+- H⁺(aq) and H₃O⁺(aq) are two ways to write one ion, and the exam accepts both.
+- $\text{pH} = -\log[\ce{H3O+}]$ and $\text{pOH} = -\log[\ce{OH-}]$, so $[\ce{H3O+}] = 10^{-\text{pH}}$. A lower pH means more hydronium, and each pH unit is a factor of ten.
+- At 25 °C, pH + pOH = 14.00.
+- The digits after the decimal point are a pH's significant figures, so a two-figure concentration gives a pH with two decimal places.
+- Neutral means equal concentrations of H₃O⁺ and OH⁻. In pure water that happens at pH 7.00 only at 25 °C, because $K_w$ grows with temperature.
+
+</KeyPoints>
+
+<PracticeNext />

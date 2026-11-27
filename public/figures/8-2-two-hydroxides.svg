@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 330" font-family="system-ui, sans-serif" font-size="18">
+  <!-- One box of particles: 4 formula units of Sr(OH)2 in solution, as 4 Sr2+ and 8 OH-. Charge: 4 x (+2) and 8 x (-1). Water is not drawn.
+       Grid: columns x = 90, 190, 290, 390; rows y = 82, 147, 212. Each particle is moved off its grid point by at most 6 units.
+       A hydroxide with its hydrogen on the right (ohr) is drawn with the oxygen 15 left of its point, so the pair and its minus sign span -31 to +31.
+       A hydroxide with its hydrogen on the left (ohl) is drawn with the oxygen 3 right of its point, so the pair and its minus sign span -29 to +29.
+       No two particles touch, and none reaches the edge of the box. -->
+  <defs>
+    <g id="sr">
+      <circle r="20" fill="#26231F"/>
+      <text y="6.5" text-anchor="middle" fill="#FDFCF9">2+</text>
+    </g>
+    <g id="ohr">
+      <circle cx="-15" r="16" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="9" r="8" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+      <text x="19" y="-8" fill="#26231F">&#8722;</text>
+    </g>
+    <g id="ohl">
+      <circle cx="3" r="16" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+      <circle cx="-21" r="8" fill="#E3EAE9" stroke="#26231F" stroke-width="1.5"/>
+      <text x="17" y="-10" fill="#26231F">&#8722;</text>
+    </g>
+  </defs>
+  <rect width="480" height="330" fill="#FDFCF9"/>
+
+  <text x="240" y="28" text-anchor="middle" fill="#26231F" font-weight="600">Sr(OH)₂ dissolved in water</text>
+  <rect x="40" y="44" width="400" height="206" rx="10" fill="#E3EAE9" fill-opacity="0.35" stroke="#26231F" stroke-width="1.5"/>
+  <!-- grid (90, 82), offset (+4, -3) -->
+  <use href="#ohr" x="94" y="79"/>
+  <!-- grid (190, 82), offset (-5, +4) -->
+  <use href="#sr" x="185" y="86"/>
+  <!-- grid (290, 82), offset (+3, +5) -->
+  <use href="#ohl" x="293" y="87"/>
+  <!-- grid (390, 82), offset (-4, -2) -->
+  <use href="#ohr" x="386" y="80"/>
+  <!-- grid (90, 147), offset (+5, +2) -->
+  <use href="#sr" x="95" y="149"/>
+  <!-- grid (190, 147), offset (-3, -5) -->
+  <use href="#ohl" x="187" y="142"/>
+  <!-- grid (290, 147), offset (+6, +3) -->
+  <use href="#ohr" x="296" y="150"/>
+  <!-- grid (390, 147), offset (-2, -4) -->
+  <use href="#sr" x="388" y="143"/>
+  <!-- grid (90, 212), offset (-4, +3) -->
+  <use href="#ohl" x="86" y="215"/>
+  <!-- grid (190, 212), offset (+5, -2) -->
+  <use href="#ohr" x="195" y="210"/>
+  <!-- grid (290, 212), offset (-3, +4) -->
+  <use href="#sr" x="287" y="216"/>
+  <!-- grid (390, 212), offset (+2, -5) -->
+  <use href="#ohl" x="392" y="207"/>
+
+  <!-- Key, centered on y = 292 -->
+  <use href="#sr" x="120" y="292"/>
+  <text x="148" y="298" fill="#26231F">Sr²⁺ (4)</text>
+  <use href="#ohr" x="283" y="292"/>
+  <text x="318" y="298" fill="#26231F">OH⁻ (8)</text>
+</svg>
