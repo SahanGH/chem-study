@@ -26,13 +26,20 @@ The test is the sample, not the ingredients. If every part of it has the same pr
 
 </KeyIdea>
 
-<Check answer={2}>
+<Check
+  answer={4}
+  misses={{
+    1: "Sterling silver is silver with a little copper dissolved in it. It is the same throughout, so it is a solution.",
+    2: "Rubbing alcohol and water make a mixture that is the same throughout. Can you see separate parts in it?",
+    3: "Clear apple juice is the same throughout. A sample from one spot matches a sample from another.",
+  }}
+>
 Which of these is a heterogeneous mixture?
 
 - Sterling silver
-- Concrete (cement, sand and gravel)
-- Clear apple juice
 - Rubbing alcohol mixed with water
+- Clear apple juice
+- Concrete (cement, sand and gravel)
 
 <div slot="why">Break a piece of concrete and you can see the separate parts, and even pick out a pebble of gravel. A sample from one spot is not the same as a sample from another. Sterling silver (silver with a little copper dissolved in it), clear apple juice and rubbing alcohol in water are each the same throughout, so each is a solution.</div>
 </Check>
@@ -62,7 +69,14 @@ That is why a solution is made in a **volumetric flask**, a flask with a long ne
   caption="Dissolve first, then fill to the line: the line measures the volume of solution, not of water. Then stopper and mix."
 />
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Molarity counts liters of solution, not liters of water. Solute added to 1.000 L of water gives a different volume.",
+    3: "Check the mass. Work out the moles that 8.20 g is, and the molarity that gives in 1.000 L.",
+    4: "Two measured halves of water plus the solute do not make exactly 1.000 L of solution.",
+  }}
+>
 Which procedure makes 1.000 L of 0.200 M sodium acetate, NaC₂H₃O₂ (molar mass 82.03 g/mol)?
 
 - Dissolve 16.4 g of NaC₂H₃O₂ in 1.000 L of water.
@@ -135,7 +149,16 @@ How many grams of sodium carbonate, Na₂CO₃, are needed to make 500.0 mL of a
 
 </Worked>
 
-<Check numeric="0.250" unit="M">
+<Check
+  numeric="0.250"
+  unit="M"
+  slips={{
+    "0.0250": "That is the moles of glucose. Molarity is moles divided by liters of solution.",
+    "2.50e-4": "Did you divide by 100.0? Molarity needs the volume in liters.",
+    "0.00250": "Did you multiply the moles by the volume? Molarity is moles divided by liters.",
+    "45.0": "That is grams in each liter. Change the grams to moles first.",
+  }}
+>
 A student dissolves 4.50 g of glucose, C₆H₁₂O₆ (molar mass 180.16 g/mol), in water and fills a 100.0-mL volumetric flask to the line. What is the molarity of the glucose?
 
 <div slot="why">
@@ -206,7 +229,17 @@ $$
 
 Topic 3.8 shows how to draw ions in a solution.
 
-<Check numeric="5.12e21" unit="ions">
+<Check
+  numeric="5.12e21"
+  unit="ions"
+  slips={{
+    "2.56e21": "That counts one chloride ion for each CaCl₂. Look at the subscript in the formula.",
+    "7.68e21": "Did you count all the ions? The question asks for the chloride ions alone.",
+    "8.50e-3": "That is the moles of chloride ions. One more step takes moles to ions.",
+    "5.12e24": "Check the volume. Molarity is moles in each liter, so the 50.0 mL has to be in liters.",
+    "1.02e23": "That is the number of chloride ions in a whole liter. The sample is 50.0 mL.",
+  }}
+>
 Calcium chloride, CaCl₂, is spread on icy roads. How many chloride ions are in 50.0 mL of 0.0850 M calcium chloride? (To type a power of ten such as 2.5 × 10⁻³, write 2.5e-3 or 2.5 x 10^-3.)
 
 <div slot="why">
@@ -299,7 +332,15 @@ A stockroom bottle holds 2.40 M potassium chloride, KCl. How much of it is neede
 
 </Worked>
 
-<Check numeric="0.0500" unit="M">
+<Check
+  numeric="0.0500"
+  unit="M"
+  slips={{
+    "5.00": "Adding water cannot raise the concentration. Check which volume goes on top.",
+    "0.00500": "That is the moles of copper(II) nitrate the pipet delivered. Divide by the new volume in liters.",
+    "0.0455": "Did you add the 10.00 mL to the 100.0 mL? The flask is filled to its line, so check the final volume.",
+  }}
+>
 A student pipets 10.00 mL of 0.500 M copper(II) nitrate into a 100.0-mL volumetric flask and fills it to the line with water. What is the concentration of the new solution?
 
 <div slot="why">

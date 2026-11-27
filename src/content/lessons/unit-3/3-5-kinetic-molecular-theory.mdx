@@ -45,7 +45,14 @@ Pressure comes from particles hitting the walls. Anything that makes the hits mo
 
 </KeyIdea>
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "How hard a particle hits depends on its speed, and the temperature has not changed.",
+    2: "Harder hits would need faster particles. Has anything in the question changed how fast the particles move?",
+    4: "The same temperature means the same speeds, not the same pressure. The particles now share a third of the space.",
+  }}
+>
 A gas in a cylinder is squeezed to one third of its volume. Its temperature does not change. What happens to the pressure, and why?
 
 - It triples, because each particle now hits the wall three times as hard.
@@ -72,7 +79,15 @@ Here is a consequence that surprises people. At the same temperature, every gas 
 
 Now look at the equation again. If the kinetic energy is the same and the mass is smaller, the speed has to be greater. A lighter particle must move faster to carry the same energy. So at one temperature, lighter gases move faster on average.
 
-<Check numeric="1.25">
+<Check
+  numeric="1.25"
+  slips={{
+    "4": "That is what dividing the Celsius temperatures gives. Kinetic energy is proportional to kelvin temperature.",
+    "0.799": "The gas was warmed, so the factor should be above 1. Check which temperature is on top.",
+    "75": "That is the rise in temperature. A factor is a ratio of the two kelvin temperatures.",
+    "0.25": "Is that the increase as a fraction, or 25 °C over 100 °C? The factor is the ratio of the new kelvin temperature to the old.",
+  }}
+>
 A gas is warmed from 25 °C to 100 °C. By what factor does the average kinetic energy of its particles increase?
 
 <div slot="why">
@@ -120,7 +135,14 @@ The heavy molecules carry the same kinetic energy at a much lower speed. The rat
 
 </Worked>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Check the energies. Temperature sets the average kinetic energy, and the two gases are at one temperature.",
+    3: "Kinetic energy depends on mass as well as speed. A helium atom is much lighter than a CO₂ molecule, so can both parts of this be true?",
+    4: "Check the energies. Average kinetic energy is proportional to kelvin temperature, and both gases are at 300 K.",
+  }}
+>
 Helium and carbon dioxide are both at 300 K. How do their particles compare?
 
 - CO₂ molecules have the greater average kinetic energy, and helium atoms move faster.
@@ -166,18 +188,32 @@ Pick a gas and a temperature, and compare the curve with nitrogen at 300 K.
 
 <MaxwellBoltzmann />
 
-<Check answer={2}>
+<Check
+  answer={4}
+  misses={{
+    1: "The long tail of fast molecules drags the average to the right of the peak.",
+    2: "The number of molecules is the area under the curve, not a height.",
+    3: "The curve runs on past the peak and has no sharp upper limit.",
+  }}
+>
 What does the peak of a Maxwell–Boltzmann speed curve show?
 
 - The average speed of the molecules
-- The most probable speed
-- The highest speed any molecule has
 - The total number of molecules
+- The highest speed any molecule has
+- The most probable speed
 
 <div slot="why">At the peak speed more molecules are found than at any other speed. The long tail drags the average to the right of the peak, the curve has no sharp upper limit, and the number of molecules is the area under the curve, not a height.</div>
 </Check>
 
-<Check numeric="3.73">
+<Check
+  numeric="3.73"
+  slips={{
+    "13.9": "That is the ratio of the molar masses. Kinetic energy has speed squared in it, so one more step is needed.",
+    "0.268": "That is below 1, which would make H₂ the slower gas. Check which molar mass is on top.",
+    "0.0719": "Two things to check: which gas is lighter and so faster, and the speed squared in the kinetic energy.",
+  }}
+>
 H₂ and N₂ are at the same temperature. How many times as fast is the speed at the peak of H₂'s curve as the speed at the peak of N₂'s? (Molar masses: H₂ 2.016 g/mol, N₂ 28.02 g/mol.)
 
 <div slot="why">

@@ -22,7 +22,14 @@ $$
 2(+1) + (-2) = 0
 $$
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Potassium phosphate is ionic, and the ions of an ionic compound separate in water.",
+    3: "Phosphate is a polyatomic ion held together by covalent bonds. Does dissolving break those?",
+    4: "Add up the charges in that drawing. One K⁺ and one PO₄³⁻ do not come to zero.",
+  }}
+>
 Which description matches a correct particle drawing of potassium phosphate, K₃PO₄, dissolved in water?
 
 - K₃PO₄ units drawn intact, spread through the water
@@ -49,7 +56,14 @@ A polar molecule such as glucose attracts water strongly. Its O–H groups form 
 
 One caution: some molecular substances, hydrogen chloride among them, react with water and form ions. Units 4 and 8 deal with those.
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "The OH in ethanol is an O–H group bonded to a carbon atom, not a hydroxide ion. Ethanol is a molecular compound.",
+    2: "Dissolving leaves every covalent bond in place. Separate atoms would mean the bonds had broken.",
+    4: "A separate layer would be ethanol that has not dissolved. The question says it is dissolved.",
+  }}
+>
 Which drawing best shows ethanol, C₂H₅OH, dissolved in water?
 
 - C₂H₅⁺ ions and OH⁻ ions, in equal numbers, spread among the water molecules
@@ -94,7 +108,15 @@ A box is a fixed volume, so concentration shows up as a count. Scale the number 
   caption="Twice the concentration, twice as many ions in the same volume, always two chloride ions for each magnesium ion. Water molecules are left out so the ions can be counted."
 />
 
-<Check numeric="10" unit="particles">
+<Check
+  numeric="10"
+  unit="particles"
+  slips={{
+    "6": "Count again. Each glucose molecule is a solute particle, and each ion from the calcium bromide counts separately.",
+    "8": "Look at the subscript in CaBr₂. How many ions does one formula unit come apart into?",
+    "5": "Check the scale. In this lesson a box holds one formula unit, or one molecule, for each 0.05 M.",
+  }}
+>
 On this lesson's scale, a box shows a solution that is 0.20 M in glucose and 0.10 M in calcium bromide, CaBr₂. How many solute particles does the drawing show?
 
 <div slot="why">
@@ -136,7 +158,17 @@ A box for 0.10 M sodium chloride shows 2 Na⁺ and 2 Cl⁻. Draw the same volume
 
 </Worked>
 
-<Check numeric="20" unit="ions">
+<Check
+  numeric="20"
+  unit="ions"
+  slips={{
+    "5": "That is the number of formula units. Each one comes apart into ions.",
+    "10": "Al(NO₃)₃ does not give the same number of ions as KBr. Count the ions in one formula unit.",
+    "15": "Is that the nitrate ions alone? The question asks for the ions in total.",
+    "16": "Did you use 4 formula units, as in the KBr box? This solution is 0.25 M, not 0.20 M.",
+    "65": "Did you count atoms? A polyatomic ion stays whole and counts as one ion.",
+  }}
+>
 On the same scale, a box for 0.20 M KBr holds 4 K⁺ and 4 Br⁻. How many ions in total belong in the same box for 0.25 M aluminum nitrate, Al(NO₃)₃?
 
 <div slot="why">

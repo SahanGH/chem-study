@@ -42,7 +42,14 @@ Every substance has London dispersion forces. They grow with the number of elect
 
 </KeyIdea>
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "Count the electrons. Both molecules are C₆H₁₄, so can one have more than the other?",
+    3: "Look at the bonds. Both molecules have C–C and C–H bonds alone, so is either one polar?",
+    4: "The same formula does not mean the same shape, and shape changes how strongly molecules attract one another.",
+  }}
+>
 Hexane and 2,2-dimethylbutane are both C₆H₁₄. Hexane is a straight chain of six carbons; 2,2-dimethylbutane is compact and branched. Which has the higher boiling point, and why?
 
 - Hexane, because its long molecules touch over a larger area, so the London dispersion forces between them are stronger.
@@ -63,7 +70,14 @@ Dipole–dipole forces act on top of London forces, never instead of them. So a 
 
 Topic 2.7 gave two boiling points without explaining them: cis-1,2-dichloroethene boils at a higher temperature than trans. Here is the explanation. The two isomers have the same atoms and the same 48 electrons, so about the same London forces. But cis is polar and trans is not. Cis boils at about 60 °C, trans at about 48 °C. Those extra 12 degrees are the dipole–dipole forces.
 
-<Check answer={4}>
+<Check
+  answer={4}
+  misses={{
+    1: "Draw the shape. BCl₃ is trigonal planar, so its three polar bonds cancel.",
+    2: "Draw the shape. XeF₄ is square planar, so its polar bonds cancel.",
+    3: "SiH₄ is tetrahedral and symmetrical, so it has no overall dipole.",
+  }}
+>
 Which substance's molecules attract one another through dipole–dipole forces?
 
 - BCl₃
@@ -111,13 +125,20 @@ Water is the great example. Each water molecule can take part in up to four hydr
 
 Hydrogen bonds can also form between two different substances. Acetone, (CH₃)₂CO, has all its hydrogens on carbon, so its molecules cannot hydrogen-bond with each other. Mix it with water, though, and a hydrogen of water is attracted to the lone pairs on acetone's oxygen. That is a hydrogen bond between two different molecules, and it is part of why acetone and water mix in any proportion.
 
-<Check answer={2}>
+<Check
+  answer={4}
+  misses={{
+    1: "Check what the hydrogens are bonded to. A hydrogen bond needs an H bonded to N, O or F, and phosphorus is none of those.",
+    2: "CH₄ has C–H bonds alone. A hydrogen bond needs an H bonded to N, O or F.",
+    3: "Check where the hydrogens are. In CH₃Cl each one is bonded to carbon, not to N, O or F.",
+  }}
+>
 In which pure substance do hydrogen bonds form between the molecules?
 
 - PH₃
-- CH₃NH₂
-- CH₃Cl
 - CH₄
+- CH₃Cl
+- CH₃NH₂
 
 <div slot="why">In methylamine, CH₃NH₂, two hydrogens are bonded directly to nitrogen, and the nitrogen of another molecule has a lone pair to attract them. In PH₃ the hydrogens are bonded to phosphorus, not to N, O or F, so its molecules cannot hydrogen-bond with each other. In CH₃Cl every hydrogen is on carbon, so there is no N–H, O–H or F–H. CH₄ has only C–H bonds.</div>
 </Check>
@@ -151,7 +172,14 @@ It does not always go that way. Hexane, with 50 electrons, boils at 69 °C, belo
 
 </Worked>
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "A hydrogen bond needs an H bonded to N, O or F. Hexane's hydrogens are all on carbon.",
+    3: "That is too broad. Between molecules of similar size, hydrogen bonds win.",
+    4: "Hexane has C–C and C–H bonds alone, and the question calls it nonpolar. HF is the polar molecule.",
+  }}
+>
 Hydrogen fluoride, HF, forms hydrogen bonds and boils at about 20 °C. Hexane, C₆H₁₄, is nonpolar and boils at about 69 °C. Which statement explains this?
 
 - Hexane has 50 electrons to HF's 10, so the London forces between hexane molecules outweigh all the attractions between HF molecules.
@@ -178,7 +206,14 @@ Around a cation, water molecules turn their δ− oxygen toward the ion. Around 
 
 The attraction is stronger for an ion with a larger charge, and for a smaller ion, just as Coulomb's law predicts.
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "Coulomb's law depends on charge and on distance. Compare K⁺ with the other ions on both.",
+    2: "Coulomb's law depends on charge as well as distance. Have you compared both for all four ions?",
+    4: "The sign of the charge does not decide this. Coulomb's law depends on how large the charge is and on distance: compare the four ions on both.",
+  }}
+>
 Which ion attracts the water molecules around it most strongly?
 
 - K⁺

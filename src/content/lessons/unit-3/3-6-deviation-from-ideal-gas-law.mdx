@@ -30,7 +30,14 @@ Argon shows it. Argon boils at 87 K at 1 atm. At 90 K and 1 atm, just above that
 
 The stronger the forces between the particles, the bigger the deviation. Polar molecules, molecules that hydrogen-bond and molecules with many electrons deviate more.
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "Particle volume pushes the ratio above 1. This ratio is below 1.",
+    3: "A ratio below 1 means less PV than an ideal gas would have. Would faster molecules give less?",
+    4: "Nothing in the question points to a chemical change. A ratio below 1 means less PV than an ideal gas would have.",
+  }}
+>
 A real gas at a moderate pressure has $PV/nRT = 0.85$. What is the best explanation?
 
 - Attractions between the molecules pull them back from the walls, so the pressure is lower than predicted.
@@ -89,7 +96,14 @@ Both effects are always present. At moderate pressures attractions usually win, 
   caption="An illustrative real gas. Attractions pull the ratio below 1; at very high pressure, particle volume pushes it above 1. Warmer, the gas stays closer to ideal over most of the range."
 />
 
-<Check numeric="1.45">
+<Check
+  numeric="1.45"
+  slips={{
+    "0.690": "That looks upside down. PV goes on top and nRT underneath.",
+    "37.4": "That is PV alone. Divide it by nRT.",
+    "0.0143": "Did you use 8.314 for R? With pressure in atm and volume in liters, use the R in L·atm/(mol·K).",
+  }}
+>
 1.00 mol of gas Y at 315 K and 585 atm occupies 0.0640 L. What is $PV/nRT$ for this sample?
 
 <div slot="why">
@@ -123,7 +137,14 @@ A real gas behaves most like an ideal gas at high temperature and low pressure. 
 
 </KeyIdea>
 
-<Check answer={2}>
+<Check
+  answer={2}
+  misses={{
+    1: "Hot and at low pressure, molecules are fast and far apart. That is where a gas is most nearly ideal.",
+    3: "Look at the temperature. Do faster or slower molecules feel their attractions more?",
+    4: "Look at the pressure. Do attractions act more strongly when molecules are crowded together or far apart?",
+  }}
+>
 Four samples of carbon dioxide gas are kept under different conditions. In which one does the gas deviate most from $PV = nRT$?
 
 - 500 K and 1 atm
@@ -134,7 +155,14 @@ Four samples of carbon dioxide gas are kept under different conditions. In which
 <div slot="why">The colder sample has slower molecules, which feel their attractions more. The higher pressure crowds them together, where the attractions act most strongly. At 250 K and 15 atm, carbon dioxide is close to condensing. At 500 K and 1 atm it is very nearly ideal.</div>
 </Check>
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "Cl₂ has 34 electrons, so its London dispersion forces are far from the weakest here.",
+    3: "Butane has 34 electrons and large molecules, so both its attractions and its particles' own volume count.",
+    4: "Methanol molecules hydrogen-bond. Strong attractions pull a gas away from ideal behavior.",
+  }}
+>
 At 400 K and 2 atm, which of these gases behaves most nearly like an ideal gas?
 
 - Helium, He

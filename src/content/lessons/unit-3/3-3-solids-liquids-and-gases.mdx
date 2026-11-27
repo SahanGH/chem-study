@@ -31,7 +31,14 @@ In a **gas**, the particles are far apart. Each one flies in a straight line unt
 
 In a liquid, the forces between the particles matter too. Glycerol is a polar molecule with three O–H groups, so each molecule can hydrogen-bond to its neighbors at several points. Glycerol flows slowly, like syrup. Warm it, and the molecules move past each other more easily, so it pours faster.
 
-<Check answer={3}>
+<Check
+  answer={3}
+  misses={{
+    1: "In a solid each particle vibrates about a fixed place. That is not moving past its neighbors.",
+    2: "Liquid particles do slide past one another. Check the other two phases as well.",
+    4: "Vibrating is not moving past. In one of these phases each particle stays at a fixed place.",
+  }}
+>
 In which phases do the particles move past one another?
 
 - Solid only
@@ -56,13 +63,20 @@ Either way, the particles of a solid only vibrate in place. They do not move pas
   caption="Rock candy and a lollipop are both mostly sucrose: one crystalline, one amorphous."
 />
 
-<Check answer={2}>
+<Check
+  answer={4}
+  misses={{
+    1: "That describes crystalline solids. An amorphous solid has no regular, repeating pattern.",
+    2: "Sliding past one another is what the particles of a liquid do. What do the particles of a solid do?",
+    3: "That describes a gas. In neither kind of solid are the particles far apart.",
+  }}
+>
 Which statement is true of both crystalline and amorphous solids?
 
 - Their particles are arranged in a regular, repeating pattern.
-- Each particle stays near one spot; none travels through the solid.
-- Their particles are far apart, with empty space between them.
 - Their particles slide past one another, as in a liquid.
+- Their particles are far apart, with empty space between them.
+- Each particle stays near one spot; none travels through the solid.
 
 <div slot="why">What crystalline and amorphous solids share is the limited motion: each particle stays in place. Only crystalline solids have a regular pattern, and in neither are the particles far apart.</div>
 </Check>
@@ -111,7 +125,15 @@ In a gas, most of the space is empty.
 
 </Worked>
 
-<Check numeric="108" unit="mL/mol">
+<Check
+  numeric="108"
+  unit="mL/mol"
+  slips={{
+    "99.2": "That is what the solid's density gives. The question asks about the liquid.",
+    "143": "Did you multiply by the density? Follow the units: the grams have to cancel and leave mL/mol.",
+    "0.00927": "That looks upside down. Follow the units: the answer should come out in mL/mol, not mol/mL.",
+  }}
+>
 Substance X has a molar mass of 124 g/mol. Its liquid has a density of 1.15 g/mL, and its solid a density of 1.25 g/cm³. What is the molar volume of liquid X?
 
 <div slot="why">
@@ -144,7 +166,14 @@ Gas particles never stop moving. They attract each other so weakly that each one
 
 The amount of gas matters as well. Pump more gas into the same container, and the particles are closer together and collide more often. Topic 3.4 puts numbers on all of these changes, and topic 3.5 explains them with the kinetic molecular theory.
 
-<Check answer={1}>
+<Check
+  answer={1}
+  misses={{
+    2: "The particles themselves do not change size. Their spacing changes.",
+    3: "Speed goes with temperature, and the temperature has not changed.",
+    4: "The same particles now share half the space. Can they stay the same distance apart?",
+  }}
+>
 A bicycle pump has its outlet blocked, and its handle is pushed halfway down, so the trapped air takes up half its original volume. The temperature does not change. What happens to the air's particles?
 
 - They are closer together and hit the walls more often.
@@ -181,7 +210,15 @@ Vapor pressure rises with temperature, and a liquid boils when its vapor pressur
 
 </KeyIdea>
 
-<Check numeric="92.5" unit="torr">
+<Check
+  numeric="92.5"
+  unit="torr"
+  slips={{
+    "760": "Is that the pressure at which water boils at 100 °C? This water is kept at 50 °C. Use the table.",
+    "0.122": "Is that in atm? The answer box is in torr.",
+    "668": "Did you subtract from 760 torr? The question asks for the pressure above the water, not how far it has fallen.",
+  }}
+>
 Water kept at 50 °C sits in a flask connected to a vacuum pump, and the pump slowly lowers the pressure. At what pressure does the water start to boil?
 
 <div slot="why">A liquid boils when its vapor pressure equals the pressure above it. At 50 °C, water's vapor pressure is 92.5 torr, so the water starts to boil when the pressure falls to 92.5 torr.</div>
