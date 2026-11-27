@@ -1,0 +1,387 @@
+---
+topic: "8.2"
+minutes: 18
+summary: "How to find the pH of a strong acid or a strong base straight from its concentration, why a group 2 hydroxide counts twice, and how to go from a pH back to a concentration."
+---
+
+Stir slaked lime, which is calcium hydroxide, into water, let the cloudiness settle and pour off the clear liquid. That liquid is limewater, and cooks have soaked corn in it for thousands of years to make the dough for tortillas. Very little of the solid dissolves, less than 2 grams in a liter, so limewater is a dilute solution. Yet its pH is above 12.
+
+Calcium hydroxide is a strong base. This lesson is about what "strong" does to a pH, and what it has nothing to do with.
+
+## Strong means all of it
+
+Topics 4.2 and 4.8 met the strong acids. In a **strong acid**, essentially every molecule gives its proton to water. That is why its equation has a single arrow. Here is the one topic 4.8 wrote for perchloric acid:
+
+$$
+\begin{aligned}
+&\ce{HClO4(aq) + H2O(l) ->} \\
+&\quad \ce{H3O+(aq) + ClO4-(aq)}
+\end{aligned}
+$$
+
+The strong acids are the six that topic 4.2 listed: HCl, HBr, HI, HNO₃, H₂SO₄ (its first proton) and HClO₄. This list is not on the equation sheet, so you have to know it. Any other acid in this course is weak unless a question says otherwise.
+
+Now see what that does to a calculation: it leaves nothing to solve. If every molecule of a strong acid with one proton ionizes, then $[\ce{H3O+}]$ is simply the concentration of the acid that was dissolved. There is no equilibrium table, because there is no acid left at equilibrium to put in it.
+
+Two things are set aside here. Water's own ions, 1.0 × 10⁻⁷ M of each at 25 °C (topic 8.1), are far too few to matter beside the acid's. And sulfuric acid is a special case: its first proton is strong and its second is not, so its pH is not found this way, and this course does not ask for it.
+
+<Worked title="Perchloric acid">
+
+A solution is 0.0062 M in perchloric acid, HClO₄, a strong acid. Find its pH.
+
+1. **Strong, so all of it ionizes.** Each HClO₄ gives one H₃O⁺, so the hydronium ion concentration is the acid's concentration.
+
+   $$
+   [\ce{H3O+}] = 0.0062\ \text{M}
+   $$
+
+2. **Take the pH.**
+
+   $$
+   \begin{aligned}
+   \text{pH} &= -\log(0.0062) \\
+   &= 2.21
+   \end{aligned}
+   $$
+
+3. **Check it.** 0.0062 is 6.2 × 10⁻³, so the pH must lie between 2 and 3 (topic 8.1), and it does. The concentration has two significant figures, so the pH has two decimal places.
+
+</Worked>
+
+**Strong is not the same as concentrated.** **Strong** and **weak** say what fraction of an acid's molecules ionize: essentially all, or only some. **Concentrated** and **dilute** say how much of the acid is dissolved in each liter. The two are separate. The perchloric acid above is a dilute solution of a strong acid. A solution can equally be a concentrated solution of a weak acid. Which of two solutions has the lower pH depends on both things at once: how much acid there is, and what fraction of it has ionized.
+
+<KeyIdea>
+
+For a strong acid with one proton, $[\ce{H3O+}]$ is the acid's concentration, and the pH is its negative logarithm. Strong describes the fraction that ionizes, not the amount dissolved.
+
+</KeyIdea>
+
+<Check
+  answer={4}
+  misses={{
+    1: "This is the most concentrated of the four, but only about 1.9 percent of it is ionized. Work out its hydronium concentration before you compare.",
+    2: "The lowest pH goes with the highest hydronium concentration, not the lowest. Find the hydronium concentration of all four solutions.",
+    3: "Perchloric acid is strong, so its hydronium concentration is 0.015 M. Is that the highest of the four? Find the other three.",
+  }}
+>
+Hydroiodic acid, nitric acid and perchloric acid are strong acids. Formic acid is a weak acid: in a 0.50 M solution, about 1.9 percent of its molecules are ionized. Which of these four solutions has the lowest pH?
+
+- 0.50 M formic acid, HCHO₂
+- 0.0080 M hydroiodic acid, HI
+- 0.015 M perchloric acid, HClO₄
+- 0.030 M nitric acid, HNO₃
+
+<div slot="why">
+
+The lowest pH goes with the highest $[\ce{H3O+}]$. The three strong acids ionize completely, so their hydronium concentrations are 0.0080 M, 0.015 M and 0.030 M.
+
+The formic acid is by far the most concentrated solution, but only 1.9 percent of it is ionized:
+
+$$
+0.019 \times 0.50 = 0.0095\ \text{M}
+$$
+
+The largest of the four is the nitric acid's 0.030 M.
+
+| Solution | [H₃O⁺] in M | pH |
+|---|---|---|
+| 0.030 M HNO₃ | 0.030 | 1.52 |
+| 0.015 M HClO₄ | 0.015 | 1.82 |
+| 0.50 M HCHO₂ | 0.0095 | about 2.0 |
+| 0.0080 M HI | 0.0080 | 2.10 |
+
+</div>
+</Check>
+
+## Strong bases: count the hydroxide ions
+
+A **strong base** is fully separated into ions in water, and OH⁻ is one of those ions (topic 4.2). The strong bases are the ones topic 4.2 listed: the hydroxides of the group 1 metals (LiOH, NaOH, KOH and the rest) and Ca(OH)₂, Sr(OH)₂ and Ba(OH)₂. This list is not on the equation sheet either.
+
+Here are two of them dissolving. Both arrows are single:
+
+$$
+\ce{LiOH(s) -> Li+(aq) + OH-(aq)}
+$$
+
+$$
+\begin{aligned}
+&\ce{Sr(OH)2(s) ->} \\
+&\quad \ce{Sr^2+(aq) + 2OH-(aq)}
+\end{aligned}
+$$
+
+The second is the one to look at. Each formula unit of strontium hydroxide puts two hydroxide ions into the solution. So $[\ce{OH-}]$ is twice the concentration of the strontium hydroxide that dissolved.
+
+<Figure
+  src="/figures/8-2-two-hydroxides.svg"
+  alt="A box of particles for strontium hydroxide dissolved in water. It holds 4 strontium ions, drawn as dark circles marked 2 plus, and 8 hydroxide ions, drawn as pale pairs of circles marked minus, all separate from one another. There are two hydroxide ions for every strontium ion."
+  caption="Four formula units of strontium hydroxide in solution: 4 Sr²⁺ ions and 8 OH⁻ ions. The hydroxide concentration is twice the concentration of the base. Water molecules are left out."
+/>
+
+A base takes a longer route to its pH than an acid does, because what you know first is its hydroxide:
+
+1. From the formula, find $[\ce{OH-}]$: the concentration of the base times the number of OH in its formula.
+2. Take the pOH, $-\log[\ce{OH-}]$.
+3. At 25 °C, pH = 14.00 − pOH.
+
+There is a check that costs nothing. At 25 °C a solution of a base must have a pH above 7. If yours came out below 7, you have reported the pOH.
+
+<Worked title="Strontium hydroxide">
+
+A solution at 25 °C is 0.0037 M in strontium hydroxide, Sr(OH)₂, a strong base. Find its pH.
+
+1. **Count the hydroxide ions.** One Sr(OH)₂ gives two OH⁻.
+
+   $$
+   \begin{aligned}
+   [\ce{OH-}] &= 2 \times 0.0037 \\
+   &= 0.0074\ \text{M}
+   \end{aligned}
+   $$
+
+2. **pOH first.**
+
+   $$
+   \begin{aligned}
+   \text{pOH} &= -\log(0.0074) \\
+   &= 2.13
+   \end{aligned}
+   $$
+
+3. **Then pH.**
+
+   $$
+   \begin{aligned}
+   \text{pH} &= 14.00 - 2.13 \\
+   &= 11.87
+   \end{aligned}
+   $$
+
+4. **Check it.** This is a base, and the pH is above 7. Leaving out the factor of two would have given 11.57, too low by 0.30, which is the logarithm of 2.
+
+</Worked>
+
+<Check
+  numeric="12.65"
+  tolerance={0.18}
+  slips={{
+    "1.35": "That is the pOH. A solution of a base has a pH above 7 at 25 °C, so one more step is needed.",
+    "12.95": "Did you double the hydroxide concentration? Look at the formula: how many OH does one formula unit of this base hold?",
+    "12.7": "Did you round to one decimal place? The concentration has two significant figures, so the pH takes two digits after the decimal point.",
+  }}
+>
+Lithium hydroxide, LiOH, is a strong base. What is the pH of a 0.045 M solution of lithium hydroxide at 25 °C?
+
+<div slot="why">
+
+One LiOH gives one OH⁻, so $[\ce{OH-}]$ is 0.045 M.
+
+$$
+\begin{aligned}
+\text{pOH} &= -\log(0.045) \\
+&= 1.35
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{pH} &= 14.00 - 1.35 \\
+&= 12.65
+\end{aligned}
+$$
+
+</div>
+</Check>
+
+## From a pH back to a concentration
+
+Every step so far can be run backward. From a pH, you get the hydronium ion concentration by undoing the logarithm (topic 8.1):
+
+$$
+[\ce{H3O+}] = 10^{-\text{pH}}
+$$
+
+For a strong acid with one proton, that is the concentration of the acid.
+
+For a strong base, go from the pH to the pOH, and from the pOH to $[\ce{OH-}]$. Then divide by the number of OH in the formula to get the concentration of the base.
+
+<Figure
+  src="/figures/8-2-four-quantities.svg"
+  alt="A square with a quantity at each corner: the hydronium ion concentration at the top left, the hydroxide ion concentration at the top right, pH at the bottom left and pOH at the bottom right. Double-headed arrows join the corners along the four sides. The top side is labeled with the product of the two concentrations, 1.0 times 10 to the minus 14 at 25 °C. The bottom side is labeled pH plus pOH equals 14.00 at 25 °C. The left side is labeled pH equals the negative logarithm of the hydronium concentration, and the right side is labeled pOH equals the negative logarithm of the hydroxide concentration."
+  caption="Four ways to describe one solution. Each side of the square is one step, and each step can be run in either direction."
+/>
+
+Any one of the four quantities gives the other three, and no side of the square needs more than one step.
+
+<Check
+  numeric="0.014"
+  unit="M"
+  slips={{
+    "7.1e-13": "That is the hydroxide ion concentration of this solution. The acid's concentration equals the hydronium ion concentration.",
+    "71": "Did you leave the minus sign out of the exponent? A pH between 1 and 2 goes with a concentration between 0.01 M and 0.1 M.",
+    "0.27": "That is the logarithm of 1.85. Going from a pH to a concentration undoes a logarithm. It does not take another one.",
+    "0.267": "That is the logarithm of 1.85. Going from a pH to a concentration undoes a logarithm. It does not take another one.",
+  }}
+>
+A solution of hydroiodic acid, HI, a strong acid, has a pH of 1.85. What is the concentration of the hydroiodic acid, in M?
+
+<div slot="why">
+
+Undo the logarithm.
+
+$$
+\begin{aligned}
+[\ce{H3O+}] &= 10^{-1.85} \\
+&= 0.014\ \text{M}
+\end{aligned}
+$$
+
+Hydroiodic acid is strong and has one proton, so every HI that dissolved made one H₃O⁺, and the acid's concentration is the same 0.014 M. The pH has two decimal places, so the concentration has two significant figures.
+
+</div>
+</Check>
+
+<Check
+  numeric="0.0079"
+  unit="M"
+  slips={{
+    "0.016": "That is the hydroxide ion concentration. How many hydroxide ions does each formula unit of calcium hydroxide supply?",
+    "0.0158": "That is the hydroxide ion concentration. How many hydroxide ions does each formula unit of calcium hydroxide supply?",
+    "0.032": "Did you multiply by 2? Each calcium hydroxide gives two OH⁻, so there is less calcium hydroxide than hydroxide, not more.",
+    "0.0316": "Did you multiply by 2? Each calcium hydroxide gives two OH⁻, so there is less calcium hydroxide than hydroxide, not more.",
+    "6.3e-13": "That is the hydronium ion concentration. For a base, go from the pH to the pOH first, then to the hydroxide concentration.",
+    "3.175e-13": "That starts from the hydronium ion concentration. For a base, go from the pH to the pOH first, then to the hydroxide concentration.",
+  }}
+>
+A sample of limewater, a solution of the strong base calcium hydroxide, Ca(OH)₂, has a pH of 12.20 at 25 °C. What is the concentration of calcium hydroxide in the sample, in M?
+
+<div slot="why">
+
+Work backward along the base's route.
+
+$$
+\begin{aligned}
+\text{pOH} &= 14.00 - 12.20 \\
+&= 1.80
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+[\ce{OH-}] &= 10^{-1.80} \\
+&= 0.0158\ \text{M}
+\end{aligned}
+$$
+
+Each Ca(OH)₂ supplied two of those hydroxide ions, so there is half as much calcium hydroxide:
+
+$$
+\begin{aligned}
+[\ce{Ca(OH)2}] &= \frac{0.0158}{2} \\
+&= 0.0079\ \text{M}
+\end{aligned}
+$$
+
+</div>
+</Check>
+
+## Comparing and diluting
+
+To compare solutions of strong acids and bases, turn each into the one quantity they share: $[\ce{H3O+}]$ for acids, $[\ce{OH-}]$ for bases. The number on the label is not always that quantity.
+
+<Check
+  answer={2}
+  misses={{
+    1: "Rubidium hydroxide gives one OH⁻ for each formula unit, so its hydroxide concentration is 0.011 M. Is that the highest of the four?",
+    3: "Sodium hydroxide gives one OH⁻ for each formula unit, so its hydroxide concentration is 0.0090 M. Is that the highest of the four?",
+    4: "This solution has the largest concentration of the four, but it is an acid. A high pH needs a high hydroxide concentration.",
+  }}
+>
+Four solutions are at 25 °C. The three hydroxides are strong bases, and hydrobromic acid is a strong acid.
+
+| Solution | What it holds |
+|---|---|
+| A | 0.011 M rubidium hydroxide, RbOH |
+| B | 0.0060 M strontium hydroxide, Sr(OH)₂ |
+| C | 0.0090 M sodium hydroxide, NaOH |
+| D | 0.018 M hydrobromic acid, HBr |
+
+Which solution has the highest pH?
+
+- Solution A
+- Solution B
+- Solution C
+- Solution D
+
+<div slot="why">
+
+The highest pH goes with the highest $[\ce{OH-}]$. Rubidium hydroxide and sodium hydroxide each give one OH⁻ per formula unit: 0.011 M and 0.0090 M. Strontium hydroxide gives two:
+
+$$
+2 \times 0.0060 = 0.012\ \text{M}
+$$
+
+That is the highest of the three, though its own concentration is the lowest, so solution B has the highest pH. The pH values are 12.08 for the strontium hydroxide (B), 12.04 for the rubidium hydroxide (A) and 11.95 for the sodium hydroxide (C).
+
+The hydrobromic acid has the largest number on its label, but it is an acid, with a pH of 1.74.
+
+</div>
+</Check>
+
+**Diluting.** Add water to a solution of a strong acid until its volume is ten times what it was, and the same moles of H₃O⁺ are spread through ten times the volume. $[\ce{H3O+}]$ falls to one-tenth, and the pH rises by 1. For a strong base the same dilution cuts $[\ce{OH-}]$ to one-tenth, so the pOH rises by 1 and the pH falls by 1. Either way, at 25 °C dilution moves the pH toward 7 and never across it.
+
+**Beyond the exam:** in a strong acid solution as dilute as 10⁻⁸ M, the ions from water itself outnumber the acid's, and the simple rule no longer holds: the pH is just under 7, not 8.
+
+<Check
+  answer={1}
+  misses={{
+    2: "Diluting an acid lowers its hydronium concentration. Which way does the pH move when the hydronium concentration goes down?",
+    3: "Compare the two volumes: 10.0 mL becomes 1.00 L. By what factor is the acid diluted, and how many tenfold steps is that?",
+    4: "It is the hydronium concentration that is divided by the dilution factor, not the pH. Find the new concentration, then take its pH.",
+  }}
+>
+A technician pipets 10.0 mL of a hydrobromic acid solution that has a pH of 2.40 into a 1.00 L flask and fills the flask to the mark with water. Hydrobromic acid is a strong acid. What is the pH of the solution in the flask?
+
+- 4.40, because [H₃O⁺] falls to one-hundredth
+- 0.40, because a hundredfold dilution takes 2 off the pH
+- 3.40, because one dilution adds 1 to the pH
+- 0.024, because the pH falls to one-hundredth
+
+<div slot="why">
+
+10.0 mL becomes 1.00 L, which is 1,000 mL: the volume is 100 times larger, so $[\ce{H3O+}]$ is one-hundredth of what it was. That is two tenfold steps, and each raises the pH by 1:
+
+$$
+2.40 + 2 = 4.40
+$$
+
+In numbers, $[\ce{H3O+}]$ goes from 4.0 × 10⁻³ M to 4.0 × 10⁻⁵ M. The pH goes up, not down, because there is less hydronium in each liter. It is the concentration that is divided by 100, not the pH.
+
+</div>
+</Check>
+
+<Trap>
+
+Six mistakes cost points on this topic:
+
+- **Forgetting the second hydroxide ion.** Ca(OH)₂, Sr(OH)₂ and Ba(OH)₂ give two OH⁻ each. Double the concentration going forward, and halve it going back.
+- **Reporting the pOH of a base as its pH.** At 25 °C a base's pH is above 7.
+- **Taking "strong" to mean "concentrated".** Strong is about the fraction ionized. A strong acid can be very dilute.
+- **Building an equilibrium table for a strong acid.** It ionizes completely, so the concentration is the answer.
+- **Doubling for a group 1 hydroxide.** LiOH, NaOH and KOH give one OH⁻ each.
+- **Dividing the pH by the dilution factor.** Dilution divides the concentration. Each tenfold step moves the pH by 1, toward 7.
+
+</Trap>
+
+<KeyPoints>
+
+- A strong acid ionizes completely, so for one with a single proton $[\ce{H3O+}]$ equals the acid's concentration and the pH is its negative logarithm.
+- The strong acids are HCl, HBr, HI, HNO₃, H₂SO₄ (first proton) and HClO₄. The strong bases are the group 1 hydroxides and Ca(OH)₂, Sr(OH)₂ and Ba(OH)₂. Neither list is on the equation sheet.
+- For a strong base, $[\ce{OH-}]$ is the base's concentration times the number of OH in its formula. Then find the pOH, and then pH = 14.00 − pOH at 25 °C.
+- Working backward, $[\ce{H3O+}] = 10^{-\text{pH}}$ and $[\ce{OH-}] = 10^{-\text{pOH}}$, and a group 2 hydroxide's concentration is half its $[\ce{OH-}]$.
+- Strong is about the fraction of an acid that ionizes. Concentrated is about the amount dissolved.
+- A tenfold dilution of a strong acid raises its pH by 1, and a tenfold dilution of a strong base lowers its pH by 1.
+
+</KeyPoints>
+
+<PracticeNext />
