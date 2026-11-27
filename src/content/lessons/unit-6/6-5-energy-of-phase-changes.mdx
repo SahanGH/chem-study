@@ -1,0 +1,407 @@
+---
+topic: "6.5"
+minutes: 20
+summary: "Why melting and boiling take in energy at a constant temperature, how to find that energy from moles and a molar enthalpy, and how to read a heating curve segment by segment."
+---
+
+Hold a lump of gallium metal in your palm. It warms until it reaches 29.8 °C, and there it stops. Your hand goes on feeding it energy, and for minutes the only thing that changes is that the lump slumps into a silvery puddle. Only when the last of the solid is gone does the puddle start to warm toward the temperature of your hand. Energy went in the whole time. This lesson is about where it went.
+
+## Energy in, temperature unchanged
+
+Melting and boiling both need energy from outside. In a solid the particles sit in fixed places, held there by their attractions for one another. To melt the solid, particles must be moved out of those places. To boil the liquid, they must be pulled away from one another altogether. Both mean working against attractions, and that takes energy.
+
+Here is the surprising part. While a pure substance is changing phase at a steady pressure, the thermometer holds still. Topic 6.3 explains why that is possible: a thermometer reads the average kinetic energy of the particles, and that average is not what the incoming energy changes. The energy is stored instead as potential energy, as the particles are moved apart against their attractions. The system's energy rises, and the thermometer does not move.
+
+For a molecular substance, what is overcome is the attraction between molecules, the intermolecular forces of topic 3.1. The bonds inside each molecule are not broken. The liquid and the gas are made of the same molecules as the solid (topic 4.4 made this point with numbers).
+
+This matters for calculations. The equation of topic 6.4, $q = mc\Delta T$, counts only the energy that goes into faster motion, so it has no way to count the energy that goes into separating particles. During a phase change $\Delta T$ is zero, so it gives $q = 0$ for a sample that is taking in energy the whole time, and so it cannot be used there.
+
+The reverse changes run the other way. When a gas condenses or a liquid freezes, the particles settle back under their attractions, their potential energy falls, and the system releases energy, again at a constant temperature.
+
+<Check
+  answer={3}
+  misses={{
+    1: "The heater is still on and the crystals are still taking energy in. Ask what that energy changes, if not the temperature.",
+    2: "A higher average kinetic energy would show as a higher temperature, and the thermometer is holding steady.",
+    4: "The liquid is made of the same molecules as the crystal. Could that be so if the bonds inside the molecules had broken (topic 4.4)?",
+  }}
+>
+A chemist checks the purity of benzoic acid, a white molecular solid, by heating a few crystals slowly and steadily. The thermometer climbs, holds at 122 °C for a while as the crystals turn to liquid, and then climbs again. While the temperature holds at 122 °C, what is the energy from the heater doing?
+
+- None of it is absorbed, because a steady temperature means no energy is going in
+- It raises the average kinetic energy of the molecules while they stay in place
+- It moves molecules out of their places in the crystal, against their attractions
+- It breaks the covalent bonds inside the molecules so that the pieces can flow as a liquid
+
+<div slot="why">
+
+The heater has not been turned off, so the crystals are still absorbing energy. If that energy were raising the average kinetic energy of the molecules, the temperature would rise, and it does not.
+
+It is going into potential energy: molecules are being moved out of their fixed places against the attractions between them.
+
+The molecules themselves are untouched. Liquid benzoic acid is made of the same molecules as the solid, and breaking the bonds inside them would take far more energy and would make different substances.
+
+</div>
+</Check>
+
+## How much energy: the molar enthalpy
+
+The energy a phase change takes depends on what the substance is and on how much of it there is, not on how fast it is heated. So it is tabulated for one mole.
+
+The **molar enthalpy of fusion**, $\Delta H_\text{fus}$, is the energy absorbed when 1 mole of a solid melts at its melting point. ("Fusion" is the old word for melting.)
+
+The **molar enthalpy of vaporization**, $\Delta H_\text{vap}$, is the energy absorbed when 1 mole of a liquid boils at its boiling point.
+
+Both are in kJ/mol, and both are positive, because energy goes in. For now, read an enthalpy change, $\Delta H$, as the heat a change absorbs (a positive value) or releases (a negative value) at constant pressure. Topic 6.6 looks at it properly.
+
+These are the values this lesson uses:
+
+| Substance | Melts at | $\Delta H_\text{fus}$ (kJ/mol) | Boils at | $\Delta H_\text{vap}$ (kJ/mol) |
+|---|---|---|---|---|
+| Nitrogen, N₂ | −210.0 °C | 0.71 | −195.8 °C | 5.57 |
+| Oxygen, O₂ | −218.8 °C | 0.44 | −183.0 °C | 6.82 |
+| Ethanol, C₂H₅OH | −114.1 °C | 4.93 | 78.3 °C | 38.6 |
+| Iodine, I₂ | 113.7 °C | 15.5 | 184.4 °C | 41.6 |
+
+Read two things from the table.
+
+First, the numbers follow the strength of the attractions between the particles (topic 3.1). Nitrogen and oxygen, with weak attractions between small molecules, need little energy. Ethanol, with hydrogen bonds, and iodine, with its many electrons, need much more.
+
+Second, in every row of this table vaporizing takes more than melting: 2.7 times as much for iodine, 7.8 times for nitrogen and for ethanol, 15.5 times for oxygen. Melting changes how the particles are arranged but leaves them in contact: in the liquid each particle still touches its neighbors, and most of the attractions are still working. Boiling moves every particle away from all its neighbors, so the attractions that melting left in place must now be overcome as well.
+
+To find the energy for a sample, multiply the amount in moles, $n$, by the molar enthalpy. For melting:
+
+$$
+q = n\,\Delta H_\text{fus}
+$$
+
+For boiling:
+
+$$
+q = n\,\Delta H_\text{vap}
+$$
+
+This equation is not on the equation sheet, and neither are the molar enthalpies: a question gives the values. If the question gives a mass, change it to moles first (topic 1.1).
+
+<Worked title="Boiling away liquid nitrogen">
+
+A food laboratory freezes raspberries in seconds by pouring liquid nitrogen over them. The nitrogen is at its boiling point, −195.8 °C, and its molar enthalpy of vaporization is 5.57 kJ/mol. How much energy do 355 g of liquid nitrogen take from the fruit as they boil away?
+
+1. **Ask whether the temperature changes.** It does not: the liquid is at its boiling point, and the question ends when it has all boiled. This is a phase change alone, so the equation is $q = n\,\Delta H_\text{vap}$, not $q = mc\Delta T$.
+
+2. **Change grams to moles.** The molar mass of N₂ is 28.02 g/mol.
+
+   $$
+   n = \frac{355}{28.02} = 12.67\ \text{mol}
+   $$
+
+3. **Multiply by the molar enthalpy.** Moles times kJ/mol gives kJ.
+
+   $$
+   q = (12.67)(5.57) = 70.6\ \text{kJ}
+   $$
+
+4. **Say which way it went.** The nitrogen absorbed 70.6 kJ, so $q$ for the nitrogen is positive. The raspberries lost that much, which is why they froze.
+
+</Worked>
+
+Now run the change the other way. To turn those 355 g of nitrogen gas back into liquid at −195.8 °C, the same 70.6 kJ must be taken out of it. The molar enthalpy of condensation is the negative of the molar enthalpy of vaporization, here −5.57 kJ/mol. In the same way, the molar enthalpy of freezing is the negative of the molar enthalpy of fusion.
+
+$$
+\Delta H_\text{condensation} = -\Delta H_\text{vap}
+$$
+
+$$
+\Delta H_\text{freezing} = -\Delta H_\text{fus}
+$$
+
+<KeyIdea>
+
+A phase change takes in or gives out energy with no change in temperature. Melting and boiling absorb energy; freezing and condensing release exactly as much. The amount is moles times the molar enthalpy of the change.
+
+</KeyIdea>
+
+<Check
+  numeric="-1.96"
+  unit="kJ"
+  slips={{
+    "1.96": "The gallium is freezing, so energy leaves it. What sign does q have when a system releases energy?",
+    "-137": "Did you multiply grams by kJ/mol? Change 24.5 g to moles first.",
+    "137": "Two things to check: grams were multiplied by kJ/mol, so change to moles first, and freezing releases energy, which sets the sign.",
+    "-5.59": "That is for one whole mole of gallium. This spoon is 24.5 g, which is less than a mole.",
+    "-15.9": "Check the moles: divide the mass by the molar mass, not the molar mass by the mass.",
+    "-2.0": "Did you round to two figures? The data have three significant figures, so give your answer to three as well.",
+  }}
+>
+A teacher casts a trick spoon by pouring 24.5 g of liquid gallium, at its melting point of 29.8 °C, into a mold, where it freezes. The molar enthalpy of fusion of gallium is 5.59 kJ/mol, and its molar mass is 69.72 g/mol. What is $q$ for the gallium, in kJ? Give its sign.
+
+<div slot="why">
+
+The temperature does not change, so $q = n\,\Delta H$. First the amount, in moles:
+
+$$
+n = \frac{24.5}{69.72} = 0.351\ \text{mol}
+$$
+
+Freezing is fusion run backward, so the enthalpy change for each mole is −5.59 kJ.
+
+$$
+\begin{aligned}
+q &= (0.351)(-5.59) \\
+&= -1.96\ \text{kJ}
+\end{aligned}
+$$
+
+The gallium releases 1.96 kJ to the mold and the air as it freezes.
+
+</div>
+</Check>
+
+<Check
+  answer={2}
+  misses={{
+    1: "Boiling the liquid takes energy in. Condensing is that change run backward, so which way does the energy go?",
+    3: "The 6.82 kJ is for one mole. How many moles are condensing here?",
+    4: "A steady temperature does not mean that no energy moves. In a phase change the energy changes how the molecules are arranged.",
+  }}
+>
+An air-separation plant cools oxygen gas to its boiling point, −183.0 °C, and then condenses 250.0 mol of it to liquid at that temperature. The molar enthalpy of vaporization of oxygen is 6.82 kJ/mol. Which statement describes the oxygen during the condensing?
+
+- The oxygen absorbs 1,705 kJ, because its molecules must be pushed close together
+- The oxygen releases 1,705 kJ, so its enthalpy change is −1,705 kJ
+- The oxygen releases 6.82 kJ in all, because that is its enthalpy of vaporization
+- No energy is transferred, because the temperature stays at −183.0 °C throughout
+
+<div slot="why">
+
+Condensing is vaporizing run backward, so each mole releases the 6.82 kJ that vaporizing it would absorb. For 250.0 mol:
+
+$$
+(250.0)(6.82) = 1{,}705\ \text{kJ}
+$$
+
+That much is released, and the enthalpy change of the oxygen is −1,705 kJ. The plant's refrigeration has to carry that energy away.
+
+Nothing has to push the molecules together: their own attractions draw them together, and their potential energy falls as they come. The temperature is steady because the energy leaving is potential energy, not kinetic energy.
+
+</div>
+</Check>
+
+## The heating curve
+
+Now put the two kinds of step together. Take a solid well below its melting point and add energy steadily until it is a gas well above its boiling point. A graph of its temperature against the energy added is called a **heating curve**.
+
+<Figure
+  src="/figures/6-5-heating-curve-segments.svg"
+  alt="A graph of temperature against energy added, with no numbers. The line has five parts: it slopes up, labeled solid; runs flat at a dashed line marked melting point, labeled melting; slopes up again, labeled liquid; runs flat for much longer at a higher dashed line marked boiling point, labeled boiling; and slopes up a last time, labeled gas."
+  caption="A heating curve. On the sloped parts the added energy raises the temperature. On the two flat parts it separates particles, and the temperature holds."
+/>
+
+The curve has five segments, and each has its own equation.
+
+1. The solid warms. The line slopes up. $q = nC\Delta T$ with the solid's molar heat capacity (or $q = mc\Delta T$ with its specific heat capacity).
+2. The solid melts. The line is flat at the melting point. $q = n\,\Delta H_\text{fus}$.
+3. The liquid warms. The line slopes up. $q = nC\Delta T$ with the liquid's heat capacity.
+4. The liquid boils. The line is flat at the boiling point. $q = n\,\Delta H_\text{vap}$.
+5. The gas warms. The line slopes up. $q = nC\Delta T$ with the gas's heat capacity.
+
+The length of a flat part is the energy that phase change takes, so the boiling flat is longer than the melting flat. The steepness of a sloped part depends on the heat capacity of that phase, which is why the three sloped parts of one curve are not parallel.
+
+On a sloped part the energy raises the average kinetic energy of the particles. On a flat part it raises their potential energy. A heating curve read from right to left is a cooling curve: every step releases the energy the opposite step absorbed.
+
+This lesson counts in moles, so its sloped steps use molar heat capacities, in J/(mol·°C). A question may give a specific heat capacity in J/(g·°C) instead, and then the sloped steps use grams. Here are the molar heat capacities this lesson uses, in J/(mol·°C). Each is treated as constant over its segment. The value for solid ethanol is approximate.
+
+| Substance | Solid | Liquid | Gas |
+|---|---|---|---|
+| Ethanol | 70 | 112 | 76 |
+| Iodine | 54.4 | 80.7 | 36.9 |
+
+The explorer below follows one mole of a substance, starting as a solid, and its slider adds energy, up to 70 kJ.
+
+<HeatingCurve />
+
+Do three things with it.
+
+1. **Find the flats for ethanol.** Slide down to 0 kJ: solid ethanol at −150.0 °C. Now add energy slowly. The temperature climbs for the first 2.5 kJ, then stops at −114.1 °C while the next 4.9 kJ melts the solid.
+2. **Compare the two flats.** Keep going. Warming the liquid all the way to 78.3 °C takes 21.5 kJ. Boiling it takes 38.6 kJ, about 8 times what melting took, and the temperature does not move by a tenth of a degree.
+3. **Change the substance.** Choose iodine, which starts as a solid at 25.0 °C. Its flats are at 113.7 °C and 184.4 °C, and they take 15.5 kJ and 41.6 kJ. Look at the three sloped parts: the gas line is the steepest and the liquid line the gentlest. Find the reason in the table of heat capacities above.
+
+<Check
+  answer={4}
+  misses={{
+    1: "The enthalpy of vaporization sets how long the boiling flat is. Neither liquid boils here, so ask what sets a slope.",
+    2: "A slope says how fast the temperature climbs, not where the climb ends. What does the same energy do to one mole of each liquid?",
+    3: "Check the direction. What does a large molar heat capacity say about the energy needed for each degree of warming?",
+  }}
+>
+One mole of liquid X and one mole of liquid Y are warmed by the same steady heater, and neither reaches its boiling point. On a graph of temperature against energy added, the line for X is steeper than the line for Y. What follows?
+
+- Liquid X has the larger molar enthalpy of vaporization
+- Liquid X has the lower boiling point of the two
+- Liquid X has the larger molar heat capacity
+- Liquid X has the smaller molar heat capacity
+
+<div slot="why">
+
+On a sloped part, $q = nC\Delta T$, so the rise in temperature for each joule is $1/(nC)$. Both samples are one mole, so the steeper line belongs to the smaller molar heat capacity: X needs less energy for each degree.
+
+An enthalpy of vaporization would show as the length of a boiling flat, and a boiling point as the height at which a flat begins. Neither liquid boils here, so the graph says nothing about either.
+
+</div>
+</Check>
+
+<Worked title="From solid to hot liquid, step by step">
+
+A 50.8 g sample of solid iodine at 25.0 °C is heated at 1 atm until it is liquid at 150.0 °C. Use the two tables. How much energy does the iodine absorb? (Ignore the small amount that turns to vapor on the way.)
+
+1. **Sketch the path on the heating curve.** The sample starts on the solid's slope, crosses the melting flat at 113.7 °C and stops partway up the liquid's slope, below the boiling point of 184.4 °C. That is three steps: warm the solid, melt it, warm the liquid.
+
+2. **Find the moles.** The molar mass of I₂ is 253.80 g/mol.
+
+   $$
+   n = \frac{50.8}{253.80} = 0.200\ \text{mol}
+   $$
+
+3. **Warm the solid from 25.0 °C to 113.7 °C.** $\Delta T$ is final minus initial: 113.7 − 25.0 = 88.7 °C. Moles times J/(mol·°C) times °C gives joules.
+
+   $$
+   \begin{aligned}
+   q_1 &= (0.200)(54.4)(88.7) \\
+   &= 965\ \text{J}
+   \end{aligned}
+   $$
+
+4. **Melt it at 113.7 °C.** There is no $\Delta T$ in this step. Moles times kJ/mol gives kilojoules.
+
+   $$
+   q_2 = (0.200)(15.5) = 3.10\ \text{kJ}
+   $$
+
+5. **Warm the liquid from 113.7 °C to 150.0 °C.** $\Delta T$ = 150.0 − 113.7 = 36.3 °C, and the heat capacity is now the liquid's.
+
+   $$
+   \begin{aligned}
+   q_3 &= (0.200)(80.7)(36.3) \\
+   &= 586\ \text{J}
+   \end{aligned}
+   $$
+
+6. **Add, in one unit.** Steps 3 and 5 are in joules and step 4 is in kilojoules. Change the joules to kilojoules: 965 J is 0.965 kJ, and 586 J is 0.586 kJ.
+
+   $$
+   \begin{aligned}
+   q &= 0.965 + 3.10 + 0.586 \\
+   &= 4.65\ \text{kJ}
+   \end{aligned}
+   $$
+
+7. **Look at the answer.** Melting alone took 3.10 kJ, twice as much as the two warming steps together (0.965 + 0.586 = 1.55 kJ), though the thermometer did not move while it happened.
+
+</Worked>
+
+<Check
+  numeric="22.3"
+  unit="kJ"
+  slips={{
+    "19.3": "That is the energy to vaporize the ethanol. It has to be warmed from 25.0 °C to its boiling point first.",
+    "2.98": "That is the energy to warm the liquid to 78.3 °C. Boiling it takes more energy, with no change in temperature.",
+    "3.00e3": "Did you add joules to kilojoules? Put both steps in the same unit before you add them.",
+    "891": "Did you multiply grams by kJ/mol? Both steps need the amount in moles.",
+    "157": "Check the warming step. A molar heat capacity goes with moles, not grams.",
+    "1025": "Did you use 23.0 g in both steps? The heat capacity and the enthalpy in the tables are for each mole.",
+    "22300": "That looks like the answer in joules. The question asks for kilojoules.",
+  }}
+>
+A 23.0 g sample of liquid ethanol at 25.0 °C is heated until it has all become vapor at its boiling point, 78.3 °C. Use the two tables, and 46.07 g/mol for the molar mass of ethanol. How much energy, in kJ, does the ethanol absorb?
+
+<div slot="why">
+
+There are two steps: warm the liquid, then vaporize it. Both need the moles.
+
+$$
+n = \frac{23.0}{46.07} = 0.499\ \text{mol}
+$$
+
+The liquid warms by 78.3 − 25.0 = 53.3 °C. With the liquid's molar heat capacity, the answer is in joules:
+
+$$
+(0.499)(112)(53.3) = 2{,}980
+$$
+
+That is 2,980 J, which is 2.98 kJ. Vaporizing the ethanol at 78.3 °C, in kilojoules:
+
+$$
+(0.499)(38.6) = 19.3
+$$
+
+Together, 2.98 kJ + 19.3 kJ = 22.3 kJ.
+
+</div>
+</Check>
+
+<Check
+  answer={1}
+  misses={{
+    2: "Check the amount. The energies read from the explorer are for 1 mol, and this sample is 2.00 mol, so every step takes twice as much.",
+    3: "Add up the first two steps for 2.00 mol: warming the solid to −114.1 °C, then melting all of it. Is 30.0 kJ more or less than that?",
+    4: "Warming 2.00 mol of solid from −150.0 °C to −114.1 °C takes about 5 kJ. What does the rest of the 30.0 kJ do?",
+  }}
+>
+An insulated vessel at 1 atm holds 2.00 mol of solid ethanol at −150.0 °C. A heater inside it gives the ethanol 30.0 kJ. Using the two tables, what is in the vessel afterward?
+
+- Liquid only, somewhere below its boiling point
+- Liquid and vapor together, at the boiling point of 78.3 °C
+- Solid and liquid together, at the melting point of −114.1 °C
+- Solid only, still colder than its melting point of −114.1 °C
+
+<div slot="why">
+
+Spend the energy one segment at a time. Warming 2.00 mol of solid through 35.9 °C, from −150.0 °C to −114.1 °C, takes, in joules:
+
+$$
+(2.00)(70)(35.9) = 5{,}030
+$$
+
+That is 5.03 kJ. Melting the solid takes, in kilojoules:
+
+$$
+(2.00)(4.93) = 9.86
+$$
+
+That is 14.89 kJ so far, with 15.11 kJ left. Warming the liquid all the way to its boiling point, through 192.4 °C, would take, in joules:
+
+$$
+(2.00)(112)(192.4) = 43{,}100
+$$
+
+That is 43.1 kJ, far more than is left, so the ethanol ends as a liquid partway up that slope. (The 15.11 kJ raises it by 67.5 °C, to −46.6 °C.)
+
+For one mole the liquid segment would end at 29.0 kJ, which is why forgetting the 2.00 puts the sample on the boiling flat.
+
+</div>
+</Check>
+
+<Trap>
+
+- **Reaching for $q = mc\Delta T$ on a flat part.** The thermometer is steady there, so $\Delta T$ is zero and the equation has nothing to work with. Use moles times the molar enthalpy.
+- **Multiplying grams by a molar enthalpy.** A value in kJ/mol needs moles.
+- **Adding joules to kilojoules.** The sloped steps often come out in J and the flat steps in kJ.
+- **Thinking no energy moves because the thermometer is steady.** The energy is changing the particles' potential energy.
+- **Thinking each molecule breaks into pieces when a liquid boils.** Every molecule stays whole. What changes is the distance between one molecule and the next.
+- **Keeping the sign positive for freezing or condensing.** They release what melting or boiling absorbs.
+- **Using one heat capacity for the whole curve.** The solid, the liquid and the gas each have their own.
+
+</Trap>
+
+<KeyPoints>
+
+- Melting and boiling absorb energy, and freezing and condensing release it. During each, the temperature of a pure substance stays constant.
+- In a phase change the energy changes the potential energy of the particles as they are separated or brought together, not their average kinetic energy.
+- The energy of a phase change is $q = n\,\Delta H$, with $n$ in moles and the molar enthalpy of fusion or of vaporization in kJ/mol. This equation is not on the equation sheet.
+- The molar enthalpy of freezing is $-\Delta H_\text{fus}$, and that of condensation is $-\Delta H_\text{vap}$.
+- A heating curve has three sloped parts, where $q = nC\Delta T$ or $q = mc\Delta T$ applies, and two flat parts, where $q = n\,\Delta H$ applies. The energies of the steps add.
+- Vaporizing a substance takes more energy than melting it, because melting leaves most of the attractions in place and boiling overcomes the rest.
+
+</KeyPoints>
+
+<PracticeNext />
