@@ -411,7 +411,7 @@ interface Box {
 
 /** Every text in a drawing, as a box in drawing units: its whole line box, which errs on the safe side. */
 async function textBoxes(panel: Locator): Promise<Box[]> {
-  return panel.locator('svg').evaluate((svg) => {
+  return panel.locator('svg[role="img"]').evaluate((svg) => {
     if (!(svg instanceof SVGSVGElement)) throw new Error('The drawing is not an SVG.');
     const frame = svg.getBoundingClientRect();
     const scale = svg.viewBox.baseVal.width / frame.width;
@@ -472,7 +472,7 @@ test('at every setting no text is cut off, and no label meets another label, a c
       const expected = 8 + 7 + 2 + 1 + (id === 'lactic' ? 1 : 0) + (indicator === 'none' ? 0 : 2);
       expect(labels, `${id} with ${indicator}: the labels`).toHaveLength(expected);
       const frame = await graph(diagram)
-        .locator('svg')
+        .locator('svg[role="img"]')
         .evaluate((svg) => (svg instanceof SVGSVGElement ? { width: svg.viewBox.baseVal.width, height: svg.viewBox.baseVal.height } : null));
       if (!frame) throw new Error('The drawing is not an SVG.');
       for (const label of labels) {
@@ -577,7 +577,7 @@ test("the drawings' text is 12 px or more when each drawing itself is shown 320 
   const diagram = await openDiagram(page, PAGE, NAME);
   await chooseIndicator(diagram, 'thymolBlue');
   for (const panel of [graph(diagram), barsPanel(diagram)]) {
-    const sizes = await panel.locator('svg').evaluate((svg) => {
+    const sizes = await panel.locator('svg[role="img"]').evaluate((svg) => {
       if (!(svg instanceof SVGSVGElement)) throw new Error('The drawing is not an SVG.');
       const unitsWide = svg.viewBox.baseVal.width;
       return [...svg.querySelectorAll('text, tspan')].map((text) => ({
@@ -597,7 +597,7 @@ for (const width of [1280, 680, 412]) {
     await chooseIndicator(diagram, 'thymolBlue');
     await page.evaluate(() => document.fonts.ready);
     for (const panel of [graph(diagram), barsPanel(diagram)]) {
-      const sizes = await panel.locator('svg').evaluate((svg) => {
+      const sizes = await panel.locator('svg[role="img"]').evaluate((svg) => {
         if (!(svg instanceof SVGSVGElement)) throw new Error('The drawing is not an SVG.');
         const scale = svg.getBoundingClientRect().width / svg.viewBox.baseVal.width;
         return [...svg.querySelectorAll('text, tspan')].map((text) => ({ text: text.textContent, px: Number.parseFloat(getComputedStyle(text).fontSize) * scale }));

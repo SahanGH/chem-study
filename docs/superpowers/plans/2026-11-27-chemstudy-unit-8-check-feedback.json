@@ -497,6 +497,682 @@
           "message": "Add one proton to (CH₃)₃N. Is the result the acid in this option? The two species must be an acid and its own conjugate base."
         }
       ]
+    },
+    {
+      "lesson": "8.4",
+      "file": "src/content/lessons/unit-8/8-4-acid-base-reactions-and-buffers.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "12.37",
+      "tolerance": 0.18,
+      "slips": [
+        {
+          "value": "1.63",
+          "message": "That is the pOH. The ion left over is OH⁻, so one more step takes the pOH to the pH at 25 °C."
+        },
+        {
+          "value": "12.62",
+          "message": "Did you divide by 32.0 mL? The leftover OH⁻ is spread through both solutions, so divide by the total volume."
+        },
+        {
+          "value": "12.73",
+          "message": "Did you divide by 25.0 mL? The leftover OH⁻ is spread through both solutions, so divide by the total volume."
+        },
+        {
+          "value": "12.83",
+          "message": "Did you count all 3.84 mmol of OH⁻? Part of it reacted with the acid. Only what is left over sets the pH."
+        },
+        {
+          "value": "12.4",
+          "message": "Did you round to one decimal place? The question asks for two decimal places."
+        }
+      ]
+    },
+    {
+      "lesson": "8.4",
+      "file": "src/content/lessons/unit-8/8-4-acid-base-reactions-and-buffers.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Lactic acid and lactate ion together, because the mixture is a buffer",
+          "message": "A buffer needs lactic acid left over. Milliliters times molarity gives the millimoles of each reactant: compare them."
+        },
+        {
+          "text": "Lactate ion alone, acting as a weak base in water",
+          "message": "Lactate alone needs equal moles of acid and base. Milliliters times molarity gives the millimoles of each: compare them."
+        },
+        {
+          "text": "Hydroxide ion left over after all of the lactic acid has reacted",
+          "message": null
+        },
+        {
+          "text": "Lactic acid left over after all of the hydroxide ion has reacted",
+          "message": "The acid has the larger volume, but volume does not count particles. Find the millimoles of each reactant and compare them."
+        }
+      ]
+    },
+    {
+      "lesson": "8.4",
+      "file": "src/content/lessons/unit-8/8-4-acid-base-reactions-and-buffers.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Hydroxylamine, H₃O⁺ and Cl⁻: a weak base leaves the ions of the acid untouched",
+          "message": "Weak describes how hydroxylamine acts on water. H₃O⁺ is a far stronger acid than water. What happens when it meets a hydroxylamine molecule?"
+        },
+        {
+          "text": "Hydroxylamine, NH₃OH⁺ and Cl⁻: part of the base is now its conjugate acid",
+          "message": null
+        },
+        {
+          "text": "NH₃OH⁺ and Cl⁻ only: all of the hydroxylamine is now its conjugate acid",
+          "message": "Compare the millimoles of the two reactants. Is there enough H₃O⁺ to reach every hydroxylamine molecule?"
+        },
+        {
+          "text": "Hydroxylamine and Cl⁻ only: the H₃O⁺ is used up and leaves nothing behind",
+          "message": "A proton that leaves H₃O⁺ has to end up somewhere. Write the equation for the reaction and look at what it forms."
+        }
+      ]
+    },
+    {
+      "lesson": "8.4",
+      "file": "src/content/lessons/unit-8/8-4-acid-base-reactions-and-buffers.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "3.69",
+      "tolerance": 0.6,
+      "slips": [
+        {
+          "value": "7.00",
+          "message": "Did you take equal moles to mean neutral? Neither reactant is left over, but the flask still holds an ion that acts on water. Which ion, and how?"
+        },
+        {
+          "value": "4.65",
+          "message": "Did you use the Kb of hydroxylamine? The flask holds its conjugate acid, NH₃OH⁺, so the constant needed is the Ka of that ion, found from Kw."
+        },
+        {
+          "value": "9.35",
+          "message": "Did you treat the flask as a solution of hydroxylamine? The hydroxylamine has all reacted. What is left is its conjugate acid, which needs a Ka."
+        },
+        {
+          "value": "3.58",
+          "message": "Did you use 0.0750 M for the ion? The mixture has a larger volume than the hydroxylamine solution had. Divide the millimoles by the total volume."
+        },
+        {
+          "value": "3.48",
+          "message": "Did you divide by 40.0 mL? The ion is spread through both solutions, so divide the millimoles by the total volume."
+        },
+        {
+          "value": "1.34",
+          "message": "That is the pH if every NH₃OH⁺ ion gave up its proton. The ion is a weak acid, so set up its equilibrium with its Ka."
+        }
+      ]
+    },
+    {
+      "lesson": "8.4",
+      "file": "src/content/lessons/unit-8/8-4-acid-base-reactions-and-buffers.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Sodium perchlorate, NaClO₄",
+          "message": "Na⁺ comes from a strong base and ClO₄⁻ from a strong acid. Does either ion give a proton to water or take one from it?"
+        },
+        {
+          "text": "Methylammonium nitrate, CH₃NH₃NO₃",
+          "message": "One of its ions does react with water. Decide whether CH₃NH₃⁺ gives a proton to water or takes one from it."
+        },
+        {
+          "text": "Strontium iodide, SrI₂",
+          "message": "Sr²⁺ comes from a strong base and I⁻ from a strong acid. Does either ion give a proton to water or take one from it?"
+        },
+        {
+          "text": "Potassium lactate, KC₃H₅O₃",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "8.4",
+      "file": "src/content/lessons/unit-8/8-4-acid-base-reactions-and-buffers.mdx",
+      "check": 6,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "A minor share of the NH₃OH⁺ ions pass a proton to hexanoate ions; most do not",
+          "message": null
+        },
+        {
+          "text": "Most of the NH₃OH⁺ ions pass a proton to hexanoate ions; a minor share do not",
+          "message": "Find the acid on each side of the equation and compare the two Ka values. Which side holds the weaker acid?"
+        },
+        {
+          "text": "Essentially every NH₃OH⁺ ion passes a proton to a hexanoate ion, as each would to an OH⁻ ion",
+          "message": "OH⁻ takes essentially every proton because it is a strong base. Is the hexanoate ion a strong base? Compare the two Ka values."
+        },
+        {
+          "text": "No proton passes at all, because the ions of two dissolved salts are spectators",
+          "message": "A spectator ion neither gives nor takes a proton. NH₃OH⁺ is a weak acid and the hexanoate ion is a weak base."
+        }
+      ]
+    },
+    {
+      "lesson": "8.5",
+      "file": "src/content/lessons/unit-8/8-5-acid-base-titrations.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "18.0",
+      "unit": "mL",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "34.7",
+          "message": "Did you divide by 0.108 and multiply by 0.150? Find the millimoles of acid first, then divide by the molarity of the base."
+        },
+        {
+          "value": "9.0",
+          "message": "Did you stop at half of the acid? At the equivalence point the moles of OH⁻ added equal all of the moles of acid in the flask."
+        },
+        {
+          "value": "2.70",
+          "message": "That is the millimoles of acid in the flask. One more step turns it into a volume of the 0.150 M base."
+        },
+        {
+          "value": "0.0180",
+          "message": "That is the volume in liters. The question asks for milliliters."
+        }
+      ]
+    },
+    {
+      "lesson": "8.5",
+      "file": "src/content/lessons/unit-8/8-5-acid-base-titrations.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "2.92, the reading before any base is added",
+          "message": "Before any base, the flask holds the acid alone, nearly all of it un-ionized. A pKa is read where the acid and its conjugate base are equal in amount."
+        },
+        {
+          "text": "4.87, the reading at 9.0 mL",
+          "message": null
+        },
+        {
+          "text": "5.23, the reading at 12.5 mL",
+          "message": "12.5 mL is half of the volume of acid in the flask. Which volume of base has turned half of the moles of acid into its conjugate base?"
+        },
+        {
+          "text": "8.83, the reading at 18.0 mL",
+          "message": "Find the volume of base that reacts with all of the acid, and ask what the flask holds there. A pKa is read where half of the acid has reacted."
+        }
+      ]
+    },
+    {
+      "lesson": "8.5",
+      "file": "src/content/lessons/unit-8/8-5-acid-base-titrations.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "The same, and above 7, because both flasks hold 3.00 mmol of a weak base in 35.0 mL",
+          "message": "Equal concentrations do not make equal pH values. The two ions differ in Kb, and each Kb comes from the Ka of its own acid."
+        },
+        {
+          "text": "Both 7.00, because the acid and the base have exactly used each other up",
+          "message": "Used up does not mean neutral. Ask what each flask holds at the equivalence point and how that ion acts on water."
+        },
+        {
+          "text": "Higher for propanoic acid, because the propanoate ion is the stronger base",
+          "message": null
+        },
+        {
+          "text": "Higher for lactic acid, because lactic acid is the stronger of the two acids",
+          "message": "At the equivalence point the acid itself is gone. What does the flask hold there, and what decides how basic that ion is?"
+        }
+      ]
+    },
+    {
+      "lesson": "8.5",
+      "file": "src/content/lessons/unit-8/8-5-acid-base-titrations.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "12.11",
+      "tolerance": 0.18,
+      "slips": [
+        {
+          "value": "1.89",
+          "message": "That is the pOH. The ion left over is OH⁻, so one more step takes the pOH to the pH at 25 °C."
+        },
+        {
+          "value": "12.38",
+          "message": "Did you divide by 25.0 mL? The leftover OH⁻ is spread through the acid solution and all of the base added. Use the total volume."
+        },
+        {
+          "value": "12.44",
+          "message": "Did you divide by 22.0 mL? The leftover OH⁻ is spread through the acid solution and all of the base added. Use the total volume."
+        },
+        {
+          "value": "12.85",
+          "message": "Did you count all of the OH⁻ that was added? Most of it reacted with the acid. Only what is left over sets the pH."
+        },
+        {
+          "value": "13.18",
+          "message": "That is the pH of the KOH solution in the buret. In the flask, the leftover OH⁻ is diluted by everything else there."
+        },
+        {
+          "value": "8.81",
+          "message": "Did you use the Kb of the propanoate ion? Past the equivalence point OH⁻ is left over, and it swamps what the weak base adds."
+        }
+      ]
+    },
+    {
+      "lesson": "8.5",
+      "file": "src/content/lessons/unit-8/8-5-acid-base-titrations.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "The flask held a weak acid, because the curve has a gently sloping stretch before its steep part",
+          "message": "A gently sloping stretch shows that something weak is in the flask. Look at which way the pH moves as the titrant goes in."
+        },
+        {
+          "text": "The equivalence point is at 12.0 mL, because the reading there equals a pKa",
+          "message": "A pKa is read where half of the substance in the flask has reacted. Is that the point where all of it has reacted?"
+        },
+        {
+          "text": "The pH is below 7 at the equivalence point because strong acid is left over there",
+          "message": "At the equivalence point neither reactant is left over. Ask what the flask does hold there and how that ion acts on water."
+        },
+        {
+          "text": "The flask held a weak base, and the pKa of its conjugate acid is 8.90",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "8.5",
+      "file": "src/content/lessons/unit-8/8-5-acid-base-titrations.mdx",
+      "check": 6,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "The pH equals pKa2 at 24.0 mL, where HA⁻ and A²⁻ are equal in amount",
+          "message": null
+        },
+        {
+          "text": "The pH equals pKa2 at 32.0 mL, where the second proton has left every molecule",
+          "message": "At 32.0 mL the second proton has left every molecule, so the flask holds nearly all one form. What must the flask hold for the pH to equal a pKa?"
+        },
+        {
+          "text": "At 20.0 mL the main form of the acid is A²⁻, because the first rise is already past",
+          "message": "Find the millimoles of OH⁻ that each proton takes. By 20.0 mL, how much of the second proton has been removed, and how much HA⁻ is left?"
+        },
+        {
+          "text": "The curve has a single rise, at 16.0 mL, because 1.60 mmol of acid takes 1.60 mmol of OH⁻",
+          "message": "H₂A has two acidic protons, and OH⁻ takes them one after the other. How much OH⁻ does each of them need?"
+        }
+      ]
+    },
+    {
+      "lesson": "8.6",
+      "file": "src/content/lessons/unit-8/8-6-molecular-structure-of-acids-and-bases.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "3 mol, one for each hydrogen atom in the formula of the acid",
+          "message": "A formula counts atoms. It does not say what each hydrogen is bonded to. Sort the three by their bonds and compare the electronegativities."
+        },
+        {
+          "text": "1 mol, for the one hydrogen atom bonded to oxygen",
+          "message": null
+        },
+        {
+          "text": "2 mol, one for each hydrogen atom bonded to the central atom",
+          "message": "Compare the two atoms in a P–H bond: 2.2 and 2.2. Is that bond more like an O–H bond or more like a C–H bond?"
+        },
+        {
+          "text": "2 mol, one for each oxygen atom in the formula of the acid",
+          "message": "An oxygen atom gives a proton only if a hydrogen atom is bonded to it. Look at where each of the three hydrogen atoms sits."
+        }
+      ]
+    },
+    {
+      "lesson": "8.6",
+      "file": "src/content/lessons/unit-8/8-6-molecular-structure-of-acids-and-bases.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "81.3",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "1.91",
+          "message": "That is the difference between the two pKa values. A pKa is a logarithm, so a difference in pKa is a power of ten in Ka."
+        },
+        {
+          "value": "1.67",
+          "message": "Did you divide one pKa by the other? They are logarithms. Subtract them, then raise ten to that power."
+        },
+        {
+          "value": "0.0123",
+          "message": "That is the ratio the other way up. Which of the two acids has the lower pKa, and so the larger Ka?"
+        },
+        {
+          "value": "19.1",
+          "message": "Did you multiply the difference by ten? One whole pKa unit is a factor of ten, two units a factor of a hundred. Use a power of ten."
+        }
+      ]
+    },
+    {
+      "lesson": "8.6",
+      "file": "src/content/lessons/unit-8/8-6-molecular-structure-of-acids-and-bases.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "It is the strongest of the four, because oxygen carries a negative charge best",
+          "message": "That is the rule for atoms in one period, which are close in size. These four atoms are in one group. What changes most down a group?"
+        },
+        {
+          "text": "It cannot be placed among them, because water is neutral and so is not an acid",
+          "message": "Neutral describes pure water, where H₃O⁺ and OH⁻ are equal. Water still gives up a proton to a strong enough base, as topic 4.8 showed."
+        },
+        {
+          "text": "It lies between H₂S and H₂Se, because the trend down a group has an exception at the top",
+          "message": "Nothing in the reasoning makes the top of the group a special case. What did the trend from H₂S to H₂Te depend on?"
+        },
+        {
+          "text": "It is the weakest of the four, because its bond to hydrogen is the shortest",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "8.6",
+      "file": "src/content/lessons/unit-8/8-6-molecular-structure-of-acids-and-bases.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "H₂Se, whose central atom is the most electronegative of the three",
+          "message": null
+        },
+        {
+          "text": "GeH₄, which has the most hydrogen atoms to give to water",
+          "message": "The number of hydrogen atoms is not the ease with which one leaves. Think about the ion that is left when one proton has gone."
+        },
+        {
+          "text": "GeH₄, whose central atom pulls least on the electrons it shares with hydrogen",
+          "message": "The proton leaves without its bonding electrons, so the atom left behind has to hold them, and a negative charge. Does a weak pull help with that?"
+        },
+        {
+          "text": "All three are alike, because atoms in one period are close in size",
+          "message": "Similar size means the bond to hydrogen does not separate them. Something else still differs from one atom to the next. What is given?"
+        }
+      ]
+    },
+    {
+      "lesson": "8.6",
+      "file": "src/content/lessons/unit-8/8-6-molecular-structure-of-acids-and-bases.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Selenic acid has more hydrogen atoms that can leave as protons than selenous acid has",
+          "message": "Count the O–H groups in the two structures the question gives. Is the number of acidic hydrogen atoms different?"
+        },
+        {
+          "text": "The added oxygen atom makes the O–H bonds longer and weaker, as a larger atom does down a group",
+          "message": "Bond length matters when the atom bonded to hydrogen changes down a group. In both of these acids the hydrogen is on an oxygen atom."
+        },
+        {
+          "text": "The added oxygen atom pulls electron density from the O–H bonds and shares the anion's charge",
+          "message": null
+        },
+        {
+          "text": "With more oxygen atoms, selenic acid attracts water more strongly, so more of it dissolves",
+          "message": "Dissolving and ionizing are two different things. Strength is about how much of the dissolved acid gives its proton to water."
+        }
+      ]
+    },
+    {
+      "lesson": "8.6",
+      "file": "src/content/lessons/unit-8/8-6-molecular-structure-of-acids-and-bases.mdx",
+      "check": 6,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Acetate shares its charge between two oxygen atoms, so it pulls less on a proton",
+          "message": null
+        },
+        {
+          "text": "Ethoxide carries a larger negative charge than acetate, so it attracts protons more strongly",
+          "message": "Read the two formulas again: C₂H₅O⁻ and CH₃COO⁻. Compare the sizes of the two charges before you compare anything else."
+        },
+        {
+          "text": "Acetate has two oxygen atoms that can each take a proton, so it takes more protons than ethoxide",
+          "message": "The question says that acetate takes far fewer protons than ethoxide, not more. What does a second oxygen atom do to the charge?"
+        },
+        {
+          "text": "Ethanol is a stronger acid than acetic acid, and the stronger acid has the stronger conjugate base",
+          "message": "Compare the pKa values given earlier in the lesson, about 16 for ethanol and 4.76 for acetic acid. Then check topic 4.8's rule."
+        }
+      ]
+    },
+    {
+      "lesson": "8.6",
+      "file": "src/content/lessons/unit-8/8-6-molecular-structure-of-acids-and-bases.mdx",
+      "check": 7,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "It can only give protons: nothing in its formula is an OH⁻ ion that it could release",
+          "message": "A base takes a proton. It does not have to release OH⁻. Look for an atom in the molecule with an unshared pair of electrons."
+        },
+        {
+          "text": "Its CH₂ hydrogen atoms are the acidic ones, because they sit between two groups",
+          "message": "Those two hydrogen atoms are bonded to carbon. How polar is a C–H bond, and how well does a carbon atom carry a negative charge?"
+        },
+        {
+          "text": "It can only take protons: the nitrogen atom makes the whole molecule a base",
+          "message": "One group does not decide for the whole molecule. Go through it one group at a time, the –COOH group included."
+        },
+        {
+          "text": "It can give a proton from its –COOH group and take one at its nitrogen atom",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "8.7",
+      "file": "src/content/lessons/unit-8/8-7-ph-and-pka.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "91",
+      "unit": "%",
+      "tolerance": 0.5,
+      "slips": [
+        {
+          "value": "90",
+          "message": "A ratio of 10 to 1 is not 90 to 10. What is the total when both forms are counted? Take the acid form's share of that total."
+        },
+        {
+          "value": "10",
+          "message": "Is that the ratio, or the share of the other form? The question asks for the acid form, as a percent of both forms together."
+        },
+        {
+          "value": "9.1",
+          "message": "That is the share of the sorbate ion, the base form. Is the pH above or below the pKa, and which form wins there?"
+        },
+        {
+          "value": "99",
+          "message": "That is the split two pH units below the pKa. How far below 4.76 is 3.76?"
+        },
+        {
+          "value": "0.91",
+          "message": "That looks like the fraction in the acid form. The question asks for a percent."
+        }
+      ]
+    },
+    {
+      "lesson": "8.7",
+      "file": "src/content/lessons/unit-8/8-7-ph-and-pka.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Nearly all of it is (CH₃)₃N, because a weak base stays mostly un-ionized in water",
+          "message": "That is true of the amine alone in water, where the amine itself sets the pH. Here the juice sets it. Compare that pH with the pKa."
+        },
+        {
+          "text": "Nearly all of it is (CH₃)₃N, because below the pKa the base form has the higher concentration",
+          "message": "Test that rule on a case you know. The fruit drink at pH 2.76 was two units below sorbic acid's pKa. Which form was 99 percent of the acid there?"
+        },
+        {
+          "text": "Nearly all of it is (CH₃)₃NH⁺, because the pH is far below the pKa of the acid form",
+          "message": null
+        },
+        {
+          "text": "About half of it is each form, because the acid in the juice and the base cancel each other",
+          "message": "The two forms are equal at one pH only. Compare the pH of the juice with 9.80, and count the units between them."
+        }
+      ]
+    },
+    {
+      "lesson": "8.7",
+      "file": "src/content/lessons/unit-8/8-7-ph-and-pka.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Both are mostly in the acid form, because a solution at pH 4.40 is acidic",
+          "message": "Acidic or basic compares the pH with 7. The form of a weak acid depends on a different comparison. Take each acid with its own pKa."
+        },
+        {
+          "text": "Lactic acid is mostly lactate ion, and propanoic acid is mostly un-ionized",
+          "message": null
+        },
+        {
+          "text": "Lactic acid is mostly un-ionized, and propanoic acid is mostly propanoate ion",
+          "message": "Take one acid at a time. Is 4.40 above or below 3.86? Then recall which form has the higher concentration on that side of a pKa."
+        },
+        {
+          "text": "Each is half in each form, because 4.40 lies about midway between the two pKa values",
+          "message": "An acid is half in each form only at its own pKa. Midway between two pKa values is the pKa of neither acid."
+        }
+      ]
+    },
+    {
+      "lesson": "8.7",
+      "file": "src/content/lessons/unit-8/8-7-ph-and-pka.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "It is above 9.6, because a blue indicator means a strongly basic solution",
+          "message": "Blue says only that bromothymol blue is in its base form. What does the yellow of thymol blue say about the same solution?"
+        },
+        {
+          "text": "Nothing certain: the two indicators disagree, so one of them must have failed",
+          "message": "Each indicator compares the pH with its own pKa, so two of them can show different forms in one solution. Use each result as a limit."
+        },
+        {
+          "text": "It is between 7.6 and 8.0: above one indicator's range and below the other's",
+          "message": null
+        },
+        {
+          "text": "It is 7.1, the pKa of bromothymol blue, because that indicator has changed color",
+          "message": "At its pKa an indicator is an equal mix of its two forms. What color would bromothymol blue show there?"
+        }
+      ]
+    },
+    {
+      "lesson": "8.7",
+      "file": "src/content/lessons/unit-8/8-7-ph-and-pka.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Bromothymol blue only, because its range is the one that holds pH 7.00",
+          "message": "Does a range have to hold the equivalence pH for the curve to pass through it? Check all three ranges against the pH values the question gives."
+        },
+        {
+          "text": "All three, because each range lies between pH 2.54 and pH 11.45",
+          "message": null
+        },
+        {
+          "text": "Thymol blue only, because an endpoint has to come in a basic solution, after the acid is gone",
+          "message": "The endpoint should come at the equivalence point, where the acid has just run out. Check each range against 2.54 and 11.45."
+        },
+        {
+          "text": "None, because a strong acid's pH changes too suddenly for an indicator to follow",
+          "message": "A sudden change in pH is what makes an endpoint sharp. Check which of the three ranges the pH passes through on the way."
+        }
+      ]
+    },
+    {
+      "lesson": "8.7",
+      "file": "src/content/lessons/unit-8/8-7-ph-and-pka.mdx",
+      "check": 6,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Bromocresol green (3.8 to 5.4), because its range holds the pH there",
+          "message": null
+        },
+        {
+          "text": "Bromothymol blue (6.0 to 7.6), because at an equivalence point the solution is neutral",
+          "message": "An equivalence point is about amounts, not about pH 7. What does the flask hold at this one, and is that an acid or a base?"
+        },
+        {
+          "text": "Thymol blue (8.0 to 9.6), because the flask holds a base, and it changes in basic solution",
+          "message": "The flask starts out basic, but the endpoint has to come where the base runs out. What does the question say the pH is there?"
+        },
+        {
+          "text": "Any of the three, because every indicator changes when the titrant has used up the analyte",
+          "message": "An indicator responds to pH, not to amounts. Each one changes where the curve crosses its own range, wherever that is."
+        }
+      ]
     }
   ]
 }
