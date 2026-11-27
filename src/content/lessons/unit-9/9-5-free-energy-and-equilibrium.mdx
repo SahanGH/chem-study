@@ -1,0 +1,649 @@
+---
+topic: "9.5"
+minutes: 22
+summary: "How the standard free energy change of a reaction fixes its equilibrium constant, how to turn one into the other, and why a positive value still leaves some product."
+---
+
+Topic 7.5 said that at 25 °C the equilibrium constant for carbon dioxide falling apart into carbon monoxide and oxygen is about 10⁻⁹⁰, so small that you would need tens of millions of liters of the gas to expect to find one CO molecule. Nobody found that number by counting molecules. It was worked out from a table of free energies, with one equation. This lesson is about that equation.
+
+## Which side of 1
+
+Topic 9.3 gave the rule: a reaction is thermodynamically favored when ΔG° is below zero. The little circle matters here. ΔG° is about one particular mixture: every substance in its standard state, which means every gas at 1 bar, which is very nearly 1 atm, and every solute at 1 M (topic 9.3). Put those numbers into the reaction quotient of topic 7.3 and every term is 1. So that mixture has $Q = 1$.
+
+"Favored" says that this mixture, the one with $Q = 1$, reacts in the forward direction. Now recall topic 7.3: a mixture reacts until $Q$ equals $K$, and it runs forward when $Q$ is below $K$. So a favored reaction has $K$ above 1.
+
+The other two cases go the same way. If ΔG° is above zero, the standard mixture runs backward, so $K$ is below 1. If ΔG° is exactly zero, the standard mixture is already at equilibrium, so $K = 1$.
+
+| ΔG° | The mixture with Q = 1 | So K is |
+|---|---|---|
+| below zero | runs forward | above 1 |
+| zero | is at equilibrium | exactly 1 |
+| above zero | runs backward | below 1 |
+
+In topic 7.5's terms: with $K$ above 1 the top of the $K$ fraction, the products, is the larger at equilibrium, and with $K$ below 1 the bottom is.
+
+So "thermodynamically favored" and "$K$ is greater than 1" are one statement. This is the first thing to check in any calculation: the sign of ΔG° tells you the side of 1 that $K$ must land on.
+
+<KeyIdea>
+
+The sign of ΔG° tells which way the standard mixture, which has $Q = 1$, has to go to reach equilibrium, and so it fixes the side of 1 on which $K$ lies. ΔG° below zero puts $K$ above 1, ΔG° above zero puts $K$ below 1, and ΔG° = 0 puts $K$ at exactly 1.
+
+</KeyIdea>
+
+## From one to the other
+
+The sign gives the side. One equation gives the size.
+
+$$
+\Delta G^\circ = -RT\ln K
+$$
+
+It is on the equation sheet. $R$ is the gas constant in its energy form, 8.314 J/(mol·K), $T$ is in kelvins, and $\ln$ is the natural logarithm, the "ln" key of a calculator.
+
+Read the signs off it. $R$ and $T$ are positive, and $\ln K$ is positive when $K$ is above 1 and negative when $K$ is below 1. So the minus sign in front makes ΔG° negative exactly when $K$ is above 1, as the table says.
+
+Often you have ΔG° and want $K$. Divide both sides by $-RT$, then undo the logarithm with the $e^x$ key:
+
+$$
+K = e^{-\Delta G^\circ/RT}
+$$
+
+This form is not on the equation sheet.
+
+**The unit trap of this topic.** $R$ is in joules, so $RT$ is in joules per mole, and ΔG° must be in joules per mole too. But tables and topic 9.3 give ΔG° in kilojoules, and nothing on the equation sheet reminds you. Convert on a line of its own, every time: into joules before ΔG° goes into the exponent, and back into kilojoules after it comes out of $-RT\ln K$.
+
+**Which K.** The $K$ of this equation is the one written with pressures in atm for gases ($K_p$) and molarities for solutes ($K_c$), as topic 7.3 writes them, because those are the standard states that ΔG° is defined for. A question says which one it is. $K$ has no unit.
+
+Some reactions have only pure solids and pure liquids in them. Topic 7.3 leaves pure solids and liquids out of a $K$ expression, so such a reaction has nothing in its $K$ expression, and there is no $K$ to compute for it. Its ΔG° still tells which direction is favored. Never report a $K$ for a reaction like that.
+
+<Worked title="K from ΔG°">
+
+Phosphorus trichloride and chlorine combine to make phosphorus pentachloride, all three as gases:
+
+$$
+\ce{PCl3(g) + Cl2(g) <=> PCl5(g)}
+$$
+
+At 298 K, ΔG° = −37.2 $\text{kJ/mol}_\text{rxn}$. What is $K_p$ at 298 K?
+
+1. **Check the sign first.** ΔG° is negative, so $K_p$ must come out above 1.
+
+2. **Convert to joules.**
+
+   $$
+   \begin{aligned}
+   &-37.2\ \text{kJ/mol}_\text{rxn} \\
+   &\quad = -37{,}200\ \text{J/mol}_\text{rxn}
+   \end{aligned}
+   $$
+
+3. **Find the exponent.** The minus sign of the equation and the minus sign of ΔG° make a plus.
+
+   $$
+   \begin{aligned}
+   \frac{-\Delta G^\circ}{RT} &= \frac{37{,}200}{(8.314)(298)} \\
+   &= \frac{37{,}200}{2{,}477.6} \\
+   &= 15.01
+   \end{aligned}
+   $$
+
+   The units cancel: joules per mole over joules per mole.
+
+4. **Take $e$ to that power.**
+
+   $$
+   K_p = e^{15.01} = 3.3 \times 10^{6}
+   $$
+
+5. **Check it.** Above 1, as predicted, and large: at equilibrium the pressure of PCl₅ is far greater than the product of the other two pressures.
+
+</Worked>
+
+<Check
+  answer={4}
+  misses={{
+    1: "ΔG° is negative here. Decide which side of 1 the K must lie on before you do any arithmetic.",
+    2: "R is in joules, so ΔG° must go in as joules. With kilojoules the exponent comes out a thousand times too small.",
+    3: "Check which key you used on the exponent. ln K is a power of e, not a power of ten.",
+  }}
+>
+Topic 7.5 met a bulb of ethene and hydrogen that could make ethane:
+
+$$
+\ce{C2H4(g) + H2(g) <=> C2H6(g)}
+$$
+
+For this reaction at 25 °C (298 K), ΔG° = −100.4 $\text{kJ/mol}_\text{rxn}$. Which value of $K_p$ goes with it?
+
+- About 2.5 × 10⁻¹⁸, so almost no ethane at equilibrium
+- About 1.04, so nearly equal amounts of each side
+- About 3 × 10⁴⁰, so essentially all ethane at equilibrium
+- About 4 × 10¹⁷, so almost all ethane at equilibrium
+
+<div slot="why">
+
+The sign first: ΔG° is negative, so $K_p$ is above 1. Then put ΔG° in joules:
+
+$$
+\begin{aligned}
+&-100.4\ \text{kJ/mol}_\text{rxn} \\
+&\quad = -100{,}400\ \text{J/mol}_\text{rxn}
+\end{aligned}
+$$
+
+The exponent:
+
+$$
+\begin{aligned}
+\frac{-\Delta G^\circ}{RT} &= \frac{100{,}400}{(8.314)(298)} \\
+&= 40.52
+\end{aligned}
+$$
+
+$$
+K_p = e^{40.52} = 4 \times 10^{17}
+$$
+
+Topic 7.5 said this $K$ is "greater than 10¹⁷", and this is where that came from.
+
+The first option has the sign of the exponent reversed, which gives $1/K$. The second leaves ΔG° in kilojoules, so the exponent is 0.0405 and $K$ comes out next to 1. The third takes 40.5 as the power of ten: it is the power of $e$.
+
+And a $K$ this large still says nothing about speed. With no catalyst the bulb holds no ethane that can be detected a year later, which topic 9.4 called kinetic control.
+
+</div>
+</Check>
+
+The equation works in the other direction too: measure a $K$, and you have ΔG°.
+
+<Worked title="ΔG° from K">
+
+Topic 7.3 had a sealed jar holding iodine crystals and violet iodine vapor at equilibrium:
+
+$$
+\ce{I2(s) <=> I2(g)}
+$$
+
+The solid is left out, so $K_p$ is the pressure of the vapor. At 25 °C that pressure is 4.1 × 10⁻⁴ atm. What is ΔG° for the change at 298 K?
+
+1. **Write $K$.**
+
+   $$
+   K_p = 4.1 \times 10^{-4}
+   $$
+
+2. **Predict the sign.** $K_p$ is below 1, so ΔG° must come out positive.
+
+3. **Substitute.** With $R$ in J/(mol·K) and $T$ in kelvins, the answer comes out in joules.
+
+   $$
+   \begin{aligned}
+   \Delta G^\circ &= -RT\ln K \\
+   &= -(8.314)(298)\ln(4.1 \times 10^{-4}) \\
+   &= -(2{,}477.6)(-7.799) \\
+   &= +19{,}320\ \text{J/mol}_\text{rxn}
+   \end{aligned}
+   $$
+
+4. **Convert.**
+
+   $$
+   \begin{aligned}
+   &+19{,}320\ \text{J/mol}_\text{rxn} \\
+   &\quad = +19.3\ \text{kJ/mol}_\text{rxn}
+   \end{aligned}
+   $$
+
+5. **Read it.** ΔG° is positive: turning solid iodine into vapor at 1 atm is not favored at 25 °C. And yet the jar is violet. A positive ΔG° does not say that nothing forms. It says that $K$ is below 1: the vapor stops at 4.1 × 10⁻⁴ atm, far short of 1 atm.
+
+</Worked>
+
+<Check
+  numeric="-12.2"
+  unit="kJ/mol"
+  slips={{
+    "12.2": "K is above 1 here, so products are favored. Which sign of ΔG° goes with that?",
+    "-5.32": "Did you use the log key? The equation needs ln, the natural logarithm.",
+    "-12243": "That is ΔG° in joules per mole. The question asks for kilojoules.",
+    "-1.03": "Did you use 25 for the temperature? T in this equation is in kelvins.",
+  }}
+>
+Topic 7.10 used the blood-red ion that forms when iron(III) ions meet thiocyanate ions in water:
+
+$$
+\begin{aligned}
+&\ce{Fe^3+(aq) + SCN^-(aq) <=>} \\
+&\quad \ce{FeSCN^2+(aq)}
+\end{aligned}
+$$
+
+Take $K_c$ = 140 at 25 °C (298 K). What is ΔG° for the reaction, in kJ/mol, with its sign?
+
+<div slot="why">
+
+$K_c$ is above 1, so ΔG° must be negative.
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -(8.314)(298)\ln(140) \\
+&= -(2{,}477.6)(4.942) \\
+&= -12{,}240\ \text{J/mol}_\text{rxn}
+\end{aligned}
+$$
+
+In kilojoules:
+
+$$
+\begin{aligned}
+&-12{,}240\ \text{J/mol}_\text{rxn} \\
+&\quad = -12.2\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+A $K$ in the hundreds takes only about 12 kJ/mol.
+
+</div>
+</Check>
+
+## How far from 1
+
+The equation has ΔG° divided by $RT$, so what counts is the size of ΔG° beside $RT$. At 298 K:
+
+$$
+RT = (8.314)(298) = 2{,}478\ \text{J/mol}
+$$
+
+That is about 2.5 kJ/mol, and it is a small energy. A ΔG° of a few kilojoules is "about $RT$". A ΔG° of a hundred kilojoules is "forty times $RT$".
+
+Keep two cases in mind. When ΔG° is within a kilojoule or two of zero, the exponent is a small number and $K$ is near 1. When the size of ΔG° is many times $RT$, $K$ is far from 1: enormous if ΔG° is negative, tiny if it is positive.
+
+The tie is exponential. Each time ΔG° falls by another 5.70 kJ/mol at 298 K, $K$ is multiplied by ten. Here is where the 5.70 comes from: a factor of ten in $K$ adds $\ln 10 = 2.3026$ to $\ln K$, and that many times $RT$, in kJ/mol, is
+
+$$
+2.3026 \times 2.4776 = 5.70
+$$
+
+So a ΔG° of −5.7 kJ gives a $K$ of 10, −11.4 kJ gives 100, −17.1 kJ gives 1,000, and +5.7 kJ gives 0.1.
+
+<Figure
+  src="/figures/9-5-two-rulers.svg"
+  alt="Two horizontal rulers at 298 K, one above the other. The upper ruler is ΔG° from −30 to +30 kJ/mol, with a tick every 10 kJ. The lower ruler is K, with eleven ticks from 10⁵ at the left to 10⁻⁵ at the right, one for each factor of ten. Eleven vertical lines join each K tick to the ΔG° ruler above it, 5.7 kJ apart. The solid line in the middle joins ΔG° = 0 to K = 1. The left half is labeled products favored and the right half reactants favored."
+  caption="ΔG° and K side by side at 298 K. Zero sits opposite 1, and every 5.7 kJ/mol to the left or right is one more factor of ten."
+/>
+
+Topic 7.5 had a rule of thumb: above about 10³, mostly products. At 25 °C a $K$ of 10³ is only −17 kJ/mol. Many reactions have a ΔG° far larger in size than that, which is why so many reactions go, for practical purposes, all the way or not at all.
+
+This is also the way to estimate without a calculator: divide ΔG° in kJ by 5.7 for the power of ten of $K$ at 298 K, with the sign reversed.
+
+<KeyIdea>
+
+What matters is the size of ΔG° beside $RT$, which is about 2.5 kJ/mol at 298 K. Near zero, $K$ is near 1. At 298 K every 5.7 kJ/mol multiplies or divides $K$ by ten.
+
+</KeyIdea>
+
+<Check
+  answer={1}
+  misses={{
+    2: "That is 90 × RT. But 90 is the power of ten of K, not ln K. How many kJ go with each factor of ten at 298 K?",
+    3: "The power of ten in K is not a number of kilojoules. How many kJ go with each factor of ten at 298 K?",
+    4: "This K is far above 1, so products are favored. Settle the sign of ΔG° first, then estimate its size.",
+  }}
+>
+Topic 7.5 gave $K_p$ of about 10⁹⁰ at 25 °C for carbon monoxide burning:
+
+$$
+\ce{2CO(g) + O2(g) <=> 2CO2(g)}
+$$
+
+Without a calculator, which ΔG° goes with that $K$?
+
+- About −514 kJ for each mole of reaction
+- About −223 kJ for each mole of reaction
+- About −90 kJ for each mole of reaction
+- About +514 kJ for each mole of reaction
+
+<div slot="why">
+
+$K$ is far above 1, so ΔG° is negative. Ninety factors of ten at 5.70 kJ each:
+
+$$
+90 \times 5.70 = 513
+$$
+
+So ΔG° is about −513 $\text{kJ/mol}_\text{rxn}$. The table value, from the free energies of formation of CO and CO₂, is −514.4 $\text{kJ/mol}_\text{rxn}$, which is the first option. The exact check runs the other way, with both energies in joules:
+
+$$
+\log K = \frac{514{,}400}{5{,}704.8} = 90.2
+$$
+
+Multiplying 90 by $RT$ (2.478 kJ) gives 223: that treats 90 as $\ln K$ when it is the power of ten. The power of ten is not itself a number of kilojoules. And a positive ΔG° would mean $K$ below 1.
+
+</div>
+</Check>
+
+The diagram below has a made-up reaction, A(g) ⇌ B(g), in which one particle of A turns into one particle of B, so that $K$ is simply the number of B particles divided by the number of A particles at equilibrium, as in the boxes of topic 7.5. You choose ΔG° and the temperature. The graph shows $K$ on a scale of powers of ten, and the box shows 100 particles at equilibrium, A as open circles and B as filled squares.
+
+<GibbsAndK />
+
+Do five things with it, and predict before each move.
+
+1. **Read the starting state.** ΔG° = −5 $\text{kJ/mol}_\text{rxn}$ at 298 K, which is 2.0 times $RT$. You should see $K$ = 7.5, and about 88 of every 100 particles are B. Favored, and still 12 particles in 100 are A.
+
+2. **Slide to zero.** Predict $K$ and the mixture first. You should see $K$ = 1.0, and about 50 of every 100 particles are B.
+
+3. **Slide to +5.** Predict first: will the box hold any B? You should see $K$ = 0.13, and about 12 of every 100 particles are B. The mixtures at −5 and +5 mirror each other, 88 and 12: reversing the sign of ΔG° turns $K$ into $1/K$.
+
+4. **Go down in steps: −6, −11, −17.** Predict how $K$ changes from each to the next. You should see $K$ = 11, then 85, then 950: these are the slider's stops nearest 5.7, 11.4 and 17.1 kJ, and they give $K$ near 10, 100 and 1,000. At −11 about 99 of every 100 particles are B, and at −17 the readout says that fewer than 1 in 100 particles is A.
+
+5. **Hold −40 and change the temperature.** Predict whether $K$ rises or falls when the temperature goes up. At 298 K you should see that $RT$ is 2.48 kJ/mol and $K$ = 1.0 × 10⁷. At 500 K, $RT$ is 4.16 kJ/mol and $K$ = 1.5 × 10⁴. At 1,000 K, $RT$ is 8.31 kJ/mol and $K$ = 120. The same ΔG° is 16 times $RT$, then 9.6 times, then 4.8 times: a smaller multiple of $RT$, a $K$ nearer 1.
+
+The reaction is made up, and for a real reaction ΔG° itself changes with temperature (topic 9.3), which the last section of this lesson takes up. The box shows proportions, not a count of real molecules, and with only 100 particles it is rough: the number of B divided by the number of A matches $K$ only approximately, and when fewer than 1 particle in 100 is of one kind the box cannot show it, though it is there.
+
+## A positive ΔG° is not a zero
+
+The explorer at +5 kJ/mol held 12 particles of B in every 100, and the iodine jar holds vapor. "Thermodynamically unfavored" does not mean that no product forms. It means that $K$ is below 1: starting from reactants alone, the reaction runs forward until $Q$ reaches $K$, and the net change ends there, with the top of the $K$ fraction smaller than the bottom.
+
+How much smaller depends on the size of ΔG° beside $RT$. At +5 kJ/mol the product is about an eighth of the mixture. At +60 kJ/mol it is a trace too small to find: 60 ÷ 5.7 is between 10 and 11 factors of ten, so $K$ is near 10⁻¹¹.
+
+The mirror statement holds too: "thermodynamically favored" does not mean "goes to completion". At −5 kJ/mol, 12 particles in 100 stayed A. As topic 7.5 put it, $K$ is never infinite and never zero.
+
+<Check
+  answer={3}
+  misses={{
+    1: "A positive ΔG° puts K below 1. It does not make K zero. Work out K and see what mixture it describes.",
+    2: "Half and half needs K = 1, and that needs ΔG° = 0. Compare 3.0 kJ with RT at 298 K, then work out K.",
+    4: "A mixture that is mostly product goes with K above 1. Check the sign of the exponent you used.",
+  }}
+>
+A made-up gas X can rearrange into a gas Y:
+
+$$
+\ce{X(g) <=> Y(g)}
+$$
+
+At 298 K, ΔG° = +3.0 $\text{kJ/mol}_\text{rxn}$. A flask is filled with pure X at 298 K and left until it reaches equilibrium. About what share of the particles in the flask are Y?
+
+- None: with ΔG° above zero, X does not react
+- About half, since 3.0 kJ is close to zero
+- About a quarter of them
+- About three quarters of them
+
+<div slot="why">
+
+ΔG° in joules:
+
+$$
+\begin{aligned}
+&+3.0\ \text{kJ/mol}_\text{rxn} \\
+&\quad = +3{,}000\ \text{J/mol}_\text{rxn}
+\end{aligned}
+$$
+
+The exponent, then $K$:
+
+$$
+\begin{aligned}
+\frac{-\Delta G^\circ}{RT} &= \frac{-3{,}000}{2{,}477.6} \\
+&= -1.211
+\end{aligned}
+$$
+
+$$
+K = e^{-1.211} = 0.30
+$$
+
+$K$ is the number of Y for each X: 0.30 Y for every 1 X, so Y is 0.30 out of 1.30.
+
+$$
+\frac{0.30}{1.30} = 0.23
+$$
+
+That is 23 percent. The reaction is unfavored and still goes forward from pure X, because pure X has $Q = 0$, which is below $K$.
+
+Half and half would need $K = 1$ and ΔG° = 0, and 3.0 kJ is more than $RT$. Three quarters is what −3.0 kJ would give.
+
+</div>
+</Check>
+
+## ΔG° does not change as the reaction runs
+
+ΔG° is a property of the equation and the temperature, exactly as $K$ is. It compares reactants and products in their standard states. Nothing that happens in the flask changes it: not the starting amounts, not how far the reaction has run, not reaching equilibrium.
+
+So at equilibrium ΔG° is not zero, unless $K$ happens to be 1. The iodine jar of the second worked example has ΔG° = +19.3 $\text{kJ/mol}_\text{rxn}$ when the crystals first go in, while the violet is still deepening, and after the vapor has settled at 4.1 × 10⁻⁴ atm.
+
+**Beyond the exam:** the quantity that does change as a reaction runs is written ΔG, without the circle. For a mixture with reaction quotient $Q$ it is
+
+$$
+\Delta G = \Delta G^\circ + RT\ln Q
+$$
+
+It is negative while $Q$ is below $K$, and it reaches zero at equilibrium, where $Q = K$. Setting it to zero there gives $\Delta G^\circ = -RT\ln K$. This equation is not on the equation sheet.
+
+<Check
+  answer={2}
+  misses={{
+    1: "ΔG° goes with the equation as it is written, not with the direction a flask happened to run. Is the equation different for flask 2?",
+    3: "ΔG° compares substances in their standard states. Does a mixture changing in a flask alter that comparison?",
+    4: "Both flasks end at equilibrium for the same equation at the same temperature. Can ΔG° differ between them?",
+  }}
+>
+Two flasks are kept at 298 K. Flask 1 is filled with PCl₃ and Cl₂ gases. Flask 2 is filled with PCl₅ gas alone. Each is left until it is at equilibrium. The equation is the one in the first worked example,
+
+$$
+\ce{PCl3(g) + Cl2(g) <=> PCl5(g)}
+$$
+
+with ΔG° = −37.2 $\text{kJ/mol}_\text{rxn}$ at 298 K. Which statement is right once both flasks are at equilibrium?
+
+- ΔG° is −37.2 kJ/mol in flask 1 and +37.2 kJ/mol in flask 2, which ran backward
+- ΔG° for this equation is −37.2 kJ/mol in both flasks, as it was at the start
+- ΔG° was −37.2 kJ/mol at the start and is now zero in both flasks
+- ΔG° is zero in flask 1 only, because flask 2 never ran forward
+
+<div slot="why">
+
+ΔG° belongs to the equation as written and to the temperature. Both are the same for the two flasks, so both have ΔG° = −37.2 $\text{kJ/mol}_\text{rxn}$ and $K_p$ = 3.3 × 10⁶, whichever side they started from. Topic 7.3 said the same of $K$: it does not depend on the starting amounts or the starting side.
+
+Flask 2 did run backward, because its $Q$ began far above $K$, but that does not rewrite the equation. And ΔG° does not move toward zero as a mixture nears equilibrium: only $K = 1$ goes with ΔG° = 0.
+
+</div>
+</Check>
+
+## K at another temperature
+
+$K$ changes with temperature (topic 7.9), and now you can say by how much. $\Delta G^\circ = -RT\ln K$ holds at any temperature, as long as the ΔG° is the one for that temperature.
+
+Formation values give ΔG° at 25 °C only. For any other temperature, topic 9.3's second route gives it:
+
+$$
+\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ
+$$
+
+with ΔH° and ΔS° taken as the same at every temperature.
+
+Two steps, then: find ΔG° at the new temperature, then find $K$ from it, with the new $T$ in $RT$ as well.
+
+<Worked title="The same reaction at 600 K">
+
+For the reaction of the first worked example,
+
+$$
+\ce{PCl3(g) + Cl2(g) <=> PCl5(g)}
+$$
+
+the enthalpy and entropy changes are
+
+$$
+\begin{aligned}
+\Delta H^\circ &= -87.9\ \text{kJ/mol}_\text{rxn} \\
+\Delta S^\circ &= -170.3\ \text{J/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+Find $K_p$ at 600 K.
+
+1. **Convert the entropy change.**
+
+   $$
+   \begin{aligned}
+   &-170.3\ \text{J/(mol}_\text{rxn}\text{·K)} \\
+   &\quad = -0.1703\ \text{kJ/(mol}_\text{rxn}\text{·K)}
+   \end{aligned}
+   $$
+
+2. **Find the entropy term.**
+
+   $$
+   \begin{aligned}
+   T\Delta S^\circ &= (600)(-0.1703) \\
+   &= -102.2\ \text{kJ/mol}_\text{rxn}
+   \end{aligned}
+   $$
+
+3. **Find ΔG° at 600 K.**
+
+   $$
+   \begin{aligned}
+   \Delta G^\circ &= -87.9 - (-102.2) \\
+   &= +14.3\ \text{kJ/mol}_\text{rxn}
+   \end{aligned}
+   $$
+
+   It is +14.28 before rounding.
+
+4. **Predict.** ΔG° is now positive, so $K_p$ must come out below 1.
+
+5. **Convert to joules.**
+
+   $$
+   \begin{aligned}
+   &+14.28\ \text{kJ/mol}_\text{rxn} \\
+   &\quad = +14{,}280\ \text{J/mol}_\text{rxn}
+   \end{aligned}
+   $$
+
+6. **Find $K$.** The $T$ in $RT$ is 600 K now, not 298 K.
+
+   $$
+   \begin{aligned}
+   \frac{-\Delta G^\circ}{RT} &= \frac{-14{,}280}{(8.314)(600)} \\
+   &= \frac{-14{,}280}{4{,}988.4} \\
+   &= -2.863
+   \end{aligned}
+   $$
+
+   $$
+   K_p = e^{-2.863} = 0.057
+   $$
+
+7. **Read it.** From 3.3 × 10⁶ at 298 K to 0.057 at 600 K. The reaction is exothermic, and topic 7.9 said that the $K$ of an exothermic reaction falls on heating. The numbers agree. For this reaction you can watch it happen in ΔG°: ΔS° is negative, so the term −TΔS° is positive and grows with $T$, and ΔG° climbs from −37.2 to +14.3 $\text{kJ/mol}_\text{rxn}$. That is this reaction, not the rule: an exothermic reaction with a positive ΔS° has a ΔG° that falls on heating, and its $K$ falls all the same, because $K$ goes by ΔG° divided by $RT$, and $RT$ grows too. It passes through zero at ΔH° divided by ΔS° (topic 9.3):
+
+   $$
+   T = \frac{87.9}{0.1703} = 516\ \text{K}
+   $$
+
+   That is the temperature at which $K = 1$.
+
+</Worked>
+
+<Check
+  numeric="6.5"
+  slips={{
+    "0.153": "ΔG° is negative at 1,000 K, so K must be above 1. Check the sign of the exponent.",
+    "1.00": "Did ΔG° go into the exponent in kilojoules? R is in joules, so ΔG° must be in joules.",
+    "543": "Did you use 298 K in RT? The T in RT is the temperature the K is for: 1,000 K.",
+    "75.2": "Did you use the 10ˣ key? The exponent 1.876 is a power of e.",
+    "1.76e5": "That is what the ΔG° for 298 K gives. Find ΔG° at 1,000 K from ΔH° and ΔS° first.",
+    "5.0e-7": "Did TΔS° stay in joules? Change ΔS° to kJ/(mol·K) before it is subtracted from ΔH°.",
+  }}
+>
+Back to ethene and hydrogen:
+
+$$
+\ce{C2H4(g) + H2(g) <=> C2H6(g)}
+$$
+
+For this reaction ΔH° = −136.4 $\text{kJ/mol}_\text{rxn}$ and ΔS° = −120.8 $\text{J/(mol}_\text{rxn}\text{·K)}$. Chemical plants make ethene from ethane at temperatures near 1,000 K. What is $K_p$ for the reaction as written at 1,000 K?
+
+<div slot="why">
+
+ΔS° in kilojoules first:
+
+$$
+\begin{aligned}
+&-120.8\ \text{J/(mol}_\text{rxn}\text{·K)} \\
+&\quad = -0.1208\ \text{kJ/(mol}_\text{rxn}\text{·K)}
+\end{aligned}
+$$
+
+The entropy term:
+
+$$
+\begin{aligned}
+T\Delta S^\circ &= (1{,}000)(-0.1208) \\
+&= -120.8\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+ΔG° at 1,000 K:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -136.4 - (-120.8) \\
+&= -15.6\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+In joules:
+
+$$
+\begin{aligned}
+&-15.6\ \text{kJ/mol}_\text{rxn} \\
+&\quad = -15{,}600\ \text{J/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Negative, so $K_p$ is above 1.
+
+$$
+\begin{aligned}
+\frac{-\Delta G^\circ}{RT} &= \frac{15{,}600}{(8.314)(1{,}000)} \\
+&= 1.876
+\end{aligned}
+$$
+
+$$
+K_p = e^{1.876} = 6.5
+$$
+
+At 298 K this $K_p$ was 4 × 10¹⁷. At 1,000 K it is 6.5, small enough that the reverse reaction goes a good part of the way: a good share of the ethane breaks up into ethene and hydrogen, which is why the plants run hot.
+
+</div>
+</Check>
+
+<Trap>
+
+Eight mistakes cost points on this topic:
+
+- **Leaving ΔG° in kilojoules inside $e^{-\Delta G^\circ/RT}$.** $R$ is in joules. With kilojoules the exponent comes out a thousand times too small and $K$ lands next to 1, whatever the reaction.
+- **Reporting the joules that $-RT\ln K$ gives as kilojoules.** Convert on a line of its own.
+- **Losing the sign.** Decide from the sign of ΔG° which side of 1 the $K$ must be on before you compute, and from $K$ which sign ΔG° must have.
+- **Using the log key for ln,** or reading $\ln K$ as the power of ten.
+- **Saying ΔG° = 0 at equilibrium.** ΔG° is fixed for an equation at a temperature. It is zero only if $K = 1$.
+- **Reading a positive ΔG° as "no reaction".** It means $K$ below 1: some product forms, and how much depends on the size of ΔG° beside $RT$.
+- **Reading a negative ΔG° as "goes to completion" or as "fast".** $K$ is never infinite, and speed is topic 9.4's subject.
+- **Using the 298 K value of ΔG° at another temperature,** or 298 in $RT$ when $K$ is wanted at another temperature.
+
+</Trap>
+
+<KeyPoints>
+
+- A thermodynamically favored reaction (ΔG° below zero) has $K$ above 1, a thermodynamically unfavored one (ΔG° above zero) has $K$ below 1, and ΔG° of zero goes with $K$ of exactly 1.
+- ΔG° equals $-RT\ln K$, so $K$ is $e$ raised to the power $-\Delta G^\circ/RT$, with $R$ = 8.314 J/(mol·K), $T$ in kelvins and ΔG° in joules per mole. The $K$ is $K_p$, with pressures in atm, for gases and $K_c$ for solutes.
+- What counts is the size of ΔG° beside $RT$, about 2.5 kJ/mol at 298 K. Near zero, $K$ is near 1, and at 298 K every 5.7 kJ/mol is a factor of ten in $K$.
+- A positive ΔG° means a small $K$, not zero, so some product still forms. A negative ΔG° means a large $K$, not an infinite one.
+- ΔG° belongs to the equation and the temperature and does not change as the mixture reacts, so it is not zero at equilibrium unless $K$ is 1.
+- For $K$ at another temperature, find ΔG° there from ΔH° minus TΔS°, and use that temperature in $RT$.
+
+</KeyPoints>
+
+<PracticeNext />

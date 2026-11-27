@@ -1,0 +1,439 @@
+---
+topic: "9.7"
+minutes: 18
+summary: "How an unfavored reaction is made to happen, by energy from outside or by a favored reaction that shares a substance with it, and why free energies add when equations add."
+---
+
+Most of the copper in the wiring of a house was, at one stage of its making, a dark gray solid: copper(I) sulfide, Cu₂S. Sealed in a vessel and left to itself, copper(I) sulfide stays copper(I) sulfide. In a smelter, air is blown through it, and copper metal collects at the bottom of the furnace. This lesson is about what the air does.
+
+## Unfavored, on its own
+
+Here is the change the smelter wants:
+
+$$
+\begin{aligned}
+&\ce{Cu2S(s) -> 2Cu(s) + S(s)} \\
+&\Delta G^\circ = +86.2\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+The value is for 25 °C, and it is positive: the change is thermodynamically unfavored (topic 9.3). All three substances are pure solids, so there is no $K$ to write (topic 9.5), and the sign says it all. It is the reverse change that is favored. Copper and sulfur combine, and copper(I) sulfide does not come apart.
+
+There are two ways to get the copper anyway. One brings in energy from outside. The other brings in a second reaction.
+
+## Energy from outside
+
+**Electricity.** A current from a power supply can push a reaction in its unfavored direction. An electrolytic cell is a device that uses a current to drive an unfavored reaction, and topic 9.8 builds one. Charging a battery is the same thing: the charger runs the battery's own favored reaction backward.
+
+**Light.** A green leaf makes glucose and oxygen from carbon dioxide and water, a change that is unfavored by a wide margin. It goes only while light falls on the leaf. This is photosynthesis.
+
+What do these have in common? The energy comes from a source that is not one of the reacting substances, and the change goes only while the source is on. The reaction's ΔG° is not altered. It is still unfavored, which is why a charged battery can give the energy back.
+
+## A favored partner
+
+Back to the furnace. The oxygen of the air reacts with sulfur in a strongly favored reaction. At 25 °C:
+
+$$
+\begin{aligned}
+&\ce{S(s) + O2(g) -> SO2(g)} \\
+&\Delta G^\circ = -300.1\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+You have added equations twice before. Topic 6.9 added equations and added their ΔH° values. Topic 7.6 added equations and multiplied their $K$ values. Free energy behaves like enthalpy: **when equations are added, their ΔG° values are added.** (These are one rule: ΔG° is proportional to $\ln K$, and adding logarithms is multiplying the numbers.)
+
+The equation sheet has no line for this rule, so it is yours to remember.
+
+<Worked title="Copper, with air">
+
+Find ΔG° at 25 °C for the reaction that takes place when air meets copper(I) sulfide, and say whether it is thermodynamically favored.
+
+1. **Write the two equations with their values.**
+
+   $$
+   \begin{aligned}
+   &\ce{Cu2S(s) -> 2Cu(s) + S(s)} \\
+   &\Delta G^\circ = +86.2\ \text{kJ/mol}_\text{rxn}
+   \end{aligned}
+   $$
+
+   $$
+   \begin{aligned}
+   &\ce{S(s) + O2(g) -> SO2(g)} \\
+   &\Delta G^\circ = -300.1\ \text{kJ/mol}_\text{rxn}
+   \end{aligned}
+   $$
+
+2. **Find what they share.** Sulfur is a product of the first and a reactant of the second, one mole in each.
+
+3. **Add the equations.** The sulfur cancels.
+
+   $$
+   \begin{aligned}
+   &\ce{Cu2S(s) + O2(g) ->} \\
+   &\quad \ce{2Cu(s) + SO2(g)}
+   \end{aligned}
+   $$
+
+   Check the atoms: 2 Cu, 1 S and 2 O on each side.
+
+4. **Add the values, signs included.**
+
+   $$
+   \begin{aligned}
+   \Delta G^\circ &= +86.2 + (-300.1) \\
+   &= -213.9\ \text{kJ/mol}_\text{rxn}
+   \end{aligned}
+   $$
+
+5. **Read it.** The sum is below zero: the overall reaction is thermodynamically favored. Unlike the first reaction, it has gases in it, so it has a $K_p$, and topic 9.5 gives its size. Each 5.7 kJ/mol is a factor of ten:
+
+   $$
+   \frac{213.9}{5.7} = 37.5
+   $$
+
+   That is 37.5 factors of ten, so $K_p$ is between 10³⁷ and 10³⁸. At equilibrium the gas over the solids would be sulfur dioxide with almost no oxygen left in it.
+
+</Worked>
+
+<Figure
+  src="/figures/9-7-shared-sulfur.svg"
+  alt="Two equations stacked, with the free energy change of each at the right. Cu₂S gives 2 Cu plus S, plus 86.2 kilojoules per mole. S plus O₂ gives SO₂, minus 300.1. The S is struck through in both. Under a line, their sum: Cu₂S plus O₂ gives 2 Cu plus SO₂, minus 213.9. Below, three bars drawn to one scale from a zero line: a short hatched bar rising to plus 86.2, a long bar falling to minus 300.1, and a shorter bar falling to minus 213.9, labeled together."
+  caption="Cu₂S(s) → 2Cu(s) + S(s) is unfavored, and S(s) + O₂(g) → SO₂(g) is favored by more. The sulfur that one makes the other uses, so the equations add, and so do their free energy changes. Values are for 25 °C."
+/>
+
+**What "share" means.** In the furnace no heap of sulfur forms and then burns. The sulfur atoms pass from copper to oxygen, and the two changes happen as one reaction. That is what **coupling** means: an unfavored reaction and a favored one joined through a substance that one of them makes and the other uses, so that they go as a single overall reaction.
+
+**Why the shared substance is needed.** Burning a pile of sulfur in the next room would do nothing for the copper(I) sulfide, however favored the burning is. Two reactions with no substance in common are two separate reactions, and adding their ΔG° values is arithmetic with no chemistry behind it. Only when the sulfur that leaves the copper is the same sulfur that the oxygen takes does the sum describe something that happens.
+
+**Nothing is cheated.** The overall reaction, the one that really takes place, has ΔG° below zero. The unfavored step did not become favored: the total did.
+
+These values are for 25 °C. The smelter runs its furnace hot because at 25 °C the favored overall reaction would be far too slow (topic 9.4), and the overall reaction is favored at both temperatures.
+
+<KeyIdea>
+
+An unfavored reaction can be driven by a favored one when two things are true: the two share a substance that one makes and the other uses, and their ΔG° values add up to less than zero.
+
+</KeyIdea>
+
+<Check
+  numeric="-249.5"
+  unit="kJ/mol"
+  slips={{
+    "249.5": "Check the sign of the sum. Add +50.6 and −300.1 with their signs.",
+    "-350.7": "Did both values go in as negative? The first reaction is unfavored: its ΔG° is +50.6 kJ/mol.",
+    "350.7": "Did you subtract the second value? When equations are added, their ΔG° values are added, signs included.",
+  }}
+>
+Mercury is made by heating the red mineral cinnabar, mercury(II) sulfide, in a stream of air. Think of it as two reactions, with their values at 25 °C:
+
+$$
+\begin{aligned}
+&\ce{HgS(s) -> Hg(l) + S(s)} \\
+&\Delta G^\circ = +50.6\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\ce{S(s) + O2(g) -> SO2(g)} \\
+&\Delta G^\circ = -300.1\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+What is ΔG° for the overall reaction, HgS(s) + O₂(g) → Hg(l) + SO₂(g), in kJ/mol, with its sign?
+
+<div slot="why">
+
+Sulfur is made by the first equation and used by the second, so it cancels when they are added, and the sum is the overall equation. Add the values with their signs:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= +50.6 + (-300.1) \\
+&= -249.5\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+The overall reaction is favored: the oxygen takes the sulfur, and the mercury is left as the metal.
+
+</div>
+</Check>
+
+<Check
+  answer={1}
+  misses={{
+    2: "Try both tests on B: does it use something the first reaction makes, and is the sum of the two ΔG° values below zero?",
+    3: "Reaction C does use up chlorine. Now add the two ΔG° values, signs included. What sign has the sum?",
+    4: "With D the sum is far below zero. But which product of the first reaction would D use up?",
+  }}
+>
+Titanium metal is made from titanium(IV) chloride, TiCl₄, a liquid. On its own, at 25 °C:
+
+$$
+\begin{aligned}
+&\ce{TiCl4(l) -> Ti(s) + 2Cl2(g)} \\
+&\Delta G^\circ = +737.2\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Here are four favored reactions, each with its ΔG° at 25 °C in $\text{kJ/mol}_\text{rxn}$:
+
+$$
+\begin{aligned}
+\textbf{A}\quad & \ce{4Na(s) + 2Cl2(g) ->} \\
+& \quad \ce{4NaCl(s)} \\
+& \Delta G^\circ = -1{,}536.4 \\[1em]
+\textbf{B}\quad & \ce{S(s) + O2(g) ->} \\
+& \quad \ce{SO2(g)} \\
+& \Delta G^\circ = -300.1 \\[1em]
+\textbf{C}\quad & \ce{2H2(g) + 2Cl2(g) ->} \\
+& \quad \ce{4HCl(g)} \\
+& \Delta G^\circ = -381.2 \\[1em]
+\textbf{D}\quad & \ce{4Al(s) + 3O2(g) ->} \\
+& \quad \ce{2Al2O3(s)} \\
+& \Delta G^\circ = -3{,}164.6
+\end{aligned}
+$$
+
+Which one, run in the same vessel, could drive the making of titanium?
+
+- Reaction A
+- Reaction B
+- Reaction C
+- Reaction D
+
+<div slot="why">
+
+Test each for the two conditions. A uses the chlorine that the first reaction makes, two moles for two moles, and the sum is below zero:
+
+$$
+\begin{aligned}
+&+737.2 + (-1{,}536.4) \\
+&\quad = -799.2\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Favored. This is a real process: TiCl₄ + 4Na → Ti + 4NaCl made titanium for decades.
+
+B is the reaction that freed the copper, and here it is no use: it shares nothing with the first reaction, and its ΔG° is too small anyway.
+
+C does use chlorine, but the sum is still above zero:
+
+$$
+\begin{aligned}
+&+737.2 + (-381.2) \\
+&\quad = +356.0\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+D is by far the most favored of the four, and it is no help at all: nothing the first reaction makes is used by it.
+
+</div>
+</Check>
+
+## Coupling in a living cell
+
+Cells have to build molecules whose formation is unfavored, at one temperature, with no furnace. They do it by coupling, and the favored partner is nearly always the same one: the reaction of **ATP** (adenosine triphosphate) with water, which gives ADP (adenosine diphosphate) and a phosphate ion. Its ΔG° is −30.5 kJ/mol.
+
+ATP is not "energy stored in a bond". Breaking any bond takes energy in (topic 6.7). What counts is ATP's whole reaction with water, the bonds broken and the bonds made together. Its ΔG° of −30.5 kJ/mol is large enough to bring the sum below zero for any reaction that is unfavored by less than 30.5 kJ/mol, as long as the two can be made to share a substance.
+
+A cell holds very little ATP, and a sprinting muscle would use all of its own within a few seconds. So the ADP has to be turned back into ATP all the time, and that reaction is the reverse of the one above. Reversing an equation changes the sign of its ΔG°, as it does for ΔH° (topic 6.9): making ATP from ADP and phosphate has ΔG° = +30.5 kJ/mol. It is unfavored, and it needs a favored partner of its own.
+
+<Worked title="ATP for a sprint">
+
+In the first seconds of a sprint, muscle remakes its ATP with the help of a compound it keeps in store, phosphocreatine. In words, the two reactions are these.
+
+ADP + phosphate → ATP + H₂O, with ΔG° = +30.5 kJ/mol
+
+phosphocreatine + H₂O → creatine + phosphate, with ΔG° = −43.0 kJ/mol
+
+Both values are for a neutral solution at 25 °C, the conditions biochemists' tables use. Show that the two can be coupled, and find what they share.
+
+1. **Find what they share.** Phosphate is made by the second reaction and used by the first. (Water goes the other way: made by the first, used by the second.)
+
+2. **Add the equations.** Phosphate and water cancel:
+
+   phosphocreatine + ADP → creatine + ATP
+
+3. **Add the values, signs included.**
+
+   $$
+   \begin{aligned}
+   \Delta G^\circ &= +30.5 + (-43.0) \\
+   &= -12.5\ \text{kJ/mol}
+   \end{aligned}
+   $$
+
+   Below zero: the overall reaction is thermodynamically favored.
+
+4. **Look at how the cell does it.** If the two reactions simply ran side by side in the same water, the phosphocreatine would react with water, its phosphate would drift away, and the ADP would stay ADP. An enzyme (topic 5.11) holds phosphocreatine and ADP together, and the phosphate group passes straight from one to the other. No free phosphate ion appears along the way. The phosphate group is what the two reactions share.
+
+5. **Read it.** Use topic 9.5's terms, with 5.7 kJ/mol for each factor of ten. Alone, making ATP is unfavored by 30.5 kJ/mol:
+
+   $$
+   \frac{30.5}{5.7} = 5.35
+   $$
+
+   That is 5.35 factors of ten below 1, a $K$ of about 4.5 × 10⁻⁶. Coupled, it is favored by 12.5 kJ/mol:
+
+   $$
+   \frac{12.5}{5.7} = 2.2
+   $$
+
+   That is 2.2 factors of ten above 1, a $K$ of about 160.
+
+</Worked>
+
+The ATP made this way is spent the way it was made. It does not react with water in the open, where its favored reaction would drive nothing. An enzyme joins it to the reaction it is to drive, through something the two share.
+
+<Check
+  answer={4}
+  misses={{
+    1: "Breaking a bond always takes energy in (topic 6.7). What makes the overall change favored must be something else.",
+    2: "A catalyst is not used up, and it changes how fast a reaction goes. Can it change ΔG° (topic 9.4)?",
+    3: "A living cell stays at one temperature, so nothing here depends on warming. Notice that ATP is used up in the reaction.",
+  }}
+>
+Cells make the amino acid glutamine from glutamate and ammonia, a reaction that is unfavored when it is taken alone. ATP is used up as it goes, and along the way glutamate is found carrying a phosphate group. A classmate says: "ATP powers the making of glutamine because energy is released when ATP's phosphate bond breaks." Which statement describes ATP's part correctly?
+
+- Breaking ATP's bond releases energy, and glutamate takes that energy in
+- ATP is a catalyst, and it brings ΔG° for making glutamine below zero
+- ATP's reaction warms the cell until the unfavored reaction becomes favored
+- ATP gives glutamate a phosphate group, so two reactions go as one
+
+<div slot="why">
+
+Bond breaking never releases energy (topic 6.7), so the classmate's picture cannot be right, and neither can the first option. ATP is used up, so it is a reactant, not a catalyst; and a catalyst cannot change ΔG° (topic 9.4). A cell stays at one temperature, and nothing here depends on warming.
+
+What happens is a transfer in two steps. First ATP passes a phosphate group to glutamate. Then ammonia takes the place of the phosphate, and glutamine is left. The glutamate that carries the phosphate group, glutamyl phosphate, is an intermediate (topic 5.7's word): it is made in the first step and used in the second, and it is the substance that ATP's favored reaction and the unfavored one share. The two go as a single route whose overall ΔG° is below zero.
+
+</div>
+</Check>
+
+## The smelter of topic 4.5
+
+Two reactions that share a substance have passed one of the two tests. The other is the sum, and it has to be worked out each time. Topic 4.5 left a pair to try.
+
+<Check
+  answer={2}
+  misses={{
+    1: "A favored partner is one of two conditions. Add the two ΔG° values, signs included, and look at the sign of the sum.",
+    3: "Read the last three words of this option again. How many ways of making an unfavored change happen has this lesson described?",
+    4: "A rise in entropy is one term of ΔG°, and ΔG° already includes it. Add the two ΔG° values given.",
+  }}
+>
+Topic 4.5's smelter makes aluminum from aluminum oxide and carbon. Written for 25 °C, with solid aluminum, the overall equation is
+
+$$
+\begin{aligned}
+&\ce{2Al2O3(s) + 3C(s) ->} \\
+&\quad \ce{4Al(s) + 3CO2(g)}
+\end{aligned}
+$$
+
+It is the sum of two reactions that share oxygen:
+
+$$
+\begin{aligned}
+&\ce{2Al2O3(s) ->} \\
+&\quad \ce{4Al(s) + 3O2(g)} \\
+&\Delta G^\circ = +3{,}164.6\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\ce{3C(s) + 3O2(g) -> 3CO2(g)} \\
+&\Delta G^\circ = -1{,}183.2\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+What follows?
+
+- Burning carbon is favored, so with carbon present the overall reaction is favored
+- Carbon cuts the energy that must come from outside, but not to zero
+- The sum is above zero, so aluminum cannot be made from its oxide by any means
+- A gas forms and the entropy rises, so the overall reaction must be favored
+
+<div slot="why">
+
+Add the values:
+
+$$
+\begin{aligned}
+&+3{,}164.6 + (-1{,}183.2) \\
+&\quad = +1{,}981.4\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+The two reactions share oxygen, but the sum is far above zero, so the carbon cannot drive the reaction by itself. That is why topic 4.5 said that electricity drives the smelter: the energy comes from outside, through an electrolytic cell (topic 9.8).
+
+The carbon still earns its place: it lowers the least energy that must be supplied, at 25 °C, from 3,164.6 to 1,981.4 kJ for every 4 mol of aluminum.
+
+A positive ΔS° is real here, since a gas forms, but ΔG° already includes it, and ΔG° is positive.
+
+</div>
+</Check>
+
+For some reactions no affordable partner brings the sum below zero. Then the energy has to come from outside after all, and a partner can still cut the amount.
+
+<Check
+  answer={3}
+  misses={{
+    1: "ATP reacting is a favored chemical reaction. Is that a partner reaction, or a source of energy outside the chemistry?",
+    2: "Sodium combining with chlorine is itself a favored reaction, and it uses the chlorine. What is that arrangement called?",
+    4: "Sulfur burning is a favored reaction, and it uses up the sulfur that Cu₂S gives up. What is that arrangement called?",
+  }}
+>
+Each of these changes is thermodynamically unfavored when it is taken alone. Which one is made to happen by a source of energy from outside, and not by a coupled reaction?
+
+- A cell links amino acids into a protein, with ATP reacting at each step
+- Sodium takes the chlorine from TiCl₄ and leaves titanium metal
+- Oxygen high in the atmosphere becomes ozone in ultraviolet light
+- The sulfur of Cu₂S burns to SO₂ in a stream of air and leaves copper
+
+<div slot="why">
+
+For the change of oxygen into ozone,
+
+$$
+\begin{aligned}
+&\ce{3O2(g) -> 2O3(g)} \\
+&\Delta G^\circ = +326.4\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+and topic 9.3 showed it unfavored at every temperature (taking ΔH° and ΔS° as constant). No second reaction is involved: the energy arrives as ultraviolet light from the sun, a source outside the reacting substances.
+
+In each of the other three, a favored chemical reaction (ATP with water, sodium with chlorine, sulfur with oxygen) uses a substance that the unfavored change makes or hands on. Those are coupled reactions.
+
+</div>
+</Check>
+
+<Trap>
+
+Eight mistakes cost points on this topic:
+
+- **Adding two ΔG° values for reactions that share nothing.** Without a substance that one makes and the other uses, the sum describes no reaction.
+- **Stopping at "the favored one is bigger".** A full answer gives the sum, with its sign, and names the shared substance.
+- **Calling a pair coupled when the sum is still positive.** In the aluminum smelter, sharing oxygen was not enough.
+- **Subtracting the values, or dropping a sign,** when the equations are added. The values are added, signs included.
+- **Saying the unfavored reaction "became favored".** Its own ΔG° is unchanged. The overall reaction is the favored one.
+- **"ATP stores energy in a bond that releases it when broken."** Breaking a bond takes energy in. It is ATP's whole reaction with water that is favored.
+- **Confusing a coupled reaction with a catalyst.** The partner is used up and changes the overall ΔG°. A catalyst is not used up and does not change it.
+- **Forgetting that favored is not fast.** The coupled reactions of industry are run hot for speed.
+
+</Trap>
+
+<KeyPoints>
+
+- An unfavored reaction ($\Delta G^\circ > 0$) does not go far toward its products on its own: with a large positive ΔG° it makes at most a trace. There are two ways to make it happen: energy from outside, or a coupled reaction.
+- The outside sources are electricity (an electrolytic cell, the charging of a battery) and light (photosynthesis). The change goes only while the source is on, and the reaction's ΔG° is not altered.
+- When equations are added, their ΔG° values are added, as their ΔH° values are, while their $K$ values are multiplied.
+- Two reactions are coupled when they share a substance that one makes and the other uses. The coupling drives the unfavored one only if the sum of the two ΔG° values is below zero.
+- In living cells the favored partner is usually ATP reacting with water (ΔG° = −30.5 kJ/mol), and the ATP hands a phosphate group to the molecule being changed. ATP is itself remade by coupling.
+- When coupling drives a reaction, the overall reaction has $\Delta G^\circ < 0$, so nothing is cheated. Where no partner makes the sum negative, as in the aluminum smelter, the energy must come from outside.
+
+</KeyPoints>
+
+<PracticeNext />

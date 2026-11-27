@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 290" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Six water molecules around a 2+ ion, and six on their own. Two panels, each 220 wide, no outline.
+       A water molecule with its oxygen at (x, y) and direction phi has its hydrogens at (x + 11 cos(phi +/- 52), y + 11 sin(phi +/- 52)), y downward; hydrogens are drawn first.
+       Left: the ion (radius 15) at (120, 140); six oxygens 50 away at 30, 90, ... 330 degrees, phi equal to that angle, so each oxygen faces the ion.
+       Each dotted line runs from the ion's edge (15 out) to the oxygen's edge (50 - 8 = 42 out): 27 long.
+       Right: six molecules at uneven places, phi 40, 200, 300, 120, 250, 170. -->
+  <rect width="480" height="290" fill="#FDFCF9"/>
+  <text x="120" y="30" text-anchor="middle" fill="#26231F" font-weight="600">around a 2+ ion</text>
+  <text x="360" y="30" text-anchor="middle" fill="#26231F" font-weight="600">on their own</text>
+  <line x1="133" y1="147.5" x2="156.4" y2="161" stroke="#6B655D" stroke-width="1.5" stroke-dasharray="2 4"/>
+  <line x1="120" y1="155" x2="120" y2="182" stroke="#6B655D" stroke-width="1.5" stroke-dasharray="2 4"/>
+  <line x1="107" y1="147.5" x2="83.6" y2="161" stroke="#6B655D" stroke-width="1.5" stroke-dasharray="2 4"/>
+  <line x1="107" y1="132.5" x2="83.6" y2="119" stroke="#6B655D" stroke-width="1.5" stroke-dasharray="2 4"/>
+  <line x1="120" y1="125" x2="120" y2="98" stroke="#6B655D" stroke-width="1.5" stroke-dasharray="2 4"/>
+  <line x1="133" y1="132.5" x2="156.4" y2="119" stroke="#6B655D" stroke-width="1.5" stroke-dasharray="2 4"/>
+  <circle cx="120" cy="140" r="15" fill="#26231F"/>
+  <text x="120" y="146.5" text-anchor="middle" fill="#FDFCF9">2+</text>
+  <g><circle cx="164.8" cy="175.9" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="173.5" cy="160.9" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="163.3" cy="165" r="8" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/></g>
+  <g><circle cx="111.3" cy="196.8" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="128.7" cy="196.8" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="120" cy="190" r="8" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/></g>
+  <g><circle cx="66.5" cy="160.9" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="75.2" cy="175.9" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="76.7" cy="165" r="8" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/></g>
+  <g><circle cx="75.2" cy="104.1" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="66.5" cy="119.1" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="76.7" cy="115" r="8" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/></g>
+  <g><circle cx="128.7" cy="83.2" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="111.3" cy="83.2" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="120" cy="90" r="8" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/></g>
+  <g><circle cx="173.5" cy="119.1" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="164.8" cy="104.1" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="163.3" cy="115" r="8" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/></g>
+  <g><circle cx="317.6" cy="107" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="328.8" cy="93.7" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="318" cy="96" r="8" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/></g>
+  <g><circle cx="368.6" cy="73.5" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="362.7" cy="89.8" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="372" cy="84" r="8" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/></g>
+  <g><circle cx="418.9" cy="122.5" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="403.9" cy="113.8" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="408" cy="124" r="8" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/></g>
+  <g><circle cx="381.1" cy="187.5" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="396.1" cy="196.2" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="392" cy="186" r="8" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/></g>
+  <g><circle cx="339.8" cy="182.7" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="323.5" cy="188.6" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="334" cy="192" r="8" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/></g>
+  <g><circle cx="301.8" cy="138.6" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="304.8" cy="155.7" r="4.5" fill="#FDFCF9" stroke="#26231F" stroke-width="1.5"/><circle cx="310" cy="146" r="8" fill="#E6E1D8" stroke="#26231F" stroke-width="1.5"/></g>
+  <text x="120" y="268" text-anchor="middle" fill="#26231F">held in place</text>
+  <text x="360" y="268" text-anchor="middle" fill="#26231F">free to turn and move</text>
+</svg>
