@@ -252,3 +252,61 @@ Each targets `main` and is merged by Claude when its check passes.
 - Every thermochemical equation carries its state symbols.
 - No page scrolls sideways, and no equation scrolls in its box, at 412, 390,
   360 or 320 px with every answer open.
+
+## As built (2026-11-27)
+
+Six documents in three pull requests: #81 (this design and its plan), #82
+(Worksheets 1 to 4) and the one that carries this note (the skill ladders
+and the free-response set). Claude merged each when its check passed.
+
+- **Counts.** Four worksheets with 28 questions and 74 parts, one question
+  scored (10 points); ten ladders with 40 parts; a free-response set of 5
+  questions, 15 parts and 32 points.
+- **Every document was audited to `0 unexplained, 0 stale`** and
+  **fact-checked twice on Fable** by fresh agents that solved every question
+  before reading its answer and recomputed every number. Fixers that applied
+  each decided list ran on Sonnet.
+- **No final answer, sign, unit or equation in the originals was wrong.**
+  What the checks found in the originals:
+  - printed steps that do not give the printed answer (Worksheet 2, 2(c),
+    4(c) and 6(c); Worksheet 4, 8(c); Ladder 5's "3.0 × 10³ J = 3.01 kJ";
+    Ladder 6's sum), and steps that set joules equal to kilojoules
+    (Worksheet 2, 6(c); Ladder 6);
+  - statements that say more than is true, listed in section 4.5, and with
+    them: "always produces some CO₂" (Worksheet 3, 4(d); Ladder 7(d)); "most
+    accurate of the three" (Ladder 10); a 20 kJ gap as "exactly what
+    averaging produces" (Worksheet 4, 5(c)); "every other expression is
+    products minus reactants" (Worksheet 4, 1(c)); "independent" for the
+    activation energy and ΔH (Ladder 2), which an endothermic reaction
+    limits.
+- **What changed from this design:**
+  - **Worksheet 2, 6(c)** carries n = 1.387 mol, so its boiling step is
+    56.45 kJ (the source prints 56.47) and the sum is shown as 76.28 kJ,
+    which still gives 76.3 kJ. **Ladder 6's** sum is shown from the unrounded
+    steps, 120.48 kJ: the 120.5 kJ this design named is itself a tie.
+  - **Free-response 2(d)'s stem** says where 607 kJ/mol comes from (a
+    table's value for a nitrogen–oxygen double bond), since "the bond in NO,
+    607" would have given a wrong value as that molecule's own.
+  - **Worksheet 1's introduction** defines exothermic and endothermic by the
+    system's energy, so that photosynthesis in 1(e) fits its own page.
+  - **Worksheet 4, 8(e)** and its rubric line say that these data show no
+    loss, since the measured size (891) is the larger, and that a real
+    experiment usually reads low.
+  - **Thousands carry a comma** on all six pages (the site's rule). The
+    audit reads each as two numbers, and that is most of every expected
+    file.
+  - **"Size" for "magnitude"** throughout, as the lessons say.
+- **Kept as the sources have them, and listed in the pull requests:** the
+  bond enthalpies and enthalpies of formation that differ from the lessons'
+  tables; the same quantity with different values on different pages (H–H,
+  Cl–Cl and H–Cl; the NO data); a two-figure temperature change carried to
+  three or four figures; Ladder 5's neutralization at −60.2 kJ/mol; scoring
+  notes a grader could read two ways.
+- **Not available in this session:** the key PDFs. Each page was compared
+  with its `.tex`.
+- **For the units to come:**
+  - Give every writer the thousands rule and the "size" for "magnitude"
+    rule at the start; both were applied in a later round here.
+  - A carried value named in a plan must be tested the same way as a
+    correction: multiply it out before it is written down.
+  - A summary in a plan is counted against the schema's 200 characters.

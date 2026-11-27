@@ -203,6 +203,15 @@ Differences the audit is expected to print: the Quick review left out of each wo
 
 The body gives each document's questions and points, each audit's last line, what the fact-checks found, the labels, the models used, test and build output, and, set apart, **every change to the originals**.
 
+> **As carried out (2026-11-27), Tasks 1 to 3.** Four writers converted the worksheets in parallel into the scratch folder; each audit was clean on the first pass (pull request #82).
+>
+> - **The first fact-checks** (one per worksheet) found no wrong final answer, sign, unit or equation. Two findings had to be fixed, both in Worksheet 2, 6(c): with the n = 1.387 mol this plan named, 1.387 × 40.7 is 56.45 and not the source's 56.47, and the warming steps set joules equal to kilojoules. The steps now show joules first and the sum 76.28 kJ.
+> - **Worksheet 1, 1(e)** did not answer its question as this plan worded it (no sign); the answer now gives the sign and says the part is the exception.
+> - **One Sonnet fixer per worksheet** applied each decided list. **The second check** (one agent, all four pages) found nothing that had to change and five wording points, all applied.
+> - **One equation scrolled** at phone width (Worksheet 2, 3(b)) and was split.
+> - **Worksheet 4's summary** in this plan was over the schema's 200 characters and was shortened.
+> - **Tests:** 1,618 unit tests; 424 practice and accessibility browser tests; 133 pages.
+
 ---
 
 ## Group C: the skill ladders and the free-response set (pull request C)
@@ -260,9 +269,16 @@ With all six documents in place, check by hand: each Unit 6 lesson's "Practice n
 
 - [ ] **Commit** (`feat(practice): add the Unit 6 skill ladders and free-response set`).
 
+> **As carried out (2026-11-27), Tasks 4 to 6.** Both documents were written in the scratch folder at the same time as the worksheets.
+>
+> - **Skill ladders** (two first checkers, five ladders each): no wrong answer. Three displays had to change: Ladder 5's "3.0 × 10³ J = 3.01 kJ" (now 3,010 J); Ladder 6's sum, which this plan's 120.5 kJ left as a tie (now 120.48 kJ from the unrounded steps); Ladder 10's "most accurate of the three". The second check found four wording points.
+> - **Free-response set:** one finding had to be fixed, in 2(d)'s stem, where the writer had dropped "average" and this plan's wording gave 607 kJ/mol as NO's own bond value. The second check found nothing.
+> - **The hand checks:** each Unit 6 lesson's "Practice next" lists the documents with a question on its topic; the unit page lists the six in the order of "The six documents"; "specific heat" without "capacity", "internal energy", "intensive", "magnitude" and "C(gr)" occur nowhere under `src/content/practice/unit-6`.
+> - **Phones:** nothing scrolled on either page.
+
 ### Task 6: Close out
 
-- [ ] Add an "As built" note at the end of the design, and "As carried out" notes in this plan under the tasks that went differently.
+- [x] Add an "As built" note at the end of the design, and "As carried out" notes in this plan under the tasks that went differently.
 - [ ] Commit (`docs: record how the Unit 6 practice was built`), push, open pull request C with base `main` (`feat(practice): Unit 6 skill ladders and free-response set`), merge it when its check passes, and confirm the deploy.
 
 ## What this plan delivers against the design
