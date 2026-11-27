@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 310" font-family="system-ui, sans-serif" font-size="18">
+  <!-- Two prepared equations and their sum. Equation 1 doubled (its 2 H₂O and 2 CO₂ written as one of each on two lines) and equation 2 reversed; every term that cancels is struck through with an ink line and set in the secondary color: 2 HCl twice, 2 KCl twice, H₂O twice, CO₂ twice, eight in all. State symbols are left out. Every term has its own x and textLength, so the strike lines fit whatever font is used. Coordinates from scratchpad/unit6/work-6-9/fig2.cjs. -->
+  <rect width="480" height="310" fill="#FDFCF9"/>
+
+  <text x="30" y="28" fill="#6B655D">Equation 1, doubled</text>
+  <text x="460" y="28" fill="#26231F" text-anchor="end">+63.0 kJ</text>
+  <text x="30" y="150" fill="#6B655D">Equation 2, reversed</text>
+  <text x="460" y="150" fill="#26231F" text-anchor="end">+33.1 kJ</text>
+  <path d="M30 228H460" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <text x="30" y="256" fill="#6B655D">Sum</text>
+  <text x="460" y="256" fill="#4F706C" text-anchor="end" font-weight="700">+96.1 kJ</text>
+
+  <text x="30" y="58" fill="#26231F" textLength="76" lengthAdjust="spacingAndGlyphs">2 KHCO₃</text>
+  <text x="115" y="58" fill="#26231F" textLength="12" lengthAdjust="spacingAndGlyphs">+</text>
+  <text x="136" y="58" fill="#6B655D" textLength="47" lengthAdjust="spacingAndGlyphs">2 HCl</text>
+  <path d="M134 52H185" fill="none" stroke="#26231F" stroke-width="1.6"/>
+  <text x="192" y="58" fill="#26231F" textLength="17" lengthAdjust="spacingAndGlyphs">→</text>
+
+  <text x="60" y="84" fill="#6B655D" textLength="45" lengthAdjust="spacingAndGlyphs">2 KCl</text>
+  <path d="M58 78H107" fill="none" stroke="#26231F" stroke-width="1.6"/>
+  <text x="114" y="84" fill="#26231F" textLength="12" lengthAdjust="spacingAndGlyphs">+</text>
+  <text x="135" y="84" fill="#6B655D" textLength="34" lengthAdjust="spacingAndGlyphs">H₂O</text>
+  <path d="M133 78H171" fill="none" stroke="#26231F" stroke-width="1.6"/>
+  <text x="178" y="84" fill="#26231F" textLength="12" lengthAdjust="spacingAndGlyphs">+</text>
+  <text x="199" y="84" fill="#6B655D" textLength="34" lengthAdjust="spacingAndGlyphs">CO₂</text>
+  <path d="M197 78H235" fill="none" stroke="#26231F" stroke-width="1.6"/>
+
+  <text x="60" y="110" fill="#26231F" textLength="12" lengthAdjust="spacingAndGlyphs">+</text>
+  <text x="81" y="110" fill="#26231F" textLength="34" lengthAdjust="spacingAndGlyphs">H₂O</text>
+  <text x="124" y="110" fill="#26231F" textLength="12" lengthAdjust="spacingAndGlyphs">+</text>
+  <text x="145" y="110" fill="#26231F" textLength="34" lengthAdjust="spacingAndGlyphs">CO₂</text>
+
+  <text x="30" y="180" fill="#6B655D" textLength="45" lengthAdjust="spacingAndGlyphs">2 KCl</text>
+  <path d="M28 174H77" fill="none" stroke="#26231F" stroke-width="1.6"/>
+  <text x="84" y="180" fill="#26231F" textLength="12" lengthAdjust="spacingAndGlyphs">+</text>
+  <text x="105" y="180" fill="#6B655D" textLength="34" lengthAdjust="spacingAndGlyphs">H₂O</text>
+  <path d="M103 174H141" fill="none" stroke="#26231F" stroke-width="1.6"/>
+  <text x="148" y="180" fill="#26231F" textLength="12" lengthAdjust="spacingAndGlyphs">+</text>
+  <text x="169" y="180" fill="#6B655D" textLength="34" lengthAdjust="spacingAndGlyphs">CO₂</text>
+  <path d="M167 174H205" fill="none" stroke="#26231F" stroke-width="1.6"/>
+  <text x="212" y="180" fill="#26231F" textLength="17" lengthAdjust="spacingAndGlyphs">→</text>
+
+  <text x="60" y="206" fill="#26231F" textLength="54" lengthAdjust="spacingAndGlyphs">K₂CO₃</text>
+  <text x="123" y="206" fill="#26231F" textLength="12" lengthAdjust="spacingAndGlyphs">+</text>
+  <text x="144" y="206" fill="#6B655D" textLength="47" lengthAdjust="spacingAndGlyphs">2 HCl</text>
+  <path d="M142 200H193" fill="none" stroke="#26231F" stroke-width="1.6"/>
+
+  <text x="30" y="286" fill="#26231F" textLength="76" lengthAdjust="spacingAndGlyphs">2 KHCO₃</text>
+  <text x="115" y="286" fill="#26231F" textLength="17" lengthAdjust="spacingAndGlyphs">→</text>
+  <text x="141" y="286" fill="#26231F" textLength="54" lengthAdjust="spacingAndGlyphs">K₂CO₃</text>
+  <text x="204" y="286" fill="#26231F" textLength="12" lengthAdjust="spacingAndGlyphs">+</text>
+  <text x="225" y="286" fill="#26231F" textLength="34" lengthAdjust="spacingAndGlyphs">H₂O</text>
+  <text x="268" y="286" fill="#26231F" textLength="12" lengthAdjust="spacingAndGlyphs">+</text>
+  <text x="289" y="286" fill="#26231F" textLength="34" lengthAdjust="spacingAndGlyphs">CO₂</text>
+</svg>

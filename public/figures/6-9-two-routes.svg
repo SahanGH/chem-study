@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400" font-family="system-ui, sans-serif" font-size="18">
+  <!-- An enthalpy diagram to scale, 0.5 units for each kJ. Levels: 2 Na + O₂ at 0 kJ (y = 60), Na₂O + ½ O₂ at −414.2 kJ (y = 60 + 207.1 = 267), Na₂O₂ at −510.9 kJ (y = 60 + 255.45 = 315). Left: the direct route, one solid ink arrow. Right: the two steps, two dashed arrows in the accent color. The routes are told apart by solid against dashed as well as by color. -->
+  <rect width="480" height="400" fill="#FDFCF9"/>
+
+  <!-- Vertical axis. -->
+  <path d="M40 380V40" fill="none" stroke="#26231F" stroke-width="1.5"/>
+  <path d="M40 30L35 42H45Z" fill="#26231F"/>
+  <text x="24" y="205" text-anchor="middle" fill="#26231F" transform="rotate(-90 24 205)">Enthalpy</text>
+
+  <!-- The three levels. -->
+  <path d="M70 60H440" fill="none" stroke="#26231F" stroke-width="3"/>
+  <text x="255" y="46" text-anchor="middle" fill="#26231F">2 Na + O₂</text>
+  <path d="M270 267H440" fill="none" stroke="#26231F" stroke-width="3"/>
+  <text x="330" y="255" text-anchor="end" fill="#26231F">Na₂O + ½ O₂</text>
+  <path d="M70 315H440" fill="none" stroke="#26231F" stroke-width="3"/>
+  <text x="255" y="341" text-anchor="middle" fill="#26231F">Na₂O₂</text>
+
+  <!-- The direct route: one solid arrow. -->
+  <path d="M130 63V301" fill="none" stroke="#26231F" stroke-width="2.5"/>
+  <path d="M130 312L124 300H136Z" fill="#26231F"/>
+  <text x="144" y="180" fill="#26231F">one step</text>
+  <text x="144" y="204" fill="#26231F">−510.9 kJ</text>
+
+  <!-- The two-step route: two dashed arrows. -->
+  <path d="M400 63V253" fill="none" stroke="#4F706C" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <path d="M400 264L394 252H406Z" fill="#4F706C"/>
+  <text x="386" y="160" text-anchor="end" fill="#26231F">−414.2 kJ</text>
+  <path d="M400 270V301" fill="none" stroke="#4F706C" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <path d="M400 312L394 300H406Z" fill="#4F706C"/>
+  <text x="386" y="297" text-anchor="end" fill="#26231F">−96.7 kJ</text>
+</svg>

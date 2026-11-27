@@ -132,6 +132,8 @@ docs/superpowers/plans/2026-11-27-chemstudy-unit-6-check-feedback.json   derived
 
 Branch: `topic/unit-6-energy-and-heat`, from this plan's branch (`topic/unit-6-lessons-design`). The pull request title is "feat(lessons): Unit 6 lessons 6.1-6.3".
 
+> **As carried out.** Three writers on Fable; a fact-check of each finished lesson on Fable; an originality check of the prose on Sonnet; fixes on Sonnet and a second check on Fable. The fact-checks found two things that had to change: a sentence about iron in lesson 6.3, and nothing else wrong in a number, value or sign. Six figures were drawn and looked at at 390 and 320 px. Merged as pull request 78.
+
 No new block. Before the lessons: move the sample lessons of `tests/unit/check-dist.test.ts` from topic 6.2 to topic 8.2 (fact 3), and put Unit 6 on `FEEDBACK_UNITS`; the build then fails until the lessons carry their messages. Three writers at the same time, then the controller's steps.
 
 > **How these briefs were checked.** A fact-check confirmed every number, value, reaction and sign, and changed four wrong-answer messages that gave too much away, wording in lesson 6.3 that used speed where kinetic energy is meant, and several Checks answered by the text above them. The originality check found lesson 6.1's third Check to be a question of the teacher's first worksheet with the substance changed (rebuilt as a control experiment), lesson 6.3's worked example to be another (now an unplugged clothes iron cooling in a room), and a scene shared with lesson 6.5 (changed). A second check of the changes found three errors the revision had left, all fixed.
@@ -574,6 +576,8 @@ No new block. Before the lessons: move the sample lessons of `tests/unit/check-d
 ## Group C: measuring heat (pull request C)
 
 Branch: `topic/unit-6-calorimetry-and-phase-changes`, from `topic/unit-6-energy-and-heat`. The pull request title is "feat(lessons): Unit 6 lessons 6.4 and 6.5, the calorimetry explorer and the heating curve explorer".
+
+> **As carried out.** Both explorers were built on Opus at the same time and reviewed on Sonnet. The review found that the calorimetry readout rounded temperature changes to 0.1 °C and so could contradict its own heat values (they now show to 0.01 °C), that the SVG ids of two explorers on one page could collide (now made with `$props.id()`), and that the heating curve explorer could say 0 or 100 percent for a segment only nearly empty or full (now "less than 1 percent" and "more than 99 percent"). The fact-check of lesson 6.5 found the slopes of its drawn figure out of proportion, and they were redrawn. Lesson 6.4's sentence about the titanium example was changed to the explorer's new readout. Pull request 79.
 
 Tasks 4 and 5 build the two explorers (one builder each, on Opus, at the same time; each writes its new CSS rules to `scratchpad/unit6/css/` and the controller merges them into `src/styles/diagram.css` and registers both blocks in `src/pages/[unit]/[topic].astro`). Then two writers, then the controller's steps, with a code review of the explorers on Sonnet.
 
@@ -1094,6 +1098,8 @@ If the fact-checker changes one of the three heat capacities marked for checking
 ## Group D: enthalpy of reaction, three ways (pull request D)
 
 Branch: `topic/unit-6-enthalpy-of-reaction`, from `topic/unit-6-calorimetry-and-phase-changes`. The pull request title is "feat(lessons): Unit 6 lessons 6.6-6.9".
+
+> **As carried out.** Four writers on Fable, then the same checks as Group B. No fact-check found a wrong number, value, sign or equation in lessons 6.6 to 6.9. With all nine lessons in, the check-feedback data file holds 48 Checks, the sweep tried 190 wrong answers and every one showed its message, and Unit 6 went on `BALANCED_UNITS`. Task 12's list for the teacher is the "As built" section of the design.
 
 No new block. Four writers at the same time, then the controller's steps. With all nine lessons in, Unit 6 goes on `BALANCED_UNITS` in `tests/unit/check-balance.test.ts`. Task 10 closes the unit out.
 
@@ -1793,8 +1799,8 @@ The two calorimeter values of the worked example, +31.5 and −33.1 kJ/mol_rxn, 
 
 ### Task 12: Close out Unit 6's lessons
 
-- [ ] Add an "As built" section to the design and "As carried out" notes to this plan under each group.
-- [ ] In the last pull request, list for the teacher: what to verify against the framework, every value a checker could not confirm, and Claude's calls from the design's section 1.
+- [x] Add an "As built" section to the design and "As carried out" notes to this plan under each group.
+- [x] In the last pull request, list for the teacher: what to verify against the framework, every value a checker could not confirm, and Claude's calls from the design's section 1.
 
 ## What this plan delivers against the design
 

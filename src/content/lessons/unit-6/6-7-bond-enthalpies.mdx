@@ -1,0 +1,447 @@
+---
+topic: "6.7"
+minutes: 19
+summary: "How to estimate the enthalpy change of a gas-phase reaction from average bond enthalpies, as bonds broken minus bonds formed, and why the result is an estimate."
+---
+
+For much of the last century, chemical plants made acetaldehyde, a starting material for acetic acid, out of two simple substances: acetylene and water. Nothing burns, yet the reaction gives off a good deal of energy. Where does that energy come from? Not from any one substance. It is the difference between two large numbers: the energy it takes to pull the old bonds apart, and the energy given back when the new bonds form. With a table of bond strengths and a Lewis diagram of each molecule, you can estimate that difference without running the reaction.
+
+## Breaking takes energy, forming gives it back
+
+Topic 2.2 pictured two bonded atoms at the bottom of a valley of potential energy, and read the bond energy from the depth of the valley. For H–H that depth is 436 kJ/mol.
+
+A **bond enthalpy** is that same quantity, measured as an enthalpy change for a substance in the gas phase: the energy taken in when one mole of a given bond is broken, in kJ/mol. The exam says "bond energy" and "bond enthalpy" for the same table values.
+
+Two facts hold for every bond:
+
+- Breaking a bond takes energy in, whatever the bond. The atoms must be lifted out of the valley.
+- Forming the same bond releases exactly as much. The atoms fall back in.
+
+So a bond enthalpy read from the table is two things at once: the amount taken in when that bond breaks, and the amount released when it forms.
+
+<KeyIdea>
+
+Breaking a bond takes energy in. Forming a bond releases energy. No bond releases energy by breaking.
+
+</KeyIdea>
+
+<Check
+  answer={2}
+  misses={{
+   1: "Pulling two bonded atoms apart is a climb out of the valley of topic 2.2. Does a climb take energy in or give it out?",
+   3: "A bond enthalpy is counted for a mole of bonds. How many H atoms does it take to make one H–H bond?",
+   4: "Breaking a bond and forming the same bond are opposite changes. Can both of them release energy?",
+  }}
+>
+In atomic hydrogen welding, an electric arc splits hydrogen molecules into separate atoms. The atoms drift to the steel being welded and join into H₂ molecules again on its surface. The H–H bond enthalpy is 436 kJ/mol. Where is energy released, and how much for each mole of H₂?
+
+- In the arc, 436 kJ, as the H–H bonds break
+- At the steel, 436 kJ, as H–H bonds form
+- At the steel, 872 kJ, as two atoms each give 436 kJ
+- In the arc and at the steel, 436 kJ each time
+
+<div slot="why">Breaking bonds takes energy in, so the arc supplies 436 kJ for every mole of H₂ it splits. Forming the same bonds releases the same 436 kJ, and that happens on the steel: it is the energy that melts the metal. The first option has the bond breaking give energy out, which no bond does. The third counts 436 kJ for each atom, but 436 kJ belongs to a mole of bonds, and it takes two atoms to make one bond. The fourth has energy released twice: breaking and forming the same bond are opposite changes, so one takes in what the other gives out.</div>
+</Check>
+
+## A reaction as two totals
+
+The method counts the energy in two lots, as if the reaction went by way of free atoms, even though no real reaction runs this way.
+
+The first lot is the cost of the old bonds. Add up the bond enthalpies of every bond in the reactants: that is the energy it would take to separate all the reactant molecules into free atoms.
+
+The second lot is the return from the new bonds. Add up the bond enthalpies of every bond in the products: that is the energy released when free atoms bond together as the products.
+
+The enthalpy change of the reaction is the cost less the return:
+
+$$
+\begin{aligned}
+&\Delta H \approx \\
+&\quad \text{(sum of bond enthalpies} \\
+&\quad\ \ \text{of bonds broken)} \\
+&\quad - \text{(sum of bond enthalpies} \\
+&\quad\ \ \text{of bonds formed)}
+\end{aligned}
+$$
+
+Compare the two totals and you know the sign before you subtract. A larger total for the bonds formed makes the difference negative, so the reaction is exothermic. A larger total for the bonds broken makes it positive, so the reaction is endothermic. Topic 6.6 has the sign of $\Delta H$.
+
+This formula is **not on the equation sheet**. It is "broken minus formed", with the reactants' bonds first. That is the opposite order from "products minus reactants", which you will meet in topic 6.8, because a bond enthalpy is the energy to take something apart.
+
+Why is the detour through atoms allowed? The enthalpy change depends on where the reaction starts and ends, not on the route between. Topic 6.9 makes this exact.
+
+The figure shows the two lots for the acetaldehyde reaction. The numbers are worked out below.
+
+<Figure
+  src="/figures/6-7-broken-and-formed.svg"
+  alt="An enthalpy diagram with three levels. The reactants, acetylene and water, are on a level at the lower left. A solid arrow labeled bonds broken, plus 2,591 kilojoules, rises from them to the top level, the separate atoms: 2 carbon, 4 hydrogen and 1 oxygen. A dashed arrow labeled bonds formed, minus 2,744 kilojoules, falls from the atoms to the product, acetaldehyde, on a level at the lower right, a little below the reactants. The gap between the reactants and the product is labeled delta H is about minus 153 kilojoules."
+  caption="The bonds broken cost 2,591 kJ and the bonds formed give back 2,744 kJ. The small gap between the reactants and the product is the enthalpy change, drawn larger than its true size so that it can be seen."
+/>
+
+## Counting bonds from Lewis diagrams
+
+The arithmetic is easy. The counting is where points are lost.
+
+Draw the Lewis diagram of every reactant and product (topic 2.5). Then list each kind of bond with how many there are. A double or a triple bond is one bond with its own value, not two or three single bonds: C=C is 614 kJ/mol, and two C–C would be 694 (topic 2.2).
+
+Here is the table for this lesson. Its values are **average bond enthalpies**, a name the last section explains. A question on the exam gives the values it wants used.
+
+| Bond | kJ/mol | Bond | kJ/mol |
+|---|---|---|---|
+| H–H | 436 | C–H | 413 |
+| C–C | 347 | C=C | 614 |
+| C–O | 358 | C=O | 745 |
+| O–H | 463 | O=O | 495 |
+| N–H | 391 | N≡N | 941 |
+| H–Cl | 431 | Cl–Cl | 243 |
+| C≡C | 839 | | |
+
+<Figure
+  src="/figures/6-7-acetaldehyde-bonds.svg"
+  alt="Structural drawings for counting bonds. In the top row are acetylene, two carbon atoms joined by a triple bond with one hydrogen atom on each carbon, labeled 1 C≡C, 2 C–H, then a plus sign, then water, an oxygen atom holding two hydrogen atoms, labeled 2 O–H. An arrow points down to acetaldehyde: two carbon atoms joined by a single bond, the first holding three hydrogen atoms and the second holding one hydrogen atom and an oxygen atom joined to it by a double bond. Acetaldehyde is labeled 1 C–C, 4 C–H, 1 C=O."
+  caption="Every bond in the reactants goes on the broken list and every bond in the product on the formed list. Lone pairs are left out of the drawing."
+/>
+
+<Worked title="Acetaldehyde from acetylene and water">
+
+Estimate $\Delta H$ for the reaction of the old acetaldehyde plants, which ran with a catalyst, with every substance taken as a gas.
+
+$$
+\begin{aligned}
+&\ce{C2H2(g) + H2O(g) ->} \\
+&\quad \ce{CH3CHO(g)}
+\end{aligned}
+$$
+
+1. **Draw and count the reactants' bonds.** Acetylene, H–C≡C–H: 1 C≡C and 2 C–H. Water, H–O–H: 2 O–H.
+
+2. **Draw and count the product's bonds.** Acetaldehyde, CH₃–CH=O: 1 C–C, 4 C–H and 1 C=O.
+
+3. **Add up the bonds broken.** In kJ:
+
+   $$
+   \begin{aligned}
+   &839 + 2(413) + 2(463) \\
+   &= 839 + 826 + 926 \\
+   &= 2{,}591\ \text{kJ}
+   \end{aligned}
+   $$
+
+4. **Add up the bonds formed.** In kJ:
+
+   $$
+   \begin{aligned}
+   &347 + 4(413) + 745 \\
+   &= 347 + 1{,}652 + 745 \\
+   &= 2{,}744\ \text{kJ}
+   \end{aligned}
+   $$
+
+5. **Broken minus formed.**
+
+   $$
+   \begin{aligned}
+   \Delta H &\approx 2{,}591 - 2{,}744 \\
+   &= -153\ \text{kJ/mol}_\text{rxn}
+   \end{aligned}
+   $$
+
+   Forming releases more than breaking takes in, so the reaction is exothermic.
+
+6. **A shortcut, and why it is safe.** Two C–H bonds are in both lists, and they cancel in the subtraction. Counting only what changes gives the same answer. Broken, 1 C≡C and 2 O–H:
+
+   $$
+   839 + 926 = 1{,}765\ \text{kJ}
+   $$
+
+   Formed, 1 C–C, 2 C–H and 1 C=O:
+
+   $$
+   \begin{aligned}
+   &347 + 826 + 745 \\
+   &= 1{,}918\ \text{kJ}
+   \end{aligned}
+   $$
+
+   And the difference:
+
+   $$
+   1{,}765 - 1{,}918 = -153\ \text{kJ}
+   $$
+
+   Use the shortcut only when you are sure which bonds are untouched. Counting everything always works.
+
+</Worked>
+
+<Check
+  numeric="53"
+  unit="kJ/mol"
+  slips={{
+   "-53": "Did you subtract in the order formed minus broken? Breaking takes energy in, so the bonds broken come first.",
+   "-305": "Did you leave the C–O single bond off the broken list? The C=O bond in acetone is a new bond that takes its place.",
+   "440": "Did you use the C–O value for the carbon–oxygen bond in acetone? In acetone that bond is double.",
+   "82": "Did you count the C=O bond as two C–O bonds? A double bond has its own value in the table.",
+   "489": "Did you count the H–H bond? Hydrogen gas is a product, and its bond is formed too.",
+   "1234": "That is the energy taken in to break the three bonds. Now subtract the energy released as the new bonds form.",
+   "1181": "That is the energy released as the new bonds form. Compare it with the energy taken in to break the old ones.",
+  }}
+>
+Acetone is made by passing the vapor of 2-propanol over a hot copper catalyst:
+
+$$
+\begin{aligned}
+&\ce{(CH3)2CHOH(g) ->} \\
+&\quad \ce{(CH3)2CO(g) + H2(g)}
+\end{aligned}
+$$
+
+In 2-propanol the middle carbon holds one H atom and an O–H group. In acetone that carbon is joined to the oxygen by a double bond. The two CH₃ groups are the same before and after. Use the table to estimate $\Delta H$. Give it with its sign.
+
+<div slot="why">
+
+Three bonds are broken: the C–H on the middle carbon, the C–O and the O–H.
+
+$$
+\begin{aligned}
+&413 + 358 + 463 \\
+&= 1{,}234\ \text{kJ}
+\end{aligned}
+$$
+
+Two are formed: the C=O and the H–H of hydrogen gas.
+
+$$
+745 + 436 = 1{,}181\ \text{kJ}
+$$
+
+Broken minus formed:
+
+$$
+\begin{aligned}
+\Delta H &\approx 1{,}234 - 1{,}181 \\
+&= +53\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+Breaking takes in more than forming gives back, so the reaction is endothermic: the plant has to keep heating the catalyst.
+
+Counting every bond gives the same answer: 2 C–C, 7 C–H, 1 C–O and 1 O–H broken, 4,406 kJ; 2 C–C, 6 C–H, 1 C=O and 1 H–H formed, 4,353 kJ. The measured value is about +55 $\text{kJ/mol}_\text{rxn}$.
+
+</div>
+</Check>
+
+## Coefficients multiply the count
+
+There are two multipliers, not one. The first is the number of a bond in one molecule: water has two O–H bonds. The second is the coefficient of that molecule in the equation. So 3 H₂O means six O–H bonds.
+
+The next question is about the counting alone.
+
+<Check
+  answer={4}
+  misses={{
+   1: "That shortcut is safe only when the broken list skips the same bond. Here every bond is counted, so go through each product atom by atom.",
+   2: "Look at the coefficients. How many molecules of each product does the equation show?",
+   3: "Each H–H bond joins two hydrogen atoms. Count molecules of H₂, not atoms of H.",
+  }}
+>
+Hydrogen cyanide is made by passing methane and ammonia over platinum at about 1,200 °C:
+
+$$
+\begin{aligned}
+&\ce{CH4(g) + NH3(g) ->} \\
+&\quad \ce{HCN(g) + 3H2(g)}
+\end{aligned}
+$$
+
+In HCN the carbon is bonded to the hydrogen by a single bond and to the nitrogen by a triple bond. Counting every bond in the products, which list of bonds formed is right?
+
+- One C≡N and three H–H, since methane already had a C–H
+- One C–H, one C≡N and one H–H
+- One C–H, one C≡N and six H–H
+- One C–H, one C≡N and three H–H
+
+<div slot="why">HCN is H–C≡N: one C–H bond and one C≡N bond. The coefficient 3 on H₂ makes three H–H bonds. That is five bonds formed. The first option leaves out the C–H of HCN. When every bond is counted, every bond of every product goes on the formed list, and all four C–H bonds of methane go on the broken list, so nothing is lost. The second ignores the coefficient of H₂. The third counts six hydrogen atoms where it should count three H₂ molecules: each H–H bond joins two atoms.</div>
+</Check>
+
+<Worked title="Chlorine back from hydrogen chloride">
+
+Many chemical plants end up with hydrogen chloride gas they do not want. One way to use it is to turn it back into chlorine with oxygen over a hot catalyst. Estimate $\Delta H$.
+
+$$
+\begin{aligned}
+&\ce{4HCl(g) + O2(g) ->} \\
+&\quad \ce{2Cl2(g) + 2H2O(g)}
+\end{aligned}
+$$
+
+1. **Count the bonds broken, with the coefficients.** HCl has one H–Cl bond, and there are 4 HCl: 4 H–Cl. O₂ has one O=O double bond: 1 O=O.
+
+2. **Count the bonds formed, with the coefficients.** Cl₂ has one Cl–Cl bond, and there are 2 Cl₂: 2 Cl–Cl. H₂O has two O–H bonds, and there are 2 H₂O: 4 O–H.
+
+3. **Bonds broken.**
+
+   $$
+   \begin{aligned}
+   &4(431) + 495 \\
+   &= 1{,}724 + 495 \\
+   &= 2{,}219\ \text{kJ}
+   \end{aligned}
+   $$
+
+4. **Bonds formed.**
+
+   $$
+   \begin{aligned}
+   &2(243) + 4(463) \\
+   &= 486 + 1{,}852 \\
+   &= 2{,}338\ \text{kJ}
+   \end{aligned}
+   $$
+
+5. **Broken minus formed.**
+
+   $$
+   \begin{aligned}
+   \Delta H &\approx 2{,}219 - 2{,}338 \\
+   &= -119\ \text{kJ/mol}_\text{rxn}
+   \end{aligned}
+   $$
+
+   The reaction is exothermic.
+
+6. **What the slips would give.** Formed minus broken gives +119 kJ: the same size, the opposite sign. One O–H for each water gives:
+
+   $$
+   2{,}219 - 1{,}412 = +807\ \text{kJ}
+   $$
+
+   No coefficients at all gives:
+
+   $$
+   \begin{aligned}
+   &(431 + 495) - (243 + 926) \\
+   &= -243\ \text{kJ}
+   \end{aligned}
+   $$
+
+</Worked>
+
+<Check
+  numeric="-452"
+  unit="kJ/mol"
+  slips={{
+   "452": "Is that formed minus broken, or a sign left off? Compare the two totals: which is larger, the energy taken in or the energy released?",
+   "-738": "That is what one N–H, one Cl–Cl and one H–Cl give. Multiply each bond by its number in the molecule and by the coefficient.",
+   "-1625": "Did you count three N–H bonds? The equation has two NH₃ molecules.",
+   "-2016": "Each NH₃ molecule has three N–H bonds, and the equation has two NH₃. Count the N–H bonds again.",
+   "-938": "Did you count one Cl–Cl bond? Check the coefficient of Cl₂.",
+   "1703": "Did you count one H–Cl bond? Check the coefficient of HCl.",
+   "44": "Did the coefficients go in? Multiply the bonds in one molecule by the number of molecules the equation shows.",
+  }}
+>
+A chlorine plant checks its pipes for leaks with ammonia vapor. Where chlorine is escaping, the two gases react:
+
+$$
+\begin{aligned}
+&\ce{2NH3(g) + 3Cl2(g) ->} \\
+&\quad \ce{N2(g) + 6HCl(g)}
+\end{aligned}
+$$
+
+With ammonia to spare, the HCl goes on to make a white smoke of ammonium chloride, and the smoke shows where the leak is. Use the table to estimate $\Delta H$ for the equation as written. Give it with its sign.
+
+<div slot="why">
+
+NH₃ has three N–H bonds, and there are 2 NH₃: 6 N–H. Three Cl₂ have 3 Cl–Cl. Bonds broken:
+
+$$
+\begin{aligned}
+&6(391) + 3(243) \\
+&= 2{,}346 + 729 \\
+&= 3{,}075\ \text{kJ}
+\end{aligned}
+$$
+
+N₂ has one N≡N triple bond, and 6 HCl have 6 H–Cl. Bonds formed:
+
+$$
+\begin{aligned}
+&941 + 6(431) \\
+&= 941 + 2{,}586 \\
+&= 3{,}527\ \text{kJ}
+\end{aligned}
+$$
+
+Broken minus formed:
+
+$$
+\begin{aligned}
+\Delta H &\approx 3{,}075 - 3{,}527 \\
+&= -452\ \text{kJ/mol}_\text{rxn}
+\end{aligned}
+$$
+
+The measured value is −462 $\text{kJ/mol}_\text{rxn}$.
+
+</div>
+</Check>
+
+## Why the answer is an estimate
+
+**The table holds averages.** Bonds with the same name are not equally strong in every molecule, or even at every stage in one molecule. Pulling the four hydrogen atoms off methane one after another takes about 439, 462, 424 and 338 kJ/mol, and C–H bonds in other compounds differ again. The table's 413 is an average: one number standing for all of them. The same goes for C–C, C–O, O–H and N–H. A bond that exists in one molecule alone, such as H–H or Cl–Cl, is different: its value is exact for that molecule.
+
+**The table is for gases.** A bond enthalpy covers the bonds inside molecules, each molecule on its own. In a liquid or a solid, the attractions between the particles (topic 3.1) change in a reaction as well, and the bond count knows nothing about them. So the method is used when every reactant and product is a gas.
+
+**How good is it?** Here are this lesson's two worked examples beside the measured values, all in $\text{kJ/mol}_\text{rxn}$.
+
+| Reaction | Estimate | Measured |
+|---|---|---|
+| Acetylene + steam → acetaldehyde | −153 | −152 |
+| 4 HCl + O₂ → 2 Cl₂ + 2 H₂O | −119 | −114 |
+
+Close, and not exact. Part of the gap comes from the table itself: its values are rounded, and tables differ from one another by a few kJ/mol. A gap of 5 or 10 kJ is what to expect, and it does not point to an arithmetic mistake.
+
+If a question supplies measured data (topic 6.8 shows the usual kind), work from that, because it is the more reliable answer. Keep bond enthalpies for the cases where no such data are given, or where the question names the method.
+
+<Check
+  answer={1}
+  misses={{
+   2: "The bonds inside the molecules are the same, yes. But is anything else different between liquid water and steam?",
+   3: "Think of topic 6.5. When the molecules of a liquid are separated, does the substance take energy in or give it out?",
+   4: "A change of phase changes the attractions between molecules. The bonds inside each molecule stay as they are.",
+  }}
+>
+The estimate of the first worked example, −153 $\text{kJ/mol}_\text{rxn}$, takes every substance as a gas. In the old acetaldehyde plants the water was a liquid, and the acetylene was bubbled into it. With liquid water as the reactant, and the acetylene and the acetaldehyde still gases, how does the measured enthalpy change compare with the estimate?
+
+- Less negative: separating water molecules takes energy in
+- The same: the same bonds are broken and the same bonds are formed
+- More negative: liquid water gives out energy as its molecules come apart
+- Positive: turning liquid water into a gas breaks its O–H bonds first
+
+<div slot="why">The bond count covers the bonds inside the molecules, with everything a gas. In liquid water the molecules hold on to one another by hydrogen bonds (topic 3.1). Before a water molecule can react as the count supposes, those attractions have to be overcome, and that takes energy in: about 44 kJ for each mole of water at 25 °C. So less energy is released overall: about −108 $\text{kJ/mol}_\text{rxn}$ measured with liquid water, against −152 with steam. The second option forgets the attractions between molecules. The third has separating the molecules of a liquid give energy out, when it takes energy in (topic 6.5). The fourth breaks bonds inside the molecules, but a change of phase leaves them as they are (topic 4.4).</div>
+</Check>
+
+<Trap>
+
+Six mistakes cost points on this topic:
+
+- **Subtracting in the wrong order.** The bonds broken come first, because they are the energy put in. The sign tells you if you slipped: a reaction whose new bonds give back more than the old bonds cost must come out negative.
+- **Forgetting a multiplier.** Count the bonds in one molecule, then multiply by the coefficient: 2 H₂O is four O–H bonds.
+- **Treating a double bond as two single bonds.** C=C is 614 kJ/mol, not 2 × 347.
+- **Crediting the bonds that break for the energy of an exothermic reaction.** Every bond that breaks takes energy in. The energy released comes from the bonds that form.
+- **Using the method where a liquid or a solid takes part.** The table is for gases. Attractions between molecules are not in it.
+- **Expecting the measured value.** Averages give an estimate. In this lesson's reactions it lands within about 10 kJ of the measured value, and it can be further off.
+
+</Trap>
+
+<KeyPoints>
+
+- Breaking a bond takes energy in and forming a bond releases energy. A bond enthalpy is the amount for a mole of that bond, in kJ/mol.
+- The enthalpy change of a reaction is estimated as the sum of the bond enthalpies of the bonds broken minus the sum for the bonds formed. This formula is not on the equation sheet.
+- If forming the new bonds releases more than breaking the old ones takes in, $\Delta H$ is negative and the reaction is exothermic. The other way around, it is endothermic.
+- Bonds are counted from Lewis diagrams, as the number of each bond in a molecule times the molecule's coefficient. A double or triple bond has its own value.
+- The result is an estimate, because most table values are averages: a single figure for a bond that differs a little from compound to compound.
+- The method is for reactions in which every substance is a gas, since it leaves out the attractions between molecules.
+
+</KeyPoints>
+
+<PracticeNext />

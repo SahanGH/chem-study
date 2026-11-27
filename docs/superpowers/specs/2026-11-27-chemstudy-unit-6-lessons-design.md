@@ -331,3 +331,31 @@ checks pass.
   without JavaScript and in print.
 - The teacher has been told, in each pull request, what to verify against
   the framework.
+
+## 11. As built
+
+Written November 27, 2026, when the last pull request of the unit was opened.
+
+**What went in.** Nine lessons (6.1 to 6.9) with 48 Checks, each with a message for every wrong option or a slip for every likely wrong method; 15 drawn figures; two interactive diagrams, the calorimetry explorer in lesson 6.4 and the heating curve explorer in lesson 6.5. Unit 6 is on `FEEDBACK_UNITS` and on `BALANCED_UNITS`; the right answer sits at options 1 to 4 in 8, 9, 8 and 7 of the choice Checks. Reading times, set from each lesson's length, are 15, 17, 15, 20, 20, 19, 19, 20 and 16 minutes.
+
+**Pull requests.** A (this design and the plan), B (lessons 6.1 to 6.3), C (lessons 6.4 and 6.5 with the two explorers) and D (lessons 6.6 to 6.9 and this section), each merged by Claude when "Build and test" passed, as the teacher said.
+
+**What differs from the design.**
+
+- The framework could not be read. This session's network does not reach the College Board's site, so section 3 rests on a summary written from memory of the 2024 framework. The teacher should read section 3 against the framework itself.
+- The textbooks could not be read either. Originality was checked against the teacher's materials in the AP Chem repository and against the rest of this site, and not against any published textbook.
+- The originality checks changed more than the design expected: about twenty examples and scenes were replaced in the briefs, among them lithium burning to lithium oxide (6.6), zinc oxide in acid (6.6), sodium carbonate and urea dissolving (6.4), acetylene and water to acetaldehyde (6.7), benzene to cyclohexane (6.7), a copper sulfate hydrate (6.9) and a route through sodium oxide to sodium peroxide (6.9).
+- One originality fix was refused: replacing the match in lesson 6.2 with a ration heater, which is not a true example of activation energy.
+
+**Values no checker could confirm without a reference.** Each is the value a standard table gives as far as the checkers knew, and none could be looked up from this session.
+
+| Value | Used | Doubt |
+|---|---|---|
+| Molar heat capacity of solid ethanol | 70 J/(mol·°C) | approximate; the explorer's caption says so |
+| Molar heat capacity of ethanol gas | 76 J/(mol·°C) | not confirmed |
+| Enthalpy of fusion of nitrogen | 0.71 kJ/mol | some tables give 0.72 |
+| Enthalpy of formation of N₂O(g), behind the −164 kJ of lesson 6.6 | +82.05 kJ/mol | some tables give +81.6 |
+| Enthalpy of formation of acetaldehyde(g) | −166.2 kJ/mol | one source gives a value near −171 |
+| Enthalpy of formation of Zn²⁺(aq), behind the zinc oxide Check of lesson 6.6 | as in the brief | not confirmed |
+
+**Claude's calls, for the teacher to change.** The calorimeter constant is taught in lesson 6.4 without a "Beyond the exam" label. Work is named and not calculated. Calorimetry is at constant pressure throughout. Heating curves are in lesson 6.5. "State function" appears once. Water's specific heat capacity is 4.18 J/(g·°C). Bond enthalpies are the values the site already used in Unit 7. An enthalpy of reaction is written in kJ/mol, read as per mole of reaction.

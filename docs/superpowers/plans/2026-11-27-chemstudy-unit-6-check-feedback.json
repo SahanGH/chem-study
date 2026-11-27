@@ -746,6 +746,646 @@
           "message": "Warming 2.00 mol of solid from −150.0 °C to −114.1 °C takes about 5 kJ. What does the rest of the 30.0 kJ do?"
         }
       ]
+    },
+    {
+      "lesson": "6.6",
+      "file": "src/content/lessons/unit-6/6-6-introduction-to-enthalpy-of-reaction.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "164 kJ is released for each single mole of N₂O that breaks down",
+          "message": "The value belongs to the equation as written. How many moles of N₂O does the equation use up?"
+        },
+        {
+          "text": "164 kJ is released when 2 mol of N₂O break down",
+          "message": null
+        },
+        {
+          "text": "164 kJ is absorbed for every 2 mol of N₂O that break down",
+          "message": "Check the sign. What does a negative ΔH say about the direction of the energy?"
+        },
+        {
+          "text": "164 kJ is released for every 2 mol of O₂ that form",
+          "message": "Read the coefficient of O₂ in the equation. How many moles of O₂ form in one mole of reaction?"
+        }
+      ]
+    },
+    {
+      "lesson": "6.6",
+      "file": "src/content/lessons/unit-6/6-6-introduction-to-enthalpy-of-reaction.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "6.30",
+      "unit": "kJ",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "12.6",
+          "message": "Did you use the moles of HgO as the moles of reaction? The equation uses up 2 mol of HgO each time it runs."
+        },
+        {
+          "value": "182",
+          "message": "That is for 2 mol of HgO, about 433 g. This sample is far smaller."
+        },
+        {
+          "value": "25.2",
+          "message": "Did you multiply the moles of HgO by 2? One mole of reaction uses up 2 mol of HgO, so divide by 2."
+        },
+        {
+          "value": "2730",
+          "message": "Did you multiply grams by kJ/mol? Change 15.0 g to moles first."
+        },
+        {
+          "value": "1365",
+          "message": "Did you halve the grams? Change 15.0 g to moles first, then use the 2 in the equation."
+        },
+        {
+          "value": "-6.30",
+          "message": "The question asks how much energy is absorbed, which is a size. Type it without the minus sign."
+        }
+      ]
+    },
+    {
+      "lesson": "6.6",
+      "file": "src/content/lessons/unit-6/6-6-introduction-to-enthalpy-of-reaction.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "From the water, which gave up some of its energy to the ions as they reacted",
+          "message": "The water warmed too, so it gained energy. Something else must have lost it."
+        },
+        {
+          "text": "From the foam cup, which trapped energy that was coming in from the room",
+          "message": "The cup is there to stop energy getting in or out. The warming began inside the liquid, where the reaction was."
+        },
+        {
+          "text": "From bonds breaking in the reactants, since a breaking bond gives out energy",
+          "message": "Breaking a bond always takes energy in (topic 2.2). So breaking bonds cannot be the source of the warmth."
+        },
+        {
+          "text": "From chemical potential energy, which is lower in the products",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "6.6",
+      "file": "src/content/lessons/unit-6/6-6-introduction-to-enthalpy-of-reaction.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "-87.6",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "87.6",
+          "message": "The mixture warmed, so the solution gained energy. The reaction lost what the solution gained. Check the sign."
+        },
+        {
+          "value": "-2.19",
+          "message": "That is the energy in kJ for this one experiment. ΔH is for each mole of reaction, so divide by the moles of reaction."
+        },
+        {
+          "value": "-36.5",
+          "message": "Did you divide by the 0.0600 mol of acid? Not all of it reacted, and the equation uses 2 mol of H⁺ each time it runs."
+        },
+        {
+          "value": "-73.0",
+          "message": "Did you take the acid as the limiting reactant? Work out the moles of reaction each reactant is enough for, and use the smaller."
+        },
+        {
+          "value": "-84.8",
+          "message": "Did you use 60.0 as the mass? The question gives the mass of the solution that warmed as 62.0 g."
+        },
+        {
+          "value": "-8.76e4",
+          "message": "That is in J/mol. The question asks for kJ/mol."
+        },
+        {
+          "value": "-43.8",
+          "message": "Did you divide by the moles of H⁺ that reacted? One mole of reaction uses up 2 mol of H⁺ but 1 mol of ZnO."
+        },
+        {
+          "value": "-2190",
+          "message": "That is the energy in J for this one experiment. Change it to kJ, then divide by the moles of reaction."
+        }
+      ]
+    },
+    {
+      "lesson": "6.6",
+      "file": "src/content/lessons/unit-6/6-6-introduction-to-enthalpy-of-reaction.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "The mixture stays at 14 °C, because the reaction is no longer absorbing energy",
+          "message": "The mixture is colder than the room around it. What does topic 6.3 say happens when two bodies at different temperatures are in contact?"
+        },
+        {
+          "text": "The mixture passes thermal energy to the room until both are at 14 °C",
+          "message": "Compare the two temperatures. Can a mixture at 14 °C pass thermal energy to a room at 22 °C by itself?"
+        },
+        {
+          "text": "The room passes thermal energy to the mixture until both are near 22 °C",
+          "message": null
+        },
+        {
+          "text": "The mixture goes on cooling, because the products of an endothermic reaction keep absorbing energy",
+          "message": "Once the reaction is over, nothing is turning thermal energy into chemical potential energy. Only the temperature difference with the room is left."
+        }
+      ]
+    },
+    {
+      "lesson": "6.7",
+      "file": "src/content/lessons/unit-6/6-7-bond-enthalpies.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "In the arc, 436 kJ, as the H–H bonds break",
+          "message": "Pulling two bonded atoms apart is a climb out of the valley of topic 2.2. Does a climb take energy in or give it out?"
+        },
+        {
+          "text": "At the steel, 436 kJ, as H–H bonds form",
+          "message": null
+        },
+        {
+          "text": "At the steel, 872 kJ, as two atoms each give 436 kJ",
+          "message": "A bond enthalpy is counted for a mole of bonds. How many H atoms does it take to make one H–H bond?"
+        },
+        {
+          "text": "In the arc and at the steel, 436 kJ each time",
+          "message": "Breaking a bond and forming the same bond are opposite changes. Can both of them release energy?"
+        }
+      ]
+    },
+    {
+      "lesson": "6.7",
+      "file": "src/content/lessons/unit-6/6-7-bond-enthalpies.mdx",
+      "check": 2,
+      "kind": "numeric",
+      "answer": "53",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "-53",
+          "message": "Did you subtract in the order formed minus broken? Breaking takes energy in, so the bonds broken come first."
+        },
+        {
+          "value": "-305",
+          "message": "Did you leave the C–O single bond off the broken list? The C=O bond in acetone is a new bond that takes its place."
+        },
+        {
+          "value": "440",
+          "message": "Did you use the C–O value for the carbon–oxygen bond in acetone? In acetone that bond is double."
+        },
+        {
+          "value": "82",
+          "message": "Did you count the C=O bond as two C–O bonds? A double bond has its own value in the table."
+        },
+        {
+          "value": "489",
+          "message": "Did you count the H–H bond? Hydrogen gas is a product, and its bond is formed too."
+        },
+        {
+          "value": "1234",
+          "message": "That is the energy taken in to break the three bonds. Now subtract the energy released as the new bonds form."
+        },
+        {
+          "value": "1181",
+          "message": "That is the energy released as the new bonds form. Compare it with the energy taken in to break the old ones."
+        }
+      ]
+    },
+    {
+      "lesson": "6.7",
+      "file": "src/content/lessons/unit-6/6-7-bond-enthalpies.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "One C≡N and three H–H, since methane already had a C–H",
+          "message": "That shortcut is safe only when the broken list skips the same bond. Here every bond is counted, so go through each product atom by atom."
+        },
+        {
+          "text": "One C–H, one C≡N and one H–H",
+          "message": "Look at the coefficients. How many molecules of each product does the equation show?"
+        },
+        {
+          "text": "One C–H, one C≡N and six H–H",
+          "message": "Each H–H bond joins two hydrogen atoms. Count molecules of H₂, not atoms of H."
+        },
+        {
+          "text": "One C–H, one C≡N and three H–H",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "6.7",
+      "file": "src/content/lessons/unit-6/6-7-bond-enthalpies.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "-452",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "452",
+          "message": "Is that formed minus broken, or a sign left off? Compare the two totals: which is larger, the energy taken in or the energy released?"
+        },
+        {
+          "value": "-738",
+          "message": "That is what one N–H, one Cl–Cl and one H–Cl give. Multiply each bond by its number in the molecule and by the coefficient."
+        },
+        {
+          "value": "-1625",
+          "message": "Did you count three N–H bonds? The equation has two NH₃ molecules."
+        },
+        {
+          "value": "-2016",
+          "message": "Each NH₃ molecule has three N–H bonds, and the equation has two NH₃. Count the N–H bonds again."
+        },
+        {
+          "value": "-938",
+          "message": "Did you count one Cl–Cl bond? Check the coefficient of Cl₂."
+        },
+        {
+          "value": "1703",
+          "message": "Did you count one H–Cl bond? Check the coefficient of HCl."
+        },
+        {
+          "value": "44",
+          "message": "Did the coefficients go in? Multiply the bonds in one molecule by the number of molecules the equation shows."
+        }
+      ]
+    },
+    {
+      "lesson": "6.7",
+      "file": "src/content/lessons/unit-6/6-7-bond-enthalpies.mdx",
+      "check": 5,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Less negative: separating water molecules takes energy in",
+          "message": null
+        },
+        {
+          "text": "The same: the same bonds are broken and the same bonds are formed",
+          "message": "The bonds inside the molecules are the same, yes. But is anything else different between liquid water and steam?"
+        },
+        {
+          "text": "More negative: liquid water gives out energy as its molecules come apart",
+          "message": "Think of topic 6.5. When the molecules of a liquid are separated, does the substance take energy in or give it out?"
+        },
+        {
+          "text": "Positive: turning liquid water into a gas breaks its O–H bonds first",
+          "message": "A change of phase changes the attractions between molecules. The bonds inside each molecule stay as they are."
+        }
+      ]
+    },
+    {
+      "lesson": "6.8",
+      "file": "src/content/lessons/unit-6/6-8-enthalpy-of-formation.mdx",
+      "check": 1,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "Equation A",
+          "message": "Count the moles of HBr this equation makes. A formation value is for how many moles of the compound?"
+        },
+        {
+          "text": "Equation B",
+          "message": "Check the state written for each element against the states the question gives for 25 °C and 1 bar."
+        },
+        {
+          "text": "Equation C",
+          "message": null
+        },
+        {
+          "text": "Equation D",
+          "message": "Compare the state written for the HBr with the state the question gives for it at 25 °C."
+        }
+      ]
+    },
+    {
+      "lesson": "6.8",
+      "file": "src/content/lessons/unit-6/6-8-enthalpy-of-formation.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 1,
+      "moved": false,
+      "options": [
+        {
+          "text": "Hg(l), liquid mercury",
+          "message": null
+        },
+        {
+          "text": "I₂(g), iodine as a vapor",
+          "message": "Iodine is an element, but in which state is it found at 25 °C and 1 bar? The zero belongs to that state."
+        },
+        {
+          "text": "H₂O(l), water as a liquid",
+          "message": "The zero is for an element in its standard state. Is water an element?"
+        },
+        {
+          "text": "Fe(l), iron when it is molten",
+          "message": "Iron is an element, but compare the state written here with the state the question gives for 25 °C and 1 bar."
+        }
+      ]
+    },
+    {
+      "lesson": "6.8",
+      "file": "src/content/lessons/unit-6/6-8-enthalpy-of-formation.mdx",
+      "check": 3,
+      "kind": "numeric",
+      "answer": "-809.7",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "809.7",
+          "message": "Check the sign. Is your subtraction products minus reactants, with each value's own sign kept?"
+        },
+        {
+          "value": "-208.1",
+          "message": "Did you use the value of MgO once? Check its coefficient in the equation."
+        },
+        {
+          "value": "208.1",
+          "message": "Check two things: the coefficient of MgO, and whether the subtraction is products minus reactants."
+        },
+        {
+          "value": "-1596.7",
+          "message": "Subtracting a negative value adds it. Put the reactants' total in parentheses, with its own sign, before you subtract."
+        },
+        {
+          "value": "-995.1",
+          "message": "Check two things: the coefficient of MgO, and what subtracting a negative value does."
+        },
+        {
+          "value": "-1203.2",
+          "message": "That is the products' total. Carbon dioxide is a compound, so its value does not drop out. Subtract the reactants' total."
+        }
+      ]
+    },
+    {
+      "lesson": "6.8",
+      "file": "src/content/lessons/unit-6/6-8-enthalpy-of-formation.mdx",
+      "check": 4,
+      "kind": "choice",
+      "answer": 4,
+      "moved": false,
+      "options": [
+        {
+          "text": "Oxygen was left out, and it needs its own value from a table",
+          "message": "Oxygen gas is an element in its standard state. What value does that give it?"
+        },
+        {
+          "text": "The subtraction was done as reactants minus products",
+          "message": "Look at which bracket comes first. The values of ZnO and SO₂ are in it: are those the products or the reactants?"
+        },
+        {
+          "text": "Subtracting −206.0 should have lowered the total, not raised it",
+          "message": "Subtracting a negative number adds its size, which is what the student did. That step is sound."
+        },
+        {
+          "text": "Each value should have been multiplied by its coefficient",
+          "message": null
+        }
+      ]
+    },
+    {
+      "lesson": "6.8",
+      "file": "src/content/lessons/unit-6/6-8-enthalpy-of-formation.mdx",
+      "check": 5,
+      "kind": "numeric",
+      "answer": "107",
+      "unit": "kJ",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "-107",
+          "message": "Check the sign. The question asks how much energy is released. Is an amount released written with a minus sign?"
+        },
+        {
+          "value": "213",
+          "message": "Did you use 90.8 kJ for each mole of NaClO₃? Check how many moles of NaClO₃ the equation as written uses."
+        },
+        {
+          "value": "53.3",
+          "message": "Did the coefficients go into ΔH°? Each value is multiplied by its coefficient before you subtract."
+        },
+        {
+          "value": "90.8",
+          "message": "That is the size of ΔH° for the equation as written. Now find the moles in 250. g and scale to them."
+        },
+        {
+          "value": "1825",
+          "message": "Were the two totals added? Products minus reactants: subtracting a negative value adds it."
+        },
+        {
+          "value": "2.35",
+          "message": "That is the moles of NaClO₃. Go on to moles of reaction, and then to energy."
+        },
+        {
+          "value": "11350",
+          "message": "Did you multiply grams by kJ for each mole? Change 250. g to moles first."
+        }
+      ]
+    },
+    {
+      "lesson": "6.8",
+      "file": "src/content/lessons/unit-6/6-8-enthalpy-of-formation.mdx",
+      "check": 6,
+      "kind": "numeric",
+      "answer": "21.7",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "-21.7",
+          "message": "Check the sign. The equation shown is the compound breaking down, and a formation reaction runs the other way."
+        },
+        {
+          "value": "-43.4",
+          "message": "That is ΔH° of the equation shown. It runs the other way from a formation reaction, and it uses 2 mol of NaN₃."
+        },
+        {
+          "value": "43.4",
+          "message": "The equation uses 2 mol of NaN₃. A formation value is for 1 mol of the compound."
+        }
+      ]
+    },
+    {
+      "lesson": "6.9",
+      "file": "src/content/lessons/unit-6/6-9-hesss-law.mdx",
+      "check": 1,
+      "kind": "numeric",
+      "answer": "57.7",
+      "unit": "kJ",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "741.3",
+          "message": "That is the two table values added. Which of the two is the total for both steps, and which is one step of it?"
+        },
+        {
+          "value": "341.8",
+          "message": "That is the step from iron to FeCl₂. The step asked for is what is left of the total after it."
+        },
+        {
+          "value": "399.5",
+          "message": "That is the whole change from iron to FeCl₃. Part of it is released before FeCl₂ is reached."
+        },
+        {
+          "value": "28.9",
+          "message": "Did you halve it for the ½ Cl₂? The step as written makes one mole of FeCl₃, so nothing is scaled."
+        },
+        {
+          "value": "-57.7",
+          "message": "The question asks how much energy is released. Is an amount of energy released written with a minus sign?"
+        }
+      ]
+    },
+    {
+      "lesson": "6.9",
+      "file": "src/content/lessons/unit-6/6-9-hesss-law.mdx",
+      "check": 2,
+      "kind": "choice",
+      "answer": 3,
+      "moved": false,
+      "options": [
+        {
+          "text": "−68.8 kJ, energy released",
+          "message": "This equation runs the other way from the one given. What does turning a reaction around do to its ΔH?"
+        },
+        {
+          "text": "+206.3 kJ, energy absorbed",
+          "message": "Compare the coefficient of H₂ in the two equations. ΔH belongs to the equation as written."
+        },
+        {
+          "text": "+68.8 kJ, energy absorbed",
+          "message": null
+        },
+        {
+          "text": "+618.9 kJ, energy absorbed",
+          "message": "Compare the coefficient of H₂ in the two equations. Is the new one a larger amount of reaction or a smaller one?"
+        }
+      ]
+    },
+    {
+      "lesson": "6.9",
+      "file": "src/content/lessons/unit-6/6-9-hesss-law.mdx",
+      "check": 3,
+      "kind": "choice",
+      "answer": 2,
+      "moved": false,
+      "options": [
+        {
+          "text": "Reverse equation 1, double equation 2, then add them",
+          "message": "Find Na₂O₂ in the target, then in equation 2. Is it on the same side in both?"
+        },
+        {
+          "text": "Double equation 1, reverse equation 2, then add them",
+          "message": null
+        },
+        {
+          "text": "Double equation 1, leave equation 2 as it is, then add them",
+          "message": "Add your two equations and see what is left. Which side does Na₂O₂ end up on, and which side does the target have it?"
+        },
+        {
+          "text": "Leave equation 1 as it is, reverse equation 2, then add them",
+          "message": "Count the Na₂O in the target, then in equation 1. Add your two equations and check whether the O₂ cancels."
+        }
+      ]
+    },
+    {
+      "lesson": "6.9",
+      "file": "src/content/lessons/unit-6/6-9-hesss-law.mdx",
+      "check": 4,
+      "kind": "numeric",
+      "answer": "-79.3",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "79.3",
+          "message": "Check the sign of each piece after halving and reversing, then add them again."
+        },
+        {
+          "value": "-152.4",
+          "message": "Did the ΔH of equation 1 get halved? Count the CuSO₄ in the target: ΔH scales with the equation."
+        },
+        {
+          "value": "-66.9",
+          "message": "Did equation 2 keep its sign? Compare the side the blue solid is on in equation 2 with its side in the target."
+        },
+        {
+          "value": "-140.0",
+          "message": "Check both equations against the target: the amount of CuSO₄, and the side the blue solid is on."
+        },
+        {
+          "value": "-73.1",
+          "message": "That is equation 1 for one mole of CuSO₄. Equation 2 has to come in as well, turned the right way around."
+        },
+        {
+          "value": "66.9",
+          "message": "Did equation 1 get reversed? Compare the side CuSO₄(s) is on in equation 1 with its side in the target."
+        }
+      ]
+    },
+    {
+      "lesson": "6.9",
+      "file": "src/content/lessons/unit-6/6-9-hesss-law.mdx",
+      "check": 5,
+      "kind": "numeric",
+      "answer": "-840.6",
+      "unit": "kJ/mol",
+      "tolerance": 2,
+      "slips": [
+        {
+          "value": "840.6",
+          "message": "Check the sign of each piece after reversing and doubling, then add them again."
+        },
+        {
+          "value": "-2449.0",
+          "message": "Did equation 1 keep its sign? Compare the side TiCl₄ is on in equation 1 with its side in the target."
+        },
+        {
+          "value": "-18.2",
+          "message": "Did the ΔH of equation 2 get doubled? Count the NaCl in the target: ΔH scales with the equation."
+        },
+        {
+          "value": "-1626.6",
+          "message": "Check both equations against the target: the side TiCl₄ is on, and the number of NaCl."
+        },
+        {
+          "value": "-2485.4",
+          "message": "Did equation 2 get multiplied by 4? It already makes 2 NaCl. Compare that with the number of NaCl in the target."
+        },
+        {
+          "value": "2449.0",
+          "message": "Only an equation whose substances are on the wrong sides for the target is turned around. Check NaCl in equation 2."
+        }
+      ]
     }
   ]
 }
