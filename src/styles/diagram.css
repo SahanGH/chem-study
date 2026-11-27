@@ -774,6 +774,60 @@ html[data-theme] .diagram-body:not([data-hydrated]) .diagram-controls {
   max-width: 12rem;
 }
 
+/* The weak-acid explorer: a box of 100 particles beside a graph of percent
+   ionized. It uses the heating curve explorer's ".is-beside" panels (the box
+   in the 12rem column, the graph in the 22rem one, side by side from 42rem)
+   and the shared classes for the box (".molecule-box"), the whole molecules
+   (".diagram-atom") and the key (".molecule-key"). The box drawing holds no
+   text, so it is small: 10rem at most, which keeps the box, the graph and the
+   slider on a 320 × 568 screen together. A whole molecule is one filled
+   circle; an ion pair is a small dark circle marked plus beside a hollow
+   circle marked minus, so the two differ in shape, not only in color. */
+.diagram-panels .diagram-plot.weak-acid-box {
+  max-width: 12rem;
+}
+.diagram .weak-acid-box > svg {
+  max-width: 10rem;
+  margin-inline: auto;
+}
+.weak-acid-hydronium {
+  fill: var(--ink);
+  stroke: var(--ink);
+  stroke-width: 1;
+}
+.weak-acid-plus {
+  fill: none;
+  stroke: var(--card);
+  stroke-width: 1.2;
+}
+.weak-acid-anion {
+  fill: var(--card);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.weak-acid-minus {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+/* The count under the box, in words. */
+.diagram .weak-acid-count {
+  margin: 0.3rem 0 0;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: 600;
+  color: var(--u-ink);
+  text-align: center;
+}
+.diagram .weak-acid-key {
+  margin-top: 0.3rem;
+}
+/* The third acid's dash pattern, beside the shared ".is-pattern-1" and
+   ".is-pattern-2", so each faint curve has a pattern of its own. */
+.diagram-curve.weak-acid-pattern-3 {
+  stroke-dasharray: 10 3 2 3;
+}
+
 @media print {
   .diagram-controls {
     display: none;
