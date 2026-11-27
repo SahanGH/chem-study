@@ -428,3 +428,22 @@ Each targets `main` and is merged by Claude when its check passes.
   "dead" occur nowhere under `src/content/practice/unit-9`.
 - No page scrolls sideways, and no equation scrolls in its box, at 412, 390,
   360 or 320 px with every answer open.
+
+## As built (2026-11-27)
+
+Seven documents in three pull requests: 93 (this design and its plan), the worksheets, and the one that carries this note (the skill ladders and the free-response set). Claude merged each when its check passed.
+
+- **Counts.** Five worksheets with 45 questions and 117 parts, one question scored (10 points); twelve ladders with 48 parts; a free-response set of 5 questions, 14 parts and 32 points.
+- **Every document was audited to `0 unexplained, 0 stale`** and **fact-checked twice on Fable** by fresh agents that solved every question before reading its answer and recomputed every number. The second check of the worksheets built the pages privately and measured them at 320 px. Fixers that applied each decided list ran on Sonnet.
+- **What the checks found beyond this design's list**, all carried from the originals and all changed:
+  - Ladder 5(d) said that neither raising the temperature nor adding a catalyst changes ΔG°; raising the temperature changes both ΔG° and K.
+  - The free-response set's 3(a), and the head of Ladder 5, spoke of "how far" diamond would go toward graphite; a change between two pure solids has no K. Both now say only that the change is thermodynamically favored and that this says nothing about how fast it goes.
+  - Worksheet 2, 3(c): "Both terms are negative" where ΔH° and ΔS° are meant (the term −TΔS° is positive there).
+  - Worksheet 3, question 7: "enthalpy alone would predict it does not happen"; a positive ΔG° means K below 1, not zero.
+  - Worksheet 4, 9(c): "the cell runs only if driven from outside", true only at standard conditions.
+  - Worksheet 1, 2(e): an answer that gave no sign where the question asks for one.
+  - Ladder 9 and Ladder 11: "a galvanic cell always has a positive cell potential" and "the standard potential never changes", each now limited (standard conditions; a given temperature).
+  - The free-response set's 2(c) gave no temperature, which its 0.0592 needs.
+- **Changed from this design while the pages were checked.** "Farther from equilibrium", as lesson 9.10 writes it, replaces the term table's "further". The ion in a melt carries no state symbol (Al³⁺ + 3e⁻ → Al(l)), as lessons 9.8 and 9.11 write it. Worksheet 1's question 5 is titled "Where the entropy scale starts".
+- **For the teacher.** CaO's S° of 40 J/(mol·K) is the older textbook value (newer handbooks give 38.1); it is kept, since each question states its own data. The ladders' closing table lost its twelve one-line hints, as on the other units' pages. Twenty scoring notes were given one wording each (section 4); the free-response set's six further notes a grader could read two ways are left as written.
+

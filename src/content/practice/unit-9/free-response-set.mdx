@@ -1,0 +1,423 @@
+---
+title: "Free-response set"
+kind: free-response
+order: 7
+topics: ["9.3", "9.4", "9.5", "9.6", "9.7", "9.8", "9.9", "9.10", "9.11"]
+summary: Five free-response questions on most of Unit 9, two long and three short, each with a worked answer and its scoring rubric.
+points: 32
+minutes: 50
+---
+
+This set covers most of the unit: topics 9.3 to 9.11. The unit is 7% to 9% of the exam.
+
+There are 5 questions worth 32 points. Give yourself about 50 minutes. You may use a calculator. Write out each answer in full before you open the worked answer and the scoring rubric.
+
+Thermodynamics and electrochemistry are joined by one equation, and these questions are built to make that link plain:
+
+$$
+\Delta G^\circ = -nFE^\circ
+$$
+
+Use these values:
+
+| Quantity | Value |
+|---|---|
+| Gas constant, $R$ | 8.314 J/(mol·K) |
+| Faraday's constant, $F$ | 96,485 C/mol |
+| $E^\circ$ for $\ce{Ag+}$ reduced to $\ce{Ag}$ | +0.80 V |
+| $E^\circ$ for $\ce{Cu^2+}$ reduced to $\ce{Cu}$ | +0.34 V |
+| Molar mass of silver | 107.87 g/mol |
+
+Which electrode is positive and which is negative is not on the AP exam, and nothing here asks for it. The anode and the cathode are on the exam, and the rule never changes: oxidation occurs at the anode in both galvanic and electrolytic cells.
+
+Part c of question 2 asks for a number from the Nernst equation, which is beyond the exam; it is labeled and keeps its 3 points.
+
+## Questions
+
+<Question number={1} title="Free energy and temperature" topic="9.3, 9.5" points={10}>
+
+A reaction has these values:
+
+$$
+\begin{aligned}
+\Delta H^\circ &= +95.0\ \text{kJ/mol} \\
+\Delta S^\circ &= +150\ \text{J/(mol·K)}
+\end{aligned}
+$$
+
+<Part label="a">
+
+Calculate $\Delta G^\circ$ at 298 K and state whether the reaction is thermodynamically favored there.
+
+<Answer>
+
+Convert the entropy term to kilojoules:
+
+$$
+\Delta S^\circ = 0.150\ \text{kJ/(mol·K)}
+$$
+
+With $T$ in kelvins and both terms in kJ/mol:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= \Delta H^\circ - T\Delta S^\circ \\
+&= 95.0 - (298)(0.150) \\
+&= 95.0 - 44.7 \\
+&= \mathbf{+50.3}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+Positive, so the reaction is **not** thermodynamically favored at 298 K.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Determine the temperature above which it becomes thermodynamically favored.
+
+<Answer>
+
+Set $\Delta G^\circ = 0$. With $\Delta H^\circ$ in kJ/mol and $\Delta S^\circ$ in kJ/(mol·K):
+
+$$
+\begin{aligned}
+T &= \frac{\Delta H^\circ}{\Delta S^\circ} \\
+&= \frac{95.0}{0.150} \\
+&= \mathbf{633}\ \text{K}
+\end{aligned}
+$$
+
+$\Delta S^\circ$ is positive, so the entropy term grows more negative as $T$ rises: the reaction is thermodynamically favored above 633 K.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate $\Delta G^\circ$ at 700 K and from it, $K$ at that temperature.
+
+<Answer>
+
+$$
+\begin{aligned}
+\Delta G^\circ &= 95.0 - (700)(0.150) \\
+&= \mathbf{-10.0}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+Now use this equation, with $\Delta G^\circ$ in **joules**:
+
+$$
+\Delta G^\circ = -RT\ln K
+$$
+
+First change $\Delta G^\circ$ to joules, on a line of its own:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -10.0\ \text{kJ/mol} \\
+&= -10{,}000\ \text{J/mol}
+\end{aligned}
+$$
+
+$R$ is in J/(mol·K) and $T$ is in kelvins, so the units cancel. The minus sign of the equation and the minus sign of $\Delta G^\circ$ make a plus:
+
+$$
+\begin{aligned}
+\ln K &= \frac{-\Delta G^\circ}{RT} \\
+&= \frac{10{,}000}{(8.314)(700)} \\
+&= 1.718
+\end{aligned}
+$$
+
+$$
+K = e^{1.718} = \mathbf{5.6}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Explain why a positive $\Delta S^\circ$ is required for a reaction with positive $\Delta H^\circ$ ever to become thermodynamically favored.
+
+<Answer>
+
+With $\Delta H^\circ$ positive, the enthalpy term always works against the reaction. The only term that can overcome it is $-T\Delta S^\circ$, and that is negative only when $\Delta S^\circ$ is positive. Raising $T$ then makes it more and more negative, so at a high enough temperature it is larger in size than $\Delta H^\circ$ and $\Delta G^\circ$ is negative. If $\Delta S^\circ$ were negative, both terms would work against the reaction, and it could never be favored at any temperature.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for putting ΔH° and ΔS° in the same energy unit (ΔS° in kJ, or ΔH° in J). 1 point for +50.3 kJ/mol. 1 point for "not thermodynamically favored". An answer with the units left unconverted (about $-44{,}600$) earns 0 for the whole part, its conclusion included.</RubricLine>
+<RubricLine part="b" points={2}>1 point for setting ΔG° = 0, or for writing T = ΔH°/ΔS° directly. 1 point for 633 K.</RubricLine>
+<RubricLine part="c" points={3}>1 point for $-10.0\ \text{kJ/mol}$. 1 point for ΔG° = −RT ln K with ΔG° and R in the same energy unit (joules with 8.314, or kilojoules with 0.008314). 1 point for K = 5.6, or for the K that follows correctly from the ΔG° found.</RubricLine>
+<RubricLine part="d" points={2}>1 point for saying that with ΔH° positive the enthalpy term works against the reaction at every temperature. 1 point for saying that −TΔS° is negative only when ΔS° is positive, so only then can a high temperature outweigh it.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={2} title="A galvanic cell and an electrolysis" topic="9.8, 9.9, 9.10, 9.11" points={10}>
+
+A galvanic cell is built from a copper electrode in 1.0 M $\ce{Cu(NO3)2}$ and a silver electrode in 1.0 M $\ce{AgNO3}$. The standard reduction potentials are +0.80 V for $\ce{Ag+}$ reduced to $\ce{Ag}$ and +0.34 V for $\ce{Cu^2+}$ reduced to $\ce{Cu}$.
+
+<Part label="a">
+
+Write the half-reaction at each electrode, identify the anode, and give the balanced overall equation.
+
+<Answer>
+
+**Anode** (oxidation):
+
+$$
+\ce{Cu(s) -> Cu^2+(aq) + 2e^-}
+$$
+
+**Cathode** (reduction):
+
+$$
+\ce{Ag+(aq) + e^- -> Ag(s)}
+$$
+
+Silver's half-reaction has the higher reduction potential, so it is the reduction, and copper is oxidized: the copper electrode is the **anode**. The silver half-reaction is doubled so that the 2 electrons cancel. Overall:
+
+$$
+\begin{aligned}
+&\ce{Cu(s) + 2Ag+(aq) ->} \\
+&\quad \ce{Cu^2+(aq) + 2Ag(s)}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate $E^\circ_\text{cell}$ and $\Delta G^\circ$.
+
+<Answer>
+
+Both potentials are in volts:
+
+$$
+\begin{aligned}
+E^\circ_\text{cell} &= E^\circ_\text{cathode} - E^\circ_\text{anode} \\
+&= 0.80 - 0.34 \\
+&= \mathbf{+0.46}\ \text{V}
+\end{aligned}
+$$
+
+Two electrons are transferred, so $n = 2$. $F$ is in coulombs per mole and a volt is a joule per coulomb, so the answer comes out in joules:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -nFE^\circ \\
+&= -(2)(96{,}485)(0.46) \\
+&= -8.9 \times 10^{4}\ \text{J} \\
+&= \mathbf{-89}\ \text{kJ}
+\end{aligned}
+$$
+
+Note that the silver half-reaction is doubled but $E^\circ$ is *not*: a potential is energy per unit of charge.
+
+</Answer>
+
+</Part>
+
+<Part label="c" beyond>
+
+Calculate the cell potential at 25 °C when $[\ce{Cu^2+}]$ = 0.10 M and $[\ce{Ag+}]$ = 0.010 M.
+
+<Answer>
+
+$$
+\begin{aligned}
+Q &= \frac{[\ce{Cu^2+}]}{[\ce{Ag+}]^2} \\
+&= \frac{0.10}{(0.010)^2} \\
+&= 1.0 \times 10^{3}
+\end{aligned}
+$$
+
+At 25 °C, the equation sheet's $\dfrac{RT}{nF}\ln Q$ is the same as $\dfrac{0.0592}{n}\log Q$, in volts. With $E$ and $E^\circ$ in volts:
+
+$$
+\begin{aligned}
+\log Q &= \log(1{,}000) = 3 \\
+E &= E^\circ - \frac{0.0592}{n}\log Q \\
+&= 0.46 - \frac{0.0592}{2}(3) \\
+&= 0.46 - (0.0296)(3) \\
+&= \mathbf{0.37}\ \text{V}
+\end{aligned}
+$$
+
+Lower than $E^\circ$, because $Q$ is greater than 1. Both ions are below 1.0 M, but $\ce{Ag+}$, the reactant, is on the bottom of $Q$ and squared, so its drop counts for more and $Q$ rises from 1 to 1,000. This cell's $K$ is far above 1,000, so the cell is nearer equilibrium than it is at standard conditions, and its potential is lower.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Silver is deposited from $\ce{AgNO3}$ solution by electrolysis at 1.50 A for 20.0 min. The molar mass of silver is 107.87 g/mol. Calculate the mass deposited.
+
+<Answer>
+
+The charge, with the current in amperes and the time in seconds:
+
+$$
+\begin{aligned}
+q &= It \\
+&= (1.50)(20.0 \times 60) \\
+&= 1{,}800\ \text{C}
+\end{aligned}
+$$
+
+The moles of electrons, from the charge in coulombs and $F$ in C/mol:
+
+$$
+\frac{1{,}800}{96{,}485} = 0.01866\ \text{mol}
+$$
+
+This half-reaction is a one-electron reduction, so the silver deposited is also 0.01866 mol Ag:
+
+$$
+\ce{Ag+(aq) + e^- -> Ag(s)}
+$$
+
+The mass, from the moles and the molar mass in g/mol:
+
+$$
+\begin{aligned}
+m &= (0.01866)(107.87) \\
+&= \mathbf{2.01}\ \text{g}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={3}>1 point for each half-reaction (2 points). 1 point for copper named as the anode together with the overall equation balanced for electrons; both are needed.</RubricLine>
+<RubricLine part="b" points={2}>1 point for +0.46 V; doubling E° with the half-reaction (1.26 V) earns 0 for this point. 1 point for −nFE° with n = 2: $-89\ \text{kJ}$, or the value that follows from the potential found ($-243\ \text{kJ}$ from 1.26 V).</RubricLine>
+<RubricLine part="c" points={3}>1 point for $Q = [\ce{Cu^2+}]/[\ce{Ag+}]^2$, which is $1.0 \times 10^{3}$, with [Ag⁺] squared and [Cu²⁺] not. 1 point for the Nernst equation with n = 2, in either form: (0.0592/n) log Q, or the equation sheet's (RT/nF) ln Q. 1 point for 0.37 V. With [Ag⁺] not squared the part earns at most 1 point, the one for the equation.</RubricLine>
+<RubricLine part="d" points={2}>1 point for the charge, 1,800 C, and the moles of electrons, 0.01866 mol; both are needed. 1 point for 2.01 g, or for the mass that follows correctly from the moles of electrons found.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={3} title="Thermodynamic and kinetic control" topic="9.4" points={4}>
+
+Diamond converting to graphite has $\Delta G^\circ = -2.9\ \text{kJ/mol}$ at 298 K, yet diamonds do not visibly change.
+
+<Part label="a">
+
+Explain how both statements can be true.
+
+<Answer>
+
+A negative $\Delta G^\circ$ says that the conversion is thermodynamically *favored*. It says nothing about how fast the conversion goes. (Diamond and graphite are both pure solids, so there is no $K$ to write for this change. Its $\Delta G^\circ$ still tells which direction is favored.) Rearranging diamond's covalent network requires breaking very strong $\ce{C-C}$ bonds, an enormous activation energy, so the rate is effectively zero at room temperature. The reaction is under **kinetic control**.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+State what would have to change for the conversion to proceed at an observable rate.
+
+<Answer>
+
+The activation barrier would have to be surmounted. In practice that means supplying a great deal of thermal energy (a very high temperature), which raises the fraction of atoms with enough energy to rearrange. A catalyst would do it too, by giving the change a route with a lower activation energy.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for saying that ΔG° tells whether the conversion is thermodynamically favored, not how fast it goes. 1 point for a large activation energy, or for naming kinetic control; either earns it.</RubricLine>
+<RubricLine part="b" points={2}>1 point for a way past the barrier: a very high temperature, or a catalyst. 1 point for why it works: heating raises the fraction of atoms with enough energy, or a catalyst gives a path with a lower activation energy.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={4} title="Free energy of dissolution" topic="9.6" points={4}>
+
+<Part label="a">
+
+Sodium chloride dissolves readily in water with $\Delta H^\circ_\text{soln}$ close to zero. Explain what drives the process.
+
+<Answer>
+
+The **entropy** increase. The ions leave fixed places in the crystal and spread through the solution. With $\Delta H^\circ$ near zero, $\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$ is negative because of the $-T\Delta S^\circ$ term almost alone.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Some ionic solids are insoluble although the entropy change works for dissolving. State what must be true of $\Delta H^\circ_\text{soln}$ in those cases.
+
+<Answer>
+
+It must be substantially **positive**: larger than $T\Delta S^\circ$, which leaves $\Delta G^\circ$ positive. Separating the ions of the crystal costs more energy than their attraction to water gives back, and the difference is more than the entropy term can cover.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for naming entropy. 1 point for ions leaving fixed places in the crystal and spreading through the solution.</RubricLine>
+<RubricLine part="b" points={2}>1 point for a positive ΔH° of dissolving; "positive" is enough. 1 point for saying that it is larger than TΔS°, so ΔG° is positive.</RubricLine>
+</Rubric>
+
+</Question>
+
+<Question number={5} title="Coupled reactions" topic="9.7" points={4}>
+
+The decomposition of a mineral has $\Delta G^\circ = +72\ \text{kJ/mol}$. Industrially it is coupled to a reaction with $\Delta G^\circ = -105\ \text{kJ/mol}$ that shares a common species.
+
+<Part label="a">
+
+Calculate $\Delta G^\circ$ for the coupled process and state whether it is thermodynamically favored.
+
+<Answer>
+
+Both values are in kJ/mol:
+
+$$
+72 + (-105) = \mathbf{-33}\ \text{kJ/mol}
+$$
+
+Negative, so the coupled process **is** thermodynamically favored.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Explain the principle that makes coupling work, and state the condition the two reactions must satisfy.
+
+<Answer>
+
+Free energies are additive, exactly as enthalpies are in Hess's law, so an unfavored reaction can be driven by pairing it with a sufficiently favored one. The condition is that they must share a **common species**, the product of one being consumed by the other, so that they genuinely proceed as a single combined process rather than two independent ones.
+
+</Answer>
+
+</Part>
+
+<Rubric>
+<RubricLine part="a" points={2}>1 point for $-33\ \text{kJ/mol}$. 1 point for "thermodynamically favored".</RubricLine>
+<RubricLine part="b" points={2}>1 point for saying that ΔG° values add when the equations add. 1 point for the condition: the two reactions share a substance, made by one and used by the other. "The negative one is bigger" alone earns the first point only.</RubricLine>
+</Rubric>
+
+</Question>

@@ -1,0 +1,507 @@
+---
+title: "Worksheet 2: Gibbs free energy"
+kind: worksheet
+order: 3
+topics: ["9.3", "9.4"]
+summary: Eight questions on ΔG° from ΔH° and ΔS°, the four combinations of signs, the temperature where ΔG° changes sign, and why a favored reaction can be too slow to see.
+---
+
+Work each question on paper before you open its answer. One habit runs through the calculations: ΔH° comes in kilojoules and ΔS° in joules per kelvin, so turn ΔS° into kJ/K, on a line of its own, before you subtract.
+
+You will need these relationships. The first gives ΔG° from ΔH° and ΔS°.
+
+$$
+\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ
+$$
+
+The second gives the temperature at which ΔG° = 0, where ΔG° changes sign.
+
+$$
+T = \frac{\Delta H^\circ}{\Delta S^\circ}
+$$
+
+The third gives ΔG° from standard free energies of formation, where $n$ is each substance's coefficient in the balanced equation.
+
+$$
+\begin{aligned}
+\Delta G^\circ ={} & \textstyle\sum n\,\Delta G_f^\circ(\text{products}) \\
+& - \textstyle\sum n\,\Delta G_f^\circ(\text{reactants})
+\end{aligned}
+$$
+
+Take $T$ as 298 K unless a question says otherwise. ΔH° and ΔS° are taken as the same at every temperature.
+
+A ΔH° or ΔS° written beside an equation is for the equation as written. Tables round a little differently from one to the next, so the values a question gives are the ones to use.
+
+## Questions
+
+<Question number={1} title="The four combinations of signs" topic="9.3">
+
+The four combinations of signs. Complete each line without calculating.
+
+<Part label="a">
+
+$\Delta H^\circ < 0$, $\Delta S^\circ > 0$: <Blank />
+
+<Answer>
+
+Thermodynamically favored at all temperatures.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+$\Delta H^\circ > 0$, $\Delta S^\circ < 0$: <Blank />
+
+<Answer>
+
+Favored at no temperature.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+$\Delta H^\circ > 0$, $\Delta S^\circ > 0$: <Blank />
+
+<Answer>
+
+Favored at high $T$.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+$\Delta H^\circ < 0$, $\Delta S^\circ < 0$: <Blank />
+
+<Answer>
+
+Favored at low $T$.
+
+</Answer>
+
+</Part>
+
+<Part label="e">
+
+For which two combinations is there a temperature at which ΔG° changes sign, and why?
+
+<Answer>
+
+The combinations of parts (c) and (d). In each, the two terms oppose each other: one works for the reaction and the other works against it, so which one wins depends on $T$. In parts (a) and (b) both terms point the same way and temperature cannot change the outcome.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={2} title="Calcium carbonate in a kiln" topic="9.3">
+
+Calcium carbonate decomposes:
+
+$$
+\begin{aligned}
+&\ce{CaCO3(s) ->} \\
+&\quad \ce{CaO(s) + CO2(g)}
+\end{aligned}
+$$
+
+For this reaction $\Delta H^\circ = +178.5\ \text{kJ}$ and $\Delta S^\circ = +161\ \text{J/K}$.
+
+<Part label="a">
+
+Which of the four combinations is this?
+
+<Answer>
+
+ΔH° and ΔS° are both positive: thermodynamically favored at high $T$ only.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate ΔG° at 298 K.
+
+<Answer>
+
+Turn ΔS° into kJ/K first.
+
+$$
+\begin{aligned}
+\Delta S^\circ &= +161\ \text{J/K} \\
+&= +0.161\ \text{kJ/K}
+\end{aligned}
+$$
+
+The entropy term:
+
+$$
+\begin{aligned}
+T\Delta S^\circ &= (298\ \text{K}) \\
+&\quad \times (0.161\ \text{kJ/K}) \\
+&= 47.98\ \text{kJ}
+\end{aligned}
+$$
+
+Subtract:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= 178.5\ \text{kJ} \\
+&\quad - 47.98\ \text{kJ} \\
+&= +130.52\ \text{kJ}
+\end{aligned}
+$$
+
+Rounded to the kilojoule, ΔG° is $\mathbf{+131}$ kJ. The reaction is not thermodynamically favored at this temperature.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Calculate the temperature at which ΔG° = 0.
+
+<Answer>
+
+$$
+\begin{aligned}
+T &= \frac{178.5\ \text{kJ}}{0.161\ \text{kJ/K}} \\
+&= \mathbf{1{,}109}\ \text{K}
+\end{aligned}
+$$
+
+That is about 836 °C.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Relate your answer to why limestone buildings survive but lime kilns work.
+
+<Answer>
+
+At ordinary temperatures ΔG° is strongly positive, so limestone does not decompose. A kiln is run above about 1,100 K, where the $T\Delta S^\circ$ term finally exceeds ΔH°.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={3} title="Making ammonia" topic="9.3, 9.4">
+
+Nitrogen and hydrogen combine to make ammonia:
+
+$$
+\begin{aligned}
+&\ce{N2(g) + 3H2(g) ->} \\
+&\quad \ce{2NH3(g)}
+\end{aligned}
+$$
+
+For this reaction $\Delta H^\circ = -92\ \text{kJ}$ and $\Delta S^\circ = -199\ \text{J/K}$.
+
+<Part label="a">
+
+ΔG° at 298 K: <Blank />
+
+<Answer>
+
+Turn ΔS° into kJ/K first.
+
+$$
+\begin{aligned}
+\Delta S^\circ &= -199\ \text{J/K} \\
+&= -0.199\ \text{kJ/K}
+\end{aligned}
+$$
+
+Then:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -92\ \text{kJ} \\
+&\quad - (298\ \text{K}) \\
+&\quad \times (-0.199\ \text{kJ/K}) \\
+&= -92\ \text{kJ} + 59\ \text{kJ} \\
+&= \mathbf{-33}\ \text{kJ}
+\end{aligned}
+$$
+
+The reaction is thermodynamically favored at this temperature.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+The temperature at which ΔG° = 0: <Blank />
+
+<Answer>
+
+With ΔS° in kJ/K from part (a):
+
+$$
+\begin{aligned}
+T &= \frac{-92\ \text{kJ}}{-0.199\ \text{kJ/K}} \\
+&= \mathbf{462}\ \text{K}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Is the reaction favored above or below that temperature? Explain.
+
+<Answer>
+
+Below. ΔH° and ΔS° are both negative, so this is the combination that is thermodynamically favored at low temperature: raising $T$ makes $-T\Delta S^\circ$ increasingly positive until it overwhelms the negative ΔH°.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+In industry this reaction is run at about 700 K, above the temperature at which ΔG° = 0. Suggest why. Use what Unit 5 taught about rates.
+
+<Answer>
+
+At 298 K the reaction is thermodynamically favored but far too slow. Raising the temperature gives up some of how far the reaction goes in exchange for rate, and the loss in yield is recovered by high pressure and by recycling unreacted gas. Above the temperature of part (b), ΔG° is positive and $K$ is less than 1, which means less product at equilibrium, not none (topic 9.5). This is a thermodynamics versus kinetics trade-off, not a contradiction.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={4} title="Water and its vapor" topic="9.3">
+
+Liquid water becomes water vapor:
+
+$$
+\ce{H2O(l) -> H2O(g)}
+$$
+
+For this change $\Delta H^\circ = +44\ \text{kJ}$ and $\Delta S^\circ = +119\ \text{J/K}$. Calculate the temperature at which ΔG° = 0 and say what that temperature is.
+
+<Answer>
+
+Turn ΔS° into kJ/K first.
+
+$$
+\begin{aligned}
+\Delta S^\circ &= +119\ \text{J/K} \\
+&= +0.119\ \text{kJ/K}
+\end{aligned}
+$$
+
+Then:
+
+$$
+\begin{aligned}
+T &= \frac{44\ \text{kJ}}{0.119\ \text{kJ/K}} \\
+&= \mathbf{370}\ \text{K}
+\end{aligned}
+$$
+
+That is about 97 °C. It is the **normal boiling point** of water. The measured value is 373 K. The gap is not rounding: these values of ΔH° and ΔS° are for 25 °C, and both change a little by 100 °C (there the enthalpy of vaporization is 40.7 kJ/mol, the value Unit 6's practice uses).
+
+</Answer>
+
+</Question>
+
+<Question number={5} title="An answer of −47,800 kJ" topic="9.3">
+
+Question 2 gives $\Delta H^\circ = +178.5\ \text{kJ}$ and $\Delta S^\circ = +161\ \text{J/K}$ for the decomposition of calcium carbonate. To find ΔG°, a student writes this:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= 178.5 - 298(161) \\
+&= -47{,}800\ \text{kJ}
+\end{aligned}
+$$
+
+Identify the error and state how you would catch it without redoing the arithmetic.
+
+<Answer>
+
+The student failed to convert ΔS° from J/K to kJ/K, so the entropy term is a thousand times too large. The size is the giveaway: no ordinary reaction has a free energy change of tens of thousands of kilojoules per mole, so a result that size signals a unit error rather than an arithmetic one.
+
+</Answer>
+
+</Question>
+
+<Question number={6} title="Two routes to ΔG°" topic="9.3">
+
+The formation route. Hydrogen and oxygen make liquid water:
+
+$$
+\begin{aligned}
+&\ce{2H2(g) + O2(g) ->} \\
+&\quad \ce{2H2O(l)}
+\end{aligned}
+$$
+
+The standard free energy of formation, $\Delta G_f^\circ$, of $\ce{H2O(l)}$ is $-237$ kJ/mol.
+
+<Part label="a">
+
+Why is $\Delta G_f^\circ$ for $\ce{H2(g)}$ and $\ce{O2(g)}$ zero?
+
+<Answer>
+
+They are elements in their standard states.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Calculate ΔG°.
+
+<Answer>
+
+Products minus reactants, with the two elements entered as zero:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= 2(-237) \\
+&\quad - [2(0) + 1(0)] \\
+&= \mathbf{-474}\ \text{kJ}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+$\Delta H^\circ - T\Delta S^\circ$ gives $-475$ kJ, from $\Delta H^\circ = -572\ \text{kJ}$ and $\Delta S^\circ = -327\ \text{J/K}$. Verify, and account for the difference.
+
+<Answer>
+
+Turn ΔS° into kJ/K first.
+
+$$
+\begin{aligned}
+\Delta S^\circ &= -327\ \text{J/K} \\
+&= -0.327\ \text{kJ/K}
+\end{aligned}
+$$
+
+Then:
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -572\ \text{kJ} \\
+&\quad - (298\ \text{K}) \\
+&\quad \times (-0.327\ \text{kJ/K}) \\
+&= -572\ \text{kJ} + 97.4\ \text{kJ} \\
+&= -474.6\ \text{kJ}
+\end{aligned}
+$$
+
+Rounded to the kilojoule, ΔG° is $\mathbf{-475}$ kJ. The 1 kJ gap is rounding in the tabulated values, not an error in either method.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+State the one place $S^\circ$ and $\Delta G_f^\circ$ differ in convention.
+
+<Answer>
+
+$\Delta G_f^\circ$ of an element in its standard state is zero by definition. $S^\circ$ of that same element is a positive measured number.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={7} title="Favored is not fast" topic="9.4">
+
+Thermodynamic control and kinetic control.
+
+<Part label="a">
+
+ΔG° tells you <Blank />; $E_a$ tells you <Blank />.
+
+<Answer>
+
+ΔG° tells you whether a change is thermodynamically favored, and how far it goes. $E_a$ tells you how fast it goes.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Diamond converting to graphite has $\Delta G^\circ < 0$. Explain why jewelry survives.
+
+<Answer>
+
+The conversion requires breaking and reforming a covalent network, which carries an enormous activation energy. The reaction is thermodynamically favored but under kinetic control, so its rate at room temperature is immeasurably small.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A catalyst changes <Blank /> but does not change <Blank />.
+
+<Answer>
+
+A catalyst changes $E_a$. It does not change ΔG°, ΔH°, or $K$.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Can a catalyst make a thermodynamically unfavored reaction favored? Justify.
+
+<Answer>
+
+No. It alters only the barrier between reactants and products, not their relative free energies, so ΔG° and $K$ are untouched.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+<Question number={8} title="A favored reaction with no rate" topic="9.4">
+
+A reaction has $\Delta G^\circ = -200\ \text{kJ}$ and no observable rate at 298 K. A student concludes the value of ΔG° must be wrong. Explain why the conclusion does not follow, and give two ways to make the reaction proceed.
+
+<Answer>
+
+ΔG° compares the free energies of reactants and products and says nothing about the barrier between them, so a large negative value is entirely compatible with a negligible rate. Raise the temperature, so a larger share of the collisions has at least the activation energy, $E_a$. This also changes $K$, since $K$ is temperature-dependent. Or add a catalyst, which lowers $E_a$ and leaves $K$ unchanged.
+
+</Answer>
+
+</Question>

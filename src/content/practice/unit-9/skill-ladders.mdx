@@ -1,0 +1,1332 @@
+---
+title: "Skill ladders"
+kind: ladders
+order: 1
+topics: ["9.1", "9.2", "9.3", "9.4", "9.5", "9.6", "9.7", "9.8", "9.9", "9.10", "9.11"]
+summary: Twelve skills, one at a time. Each has a worked example, then four questions on the same skill to try on your own. Start here, before the worksheets.
+---
+
+There are twelve ladders here, one for each skill. Each ladder is a worked example, then four questions on the same skill, with no help. Work alone, and work all four before you check any of them.
+
+**This unit is one idea with two faces.** Thermodynamics asks whether a reaction is thermodynamically favored. Electrochemistry measures the same thing as a voltage. One equation joins the two:
+
+$$
+\Delta G^\circ = -nFE^\circ
+$$
+
+Once you see that, the second half of the unit is the first half with a voltmeter attached.
+
+**The unit trap that costs the most points.** Tables give $\Delta H^\circ$ in **kilojoules** and $\Delta S^\circ$ in **joules** per kelvin. Mixing them in $\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$ makes the entropy term a thousand times too large, and the answer wrong with it. Convert first, every time.
+
+**Use these values.**
+
+- The gas constant: $R$ = 8.314 J/(mol·K)
+- Faraday's constant: $F$ = 96,485 C per mole of electrons
+
+Tables round a little differently, so a question's own values are the ones to use. A $\Delta H^\circ$ or $\Delta S^\circ$ written beside an equation is for the equation as written.
+
+**One scope note.** Which electrode is positive and which is negative is not on the AP exam, and nothing here asks for it. Anode and cathode *are* on the exam, and the rule never changes: oxidation at the anode, in both kinds of cell.
+
+## Ladder 1: Predicting the sign of ΔS
+
+Entropy measures the number of ways energy and matter can be arranged. More particles, more freedom, more entropy, and **gases dominate** almost every comparison they appear in.
+
+<Worked title="Three processes">
+
+Predict the sign of $\Delta S^\circ$ for each of three processes.
+
+Process (i):
+
+$$
+\ce{H2O(l) -> H2O(g)}
+$$
+
+Process (ii):
+
+$$
+\ce{2NO2(g) -> N2O4(g)}
+$$
+
+Process (iii):
+
+$$
+\begin{aligned}
+&\ce{NaCl(s) ->} \\
+&\quad \ce{Na+(aq) + Cl^-(aq)}
+\end{aligned}
+$$
+
+**(i) Positive.** A liquid becomes a gas: an enormous increase in the freedom of the molecules. A change from a liquid or a solid to a gas always raises the entropy, and at ordinary conditions by a large amount.
+
+**(ii) Negative.** Two moles of gas become one. Fewer gas particles means fewer arrangements.
+
+**(iii) Positive.** Ions leave fixed places in the crystal and spread through the solution.
+
+**The shortcut worth internalizing:** if the number of moles of *gas* changes, that decides the sign almost every time. Only when the gas count is unchanged do you look at phases and particle counts.
+
+</Worked>
+
+<Question number={1} label="Your turn" topic="9.1">
+
+<Part label="a">
+
+What is the sign of $\Delta S^\circ$ for this reaction?
+
+$$
+\begin{aligned}
+&\ce{CaCO3(s) ->} \\
+&\quad \ce{CaO(s) + CO2(g)}
+\end{aligned}
+$$
+
+<Answer>
+
+Positive.
+
+**Positive**: a gas is produced where there was none.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+What is the sign of $\Delta S^\circ$ for this reaction?
+
+$$
+\ce{N2(g) + 3H2(g) -> 2NH3(g)}
+$$
+
+<Answer>
+
+Negative.
+
+**Negative**: four moles of gas become two.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+What is the sign of $\Delta S^\circ$ for water freezing?
+
+<Answer>
+
+Negative.
+
+**Negative**: molecules that move past one another become fixed in a crystal, with fewer ways to be arranged.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+What is the sign of $\Delta S^\circ$ for this reaction, and why is it small?
+
+$$
+\ce{H2(g) + Cl2(g) -> 2HCl(g)}
+$$
+
+<Answer>
+
+Small and positive: 2 moles of gas become 2, and the sign takes a table.
+
+**Small, and positive**: about $+20\ \text{J/(mol·K)}$, from a table. Two moles of gas become two moles of gas, so the dominant factor is unchanged and only smaller effects, differences in molecular complexity and mass, remain.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 2: Calculating ΔS°
+
+$$
+\begin{aligned}
+\Delta S^\circ ={} & \textstyle\sum n\,S^\circ(\text{products}) \\
+& - \textstyle\sum n\,S^\circ(\text{reactants})
+\end{aligned}
+$$
+
+Here $n$ is each substance's coefficient in the balanced equation. Unlike $\Delta H_f^\circ$, the standard entropy of an element is **not** zero.
+
+<Worked title="Products minus reactants">
+
+Find $\Delta S^\circ$ for
+
+$$
+\begin{aligned}
+&\ce{C(s, graphite) + O2(g) ->} \\
+&\quad \ce{CO2(g)}
+\end{aligned}
+$$
+
+from these values of $S^\circ$, in J/(mol·K): $\ce{C(s, graphite)}$ 5.7, $\ce{O2(g)}$ 205.0, $\ce{CO2(g)}$ 213.7.
+
+**Products minus reactants:**
+
+$$
+\begin{aligned}
+&213.7 - (5.7 + 205.0) \\
+&= 213.7 - 210.7 \\
+&= \mathbf{+3.0}\ \text{J/(mol·K)}
+\end{aligned}
+$$
+
+**Why so small?** One mole of gas becomes one mole of gas. With the gas count unchanged, the dominant term cancels and only a small residue remains.
+
+**Contrast with intuition:** you might expect burning to raise the entropy strongly. It does not, in this case: one mole of gas is used and one is made.
+
+**Do not set the element to zero.** $\ce{C(s, graphite)}$ has $S^\circ$ = 5.7 J/(mol·K), not 0. Absolute entropies are zero only at 0 K, for a perfect crystal, and that is a different statement from the $\Delta H_f^\circ$ convention.
+
+</Worked>
+
+<Question number={2} label="Your turn" topic="9.2">
+
+<Part label="a">
+
+The standard entropies of the products total 400 J/(mol·K) and those of the reactants total 560 J/(mol·K). Find $\Delta S^\circ$.
+
+<Answer>
+
+$-160\ \text{J/(mol·K)}$
+
+$$
+\begin{aligned}
+&400 - 560 \\
+&= \mathbf{-160}\ \text{J/(mol·K)}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Is that consistent with a reaction that consumes gas?
+
+<Answer>
+
+Yes.
+
+**Yes.** A negative $\Delta S^\circ$ of that size is exactly what consuming moles of gas produces.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Why is $S^\circ$ of an element not zero?
+
+<Answer>
+
+It has thermal motion above 0 K.
+
+Because $S^\circ$ is an **absolute** entropy, not a change from a reference. Any substance above 0 K has real thermal motion and therefore real entropy. This differs from $\Delta H_f^\circ$, which is defined as zero for an element in its standard state purely by convention.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Which has the larger $S^\circ$, $\ce{H2O(l)}$ or $\ce{H2O(g)}$?
+
+<Answer>
+
+The gas.
+
+The **gas**, by a large margin: its molecules are free to move independently.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 3: Gibbs free energy
+
+$$
+\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ
+$$
+
+A negative $\Delta G^\circ$ means thermodynamically favored. Convert $\Delta S^\circ$ to kilojoules first.
+
+<Worked title="The conversion that decides the answer">
+
+For the reaction
+
+$$
+\ce{N2(g) + 3H2(g) -> 2NH3(g)}
+$$
+
+$\Delta H^\circ = -92.2\ \text{kJ/mol}$ and $\Delta S^\circ = -198.7\ \text{J/(mol·K)}$. Find $\Delta G^\circ$ at 298 K.
+
+**Convert:**
+
+$$
+\Delta S^\circ = -0.1987\ \text{kJ/(mol·K)}
+$$
+
+**Then** $\Delta G^\circ$:
+
+$$
+\begin{aligned}
+&-92.2 - (298)(-0.1987) \\
+&= -92.2 + 59.2 \\
+&= \mathbf{-33.0}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+Negative, so **thermodynamically favored** at room temperature.
+
+**Watch the double negative.** $\Delta S^\circ$ is negative, so $-T\Delta S^\circ$ is *positive*: it works against the reaction. The enthalpy term works for the reaction and carries it.
+
+**If you forget the conversion:**
+
+$$
+-92.2 - (298)(-198.7)
+$$
+
+gives about $+59{,}100$. Wrong in both size and sign, and it would reverse your conclusion entirely.
+
+</Worked>
+
+<Question number={3} label="Your turn" topic="9.3">
+
+<Part label="a">
+
+For a reaction, $\Delta H^\circ = -50.0\ \text{kJ}$ and $\Delta S^\circ = +100\ \text{J/K}$. Find $\Delta G^\circ$ at $T$ = 298 K.
+
+<Answer>
+
+$-79.8\ \text{kJ}$
+
+The entropy change in kilojoules:
+
+$$
+\Delta S^\circ = +0.100\ \text{kJ/K}
+$$
+
+Then $\Delta G^\circ$:
+
+$$
+\begin{aligned}
+&-50.0 - (298)(0.100) \\
+&= -50.0 - 29.8 \\
+&= \mathbf{-79.8}\ \text{kJ}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Is that reaction thermodynamically favored?
+
+<Answer>
+
+Yes.
+
+**Yes**: $\Delta G^\circ$ is negative.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+For another reaction, $\Delta H^\circ = +30.0\ \text{kJ}$ and $\Delta S^\circ = -50\ \text{J/K}$. Is it thermodynamically favored at any temperature?
+
+<Answer>
+
+Never.
+
+**Never.** $\Delta H^\circ$ is positive (works against) and $\Delta S^\circ$ is negative, so $-T\Delta S^\circ$ is also positive (also works against). Both terms work against it at every temperature, so $\Delta G^\circ$ can never become negative.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+What does $\Delta G^\circ = 0$ mean?
+
+<Answer>
+
+$K = 1$
+
+**$K = 1$**: at equilibrium neither reactants nor products are favored. It does not mean that the reaction is at equilibrium; that is $Q = K$, whatever $K$ is.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 4: Temperature dependence
+
+The four sign combinations give four behaviors. Only two of them depend on temperature.
+
+<Worked title="The four cases, and where ΔG° changes sign">
+
+List the four cases. Then find the temperature at which $\Delta G^\circ = 0$ for
+
+$$
+\begin{aligned}
+&\ce{CaCO3(s) ->} \\
+&\quad \ce{CaO(s) + CO2(g)}
+\end{aligned}
+$$
+
+with $\Delta H^\circ = +178.3\ \text{kJ}$ and $\Delta S^\circ = +160.6\ \text{J/K}$, taking $\Delta H^\circ$ and $\Delta S^\circ$ as the same at every temperature.
+
+**The four cases.**
+
+- $\Delta H^\circ < 0$, $\Delta S^\circ > 0$: thermodynamically favored at *all* temperatures.
+- $\Delta H^\circ > 0$, $\Delta S^\circ < 0$: favored at *no* temperature.
+- $\Delta H^\circ < 0$, $\Delta S^\circ < 0$: favored at **low** $T$.
+- $\Delta H^\circ > 0$, $\Delta S^\circ > 0$: favored at **high** $T$. This is the case here.
+
+**The temperature at which $\Delta G^\circ = 0$.** First the entropy change in kilojoules:
+
+$$
+\Delta S^\circ = +0.1606\ \text{kJ/K}
+$$
+
+Then
+
+$$
+\begin{aligned}
+T &= \frac{\Delta H^\circ}{\Delta S^\circ} \\
+&= \frac{178.3}{0.1606} \\
+&= \mathbf{1{,}110}\ \text{K}
+\end{aligned}
+$$
+
+Above about 1,110 K the decomposition becomes favored, which is why a lime kiln runs near 1,200 K and not at room temperature.
+
+**Check at 298 K:**
+
+$$
+\begin{aligned}
+&178.3 - (298)(0.1606) \\
+&= +130\ \text{kJ}
+\end{aligned}
+$$
+
+Strongly unfavored, as expected for limestone sitting on a shelf.
+
+</Worked>
+
+<Question number={4} label="Your turn" topic="9.3">
+
+<Part label="a">
+
+A reaction has $\Delta H^\circ < 0$ and $\Delta S^\circ > 0$. At which temperatures is it thermodynamically favored?
+
+<Answer>
+
+All.
+
+**All** temperatures: both terms work for it.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+A reaction has $\Delta H^\circ < 0$ and $\Delta S^\circ < 0$. At which temperatures is it thermodynamically favored?
+
+<Answer>
+
+Low only.
+
+**Low** temperatures only. The enthalpy term, which works for the reaction, must outweigh $-T\Delta S^\circ$, which works against it and grows with $T$.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+A reaction has $\Delta H^\circ = +40.0\ \text{kJ}$ and $\Delta S^\circ = +80\ \text{J/K}$. At what temperature is $\Delta G^\circ = 0$?
+
+<Answer>
+
+500 K
+
+The entropy change in kilojoules:
+
+$$
+\Delta S^\circ = +0.080\ \text{kJ/K}
+$$
+
+Then
+
+$$
+\begin{aligned}
+T &= \frac{40.0}{0.080} \\
+&= \mathbf{500}\ \text{K}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Why does raising $T$ help only when $\Delta S^\circ$ is positive?
+
+<Answer>
+
+$-T\Delta S^\circ$ is negative only then.
+
+Because the temperature appears only in the $-T\Delta S^\circ$ term. If $\Delta S^\circ$ is positive, that term is negative and grows more negative as $T$ rises, eventually overcoming a positive $\Delta H^\circ$. If $\Delta S^\circ$ is negative, the term is positive and raising $T$ makes matters *worse*.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 5: Thermodynamic and kinetic control
+
+$\Delta G^\circ$ says whether a reaction is thermodynamically favored. It says nothing about how fast it goes.
+
+<Worked title="Favored and yet stuck">
+
+A mixture of gasoline vapor and air has a strongly negative $\Delta G^\circ$, yet sits indefinitely in a fuel tank. Explain, and say what a spark does.
+
+**Thermodynamically favored:** combustion releases a great deal of energy and increases entropy. $\Delta G^\circ$ is large and negative.
+
+**Under kinetic control:** the reaction must begin by breaking strong $\ce{C-H}$, $\ce{C-C}$ and $\ce{O=O}$ bonds, which takes a large activation energy. At room temperature essentially no molecules have that much energy, so the rate is effectively zero.
+
+**What a spark supplies:** enough energy for a small number of molecules to cross the barrier. Once started, the reaction is exothermic and supplies the energy to keep itself going.
+
+**The general principle:** $\Delta G^\circ$ describes the destination, $E_a$ the journey. A large negative $\Delta G^\circ$ with a large $E_a$ is a reaction that is strongly favored and completely stuck, which is fortunate, since it is why fuels can be stored at all.
+
+</Worked>
+
+<Question number={5} label="Your turn" topic="9.4">
+
+<Part label="a">
+
+Does a negative $\Delta G^\circ$ guarantee a fast reaction?
+
+<Answer>
+
+No.
+
+**No.** It guarantees only that the reaction is thermodynamically favored.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+What quantity controls the rate?
+
+<Answer>
+
+The activation energy.
+
+The **activation energy** (together with temperature), not $\Delta G^\circ$.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Diamond to graphite has $\Delta G^\circ$ negative. Why do diamonds persist?
+
+<Answer>
+
+An enormous $E_a$.
+
+Rearranging diamond's covalent network requires breaking very strong $\ce{C-C}$ bonds, which takes an enormous activation energy. At room temperature the rate is indistinguishable from zero, so the change is said to be **under kinetic control**, even though graphite is the thermodynamically favored form.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Name two ways to speed a favored but slow reaction.
+
+<Answer>
+
+Raise $T$; add a catalyst.
+
+**Raise the temperature** (more molecules exceed $E_a$) and **add a catalyst** (lowers $E_a$ by offering a new pathway). A catalyst changes neither $\Delta G^\circ$ nor $K$. Raising the temperature changes both, because $T$ is in $\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$ (Ladder 4).
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 6: Free energy and the equilibrium constant
+
+$$
+\Delta G^\circ = -RT\ln K
+$$
+
+$\Delta G^\circ$ must be in **joules** to match $R$.
+
+<Worked title="Both directions">
+
+Find $K$ at 298 K when $\Delta G^\circ = -20.0\ \text{kJ/mol}$. Then state $K$ when $\Delta G^\circ = 0$.
+
+With $\Delta G^\circ$ in joules:
+
+$$
+\begin{aligned}
+\ln K &= -\frac{\Delta G^\circ}{RT} \\
+&= \frac{20{,}000}{(8.314)(298)} \\
+&= 8.072
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+K &= e^{8.072} \\
+&= \mathbf{3.2 \times 10^{3}}
+\end{aligned}
+$$
+
+A large $K$, as a $\Delta G^\circ$ this far below zero requires.
+
+**When $\Delta G^\circ = 0$:** $\ln K = 0$, so $\mathbf{K = 1}$: at equilibrium neither reactants nor products are favored.
+
+**The three-way correspondence to memorize:**
+
+- $\Delta G^\circ < 0$ goes with $K > 1$: products favored.
+- $\Delta G^\circ = 0$ goes with $K = 1$.
+- $\Delta G^\circ > 0$ goes with $K < 1$: reactants favored.
+
+**The unit trap again:** leaving $\Delta G^\circ$ in kilojoules gives $\ln K = 0.0081$ and $K \approx 1.008$, a wildly wrong answer that still looks like a number.
+
+</Worked>
+
+<Question number={6} label="Your turn" topic="9.5">
+
+<Part label="a">
+
+$\Delta G^\circ = +15.0\ \text{kJ/mol}$ at 298 K. Find $K$.
+
+<Answer>
+
+$2.3 \times 10^{-3}$
+
+$$
+\begin{aligned}
+\ln K &= \frac{-15{,}000}{(8.314)(298)} \\
+&= -6.054
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+K &= e^{-6.054} \\
+&= \mathbf{2.3 \times 10^{-3}}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Is $K$ greater or less than 1 when $\Delta G^\circ$ is negative?
+
+<Answer>
+
+Greater than 1.
+
+**Greater than 1**: products are favored.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+What is $K$ when $\Delta G^\circ = 0$?
+
+<Answer>
+
+$K = 1$
+
+$K = \mathbf{1}$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Why must $\Delta G^\circ$ be converted to joules?
+
+<Answer>
+
+To match $R$, which is in J/(mol·K).
+
+Because $R$ = 8.314 J/(mol·K) carries joules. Mixing kilojoules with it leaves the exponent a thousand times too small, and $K$ comes out close to 1 no matter what the real answer was.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 7: Free energy of dissolution
+
+Dissolving is a competition: breaking the lattice costs energy, hydration releases it, and the entropy change usually works for the dissolving, though not always.
+
+<Worked title="Endothermic and still favored">
+
+Ammonium nitrate dissolves readily although the solution gets markedly colder. Explain.
+
+**$\Delta H^\circ$ is positive.** The energy needed to pull the lattice apart exceeds what hydration releases, so the process absorbs energy from the water, which is why it cools.
+
+**$\Delta S^\circ$ is strongly positive.** Ions fixed in a crystal become dispersed and mobile throughout the solvent: a large increase in the number of available arrangements.
+
+**$\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$ is negative** because the $T\Delta S^\circ$ term outweighs the positive $\Delta H^\circ$ at room temperature. The entropy term works for the dissolving and carries it.
+
+**The general lesson:** favored is not the same as exothermic. An endothermic process proceeds whenever the entropy gain is large enough, and for many salts it is.
+
+</Worked>
+
+<Question number={7} label="Your turn" topic="9.6">
+
+<Part label="a">
+
+What is the sign of $\Delta S^\circ$ when an ionic solid dissolves?
+
+<Answer>
+
+Usually positive.
+
+**Usually positive**, as it is for ammonium nitrate: the ions leave fixed places and spread through the solution. Not always: small or highly charged ions hold water molecules around them, that water loses entropy, and for some salts the total is negative (topic 9.6: magnesium sulfate).
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+What drives an endothermic dissolution?
+
+<Answer>
+
+The entropy increase.
+
+The **entropy increase**: $T\Delta S^\circ$ outweighs the positive $\Delta H^\circ$.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+If a salt is insoluble although its entropy change works for dissolving, what must be true of $\Delta H^\circ$?
+
+<Answer>
+
+Strongly positive.
+
+It must be **strongly positive**: large enough that $\Delta H^\circ$, the part of the cost of separating the lattice that hydration does not give back, exceeds $T\Delta S^\circ$, leaving $\Delta G^\circ$ positive.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Would cooling the water make $\ce{NH4NO3}$ more or less soluble?
+
+<Answer>
+
+Less soluble.
+
+**Less soluble.** Dissolving it is endothermic, and $K$ for an endothermic change falls as the temperature falls (topic 7.9). In topic 9.6's terms, $\Delta H^\circ$ and $\Delta S^\circ$ are both positive here, so cooling weakens the entropy term that works for the dissolving.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 8: Coupled reactions
+
+Free energies add, exactly as enthalpies do in Hess's law. An unfavored reaction can be driven by pairing it with a strongly favored one that shares a species.
+
+<Worked title="Driving an unfavored step">
+
+Reaction A has $\Delta G^\circ = +60\ \text{kJ/mol}$. Reaction B, sharing a common species, has $\Delta G^\circ = -95\ \text{kJ/mol}$. Find the coupled value.
+
+$$
+\begin{aligned}
+\Delta G^\circ_\text{total} &= (+60) + (-95) \\
+&= \mathbf{-35}\ \text{kJ/mol}
+\end{aligned}
+$$
+
+Negative, so the coupled process **is** thermodynamically favored even though A alone is not.
+
+**The essential condition: a shared species.** The product of one reaction must be consumed by the other. Without that link they are two independent reactions that happen to be in the same beaker, and the unfavored one still goes almost nowhere.
+
+**Where this matters:** the extraction of many metals couples an unfavored oxide decomposition to the favored oxidation of carbon. In biology, ATP hydrolysis is coupled to thousands of otherwise unfavored reactions: it is how cells carry out reactions that are unfavored on their own.
+
+</Worked>
+
+<Question number={8} label="Your turn" topic="9.7">
+
+<Part label="a">
+
+Two reactions that share a species have $\Delta G^\circ$ values of $+45$ and $-70\ \text{kJ/mol}$. Find the coupled value. Is the coupled process thermodynamically favored?
+
+<Answer>
+
+$-25\ \text{kJ/mol}$, favored
+
+$\mathbf{-25}$ kJ/mol: **thermodynamically favored**.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Two reactions that share a species have $\Delta G^\circ$ values of $+80$ and $-55\ \text{kJ/mol}$. Find the coupled value. Is the coupled process thermodynamically favored?
+
+<Answer>
+
+$+25\ \text{kJ/mol}$, not favored
+
+$\mathbf{+25}$ kJ/mol: **not favored**. The favored reaction is not strong enough to carry the other.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+What condition must the two reactions satisfy?
+
+<Answer>
+
+A shared species.
+
+They must share a **common species**, so that the product of one is consumed by the other and they proceed as a single combined process.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Why is coupling analogous to Hess's law?
+
+<Answer>
+
+In both, the values add when the equations add.
+
+$\Delta G^\circ$ values add when equations add, just as $\Delta H^\circ$ values do in Hess's law (topic 6.9), so the steps of a combined process sum to the overall value.
+
+**Beyond the exam:** a quantity whose change depends only on the start and the end is called a state function; $G$ and $H$ are both state functions.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 9: Galvanic cells
+
+Oxidation at the anode, reduction at the cathode, in both kinds of cell. Electrons flow through the wire from anode to cathode.
+
+<Worked title="Assembling a cell">
+
+Build a cell from iron ($E^\circ = -0.44\ \text{V}$) and copper ($E^\circ = +0.34\ \text{V}$); both values are standard reduction potentials, for $\ce{Fe^2+}$ and $\ce{Cu^2+}$. Give the half-reactions, the anode, the cell's $E^\circ$, and the directions of electron and anion flow.
+
+**The half-reaction with the higher reduction potential is the reduction**, so copper is the cathode and iron is oxidized at the anode.
+
+At the anode:
+
+$$
+\ce{Fe(s) -> Fe^2+(aq) + 2e^-}
+$$
+
+At the cathode:
+
+$$
+\ce{Cu^2+(aq) + 2e^- -> Cu(s)}
+$$
+
+$$
+\begin{aligned}
+E^\circ_\text{cell} &= E^\circ_\text{cathode} - E^\circ_\text{anode} \\
+&= 0.34 - (-0.44) \\
+&= \mathbf{+0.78}\ \text{V}
+\end{aligned}
+$$
+
+**Electrons** flow through the external wire from the **iron** to the **copper**.
+
+**Anions** in the salt bridge migrate toward the **anode**, balancing the positive charge building up as $\ce{Fe^2+}$ enters that solution.
+
+**A positive $E^\circ$ confirms it works**: at standard conditions a galvanic cell has a positive cell potential, which is the same statement as $\Delta G^\circ$ being negative.
+
+</Worked>
+
+<Question number={9} label="Your turn" topic="9.8, 9.9">
+
+<Part label="a">
+
+A cell is built from nickel ($E^\circ = -0.25\ \text{V}$) and silver ($E^\circ = +0.80\ \text{V}$); both values are standard reduction potentials. Which is the anode, and what is the cell's $E^\circ$?
+
+<Answer>
+
+Nickel; $+1.05\ \text{V}$
+
+**Nickel** is the anode: it has the lower reduction potential, so it is oxidized.
+
+$$
+\begin{aligned}
+E^\circ_\text{cell} &= 0.80 - (-0.25) \\
+&= \mathbf{+1.05}\ \text{V}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Which way do electrons flow in the external circuit?
+
+<Answer>
+
+From anode to cathode.
+
+From the **anode to the cathode** through the wire.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Which way do anions move in the salt bridge?
+
+<Answer>
+
+Toward the anode.
+
+Toward the **anode**, to balance the positive charge accumulating as metal ions enter that solution.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+What happens at the anode in an *electrolytic* cell?
+
+<Answer>
+
+Oxidation, the same as in a galvanic cell.
+
+**Oxidation**, exactly as in a galvanic cell. That never changes. (What does differ between the two kinds of cell is which electrode is positive and which is negative, and the AP exam does not ask for that.)
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 10: Cell potential and free energy
+
+$$
+\Delta G^\circ = -nFE^\circ
+$$
+
+$n$ is the number of electrons transferred in the balanced reaction. $E^\circ$ is energy per unit of charge: never multiply it by a coefficient from the equation.
+
+<Worked title="From volts to kilojoules">
+
+For the iron and copper cell of Ladder 9 ($E^\circ = +0.78\ \text{V}$, $n = 2$), find $\Delta G^\circ$.
+
+$$
+\begin{aligned}
+\Delta G^\circ &= -nFE^\circ \\
+&= -(2)(96{,}485)(0.78) \\
+&= -150{,}517\ \text{J} \\
+&= \mathbf{-151}\ \text{kJ}
+\end{aligned}
+$$
+
+Negative, as it must be for a cell that delivers current on its own.
+
+**The property that trips everyone.** If you double the whole reaction, $n$ doubles and $\Delta G^\circ$ doubles, but $E^\circ$ does **not**. A potential is energy per unit of charge, so scaling the reaction scales both energy and charge together and leaves the ratio alone. A cell's voltage does not depend on its size.
+
+**The correspondence:** $E^\circ > 0$ goes with $\Delta G^\circ < 0$ and with $K > 1$. Three ways of saying the same thing.
+
+</Worked>
+
+<Question number={10} label="Your turn" topic="9.9">
+
+<Part label="a">
+
+For the nickel and silver cell of Ladder 9 ($E^\circ = +1.05\ \text{V}$, $n = 2$), find $\Delta G^\circ$.
+
+<Answer>
+
+$-203\ \text{kJ}$
+
+$$
+\begin{aligned}
+&-(2)(96{,}485)(1.05) \\
+&= -2.03 \times 10^{5}\ \text{J} \\
+&= \mathbf{-203}\ \text{kJ}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+If a reaction is doubled, what happens to $E^\circ$ and to $\Delta G^\circ$?
+
+<Answer>
+
+$E^\circ$ is unchanged; $\Delta G^\circ$ doubles.
+
+$E^\circ$ is **unchanged**: it is energy per unit of charge. $\Delta G^\circ$ **doubles**, because $n$ doubles.
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+What is the sign of $\Delta G^\circ$ for an electrolytic cell?
+
+<Answer>
+
+Positive.
+
+**Positive.** An electrolytic cell drives a reaction that is not thermodynamically favored, which is why it needs an external power supply.
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+A cell has $E^\circ = -0.30\ \text{V}$. What does that tell you?
+
+<Answer>
+
+The reverse reaction is the favored one.
+
+That the reaction as written is **not** thermodynamically favored: its $\Delta G^\circ$ is positive. The *reverse* reaction is the favored one, with $E^\circ = +0.30\ \text{V}$.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 11: Cell potential away from standard conditions
+
+$$
+E = E^\circ - \frac{0.0592}{n}\log Q
+$$
+
+This form is for 25 °C. The equation sheet prints it as
+
+$$
+E = E^\circ - \frac{RT}{nF}\ln Q
+$$
+
+and at that temperature the two are the same. Nonstandard concentrations change the potential. As the cell runs, $Q$ rises and $E$ falls.
+
+<Worked title="Which way does it move?">
+
+A zinc and copper cell,
+
+$$
+\begin{aligned}
+&\ce{Zn(s) + Cu^2+(aq) ->} \\
+&\quad \ce{Zn^2+(aq) + Cu(s)}
+\end{aligned}
+$$
+
+has $E^\circ$ = 1.10 V and $n = 2$. Find $E$ at 25 °C when $Q = 0.010$, and when $Q = 100$.
+
+**Beyond the exam:** the exam asks which way the potential moves, not for this number. The two calculations below show how large the change is.
+
+**$Q = 0.010$:**
+
+$$
+\begin{aligned}
+&1.10 - \frac{0.0592}{2}\log(0.010) \\
+&= 1.10 - (0.0296)(-2) \\
+&= \mathbf{1.16}\ \text{V}
+\end{aligned}
+$$
+
+*Above* standard: $Q < 1$ means reactants are plentiful, so the cell is farther from equilibrium and the potential is larger.
+
+**$Q = 100$:**
+
+$$
+\begin{aligned}
+&1.10 - (0.0296)(2) \\
+&= \mathbf{1.04}\ \text{V}
+\end{aligned}
+$$
+
+*Below* standard: products have accumulated.
+
+**What happens as the cell discharges:** products build up, $Q$ rises, and $E$ falls steadily. A cell that has run down has reached equilibrium: $Q = K$ and $E = \mathbf{0}$.
+
+**Note carefully: $E = 0$, not $E^\circ = 0$.** The standard potential is set by the chemistry and the temperature, and it does not change as the cell runs; it is the actual potential that falls to zero.
+
+</Worked>
+
+<Question number={11} label="Your turn" topic="9.10">
+
+<Part label="a">
+
+Does $E$ rise or fall as a cell discharges?
+
+<Answer>
+
+It falls.
+
+It **falls**, as products accumulate and $Q$ rises.
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+What is $E$ for a cell that has run down completely?
+
+<Answer>
+
+Zero.
+
+$E = \mathbf{0}\ \text{V}$: the cell has reached equilibrium, $Q = K$, and no further net reaction occurs.
+
+</Answer>
+
+</Part>
+
+<Part label="c" beyond>
+
+$E^\circ$ = 0.80 V, $n = 1$, $Q = 10$. Find $E$ at 25 °C.
+
+<Answer>
+
+0.74 V
+
+$$
+\begin{aligned}
+&0.80 - \frac{0.0592}{1}\log(10) \\
+&= 0.80 - 0.0592 \\
+&= \mathbf{0.74}\ \text{V}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+Why does $E^\circ$ stay constant while $E$ changes?
+
+<Answer>
+
+$E^\circ$ is defined at standard conditions.
+
+Because $E^\circ$ is *defined* at standard conditions: all solutes at 1 M, gases at 1 bar (very nearly 1 atm). At a given temperature it is a fixed property of the cell chemistry. $E$ is the potential under whatever conditions actually exist, so it changes as those conditions change.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## Ladder 12: Electrolysis and Faraday's law
+
+Charge is current times time; moles of electrons is charge over $F$; then the half-reaction's electron count converts to moles of substance.
+
+<Worked title="The four-step chain">
+
+Copper is plated from $\ce{Cu^2+}$ at 2.50 A for 60.0 min. The molar mass of copper is 63.55 g/mol. Find the mass deposited.
+
+**Time to seconds:**
+
+$$
+60.0 \times 60 = 3{,}600\ \text{s}
+$$
+
+**Charge:**
+
+$$
+\begin{aligned}
+q &= It \\
+&= (2.50)(3{,}600) \\
+&= 9{,}000\ \text{C}
+\end{aligned}
+$$
+
+**Moles of electrons:**
+
+$$
+\frac{9{,}000}{96{,}485} = 0.09328\ \text{mol}
+$$
+
+**Through the half-reaction.**
+
+$$
+\ce{Cu^2+(aq) + 2e^- -> Cu(s)}
+$$
+
+needs **two** electrons per atom:
+
+$$
+\frac{0.09328}{2} = 0.04664\ \text{mol Cu}
+$$
+
+$$
+\begin{aligned}
+&0.04664 \times 63.55 \\
+&= \mathbf{2.96}\ \text{g}
+\end{aligned}
+$$
+
+**The step that is missed most often** is dividing by 2. Silver needs only one electron,
+
+$$
+\ce{Ag+(aq) + e^- -> Ag(s)}
+$$
+
+so the same charge deposits twice as many moles of silver as of copper.
+
+</Worked>
+
+<Question number={12} label="Your turn" topic="9.11">
+
+<Part label="a">
+
+Charge delivered by 1.00 A for 30.0 min: <Blank />
+
+<Answer>
+
+1,800 C
+
+With the time in seconds:
+
+$$
+\begin{aligned}
+q &= (1.00)(1{,}800) \\
+&= \mathbf{1{,}800}\ \text{C}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="b">
+
+Moles of electrons in that charge: <Blank />
+
+<Answer>
+
+0.0187 mol
+
+$$
+\frac{1{,}800}{96{,}485} = \mathbf{0.0187}\ \text{mol}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="c">
+
+Mass of silver deposited by it (the molar mass of silver is 107.87 g/mol): <Blank />
+
+<Answer>
+
+2.01 g
+
+$$
+\ce{Ag+(aq) + e^- -> Ag(s)}
+$$
+
+is a one-electron reduction, so the moles of silver equal the moles of electrons. Carry part b's value before rounding, 0.01866 mol Ag (0.0187 would give 2.02 g):
+
+$$
+\begin{aligned}
+&0.01866 \times 107.87 \\
+&= \mathbf{2.01}\ \text{g}
+\end{aligned}
+$$
+
+</Answer>
+
+</Part>
+
+<Part label="d">
+
+The same charge is passed through $\ce{Al^3+}$. Does it give more or fewer moles of metal than of silver, and by what factor?
+
+<Answer>
+
+One third as many.
+
+**One third as many.** In the melt of a smelter,
+
+$$
+\ce{Al^3+ + 3e^- -> Al(l)}
+$$
+
+requires three electrons per atom, so the same supply of electrons produces a third of the moles of metal.
+
+</Answer>
+
+</Part>
+
+</Question>
+
+## If you missed some
+
+Score yourself honestly. Count a ladder only if all four of its questions were right the first time.
+
+- **12 of 12:** move on to the worksheets and the free-response set.
+- **9 to 11:** solid. Redo the missed ladders tomorrow, from scratch and without looking back.
+- **8 or fewer:** three causes come up again and again: (1) mixing kilojoules and joules in $\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$ or in $\Delta G^\circ = -RT\ln K$, (2) multiplying $E^\circ$ when the reaction is scaled, and (3) forgetting to divide by the number of electrons in a Faraday's law calculation. Fix those three and most of these ladders fall into place.
